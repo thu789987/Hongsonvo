@@ -36,6 +36,7 @@ import { SmoothScroll } from './components/SmoothScroll';
 import { ScrollDetector } from './components/ScrollDetector';
 import { HoverController } from './components/HoverController';
 import { HackerText } from './components/HackerText';
+import { HoverLogoCard } from './components/HoverLogoCard'; // Thêm dòng import này ở đầu file
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -300,4 +301,24 @@ PLASMIC.registerComponent(HackerText, {
   },
   importPath: "./components/HackerText", // Nhớ giữ dòng này không lại bị lỗi cũ nhé
   isDefaultExport: false,
+});
+
+PLASMIC.registerComponent(HoverLogoCard, {
+  name: "HoverLogoCard",
+  props: {
+    // Tạo một Slot (cái hộp rỗng) để bạn kéo thả Card trên Plasmic vào
+    children: {
+      type: "slot",
+      defaultValue: {
+        type: "text",
+        value: "Kéo thả Card của bạn vào đây",
+      },
+    },
+    // Nơi để bạn tải ảnh hoặc điền link logo công ty
+    logoSrc: {
+      type: "imageUrl",
+      defaultValue: "https://via.placeholder.com/150",
+    }
+  },
+  importPath: "./components/HoverLogoCard",
 });
