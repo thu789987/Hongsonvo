@@ -27,7 +27,7 @@ import Markdown from "./components/Markdown";
 import TextRotator from "./components/TextRotator";
 import { MasonryLayout } from "./components/MasonryLayout";
 import HoverReveal from './components/HoverReveal'; // Nhớ import đúng đường dẫn
-import PatternGrid from './components/PatternGrid';
+import { PatternGrid } from './components/PatternGrid';
 import TypingAnimation from './components/TypingAnimation';
 import { GridDistortion } from './components/GridDistortion';
 import { RevealOnScroll } from './components/RevealOnScroll';
