@@ -5,25 +5,32 @@ const LETTERS = "QWERTYUIOPASDFGHJKLZXCVBNM";
 interface HackerTextProps {
   text?: string;
   className?: string;
+  defaultColor?: string; // Màu lúc bình thường
+  hoverColor?: string;   // Màu lúc rê chuột vào
 }
 
-export default function HackerText({ text = "MENU ITEM", className }: HackerTextProps) {
+export default function HackerText({ 
+  text = "MENU ITEM", 
+  className,
+  defaultColor = "#ffffff", // Mặc định là màu trắng
+  hoverColor = "#00ff00"    // Mặc định là xanh Neon (Hacker)
+}: HackerTextProps) {
   const [displayText, setDisplayText] = useState(text);
+  const [isHovered, setIsHovered] = useState(false); // Theo dõi trạng thái chuột
   
-  // ✅ FIX LỖI 1: Thay 'any' bằng kiểu dữ liệu chuẩn của setInterval
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const startScramble = () => {
+    setIsHovered(true); // Đổi màu khi chuột bắt đầu vào
     let iteration = 0;
 
     if (intervalRef.current) clearInterval(intervalRef.current);
 
     intervalRef.current = setInterval(() => {
-      // ✅ FIX LỖI 2: Thay 'prev' bằng '()' vì chúng ta không dùng biến prev
       setDisplayText(() => 
         text
           .split("")
-          .map((_letter, index) => { // Thêm dấu _ trước letter để báo là biến này cũng không quan trọng
+          .map((_letter, index) => {
             if (index < iteration) {
               return text[index];
             }
@@ -41,6 +48,7 @@ export default function HackerText({ text = "MENU ITEM", className }: HackerText
   };
 
   const stopScramble = () => {
+    setIsHovered(false); // Trả lại màu cũ khi chuột rời đi
     if (intervalRef.current) clearInterval(intervalRef.current);
     setDisplayText(text);
   };
@@ -54,7 +62,12 @@ export default function HackerText({ text = "MENU ITEM", className }: HackerText
       className={className}
       onMouseEnter={startScramble}
       onMouseLeave={stopScramble}
-      style={{ fontFamily: 'Orbitron, sans-serif', cursor: 'pointer' }}
+      style={{ 
+        fontFamily: 'Orbitron, sans-serif', 
+        cursor: 'pointer',
+        color: isHovered ? hoverColor : defaultColor, // Logic đổi màu
+        transition: 'color 0.2s ease-in-out' // Chuyển màu mượt mà không bị giật
+      }}
     >
       {displayText}
     </div>

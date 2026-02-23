@@ -288,6 +288,14 @@ PLASMIC.registerComponent(HackerText, {
       type: "string",
       defaultValue: "HOVER ME",
     },
+    defaultColor: {
+      type: "color",
+      defaultValue: "#ffffff",
+    },
+    hoverColor: {
+      type: "color",
+      defaultValue: "#00ff00",
+    }
   },
-  importPath: "./components/HackerText",
+  importPath: "./components/HackerText", // Nhớ giữ dòng này không lại bị lỗi cũ nhé
 });
