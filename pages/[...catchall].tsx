@@ -61,12 +61,18 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const pageModules = await PLASMIC.fetchPages();
-  return {
-    paths: pageModules.map((mod) => ({
+
+  // Bộ lọc: Tự động loại bỏ các URL trùng lặp trên Plasmic và bỏ qua trang chủ "/"
+  const paths = Array.from(new Set(pageModules.map(m => m.path)))
+    .filter(path => path !== "/")
+    .map(path => ({
       params: {
-        catchall: mod.path.substring(1).split("/"),
+        catchall: path.substring(1).split("/"),
       },
-    })),
+    }));
+
+  return {
+    paths,
     fallback: "blocking",
   };
-}
+};
