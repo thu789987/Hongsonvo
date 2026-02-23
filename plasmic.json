@@ -2049,6 +2049,11 @@
           "id": "TsrcAe5XiSKw",
           "name": "image 11",
           "filePath": "../public/plasmic/son_vo/images/image11.png"
+        },
+        {
+          "id": "bd6v9dmbyS2O",
+          "name": "Frame 12.png",
+          "filePath": "../public/plasmic/son_vo/images/frame12Png.png"
         }
       ],
       "indirect": false,
@@ -2141,6 +2146,12 @@
           "name": "HackerText",
           "displayName": "HackerText",
           "componentImportPath": "./components/HackerText"
+        },
+        {
+          "id": "8gew1WdMY0jF",
+          "name": "HoverLogoCard",
+          "displayName": "HoverLogoCard",
+          "componentImportPath": "./components/HoverLogoCard"
         }
       ],
       "customFunctions": []

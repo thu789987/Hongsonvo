@@ -76,6 +76,7 @@ import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
+import { HoverLogoCard } from "../../HoverLogoCard"; // plasmic-import: 8gew1WdMY0jF/codeComponent
 import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUtTr/component
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
@@ -202,6 +203,7 @@ export type PlasmicHomepage__OverridesType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2?: Flex__<"div">;
   container31?: Flex__<"div">;
   subContainer2?: Flex__<"div">;
+  hoverLogoCard?: Flex__<typeof HoverLogoCard>;
   cardWhatAboutUs5?: Flex__<typeof CardWhatAboutUs>;
   sectionCards3?: Flex__<"div">;
   container49?: Flex__<"div">;
@@ -1619,30 +1621,39 @@ function PlasmicHomepage__RenderFunc(props: {
                         strength={0.25}
                       />
 
-                      <CardExperience
+                      <HoverLogoCard
+                        data-plasmic-name={"hoverLogoCard"}
+                        data-plasmic-override={overrides.hoverLogoCard}
                         className={classNames(
                           "__wab_instance",
-                          sty.cardExperience__tztq
+                          sty.hoverLogoCard
                         )}
-                        content={
-                          "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
-                        }
-                        project1={(() => {
-                          try {
-                            return undefined;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return [];
-                            }
-                            throw e;
+                        logoSrc={"/plasmic/son_vo/images/frame12Png.png"}
+                      >
+                        <CardExperience
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardExperience__tztq
+                          )}
+                          content={
+                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
                           }
-                        })()}
-                        title={"Senior UI/UX"}
-                      />
-
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()}
+                          title={"Senior UI/UX"}
+                        />
+                      </HoverLogoCard>
                       <CardExperience
                         className={classNames(
                           "__wab_instance",
@@ -2987,6 +2998,7 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container31",
     "subContainer2",
+    "hoverLogoCard",
     "cardWhatAboutUs5",
     "sectionCards3",
     "container49",
@@ -3079,6 +3091,7 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container31",
     "subContainer2",
+    "hoverLogoCard",
     "cardWhatAboutUs5",
     "sectionCards3",
     "container49",
@@ -3295,6 +3308,7 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container31",
     "subContainer2",
+    "hoverLogoCard",
     "cardWhatAboutUs5"
   ],
   heading4: [
@@ -3333,8 +3347,14 @@ const PlasmicDescendants = {
     [
       "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
     ],
-  container31: ["container31", "subContainer2", "cardWhatAboutUs5"],
-  subContainer2: ["subContainer2"],
+  container31: [
+    "container31",
+    "subContainer2",
+    "hoverLogoCard",
+    "cardWhatAboutUs5"
+  ],
+  subContainer2: ["subContainer2", "hoverLogoCard"],
+  hoverLogoCard: ["hoverLogoCard"],
   cardWhatAboutUs5: ["cardWhatAboutUs5"],
   sectionCards3: [
     "sectionCards3",
@@ -3506,6 +3526,7 @@ type NodeDefaultElementType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2: "div";
   container31: "div";
   subContainer2: "div";
+  hoverLogoCard: typeof HoverLogoCard;
   cardWhatAboutUs5: typeof CardWhatAboutUs;
   sectionCards3: "div";
   container49: "div";
@@ -3710,6 +3731,7 @@ export const PlasmicHomepage = Object.assign(
       ),
     container31: makeNodeComponent("container31"),
     subContainer2: makeNodeComponent("subContainer2"),
+    hoverLogoCard: makeNodeComponent("hoverLogoCard"),
     cardWhatAboutUs5: makeNodeComponent("cardWhatAboutUs5"),
     sectionCards3: makeNodeComponent("sectionCards3"),
     container49: makeNodeComponent("container49"),

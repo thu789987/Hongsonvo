@@ -1670,6 +1670,10 @@
   max-width: 100%;
   object-fit: cover;
 }
+.hoverLogoCard:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
 .cardExperience__tztq:global(.__wab_instance) {
   position: relative;
   top: auto;
