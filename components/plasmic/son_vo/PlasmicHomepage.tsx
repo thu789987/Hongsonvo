@@ -75,12 +75,12 @@ import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/c
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
-import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
-import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI/codeComponent
-import { Video } from "@plasmicpkgs/plasmic-basic-components";
 import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
 import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUtTr/component
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
+import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
+import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI/codeComponent
+import { Video } from "@plasmicpkgs/plasmic-basic-components";
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
@@ -179,18 +179,30 @@ export type PlasmicHomepage__OverridesType = {
   title4?: Flex__<"div">;
   container5?: Flex__<"div">;
   _6?: Flex__<"div">;
-  hackerText?: Flex__<typeof HackerText>;
   _7?: Flex__<"div">;
   _8?: Flex__<"div">;
   _9?: Flex__<"div">;
   _10?: Flex__<"div">;
   _11?: Flex__<"div">;
   _12?: Flex__<"div">;
-  sectionCards?: Flex__<"div">;
-  container47?: Flex__<"div">;
-  top?: Flex__<"div">;
-  title?: Flex__<"div">;
-  container3?: Flex__<"div">;
+  sectionCards4?: Flex__<"div">;
+  container48?: Flex__<"div">;
+  top2?: Flex__<"div">;
+  title5?: Flex__<"div">;
+  container6?: Flex__<"div">;
+  sectionCards6?: Flex__<"div">;
+  heading4?: Flex__<"div">;
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3?: Flex__<"div">;
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4?: Flex__<"div">;
+  eXpertise2?: Flex__<"div">;
+  an2?: Flex__<"div">;
+  skills2?: Flex__<"div">;
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3?: Flex__<"div">;
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4?: Flex__<"div">;
+  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2?: Flex__<"div">;
+  container31?: Flex__<"div">;
+  subContainer2?: Flex__<"div">;
+  cardWhatAboutUs5?: Flex__<typeof CardWhatAboutUs>;
   sectionCards3?: Flex__<"div">;
   container49?: Flex__<"div">;
   top5?: Flex__<"div">;
@@ -215,7 +227,6 @@ export type PlasmicHomepage__OverridesType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact?: Flex__<"div">;
   container30?: Flex__<"div">;
   subContainer?: Flex__<"div">;
-  gridDistortion?: Flex__<typeof GridDistortion>;
   cardWhatAboutUs4?: Flex__<typeof CardWhatAboutUs>;
   section?: Flex__<typeof Section>;
 };
@@ -925,8 +936,8 @@ function PlasmicHomepage__RenderFunc(props: {
                   "__wab_instance",
                   sty.revealOnScroll__bPUy8
                 )}
-                delay={0}
-                duration={0.8}
+                delay={0.1}
+                duration={1.6}
                 yOffset={50}
               >
                 <div
@@ -1020,15 +1031,34 @@ function PlasmicHomepage__RenderFunc(props: {
                           }}
                         />
 
-                        <HackerText
-                          data-plasmic-name={"hackerText"}
-                          data-plasmic-override={overrides.hackerText}
+                        <div
                           className={classNames(
-                            "__wab_instance",
-                            sty.hackerText
+                            projectcss.all,
+                            sty.freeBox__ttp4W
                           )}
-                          text={"FRAMER"}
-                        />
+                        >
+                          <HackerText
+                            className={classNames(
+                              "__wab_instance",
+                              sty.hackerText__pzEmp
+                            )}
+                            defaultColor={"#FFFFFFCC"}
+                            hoverColor={
+                              true ? "var(--antd-colorWarning)" : undefined
+                            }
+                            text={"FRAMER"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__hFfBo
+                            )}
+                          >
+                            {"Website Builder"}
+                          </div>
+                        </div>
                       </div>
                       <div
                         data-plasmic-name={"_7"}
@@ -1056,11 +1086,30 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__v50
+                            sty.freeBox__qz1Gz
                           )}
                         >
-                          {"WEBFLOW"}
+                          <HackerText
+                            className={classNames(
+                              "__wab_instance",
+                              sty.hackerText__tmBkA
+                            )}
+                            defaultColor={"#FFFFFFCC"}
+                            hoverColor={
+                              true ? "var(--antd-colorWarning)" : undefined
+                            }
+                            text={"WEBFLOW"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__eRCqQ
+                            )}
+                          >
+                            {"Website Builder"}
+                          </div>
                         </div>
                       </div>
                       <div
@@ -1089,11 +1138,30 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___8Jwci
+                            sty.freeBox__c2Ep
                           )}
                         >
-                          {"FIGMA"}
+                          <HackerText
+                            className={classNames(
+                              "__wab_instance",
+                              sty.hackerText__j7Wt6
+                            )}
+                            defaultColor={"#FFFFFFCC"}
+                            hoverColor={
+                              true ? "var(--antd-colorWarning)" : undefined
+                            }
+                            text={"WEBFLOW"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__xrtma
+                            )}
+                          >
+                            {"Design Tool"}
+                          </div>
                         </div>
                       </div>
                       <div
@@ -1122,11 +1190,30 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__c7Ep
+                            sty.freeBox__fwGq7
                           )}
                         >
-                          {"CLARITY"}
+                          <HackerText
+                            className={classNames(
+                              "__wab_instance",
+                              sty.hackerText__jd2Fm
+                            )}
+                            defaultColor={"#FFFFFFCC"}
+                            hoverColor={
+                              true ? "var(--antd-colorWarning)" : undefined
+                            }
+                            text={"CLARITY"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text___9YfMo
+                            )}
+                          >
+                            {"Analyst Tools"}
+                          </div>
                         </div>
                       </div>
                       <div
@@ -1155,11 +1242,30 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__z3Eyz
+                            sty.freeBox__jvMja
                           )}
                         >
-                          {"FONTLABS"}
+                          <HackerText
+                            className={classNames(
+                              "__wab_instance",
+                              sty.hackerText__cL0We
+                            )}
+                            defaultColor={"#FFFFFFCC"}
+                            hoverColor={
+                              true ? "var(--antd-colorWarning)" : undefined
+                            }
+                            text={"FONTLABS"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__d5ZCj
+                            )}
+                          >
+                            {"Fonts Design Tool"}
+                          </div>
                         </div>
                       </div>
                       <div
@@ -1188,11 +1294,32 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__u0TBc
+                            sty.freeBox__w66Pi
                           )}
                         >
-                          {"ADOBE CREATIVE SUITE"}
+                          <HackerText
+                            className={classNames(
+                              "__wab_instance",
+                              sty.hackerText___9Z1Kc
+                            )}
+                            defaultColor={"#FFFFFFCC"}
+                            hoverColor={
+                              true ? "var(--antd-colorWarning)" : undefined
+                            }
+                            text={"ADOBE CREATIVE SUITE"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__dSFaY
+                            )}
+                          >
+                            {
+                              "Photoshop, Illustrator, Indesign, After Effects,..."
+                            }
+                          </div>
                         </div>
                       </div>
                       <div
@@ -1221,11 +1348,30 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__nlAjs
+                            sty.freeBox__lvbPt
                           )}
                         >
-                          {"BLENDER"}
+                          <HackerText
+                            className={classNames(
+                              "__wab_instance",
+                              sty.hackerText__oAxLj
+                            )}
+                            defaultColor={"#FFFFFFCC"}
+                            hoverColor={
+                              true ? "var(--antd-colorWarning)" : undefined
+                            }
+                            text={"BLENDER"}
+                          />
+
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__q5NrP
+                            )}
+                          >
+                            {"3D Design Tool"}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1235,60 +1381,363 @@ function PlasmicHomepage__RenderFunc(props: {
               <RevealOnScroll
                 className={classNames(
                   "__wab_instance",
-                  sty.revealOnScroll___2DS
+                  sty.revealOnScroll__v7Ylg
                 )}
                 delay={0}
                 duration={0.8}
                 yOffset={50}
               >
                 <div
-                  data-plasmic-name={"sectionCards"}
-                  data-plasmic-override={overrides.sectionCards}
-                  className={classNames(projectcss.all, sty.sectionCards)}
+                  data-plasmic-name={"sectionCards4"}
+                  data-plasmic-override={overrides.sectionCards4}
+                  className={classNames(projectcss.all, sty.sectionCards4)}
                 >
                   <div
-                    data-plasmic-name={"container47"}
-                    data-plasmic-override={overrides.container47}
-                    className={classNames(projectcss.all, sty.container47)}
+                    data-plasmic-name={"container48"}
+                    data-plasmic-override={overrides.container48}
+                    className={classNames(projectcss.all, sty.container48)}
                   >
                     <div
-                      data-plasmic-name={"top"}
-                      data-plasmic-override={overrides.top}
-                      className={classNames(projectcss.all, sty.top)}
+                      data-plasmic-name={"top2"}
+                      data-plasmic-override={overrides.top2}
+                      className={classNames(projectcss.all, sty.top2)}
                     >
                       <div
-                        data-plasmic-name={"title"}
-                        data-plasmic-override={overrides.title}
-                        className={classNames(projectcss.all, sty.title)}
+                        data-plasmic-name={"title5"}
+                        data-plasmic-override={overrides.title5}
+                        className={classNames(projectcss.all, sty.title5)}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__mumK9
+                            sty.text___2D86O
                           )}
                         >
-                          {"01/ ABOUT US"}
+                          {"02/ MY SERVICES"}
                         </div>
                       </div>
                       <div
-                        data-plasmic-name={"container3"}
-                        data-plasmic-override={overrides.container3}
-                        className={classNames(projectcss.all, sty.container3)}
+                        data-plasmic-name={"container6"}
+                        data-plasmic-override={overrides.container6}
+                        className={classNames(projectcss.all, sty.container6)}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__k8Wyq
+                            sty.text__z3SBk
+                          )}
+                        >
+                          {"Explore what we\ncan do for you"}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </RevealOnScroll>
+              <RevealOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.revealOnScroll__k04Nv
+                )}
+                delay={0}
+                duration={0.8}
+                yOffset={50}
+              >
+                <div
+                  data-plasmic-name={"sectionCards6"}
+                  data-plasmic-override={overrides.sectionCards6}
+                  className={classNames(projectcss.all, sty.sectionCards6)}
+                >
+                  <div
+                    data-plasmic-name={"heading4"}
+                    data-plasmic-override={overrides.heading4}
+                    className={classNames(projectcss.all, sty.heading4)}
+                  >
+                    <div
+                      data-plasmic-name={
+                        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3"
+                      }
+                      data-plasmic-override={
+                        overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3
+                      )}
+                    >
+                      <div
+                        data-plasmic-name={
+                          "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
+                        }
+                        data-plasmic-override={
+                          overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4
+                        }
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4
+                        )}
+                      >
+                        {"[MY OFFERINGS]"}
+                      </div>
+                    </div>
+                    <div
+                      data-plasmic-name={"eXpertise2"}
+                      data-plasmic-override={overrides.eXpertise2}
+                      className={classNames(projectcss.all, sty.eXpertise2)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__qqIdU
+                        )}
+                      >
+                        {"EXpertise"}
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___96BuF
+                      )}
+                    >
+                      <div
+                        data-plasmic-name={"an2"}
+                        data-plasmic-override={overrides.an2}
+                        className={classNames(projectcss.all, sty.an2)}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__kTVgZ
+                          )}
+                        >
+                          {"and"}
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"skills2"}
+                        data-plasmic-override={overrides.skills2}
+                        className={classNames(projectcss.all, sty.skills2)}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__uyfyd
+                          )}
+                        >
+                          {"Skills"}
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox___83PE)}
+                    >
+                      <div
+                        data-plasmic-name={
+                          "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3"
+                        }
+                        data-plasmic-override={
+                          overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3
+                        }
+                        className={classNames(
+                          projectcss.all,
+                          sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3
+                        )}
+                      >
+                        <div
+                          data-plasmic-name={
+                            "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
+                          }
+                          data-plasmic-override={
+                            overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4
+                          }
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4
                           )}
                         >
                           {
-                            "No-Mercy is a global creative studio that crafts innovative visuals for the world's boldest brands. We leverage decades of experience to shatter cross-channel boundaries and ignite growth-no excuses, no compromises, no mercy."
+                            "Bridging emotion and clarity, my design practice \ngenerally evolves around storytelling, research \nand enterprise design thinking. "
+                          }
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={
+                          "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
+                        }
+                        data-plasmic-override={
+                          overrides.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2
+                        }
+                        className={classNames(
+                          projectcss.all,
+                          sty.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__mSceM
+                          )}
+                        >
+                          {
+                            "The aim is always the same for all projects, which \nis to create one of a kind, human-centred \nexperiences that leave a positive impact."
                           }
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"container31"}
+                    data-plasmic-override={overrides.container31}
+                    className={classNames(projectcss.all, sty.container31)}
+                  >
+                    <div
+                      data-plasmic-name={"subContainer2"}
+                      data-plasmic-override={overrides.subContainer2}
+                      className={classNames(projectcss.all, sty.subContainer2)}
+                    >
+                      <GridDistortion
+                        className={classNames(
+                          "__wab_instance",
+                          sty.gridDistortion__cjbFu
+                        )}
+                        enableEffect={true}
+                        grid={20}
+                        imageSrc={
+                          "/plasmic/son_vo/images/yrStH7Lcoh9O5WxFsPetODyteSmPngJpg.jpg"
+                        }
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.25}
+                      />
+
+                      <CardExperience
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardExperience__tztq
+                        )}
+                        content={
+                          "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
+                        }
+                        project1={(() => {
+                          try {
+                            return undefined;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })()}
+                        title={"Senior UI/UX"}
+                      />
+
+                      <CardExperience
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardExperience___06OZi
+                        )}
+                        number={"[ 02 ]"}
+                        project1={(() => {
+                          try {
+                            return undefined;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })()}
+                      />
+
+                      <CardExperience
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardExperience__a9L0J
+                        )}
+                        number={"[ 03 ]"}
+                        project1={(() => {
+                          try {
+                            return undefined;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })()}
+                        title={"UI/UX Design"}
+                      />
+
+                      <CardExperience
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardExperience__ep5T
+                        )}
+                        number={"[ 04 ]"}
+                        project1={(() => {
+                          try {
+                            return undefined;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })()}
+                        title={"SEO"}
+                      />
+
+                      <CardExperience
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cardExperience__fjzUi
+                        )}
+                        number={"[ 05 ]"}
+                        project1={(() => {
+                          try {
+                            return undefined;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })()}
+                        title={"CONTENT"}
+                      />
+                    </div>
+                    <CardWhatAboutUs
+                      data-plasmic-name={"cardWhatAboutUs5"}
+                      data-plasmic-override={overrides.cardWhatAboutUs5}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.cardWhatAboutUs5
+                      )}
+                    />
                   </div>
                 </div>
               </RevealOnScroll>
@@ -2248,11 +2697,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.subContainer)}
                     >
                       <GridDistortion
-                        data-plasmic-name={"gridDistortion"}
-                        data-plasmic-override={overrides.gridDistortion}
                         className={classNames(
                           "__wab_instance",
-                          sty.gridDistortion
+                          sty.gridDistortion__tb1Nu
                         )}
                         enableEffect={true}
                         grid={20}
@@ -2517,18 +2964,30 @@ const PlasmicDescendants = {
     "title4",
     "container5",
     "_6",
-    "hackerText",
     "_7",
     "_8",
     "_9",
     "_10",
     "_11",
     "_12",
-    "sectionCards",
-    "container47",
-    "top",
-    "title",
-    "container3",
+    "sectionCards4",
+    "container48",
+    "top2",
+    "title5",
+    "container6",
+    "sectionCards6",
+    "heading4",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4",
+    "eXpertise2",
+    "an2",
+    "skills2",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
+    "container31",
+    "subContainer2",
+    "cardWhatAboutUs5",
     "sectionCards3",
     "container49",
     "top5",
@@ -2553,7 +3012,6 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact",
     "container30",
     "subContainer",
-    "gridDistortion",
     "cardWhatAboutUs4",
     "section"
   ],
@@ -2598,18 +3056,30 @@ const PlasmicDescendants = {
     "title4",
     "container5",
     "_6",
-    "hackerText",
     "_7",
     "_8",
     "_9",
     "_10",
     "_11",
     "_12",
-    "sectionCards",
-    "container47",
-    "top",
-    "title",
-    "container3",
+    "sectionCards4",
+    "container48",
+    "top2",
+    "title5",
+    "container6",
+    "sectionCards6",
+    "heading4",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4",
+    "eXpertise2",
+    "an2",
+    "skills2",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
+    "container31",
+    "subContainer2",
+    "cardWhatAboutUs5",
     "sectionCards3",
     "container49",
     "top5",
@@ -2634,7 +3104,6 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact",
     "container30",
     "subContainer",
-    "gridDistortion",
     "cardWhatAboutUs4",
     "section"
   ],
@@ -2771,7 +3240,6 @@ const PlasmicDescendants = {
     "title4",
     "container5",
     "_6",
-    "hackerText",
     "_7",
     "_8",
     "_9",
@@ -2787,7 +3255,6 @@ const PlasmicDescendants = {
     "title4",
     "container5",
     "_6",
-    "hackerText",
     "_7",
     "_8",
     "_9",
@@ -2796,30 +3263,79 @@ const PlasmicDescendants = {
     "_12"
   ],
   title4: ["title4"],
-  container5: [
-    "container5",
-    "_6",
-    "hackerText",
-    "_7",
-    "_8",
-    "_9",
-    "_10",
-    "_11",
-    "_12"
-  ],
-  _6: ["_6", "hackerText"],
-  hackerText: ["hackerText"],
+  container5: ["container5", "_6", "_7", "_8", "_9", "_10", "_11", "_12"],
+  _6: ["_6"],
   _7: ["_7"],
   _8: ["_8"],
   _9: ["_9"],
   _10: ["_10"],
   _11: ["_11"],
   _12: ["_12"],
-  sectionCards: ["sectionCards", "container47", "top", "title", "container3"],
-  container47: ["container47", "top", "title", "container3"],
-  top: ["top", "title", "container3"],
-  title: ["title"],
-  container3: ["container3"],
+  sectionCards4: [
+    "sectionCards4",
+    "container48",
+    "top2",
+    "title5",
+    "container6"
+  ],
+  container48: ["container48", "top2", "title5", "container6"],
+  top2: ["top2", "title5", "container6"],
+  title5: ["title5"],
+  container6: ["container6"],
+  sectionCards6: [
+    "sectionCards6",
+    "heading4",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4",
+    "eXpertise2",
+    "an2",
+    "skills2",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
+    "container31",
+    "subContainer2",
+    "cardWhatAboutUs5"
+  ],
+  heading4: [
+    "heading4",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4",
+    "eXpertise2",
+    "an2",
+    "skills2",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
+  ],
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3:
+    [
+      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
+      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
+    ],
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4:
+    [
+      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
+    ],
+  eXpertise2: ["eXpertise2"],
+  an2: ["an2"],
+  skills2: ["skills2"],
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3:
+    [
+      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
+      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
+    ],
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4:
+    [
+      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
+    ],
+  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2:
+    [
+      "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
+    ],
+  container31: ["container31", "subContainer2", "cardWhatAboutUs5"],
+  subContainer2: ["subContainer2"],
+  cardWhatAboutUs5: ["cardWhatAboutUs5"],
   sectionCards3: [
     "sectionCards3",
     "container49",
@@ -2879,7 +3395,6 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact",
     "container30",
     "subContainer",
-    "gridDistortion",
     "cardWhatAboutUs4"
   ],
   heading3: [
@@ -2918,14 +3433,8 @@ const PlasmicDescendants = {
     [
       "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact"
     ],
-  container30: [
-    "container30",
-    "subContainer",
-    "gridDistortion",
-    "cardWhatAboutUs4"
-  ],
-  subContainer: ["subContainer", "gridDistortion"],
-  gridDistortion: ["gridDistortion"],
+  container30: ["container30", "subContainer", "cardWhatAboutUs4"],
+  subContainer: ["subContainer"],
   cardWhatAboutUs4: ["cardWhatAboutUs4"],
   section: ["section"]
 } as const;
@@ -2974,18 +3483,30 @@ type NodeDefaultElementType = {
   title4: "div";
   container5: "div";
   _6: "div";
-  hackerText: typeof HackerText;
   _7: "div";
   _8: "div";
   _9: "div";
   _10: "div";
   _11: "div";
   _12: "div";
-  sectionCards: "div";
-  container47: "div";
-  top: "div";
-  title: "div";
-  container3: "div";
+  sectionCards4: "div";
+  container48: "div";
+  top2: "div";
+  title5: "div";
+  container6: "div";
+  sectionCards6: "div";
+  heading4: "div";
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3: "div";
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4: "div";
+  eXpertise2: "div";
+  an2: "div";
+  skills2: "div";
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3: "div";
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4: "div";
+  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2: "div";
+  container31: "div";
+  subContainer2: "div";
+  cardWhatAboutUs5: typeof CardWhatAboutUs;
   sectionCards3: "div";
   container49: "div";
   top5: "div";
@@ -3010,7 +3531,6 @@ type NodeDefaultElementType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact: "div";
   container30: "div";
   subContainer: "div";
-  gridDistortion: typeof GridDistortion;
   cardWhatAboutUs4: typeof CardWhatAboutUs;
   section: typeof Section;
 };
@@ -3152,18 +3672,45 @@ export const PlasmicHomepage = Object.assign(
     title4: makeNodeComponent("title4"),
     container5: makeNodeComponent("container5"),
     _6: makeNodeComponent("_6"),
-    hackerText: makeNodeComponent("hackerText"),
     _7: makeNodeComponent("_7"),
     _8: makeNodeComponent("_8"),
     _9: makeNodeComponent("_9"),
     _10: makeNodeComponent("_10"),
     _11: makeNodeComponent("_11"),
     _12: makeNodeComponent("_12"),
-    sectionCards: makeNodeComponent("sectionCards"),
-    container47: makeNodeComponent("container47"),
-    top: makeNodeComponent("top"),
-    title: makeNodeComponent("title"),
-    container3: makeNodeComponent("container3"),
+    sectionCards4: makeNodeComponent("sectionCards4"),
+    container48: makeNodeComponent("container48"),
+    top2: makeNodeComponent("top2"),
+    title5: makeNodeComponent("title5"),
+    container6: makeNodeComponent("container6"),
+    sectionCards6: makeNodeComponent("sectionCards6"),
+    heading4: makeNodeComponent("heading4"),
+    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3:
+      makeNodeComponent(
+        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3"
+      ),
+    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4:
+      makeNodeComponent(
+        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
+      ),
+    eXpertise2: makeNodeComponent("eXpertise2"),
+    an2: makeNodeComponent("an2"),
+    skills2: makeNodeComponent("skills2"),
+    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3:
+      makeNodeComponent(
+        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3"
+      ),
+    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4:
+      makeNodeComponent(
+        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
+      ),
+    theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2:
+      makeNodeComponent(
+        "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
+      ),
+    container31: makeNodeComponent("container31"),
+    subContainer2: makeNodeComponent("subContainer2"),
+    cardWhatAboutUs5: makeNodeComponent("cardWhatAboutUs5"),
     sectionCards3: makeNodeComponent("sectionCards3"),
     container49: makeNodeComponent("container49"),
     top5: makeNodeComponent("top5"),
@@ -3203,7 +3750,6 @@ export const PlasmicHomepage = Object.assign(
       ),
     container30: makeNodeComponent("container30"),
     subContainer: makeNodeComponent("subContainer"),
-    gridDistortion: makeNodeComponent("gridDistortion"),
     cardWhatAboutUs4: makeNodeComponent("cardWhatAboutUs4"),
     section: makeNodeComponent("section"),
 

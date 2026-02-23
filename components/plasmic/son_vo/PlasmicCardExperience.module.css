@@ -10,18 +10,38 @@
   min-width: 0;
   padding: 0px;
 }
-.freeBox__foXrk {
+.hoverController:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.freeBox__k3D1M {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  min-width: 0;
+  padding: 0px;
+}
+.freeBoxproject1__k3D1MuWrEk {
+  left: auto;
+  bottom: auto;
+  right: auto;
+}
+.freeBox__foXrk {
+  display: flex;
+  flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
   width: 100%;
   height: auto;
   max-width: 100%;
-  left: auto;
-  bottom: auto;
-  right: auto;
   min-width: 0;
   padding: 0px;
 }
@@ -69,7 +89,7 @@
 }
 .titleArtDirection2 {
   display: block;
-  font-size: 70px;
+  font-size: 32px;
   font-family: "Koulen";
   font-weight: 400;
   letter-spacing: 0em;
@@ -81,7 +101,7 @@
 }
 .freeBox__jfKvs {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   width: auto;
   height: auto;
@@ -96,21 +116,15 @@
   grid-column-end: span 3;
   padding: 0px;
 }
-.relatedWork2 {
+.titleArtDirection3 {
   display: block;
-  font-size: 14px;
-  font-family: "Roboto Mono";
+  font-size: 32px;
+  font-family: "Koulen";
   font-weight: 400;
   letter-spacing: 0em;
-  line-height: 19.600000381469727px;
-  color: #ffffff;
-}
-._13 {
-  display: block;
-  font-size: 14px;
-  letter-spacing: 0em;
-  line-height: 19.600000381469727px;
-  color: #ffffff;
+  line-height: 120%;
+  color: #f9f9f9;
+  text-align: left;
 }
 .freeBox__r0Vw {
   display: flex;
@@ -126,6 +140,11 @@
   right: auto;
   min-width: 0;
   padding: 0px;
+}
+.freeBoxproject1__r0VwUWrEk {
+  left: auto;
+  bottom: auto;
+  right: auto;
 }
 .image1 {
   max-width: 100%;
@@ -208,12 +227,12 @@
   position: relative;
   top: auto;
   left: auto;
-  width: 337px;
-  height: 39px;
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex-shrink: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2 {
   display: block;
@@ -224,70 +243,4 @@
   line-height: 19.600000381469727px;
   color: #ffffff;
   text-align: left;
-}
-.freeBox___4Om3J {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: flex-end;
-  top: auto;
-  left: auto;
-  row-gap: 8px;
-  min-width: 0;
-  padding: 0px;
-}
-.hoverController__t3R0P:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-}
-.titleTopNorwegianCapsule {
-  position: relative;
-  top: auto;
-  left: auto;
-  width: auto;
-  height: auto;
-  transform: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.titleTopNorwegianCapsule2 {
-  display: block;
-  font-size: 14px;
-  text-decoration-line: underline;
-  font-family: "Roboto Mono";
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 19.600000381469727px;
-  color: #ffffff;
-}
-.hoverController__dkYqK:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-  z-index: 2;
-}
-.titleTopNorwegianCapsule3 {
-  position: relative;
-  top: auto;
-  left: auto;
-  width: auto;
-  height: auto;
-  transform: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.titleTopNorwegianCapsule4 {
-  display: block;
-  font-size: 14px;
-  text-decoration-line: underline;
-  font-family: "Roboto Mono";
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 19.600000381469727px;
-  color: #ffffff;
 }

@@ -893,6 +893,7 @@
   max-width: none;
   z-index: 3;
   column-gap: 80px;
+  min-height: 100vh;
   min-width: 0;
   padding: 130px 40px 0px;
 }
@@ -945,7 +946,7 @@
   color: #ffffffcc;
   font-weight: 700;
   font-size: 15px;
-  line-height: 120%;
+  line-height: 140%;
 }
 .left2 {
   height: auto;
@@ -1014,13 +1015,36 @@
 .img__ekQBp > picture > img {
   object-fit: cover;
 }
-.hackerText:global(.__wab_instance) {
+.freeBox__ttp4W {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.hackerText__pzEmp:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   color: #ffffffcc;
   font-size: 15px;
   font-weight: 700;
   line-height: 120%;
+}
+.text__hFfBo {
+  display: block;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: var(--token-qc-_vvn1BAsp);
+  position: relative;
+  text-align: left;
 }
 ._7 {
   display: flex;
@@ -1044,12 +1068,36 @@
 .img___3CpJb > picture > img {
   object-fit: cover;
 }
-.text__v50 {
-  text-align: left;
+.freeBox__qz1Gz {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.hackerText__tmBkA:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
   color: #ffffffcc;
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
   line-height: 120%;
+}
+.text__eRCqQ {
+  display: block;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: var(--token-qc-_vvn1BAsp);
+  position: relative;
+  text-align: left;
 }
 ._8 {
   display: flex;
@@ -1073,12 +1121,36 @@
 .img__vj9DH > picture > img {
   object-fit: cover;
 }
-.text___8Jwci {
-  text-align: left;
+.freeBox__c2Ep {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.hackerText__j7Wt6:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
   color: #ffffffcc;
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
   line-height: 120%;
+}
+.text__xrtma {
+  display: block;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: var(--token-qc-_vvn1BAsp);
+  position: relative;
+  text-align: left;
 }
 ._9 {
   display: flex;
@@ -1102,12 +1174,36 @@
 .img___3MIm1 > picture > img {
   object-fit: cover;
 }
-.text__c7Ep {
-  text-align: left;
+.freeBox__fwGq7 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.hackerText__jd2Fm:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
   color: #ffffffcc;
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
   line-height: 120%;
+}
+.text___9YfMo {
+  display: block;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: var(--token-qc-_vvn1BAsp);
+  position: relative;
+  text-align: left;
 }
 ._10 {
   display: flex;
@@ -1131,12 +1227,36 @@
 .img___92O50 > picture > img {
   object-fit: cover;
 }
-.text__z3Eyz {
-  text-align: left;
+.freeBox__jvMja {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.hackerText__cL0We:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
   color: #ffffffcc;
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
   line-height: 120%;
+}
+.text__d5ZCj {
+  display: block;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: var(--token-qc-_vvn1BAsp);
+  position: relative;
+  text-align: left;
 }
 ._11 {
   display: flex;
@@ -1161,12 +1281,36 @@
 .img__y0RMb > picture > img {
   object-fit: cover;
 }
-.text__u0TBc {
-  text-align: left;
+.freeBox__w66Pi {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.hackerText___9Z1Kc:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
   color: #ffffffcc;
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
   line-height: 120%;
+}
+.text__dSFaY {
+  display: block;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: var(--token-qc-_vvn1BAsp);
+  position: relative;
+  text-align: left;
 }
 ._12 {
   display: flex;
@@ -1191,19 +1335,43 @@
 .img__ugnEh > picture > img {
   object-fit: cover;
 }
-.text__nlAjs {
-  text-align: left;
+.freeBox__lvbPt {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.hackerText__oAxLj:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
   color: #ffffffcc;
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
   line-height: 120%;
 }
-.revealOnScroll___2DS:global(.__wab_instance) {
+.text__q5NrP {
+  display: block;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: var(--token-qc-_vvn1BAsp);
+  position: relative;
+  text-align: left;
+}
+.revealOnScroll__v7Ylg:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   z-index: 4;
 }
-.sectionCards {
+.sectionCards4 {
   width: 100%;
   height: auto;
   display: flex;
@@ -1215,7 +1383,7 @@
   min-width: 0;
   padding: 130px 0px 0px;
 }
-.container47 {
+.container48 {
   width: 100%;
   height: auto;
   display: flex;
@@ -1229,7 +1397,7 @@
   padding-right: 12px;
   min-width: 0;
 }
-.top {
+.top2 {
   height: auto;
   display: flex;
   position: relative;
@@ -1239,7 +1407,7 @@
   justify-content: space-between;
   column-gap: 80px;
 }
-.title {
+.title5 {
   width: auto;
   height: auto;
   display: flex;
@@ -1249,7 +1417,7 @@
   justify-content: flex-start;
   padding-top: 8px;
 }
-.text__mumK9 {
+.text___2D86O {
   display: block;
   font-size: 18px;
   font-family: "Outfit", sans-serif;
@@ -1260,7 +1428,7 @@
   position: relative;
   text-align: left;
 }
-.container3 {
+.container6 {
   height: auto;
   display: flex;
   position: relative;
@@ -1272,10 +1440,273 @@
   width: 100%;
   min-width: 0;
 }
-.text__k8Wyq {
+.text__z3SBk {
   text-align: left;
   color: #ffffffcc;
   font-weight: 700;
+  width: 100%;
+  min-width: 0;
+}
+.revealOnScroll__k04Nv:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  z-index: 4;
+}
+.sectionCards6 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding-left: 12px;
+  padding-right: 12px;
+  z-index: 3;
+  flex-direction: row;
+  column-gap: 40px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 0;
+}
+.heading4 {
+  width: 40vw;
+  height: auto;
+  display: flex;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 16px;
+  z-index: 1;
+  padding-top: 160px;
+  flex-shrink: 0;
+}
+.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3 {
+  position: relative;
+  top: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: auto;
+  min-width: 0;
+}
+.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4 {
+  display: block;
+  font-size: 14px;
+  text-align: right;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 19.600000381469727px;
+  color: #ffffff;
+}
+.eXpertise2 {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 0;
+}
+.text__qqIdU {
+  display: block;
+  font-size: 80px;
+  font-family: "Koulen";
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 96px;
+  color: #fcfcfc;
+}
+.freeBox___96BuF {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  top: auto;
+  left: auto;
+  right: auto;
+  row-gap: 0px;
+  min-width: 0;
+  padding: 0px;
+}
+.an2 {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text__kTVgZ {
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
+  display: block;
+  font-size: 145px;
+  font-family: "Pinyon Script";
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 40%;
+  color: rgba(138, 116, 50, 1);
+}
+.skills2 {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text__uyfyd {
+  display: block;
+  font-size: 185px;
+  font-family: "Koulen";
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: #ffffff;
+}
+.freeBox___83PE {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  top: auto;
+  left: auto;
+  right: auto;
+  row-gap: 16px;
+  min-width: 0;
+  padding: 0px;
+}
+.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3 {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 412px;
+  height: 59px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4 {
+  display: block;
+  font-size: 14px;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 19.600000381469727px;
+  color: #ffffff;
+  text-align: left;
+}
+.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2 {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 429px;
+  height: 59px;
+  transform: translate(0px, 0.37999725341796875px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.text__mSceM {
+  display: block;
+  font-size: 14px;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 19.600000381469727px;
+  color: #ffffff;
+  text-align: left;
+}
+.container31 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 0px;
+  padding-bottom: 120px;
+  padding-left: 40px;
+  padding-right: 40px;
+  min-width: 0;
+}
+.subContainer2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 24px;
+  min-width: 0;
+  padding: 8px;
+}
+.gridDistortion__cjbFu:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.cardExperience__tztq:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}
+.cardExperience___06OZi:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}
+.cardExperience__a9L0J:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}
+.cardExperience__ep5T:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}
+.cardExperience__fjzUi:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}
+.cardWhatAboutUs5:global(.__wab_instance) {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  display: none;
 }
 .sectionCards3 {
   width: 100%;
@@ -2728,7 +3159,7 @@
   min-width: 0;
   padding: 8px;
 }
-.gridDistortion:global(.__wab_instance) {
+.gridDistortion__tb1Nu:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }

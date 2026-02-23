@@ -92,6 +92,8 @@ export type PlasmicCardExperience__ArgsType = {
   project2Content?: string;
   image11?: React.ComponentProps<typeof PlasmicImg__>["src"];
   image12?: React.ComponentProps<typeof PlasmicImg__>["src"];
+  company?: string;
+  time?: string;
 };
 type ArgPropType = keyof PlasmicCardExperience__ArgsType;
 export const PlasmicCardExperience__ArgProps = new Array<ArgPropType>(
@@ -101,24 +103,22 @@ export const PlasmicCardExperience__ArgProps = new Array<ArgPropType>(
   "project1Content",
   "project2Content",
   "image11",
-  "image12"
+  "image12",
+  "company",
+  "time"
 );
 
 export type PlasmicCardExperience__OverridesType = {
   root?: Flex__<"div">;
+  hoverController?: Flex__<typeof HoverController>;
   number01?: Flex__<"div">;
   number012?: Flex__<"div">;
   titleArtDirection2?: Flex__<"div">;
-  relatedWork2?: Flex__<"div">;
-  _13?: Flex__<"div">;
+  titleArtDirection3?: Flex__<"div">;
   image1?: Flex__<typeof PlasmicImg__>;
   image2?: Flex__<typeof PlasmicImg__>;
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure?: Flex__<"div">;
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2?: Flex__<"div">;
-  titleTopNorwegianCapsule?: Flex__<"div">;
-  titleTopNorwegianCapsule2?: Flex__<"div">;
-  titleTopNorwegianCapsule3?: Flex__<"div">;
-  titleTopNorwegianCapsule4?: Flex__<"div">;
 };
 
 export interface DefaultCardExperienceProps {
@@ -129,6 +129,8 @@ export interface DefaultCardExperienceProps {
   project2Content?: string;
   image11?: React.ComponentProps<typeof PlasmicImg__>["src"];
   image12?: React.ComponentProps<typeof PlasmicImg__>["src"];
+  company?: string;
+  time?: string;
   project1?: SingleBooleanChoiceArg<"project1">;
   project2?: SingleBooleanChoiceArg<"project2">;
   className?: string;
@@ -172,7 +174,9 @@ function PlasmicCardExperience__RenderFunc(props: {
             fullWidth: 1090,
             fullHeight: 1080,
             aspectRatio: undefined
-          }
+          },
+          company: "BBCI",
+          time: "[ Present ]"
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -301,394 +305,150 @@ function PlasmicCardExperience__RenderFunc(props: {
         { [sty.rootproject1]: hasVariant($state, "project1", "project1") }
       )}
     >
-      <div
-        className={classNames(projectcss.all, sty.freeBox__foXrk, {
-          [sty.freeBoxproject1__foXrKuWrEk]: hasVariant(
+      <HoverController
+        data-plasmic-name={"hoverController"}
+        data-plasmic-override={overrides.hoverController}
+        className={classNames("__wab_instance", sty.hoverController, {
+          [sty.hoverControllerproject1]: hasVariant(
             $state,
             "project1",
             "project1"
           )
         })}
-      >
-        <div
-          data-plasmic-name={"number01"}
-          data-plasmic-override={overrides.number01}
-          className={classNames(projectcss.all, sty.number01)}
-        >
-          <div
-            data-plasmic-name={"number012"}
-            data-plasmic-override={overrides.number012}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.number012
-            )}
-          >
-            <React.Fragment>
-              {(() => {
-                try {
-                  return $props.number;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "[01]";
-                  }
-                  throw e;
-                }
-              })()}
-            </React.Fragment>
-          </div>
-        </div>
-        <div className={classNames(projectcss.all, sty.freeBox__m1Fy)}>
-          <div
-            data-plasmic-name={"titleArtDirection2"}
-            data-plasmic-override={overrides.titleArtDirection2}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.titleArtDirection2,
-              {
-                [sty.titleArtDirection2project1]: hasVariant(
-                  $state,
-                  "project1",
-                  "project1"
-                )
-              }
-            )}
-          >
-            <React.Fragment>
-              {(() => {
-                try {
-                  return $props.title;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "ART DIRECTION";
-                  }
-                  throw e;
-                }
-              })()}
-            </React.Fragment>
-          </div>
-          <div className={classNames(projectcss.all, sty.freeBox__jfKvs)}>
-            <div
-              data-plasmic-name={"relatedWork2"}
-              data-plasmic-override={overrides.relatedWork2}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.relatedWork2
-              )}
-            >
-              {"RELATED WORK "}
-            </div>
-            <div
-              data-plasmic-name={"_13"}
-              data-plasmic-override={overrides._13}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty._13
-              )}
-            >
-              {"\u2193 "}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className={classNames(projectcss.all, sty.freeBox__r0Vw, {
-          [sty.freeBoxproject1__r0VwUWrEk]: hasVariant(
-            $state,
-            "project1",
-            "project1"
-          )
-        })}
-      >
-        <PlasmicImg__
-          data-plasmic-name={"image1"}
-          data-plasmic-override={overrides.image1}
-          alt={""}
-          className={classNames(sty.image1, {
-            [sty.image1project1]: hasVariant($state, "project1", "project1"),
-            [sty.image1project2]: hasVariant($state, "project2", "project2")
-          })}
-          displayHeight={"100px"}
-          displayMaxHeight={"none"}
-          displayMaxWidth={"100%"}
-          displayMinHeight={"0"}
-          displayMinWidth={"0"}
-          displayWidth={"156px"}
-          loading={"lazy"}
-          src={args.image11}
-        />
+        onHoverChange={async isHovered => {
+          const $steps = {};
 
-        <PlasmicImg__
-          data-plasmic-name={"image2"}
-          data-plasmic-override={overrides.image2}
-          alt={""}
-          className={classNames(sty.image2, {
-            [sty.image2project1]: hasVariant($state, "project1", "project1"),
-            [sty.image2project2]: hasVariant($state, "project2", "project2")
-          })}
-          displayHeight={"100px"}
-          displayMaxHeight={"none"}
-          displayMaxWidth={"100%"}
-          displayMinHeight={"0"}
-          displayMinWidth={"0"}
-          displayWidth={"156px"}
-          loading={"lazy"}
-          src={args.image12}
-        />
-
-        <div
-          className={classNames(projectcss.all, sty.freeBox__cjKsj, {
-            [sty.freeBoxproject1__cjKsJuWrEk]: hasVariant(
-              $state,
-              "project1",
-              "project1"
-            )
-          })}
-        >
-          <div
-            data-plasmic-name={
-              "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure"
-            }
-            data-plasmic-override={
-              overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure
-            }
-            className={classNames(
-              projectcss.all,
-              sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure,
-              {
-                [sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndureproject1]:
-                  hasVariant($state, "project1", "project1")
-              }
-            )}
-          >
-            <div
-              data-plasmic-name={
-                "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2"
-              }
-              data-plasmic-override={
-                overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2
-              }
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2,
-                {
-                  [sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2project1]:
-                    hasVariant($state, "project1", "project1")
-                }
-              )}
-            >
-              <React.Fragment>
-                {(() => {
-                  try {
-                    return $props.content;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return "Translating emotion into visual stories \nthat connect, inspire, and endure.";
-                    }
-                    throw e;
+          $steps["updateMyHoverState"] = true
+            ? (() => {
+                const actionArgs = {
+                  variable: {
+                    objRoot: $state,
+                    variablePath: ["myHoverState1"]
+                  },
+                  operation: 0,
+                  value: isHovered
+                };
+                return (({ variable, value, startIndex, deleteCount }) => {
+                  if (!variable) {
+                    return;
                   }
-                })()}
-              </React.Fragment>
-            </div>
-          </div>
-          <div
-            className={classNames(projectcss.all, sty.freeBox___4Om3J, {
-              [sty.freeBoxproject1___4Om3JuWrEk]: hasVariant(
-                $state,
-                "project1",
-                "project1"
-              )
-            })}
-          >
-            <HoverController
-              className={classNames(
-                "__wab_instance",
-                sty.hoverController__t3R0P,
-                {
-                  [sty.hoverControllerproject1__t3R0PuWrEk]: hasVariant(
+                  const { objRoot, variablePath } = variable;
+
+                  $stateSet(objRoot, variablePath, value);
+                  return value;
+                })?.apply(null, [actionArgs]);
+              })()
+            : undefined;
+          if (
+            $steps["updateMyHoverState"] != null &&
+            typeof $steps["updateMyHoverState"] === "object" &&
+            typeof $steps["updateMyHoverState"].then === "function"
+          ) {
+            $steps["updateMyHoverState"] = await $steps["updateMyHoverState"];
+          }
+        }}
+        trigger={
+          <DataCtxReader__>
+            {$ctx => (
+              <div
+                className={classNames(projectcss.all, sty.freeBox__k3D1M, {
+                  [sty.freeBoxproject1__k3D1MuWrEk]: hasVariant(
                     $state,
                     "project1",
                     "project1"
                   )
-                }
-              )}
-              onHoverChange={async isHovered => {
-                const $steps = {};
-
-                $steps["updateMyHoverState"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        variable: {
-                          objRoot: $state,
-                          variablePath: ["myHoverState1"]
-                        },
-                        operation: 0,
-                        value: isHovered
-                      };
-                      return (({
-                        variable,
-                        value,
-                        startIndex,
-                        deleteCount
-                      }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-
-                        $stateSet(objRoot, variablePath, value);
-                        return value;
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["updateMyHoverState"] != null &&
-                  typeof $steps["updateMyHoverState"] === "object" &&
-                  typeof $steps["updateMyHoverState"].then === "function"
-                ) {
-                  $steps["updateMyHoverState"] =
-                    await $steps["updateMyHoverState"];
-                }
-              }}
-              trigger={
-                <DataCtxReader__>
-                  {$ctx => (
+                })}
+              >
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__foXrk, {
+                    [sty.freeBoxproject1__foXrKuWrEk]: hasVariant(
+                      $state,
+                      "project1",
+                      "project1"
+                    )
+                  })}
+                >
+                  <div
+                    data-plasmic-name={"number01"}
+                    data-plasmic-override={overrides.number01}
+                    className={classNames(projectcss.all, sty.number01)}
+                  >
                     <div
-                      data-plasmic-name={"titleTopNorwegianCapsule"}
-                      data-plasmic-override={overrides.titleTopNorwegianCapsule}
+                      data-plasmic-name={"number012"}
+                      data-plasmic-override={overrides.number012}
                       className={classNames(
                         projectcss.all,
-                        sty.titleTopNorwegianCapsule
+                        projectcss.__wab_text,
+                        sty.number012
                       )}
                     >
-                      <div
-                        data-plasmic-name={"titleTopNorwegianCapsule2"}
-                        data-plasmic-override={
-                          overrides.titleTopNorwegianCapsule2
-                        }
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.titleTopNorwegianCapsule2
-                        )}
-                      >
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return $props.project1Content;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "NORWEGIAN CAPSULE";
-                              }
-                              throw e;
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $props.number;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "[01]";
                             }
-                          })()}
-                        </React.Fragment>
-                      </div>
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
-                  )}
-                </DataCtxReader__>
-              }
-            />
-
-            <HoverController
-              className={classNames(
-                "__wab_instance",
-                sty.hoverController__dkYqK,
-                {
-                  [sty.hoverControllerproject1__dkYqKuWrEk]: hasVariant(
-                    $state,
-                    "project1",
-                    "project1"
-                  )
-                }
-              )}
-              onHoverChange={async isHovered => {
-                const $steps = {};
-
-                $steps["updateMyHoverState"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        variable: {
-                          objRoot: $state,
-                          variablePath: ["myHoverState2"]
-                        },
-                        operation: 0,
-                        value: isHovered
-                      };
-                      return (({
-                        variable,
-                        value,
-                        startIndex,
-                        deleteCount
-                      }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-
-                        $stateSet(objRoot, variablePath, value);
-                        return value;
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["updateMyHoverState"] != null &&
-                  typeof $steps["updateMyHoverState"] === "object" &&
-                  typeof $steps["updateMyHoverState"].then === "function"
-                ) {
-                  $steps["updateMyHoverState"] =
-                    await $steps["updateMyHoverState"];
-                }
-              }}
-              trigger={
-                <DataCtxReader__>
-                  {$ctx => (
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__m1Fy)}
+                  >
                     <div
-                      data-plasmic-name={"titleTopNorwegianCapsule3"}
-                      data-plasmic-override={
-                        overrides.titleTopNorwegianCapsule3
-                      }
+                      data-plasmic-name={"titleArtDirection2"}
+                      data-plasmic-override={overrides.titleArtDirection2}
                       className={classNames(
                         projectcss.all,
-                        sty.titleTopNorwegianCapsule3
+                        projectcss.__wab_text,
+                        sty.titleArtDirection2,
+                        {
+                          [sty.titleArtDirection2project1]: hasVariant(
+                            $state,
+                            "project1",
+                            "project1"
+                          )
+                        }
                       )}
                     >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $props.title;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "ART DIRECTION";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__jfKvs)}
+                    >
                       <div
-                        data-plasmic-name={"titleTopNorwegianCapsule4"}
-                        data-plasmic-override={
-                          overrides.titleTopNorwegianCapsule4
-                        }
+                        data-plasmic-name={"titleArtDirection3"}
+                        data-plasmic-override={overrides.titleArtDirection3}
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.titleTopNorwegianCapsule4,
+                          sty.titleArtDirection3,
                           {
-                            [sty.titleTopNorwegianCapsule4project1]: hasVariant(
+                            [sty.titleArtDirection3project1]: hasVariant(
                               $state,
                               "project1",
                               "project1"
-                            ),
-                            [sty.titleTopNorwegianCapsule4project2]: hasVariant(
-                              $state,
-                              "project2",
-                              "project2"
                             )
                           }
                         )}
@@ -696,13 +456,13 @@ function PlasmicCardExperience__RenderFunc(props: {
                         <React.Fragment>
                           {(() => {
                             try {
-                              return $props.project2Content;
+                              return $props.company;
                             } catch (e) {
                               if (
                                 e instanceof TypeError ||
                                 e?.plasmicType === "PlasmicUndefinedDataError"
                               ) {
-                                return "";
+                                return "ART DIRECTION";
                               }
                               throw e;
                             }
@@ -710,13 +470,135 @@ function PlasmicCardExperience__RenderFunc(props: {
                         </React.Fragment>
                       </div>
                     </div>
-                  )}
-                </DataCtxReader__>
-              }
-            />
-          </div>
-        </div>
-      </div>
+                  </div>
+                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__r0Vw, {
+                    [sty.freeBoxproject1__r0VwUWrEk]: hasVariant(
+                      $state,
+                      "project1",
+                      "project1"
+                    )
+                  })}
+                >
+                  <PlasmicImg__
+                    data-plasmic-name={"image1"}
+                    data-plasmic-override={overrides.image1}
+                    alt={""}
+                    className={classNames(sty.image1, {
+                      [sty.image1project1]: hasVariant(
+                        $state,
+                        "project1",
+                        "project1"
+                      ),
+                      [sty.image1project2]: hasVariant(
+                        $state,
+                        "project2",
+                        "project2"
+                      )
+                    })}
+                    displayHeight={"100px"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"156px"}
+                    loading={"lazy"}
+                    src={args.image11}
+                  />
+
+                  <PlasmicImg__
+                    data-plasmic-name={"image2"}
+                    data-plasmic-override={overrides.image2}
+                    alt={""}
+                    className={classNames(sty.image2, {
+                      [sty.image2project1]: hasVariant(
+                        $state,
+                        "project1",
+                        "project1"
+                      ),
+                      [sty.image2project2]: hasVariant(
+                        $state,
+                        "project2",
+                        "project2"
+                      )
+                    })}
+                    displayHeight={"100px"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"156px"}
+                    loading={"lazy"}
+                    src={args.image12}
+                  />
+
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__cjKsj, {
+                      [sty.freeBoxproject1__cjKsJuWrEk]: hasVariant(
+                        $state,
+                        "project1",
+                        "project1"
+                      )
+                    })}
+                  >
+                    <div
+                      data-plasmic-name={
+                        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure"
+                      }
+                      data-plasmic-override={
+                        overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure
+                      }
+                      className={classNames(
+                        projectcss.all,
+                        sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure,
+                        {
+                          [sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndureproject1]:
+                            hasVariant($state, "project1", "project1")
+                        }
+                      )}
+                    >
+                      <div
+                        data-plasmic-name={
+                          "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2"
+                        }
+                        data-plasmic-override={
+                          overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2
+                        }
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2,
+                          {
+                            [sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2project1]:
+                              hasVariant($state, "project1", "project1")
+                          }
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $props.content;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "Translating emotion into visual stories \nthat connect, inspire, and endure.";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </DataCtxReader__>
+        }
+      />
     </div>
   ) as React.ReactElement | null;
 }
@@ -724,25 +606,31 @@ function PlasmicCardExperience__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "hoverController",
     "number01",
     "number012",
     "titleArtDirection2",
-    "relatedWork2",
-    "_13",
+    "titleArtDirection3",
     "image1",
     "image2",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2",
-    "titleTopNorwegianCapsule",
-    "titleTopNorwegianCapsule2",
-    "titleTopNorwegianCapsule3",
-    "titleTopNorwegianCapsule4"
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2"
+  ],
+  hoverController: [
+    "hoverController",
+    "number01",
+    "number012",
+    "titleArtDirection2",
+    "titleArtDirection3",
+    "image1",
+    "image2",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2"
   ],
   number01: ["number01", "number012"],
   number012: ["number012"],
   titleArtDirection2: ["titleArtDirection2"],
-  relatedWork2: ["relatedWork2"],
-  _13: ["_13"],
+  titleArtDirection3: ["titleArtDirection3"],
   image1: ["image1"],
   image2: ["image2"],
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure:
@@ -753,36 +641,22 @@ const PlasmicDescendants = {
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2:
     [
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2"
-    ],
-  titleTopNorwegianCapsule: [
-    "titleTopNorwegianCapsule",
-    "titleTopNorwegianCapsule2"
-  ],
-  titleTopNorwegianCapsule2: ["titleTopNorwegianCapsule2"],
-  titleTopNorwegianCapsule3: [
-    "titleTopNorwegianCapsule3",
-    "titleTopNorwegianCapsule4"
-  ],
-  titleTopNorwegianCapsule4: ["titleTopNorwegianCapsule4"]
+    ]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  hoverController: typeof HoverController;
   number01: "div";
   number012: "div";
   titleArtDirection2: "div";
-  relatedWork2: "div";
-  _13: "div";
+  titleArtDirection3: "div";
   image1: typeof PlasmicImg__;
   image2: typeof PlasmicImg__;
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure: "div";
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2: "div";
-  titleTopNorwegianCapsule: "div";
-  titleTopNorwegianCapsule2: "div";
-  titleTopNorwegianCapsule3: "div";
-  titleTopNorwegianCapsule4: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -847,11 +721,11 @@ export const PlasmicCardExperience = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    hoverController: makeNodeComponent("hoverController"),
     number01: makeNodeComponent("number01"),
     number012: makeNodeComponent("number012"),
     titleArtDirection2: makeNodeComponent("titleArtDirection2"),
-    relatedWork2: makeNodeComponent("relatedWork2"),
-    _13: makeNodeComponent("_13"),
+    titleArtDirection3: makeNodeComponent("titleArtDirection3"),
     image1: makeNodeComponent("image1"),
     image2: makeNodeComponent("image2"),
     weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure:
@@ -862,10 +736,6 @@ export const PlasmicCardExperience = Object.assign(
       makeNodeComponent(
         "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2"
       ),
-    titleTopNorwegianCapsule: makeNodeComponent("titleTopNorwegianCapsule"),
-    titleTopNorwegianCapsule2: makeNodeComponent("titleTopNorwegianCapsule2"),
-    titleTopNorwegianCapsule3: makeNodeComponent("titleTopNorwegianCapsule3"),
-    titleTopNorwegianCapsule4: makeNodeComponent("titleTopNorwegianCapsule4"),
 
     // Metadata about props expected for PlasmicCardExperience
     internalVariantProps: PlasmicCardExperience__VariantProps,

@@ -215,21 +215,29 @@ function PlasmicNewMenu__RenderFunc(props: {
         <div className={classNames(projectcss.all, sty.freeBox__ieTg)}>
           <HackerText
             className={classNames("__wab_instance", sty.hackerText__jmcv1)}
+            defaultColor={"#ffffff"}
+            hoverColor={"#00ff00"}
             text={"My Journey"}
           />
 
           <HackerText
             className={classNames("__wab_instance", sty.hackerText___6Cr0S)}
+            defaultColor={"#ffffff"}
+            hoverColor={"#00ff00"}
             text={"Works"}
           />
 
           <HackerText
             className={classNames("__wab_instance", sty.hackerText__lpsI)}
+            defaultColor={"#ffffff"}
+            hoverColor={"#00ff00"}
             text={"My Services"}
           />
 
           <HackerText
             className={classNames("__wab_instance", sty.hackerText__sm9PM)}
+            defaultColor={"#ffffff"}
+            hoverColor={"#00ff00"}
             text={"Contact"}
           />
         </div>
