@@ -74,6 +74,7 @@ import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
+import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI/codeComponent
 import { Video } from "@plasmicpkgs/plasmic-basic-components";
@@ -170,6 +171,21 @@ export type PlasmicHomepage__OverridesType = {
   container2?: Flex__<"div">;
   headerHeroSection2?: Flex__<"div">;
   headerHeroSection3?: Flex__<"div">;
+  sectionCards2?: Flex__<"div">;
+  left?: Flex__<"div">;
+  title2?: Flex__<"div">;
+  container4?: Flex__<"div">;
+  left2?: Flex__<"div">;
+  title4?: Flex__<"div">;
+  container5?: Flex__<"div">;
+  _6?: Flex__<"div">;
+  hackerText?: Flex__<typeof HackerText>;
+  _7?: Flex__<"div">;
+  _8?: Flex__<"div">;
+  _9?: Flex__<"div">;
+  _10?: Flex__<"div">;
+  _11?: Flex__<"div">;
+  _12?: Flex__<"div">;
   sectionCards?: Flex__<"div">;
   container47?: Flex__<"div">;
   top?: Flex__<"div">;
@@ -724,73 +740,70 @@ function PlasmicHomepage__RenderFunc(props: {
               >
                 <div className={classNames(projectcss.all, sty.freeBox__xdgmx)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox___45NKw)}
+                    className={classNames(projectcss.all, sty.freeBox__gYGn)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__hjVw1)}
+                      className={classNames(projectcss.all, sty.freeBox__bskKq)}
                     >
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1___5DzwJ
-                        )}
-                      >
-                        {"HSV "}
-                      </h1>
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1___53Vhv
-                        )}
-                      >
-                        {"[ home ] "}
-                      </h1>
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1__pqfJi
-                        )}
-                      >
-                        {"is the folio of"}
-                      </h1>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__om33R)}
-                    >
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1__fqArZ
-                        )}
-                      >
-                        {"HONG SON VO "}
-                      </h1>
                       <PlasmicImg__
                         alt={""}
-                        className={classNames(sty.img__utsu7)}
-                        displayHeight={"auto"}
+                        className={classNames(sty.img__mG268)}
+                        displayHeight={"326px"}
                         displayMaxHeight={"none"}
                         displayMaxWidth={"100%"}
                         displayMinHeight={"0"}
                         displayMinWidth={"0"}
-                        displayWidth={"50px"}
+                        displayWidth={"336px"}
                         loading={"lazy"}
                         src={{
-                          src: "/plasmic/son_vo/images/untitled1CopySvg3.svg",
-                          fullWidth: 114.28,
-                          fullHeight: 128.11,
-                          aspectRatio: 0.892046
+                          src: "/plasmic/son_vo/images/image4.png",
+                          fullWidth: 1170,
+                          fullHeight: 1560,
+                          aspectRatio: undefined
                         }}
                       />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__qfmit
+                        )}
+                      />
                     </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___45NKw)}
+                  >
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1___5DzwJ
+                      )}
+                    >
+                      {"H"}
+                    </h1>
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__tfuZe
+                      )}
+                    >
+                      {"S"}
+                    </h1>
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1___5AEnJ
+                      )}
+                    >
+                      {"V"}
+                    </h1>
                   </div>
                 </div>
               </div>
@@ -799,6 +812,73 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.headerHeroSection3}
                 className={classNames(projectcss.all, sty.headerHeroSection3)}
               >
+                <div className={classNames(projectcss.all, sty.freeBox__ohi62)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__nU28D)}
+                  >
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__pfjH6
+                      )}
+                    >
+                      {"HSV"}
+                    </h1>
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1___4S00K
+                      )}
+                    >
+                      {" [ home ] "}
+                    </h1>
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__qg2Zx
+                      )}
+                    >
+                      {"is the folio of"}
+                    </h1>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__d4ZOf)}
+                  >
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__bf2CR
+                      )}
+                    >
+                      {"HONG SON VO "}
+                    </h1>
+                    <PlasmicImg__
+                      alt={""}
+                      className={classNames(sty.img__nV6Js)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"50px"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/son_vo/images/untitled1CopySvg3.svg",
+                        fullWidth: 114.28,
+                        fullHeight: 128.11,
+                        aspectRatio: 0.892046
+                      }}
+                    />
+                  </div>
+                </div>
                 <div className={classNames(projectcss.all, sty.freeBox__gagyi)}>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__qm77O)}
@@ -840,6 +920,318 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
                 </div>
               </div>
+              <RevealOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.revealOnScroll__bPUy8
+                )}
+                delay={0}
+                duration={0.8}
+                yOffset={50}
+              >
+                <div
+                  data-plasmic-name={"sectionCards2"}
+                  data-plasmic-override={overrides.sectionCards2}
+                  className={classNames(projectcss.all, sty.sectionCards2)}
+                >
+                  <div
+                    data-plasmic-name={"left"}
+                    data-plasmic-override={overrides.left}
+                    className={classNames(projectcss.all, sty.left)}
+                  >
+                    <div
+                      data-plasmic-name={"title2"}
+                      data-plasmic-override={overrides.title2}
+                      className={classNames(projectcss.all, sty.title2)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__qDKf9
+                        )}
+                      >
+                        {"ABOUT ME"}
+                      </div>
+                    </div>
+                    <div
+                      data-plasmic-name={"container4"}
+                      data-plasmic-override={overrides.container4}
+                      className={classNames(projectcss.all, sty.container4)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__eNwwS
+                        )}
+                      >
+                        {
+                          "I design software with the belief it's one of the most malleable mediums we have. At the moment, I'm interested in how tools connect with each other, how they act on our behalf, and how we interact with them across different modes. I currently UI/UX Deisigner at Gleads\u2197, an applied research lab building AI tooling for software creation. I studied Communication Design\u2197 and Human-Computer Interaction\u2197 at Carnegie Mellon University, an experience I hold fondly and will cherish for the rest of my life. If you have an interesting idea, get in touch\u2197."
+                        }
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-plasmic-name={"left2"}
+                    data-plasmic-override={overrides.left2}
+                    className={classNames(projectcss.all, sty.left2)}
+                  >
+                    <div
+                      data-plasmic-name={"title4"}
+                      data-plasmic-override={overrides.title4}
+                      className={classNames(projectcss.all, sty.title4)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ebpLi
+                        )}
+                      >
+                        {"MY SKILL"}
+                      </div>
+                    </div>
+                    <div
+                      data-plasmic-name={"container5"}
+                      data-plasmic-override={overrides.container5}
+                      className={classNames(projectcss.all, sty.container5)}
+                    >
+                      <div
+                        data-plasmic-name={"_6"}
+                        data-plasmic-override={overrides._6}
+                        className={classNames(projectcss.all, sty._6)}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__ekQBp)}
+                          displayHeight={"50px"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"50px"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/image5.png",
+                            fullWidth: 512,
+                            fullHeight: 512,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <HackerText
+                          data-plasmic-name={"hackerText"}
+                          data-plasmic-override={overrides.hackerText}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.hackerText
+                          )}
+                          text={"FRAMER"}
+                        />
+                      </div>
+                      <div
+                        data-plasmic-name={"_7"}
+                        data-plasmic-override={overrides._7}
+                        className={classNames(projectcss.all, sty._7)}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img___3CpJb)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"50px"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/image6.png",
+                            fullWidth: 148,
+                            fullHeight: 148,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__v50
+                          )}
+                        >
+                          {"WEBFLOW"}
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"_8"}
+                        data-plasmic-override={overrides._8}
+                        className={classNames(projectcss.all, sty._8)}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__vj9DH)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"50px"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/image7.png",
+                            fullWidth: 512,
+                            fullHeight: 512,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___8Jwci
+                          )}
+                        >
+                          {"FIGMA"}
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"_9"}
+                        data-plasmic-override={overrides._9}
+                        className={classNames(projectcss.all, sty._9)}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img___3MIm1)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"50px"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/image8.png",
+                            fullWidth: 148,
+                            fullHeight: 148,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__c7Ep
+                          )}
+                        >
+                          {"CLARITY"}
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"_10"}
+                        data-plasmic-override={overrides._10}
+                        className={classNames(projectcss.all, sty._10)}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img___92O50)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"50px"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/image9.png",
+                            fullWidth: 148,
+                            fullHeight: 148,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__z3Eyz
+                          )}
+                        >
+                          {"FONTLABS"}
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"_11"}
+                        data-plasmic-override={overrides._11}
+                        className={classNames(projectcss.all, sty._11)}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__y0RMb)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"50px"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/image10.png",
+                            fullWidth: 220,
+                            fullHeight: 220,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__u0TBc
+                          )}
+                        >
+                          {"ADOBE CREATIVE SUITE"}
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"_12"}
+                        data-plasmic-override={overrides._12}
+                        className={classNames(projectcss.all, sty._12)}
+                      >
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__ugnEh)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"50px"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/image11.png",
+                            fullWidth: 220,
+                            fullHeight: 220,
+                            aspectRatio: undefined
+                          }}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__nlAjs
+                          )}
+                        >
+                          {"BLENDER"}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </RevealOnScroll>
               <RevealOnScroll
                 className={classNames(
                   "__wab_instance",
@@ -2117,6 +2509,21 @@ const PlasmicDescendants = {
     "container2",
     "headerHeroSection2",
     "headerHeroSection3",
+    "sectionCards2",
+    "left",
+    "title2",
+    "container4",
+    "left2",
+    "title4",
+    "container5",
+    "_6",
+    "hackerText",
+    "_7",
+    "_8",
+    "_9",
+    "_10",
+    "_11",
+    "_12",
     "sectionCards",
     "container47",
     "top",
@@ -2183,6 +2590,21 @@ const PlasmicDescendants = {
     "container2",
     "headerHeroSection2",
     "headerHeroSection3",
+    "sectionCards2",
+    "left",
+    "title2",
+    "container4",
+    "left2",
+    "title4",
+    "container5",
+    "_6",
+    "hackerText",
+    "_7",
+    "_8",
+    "_9",
+    "_10",
+    "_11",
+    "_12",
     "sectionCards",
     "container47",
     "top",
@@ -2340,6 +2762,59 @@ const PlasmicDescendants = {
   container2: ["container2"],
   headerHeroSection2: ["headerHeroSection2"],
   headerHeroSection3: ["headerHeroSection3"],
+  sectionCards2: [
+    "sectionCards2",
+    "left",
+    "title2",
+    "container4",
+    "left2",
+    "title4",
+    "container5",
+    "_6",
+    "hackerText",
+    "_7",
+    "_8",
+    "_9",
+    "_10",
+    "_11",
+    "_12"
+  ],
+  left: ["left", "title2", "container4"],
+  title2: ["title2"],
+  container4: ["container4"],
+  left2: [
+    "left2",
+    "title4",
+    "container5",
+    "_6",
+    "hackerText",
+    "_7",
+    "_8",
+    "_9",
+    "_10",
+    "_11",
+    "_12"
+  ],
+  title4: ["title4"],
+  container5: [
+    "container5",
+    "_6",
+    "hackerText",
+    "_7",
+    "_8",
+    "_9",
+    "_10",
+    "_11",
+    "_12"
+  ],
+  _6: ["_6", "hackerText"],
+  hackerText: ["hackerText"],
+  _7: ["_7"],
+  _8: ["_8"],
+  _9: ["_9"],
+  _10: ["_10"],
+  _11: ["_11"],
+  _12: ["_12"],
   sectionCards: ["sectionCards", "container47", "top", "title", "container3"],
   container47: ["container47", "top", "title", "container3"],
   top: ["top", "title", "container3"],
@@ -2491,6 +2966,21 @@ type NodeDefaultElementType = {
   container2: "div";
   headerHeroSection2: "div";
   headerHeroSection3: "div";
+  sectionCards2: "div";
+  left: "div";
+  title2: "div";
+  container4: "div";
+  left2: "div";
+  title4: "div";
+  container5: "div";
+  _6: "div";
+  hackerText: typeof HackerText;
+  _7: "div";
+  _8: "div";
+  _9: "div";
+  _10: "div";
+  _11: "div";
+  _12: "div";
   sectionCards: "div";
   container47: "div";
   top: "div";
@@ -2654,6 +3144,21 @@ export const PlasmicHomepage = Object.assign(
     container2: makeNodeComponent("container2"),
     headerHeroSection2: makeNodeComponent("headerHeroSection2"),
     headerHeroSection3: makeNodeComponent("headerHeroSection3"),
+    sectionCards2: makeNodeComponent("sectionCards2"),
+    left: makeNodeComponent("left"),
+    title2: makeNodeComponent("title2"),
+    container4: makeNodeComponent("container4"),
+    left2: makeNodeComponent("left2"),
+    title4: makeNodeComponent("title4"),
+    container5: makeNodeComponent("container5"),
+    _6: makeNodeComponent("_6"),
+    hackerText: makeNodeComponent("hackerText"),
+    _7: makeNodeComponent("_7"),
+    _8: makeNodeComponent("_8"),
+    _9: makeNodeComponent("_9"),
+    _10: makeNodeComponent("_10"),
+    _11: makeNodeComponent("_11"),
+    _12: makeNodeComponent("_12"),
     sectionCards: makeNodeComponent("sectionCards"),
     container47: makeNodeComponent("container47"),
     top: makeNodeComponent("top"),

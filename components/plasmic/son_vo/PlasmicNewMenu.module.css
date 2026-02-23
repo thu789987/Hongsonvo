@@ -40,6 +40,7 @@
   max-width: 100%;
   font-family: "Koulen";
   color: #ffffff80;
+  font-size: 40px;
 }
 .freeBox___6LhCd {
   display: flex;
@@ -123,6 +124,7 @@
   flex-direction: row;
   display: flex;
   min-height: 0;
+  border-radius: 4px;
   padding: 8px 24px;
 }
 .text__eNxCg {
