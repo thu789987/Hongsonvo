@@ -181,7 +181,8 @@ PLASMIC.registerComponent(GridDistortion, {
       displayName: "Relaxation"
     }
   },
-  importPath: "./components/GridDistortion"
+  importPath: "./components/GridDistortion",
+  isDefaultExport: true,
 });
 
 PLASMIC.registerComponent(RevealOnScroll, {
