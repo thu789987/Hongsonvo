@@ -935,20 +935,6 @@
       "cssFilePath": "plasmic/son_vo/plasmic.module.css",
       "components": [
         {
-          "id": "F5b4pw36Rhyj",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "bLa1shfC4noziDsvmxjKJF",
-          "renderModuleFilePath": "plasmic/son_vo/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/index.tsx"
-          },
-          "cssFilePath": "plasmic/son_vo/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/"
-        },
-        {
           "id": "pYJFbf4txB9X",
           "name": "Navbar",
           "type": "managed",
@@ -1170,6 +1156,20 @@
           "cssFilePath": "plasmic/son_vo/PlasmicCardExperience.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "F5b4pw36Rhyj",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
         }
       ],
       "icons": [

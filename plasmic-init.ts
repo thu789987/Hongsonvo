@@ -298,4 +298,5 @@ PLASMIC.registerComponent(HackerText, {
     }
   },
   importPath: "./components/HackerText", // Nhớ giữ dòng này không lại bị lỗi cũ nhé
+  isDefaultExport: true,
 });
