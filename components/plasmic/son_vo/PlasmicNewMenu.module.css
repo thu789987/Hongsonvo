@@ -1,0 +1,138 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  mix-blend-mode: normal;
+  position: relative;
+  transition-property: all;
+  transition-duration: 300ms;
+  min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 300ms;
+  padding: 24px 60px;
+  border-bottom: 1px solid #ffffff80;
+}
+.menuscrolledState {
+  border-bottom-color: #ffffff00;
+}
+.freeBox__eCo7W {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 0px;
+}
+.text__xdhB6 {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-family: "Koulen";
+  color: #ffffff80;
+}
+.freeBox___6LhCd {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 0px;
+}
+.freeBox__ieTg {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 0px;
+}
+.hackerText__jmcv1:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.hackerText___6Cr0S:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.hackerText__lpsI:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.hackerText__sm9PM:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.freeBox___2ndUm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-start;
+  row-gap: 8px;
+  min-width: 0;
+}
+.slotTargetHeaderTitle {
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  text-align: right;
+  line-height: 24px;
+  letter-spacing: -1.7999999523162842px;
+}
+.freeBox__aBbEh {
+  position: relative;
+  height: 100%;
+  width: auto;
+  background: #ffffff;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  min-height: 0;
+  padding: 8px 24px;
+}
+.text__eNxCg {
+  animation: none;
+  line-height: 120%;
+  font-size: 14px;
+  letter-spacing: 0px;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}

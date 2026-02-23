@@ -1,0 +1,33 @@
+.footer {
+  transform: translate(0px, -0.25px);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  justify-self: flex-start;
+  background: none;
+  column-gap: 40px;
+  position: relative;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  padding: 80px 60px 160px;
+}
+.img {
+  animation: none;
+  object-fit: cover;
+  max-width: 100%;
+  height: 200px;
+  background: url("/plasmic/son_vo/images/imageMainProjectCover.jpg") center center / cover no-repeat;
+  width: 100%;
+  position: relative;
+  left: auto;
+  top: auto;
+  min-width: 0;
+  border-radius: 4px;
+}
+.img > picture > img {
+  object-fit: cover;
+}
