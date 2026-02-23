@@ -299,4 +299,4 @@ const GridDistortion: React.FC<GridDistortionProps> = ({
   );
 };
 
-export default GridDistortion;
+export { GridDistortion };

@@ -9,7 +9,7 @@ interface HackerTextProps {
   hoverColor?: string;   // Màu lúc rê chuột vào
 }
 
-export default function HackerText({ 
+export function HackerText({ 
   text = "MENU ITEM", 
   className,
   defaultColor = "#ffffff", // Mặc định là màu trắng

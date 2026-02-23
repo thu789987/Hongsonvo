@@ -32,4 +32,4 @@ const ScrollDetector: React.FC<ScrollDetectorProps> = ({
   );
 };
 
-export default ScrollDetector;
+export {ScrollDetector};
