@@ -7,7 +7,7 @@ interface PatternGridProps {
   gap?: number;
 }
 
-export default function PatternGrid({ 
+export function PatternGrid({ 
   children, 
   className,
   gap = 16 

@@ -10,6 +10,13 @@ import { PlasmicQueryDataProvider } from "@plasmicapp/react-web/lib/query";
 import type { GetStaticProps } from "next";
 import { extractPlasmicQueryData } from "@plasmicapp/react-web/lib/prepass";
 
+export const getStaticPaths = async () => {
+  return {
+    paths: [], // Không tạo sẵn trang nào lúc build để tránh lỗi
+    fallback: 'blocking' // Tự động tạo trang mượt mà khi có người truy cập lần đầu
+  };
+};
+
 export const getStaticProps: GetStaticProps = async context => {
   const queryCache = await extractPlasmicQueryData(<PlasmicNewPage />);
   return {
