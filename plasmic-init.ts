@@ -29,13 +29,13 @@ import { MasonryLayout } from "./components/MasonryLayout";
 import HoverReveal from './components/HoverReveal'; // Nhớ import đúng đường dẫn
 import PatternGrid from './components/PatternGrid';
 import TypingAnimation from './components/TypingAnimation';
-import {GridDistortion} from './components/GridDistortion';
+import { GridDistortion } from './components/GridDistortion';
 import { RevealOnScroll } from './components/RevealOnScroll';
 import { propagateServerField } from "next/dist/server/lib/render-server";
 import { SmoothScroll } from './components/SmoothScroll';
-import {ScrollDetector} from './components/ScrollDetector';
+import { ScrollDetector } from './components/ScrollDetector';
 import { HoverController } from './components/HoverController';
-import {HackerText} from './components/HackerText';
+import { HackerText } from './components/HackerText';
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
