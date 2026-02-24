@@ -83,26 +83,16 @@ export const PlasmicFotterMain__ArgProps = new Array<ArgPropType>();
 export type PlasmicFotterMain__OverridesType = {
   footer3?: Flex__<"div">;
   container41?: Flex__<"div">;
-  container42?: Flex__<"div">;
   frame1618873418?: Flex__<"div">;
-  navigation5?: Flex__<"div">;
-  link22?: Flex__<"div">;
-  frame1618873419?: Flex__<"div">;
-  link23?: Flex__<"div">;
-  link24?: Flex__<"div">;
-  link25?: Flex__<"div">;
-  link26?: Flex__<"div">;
   navigation6?: Flex__<"div">;
   link27?: Flex__<"div">;
   frame1618873420?: Flex__<"div">;
   link28?: Flex__<"div">;
   link29?: Flex__<"div">;
   link30?: Flex__<"div">;
-  container43?: Flex__<"div">;
-  frame1618873421?: Flex__<"div">;
-  frame1618873422?: Flex__<"div">;
-  link31?: Flex__<"div">;
   heading17?: Flex__<"div">;
+  container43?: Flex__<"div">;
+  frame1618873422?: Flex__<"div">;
 };
 
 export interface DefaultFotterMainProps {
@@ -173,362 +163,157 @@ function PlasmicFotterMain__RenderFunc(props: {
         className={classNames(projectcss.all, sty.container41)}
       >
         <div
-          data-plasmic-name={"container42"}
-          data-plasmic-override={overrides.container42}
-          className={classNames(projectcss.all, sty.container42)}
+          data-plasmic-name={"frame1618873418"}
+          data-plasmic-override={overrides.frame1618873418}
+          className={classNames(projectcss.all, sty.frame1618873418)}
         >
           <div
-            data-plasmic-name={"frame1618873418"}
-            data-plasmic-override={overrides.frame1618873418}
-            className={classNames(projectcss.all, sty.frame1618873418)}
+            data-plasmic-name={"navigation6"}
+            data-plasmic-override={overrides.navigation6}
+            className={classNames(projectcss.all, sty.navigation6)}
           >
             <div
-              data-plasmic-name={"navigation5"}
-              data-plasmic-override={overrides.navigation5}
-              className={classNames(projectcss.all, sty.navigation5)}
+              data-plasmic-name={"link27"}
+              data-plasmic-override={overrides.link27}
+              className={classNames(projectcss.all, sty.link27)}
             >
               <div
-                data-plasmic-name={"link22"}
-                data-plasmic-override={overrides.link22}
-                className={classNames(projectcss.all, sty.link22)}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__p0IDw
+                )}
               >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__j7Y8K
-                  )}
-                >
-                  {"Site Index"}
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"frame1618873419"}
-                data-plasmic-override={overrides.frame1618873419}
-                className={classNames(projectcss.all, sty.frame1618873419)}
-              >
-                <div
-                  data-plasmic-name={"link23"}
-                  data-plasmic-override={overrides.link23}
-                  className={classNames(projectcss.all, sty.link23)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__ydqAi
-                    )}
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
                   >
-                    {"Home"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"link24"}
-                  data-plasmic-override={overrides.link24}
-                  className={classNames(projectcss.all, sty.link24)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__ffoY
-                    )}
-                  >
-                    {"Works"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"link25"}
-                  data-plasmic-override={overrides.link25}
-                  className={classNames(projectcss.all, sty.link25)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__gu8Oo
-                    )}
-                  >
-                    {"Services"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"link26"}
-                  data-plasmic-override={overrides.link26}
-                  className={classNames(projectcss.all, sty.link26)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__wgpL
-                    )}
-                  >
-                    {"Contact"}
-                  </div>
-                </div>
+                    {"COME SAY HELLO"}
+                  </span>
+                </React.Fragment>
               </div>
             </div>
             <div
-              data-plasmic-name={"navigation6"}
-              data-plasmic-override={overrides.navigation6}
-              className={classNames(projectcss.all, sty.navigation6)}
+              data-plasmic-name={"frame1618873420"}
+              data-plasmic-override={overrides.frame1618873420}
+              className={classNames(projectcss.all, sty.frame1618873420)}
             >
               <div
-                data-plasmic-name={"link27"}
-                data-plasmic-override={overrides.link27}
-                className={classNames(projectcss.all, sty.link27)}
+                data-plasmic-name={"link28"}
+                data-plasmic-override={overrides.link28}
+                className={classNames(projectcss.all, sty.link28)}
               >
+                <Icon2Icon
+                  className={classNames(projectcss.all, sty.svg__sfB2O)}
+                  role={"img"}
+                />
+
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__p0IDw
+                    sty.text__wEneb
                   )}
                 >
-                  {"Social"}
+                  {"Facebook"}
                 </div>
               </div>
               <div
-                data-plasmic-name={"frame1618873420"}
-                data-plasmic-override={overrides.frame1618873420}
-                className={classNames(projectcss.all, sty.frame1618873420)}
+                data-plasmic-name={"link29"}
+                data-plasmic-override={overrides.link29}
+                className={classNames(projectcss.all, sty.link29)}
               >
-                <div
-                  data-plasmic-name={"link28"}
-                  data-plasmic-override={overrides.link28}
-                  className={classNames(projectcss.all, sty.link28)}
-                >
-                  <Icon2Icon
-                    className={classNames(projectcss.all, sty.svg__sfB2O)}
-                    role={"img"}
-                  />
+                <Icon2Icon
+                  className={classNames(projectcss.all, sty.svg__mjXz)}
+                  role={"img"}
+                />
 
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__wEneb
-                    )}
-                  >
-                    {"Facebook"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"link29"}
-                  data-plasmic-override={overrides.link29}
-                  className={classNames(projectcss.all, sty.link29)}
-                >
-                  <Icon2Icon
-                    className={classNames(projectcss.all, sty.svg__mjXz)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__xYUhD
-                    )}
-                  >
-                    {"LinkedIn"}
-                  </div>
-                </div>
-                <div
-                  data-plasmic-name={"link30"}
-                  data-plasmic-override={overrides.link30}
-                  className={classNames(projectcss.all, sty.link30)}
-                >
-                  <Icon2Icon
-                    className={classNames(projectcss.all, sty.svg__oJr32)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__eC7U4
-                    )}
-                  >
-                    {"Behance"}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              data-plasmic-name={"container43"}
-              data-plasmic-override={overrides.container43}
-              className={classNames(projectcss.all, sty.container43)}
-            >
-              <div
-                data-plasmic-name={"frame1618873421"}
-                data-plasmic-override={overrides.frame1618873421}
-                className={classNames(projectcss.all, sty.frame1618873421)}
-              >
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__tTojT
+                    sty.text__xYUhD
                   )}
                 >
-                  {"Tell us about your project.\nLet's collaborate."}
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__ghlCr
-                  )}
-                >
-                  {"05:11:04 (GMT+2)"}
+                  {"LinkedIn"}
                 </div>
               </div>
               <div
-                data-plasmic-name={"frame1618873422"}
-                data-plasmic-override={overrides.frame1618873422}
-                className={classNames(projectcss.all, sty.frame1618873422)}
+                data-plasmic-name={"link30"}
+                data-plasmic-override={overrides.link30}
+                className={classNames(projectcss.all, sty.link30)}
               >
+                <Icon2Icon
+                  className={classNames(projectcss.all, sty.svg__oJr32)}
+                  role={"img"}
+                />
+
                 <div
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__pqy7Y
+                    sty.text__eC7U4
                   )}
                 >
-                  {"+27 (0) 78 054 8476"}
+                  {"Behance"}
                 </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__lYxxo
-                  )}
-                >
-                  {"Thu789987@gmail.com"}
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__wqQZp
-                  )}
-                >
-                  {"Write Us"}
-                </div>
-              </div>
-              <div
-                data-plasmic-name={"link31"}
-                data-plasmic-override={overrides.link31}
-                className={classNames(projectcss.all, sty.link31)}
-              >
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__ccoK)}
-                  displayHeight={"56px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"56px"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/son_vo/images/imageTeamMember1.jpg",
-                    fullWidth: 1080,
-                    fullHeight: 810,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img___5Eq6V)}
-                  displayHeight={"56px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"56px"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/son_vo/images/imageTeamMember1.jpg",
-                    fullWidth: 1080,
-                    fullHeight: 810,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__hMAns)}
-                  displayHeight={"56px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"56px"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/son_vo/images/imageTeamMember1.jpg",
-                    fullWidth: 1080,
-                    fullHeight: 810,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__y9V7T)}
-                  displayHeight={"56px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"56px"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/son_vo/images/imageTeamMember1.jpg",
-                    fullWidth: 1080,
-                    fullHeight: 810,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__kKnh)}
-                  displayHeight={"56px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"56px"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/son_vo/images/imageTeamMember1.jpg",
-                    fullWidth: 1080,
-                    fullHeight: 810,
-                    aspectRatio: undefined
-                  }}
-                />
               </div>
             </div>
           </div>
-        </div>
-        <div
-          data-plasmic-name={"heading17"}
-          data-plasmic-override={overrides.heading17}
-          className={classNames(projectcss.all, sty.heading17)}
-        >
           <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text___5Blyj
-            )}
+            data-plasmic-name={"heading17"}
+            data-plasmic-override={overrides.heading17}
+            className={classNames(projectcss.all, sty.heading17)}
           >
-            {"GLEADS"}
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___2HGin
+              )}
+            >
+              {"H\nS\nV"}
+            </div>
+          </div>
+          <div
+            data-plasmic-name={"container43"}
+            data-plasmic-override={overrides.container43}
+            className={classNames(projectcss.all, sty.container43)}
+          >
+            <div
+              data-plasmic-name={"frame1618873422"}
+              data-plasmic-override={overrides.frame1618873422}
+              className={classNames(projectcss.all, sty.frame1618873422)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__pqy7Y
+                )}
+              >
+                {"+27 (0) 78 054 8476"}
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__lYxxo
+                )}
+              >
+                {"Thu789987@gmail.com"}
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__wqQZp
+                )}
+              >
+                {"Write Us"}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -540,106 +325,42 @@ const PlasmicDescendants = {
   footer3: [
     "footer3",
     "container41",
-    "container42",
     "frame1618873418",
-    "navigation5",
-    "link22",
-    "frame1618873419",
-    "link23",
-    "link24",
-    "link25",
-    "link26",
     "navigation6",
     "link27",
     "frame1618873420",
     "link28",
     "link29",
     "link30",
+    "heading17",
     "container43",
-    "frame1618873421",
-    "frame1618873422",
-    "link31",
-    "heading17"
+    "frame1618873422"
   ],
   container41: [
     "container41",
-    "container42",
     "frame1618873418",
-    "navigation5",
-    "link22",
-    "frame1618873419",
-    "link23",
-    "link24",
-    "link25",
-    "link26",
     "navigation6",
     "link27",
     "frame1618873420",
     "link28",
     "link29",
     "link30",
+    "heading17",
     "container43",
-    "frame1618873421",
-    "frame1618873422",
-    "link31",
-    "heading17"
-  ],
-  container42: [
-    "container42",
-    "frame1618873418",
-    "navigation5",
-    "link22",
-    "frame1618873419",
-    "link23",
-    "link24",
-    "link25",
-    "link26",
-    "navigation6",
-    "link27",
-    "frame1618873420",
-    "link28",
-    "link29",
-    "link30",
-    "container43",
-    "frame1618873421",
-    "frame1618873422",
-    "link31"
+    "frame1618873422"
   ],
   frame1618873418: [
     "frame1618873418",
-    "navigation5",
-    "link22",
-    "frame1618873419",
-    "link23",
-    "link24",
-    "link25",
-    "link26",
     "navigation6",
     "link27",
     "frame1618873420",
     "link28",
     "link29",
     "link30",
+    "heading17",
     "container43",
-    "frame1618873421",
-    "frame1618873422",
-    "link31"
+    "frame1618873422"
   ],
-  navigation5: [
-    "navigation5",
-    "link22",
-    "frame1618873419",
-    "link23",
-    "link24",
-    "link25",
-    "link26"
-  ],
-  link22: ["link22"],
-  frame1618873419: ["frame1618873419", "link23", "link24", "link25", "link26"],
-  link23: ["link23"],
-  link24: ["link24"],
-  link25: ["link25"],
-  link26: ["link26"],
   navigation6: [
     "navigation6",
     "link27",
@@ -653,11 +374,9 @@ const PlasmicDescendants = {
   link28: ["link28"],
   link29: ["link29"],
   link30: ["link30"],
-  container43: ["container43", "frame1618873421", "frame1618873422", "link31"],
-  frame1618873421: ["frame1618873421"],
-  frame1618873422: ["frame1618873422"],
-  link31: ["link31"],
-  heading17: ["heading17"]
+  heading17: ["heading17"],
+  container43: ["container43", "frame1618873422"],
+  frame1618873422: ["frame1618873422"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -665,26 +384,16 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   footer3: "div";
   container41: "div";
-  container42: "div";
   frame1618873418: "div";
-  navigation5: "div";
-  link22: "div";
-  frame1618873419: "div";
-  link23: "div";
-  link24: "div";
-  link25: "div";
-  link26: "div";
   navigation6: "div";
   link27: "div";
   frame1618873420: "div";
   link28: "div";
   link29: "div";
   link30: "div";
-  container43: "div";
-  frame1618873421: "div";
-  frame1618873422: "div";
-  link31: "div";
   heading17: "div";
+  container43: "div";
+  frame1618873422: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -750,26 +459,16 @@ export const PlasmicFotterMain = Object.assign(
   {
     // Helper components rendering sub-elements
     container41: makeNodeComponent("container41"),
-    container42: makeNodeComponent("container42"),
     frame1618873418: makeNodeComponent("frame1618873418"),
-    navigation5: makeNodeComponent("navigation5"),
-    link22: makeNodeComponent("link22"),
-    frame1618873419: makeNodeComponent("frame1618873419"),
-    link23: makeNodeComponent("link23"),
-    link24: makeNodeComponent("link24"),
-    link25: makeNodeComponent("link25"),
-    link26: makeNodeComponent("link26"),
     navigation6: makeNodeComponent("navigation6"),
     link27: makeNodeComponent("link27"),
     frame1618873420: makeNodeComponent("frame1618873420"),
     link28: makeNodeComponent("link28"),
     link29: makeNodeComponent("link29"),
     link30: makeNodeComponent("link30"),
-    container43: makeNodeComponent("container43"),
-    frame1618873421: makeNodeComponent("frame1618873421"),
-    frame1618873422: makeNodeComponent("frame1618873422"),
-    link31: makeNodeComponent("link31"),
     heading17: makeNodeComponent("heading17"),
+    container43: makeNodeComponent("container43"),
+    frame1618873422: makeNodeComponent("frame1618873422"),
 
     // Metadata about props expected for PlasmicFotterMain
     internalVariantProps: PlasmicFotterMain__VariantProps,

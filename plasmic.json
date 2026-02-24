@@ -1170,6 +1170,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/"
+        },
+        {
+          "id": "uoJMXHK3hbae",
+          "name": "MyJourney",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicMyJourney.tsx",
+          "importSpec": {
+            "modulePath": "../pages/my-journey.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicMyJourney.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/my-journey"
         }
       ],
       "icons": [
@@ -2094,6 +2108,21 @@
           "id": "LTBWxJuT8K5C",
           "name": "PHIA NAM.png",
           "filePath": "../public/plasmic/son_vo/images/phiaNamPng.png"
+        },
+        {
+          "id": "sA5aLslG7pQu",
+          "name": "TujYt1WY1IHHodeZrmAt5UobWY.png",
+          "filePath": "../public/plasmic/son_vo/images/tujYt1Wy1IhHodeZrmAt5UobWyPng.avif"
+        },
+        {
+          "id": "e0S1odsjLFbw",
+          "name": "Gemini_Generated_Image_4cxtiq4cxtiq4cxt.png",
+          "filePath": "../public/plasmic/son_vo/images/geminiGeneratedImage4Cxtiq4Cxtiq4CxtPng.png"
+        },
+        {
+          "id": "dvp0dmK6MLHB",
+          "name": "B0jTHcNdveEJ3eGs6T0jbufJGdQ.avif",
+          "filePath": "../public/plasmic/son_vo/images/b0JTHcNdveEj3EGs6T0JbufJGdQAvif.avif"
         }
       ],
       "indirect": false,
