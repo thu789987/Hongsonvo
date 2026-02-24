@@ -186,11 +186,6 @@ export type PlasmicHomepage__OverridesType = {
   _10?: Flex__<"div">;
   _11?: Flex__<"div">;
   _12?: Flex__<"div">;
-  sectionCards4?: Flex__<"div">;
-  container48?: Flex__<"div">;
-  top2?: Flex__<"div">;
-  title5?: Flex__<"div">;
-  container6?: Flex__<"div">;
   sectionCards6?: Flex__<"div">;
   heading4?: Flex__<"div">;
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3?: Flex__<"div">;
@@ -203,7 +198,6 @@ export type PlasmicHomepage__OverridesType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2?: Flex__<"div">;
   container31?: Flex__<"div">;
   subContainer2?: Flex__<"div">;
-  hoverLogoCard?: Flex__<typeof HoverLogoCard>;
   cardWhatAboutUs5?: Flex__<typeof CardWhatAboutUs>;
   sectionCards3?: Flex__<"div">;
   container49?: Flex__<"div">;
@@ -1383,64 +1377,6 @@ function PlasmicHomepage__RenderFunc(props: {
               <RevealOnScroll
                 className={classNames(
                   "__wab_instance",
-                  sty.revealOnScroll__v7Ylg
-                )}
-                delay={0}
-                duration={0.8}
-                yOffset={50}
-              >
-                <div
-                  data-plasmic-name={"sectionCards4"}
-                  data-plasmic-override={overrides.sectionCards4}
-                  className={classNames(projectcss.all, sty.sectionCards4)}
-                >
-                  <div
-                    data-plasmic-name={"container48"}
-                    data-plasmic-override={overrides.container48}
-                    className={classNames(projectcss.all, sty.container48)}
-                  >
-                    <div
-                      data-plasmic-name={"top2"}
-                      data-plasmic-override={overrides.top2}
-                      className={classNames(projectcss.all, sty.top2)}
-                    >
-                      <div
-                        data-plasmic-name={"title5"}
-                        data-plasmic-override={overrides.title5}
-                        className={classNames(projectcss.all, sty.title5)}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___2D86O
-                          )}
-                        >
-                          {"02/ MY SERVICES"}
-                        </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"container6"}
-                        data-plasmic-override={overrides.container6}
-                        className={classNames(projectcss.all, sty.container6)}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__z3SBk
-                          )}
-                        >
-                          {"Explore what we\ncan do for you"}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </RevealOnScroll>
-              <RevealOnScroll
-                className={classNames(
-                  "__wab_instance",
                   sty.revealOnScroll__k04Nv
                 )}
                 delay={0}
@@ -1622,11 +1558,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       />
 
                       <HoverLogoCard
-                        data-plasmic-name={"hoverLogoCard"}
-                        data-plasmic-override={overrides.hoverLogoCard}
                         className={classNames(
                           "__wab_instance",
-                          sty.hoverLogoCard
+                          sty.hoverLogoCard__rhERm
                         )}
                         logoSrc={"/plasmic/son_vo/images/frame12Png.png"}
                       >
@@ -1635,9 +1569,11 @@ function PlasmicHomepage__RenderFunc(props: {
                             "__wab_instance",
                             sty.cardExperience__tztq
                           )}
+                          company={"BBCIncorp"}
                           content={
                             "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
                           }
+                          number={"[ Oct 2022 - Present ]"}
                           project1={(() => {
                             try {
                               return undefined;
@@ -1654,92 +1590,174 @@ function PlasmicHomepage__RenderFunc(props: {
                           title={"Senior UI/UX"}
                         />
                       </HoverLogoCard>
-                      <CardExperience
+                      <HoverLogoCard
                         className={classNames(
                           "__wab_instance",
-                          sty.cardExperience___06OZi
+                          sty.hoverLogoCard__rdH1D
                         )}
-                        number={"[ 02 ]"}
-                        project1={(() => {
-                          try {
-                            return undefined;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return [];
-                            }
-                            throw e;
+                        logoSrc={"/plasmic/son_vo/images/frame12Png.png"}
+                      >
+                        <CardExperience
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardExperience___1B9Gy
+                          )}
+                          company={"GLEADS COMPANY"}
+                          content={
+                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
                           }
-                        })()}
-                      />
-
-                      <CardExperience
+                          number={"[ Oct 2022 - Present ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()}
+                          title={"Senior UI/UX"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
                           "__wab_instance",
-                          sty.cardExperience__a9L0J
+                          sty.hoverLogoCard__bWUgQ
                         )}
-                        number={"[ 03 ]"}
-                        project1={(() => {
-                          try {
-                            return undefined;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return [];
-                            }
-                            throw e;
+                        logoSrc={"/plasmic/son_vo/images/frame12Png.png"}
+                      >
+                        <CardExperience
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardExperience__uc4O5
+                          )}
+                          company={"Avery Dennison"}
+                          content={
+                            "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
                           }
-                        })()}
-                        title={"UI/UX Design"}
-                      />
-
-                      <CardExperience
+                          number={"[ Oct 2016 - Feb 2020 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()}
+                          time={"[ Oct 2016 - Feb 2020 ]"}
+                          title={"Graphic Design"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
                           "__wab_instance",
-                          sty.cardExperience__ep5T
+                          sty.hoverLogoCard___3Dwb4
                         )}
-                        number={"[ 04 ]"}
-                        project1={(() => {
-                          try {
-                            return undefined;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return [];
-                            }
-                            throw e;
+                        logoSrc={"/plasmic/son_vo/images/frame12Png.png"}
+                      >
+                        <CardExperience
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardExperience__nd1Tx
+                          )}
+                          company={"MNK Company"}
+                          content={
+                            "Conducted user research, facilitated workshops with stakeholders, and brainstormed ideas with BOD. Developed wireframes, prototypes of Package, and visual designs for proposed solutions"
                           }
-                        })()}
-                        title={"SEO"}
-                      />
-
-                      <CardExperience
+                          number={"[ Oct 2016 - Feb 2020 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()}
+                          title={"Graphic Design"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
                           "__wab_instance",
-                          sty.cardExperience__fjzUi
+                          sty.hoverLogoCard__ykZow
                         )}
-                        number={"[ 05 ]"}
-                        project1={(() => {
-                          try {
-                            return undefined;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return [];
-                            }
-                            throw e;
+                        logoSrc={"/plasmic/son_vo/images/frame12Png.png"}
+                      >
+                        <CardExperience
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardExperience__rQg9S
+                          )}
+                          company={"EPTC Printing"}
+                          content={
+                            "During my internship at EPTC Printing Company, I worked on designing and preparing plates for billboard and digital printing. My responsibilities included creating and adjusting designs for large-format prints, ensuring high-quality outputs, and collaborating with the production team to optimize printing processes. This experience strengthened my skills in digital printing, design software, and large-scale print production."
                           }
-                        })()}
-                        title={"CONTENT"}
-                      />
+                          number={"[ Aug 2019 - Oct 2019 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()}
+                          time={"[ Present ][ Aug 2019 - Oct 2019 ]"}
+                          title={"Digital Printer Internship"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.hoverLogoCard__buRnn
+                        )}
+                        logoSrc={"/plasmic/son_vo/images/frame12Png.png"}
+                      >
+                        <CardExperience
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardExperience__ww8Ov
+                          )}
+                          company={"Khuyen hoc phia nam"}
+                          content={
+                            "During my internship at Khuyen Hoc Phia nam, I assisted in designing and developing innovative plate concepts using software like Adobe Illustrator, Indesign, Sigma. I conducted market research, contributed to prototype development, and collaborated with the team to refine designs for aesthetics and functionality. This experience enhanced my technical skills, creativity, and teamwork."
+                          }
+                          number={"[ Jan 2019 - Feb 2019 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()}
+                          time={"[ Jan 2019 - Feb 2019 ]"}
+                          title={"Plate Designer INTERSHIP"}
+                        />
+                      </HoverLogoCard>
                     </div>
                     <CardWhatAboutUs
                       data-plasmic-name={"cardWhatAboutUs5"}
@@ -2981,11 +2999,6 @@ const PlasmicDescendants = {
     "_10",
     "_11",
     "_12",
-    "sectionCards4",
-    "container48",
-    "top2",
-    "title5",
-    "container6",
     "sectionCards6",
     "heading4",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
@@ -2998,7 +3011,6 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container31",
     "subContainer2",
-    "hoverLogoCard",
     "cardWhatAboutUs5",
     "sectionCards3",
     "container49",
@@ -3074,11 +3086,6 @@ const PlasmicDescendants = {
     "_10",
     "_11",
     "_12",
-    "sectionCards4",
-    "container48",
-    "top2",
-    "title5",
-    "container6",
     "sectionCards6",
     "heading4",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
@@ -3091,7 +3098,6 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container31",
     "subContainer2",
-    "hoverLogoCard",
     "cardWhatAboutUs5",
     "sectionCards3",
     "container49",
@@ -3284,17 +3290,6 @@ const PlasmicDescendants = {
   _10: ["_10"],
   _11: ["_11"],
   _12: ["_12"],
-  sectionCards4: [
-    "sectionCards4",
-    "container48",
-    "top2",
-    "title5",
-    "container6"
-  ],
-  container48: ["container48", "top2", "title5", "container6"],
-  top2: ["top2", "title5", "container6"],
-  title5: ["title5"],
-  container6: ["container6"],
   sectionCards6: [
     "sectionCards6",
     "heading4",
@@ -3308,7 +3303,6 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container31",
     "subContainer2",
-    "hoverLogoCard",
     "cardWhatAboutUs5"
   ],
   heading4: [
@@ -3347,14 +3341,8 @@ const PlasmicDescendants = {
     [
       "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
     ],
-  container31: [
-    "container31",
-    "subContainer2",
-    "hoverLogoCard",
-    "cardWhatAboutUs5"
-  ],
-  subContainer2: ["subContainer2", "hoverLogoCard"],
-  hoverLogoCard: ["hoverLogoCard"],
+  container31: ["container31", "subContainer2", "cardWhatAboutUs5"],
+  subContainer2: ["subContainer2"],
   cardWhatAboutUs5: ["cardWhatAboutUs5"],
   sectionCards3: [
     "sectionCards3",
@@ -3509,11 +3497,6 @@ type NodeDefaultElementType = {
   _10: "div";
   _11: "div";
   _12: "div";
-  sectionCards4: "div";
-  container48: "div";
-  top2: "div";
-  title5: "div";
-  container6: "div";
   sectionCards6: "div";
   heading4: "div";
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3: "div";
@@ -3526,7 +3509,6 @@ type NodeDefaultElementType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2: "div";
   container31: "div";
   subContainer2: "div";
-  hoverLogoCard: typeof HoverLogoCard;
   cardWhatAboutUs5: typeof CardWhatAboutUs;
   sectionCards3: "div";
   container49: "div";
@@ -3699,11 +3681,6 @@ export const PlasmicHomepage = Object.assign(
     _10: makeNodeComponent("_10"),
     _11: makeNodeComponent("_11"),
     _12: makeNodeComponent("_12"),
-    sectionCards4: makeNodeComponent("sectionCards4"),
-    container48: makeNodeComponent("container48"),
-    top2: makeNodeComponent("top2"),
-    title5: makeNodeComponent("title5"),
-    container6: makeNodeComponent("container6"),
     sectionCards6: makeNodeComponent("sectionCards6"),
     heading4: makeNodeComponent("heading4"),
     weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3:
@@ -3731,7 +3708,6 @@ export const PlasmicHomepage = Object.assign(
       ),
     container31: makeNodeComponent("container31"),
     subContainer2: makeNodeComponent("subContainer2"),
-    hoverLogoCard: makeNodeComponent("hoverLogoCard"),
     cardWhatAboutUs5: makeNodeComponent("cardWhatAboutUs5"),
     sectionCards3: makeNodeComponent("sectionCards3"),
     container49: makeNodeComponent("container49"),

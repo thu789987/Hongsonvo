@@ -45,31 +45,6 @@
   min-width: 0;
   padding: 0px;
 }
-.number01 {
-  position: relative;
-  top: auto;
-  left: auto;
-  width: 100%;
-  height: 19px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  min-width: 0;
-  flex-shrink: 0;
-}
-.number012 {
-  display: block;
-  font-size: 14px;
-  font-family: "Roboto Mono";
-  font-weight: 400;
-  letter-spacing: 0em;
-  line-height: 19.600000381469727px;
-  color: #ffffff;
-  width: 100%;
-  text-align: left;
-  min-width: 0;
-}
 .freeBox__m1Fy {
   display: grid;
   position: relative;
@@ -84,6 +59,48 @@
   grid-column-gap: 16px;
   grid-auto-rows: auto;
   grid-auto-columns: 1fr;
+  overflow: hidden;
+  min-width: 0;
+  padding: 0px;
+}
+.freeBox__ml4R {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  left: -800px;
+  top: 0px;
+  grid-column-end: span 12;
+  background: var(--token-47ovROB-Xr2C);
+  transition-property: all;
+  transition-duration: 600ms;
+  transition-timing-function: ease-in-out;
+  z-index: 0;
+  min-width: 0;
+  min-height: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 600ms;
+  padding: 0px;
+}
+.freeBoxproject1__ml4RuWrEk {
+  top: 0;
+  left: 0;
+  display: block;
+  background: var(--token-47ovROB-Xr2C);
+}
+.freeBox__hmvsf {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: span 6;
   min-width: 0;
   padding: 0px;
 }
@@ -96,8 +113,17 @@
   line-height: 120%;
   color: #f9f9f9;
   text-align: left;
-  grid-column-start: 1;
-  grid-column-end: span 9;
+  width: 100%;
+  transition-property: all;
+  transition-duration: 600ms;
+  transition-timing-function: ease-in-out;
+  min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 600ms;
+}
+.titleArtDirection2project1 {
+  color: #000000;
 }
 .freeBox__jfKvs {
   display: flex;
@@ -112,8 +138,8 @@
   left: auto;
   bottom: auto;
   right: auto;
-  grid-column-start: 10;
-  grid-column-end: span 3;
+  grid-column-start: 7;
+  grid-column-end: span 12;
   padding: 0px;
 }
 .titleArtDirection3 {
@@ -125,6 +151,36 @@
   line-height: 120%;
   color: #f9f9f9;
   text-align: left;
+  transition-property: all;
+  transition-duration: 600ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 600ms;
+}
+.titleArtDirection3project1 {
+  color: #000000;
+}
+.number012 {
+  display: block;
+  font-size: 14px;
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 19.600000381469727px;
+  color: #ffffff;
+  width: 100%;
+  text-align: right;
+  transition-property: all;
+  transition-duration: 600ms;
+  transition-timing-function: ease-in-out;
+  min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 600ms;
+}
+.number012project1 {
+  color: #000000;
 }
 .freeBox__r0Vw {
   display: flex;
@@ -145,66 +201,6 @@
   left: auto;
   bottom: auto;
   right: auto;
-}
-.image1 {
-  max-width: 100%;
-  position: absolute;
-  left: auto;
-  top: 0;
-  right: 0;
-  bottom: auto;
-  height: 100px;
-  width: 156px;
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in;
-  object-fit: cover;
-  flex-shrink: 0;
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in;
-  -webkit-transition-duration: 300ms;
-}
-.image1 > picture > img {
-  object-fit: cover;
-}
-.image1project1 {
-  top: -100px;
-  right: 0;
-  opacity: 1;
-}
-.image2 {
-  object-fit: cover;
-  max-width: 100%;
-  position: absolute;
-  left: auto;
-  top: 0;
-  height: 100px;
-  width: 156px;
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in;
-  right: 0;
-  flex-shrink: 0;
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in;
-  -webkit-transition-duration: 300ms;
-}
-.image2 > picture > img {
-  object-fit: cover;
-}
-.image2project1 {
-  top: 0;
-  opacity: 1;
-  left: auto;
-  right: 0;
-}
-.image2project2 {
-  top: -100px;
-  right: 0;
-  z-index: 2;
-  opacity: 1;
 }
 .freeBox__cjKsj {
   display: flex;

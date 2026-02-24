@@ -25,7 +25,7 @@
   top: auto;
   left: auto;
   z-index: 10;
-  overflow: hidden;
+  overflow: visible;
   min-width: 0;
   padding: 0px;
 }
@@ -1366,91 +1366,11 @@
   position: relative;
   text-align: left;
 }
-.revealOnScroll__v7Ylg:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-  z-index: 4;
-}
-.sectionCards4 {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: none;
-  z-index: 3;
-  min-width: 0;
-  padding: 130px 0px 0px;
-}
-.container48 {
-  width: 100%;
-  height: auto;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  row-gap: 49.9900016784668px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 1800px;
-  padding-left: 12px;
-  padding-right: 12px;
-  min-width: 0;
-}
-.top2 {
-  height: auto;
-  display: flex;
-  position: relative;
-  align-self: stretch;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  column-gap: 80px;
-}
-.title5 {
-  width: auto;
-  height: auto;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding-top: 8px;
-}
-.text___2D86O {
-  display: block;
-  font-size: 18px;
-  font-family: "Outfit", sans-serif;
-  font-weight: 300;
-  letter-spacing: -0.47999998927116394px;
-  line-height: 26.399999618530273px;
-  color: var(--token-VsMZPNxcE2dF);
-  position: relative;
-  text-align: left;
-}
-.container6 {
-  height: auto;
-  display: flex;
-  position: relative;
-  flex-grow: 1;
-  flex-direction: column;
-  row-gap: 12px;
-  align-items: flex-end;
-  justify-content: flex-end;
-  width: 100%;
-  min-width: 0;
-}
-.text__z3SBk {
-  text-align: left;
-  color: #ffffffcc;
-  font-weight: 700;
-  width: 100%;
-  min-width: 0;
-}
 .revealOnScroll__k04Nv:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   z-index: 4;
+  overflow: visible;
 }
 .sectionCards6 {
   width: 100%;
@@ -1463,6 +1383,7 @@
   column-gap: 40px;
   justify-content: flex-start;
   align-items: flex-start;
+  overflow: visible;
   min-width: 0;
 }
 .heading4 {
@@ -1476,8 +1397,9 @@
   justify-content: flex-start;
   align-items: flex-start;
   row-gap: 16px;
-  z-index: 1;
+  z-index: 4;
   padding-top: 160px;
+  overflow: visible;
   flex-shrink: 0;
 }
 .weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3 {
@@ -1670,7 +1592,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.hoverLogoCard:global(.__wab_instance) {
+.hoverLogoCard__rhERm:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
@@ -1680,25 +1602,51 @@
   left: auto;
   right: auto;
 }
-.cardExperience___06OZi:global(.__wab_instance) {
+.hoverLogoCard__rdH1D:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.cardExperience___1B9Gy:global(.__wab_instance) {
   position: relative;
   top: auto;
   left: auto;
   right: auto;
 }
-.cardExperience__a9L0J:global(.__wab_instance) {
+.hoverLogoCard__bWUgQ:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.cardExperience__uc4O5:global(.__wab_instance) {
   position: relative;
   top: auto;
   left: auto;
   right: auto;
 }
-.cardExperience__ep5T:global(.__wab_instance) {
+.hoverLogoCard___3Dwb4:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.cardExperience__nd1Tx:global(.__wab_instance) {
   position: relative;
   top: auto;
   left: auto;
   right: auto;
 }
-.cardExperience__fjzUi:global(.__wab_instance) {
+.hoverLogoCard__ykZow:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.cardExperience__rQg9S:global(.__wab_instance) {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}
+.hoverLogoCard__buRnn:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.cardExperience__ww8Ov:global(.__wab_instance) {
   position: relative;
   top: auto;
   left: auto;

@@ -111,12 +111,9 @@ export const PlasmicCardExperience__ArgProps = new Array<ArgPropType>(
 export type PlasmicCardExperience__OverridesType = {
   root?: Flex__<"div">;
   hoverController?: Flex__<typeof HoverController>;
-  number01?: Flex__<"div">;
-  number012?: Flex__<"div">;
   titleArtDirection2?: Flex__<"div">;
   titleArtDirection3?: Flex__<"div">;
-  image1?: Flex__<typeof PlasmicImg__>;
-  image2?: Flex__<typeof PlasmicImg__>;
+  number012?: Flex__<"div">;
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure?: Flex__<"div">;
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2?: Flex__<"div">;
 };
@@ -369,48 +366,30 @@ function PlasmicCardExperience__RenderFunc(props: {
                   })}
                 >
                   <div
-                    data-plasmic-name={"number01"}
-                    data-plasmic-override={overrides.number01}
-                    className={classNames(projectcss.all, sty.number01)}
+                    className={classNames(projectcss.all, sty.freeBox__m1Fy, {
+                      [sty.freeBoxproject1__m1FyUWrEk]: hasVariant(
+                        $state,
+                        "project1",
+                        "project1"
+                      )
+                    })}
                   >
                     <div
-                      data-plasmic-name={"number012"}
-                      data-plasmic-override={overrides.number012}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.number012
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $props.number;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "[01]";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__m1Fy)}
-                  >
+                      className={classNames(projectcss.all, sty.freeBox__ml4R, {
+                        [sty.freeBoxproject1__ml4RuWrEk]: hasVariant(
+                          $state,
+                          "project1",
+                          "project1"
+                        )
+                      })}
+                    />
+
                     <div
-                      data-plasmic-name={"titleArtDirection2"}
-                      data-plasmic-override={overrides.titleArtDirection2}
                       className={classNames(
                         projectcss.all,
-                        projectcss.__wab_text,
-                        sty.titleArtDirection2,
+                        sty.freeBox__hmvsf,
                         {
-                          [sty.titleArtDirection2project1]: hasVariant(
+                          [sty.freeBoxproject1__hmvsfuWrEk]: hasVariant(
                             $state,
                             "project1",
                             "project1"
@@ -418,24 +397,51 @@ function PlasmicCardExperience__RenderFunc(props: {
                         }
                       )}
                     >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $props.title;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "ART DIRECTION";
-                            }
-                            throw e;
+                      <div
+                        data-plasmic-name={"titleArtDirection2"}
+                        data-plasmic-override={overrides.titleArtDirection2}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.titleArtDirection2,
+                          {
+                            [sty.titleArtDirection2project1]: hasVariant(
+                              $state,
+                              "project1",
+                              "project1"
+                            )
                           }
-                        })()}
-                      </React.Fragment>
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $props.title;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "ART DIRECTION";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
                     </div>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__jfKvs)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox__jfKvs,
+                        {
+                          [sty.freeBoxproject1__jfKvSuWrEk]: hasVariant(
+                            $state,
+                            "project1",
+                            "project1"
+                          )
+                        }
+                      )}
                     >
                       <div
                         data-plasmic-name={"titleArtDirection3"}
@@ -469,6 +475,38 @@ function PlasmicCardExperience__RenderFunc(props: {
                           })()}
                         </React.Fragment>
                       </div>
+                      <div
+                        data-plasmic-name={"number012"}
+                        data-plasmic-override={overrides.number012}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.number012,
+                          {
+                            [sty.number012project1]: hasVariant(
+                              $state,
+                              "project1",
+                              "project1"
+                            )
+                          }
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return $props.number;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "[01]";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -481,58 +519,6 @@ function PlasmicCardExperience__RenderFunc(props: {
                     )
                   })}
                 >
-                  <PlasmicImg__
-                    data-plasmic-name={"image1"}
-                    data-plasmic-override={overrides.image1}
-                    alt={""}
-                    className={classNames(sty.image1, {
-                      [sty.image1project1]: hasVariant(
-                        $state,
-                        "project1",
-                        "project1"
-                      ),
-                      [sty.image1project2]: hasVariant(
-                        $state,
-                        "project2",
-                        "project2"
-                      )
-                    })}
-                    displayHeight={"100px"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"156px"}
-                    loading={"lazy"}
-                    src={args.image11}
-                  />
-
-                  <PlasmicImg__
-                    data-plasmic-name={"image2"}
-                    data-plasmic-override={overrides.image2}
-                    alt={""}
-                    className={classNames(sty.image2, {
-                      [sty.image2project1]: hasVariant(
-                        $state,
-                        "project1",
-                        "project1"
-                      ),
-                      [sty.image2project2]: hasVariant(
-                        $state,
-                        "project2",
-                        "project2"
-                      )
-                    })}
-                    displayHeight={"100px"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"156px"}
-                    loading={"lazy"}
-                    src={args.image12}
-                  />
-
                   <div
                     className={classNames(projectcss.all, sty.freeBox__cjKsj, {
                       [sty.freeBoxproject1__cjKsJuWrEk]: hasVariant(
@@ -607,32 +593,23 @@ const PlasmicDescendants = {
   root: [
     "root",
     "hoverController",
-    "number01",
-    "number012",
     "titleArtDirection2",
     "titleArtDirection3",
-    "image1",
-    "image2",
+    "number012",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2"
   ],
   hoverController: [
     "hoverController",
-    "number01",
-    "number012",
     "titleArtDirection2",
     "titleArtDirection3",
-    "image1",
-    "image2",
+    "number012",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2"
   ],
-  number01: ["number01", "number012"],
-  number012: ["number012"],
   titleArtDirection2: ["titleArtDirection2"],
   titleArtDirection3: ["titleArtDirection3"],
-  image1: ["image1"],
-  image2: ["image2"],
+  number012: ["number012"],
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure:
     [
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure",
@@ -649,12 +626,9 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   hoverController: typeof HoverController;
-  number01: "div";
-  number012: "div";
   titleArtDirection2: "div";
   titleArtDirection3: "div";
-  image1: typeof PlasmicImg__;
-  image2: typeof PlasmicImg__;
+  number012: "div";
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure: "div";
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2: "div";
 };
@@ -722,12 +696,9 @@ export const PlasmicCardExperience = Object.assign(
   {
     // Helper components rendering sub-elements
     hoverController: makeNodeComponent("hoverController"),
-    number01: makeNodeComponent("number01"),
-    number012: makeNodeComponent("number012"),
     titleArtDirection2: makeNodeComponent("titleArtDirection2"),
     titleArtDirection3: makeNodeComponent("titleArtDirection3"),
-    image1: makeNodeComponent("image1"),
-    image2: makeNodeComponent("image2"),
+    number012: makeNodeComponent("number012"),
     weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure:
       makeNodeComponent(
         "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure"
