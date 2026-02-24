@@ -62,10 +62,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const pageModules = await PLASMIC.fetchPages();
 
-  // Bộ lọc: Tự động loại bỏ các URL trùng lặp trên Plasmic và bỏ qua trang chủ "/"
-  const paths = Array.from(new Set(pageModules.map(m => m.path)))
-    .filter(path => path !== "/")
-    .map(path => ({
+  const uniquePaths = Array.from(new Set(pageModules.map((m) => m.path)));
+
+  const paths = uniquePaths
+    // 👇 CHỈ CẦN SỬA DÒNG NÀY: Thêm điều kiện loại bỏ "/my-journey"
+    .filter((path) => path !== "/" && path !== "/my-journey") 
+    .map((path) => ({
       params: {
         catchall: path.substring(1).split("/"),
       },
