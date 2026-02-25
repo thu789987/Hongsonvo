@@ -39,6 +39,7 @@ import { HackerText } from './components/HackerText';
 import { HoverLogoCard } from './components/HoverLogoCard'; // Thêm dòng import này ở đầu file
 import { RevealWidthOnScroll } from './components/RevealWidthOnScroll';
 import { CustomCursorWrapper } from './components/CustomCursorWrapper'; // Thêm ở đầu file
+import { InfiniteScroll } from './components/InfiniteScroll'; // Thêm ở đầu file
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -365,4 +366,33 @@ PLASMIC.registerComponent(CustomCursorWrapper, {
     }
   },
   importPath: "./components/CustomCursorWrapper",
+});
+
+PLASMIC.registerComponent(InfiniteScroll, {
+  name: "InfiniteScroll",
+  props: {
+    children: {
+      type: "slot",
+      defaultValue: {
+        type: "text",
+        value: "Kéo thả các Project vào đây",
+      },
+    },
+    speed: {
+      type: "number",
+      defaultValue: 20,
+      description: "Tốc độ: Thời gian hoàn thành 1 vòng (giây - càng nhỏ chạy càng nhanh)",
+    },
+    gap: {
+      type: "number",
+      defaultValue: 20,
+      description: "Khoảng cách (px) giữa các phần tử",
+    },
+    pauseOnHover: {
+      type: "boolean",
+      defaultValue: true,
+      description: "Tạm dừng băng chuyền khi rê chuột vào",
+    }
+  },
+  importPath: "./components/InfiniteScroll",
 });
