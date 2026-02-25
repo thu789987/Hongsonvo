@@ -38,6 +38,7 @@ import { HoverController } from './components/HoverController';
 import { HackerText } from './components/HackerText';
 import { HoverLogoCard } from './components/HoverLogoCard'; // Thêm dòng import này ở đầu file
 import { RevealWidthOnScroll } from './components/RevealWidthOnScroll';
+import { CustomCursorWrapper } from './components/CustomCursorWrapper'; // Thêm ở đầu file
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -346,4 +347,22 @@ PLASMIC.registerComponent(RevealWidthOnScroll, {
     }
   },
   importPath: "./components/RevealWidthOnScroll",
+});
+
+PLASMIC.registerComponent(CustomCursorWrapper, {
+  name: "CustomCursorWrapper",
+  props: {
+    children: {
+      type: "slot",
+      defaultValue: {
+        type: "text",
+        value: "Kéo thả Video Card của bạn vào đây",
+      },
+    },
+    cursorIcon: {
+      type: "imageUrl",
+      defaultValue: "https://cdn-icons-png.flaticon.com/512/724/724954.png", // Link icon nút Play mặc định
+    }
+  },
+  importPath: "./components/CustomCursorWrapper",
 });
