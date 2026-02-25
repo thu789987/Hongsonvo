@@ -37,7 +37,7 @@ import { ScrollDetector } from './components/ScrollDetector';
 import { HoverController } from './components/HoverController';
 import { HackerText } from './components/HackerText';
 import { HoverLogoCard } from './components/HoverLogoCard'; // Thêm dòng import này ở đầu file
-import { InViewDetector } from './components/InViewDetector';
+import { RevealWidthOnScroll } from './components/RevealWidthOnScroll';
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -324,26 +324,26 @@ PLASMIC.registerComponent(HoverLogoCard, {
   importPath: "./components/HoverLogoCard",
 });
 
-PLASMIC.registerComponent(InViewDetector, {
-  name: "InViewDetector",
+PLASMIC.registerComponent(RevealWidthOnScroll, {
+  name: "RevealWidthOnScroll",
   props: {
     children: {
       type: "slot",
       defaultValue: {
         type: "text",
-        value: "Kéo thả phần tử cần chạy hiệu ứng vào đây",
+        value: "Kéo thả phần tử cần giãn Width vào đây",
       },
     },
-    threshold: {
+    duration: {
       type: "number",
-      defaultValue: 0.2, // 0.2 = 20%
-      description: "Độ hiển thị để kích hoạt (0 = vừa ló ra, 1 = thấy toàn bộ)",
+      defaultValue: 0.8,
+      description: "Thời gian kéo giãn (giây)",
     },
-    triggerOnce: {
-      type: "boolean",
-      defaultValue: false,
-      description: "Bật nút này nếu muốn hiệu ứng chỉ chạy 1 lần duy nhất",
+    delay: {
+      type: "number",
+      defaultValue: 0,
+      description: "Độ trễ trước khi chạy (giây)",
     }
   },
-  importPath: "./components/InViewDetector",
+  importPath: "./components/RevealWidthOnScroll",
 });
