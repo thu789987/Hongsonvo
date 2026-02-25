@@ -1787,6 +1787,7 @@
 }
 .link__izGY {
   display: flex;
+  pointer-events: none;
 }
 .htmlVideo4:global(.__wab_instance) {
   width: 100%;

@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motio
 
 interface CustomCursorWrapperProps {
   children?: React.ReactNode;
-  cursorIcon?: string; // Link ảnh icon (Ví dụ: Nút Play)
+  cursorIcon?: string;
   className?: string;
 }
 
@@ -13,31 +13,34 @@ export function CustomCursorWrapper({ children, cursorIcon, className }: CustomC
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  // Thông số vật lý mượt mà, bám sát chuột hơn cái Logo lúc nãy
   const springConfig = { damping: 20, stiffness: 300, mass: 0.5 };
   const springX = useSpring(mouseX, springConfig);
   const springY = useSpring(mouseY, springConfig);
 
   const handleMouseMove = (e: MouseEvent) => {
-    // Kích thước icon là 80px, nên ta trừ đi 40px để tâm của Icon nằm chính giữa con trỏ chuột thật
+    // Trừ đi một nửa kích thước icon (80/2 = 40) để tâm icon ngay mũi chuột
     mouseX.set(e.clientX - 40);
     mouseY.set(e.clientY - 40);
   };
 
   return (
     <div 
-      className={className}
+      className={`custom-cursor-container ${className || ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onMouseMove={handleMouseMove}
-      style={{ 
-        position: 'relative', 
-        width: '100%', 
-        // 🚨 BÍ QUYẾT LÀ ĐÂY: Ẩn con chuột thật đi khi hover vào
-        cursor: isHovered ? 'none' : 'auto' 
-      }}
+      style={{ position: 'relative', width: '100%', height: '100%' }}
     >
-      {/* Khung chứa Video Card của bạn */}
+      {/* Vũ khí ép tàng hình con chuột mặc định */}
+      {isHovered && (
+        <style>{`
+          .custom-cursor-container,
+          .custom-cursor-container * {
+            cursor: none !important;
+          }
+        `}</style>
+      )}
+
       {children}
 
       <AnimatePresence>
@@ -51,13 +54,19 @@ export function CustomCursorWrapper({ children, cursorIcon, className }: CustomC
               position: 'fixed',
               top: 0,
               left: 0,
-              width: '80px', // Bạn có thể chỉnh to nhỏ ở đây
+              width: '80px',
               height: '80px',
               objectFit: 'contain',
-              pointerEvents: 'none', // Bắt buộc để không chặn click vào video
+              pointerEvents: 'none',
               zIndex: 9999,
+              
+              // 👇 PHÉP THUẬT ĐẢO MÀU Ở ĐÂY 👇
+              mixBlendMode: 'difference',
+              
+              // (Tùy chọn) Nếu icon của bạn có màu sắc và bạn muốn nó thành trắng tinh 
+              // để hiệu ứng Difference hoạt động tốt nhất, hãy mở comment dòng dưới:
+              // filter: 'brightness(0) invert(1)',
             }}
-            // Hiệu ứng Pop-up: Phóng to và rõ dần ra khi vừa đưa chuột vào
             initial={{ opacity: 0, scale: 0.2 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.2 }}

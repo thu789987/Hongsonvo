@@ -2175,6 +2175,16 @@
           "id": "RXUG59tCO0y1",
           "name": "udemy.avif",
           "filePath": "../public/plasmic/son_vo/images/udemyAvif.avif"
+        },
+        {
+          "id": "S2qL6iZsNlec",
+          "name": "Vector.png",
+          "filePath": "../public/plasmic/son_vo/images/vectorPng.png"
+        },
+        {
+          "id": "cqlCiljXrUXX",
+          "name": "Vector.png 2",
+          "filePath": "../public/plasmic/son_vo/images/vectorPng2.png"
         }
       ],
       "indirect": false,
@@ -2279,6 +2289,12 @@
           "name": "RevealWidthOnScroll",
           "displayName": "RevealWidthOnScroll",
           "componentImportPath": "./components/RevealWidthOnScroll"
+        },
+        {
+          "id": "GFDn8mn_QNHr",
+          "name": "CustomCursorWrapper",
+          "displayName": "CustomCursorWrapper",
+          "componentImportPath": "./components/CustomCursorWrapper"
         }
       ],
       "customFunctions": []
