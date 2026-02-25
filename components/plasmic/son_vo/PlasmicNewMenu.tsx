@@ -72,13 +72,16 @@ createPlasmicElementProxy;
 
 export type PlasmicNewMenu__VariantMembers = {
   scrolledState: "scrolledState";
+  activePage: "myJourney" | "works";
 };
 export type PlasmicNewMenu__VariantsArgs = {
   scrolledState?: SingleBooleanChoiceArg<"scrolledState">;
+  activePage?: SingleChoiceArg<"myJourney" | "works">;
 };
 type VariantPropType = keyof PlasmicNewMenu__VariantsArgs;
 export const PlasmicNewMenu__VariantProps = new Array<VariantPropType>(
-  "scrolledState"
+  "scrolledState",
+  "activePage"
 );
 
 export type PlasmicNewMenu__ArgsType = { headerTitle?: React.ReactNode };
@@ -87,12 +90,12 @@ export const PlasmicNewMenu__ArgProps = new Array<ArgPropType>("headerTitle");
 
 export type PlasmicNewMenu__OverridesType = {
   menu?: Flex__<"div">;
-  link?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultNewMenuProps {
   headerTitle?: React.ReactNode;
   scrolledState?: SingleBooleanChoiceArg<"scrolledState">;
+  activePage?: SingleChoiceArg<"myJourney" | "works">;
   className?: string;
 }
 
@@ -164,6 +167,12 @@ function PlasmicNewMenu__RenderFunc(props: {
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
           $props.scrolledState
+      },
+      {
+        path: "activePage",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.activePage
       }
     ],
     [$props, $ctx, $refs]
@@ -215,28 +224,108 @@ function PlasmicNewMenu__RenderFunc(props: {
       <div className={classNames(projectcss.all, sty.freeBox___6LhCd)}>
         <div className={classNames(projectcss.all, sty.freeBox__ieTg)}>
           <PlasmicLink__
-            data-plasmic-name={"link"}
-            data-plasmic-override={overrides.link}
-            className={classNames(projectcss.all, projectcss.a, sty.link)}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__fVudO,
+              {
+                [sty.linkactivePage_myJourney__fVudOtmLyG]: hasVariant(
+                  $state,
+                  "activePage",
+                  "myJourney"
+                ),
+                [sty.linkactivePage_works__fVudOoqHx2]: hasVariant(
+                  $state,
+                  "activePage",
+                  "works"
+                )
+              }
+            )}
             component={Link}
             href={`/my-journey`}
             legacyBehavior={false}
             platform={"nextjs"}
           >
+            <div
+              className={classNames(projectcss.all, sty.freeBox__thJcf, {
+                [sty.freeBoxactivePage_myJourney__thJcfTmLyG]: hasVariant(
+                  $state,
+                  "activePage",
+                  "myJourney"
+                ),
+                [sty.freeBoxactivePage_works__thJcfOqHx2]: hasVariant(
+                  $state,
+                  "activePage",
+                  "works"
+                )
+              })}
+            />
+
             <HackerText
-              className={classNames("__wab_instance", sty.hackerText__jmcv1)}
+              className={classNames("__wab_instance", sty.hackerText__jmcv1, {
+                [sty.hackerTextactivePage_myJourney__jmcv1TmLyG]: hasVariant(
+                  $state,
+                  "activePage",
+                  "myJourney"
+                )
+              })}
               defaultColor={"#ffffff"}
               hoverColor={true ? "var(--antd-colorWarning)" : undefined}
               text={"My Journey"}
             />
           </PlasmicLink__>
-          <HackerText
-            className={classNames("__wab_instance", sty.hackerText___6Cr0S)}
-            defaultColor={"#ffffff"}
-            hoverColor={true ? "var(--antd-colorWarning)" : undefined}
-            text={"Works"}
-          />
-
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__fvRmQ,
+              {
+                [sty.linkactivePage_works__fvRmQoqHx2]: hasVariant(
+                  $state,
+                  "activePage",
+                  "works"
+                )
+              }
+            )}
+            component={Link}
+            legacyBehavior={false}
+            platform={"nextjs"}
+          >
+            {(
+              hasVariant($state, "activePage", "works")
+                ? true
+                : hasVariant($state, "activePage", "myJourney")
+                  ? true
+                  : false
+            ) ? (
+              <div
+                className={classNames(projectcss.all, sty.freeBox__dfhMw, {
+                  [sty.freeBoxactivePage_myJourney__dfhMwTmLyG]: hasVariant(
+                    $state,
+                    "activePage",
+                    "myJourney"
+                  ),
+                  [sty.freeBoxactivePage_works__dfhMwOqHx2]: hasVariant(
+                    $state,
+                    "activePage",
+                    "works"
+                  )
+                })}
+              />
+            ) : null}
+            <HackerText
+              className={classNames("__wab_instance", sty.hackerText___6Cr0S, {
+                [sty.hackerTextactivePage_works___6Cr0SoqHx2]: hasVariant(
+                  $state,
+                  "activePage",
+                  "works"
+                )
+              })}
+              defaultColor={"#ffffff"}
+              hoverColor={true ? "var(--antd-colorWarning)" : undefined}
+              text={"Works"}
+            />
+          </PlasmicLink__>
           <HackerText
             className={classNames("__wab_instance", sty.hackerText__lpsI)}
             defaultColor={"#ffffff"}
@@ -282,15 +371,13 @@ function PlasmicNewMenu__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  menu: ["menu", "link"],
-  link: ["link"]
+  menu: ["menu"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   menu: "div";
-  link: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -355,7 +442,6 @@ export const PlasmicNewMenu = Object.assign(
   makeNodeComponent("menu"),
   {
     // Helper components rendering sub-elements
-    link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicNewMenu
     internalVariantProps: PlasmicNewMenu__VariantProps,

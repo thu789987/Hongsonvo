@@ -1197,6 +1197,20 @@
           "cssFilePath": "plasmic/son_vo/PlasmicLineAnimation.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "tTCkSMouIA8B",
+          "name": "Works",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicWorks.tsx",
+          "importSpec": {
+            "modulePath": "../pages/new-page.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicWorks.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/new-page"
         }
       ],
       "icons": [
@@ -2261,10 +2275,10 @@
           "componentImportPath": "./components/HoverLogoCard"
         },
         {
-          "id": "lCC6wn00QyfE",
-          "name": "InViewDetector",
-          "displayName": "InViewDetector",
-          "componentImportPath": "./components/InViewDetector"
+          "id": "OrcqYiNWCo3G",
+          "name": "RevealWidthOnScroll",
+          "displayName": "RevealWidthOnScroll",
+          "componentImportPath": "./components/RevealWidthOnScroll"
         }
       ],
       "customFunctions": []

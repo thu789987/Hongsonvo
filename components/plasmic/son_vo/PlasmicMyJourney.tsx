@@ -74,15 +74,12 @@ import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
+import { RevealWidthOnScroll } from "../../RevealWidthOnScroll"; // plasmic-import: OrcqYiNWCo3G/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
-import LineAnimation from "../../LineAnimation"; // plasmic-import: dKZrPBt4B-lj/component
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
 import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
 import { HoverLogoCard } from "../../HoverLogoCard"; // plasmic-import: 8gew1WdMY0jF/codeComponent
 import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUtTr/component
-import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
-import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI/codeComponent
-import { Video } from "@plasmicpkgs/plasmic-basic-components";
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
@@ -97,7 +94,6 @@ import sty from "./PlasmicMyJourney.module.css"; // plasmic-import: uoJMXHK3hbae
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: I6R9tdLXkQer/icon
 import ChevronRightIcon from "./icons/PlasmicIcon__ChevronRight"; // plasmic-import: dlvUo4g-Sy-8/icon
 import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: XVSFhUeRi9UU/icon
-import Artboard14SvgIcon from "./icons/PlasmicIcon__Artboard14Svg"; // plasmic-import: RNiMy76HG5_X/icon
 
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
@@ -202,22 +198,16 @@ export type PlasmicMyJourney__OverridesType = {
   container7?: Flex__<"div">;
   _20?: Flex__<"div">;
   _13?: Flex__<"div">;
-  lineAnimation?: Flex__<typeof LineAnimation>;
   _21?: Flex__<"div">;
   _14?: Flex__<"div">;
-  divede2?: Flex__<"div">;
   _22?: Flex__<"div">;
   _15?: Flex__<"div">;
-  divede3?: Flex__<"div">;
   _23?: Flex__<"div">;
   _16?: Flex__<"div">;
-  divede4?: Flex__<"div">;
   _24?: Flex__<"div">;
   _17?: Flex__<"div">;
-  divede5?: Flex__<"div">;
   _25?: Flex__<"div">;
   _18?: Flex__<"div">;
-  divede6?: Flex__<"div">;
   cardWhatAboutUs5?: Flex__<typeof CardWhatAboutUs>;
   sectionCards7?: Flex__<"div">;
   heading5?: Flex__<"div">;
@@ -233,19 +223,6 @@ export type PlasmicMyJourney__OverridesType = {
   subContainer3?: Flex__<"div">;
   gridDistortion?: Flex__<typeof GridDistortion>;
   cardWhatAboutUs6?: Flex__<typeof CardWhatAboutUs>;
-  sectionCards3?: Flex__<"div">;
-  container49?: Flex__<"div">;
-  top5?: Flex__<"div">;
-  title3?: Flex__<"div">;
-  patternGrid?: Flex__<typeof PatternGrid>;
-  htmlVideo4?: Flex__<typeof Video>;
-  service05?: Flex__<"div">;
-  service15?: Flex__<"div">;
-  service25?: Flex__<"div">;
-  service35?: Flex__<"div">;
-  service45?: Flex__<"div">;
-  service55?: Flex__<"div">;
-  section?: Flex__<typeof Section>;
 };
 
 export interface DefaultMyJourneyProps {}
@@ -380,6 +357,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                     <NewMenu
                       data-plasmic-name={"newMenu"}
                       data-plasmic-override={overrides.newMenu}
+                      activePage={"myJourney"}
                       className={classNames("__wab_instance", sty.newMenu)}
                       headerTitle={"[ 2026 ]"}
                       scrolledState={(() => {
@@ -837,111 +815,168 @@ function PlasmicMyJourney__RenderFunc(props: {
                 data-plasmic-override={overrides.headerHeroSection3}
                 className={classNames(projectcss.all, sty.headerHeroSection3)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__t4Lfe)}>
+                <RevealOnScroll
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll__nwxQd
+                  )}
+                  delay={0}
+                  duration={0.8}
+                  yOffset={50}
+                >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__qxEqc)}
+                    className={classNames(projectcss.all, sty.freeBox__t4Lfe)}
                   >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__w6FXm
-                      )}
-                    >
-                      {"A SENIOR"}
-                    </h1>
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__dYs1P
-                      )}
-                    >
-                      {"A SENIOR UI/UX"}
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__w4DPg)}
-                  >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__vpZd
-                      )}
-                    >
-                      {"UI/UX DESIGNER"}
-                    </h1>
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__aQmEa)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"50px"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/son_vo/images/untitled1CopySvg3.svg",
-                        fullWidth: 114.28,
-                        fullHeight: 128.11,
-                        aspectRatio: 0.892046
-                      }}
-                    />
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__mw2Ob)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___06Sie)}
-                  >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__b2Gqs
-                      )}
-                    >
-                      {"6 YEARS EXPERIENCE"}
-                    </h1>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__h9Ehp)}
+                      className={classNames(projectcss.all, sty.freeBox__qxEqc)}
                     >
                       <h1
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
                           projectcss.__wab_text,
-                          sty.h1__yxiHg
+                          sty.h1__w6FXm
                         )}
                       >
-                        {"live in "}
+                        {"A SENIOR"}
                       </h1>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__dYs1P
+                        )}
+                      >
+                        {"A SENIOR UI/UX"}
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__w4DPg)}
+                    >
                       <h1
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
                           projectcss.__wab_text,
-                          sty.h1__mbLz5
+                          sty.h1__vpZd
                         )}
                       >
-                        {"HO CHI MINH CITY"}
+                        {"UI/UX DESIGNER"}
                       </h1>
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__aQmEa)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"50px"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/son_vo/images/untitled1CopySvg3.svg",
+                          fullWidth: 114.28,
+                          fullHeight: 128.11,
+                          aspectRatio: 0.892046
+                        }}
+                      />
                     </div>
                   </div>
-                </div>
+                </RevealOnScroll>
+                <RevealOnScroll
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll__klvbx
+                  )}
+                  delay={0}
+                  duration={1.6}
+                  yOffset={80}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__edta3)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5XldI
+                      )}
+                    >
+                      {
+                        "K\u00e9o n\u1ed9i dung c\u1ea7n hi\u1ec7u \u1ee9ng v\u00e0o \u0111\u00e2y"
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__mw2Ob)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___06Sie
+                      )}
+                    >
+                      <h1
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h1,
+                          projectcss.__wab_text,
+                          sty.h1__b2Gqs
+                        )}
+                      >
+                        {"6 YEARS EXPERIENCE"}
+                      </h1>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__h9Ehp
+                        )}
+                      >
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.__wab_text,
+                            sty.h1__yxiHg
+                          )}
+                        >
+                          {"live in "}
+                        </h1>
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.__wab_text,
+                            sty.h1__mbLz5
+                          )}
+                        >
+                          {"HO CHI MINH CITY"}
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                </RevealOnScroll>
               </div>
+              <RevealWidthOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.revealWidthOnScroll__ldNt
+                )}
+                delay={0}
+                duration={1.5}
+              >
+                <section
+                  className={classNames(projectcss.all, sty.section__bDpVj)}
+                />
+              </RevealWidthOnScroll>
               <RevealOnScroll
                 className={classNames(
                   "__wab_instance",
                   sty.revealOnScroll__npDhy
                 )}
-                delay={0.1}
+                delay={0}
                 duration={1.6}
-                yOffset={50}
+                yOffset={80}
               >
                 <div
                   data-plasmic-name={"sectionCards2"}
@@ -1381,6 +1416,18 @@ function PlasmicMyJourney__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
+              <RevealWidthOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.revealWidthOnScroll__nF0J4
+                )}
+                delay={0}
+                duration={1.5}
+              >
+                <section
+                  className={classNames(projectcss.all, sty.section__do80R)}
+                />
+              </RevealWidthOnScroll>
               <RevealOnScroll
                 className={classNames(
                   "__wab_instance",
@@ -1615,28 +1662,21 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                             </div>
                           </RevealOnScroll>
-                          <LineAnimation
-                            data-plasmic-name={"lineAnimation"}
-                            data-plasmic-override={overrides.lineAnimation}
+                          <RevealWidthOnScroll
                             className={classNames(
                               "__wab_instance",
-                              sty.lineAnimation
+                              sty.revealWidthOnScroll__dlCn
                             )}
-                            inViewData={(() => {
-                              try {
-                                return $ctx.inViewData.isInView;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
-                              }
-                            })()}
-                          />
-
+                            delay={0}
+                            duration={1.5}
+                          >
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section__r7MAb
+                              )}
+                            />
+                          </RevealWidthOnScroll>
                           <RevealOnScroll
                             className={classNames(
                               "__wab_instance",
@@ -1717,12 +1757,21 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                             </div>
                           </RevealOnScroll>
-                          <div
-                            data-plasmic-name={"divede2"}
-                            data-plasmic-override={overrides.divede2}
-                            className={classNames(projectcss.all, sty.divede2)}
-                          />
-
+                          <RevealWidthOnScroll
+                            className={classNames(
+                              "__wab_instance",
+                              sty.revealWidthOnScroll__iuG5N
+                            )}
+                            delay={0}
+                            duration={1.5}
+                          >
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section__hRt2Y
+                              )}
+                            />
+                          </RevealWidthOnScroll>
                           <RevealOnScroll
                             className={classNames(
                               "__wab_instance",
@@ -1803,12 +1852,21 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                             </div>
                           </RevealOnScroll>
-                          <div
-                            data-plasmic-name={"divede3"}
-                            data-plasmic-override={overrides.divede3}
-                            className={classNames(projectcss.all, sty.divede3)}
-                          />
-
+                          <RevealWidthOnScroll
+                            className={classNames(
+                              "__wab_instance",
+                              sty.revealWidthOnScroll__vy7VO
+                            )}
+                            delay={0}
+                            duration={1.5}
+                          >
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section__f8PB
+                              )}
+                            />
+                          </RevealWidthOnScroll>
                           <RevealOnScroll
                             className={classNames(
                               "__wab_instance",
@@ -1889,12 +1947,21 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                             </div>
                           </RevealOnScroll>
-                          <div
-                            data-plasmic-name={"divede4"}
-                            data-plasmic-override={overrides.divede4}
-                            className={classNames(projectcss.all, sty.divede4)}
-                          />
-
+                          <RevealWidthOnScroll
+                            className={classNames(
+                              "__wab_instance",
+                              sty.revealWidthOnScroll__jktnx
+                            )}
+                            delay={0}
+                            duration={1.5}
+                          >
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section___4JpEc
+                              )}
+                            />
+                          </RevealWidthOnScroll>
                           <RevealOnScroll
                             className={classNames(
                               "__wab_instance",
@@ -1975,12 +2042,21 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                             </div>
                           </RevealOnScroll>
-                          <div
-                            data-plasmic-name={"divede5"}
-                            data-plasmic-override={overrides.divede5}
-                            className={classNames(projectcss.all, sty.divede5)}
-                          />
-
+                          <RevealWidthOnScroll
+                            className={classNames(
+                              "__wab_instance",
+                              sty.revealWidthOnScroll__pkfcP
+                            )}
+                            delay={0}
+                            duration={1.5}
+                          >
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section__hk7Pw
+                              )}
+                            />
+                          </RevealWidthOnScroll>
                           <RevealOnScroll
                             className={classNames(
                               "__wab_instance",
@@ -2059,11 +2135,21 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                             </div>
                           </RevealOnScroll>
-                          <div
-                            data-plasmic-name={"divede6"}
-                            data-plasmic-override={overrides.divede6}
-                            className={classNames(projectcss.all, sty.divede6)}
-                          />
+                          <RevealWidthOnScroll
+                            className={classNames(
+                              "__wab_instance",
+                              sty.revealWidthOnScroll__gQOfa
+                            )}
+                            delay={0}
+                            duration={1.5}
+                          >
+                            <section
+                              className={classNames(
+                                projectcss.all,
+                                sty.section__mRmkI
+                              )}
+                            />
+                          </RevealWidthOnScroll>
                         </div>
                       </div>
                     </div>
@@ -2084,8 +2170,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                   sty.revealOnScroll__bd37H
                 )}
                 delay={0}
-                duration={0.8}
-                yOffset={50}
+                duration={1.6}
+                yOffset={80}
               >
                 <div
                   data-plasmic-name={"sectionCards7"}
@@ -2263,209 +2349,289 @@ function PlasmicMyJourney__RenderFunc(props: {
                         strength={0.25}
                       />
 
-                      <HoverLogoCard
+                      <PlasmicLink__
                         className={classNames(
-                          "__wab_instance",
-                          sty.hoverLogoCard__o8Fnb
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__jKm7D
                         )}
-                        logoSrc={
-                          "/plasmic/son_vo/images/q3Nl1VOj9SdNlGqUyhPfv86EwPng.png"
+                        component={Link}
+                        href={"https://bbcincorp.com/hk"}
+                        legacyBehavior={false}
+                        platform={"nextjs"}
+                        target={"_blank"}
+                      >
+                        <HoverLogoCard
+                          className={classNames(
+                            "__wab_instance",
+                            sty.hoverLogoCard__o8Fnb
+                          )}
+                          logoSrc={
+                            "/plasmic/son_vo/images/q3Nl1VOj9SdNlGqUyhPfv86EwPng.png"
+                          }
+                        >
+                          <CardExperience
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardExperience__g0CSz
+                            )}
+                            company={"BBCIncorp"}
+                            content={
+                              "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
+                            }
+                            number={"[ Oct 2022 - Present ]"}
+                            project1={(() => {
+                              try {
+                                return undefined;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return [];
+                                }
+                                throw e;
+                              }
+                            })()}
+                            title={"Senior UI/UX"}
+                          />
+                        </HoverLogoCard>
+                      </PlasmicLink__>
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link___2ApgH
+                        )}
+                        component={Link}
+                        href={"https://gleadsglobal.com/"}
+                        legacyBehavior={false}
+                        platform={"nextjs"}
+                        target={"_blank"}
+                      >
+                        <HoverLogoCard
+                          className={classNames(
+                            "__wab_instance",
+                            sty.hoverLogoCard__qwzZ
+                          )}
+                          logoSrc={"/plasmic/son_vo/images/gleadsPng.avif"}
+                        >
+                          <CardExperience
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardExperience___4MXlP
+                            )}
+                            company={"GLEADS COMPANY"}
+                            content={
+                              "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
+                            }
+                            number={"[ Oct 2022 - Present ]"}
+                            project1={(() => {
+                              try {
+                                return undefined;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return [];
+                                }
+                                throw e;
+                              }
+                            })()}
+                            title={"Senior UI/UX"}
+                          />
+                        </HoverLogoCard>
+                      </PlasmicLink__>
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__rVhvz
+                        )}
+                        component={Link}
+                        href={"https://www.averydennison.com/en/home.html"}
+                        legacyBehavior={false}
+                        platform={"nextjs"}
+                        target={"_blank"}
+                      >
+                        <HoverLogoCard
+                          className={classNames(
+                            "__wab_instance",
+                            sty.hoverLogoCard__xuaFh
+                          )}
+                          logoSrc={"/plasmic/son_vo/images/adAvif.avif"}
+                        >
+                          <CardExperience
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardExperience__ynxw0
+                            )}
+                            company={"Avery Dennison"}
+                            content={
+                              "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
+                            }
+                            number={"[ Oct 2016 - Feb 2020 ]"}
+                            project1={(() => {
+                              try {
+                                return undefined;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return [];
+                                }
+                                throw e;
+                              }
+                            })()}
+                            time={"[ Oct 2016 - Feb 2020 ]"}
+                            title={"Graphic Design"}
+                          />
+                        </HoverLogoCard>
+                      </PlasmicLink__>
+                      <PlasmicLink__
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__nMq7I
+                        )}
+                        component={Link}
+                        href={
+                          "https://www.facebook.com/p/CO-KHI-MnK-100067757482737/"
                         }
+                        legacyBehavior={false}
+                        platform={"nextjs"}
+                        target={"_blank"}
                       >
-                        <CardExperience
+                        <HoverLogoCard
                           className={classNames(
                             "__wab_instance",
-                            sty.cardExperience__g0CSz
+                            sty.hoverLogoCard__d5GUz
                           )}
-                          company={"BBCIncorp"}
-                          content={
-                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
-                          }
-                          number={"[ Oct 2022 - Present ]"}
-                          project1={(() => {
-                            try {
-                              return undefined;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return [];
-                              }
-                              throw e;
+                          logoSrc={"/plasmic/son_vo/images/mnkPng.png"}
+                        >
+                          <CardExperience
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardExperience___9ACr9
+                            )}
+                            company={"MNK Company"}
+                            content={
+                              "Conducted user research, facilitated workshops with stakeholders, and brainstormed ideas with BOD. Developed wireframes, prototypes of Package, and visual designs for proposed solutions"
                             }
-                          })()}
-                          title={"Senior UI/UX"}
-                        />
-                      </HoverLogoCard>
-                      <HoverLogoCard
+                            number={"[ Oct 2016 - Feb 2020 ]"}
+                            project1={(() => {
+                              try {
+                                return undefined;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return [];
+                                }
+                                throw e;
+                              }
+                            })()}
+                            title={"Graphic Design"}
+                          />
+                        </HoverLogoCard>
+                      </PlasmicLink__>
+                      <PlasmicLink__
                         className={classNames(
-                          "__wab_instance",
-                          sty.hoverLogoCard__qwzZ
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__ssCe7
                         )}
-                        logoSrc={"/plasmic/son_vo/images/gleadsPng.avif"}
+                        component={Link}
+                        href={"https://eptcenter.vn/"}
+                        legacyBehavior={false}
+                        platform={"nextjs"}
+                        target={"_blank"}
                       >
-                        <CardExperience
+                        <HoverLogoCard
                           className={classNames(
                             "__wab_instance",
-                            sty.cardExperience___4MXlP
+                            sty.hoverLogoCard__d0Lzq
                           )}
-                          company={"GLEADS COMPANY"}
-                          content={
-                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
-                          }
-                          number={"[ Oct 2022 - Present ]"}
-                          project1={(() => {
-                            try {
-                              return undefined;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return [];
-                              }
-                              throw e;
+                          logoSrc={"/plasmic/son_vo/images/eptcAvif.avif"}
+                        >
+                          <CardExperience
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardExperience__hDot
+                            )}
+                            company={"EPTC Printing"}
+                            content={
+                              "During my internship at EPTC Printing Company, I worked on designing and preparing plates for billboard and digital printing. My responsibilities included creating and adjusting designs for large-format prints, ensuring high-quality outputs, and collaborating with the production team to optimize printing processes. This experience strengthened my skills in digital printing, design software, and large-scale print production."
                             }
-                          })()}
-                          title={"Senior UI/UX"}
-                        />
-                      </HoverLogoCard>
-                      <HoverLogoCard
+                            number={"[ Aug 2019 - Oct 2019 ]"}
+                            project1={(() => {
+                              try {
+                                return undefined;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return [];
+                                }
+                                throw e;
+                              }
+                            })()}
+                            time={"[ Present ][ Aug 2019 - Oct 2019 ]"}
+                            title={"Digital Printer Internship"}
+                          />
+                        </HoverLogoCard>
+                      </PlasmicLink__>
+                      <PlasmicLink__
                         className={classNames(
-                          "__wab_instance",
-                          sty.hoverLogoCard__xuaFh
+                          projectcss.all,
+                          projectcss.a,
+                          sty.link__j3F12
                         )}
-                        logoSrc={"/plasmic/son_vo/images/adAvif.avif"}
+                        component={Link}
+                        href={"http://inkhuyenhocphianam.vn/"}
+                        legacyBehavior={false}
+                        platform={"nextjs"}
+                        target={"_blank"}
                       >
-                        <CardExperience
+                        <HoverLogoCard
                           className={classNames(
                             "__wab_instance",
-                            sty.cardExperience__ynxw0
+                            sty.hoverLogoCard__et6J
                           )}
-                          company={"Avery Dennison"}
-                          content={
-                            "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
-                          }
-                          number={"[ Oct 2016 - Feb 2020 ]"}
-                          project1={(() => {
-                            try {
-                              return undefined;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return [];
-                              }
-                              throw e;
+                          logoSrc={"/plasmic/son_vo/images/phiaNamPng.png"}
+                        >
+                          <CardExperience
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cardExperience__nUPeJ
+                            )}
+                            company={"Khuyen hoc phia nam"}
+                            content={
+                              "During my internship at Khuyen Hoc Phia nam, I assisted in designing and developing innovative plate concepts using software like Adobe Illustrator, Indesign, Sigma. I conducted market research, contributed to prototype development, and collaborated with the team to refine designs for aesthetics and functionality. This experience enhanced my technical skills, creativity, and teamwork."
                             }
-                          })()}
-                          time={"[ Oct 2016 - Feb 2020 ]"}
-                          title={"Graphic Design"}
-                        />
-                      </HoverLogoCard>
-                      <HoverLogoCard
-                        className={classNames(
-                          "__wab_instance",
-                          sty.hoverLogoCard__d5GUz
-                        )}
-                        logoSrc={"/plasmic/son_vo/images/mnkPng.png"}
-                      >
-                        <CardExperience
-                          className={classNames(
-                            "__wab_instance",
-                            sty.cardExperience___9ACr9
-                          )}
-                          company={"MNK Company"}
-                          content={
-                            "Conducted user research, facilitated workshops with stakeholders, and brainstormed ideas with BOD. Developed wireframes, prototypes of Package, and visual designs for proposed solutions"
-                          }
-                          number={"[ Oct 2016 - Feb 2020 ]"}
-                          project1={(() => {
-                            try {
-                              return undefined;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return [];
+                            number={"[ Jan 2019 - Feb 2019 ]"}
+                            project1={(() => {
+                              try {
+                                return undefined;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return [];
+                                }
+                                throw e;
                               }
-                              throw e;
-                            }
-                          })()}
-                          title={"Graphic Design"}
-                        />
-                      </HoverLogoCard>
-                      <HoverLogoCard
-                        className={classNames(
-                          "__wab_instance",
-                          sty.hoverLogoCard__d0Lzq
-                        )}
-                        logoSrc={"/plasmic/son_vo/images/eptcAvif.avif"}
-                      >
-                        <CardExperience
-                          className={classNames(
-                            "__wab_instance",
-                            sty.cardExperience__hDot
-                          )}
-                          company={"EPTC Printing"}
-                          content={
-                            "During my internship at EPTC Printing Company, I worked on designing and preparing plates for billboard and digital printing. My responsibilities included creating and adjusting designs for large-format prints, ensuring high-quality outputs, and collaborating with the production team to optimize printing processes. This experience strengthened my skills in digital printing, design software, and large-scale print production."
-                          }
-                          number={"[ Aug 2019 - Oct 2019 ]"}
-                          project1={(() => {
-                            try {
-                              return undefined;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return [];
-                              }
-                              throw e;
-                            }
-                          })()}
-                          time={"[ Present ][ Aug 2019 - Oct 2019 ]"}
-                          title={"Digital Printer Internship"}
-                        />
-                      </HoverLogoCard>
-                      <HoverLogoCard
-                        className={classNames(
-                          "__wab_instance",
-                          sty.hoverLogoCard__et6J
-                        )}
-                        logoSrc={"/plasmic/son_vo/images/phiaNamPng.png"}
-                      >
-                        <CardExperience
-                          className={classNames(
-                            "__wab_instance",
-                            sty.cardExperience__nUPeJ
-                          )}
-                          company={"Khuyen hoc phia nam"}
-                          content={
-                            "During my internship at Khuyen Hoc Phia nam, I assisted in designing and developing innovative plate concepts using software like Adobe Illustrator, Indesign, Sigma. I conducted market research, contributed to prototype development, and collaborated with the team to refine designs for aesthetics and functionality. This experience enhanced my technical skills, creativity, and teamwork."
-                          }
-                          number={"[ Jan 2019 - Feb 2019 ]"}
-                          project1={(() => {
-                            try {
-                              return undefined;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return [];
-                              }
-                              throw e;
-                            }
-                          })()}
-                          time={"[ Jan 2019 - Feb 2019 ]"}
-                          title={"Plate Designer INTERSHIP"}
-                        />
-                      </HoverLogoCard>
+                            })()}
+                            time={"[ Jan 2019 - Feb 2019 ]"}
+                            title={"Plate Designer INTERSHIP"}
+                          />
+                        </HoverLogoCard>
+                      </PlasmicLink__>
                     </div>
                     <CardWhatAboutUs
                       data-plasmic-name={"cardWhatAboutUs6"}
@@ -2478,809 +2644,17 @@ function PlasmicMyJourney__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
-              <div
-                data-plasmic-name={"sectionCards3"}
-                data-plasmic-override={overrides.sectionCards3}
-                className={classNames(projectcss.all, sty.sectionCards3)}
-              >
-                <div
-                  data-plasmic-name={"container49"}
-                  data-plasmic-override={overrides.container49}
-                  className={classNames(projectcss.all, sty.container49)}
-                >
-                  <div
-                    data-plasmic-name={"top5"}
-                    data-plasmic-override={overrides.top5}
-                    className={classNames(projectcss.all, sty.top5)}
-                  >
-                    <div
-                      data-plasmic-name={"title3"}
-                      data-plasmic-override={overrides.title3}
-                      className={classNames(projectcss.all, sty.title3)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__sEov
-                        )}
-                      >
-                        {"02//OUR PROJECT"}
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__qJk2D)}
-                  >
-                    <TemplateCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard__oeNwk
-                      )}
-                      img2={
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__kp4SQ)}
-                          displayHeight={"334px"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"100%"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                            fullWidth: 511,
-                            fullHeight: 596,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      }
-                      softwareContainerSoftware2={
-                        <React.Fragment>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__xo8Rd
-                            )}
-                          >
-                            <Artboard14SvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___4HFtx
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__zx496
-                            )}
-                          >
-                            {"Framer"}
-                          </div>
-                        </React.Fragment>
-                      }
-                    />
-
-                    <TemplateCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard__ptwm
-                      )}
-                      img2={
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__qtfZe)}
-                          displayHeight={"334px"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"100%"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                            fullWidth: 511,
-                            fullHeight: 596,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      }
-                      softwareContainerSoftware2={
-                        <React.Fragment>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___5Ypha
-                            )}
-                          >
-                            <Artboard14SvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__iSizt
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__nmNn
-                            )}
-                          >
-                            {"Framer"}
-                          </div>
-                        </React.Fragment>
-                      }
-                    />
-
-                    <TemplateCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard__btR2V
-                      )}
-                      img2={
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__hOrVn)}
-                          displayHeight={"334px"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"100%"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                            fullWidth: 511,
-                            fullHeight: 596,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      }
-                    />
-
-                    <TemplateCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard__fQxYv
-                      )}
-                      img2={
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__fBEhK)}
-                          displayHeight={"334px"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"100%"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                            fullWidth: 511,
-                            fullHeight: 596,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      }
-                    />
-
-                    <TemplateCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard__lJTtu
-                      )}
-                      img2={
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__uJjzm)}
-                          displayHeight={"334px"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"100%"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                            fullWidth: 511,
-                            fullHeight: 596,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      }
-                    />
-
-                    <TemplateCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard__iub6X
-                      )}
-                      img2={
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__eqsyv)}
-                          displayHeight={"334px"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"100%"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                            fullWidth: 511,
-                            fullHeight: 596,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      }
-                      softwareContainerSoftware2={
-                        <React.Fragment>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___1Ae
-                            )}
-                          >
-                            <Artboard14SvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__tvfb
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__cSr6
-                            )}
-                          >
-                            {"Framer"}
-                          </div>
-                        </React.Fragment>
-                      }
-                    />
-
-                    <TemplateCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard__jsxu
-                      )}
-                      img2={
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__b8XbK)}
-                          displayHeight={"334px"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"100%"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                            fullWidth: 511,
-                            fullHeight: 596,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      }
-                      softwareContainerSoftware2={
-                        <React.Fragment>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__ldHmO
-                            )}
-                          >
-                            <Artboard14SvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__g9HcD
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__biikF
-                            )}
-                          >
-                            {"Framer"}
-                          </div>
-                        </React.Fragment>
-                      }
-                    />
-
-                    <TemplateCard
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard__ozrWw
-                      )}
-                      img2={
-                        <PlasmicImg__
-                          alt={""}
-                          className={classNames(sty.img__dtnKk)}
-                          displayHeight={"334px"}
-                          displayMaxHeight={"none"}
-                          displayMaxWidth={"100%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"100%"}
-                          loading={"lazy"}
-                          src={{
-                            src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                            fullWidth: 511,
-                            fullHeight: 596,
-                            aspectRatio: undefined
-                          }}
-                        />
-                      }
-                      softwareContainerSoftware2={
-                        <React.Fragment>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__hhCgc
-                            )}
-                          >
-                            <Artboard14SvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__mG05
-                              )}
-                              role={"img"}
-                            />
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__zz7Dj
-                            )}
-                          >
-                            {"Framer"}
-                          </div>
-                        </React.Fragment>
-                      }
-                    />
-                  </div>
-                  <PatternGrid
-                    data-plasmic-name={"patternGrid"}
-                    data-plasmic-override={overrides.patternGrid}
-                    className={classNames("__wab_instance", sty.patternGrid)}
-                    gap={24}
-                  >
-                    {(_par =>
-                      !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                      (() => {
-                        try {
-                          return $queries.works.data;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return [];
-                          }
-                          throw e;
-                        }
-                      })()
-                    ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                      const currentItem = __plasmic_item_0;
-                      const currentIndex = __plasmic_idx_0;
-                      return (
-                        <RevealOnScroll
-                          className={classNames(
-                            "__wab_instance",
-                            sty.revealOnScroll__usolV
-                          )}
-                          delay={(() => {
-                            try {
-                              return 0.5 * $ctx.plasmicIndex;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return 0;
-                              }
-                              throw e;
-                            }
-                          })()}
-                          duration={0.8}
-                          key={currentIndex}
-                          yOffset={50}
-                        >
-                          <TemplateCard
-                            className={classNames(
-                              "__wab_instance",
-                              sty.templateCard__gcHw6
-                            )}
-                            container9={
-                              <PlasmicLink__
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.a,
-                                  projectcss.__wab_text,
-                                  sty.link__jpGh8
-                                )}
-                                component={Link}
-                                href={`/works/${currentItem.Slug}`}
-                                legacyBehavior={false}
-                                platform={"nextjs"}
-                              >
-                                <React.Fragment>
-                                  {(() => {
-                                    try {
-                                      return currentItem.Title;
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return "Vectura";
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                </React.Fragment>
-                              </PlasmicLink__>
-                            }
-                            img2={
-                              <PlasmicLink__
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.a,
-                                  sty.link__d3JHh
-                                )}
-                                component={Link}
-                                href={`/works/${currentItem.Slug}`}
-                                legacyBehavior={false}
-                                platform={"nextjs"}
-                              >
-                                {(() => {
-                                  try {
-                                    return currentItem["Video"];
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <Video
-                                    data-plasmic-name={"htmlVideo4"}
-                                    data-plasmic-override={overrides.htmlVideo4}
-                                    autoPlay={true}
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.htmlVideo4
-                                    )}
-                                    controls={false}
-                                    loop={true}
-                                    muted={true}
-                                    ref={ref => {
-                                      $refs["htmlVideo4"] = ref;
-                                    }}
-                                    src={currentItem.Video}
-                                  />
-                                ) : null}
-                                {(() => {
-                                  try {
-                                    return !currentItem["Video"];
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <PlasmicImg__
-                                    alt={""}
-                                    className={classNames(sty.img___4LDnm)}
-                                    displayHeight={"auto"}
-                                    displayMaxHeight={"none"}
-                                    displayMaxWidth={"100%"}
-                                    displayMinHeight={"0"}
-                                    displayMinWidth={"0"}
-                                    displayWidth={"100%"}
-                                    loading={"lazy"}
-                                    src={(() => {
-                                      try {
-                                        return currentItem["Main Image"];
-                                      } catch (e) {
-                                        if (
-                                          e instanceof TypeError ||
-                                          e?.plasmicType ===
-                                            "PlasmicUndefinedDataError"
-                                        ) {
-                                          return {
-                                            src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                                            fullWidth: 511,
-                                            fullHeight: 596,
-                                            aspectRatio: undefined
-                                          };
-                                        }
-                                        throw e;
-                                      }
-                                    })()}
-                                  />
-                                ) : null}
-                              </PlasmicLink__>
-                            }
-                            softwareContainerSoftware2={
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.freeBox__wc8E0
-                                )}
-                              >
-                                {(() => {
-                                  try {
-                                    return (
-                                      currentItem.Services &&
-                                      currentItem.Services.includes(
-                                        "UI/UX Design"
-                                      )
-                                    );
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <div
-                                    data-plasmic-name={"service05"}
-                                    data-plasmic-override={overrides.service05}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.service05
-                                    )}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__ja5Y
-                                      )}
-                                    >
-                                      {"UI/UX Design"}
-                                    </div>
-                                  </div>
-                                ) : null}
-                                {(() => {
-                                  try {
-                                    return (
-                                      currentItem.Services &&
-                                      currentItem.Services.includes(
-                                        "E-commerce"
-                                      )
-                                    );
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <div
-                                    data-plasmic-name={"service15"}
-                                    data-plasmic-override={overrides.service15}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.service15
-                                    )}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__yGlKj
-                                      )}
-                                    >
-                                      {"E-commerce"}
-                                    </div>
-                                  </div>
-                                ) : null}
-                                {(() => {
-                                  try {
-                                    return (
-                                      currentItem.Services &&
-                                      currentItem.Services.includes("SEO")
-                                    );
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <div
-                                    data-plasmic-name={"service25"}
-                                    data-plasmic-override={overrides.service25}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.service25
-                                    )}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__dlbWq
-                                      )}
-                                    >
-                                      {"SEO"}
-                                    </div>
-                                  </div>
-                                ) : null}
-                                {(() => {
-                                  try {
-                                    return (
-                                      currentItem.Services &&
-                                      currentItem.Services.includes("Content")
-                                    );
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <div
-                                    data-plasmic-name={"service35"}
-                                    data-plasmic-override={overrides.service35}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.service35
-                                    )}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__nMjo
-                                      )}
-                                    >
-                                      {"Content"}
-                                    </div>
-                                  </div>
-                                ) : null}
-                                {(() => {
-                                  try {
-                                    return (
-                                      currentItem.Services &&
-                                      currentItem.Services.includes(
-                                        "Brand Idenity"
-                                      )
-                                    );
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <div
-                                    data-plasmic-name={"service45"}
-                                    data-plasmic-override={overrides.service45}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.service45
-                                    )}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__jRMan
-                                      )}
-                                    >
-                                      {"Brand Idenity"}
-                                    </div>
-                                  </div>
-                                ) : null}
-                                {(() => {
-                                  try {
-                                    return (
-                                      currentItem.Services &&
-                                      currentItem.Services.includes(
-                                        "Web Development"
-                                      )
-                                    );
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <div
-                                    data-plasmic-name={"service55"}
-                                    data-plasmic-override={overrides.service55}
-                                    className={classNames(
-                                      projectcss.all,
-                                      sty.service55
-                                    )}
-                                  >
-                                    <div
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.__wab_text,
-                                        sty.text__vvPhz
-                                      )}
-                                    >
-                                      {"Web Development"}
-                                    </div>
-                                  </div>
-                                ) : null}
-                              </div>
-                            }
-                          />
-                        </RevealOnScroll>
-                      );
-                    })}
-                  </PatternGrid>
-                </div>
-              </div>
               <RevealOnScroll
                 className={classNames(
                   "__wab_instance",
                   sty.revealOnScroll__qYi5X
                 )}
                 delay={0}
-                duration={0.8}
-                yOffset={50}
+                duration={1.6}
+                yOffset={100}
               >
                 <Section
-                  data-plasmic-name={"section"}
-                  data-plasmic-override={overrides.section}
-                  className={classNames("__wab_instance", sty.section)}
+                  className={classNames("__wab_instance", sty.section___3I66O)}
                   size={
                     hasVariant(globalVariants, "screen", "mobile")
                       ? "fullContentWidth"
@@ -3402,22 +2776,16 @@ const PlasmicDescendants = {
     "container7",
     "_20",
     "_13",
-    "lineAnimation",
     "_21",
     "_14",
-    "divede2",
     "_22",
     "_15",
-    "divede3",
     "_23",
     "_16",
-    "divede4",
     "_24",
     "_17",
-    "divede5",
     "_25",
     "_18",
-    "divede6",
     "cardWhatAboutUs5",
     "sectionCards7",
     "heading5",
@@ -3432,20 +2800,7 @@ const PlasmicDescendants = {
     "container32",
     "subContainer3",
     "gridDistortion",
-    "cardWhatAboutUs6",
-    "sectionCards3",
-    "container49",
-    "top5",
-    "title3",
-    "patternGrid",
-    "htmlVideo4",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55",
-    "section"
+    "cardWhatAboutUs6"
   ],
   smoothScroll: [
     "smoothScroll",
@@ -3509,22 +2864,16 @@ const PlasmicDescendants = {
     "container7",
     "_20",
     "_13",
-    "lineAnimation",
     "_21",
     "_14",
-    "divede2",
     "_22",
     "_15",
-    "divede3",
     "_23",
     "_16",
-    "divede4",
     "_24",
     "_17",
-    "divede5",
     "_25",
     "_18",
-    "divede6",
     "cardWhatAboutUs5",
     "sectionCards7",
     "heading5",
@@ -3539,20 +2888,7 @@ const PlasmicDescendants = {
     "container32",
     "subContainer3",
     "gridDistortion",
-    "cardWhatAboutUs6",
-    "sectionCards3",
-    "container49",
-    "top5",
-    "title3",
-    "patternGrid",
-    "htmlVideo4",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55",
-    "section"
+    "cardWhatAboutUs6"
   ],
   scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
@@ -3734,22 +3070,16 @@ const PlasmicDescendants = {
     "container7",
     "_20",
     "_13",
-    "lineAnimation",
     "_21",
     "_14",
-    "divede2",
     "_22",
     "_15",
-    "divede3",
     "_23",
     "_16",
-    "divede4",
     "_24",
     "_17",
-    "divede5",
     "_25",
     "_18",
-    "divede6",
     "cardWhatAboutUs5"
   ],
   heading4: [
@@ -3790,22 +3120,16 @@ const PlasmicDescendants = {
     "container7",
     "_20",
     "_13",
-    "lineAnimation",
     "_21",
     "_14",
-    "divede2",
     "_22",
     "_15",
-    "divede3",
     "_23",
     "_16",
-    "divede4",
     "_24",
     "_17",
-    "divede5",
     "_25",
     "_18",
-    "divede6",
     "cardWhatAboutUs5"
   ],
   subContainer2: [
@@ -3814,84 +3138,60 @@ const PlasmicDescendants = {
     "container7",
     "_20",
     "_13",
-    "lineAnimation",
     "_21",
     "_14",
-    "divede2",
     "_22",
     "_15",
-    "divede3",
     "_23",
     "_16",
-    "divede4",
     "_24",
     "_17",
-    "divede5",
     "_25",
-    "_18",
-    "divede6"
+    "_18"
   ],
   left4: [
     "left4",
     "container7",
     "_20",
     "_13",
-    "lineAnimation",
     "_21",
     "_14",
-    "divede2",
     "_22",
     "_15",
-    "divede3",
     "_23",
     "_16",
-    "divede4",
     "_24",
     "_17",
-    "divede5",
     "_25",
-    "_18",
-    "divede6"
+    "_18"
   ],
   container7: [
     "container7",
     "_20",
     "_13",
-    "lineAnimation",
     "_21",
     "_14",
-    "divede2",
     "_22",
     "_15",
-    "divede3",
     "_23",
     "_16",
-    "divede4",
     "_24",
     "_17",
-    "divede5",
     "_25",
-    "_18",
-    "divede6"
+    "_18"
   ],
   _20: ["_20", "_13"],
   _13: ["_13"],
-  lineAnimation: ["lineAnimation"],
   _21: ["_21", "_14"],
   _14: ["_14"],
-  divede2: ["divede2"],
   _22: ["_22", "_15"],
   _15: ["_15"],
-  divede3: ["divede3"],
   _23: ["_23", "_16"],
   _16: ["_16"],
-  divede4: ["divede4"],
   _24: ["_24", "_17"],
   _17: ["_17"],
-  divede5: ["divede5"],
   _25: ["_25", "_18"],
   _18: ["_18"],
-  divede6: ["divede6"],
   cardWhatAboutUs5: ["cardWhatAboutUs5"],
   sectionCards7: [
     "sectionCards7",
@@ -3953,54 +3253,7 @@ const PlasmicDescendants = {
   ],
   subContainer3: ["subContainer3", "gridDistortion"],
   gridDistortion: ["gridDistortion"],
-  cardWhatAboutUs6: ["cardWhatAboutUs6"],
-  sectionCards3: [
-    "sectionCards3",
-    "container49",
-    "top5",
-    "title3",
-    "patternGrid",
-    "htmlVideo4",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
-  ],
-  container49: [
-    "container49",
-    "top5",
-    "title3",
-    "patternGrid",
-    "htmlVideo4",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
-  ],
-  top5: ["top5", "title3"],
-  title3: ["title3"],
-  patternGrid: [
-    "patternGrid",
-    "htmlVideo4",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
-  ],
-  htmlVideo4: ["htmlVideo4"],
-  service05: ["service05"],
-  service15: ["service15"],
-  service25: ["service25"],
-  service35: ["service35"],
-  service45: ["service45"],
-  service55: ["service55"],
-  section: ["section"]
+  cardWhatAboutUs6: ["cardWhatAboutUs6"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -4068,22 +3321,16 @@ type NodeDefaultElementType = {
   container7: "div";
   _20: "div";
   _13: "div";
-  lineAnimation: typeof LineAnimation;
   _21: "div";
   _14: "div";
-  divede2: "div";
   _22: "div";
   _15: "div";
-  divede3: "div";
   _23: "div";
   _16: "div";
-  divede4: "div";
   _24: "div";
   _17: "div";
-  divede5: "div";
   _25: "div";
   _18: "div";
-  divede6: "div";
   cardWhatAboutUs5: typeof CardWhatAboutUs;
   sectionCards7: "div";
   heading5: "div";
@@ -4099,19 +3346,6 @@ type NodeDefaultElementType = {
   subContainer3: "div";
   gridDistortion: typeof GridDistortion;
   cardWhatAboutUs6: typeof CardWhatAboutUs;
-  sectionCards3: "div";
-  container49: "div";
-  top5: "div";
-  title3: "div";
-  patternGrid: typeof PatternGrid;
-  htmlVideo4: typeof Video;
-  service05: "div";
-  service15: "div";
-  service25: "div";
-  service35: "div";
-  service45: "div";
-  service55: "div";
-  section: typeof Section;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -4284,22 +3518,16 @@ export const PlasmicMyJourney = Object.assign(
     container7: makeNodeComponent("container7"),
     _20: makeNodeComponent("_20"),
     _13: makeNodeComponent("_13"),
-    lineAnimation: makeNodeComponent("lineAnimation"),
     _21: makeNodeComponent("_21"),
     _14: makeNodeComponent("_14"),
-    divede2: makeNodeComponent("divede2"),
     _22: makeNodeComponent("_22"),
     _15: makeNodeComponent("_15"),
-    divede3: makeNodeComponent("divede3"),
     _23: makeNodeComponent("_23"),
     _16: makeNodeComponent("_16"),
-    divede4: makeNodeComponent("divede4"),
     _24: makeNodeComponent("_24"),
     _17: makeNodeComponent("_17"),
-    divede5: makeNodeComponent("divede5"),
     _25: makeNodeComponent("_25"),
     _18: makeNodeComponent("_18"),
-    divede6: makeNodeComponent("divede6"),
     cardWhatAboutUs5: makeNodeComponent("cardWhatAboutUs5"),
     sectionCards7: makeNodeComponent("sectionCards7"),
     heading5: makeNodeComponent("heading5"),
@@ -4330,19 +3558,6 @@ export const PlasmicMyJourney = Object.assign(
     subContainer3: makeNodeComponent("subContainer3"),
     gridDistortion: makeNodeComponent("gridDistortion"),
     cardWhatAboutUs6: makeNodeComponent("cardWhatAboutUs6"),
-    sectionCards3: makeNodeComponent("sectionCards3"),
-    container49: makeNodeComponent("container49"),
-    top5: makeNodeComponent("top5"),
-    title3: makeNodeComponent("title3"),
-    patternGrid: makeNodeComponent("patternGrid"),
-    htmlVideo4: makeNodeComponent("htmlVideo4"),
-    service05: makeNodeComponent("service05"),
-    service15: makeNodeComponent("service15"),
-    service25: makeNodeComponent("service25"),
-    service35: makeNodeComponent("service35"),
-    service45: makeNodeComponent("service45"),
-    service55: makeNodeComponent("service55"),
-    section: makeNodeComponent("section"),
 
     // Metadata about props expected for PlasmicMyJourney
     internalVariantProps: PlasmicMyJourney__VariantProps,
