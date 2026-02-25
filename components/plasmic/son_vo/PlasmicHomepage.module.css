@@ -2681,6 +2681,7 @@
 }
 .link__zpuve {
   display: flex;
+  pointer-events: none;
 }
 .htmlVideo4:global(.__wab_instance) {
   width: 100%;
@@ -2743,12 +2744,12 @@
 .text___3Hss2 {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 108%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
@@ -2771,12 +2772,12 @@
 .text__lst75 {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 108%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
@@ -2799,12 +2800,12 @@
 .text__yMJf1 {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 108%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
@@ -2827,12 +2828,12 @@
 .text___30HbQ {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 108%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
@@ -2855,12 +2856,12 @@
 .text__k8Svf {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 108%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
@@ -2883,12 +2884,12 @@
 .text__dPcUv {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 108%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
