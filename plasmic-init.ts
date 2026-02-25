@@ -392,6 +392,18 @@ PLASMIC.registerComponent(InfiniteScroll, {
       type: "boolean",
       defaultValue: true,
       description: "Tạm dừng băng chuyền khi rê chuột vào",
+    },
+direction: {
+      type: "choice",
+      options: ["left", "right"],
+      defaultValue: "left",
+      description: "Hướng chạy của băng chuyền",
+    },
+    // 👇 Thêm dòng này để chỉnh số lượng bản sao trên Plasmic
+    repeatCount: {
+      type: "number",
+      defaultValue: 4,
+      description: "Số lần nhân bản nội dung (Tăng lên nếu nội dung quá ngắn)",
     }
   },
   importPath: "./components/InfiniteScroll",
