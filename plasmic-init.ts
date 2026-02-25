@@ -37,6 +37,7 @@ import { ScrollDetector } from './components/ScrollDetector';
 import { HoverController } from './components/HoverController';
 import { HackerText } from './components/HackerText';
 import { HoverLogoCard } from './components/HoverLogoCard'; // Thêm dòng import này ở đầu file
+import { InViewDetector } from './components/InViewDetector';
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -321,4 +322,28 @@ PLASMIC.registerComponent(HoverLogoCard, {
     }
   },
   importPath: "./components/HoverLogoCard",
+});
+
+PLASMIC.registerComponent(InViewDetector, {
+  name: "InViewDetector",
+  props: {
+    children: {
+      type: "slot",
+      defaultValue: {
+        type: "text",
+        value: "Kéo thả phần tử cần chạy hiệu ứng vào đây",
+      },
+    },
+    threshold: {
+      type: "number",
+      defaultValue: 0.2, // 0.2 = 20%
+      description: "Độ hiển thị để kích hoạt (0 = vừa ló ra, 1 = thấy toàn bộ)",
+    },
+    triggerOnce: {
+      type: "boolean",
+      defaultValue: false,
+      description: "Bật nút này nếu muốn hiệu ứng chỉ chạy 1 lần duy nhất",
+    }
+  },
+  importPath: "./components/InViewDetector",
 });
