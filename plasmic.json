@@ -1408,6 +1408,16 @@
           "id": "2WxnB5zdkiqv",
           "name": "Icon2Icon",
           "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__Icon2.tsx"
+        },
+        {
+          "id": "lj3T0oK_HiQ7",
+          "name": "FrameSvgIcon",
+          "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__FrameSvg.tsx"
+        },
+        {
+          "id": "ZjisMCZ39fRq",
+          "name": "FrameSvg2Icon",
+          "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__FrameSvg2.tsx"
         }
       ],
       "images": [
@@ -2300,6 +2310,12 @@
           "name": "CustomCursorWrapper",
           "displayName": "CustomCursorWrapper",
           "componentImportPath": "./components/CustomCursorWrapper"
+        },
+        {
+          "id": "eG3ecyFTzV8U",
+          "name": "InfiniteScroll",
+          "displayName": "InfiniteScroll",
+          "componentImportPath": "./components/InfiniteScroll"
         }
       ],
       "customFunctions": []

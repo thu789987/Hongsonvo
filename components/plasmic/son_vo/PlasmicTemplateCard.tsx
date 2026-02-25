@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import { CustomCursorWrapper } from "../../CustomCursorWrapper"; // plasmic-import: GFDn8mn_QNHr/codeComponent
+import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/styleTokensProvider
 
@@ -67,6 +68,8 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicTemplateCard.module.css"; // plasmic-import: u1Kyfwr4MSZG/css
+
+import FrameSvg2Icon from "./icons/PlasmicIcon__FrameSvg2"; // plasmic-import: ZjisMCZ39fRq/icon
 
 createPlasmicElementProxy;
 
@@ -199,7 +202,8 @@ function PlasmicTemplateCard__RenderFunc(props: {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         styleTokensClassNames,
-        sty.linkDesktopColored
+        sty.linkDesktopColored,
+        { [sty.linkDesktopColoredhover]: hasVariant($state, "hover", "hover") }
       )}
     >
       <CustomCursorWrapper
@@ -259,25 +263,54 @@ function PlasmicTemplateCard__RenderFunc(props: {
           >
             {renderPlasmicSlot({
               defaultContents: (
-                <PlasmicImg__
-                  alt={""}
-                  className={classNames(sty.img__csb0Z)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"100%"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                    fullWidth: 511,
-                    fullHeight: 596,
-                    aspectRatio: undefined
-                  }}
-                />
-              ),
+                <React.Fragment>
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__csb0Z)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"100%"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/son_vo/images/frame20Jpg.jpg",
+                      fullWidth: 511,
+                      fullHeight: 596,
+                      aspectRatio: undefined
+                    }}
+                  />
 
+                  <InfiniteScroll
+                    className={classNames(
+                      "__wab_instance",
+                      sty.infiniteScroll___21D8I
+                    )}
+                    gap={20}
+                    pauseOnHover={false}
+                    speed={20}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__xLvEu)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__egA7Z
+                        )}
+                      >
+                        {"VIEW PROJECT"}
+                      </div>
+                      <FrameSvg2Icon
+                        className={classNames(projectcss.all, sty.svg__pB6Cm)}
+                        role={"img"}
+                      />
+                    </div>
+                  </InfiniteScroll>
+                </React.Fragment>
+              ),
               value: args.img2
             })}
           </div>

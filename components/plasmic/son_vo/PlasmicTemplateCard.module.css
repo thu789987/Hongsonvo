@@ -117,6 +117,50 @@
 .img__csb0Z > picture > img {
   object-fit: cover;
 }
+.infiniteScroll___21D8I:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: auto;
+  width: 100%;
+  background: var(--token-47ovROB-Xr2C);
+  bottom: 38px;
+  right: 0;
+  min-width: 0;
+}
+.freeBox__xLvEu {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  background: var(--token-47ovROB-Xr2C);
+  column-gap: 8px;
+  min-width: 0;
+  padding: 4px;
+}
+.text__egA7Z {
+  animation: none;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: #00000080;
+  font-size: 16px;
+  min-width: 0;
+}
+.svg__pB6Cm {
+  animation: none;
+  object-fit: cover;
+  max-width: 100%;
+  color: #00000080;
+  height: 1em;
+}
 .bottom {
   background: none;
   height: auto;
