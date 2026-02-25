@@ -1184,6 +1184,19 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/my-journey"
+        },
+        {
+          "id": "dKZrPBt4B-lj",
+          "name": "LineAnimation",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicLineAnimation.tsx",
+          "importSpec": {
+            "modulePath": "LineAnimation.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicLineAnimation.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -2123,6 +2136,31 @@
           "id": "dvp0dmK6MLHB",
           "name": "B0jTHcNdveEJ3eGs6T0jbufJGdQ.avif",
           "filePath": "../public/plasmic/son_vo/images/b0JTHcNdveEj3EGs6T0JbufJGdQAvif.avif"
+        },
+        {
+          "id": "YfcMV1UsderB",
+          "name": "keyframe.avif",
+          "filePath": "../public/plasmic/son_vo/images/keyframeAvif.avif"
+        },
+        {
+          "id": "VkFKbYg5GzsP",
+          "name": "interation Design.avif",
+          "filePath": "../public/plasmic/son_vo/images/interationDesignAvif.avif"
+        },
+        {
+          "id": "dUTRO0K_W2ZC",
+          "name": "vsBPhK6mh8DDLIFPJuu7vDEw6I8.avif",
+          "filePath": "../public/plasmic/son_vo/images/vsBPhK6Mh8DdlifpJuu7VDEw6I8Avif.avif"
+        },
+        {
+          "id": "_UeSNCiIvIB-",
+          "name": "coursera.avif",
+          "filePath": "../public/plasmic/son_vo/images/courseraAvif.avif"
+        },
+        {
+          "id": "RXUG59tCO0y1",
+          "name": "udemy.avif",
+          "filePath": "../public/plasmic/son_vo/images/udemyAvif.avif"
         }
       ],
       "indirect": false,
