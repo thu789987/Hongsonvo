@@ -99,6 +99,10 @@
 .link__fvRmQ {
   display: flex;
 }
+.linkactivePage_myJourney__fvRmQtmLyG {
+  justify-content: flex-start;
+  align-items: center;
+}
 .linkactivePage_works__fvRmQoqHx2 {
   justify-content: flex-start;
   align-items: center;
@@ -114,7 +118,7 @@
   padding: 0px;
 }
 .freeBoxactivePage_myJourney__dfhMwTmLyG {
-  display: block;
+  display: none;
 }
 .freeBoxactivePage_works__dfhMwOqHx2 {
   display: block;

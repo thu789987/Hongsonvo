@@ -280,6 +280,11 @@ function PlasmicNewMenu__RenderFunc(props: {
               projectcss.a,
               sty.link__fvRmQ,
               {
+                [sty.linkactivePage_myJourney__fvRmQtmLyG]: hasVariant(
+                  $state,
+                  "activePage",
+                  "myJourney"
+                ),
                 [sty.linkactivePage_works__fvRmQoqHx2]: hasVariant(
                   $state,
                   "activePage",
@@ -288,6 +293,7 @@ function PlasmicNewMenu__RenderFunc(props: {
               }
             )}
             component={Link}
+            href={`/new-page`}
             legacyBehavior={false}
             platform={"nextjs"}
           >
