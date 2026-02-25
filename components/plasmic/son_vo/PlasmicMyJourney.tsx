@@ -142,6 +142,7 @@ export const PlasmicMyJourney__ArgProps = new Array<ArgPropType>();
 export type PlasmicMyJourney__OverridesType = {
   root?: Flex__<"div">;
   smoothScroll?: Flex__<typeof SmoothScroll>;
+  scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
   tickerHeader?: Flex__<typeof TickerHeader>;
   headerHeroSection?: Flex__<"div">;
@@ -369,10 +370,9 @@ function PlasmicMyJourney__RenderFunc(props: {
                 />
               </div>
               <ScrollDetector
-                className={classNames(
-                  "__wab_instance",
-                  sty.scrollDetector__l9Y5X
-                )}
+                data-plasmic-name={"scrollDetector"}
+                data-plasmic-override={overrides.scrollDetector}
+                className={classNames("__wab_instance", sty.scrollDetector)}
                 threshold={50}
               >
                 <DataCtxReader__>
@@ -1615,42 +1615,28 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                             </div>
                           </RevealOnScroll>
-                          <ScrollDetector
+                          <LineAnimation
+                            data-plasmic-name={"lineAnimation"}
+                            data-plasmic-override={overrides.lineAnimation}
                             className={classNames(
                               "__wab_instance",
-                              sty.scrollDetector__fF9Rs
+                              sty.lineAnimation
                             )}
-                            threshold={50}
-                          >
-                            <DataCtxReader__>
-                              {$ctx => (
-                                <LineAnimation
-                                  data-plasmic-name={"lineAnimation"}
-                                  data-plasmic-override={
-                                    overrides.lineAnimation
-                                  }
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.lineAnimation
-                                  )}
-                                  scrolledState={(() => {
-                                    try {
-                                      return $ctx.scrollData.isScrolled;
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return [];
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                />
-                              )}
-                            </DataCtxReader__>
-                          </ScrollDetector>
+                            inViewData={(() => {
+                              try {
+                                return $ctx.inViewData.isInView;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return [];
+                                }
+                                throw e;
+                              }
+                            })()}
+                          />
+
                           <RevealOnScroll
                             className={classNames(
                               "__wab_instance",
@@ -3356,6 +3342,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "smoothScroll",
+    "scrollDetector",
     "newMenu",
     "tickerHeader",
     "headerHeroSection",
@@ -3462,6 +3449,7 @@ const PlasmicDescendants = {
   ],
   smoothScroll: [
     "smoothScroll",
+    "scrollDetector",
     "newMenu",
     "tickerHeader",
     "headerHeroSection",
@@ -3566,6 +3554,7 @@ const PlasmicDescendants = {
     "service55",
     "section"
   ],
+  scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
   tickerHeader: ["tickerHeader"],
   headerHeroSection: [
@@ -4019,6 +4008,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   smoothScroll: typeof SmoothScroll;
+  scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
   tickerHeader: typeof TickerHeader;
   headerHeroSection: "div";
@@ -4212,6 +4202,7 @@ export const PlasmicMyJourney = Object.assign(
   {
     // Helper components rendering sub-elements
     smoothScroll: makeNodeComponent("smoothScroll"),
+    scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
     tickerHeader: makeNodeComponent("tickerHeader"),
     headerHeroSection: makeNodeComponent("headerHeroSection"),

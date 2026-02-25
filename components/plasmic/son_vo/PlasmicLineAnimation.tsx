@@ -70,14 +70,14 @@ import sty from "./PlasmicLineAnimation.module.css"; // plasmic-import: dKZrPBt4
 createPlasmicElementProxy;
 
 export type PlasmicLineAnimation__VariantMembers = {
-  scrolledState: "scrolledState";
+  inViewData: "inViewData";
 };
 export type PlasmicLineAnimation__VariantsArgs = {
-  scrolledState?: SingleBooleanChoiceArg<"scrolledState">;
+  inViewData?: SingleBooleanChoiceArg<"inViewData">;
 };
 type VariantPropType = keyof PlasmicLineAnimation__VariantsArgs;
 export const PlasmicLineAnimation__VariantProps = new Array<VariantPropType>(
-  "scrolledState"
+  "inViewData"
 );
 
 export type PlasmicLineAnimation__ArgsType = {};
@@ -90,7 +90,7 @@ export type PlasmicLineAnimation__OverridesType = {
 };
 
 export interface DefaultLineAnimationProps {
-  scrolledState?: SingleBooleanChoiceArg<"scrolledState">;
+  inViewData?: SingleBooleanChoiceArg<"inViewData">;
   className?: string;
 }
 
@@ -138,26 +138,25 @@ function PlasmicLineAnimation__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "scrolledState",
+        path: "inViewData",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
-          $props.scrolledState
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.inViewData
       },
       {
-        path: "scrolled",
+        path: "isInView",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
           (() => {
             try {
-              return $ctx.scrollData.isScrolled;
+              return $ctx.inViewData.isInView;
             } catch (e) {
               if (
                 e instanceof TypeError ||
                 e?.plasmicType === "PlasmicUndefinedDataError"
               ) {
-                return true;
+                return false;
               }
               throw e;
             }
@@ -190,11 +189,7 @@ function PlasmicLineAnimation__RenderFunc(props: {
         styleTokensClassNames,
         sty.divede,
         {
-          [sty.divedescrolledState]: hasVariant(
-            $state,
-            "scrolledState",
-            "scrolledState"
-          )
+          [sty.divedeinViewData]: hasVariant($state, "inViewData", "inViewData")
         }
       )}
     >
@@ -202,10 +197,10 @@ function PlasmicLineAnimation__RenderFunc(props: {
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
         className={classNames(projectcss.all, sty.freeBox, {
-          [sty.freeBoxscrolledState]: hasVariant(
+          [sty.freeBoxinViewData]: hasVariant(
             $state,
-            "scrolledState",
-            "scrolledState"
+            "inViewData",
+            "inViewData"
           )
         })}
       />

@@ -51,7 +51,7 @@
   min-width: 0;
   min-height: 0;
 }
-.scrollDetector__l9Y5X:global(.__wab_instance) {
+.scrollDetector:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   object-fit: cover;
@@ -1646,11 +1646,6 @@
   color: #ffffff;
   position: relative;
   text-align: left;
-}
-.scrollDetector__fF9Rs:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-  z-index: 0;
 }
 .lineAnimation:global(.__wab_instance) {
   position: relative;

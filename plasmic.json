@@ -2259,6 +2259,12 @@
           "name": "HoverLogoCard",
           "displayName": "HoverLogoCard",
           "componentImportPath": "./components/HoverLogoCard"
+        },
+        {
+          "id": "lCC6wn00QyfE",
+          "name": "InViewDetector",
+          "displayName": "InViewDetector",
+          "componentImportPath": "./components/InViewDetector"
         }
       ],
       "customFunctions": []
