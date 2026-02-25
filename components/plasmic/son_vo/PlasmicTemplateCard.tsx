@@ -70,10 +70,16 @@ import sty from "./PlasmicTemplateCard.module.css"; // plasmic-import: u1Kyfwr4M
 
 createPlasmicElementProxy;
 
-export type PlasmicTemplateCard__VariantMembers = {};
-export type PlasmicTemplateCard__VariantsArgs = {};
+export type PlasmicTemplateCard__VariantMembers = {
+  hover: "hover";
+};
+export type PlasmicTemplateCard__VariantsArgs = {
+  hover?: SingleBooleanChoiceArg<"hover">;
+};
 type VariantPropType = keyof PlasmicTemplateCard__VariantsArgs;
-export const PlasmicTemplateCard__VariantProps = new Array<VariantPropType>();
+export const PlasmicTemplateCard__VariantProps = new Array<VariantPropType>(
+  "hover"
+);
 
 export type PlasmicTemplateCard__ArgsType = {
   img2?: React.ReactNode;
@@ -109,6 +115,7 @@ export interface DefaultTemplateCardProps {
   img2?: React.ReactNode;
   container9?: React.ReactNode;
   softwareContainerSoftware2?: React.ReactNode;
+  hover?: SingleBooleanChoiceArg<"hover">;
   className?: string;
 }
 
@@ -160,6 +167,12 @@ function PlasmicTemplateCard__RenderFunc(props: {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
+      },
+      {
+        path: "hover",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.hover
       }
     ],
     [$props, $ctx, $refs]
@@ -192,8 +205,10 @@ function PlasmicTemplateCard__RenderFunc(props: {
       <CustomCursorWrapper
         data-plasmic-name={"customCursorWrapper"}
         data-plasmic-override={overrides.customCursorWrapper}
-        className={classNames("__wab_instance", sty.customCursorWrapper)}
-        cursorIcon={"/plasmic/son_vo/images/vectorPng2.png"}
+        className={classNames("__wab_instance", sty.customCursorWrapper, {
+          [sty.customCursorWrapperhover]: hasVariant($state, "hover", "hover")
+        })}
+        cursorIcon={"/plasmic/son_vo/images/vectorPng3.png"}
       >
         <div
           data-plasmic-name={"image"}
@@ -238,7 +253,9 @@ function PlasmicTemplateCard__RenderFunc(props: {
           <div
             data-plasmic-name={"overlay2"}
             data-plasmic-override={overrides.overlay2}
-            className={classNames(projectcss.all, sty.overlay2)}
+            className={classNames(projectcss.all, sty.overlay2, {
+              [sty.overlay2hover]: hasVariant($state, "hover", "hover")
+            })}
           >
             {renderPlasmicSlot({
               defaultContents: (
