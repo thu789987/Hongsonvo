@@ -1185,7 +1185,8 @@ function PlasmicWorks__RenderFunc(props: {
                     data-plasmic-name={"patternGrid"}
                     data-plasmic-override={overrides.patternGrid}
                     className={classNames("__wab_instance", sty.patternGrid)}
-                    gap={24}
+                    columnGap={16}
+                    rowGap={40}
                   >
                     {(_par =>
                       !_par ? [] : Array.isArray(_par) ? _par : [_par])(

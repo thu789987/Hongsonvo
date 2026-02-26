@@ -665,20 +665,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   </RevealOnScroll>
                 </div>
               </div>
-              <RevealOnScroll
-                blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll__bPUy8
-                )}
-                delay={0.1}
-                duration={1.6}
-                yOffset={50}
+              <div
+                data-plasmic-name={"sectionCards2"}
+                data-plasmic-override={overrides.sectionCards2}
+                className={classNames(projectcss.all, sty.sectionCards2)}
               >
-                <div
-                  data-plasmic-name={"sectionCards2"}
-                  data-plasmic-override={overrides.sectionCards2}
-                  className={classNames(projectcss.all, sty.sectionCards2)}
+                <RevealOnScroll
+                  blurAmount={5}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll__bPUy8
+                  )}
+                  delay={0.1}
+                  duration={1.6}
+                  yOffset={50}
                 >
                   <div
                     data-plasmic-name={"left"}
@@ -718,6 +718,17 @@ function PlasmicHomepage__RenderFunc(props: {
                       </div>
                     </div>
                   </div>
+                </RevealOnScroll>
+                <RevealOnScroll
+                  blurAmount={5}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll___8Nx4X
+                  )}
+                  delay={0.1}
+                  duration={1.6}
+                  yOffset={50}
+                >
                   <div
                     data-plasmic-name={"left2"}
                     data-plasmic-override={overrides.left2}
@@ -1111,8 +1122,8 @@ function PlasmicHomepage__RenderFunc(props: {
                       </div>
                     </div>
                   </div>
-                </div>
-              </RevealOnScroll>
+                </RevealOnScroll>
+              </div>
               <RevealOnScroll
                 blurAmount={5}
                 className={classNames(
@@ -1895,7 +1906,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-name={"patternGrid"}
                     data-plasmic-override={overrides.patternGrid}
                     className={classNames("__wab_instance", sty.patternGrid)}
-                    gap={24}
+                    columnGap={24}
+                    rowGap={40}
                   >
                     {(_par =>
                       !_par ? [] : Array.isArray(_par) ? _par : [_par])(
@@ -1935,7 +1947,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               throw e;
                             }
                           })()}
-                          duration={0.8}
+                          duration={1.6}
                           key={currentIndex}
                           yOffset={50}
                         >
