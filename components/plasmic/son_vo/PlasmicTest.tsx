@@ -186,16 +186,15 @@ function PlasmicTest__RenderFunc(props: {
           sty.root
         )}
       >
-        <ScrollPlayVideo
-          data-plasmic-name={"scrollPlayVideo"}
-          data-plasmic-override={overrides.scrollPlayVideo}
-          className={classNames("__wab_instance", sty.scrollPlayVideo)}
-          transitionSpeed={8}
-          videoSrc={
-            "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
-          }
-        />
-
+        <div className={classNames(projectcss.all, sty.freeBox___5WsgL)}>
+          <ScrollPlayVideo
+            data-plasmic-name={"scrollPlayVideo"}
+            data-plasmic-override={overrides.scrollPlayVideo}
+            className={classNames("__wab_instance", sty.scrollPlayVideo)}
+            transitionSpeed={8}
+            videoSrc={"https://scrollyvideo.js.org/goldengate.mp4"}
+          />
+        </div>
         <div className={classNames(projectcss.all, sty.freeBox__dt4Zt)}>
           <div className={classNames(projectcss.all, sty.freeBox__b7Teb)}>
             <div className={classNames(projectcss.all, sty.freeBox__or0JW)}>

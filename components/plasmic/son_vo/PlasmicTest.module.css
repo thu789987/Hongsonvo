@@ -21,16 +21,23 @@
 .root > * {
   grid-column: 4;
 }
+.freeBox___5WsgL {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 300vh;
+  max-width: 100%;
+  grid-column-start: 3 !important;
+  grid-column-end: -3 !important;
+  padding: 8px;
+}
 .scrollPlayVideo:global(.__wab_instance) {
-  animation: none;
   max-width: 100%;
   object-fit: cover;
-  z-index: 0;
-  width: 100%;
-  justify-self: auto;
-  height: 3000px;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
+  height: auto;
 }
 .freeBox__dt4Zt {
   animation: none;

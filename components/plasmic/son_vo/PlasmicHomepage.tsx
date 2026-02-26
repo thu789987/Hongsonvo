@@ -341,16 +341,24 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.headerHeroSection2}
                 className={classNames(projectcss.all, sty.headerHeroSection2)}
               >
-                <ScrollPlayVideo
-                  data-plasmic-name={"scrollPlayVideo"}
-                  data-plasmic-override={overrides.scrollPlayVideo}
-                  className={classNames("__wab_instance", sty.scrollPlayVideo)}
-                  transitionSpeed={8}
-                  videoSrc={
-                    "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
-                  }
-                />
+                <div className={classNames(projectcss.all, sty.freeBox__gqa29)}>
+                  <ScrollPlayVideo
+                    data-plasmic-name={"scrollPlayVideo"}
+                    data-plasmic-override={overrides.scrollPlayVideo}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.scrollPlayVideo
+                    )}
+                    transitionSpeed={8}
+                    videoSrc={
+                      "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
+                    }
+                  />
 
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__fjXEg)}
+                  />
+                </div>
                 <div className={classNames(projectcss.all, sty.freeBox__xdgmx)}>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__gYGn)}
@@ -425,112 +433,153 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.headerHeroSection3}
                 className={classNames(projectcss.all, sty.headerHeroSection3)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__ohi62)}>
+                <div className={classNames(projectcss.all, sty.freeBox__hAvRz)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__nU28D)}
+                    className={classNames(projectcss.all, sty.freeBox__ohi62)}
                   >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__pfjH6
-                      )}
-                    >
-                      {"HSV"}
-                    </h1>
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1___4S00K
-                      )}
-                    >
-                      {" [ home ] "}
-                    </h1>
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__qg2Zx
-                      )}
-                    >
-                      {"is the folio of"}
-                    </h1>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__d4ZOf)}
-                  >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__bf2CR
-                      )}
-                    >
-                      {"HONG SON VO "}
-                    </h1>
-                    <PlasmicImg__
-                      alt={""}
-                      className={classNames(sty.img__nV6Js)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"none"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"50px"}
-                      loading={"lazy"}
-                      src={{
-                        src: "/plasmic/son_vo/images/untitled1CopySvg3.svg",
-                        fullWidth: 114.28,
-                        fullHeight: 128.11,
-                        aspectRatio: 0.892046
-                      }}
-                    />
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__gagyi)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__qm77O)}
-                  >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__svsYs
-                      )}
-                    >
-                      {"UI/UX DESIGNER"}
-                    </h1>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__ltPzr)}
+                      className={classNames(projectcss.all, sty.freeBox__nU28D)}
                     >
                       <h1
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
                           projectcss.__wab_text,
-                          sty.h1__q37Zf
+                          sty.h1__pfjH6
                         )}
                       >
-                        {"and  "}
+                        {"HSV"}
                       </h1>
                       <h1
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
                           projectcss.__wab_text,
-                          sty.h1__c5Rym
+                          sty.h1___4S00K
                         )}
                       >
-                        {"VISUAL DESIGNER"}
+                        {" [ home ] "}
+                      </h1>
+                      <h1
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h1,
+                          projectcss.__wab_text,
+                          sty.h1__qg2Zx
+                        )}
+                      >
+                        {"is the folio of"}
                       </h1>
                     </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__d4ZOf)}
+                    >
+                      <h1
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h1,
+                          projectcss.__wab_text,
+                          sty.h1__bf2CR
+                        )}
+                      >
+                        {"HONG SON VO "}
+                      </h1>
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__nV6Js)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"50px"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/son_vo/images/untitled1CopySvg3.svg",
+                          fullWidth: 114.28,
+                          fullHeight: 128.11,
+                          aspectRatio: 0.892046
+                        }}
+                      />
+                    </div>
                   </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__gagyi)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__qm77O)}
+                    >
+                      <h1
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h1,
+                          projectcss.__wab_text,
+                          sty.h1__svsYs
+                        )}
+                      >
+                        {"UI/UX DESIGNER"}
+                      </h1>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__ltPzr
+                        )}
+                      >
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.__wab_text,
+                            sty.h1__q37Zf
+                          )}
+                        >
+                          {"and  "}
+                        </h1>
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.__wab_text,
+                            sty.h1__c5Rym
+                          )}
+                        >
+                          {"VISUAL DESIGNER"}
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__fvdK)}>
+                  <h1
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1__fYqar
+                    )}
+                  >
+                    {"[ nice to meet you ]"}
+                  </h1>
+                  <h1
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1__lAiEk
+                    )}
+                  >
+                    {"[ SCROLL DOWN ]"}
+                  </h1>
+                  <h1
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.__wab_text,
+                      sty.h1__ee6RD
+                    )}
+                  >
+                    {"[ nice to meet you ]"}
+                  </h1>
                 </div>
               </div>
               <RevealOnScroll
