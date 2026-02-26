@@ -40,6 +40,7 @@ import { HoverLogoCard } from './components/HoverLogoCard'; // Thêm dòng impor
 import { RevealWidthOnScroll } from './components/RevealWidthOnScroll';
 import { CustomCursorWrapper } from './components/CustomCursorWrapper'; // Thêm ở đầu file
 import { InfiniteScroll } from './components/InfiniteScroll'; // Thêm ở đầu file
+import { ScrollPlayVideo } from './components/ScrollPlayVideo'; // Thêm ở đầu file
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -407,4 +408,16 @@ direction: {
     }
   },
   importPath: "./components/InfiniteScroll",
+});
+
+PLASMIC.registerComponent(ScrollPlayVideo, {
+  name: "ScrollPlayVideo",
+  props: {
+    videoSrc: {
+      type: "string",
+      defaultValue: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      description: "Đường dẫn file .mp4 của bạn",
+    }
+  },
+  importPath: "./components/ScrollPlayVideo",
 });
