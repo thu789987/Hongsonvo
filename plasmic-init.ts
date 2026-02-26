@@ -224,8 +224,13 @@ PLASMIC.registerComponent(RevealOnScroll, {
       displayName: "Y Distance (px)",
       defaultValue: 50,
       description: "Khoảng cách trồi lên (50 là vừa đẹp)"
-    }
-  },
+    },
+    blurAmount: {
+      type: "number",
+      displayName: "Blur Amount (px)",
+      defaultValue: 5
+  }
+},
   importPath: "./components/RevealOnScroll"
 });
 
