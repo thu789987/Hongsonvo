@@ -67,7 +67,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import { ScrollPlayVideo } from "../../ScrollPlayVideo"; // plasmic-import: nqEdA202CaaA/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
@@ -141,7 +140,6 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  scrollPlayVideo?: Flex__<typeof ScrollPlayVideo>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
@@ -325,16 +323,6 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <ScrollPlayVideo
-            data-plasmic-name={"scrollPlayVideo"}
-            data-plasmic-override={overrides.scrollPlayVideo}
-            className={classNames("__wab_instance", sty.scrollPlayVideo)}
-            scrollHeight={"100vh"}
-            videoSrc={
-              "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
-            }
-          />
-
           <SmoothScroll
             data-plasmic-name={"smoothScroll"}
             data-plasmic-override={overrides.smoothScroll}
@@ -2641,7 +2629,6 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "scrollPlayVideo",
     "smoothScroll",
     "scrollDetector",
     "newMenu",
@@ -2716,7 +2703,6 @@ const PlasmicDescendants = {
     "service55",
     "section"
   ],
-  scrollPlayVideo: ["scrollPlayVideo"],
   smoothScroll: [
     "smoothScroll",
     "scrollDetector",
@@ -3070,7 +3056,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  scrollPlayVideo: typeof ScrollPlayVideo;
   smoothScroll: typeof SmoothScroll;
   scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
@@ -3233,7 +3218,6 @@ export const PlasmicHomepage = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
-    scrollPlayVideo: makeNodeComponent("scrollPlayVideo"),
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
