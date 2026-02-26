@@ -405,8 +405,13 @@ direction: {
       defaultValue: "left",
       description: "Hướng chạy của băng chuyền",
     },
+showFade: {
+      type: "boolean",
+      defaultValue: true,
+      description: "Làm mờ dần 2 đầu băng chuyền giúp nhìn tự nhiên hơn"
+    },
     // 👇 Thêm dòng này để chỉnh số lượng bản sao trên Plasmic
-    repeatCount: {
+  repeatCount: {
       type: "number",
       defaultValue: 4,
       description: "Số lần nhân bản nội dung (Tăng lên nếu nội dung quá ngắn)",

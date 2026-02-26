@@ -7,7 +7,8 @@ interface InfiniteScrollProps {
   pauseOnHover?: boolean; 
   gap?: number;
   direction?: "left" | "right";
-  repeatCount?: number; // 👇 Thêm biến số lượng nhân bản
+  repeatCount?: number;
+  showFade?: boolean; // 👇 Thêm option bật/tắt mờ 2 bên
 }
 
 export function InfiniteScroll({ 
@@ -17,17 +18,23 @@ export function InfiniteScroll({
   pauseOnHover = true,
   gap = 20,
   direction = "left",
-  repeatCount = 4 // Mặc định nhân lên 4 lần cho chắc ăn
+  repeatCount = 4,
+  showFade = true // Mặc định là có mờ cho đẹp
 }: InfiniteScrollProps) {
   
   const animationName = direction === "right" ? "infinite-scroll-right" : "infinite-scroll-left";
 
-  // 👇 Phép thuật nhân bản: Tạo ra một mảng chứa N lần children của bạn
   const repeatedContent = Array.from({ length: repeatCount }).map((_, index) => (
     <React.Fragment key={index}>
       {children}
     </React.Fragment>
   ));
+
+  // 👇 Tạo style cho hiệu ứng mờ bằng Linear Gradient
+  const fadeStyle: React.CSSProperties = showFade ? {
+    WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
+    maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
+  } : {};
 
   return (
     <div 
@@ -36,7 +43,8 @@ export function InfiniteScroll({
         overflow: 'hidden', 
         display: 'flex', 
         width: '100%',
-        position: 'relative'
+        position: 'relative',
+        ...fadeStyle // Áp dụng hiệu ứng mờ vào đây
       }}
     >
       <style>{`
@@ -67,12 +75,9 @@ export function InfiniteScroll({
       `}</style>
 
       <div className="scroll-track">
-        {/* Nhóm 1: Chứa N bản sao */}
         <div className="scroll-item">
           {repeatedContent}
         </div>
-        
-        {/* Nhóm 2: Chứa N bản sao (Để nối đuôi mượt mà) */}
         <div className="scroll-item" aria-hidden="true">
           {repeatedContent}
         </div>
