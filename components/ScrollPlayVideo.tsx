@@ -66,9 +66,10 @@ export const ScrollPlayVideo = ({
   }, [isScriptLoaded, videoSrc, transitionSpeed]);
 
   return (
-    <div className={className} style={{ width: '100%', position: 'relative' }}>
-      {/* Container rỗng cho thư viện chèn Video vào */}
-      <div ref={containerRef} style={{ width: '100%', height: '100vh' }}></div>
+    // 👇 Thẻ cha: Chỉ giữ lại className do Plasmic truyền vào, không dùng style cứng nữa
+    <div className={className}>
+      {/* 👇 Thẻ con: Kích thước 100% để tự động khớp với chiều cao/rộng bạn set ở thẻ cha trên Plasmic */}
+      <div ref={containerRef} style={{ width: '100%', height: '100%' }}></div>
     </div>
   );
 };
