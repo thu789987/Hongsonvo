@@ -313,6 +313,10 @@
   min-width: 0;
   padding: 0px;
 }
+.revealOnScroll__eR2Yt:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
 .freeBox__nU28D {
   display: flex;
   flex-direction: row;
@@ -357,6 +361,10 @@
   .h1__qg2Zx {
     max-width: 800px;
   }
+}
+.revealOnScroll__pCnke:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
 }
 .freeBox__d4ZOf {
   display: flex;
@@ -412,6 +420,10 @@
   align-items: flex-start;
   padding: 0px;
 }
+.revealOnScroll__u4Nlw:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
 .h1__svsYs {
   text-align: left;
   color: var(--token-VsMZPNxcE2dF);
@@ -421,6 +433,10 @@
   .h1__svsYs {
     max-width: 800px;
   }
+}
+.revealOnScroll__rpbiA:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
 }
 .freeBox__ltPzr {
   display: flex;
@@ -470,6 +486,10 @@
   min-width: 0;
   padding: 0px;
 }
+.revealOnScroll___6XPuD:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
 .h1__fYqar {
   text-align: left;
   color: var(--token-VsMZPNxcE2dF);
@@ -482,6 +502,10 @@
     max-width: 800px;
   }
 }
+.revealOnScroll__gszeS:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
 .h1__lAiEk {
   text-align: left;
   color: var(--token-VsMZPNxcE2dF);
@@ -493,6 +517,10 @@
   .h1__lAiEk {
     max-width: 800px;
   }
+}
+.revealOnScroll___0NtTu:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
 }
 .h1__ee6RD {
   text-align: left;
@@ -1296,23 +1324,12 @@
   align-items: center;
   justify-content: center;
   max-width: none;
-  z-index: 3;
+  z-index: 10;
   min-width: 0;
   padding: 130px 0px 110px;
 }
 .container49 {
-  width: 100%;
-  height: auto;
-  display: flex;
   position: relative;
-  flex-direction: column;
-  row-gap: 49.9900016784668px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 1800px;
-  padding-left: 12px;
-  padding-right: 12px;
-  min-width: 0;
 }
 .top5 {
   height: auto;
@@ -2309,7 +2326,11 @@
 }
 .link__zpuve {
   display: flex;
-  pointer-events: none;
+  pointer-events: auto;
+  transition-property: all;
+  transition-duration: 1s;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
 }
 .htmlVideo4:global(.__wab_instance) {
   width: 100%;

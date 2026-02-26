@@ -437,71 +437,99 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__ohi62)}
                   >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__nU28D)}
+                    <RevealOnScroll
+                      blurAmount={5}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.revealOnScroll__eR2Yt
+                      )}
+                      delay={0}
+                      duration={0.8}
+                      yOffset={50}
                     >
-                      <h1
+                      <div
                         className={classNames(
                           projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1__pfjH6
+                          sty.freeBox__nU28D
                         )}
                       >
-                        {"HSV"}
-                      </h1>
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1___4S00K
-                        )}
-                      >
-                        {" [ home ] "}
-                      </h1>
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1__qg2Zx
-                        )}
-                      >
-                        {"is the folio of"}
-                      </h1>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__d4ZOf)}
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.__wab_text,
+                            sty.h1__pfjH6
+                          )}
+                        >
+                          {"HSV"}
+                        </h1>
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.__wab_text,
+                            sty.h1___4S00K
+                          )}
+                        >
+                          {" [ home ] "}
+                        </h1>
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.__wab_text,
+                            sty.h1__qg2Zx
+                          )}
+                        >
+                          {"is the folio of"}
+                        </h1>
+                      </div>
+                    </RevealOnScroll>
+                    <RevealOnScroll
+                      blurAmount={5}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.revealOnScroll__pCnke
+                      )}
+                      delay={0}
+                      duration={0.8}
+                      yOffset={50}
                     >
-                      <h1
+                      <div
                         className={classNames(
                           projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1__bf2CR
+                          sty.freeBox__d4ZOf
                         )}
                       >
-                        {"HONG SON VO "}
-                      </h1>
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__nV6Js)}
-                        displayHeight={"auto"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"50px"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/untitled1CopySvg3.svg",
-                          fullWidth: 114.28,
-                          fullHeight: 128.11,
-                          aspectRatio: 0.892046
-                        }}
-                      />
-                    </div>
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.__wab_text,
+                            sty.h1__bf2CR
+                          )}
+                        >
+                          {"HONG SON VO "}
+                        </h1>
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__nV6Js)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"50px"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/untitled1CopySvg3.svg",
+                            fullWidth: 114.28,
+                            fullHeight: 128.11,
+                            aspectRatio: 0.892046
+                          }}
+                        />
+                      </div>
+                    </RevealOnScroll>
                   </div>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__gagyi)}
@@ -509,80 +537,136 @@ function PlasmicHomepage__RenderFunc(props: {
                     <div
                       className={classNames(projectcss.all, sty.freeBox__qm77O)}
                     >
-                      <h1
+                      <RevealOnScroll
+                        blurAmount={5}
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1__svsYs
+                          "__wab_instance",
+                          sty.revealOnScroll__u4Nlw
                         )}
-                      >
-                        {"UI/UX DESIGNER"}
-                      </h1>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__ltPzr
-                        )}
+                        delay={0}
+                        duration={0.8}
+                        yOffset={50}
                       >
                         <h1
                           className={classNames(
                             projectcss.all,
                             projectcss.h1,
                             projectcss.__wab_text,
-                            sty.h1__q37Zf
+                            sty.h1__svsYs
                           )}
                         >
-                          {"and  "}
+                          {"UI/UX DESIGNER"}
                         </h1>
-                        <h1
+                      </RevealOnScroll>
+                      <RevealOnScroll
+                        blurAmount={5}
+                        className={classNames(
+                          "__wab_instance",
+                          sty.revealOnScroll__rpbiA
+                        )}
+                        delay={0}
+                        duration={0.8}
+                        yOffset={50}
+                      >
+                        <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.h1,
-                            projectcss.__wab_text,
-                            sty.h1__c5Rym
+                            sty.freeBox__ltPzr
                           )}
                         >
-                          {"VISUAL DESIGNER"}
-                        </h1>
-                      </div>
+                          <h1
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.h1,
+                              projectcss.__wab_text,
+                              sty.h1__q37Zf
+                            )}
+                          >
+                            {"and  "}
+                          </h1>
+                          <h1
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.h1,
+                              projectcss.__wab_text,
+                              sty.h1__c5Rym
+                            )}
+                          >
+                            {"VISUAL DESIGNER"}
+                          </h1>
+                        </div>
+                      </RevealOnScroll>
                     </div>
                   </div>
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__fvdK)}>
-                  <h1
+                  <RevealOnScroll
+                    blurAmount={5}
                     className={classNames(
-                      projectcss.all,
-                      projectcss.h1,
-                      projectcss.__wab_text,
-                      sty.h1__fYqar
+                      "__wab_instance",
+                      sty.revealOnScroll___6XPuD
                     )}
+                    delay={0}
+                    duration={0.8}
+                    yOffset={50}
                   >
-                    {"[ nice to meet you ]"}
-                  </h1>
-                  <h1
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__fYqar
+                      )}
+                    >
+                      {"[ nice to meet you ]"}
+                    </h1>
+                  </RevealOnScroll>
+                  <RevealOnScroll
+                    blurAmount={5}
                     className={classNames(
-                      projectcss.all,
-                      projectcss.h1,
-                      projectcss.__wab_text,
-                      sty.h1__lAiEk
+                      "__wab_instance",
+                      sty.revealOnScroll__gszeS
                     )}
+                    delay={0}
+                    duration={0.8}
+                    yOffset={50}
                   >
-                    {"[ SCROLL DOWN ]"}
-                  </h1>
-                  <h1
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__lAiEk
+                      )}
+                    >
+                      {"[ SCROLL DOWN ]"}
+                    </h1>
+                  </RevealOnScroll>
+                  <RevealOnScroll
+                    blurAmount={5}
                     className={classNames(
-                      projectcss.all,
-                      projectcss.h1,
-                      projectcss.__wab_text,
-                      sty.h1__ee6RD
+                      "__wab_instance",
+                      sty.revealOnScroll___0NtTu
                     )}
+                    delay={0}
+                    duration={0.8}
+                    yOffset={50}
                   >
-                    {"[ nice to meet you ]"}
-                  </h1>
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__ee6RD
+                      )}
+                    >
+                      {"[ nice to meet you ]"}
+                    </h1>
+                  </RevealOnScroll>
                 </div>
               </div>
               <RevealOnScroll
+                blurAmount={5}
                 className={classNames(
                   "__wab_instance",
                   sty.revealOnScroll__bPUy8
@@ -1030,13 +1114,14 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </RevealOnScroll>
               <RevealOnScroll
+                blurAmount={5}
                 className={classNames(
                   "__wab_instance",
                   sty.revealOnScroll__k04Nv
                 )}
                 delay={0}
-                duration={0.8}
-                yOffset={50}
+                duration={1.6}
+                yOffset={100}
               >
                 <div
                   data-plasmic-name={"sectionCards6"}
@@ -1832,6 +1917,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       const currentIndex = __plasmic_idx_0;
                       return (
                         <RevealOnScroll
+                          blurAmount={5}
                           className={classNames(
                             "__wab_instance",
                             sty.revealOnScroll__dcblC
@@ -2220,6 +2306,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
               <RevealOnScroll
+                blurAmount={5}
                 className={classNames(
                   "__wab_instance",
                   sty.revealOnScroll__dDycC

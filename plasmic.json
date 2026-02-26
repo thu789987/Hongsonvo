@@ -1225,6 +1225,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/test"
+        },
+        {
+          "id": "Vvf9GHp0XqJi",
+          "name": "MyServices",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicMyServices.tsx",
+          "importSpec": {
+            "modulePath": "../pages/my-journey-2.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicMyServices.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/my-journey-2"
         }
       ],
       "icons": [

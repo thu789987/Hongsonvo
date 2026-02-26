@@ -1207,6 +1207,7 @@ function PlasmicWorks__RenderFunc(props: {
                       const currentIndex = __plasmic_idx_0;
                       return (
                         <RevealOnScroll
+                          blurAmount={5}
                           className={classNames(
                             "__wab_instance",
                             sty.revealOnScroll___07YrR
@@ -1595,6 +1596,7 @@ function PlasmicWorks__RenderFunc(props: {
                 </div>
               </div>
               <RevealOnScroll
+                blurAmount={5}
                 className={classNames(
                   "__wab_instance",
                   sty.revealOnScroll__mArFx

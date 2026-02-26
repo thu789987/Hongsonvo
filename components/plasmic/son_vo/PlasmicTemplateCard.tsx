@@ -59,8 +59,6 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import { CustomCursorWrapper } from "../../CustomCursorWrapper"; // plasmic-import: GFDn8mn_QNHr/codeComponent
-import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/styleTokensProvider
 
@@ -68,8 +66,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicTemplateCard.module.css"; // plasmic-import: u1Kyfwr4MSZG/css
-
-import FrameSvg2Icon from "./icons/PlasmicIcon__FrameSvg2"; // plasmic-import: ZjisMCZ39fRq/icon
 
 createPlasmicElementProxy;
 
@@ -98,7 +94,6 @@ export const PlasmicTemplateCard__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicTemplateCard__OverridesType = {
   linkDesktopColored?: Flex__<"div">;
-  customCursorWrapper?: Flex__<typeof CustomCursorWrapper>;
   image?: Flex__<"div">;
   border?: Flex__<"div">;
   screws?: Flex__<"div">;
@@ -206,122 +201,84 @@ function PlasmicTemplateCard__RenderFunc(props: {
         { [sty.linkDesktopColoredhover]: hasVariant($state, "hover", "hover") }
       )}
     >
-      <CustomCursorWrapper
-        data-plasmic-name={"customCursorWrapper"}
-        data-plasmic-override={overrides.customCursorWrapper}
-        className={classNames("__wab_instance", sty.customCursorWrapper, {
-          [sty.customCursorWrapperhover]: hasVariant($state, "hover", "hover")
-        })}
-        cursorIcon={"/plasmic/son_vo/images/vectorPng3.png"}
+      <div
+        data-plasmic-name={"image"}
+        data-plasmic-override={overrides.image}
+        className={classNames(projectcss.all, sty.image)}
       >
         <div
-          data-plasmic-name={"image"}
-          data-plasmic-override={overrides.image}
-          className={classNames(projectcss.all, sty.image)}
+          data-plasmic-name={"border"}
+          data-plasmic-override={overrides.border}
+          className={classNames(projectcss.all, sty.border)}
+        />
+
+        <div
+          data-plasmic-name={"screws"}
+          data-plasmic-override={overrides.screws}
+          className={classNames(projectcss.all, sty.screws)}
         >
           <div
-            data-plasmic-name={"border"}
-            data-plasmic-override={overrides.border}
-            className={classNames(projectcss.all, sty.border)}
+            data-plasmic-name={"_1"}
+            data-plasmic-override={overrides._1}
+            className={classNames(projectcss.all, sty._1)}
           />
 
           <div
-            data-plasmic-name={"screws"}
-            data-plasmic-override={overrides.screws}
-            className={classNames(projectcss.all, sty.screws)}
-          >
-            <div
-              data-plasmic-name={"_1"}
-              data-plasmic-override={overrides._1}
-              className={classNames(projectcss.all, sty._1)}
-            />
+            data-plasmic-name={"_2"}
+            data-plasmic-override={overrides._2}
+            className={classNames(projectcss.all, sty._2)}
+          />
 
-            <div
-              data-plasmic-name={"_2"}
-              data-plasmic-override={overrides._2}
-              className={classNames(projectcss.all, sty._2)}
-            />
-
-            <div
-              data-plasmic-name={"_3"}
-              data-plasmic-override={overrides._3}
-              className={classNames(projectcss.all, sty._3)}
-            />
-
-            <div
-              data-plasmic-name={"_4"}
-              data-plasmic-override={overrides._4}
-              className={classNames(projectcss.all, sty._4)}
-            />
-          </div>
           <div
-            data-plasmic-name={"overlay2"}
-            data-plasmic-override={overrides.overlay2}
-            className={classNames(projectcss.all, sty.overlay2, {
-              [sty.overlay2hover]: hasVariant($state, "hover", "hover")
-            })}
-          >
-            {renderPlasmicSlot({
-              defaultContents: (
-                <React.Fragment>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__csb0Z)}
-                    displayHeight={"auto"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"100%"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                      fullWidth: 511,
-                      fullHeight: 596,
-                      aspectRatio: undefined
-                    }}
-                  />
+            data-plasmic-name={"_3"}
+            data-plasmic-override={overrides._3}
+            className={classNames(projectcss.all, sty._3)}
+          />
 
-                  <InfiniteScroll
-                    className={classNames(
-                      "__wab_instance",
-                      sty.infiniteScroll___21D8I
-                    )}
-                    direction={"left"}
-                    gap={20}
-                    pauseOnHover={false}
-                    repeatCount={4}
-                    speed={20}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__xLvEu)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__egA7Z
-                        )}
-                      >
-                        {"VIEW PROJECT"}
-                      </div>
-                      <FrameSvg2Icon
-                        className={classNames(projectcss.all, sty.svg__pB6Cm)}
-                        role={"img"}
-                      />
-                    </div>
-                  </InfiniteScroll>
-                </React.Fragment>
-              ),
-              value: args.img2
-            })}
-          </div>
+          <div
+            data-plasmic-name={"_4"}
+            data-plasmic-override={overrides._4}
+            className={classNames(projectcss.all, sty._4)}
+          />
         </div>
-      </CustomCursorWrapper>
+        <div
+          data-plasmic-name={"overlay2"}
+          data-plasmic-override={overrides.overlay2}
+          className={classNames(projectcss.all, sty.overlay2, {
+            [sty.overlay2hover]: hasVariant($state, "hover", "hover")
+          })}
+        >
+          {renderPlasmicSlot({
+            defaultContents: (
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__csb0Z)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/son_vo/images/frame20Jpg.jpg",
+                  fullWidth: 511,
+                  fullHeight: 596,
+                  aspectRatio: undefined
+                }}
+              />
+            ),
+
+            value: args.img2
+          })}
+        </div>
+      </div>
       <div
         data-plasmic-name={"bottom"}
         data-plasmic-override={overrides.bottom}
-        className={classNames(projectcss.all, sty.bottom)}
+        className={classNames(projectcss.all, sty.bottom, {
+          [sty.bottomhover]: hasVariant($state, "hover", "hover")
+        })}
       >
         <div
           data-plasmic-name={"top2"}
@@ -444,7 +401,6 @@ function PlasmicTemplateCard__RenderFunc(props: {
 const PlasmicDescendants = {
   linkDesktopColored: [
     "linkDesktopColored",
-    "customCursorWrapper",
     "image",
     "border",
     "screws",
@@ -458,17 +414,6 @@ const PlasmicDescendants = {
     "templateName",
     "container8",
     "container10"
-  ],
-  customCursorWrapper: [
-    "customCursorWrapper",
-    "image",
-    "border",
-    "screws",
-    "_1",
-    "_2",
-    "_3",
-    "_4",
-    "overlay2"
   ],
   image: ["image", "border", "screws", "_1", "_2", "_3", "_4", "overlay2"],
   border: ["border"],
@@ -489,7 +434,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   linkDesktopColored: "div";
-  customCursorWrapper: typeof CustomCursorWrapper;
   image: "div";
   border: "div";
   screws: "div";
@@ -567,7 +511,6 @@ export const PlasmicTemplateCard = Object.assign(
   makeNodeComponent("linkDesktopColored"),
   {
     // Helper components rendering sub-elements
-    customCursorWrapper: makeNodeComponent("customCursorWrapper"),
     image: makeNodeComponent("image"),
     border: makeNodeComponent("border"),
     screws: makeNodeComponent("screws"),
