@@ -115,16 +115,22 @@ PLASMIC.registerComponent(HoverReveal, {
 });
 
 PLASMIC.registerComponent(PatternGrid, {
-  name: 'PatternGrid',
+  name: "PatternGrid",
   props: {
-    children: 'slot',
-    gap: {
-      type: 'number',
+    children: "slot",
+    // 👇 Thay thế 'gap' cũ bằng 2 dòng này
+    rowGap: {
+      type: "number",
       defaultValue: 16,
-      displayName: 'Gap (px)'
+      displayName: "Row Gap (Dọc)",
+    },
+    columnGap: {
+      type: "number",
+      defaultValue: 16,
+      displayName: "Column Gap (Ngang)",
     }
   },
-  importPath: "./components/PatternGrid", // 👈 Đã thêm dòng này
+  importPath: "./components/PatternGrid"
 });
 
 PLASMIC.registerComponent(TypingAnimation, {
