@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, MouseEvent } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motion';
 
@@ -13,25 +15,44 @@ export function CustomCursorWrapper({ children, cursorIcon, className }: CustomC
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const springConfig = { damping: 20, stiffness: 300, mass: 0.5 };
+  const springConfig = { damping: 25, stiffness: 350, mass: 0.5 };
   const springX = useSpring(mouseX, springConfig);
   const springY = useSpring(mouseY, springConfig);
 
   const handleMouseMove = (e: MouseEvent) => {
-    // Trừ đi một nửa kích thước icon (80/2 = 40) để tâm icon ngay mũi chuột
-    mouseX.set(e.clientX - 40);
-    mouseY.set(e.clientY - 40);
+    // 👇 CHÌA KHÓA: Nếu đây là lần đầu tiên hover (giá trị đang là 0)
+    // thì cho nó "nhảy vọt" tới vị trí chuột thay vì chạy từ 0 lên.
+    if (mouseX.get() === 0 && mouseY.get() === 0) {
+      mouseX.jump(e.clientX - 40);
+      mouseY.jump(e.clientY - 40);
+    } else {
+      mouseX.set(e.clientX - 40);
+      mouseY.set(e.clientY - 40);
+    }
+  };
+
+  // Khi rời khỏi, reset về 0 để chuẩn bị cho lần hover tiếp theo
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    mouseX.set(0);
+    mouseY.set(0);
+  };
+
+  const handleMouseEnter = (e: MouseEvent) => {
+    setIsHovered(true);
+    // Cập nhật vị trí ngay lập tức khi vừa chạm vào
+    mouseX.jump(e.clientX - 40);
+    mouseY.jump(e.clientY - 40);
   };
 
   return (
     <div 
       className={`custom-cursor-container ${className || ''}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
       style={{ position: 'relative', width: '100%', height: '100%' }}
     >
-      {/* Vũ khí ép tàng hình con chuột mặc định */}
       {isHovered && (
         <style>{`
           .custom-cursor-container,
@@ -59,18 +80,12 @@ export function CustomCursorWrapper({ children, cursorIcon, className }: CustomC
               objectFit: 'contain',
               pointerEvents: 'none',
               zIndex: 9999,
-              
-              // 👇 PHÉP THUẬT ĐẢO MÀU Ở ĐÂY 👇
               mixBlendMode: 'difference',
-              
-              // (Tùy chọn) Nếu icon của bạn có màu sắc và bạn muốn nó thành trắng tinh 
-              // để hiệu ứng Difference hoạt động tốt nhất, hãy mở comment dòng dưới:
-              // filter: 'brightness(0) invert(1)',
             }}
-            initial={{ opacity: 0, scale: 0.2 }}
+            initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.2 }}
-            transition={{ duration: 0.15 }} 
+            exit={{ opacity: 0, scale: 0 }}
+            transition={{ duration: 0.2 }} 
           />
         )}
       </AnimatePresence>
