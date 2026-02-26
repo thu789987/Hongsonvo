@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-// 👇 1. BẮT BUỘC: Trả lại import từ loader-nextjs hoặc react-web
+import React, { useState, useEffect, useMemo } from 'react';
 import { DataProvider } from '@plasmicapp/loader-nextjs'; 
 
 interface ScrollDetectorProps {
@@ -13,32 +12,38 @@ interface ScrollDetectorProps {
 export const ScrollDetector: React.FC<ScrollDetectorProps> = ({ 
   children, 
   threshold = 50,
-  className 
+  className = "" 
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  // 👇 2. Cờ đánh dấu để báo Next.js biết Component đã lên Trình duyệt an toàn
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true); // Bật cờ khi đã ở Client
+    setMounted(true); 
 
     const handleScroll = () => {
-      // Dùng window.scrollY (hoặc document.documentElement.scrollTop để an toàn hơn)
       const currentScrollY = window.scrollY || document.documentElement.scrollTop;
       setIsScrolled(currentScrollY > threshold);
     };
     
     handleScroll(); 
     
-    // Thêm passive: true giúp trình duyệt cuộn mượt hơn và bắt sự kiện tốt hơn
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [threshold]);
 
+  // 🚀 BÍ QUYẾT 1: Đóng gói Data bằng useMemo. 
+  // Chỉ báo cho Plasmic biết khi nào giá trị THỰC SỰ thay đổi.
+  const contextData = useMemo(() => ({
+    isScrolled: mounted ? isScrolled : false
+  }), [mounted, isScrolled]);
+
+  // 🚀 BÍ QUYẾT 2: Tự động gắn thêm class 'is-scrolled' khi cuộn qua threshold.
+  // Đây là lớp bảo vệ cuối cùng, không phụ thuộc vào Context của Plasmic.
+  const wrapperClass = `${className} ${mounted && isScrolled ? 'is-scrolled' : ''}`.trim();
+
   return (
-    <div className={className}>
-      {/* 👇 3. Chỉ truyền giá trị thật khi đã mounted, tránh Next.js SSR bị loạn */}
-      <DataProvider name="scrollData" data={{ isScrolled: mounted ? isScrolled : false }}>
+    <div className={wrapperClass}>
+      <DataProvider name="scrollData" data={contextData}>
         {children}
       </DataProvider>
     </div>
