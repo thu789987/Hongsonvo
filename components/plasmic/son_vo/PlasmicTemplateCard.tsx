@@ -287,8 +287,10 @@ function PlasmicTemplateCard__RenderFunc(props: {
                       "__wab_instance",
                       sty.infiniteScroll___21D8I
                     )}
+                    direction={"left"}
                     gap={20}
                     pauseOnHover={false}
+                    repeatCount={4}
                     speed={20}
                   >
                     <div
