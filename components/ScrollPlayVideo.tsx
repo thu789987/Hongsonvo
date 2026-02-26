@@ -10,7 +10,7 @@ export const ScrollPlayVideo = ({
   videoSrc, 
   className, 
   // Mặc định container dài gấp 3 lần màn hình để có đủ không gian cuộn và tua video
-  scrollHeight = "300vh" 
+  scrollHeight = "500vh" 
 }: ScrollScrubVideoProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
