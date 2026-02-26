@@ -1233,7 +1233,7 @@
           "projectId": "bLa1shfC4noziDsvmxjKJF",
           "renderModuleFilePath": "plasmic/son_vo/PlasmicMyServices.tsx",
           "importSpec": {
-            "modulePath": "../pages/my-journey-2.tsx"
+            "modulePath": "../pages/my-services.tsx"
           },
           "cssFilePath": "plasmic/son_vo/PlasmicMyServices.module.css",
           "scheme": "blackbox",

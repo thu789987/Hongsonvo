@@ -3997,7 +3997,7 @@ export const PlasmicMyServices = Object.assign(
     internalArgProps: PlasmicMyServices__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
-      pagePath: "/my-journey-2",
+      pagePath: "/my-services",
       searchParams: {},
       params: {}
     })
