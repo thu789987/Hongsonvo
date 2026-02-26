@@ -71,8 +71,7 @@ import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcW
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
-import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
-import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
+import { ScrollPlayVideo } from "../../ScrollPlayVideo"; // plasmic-import: nqEdA202CaaA/codeComponent
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
@@ -93,9 +92,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: F5b4pw36Rhyj/css
 
-import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: I6R9tdLXkQer/icon
-import ChevronRightIcon from "./icons/PlasmicIcon__ChevronRight"; // plasmic-import: dlvUo4g-Sy-8/icon
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: XVSFhUeRi9UU/icon
 import Artboard14SvgIcon from "./icons/PlasmicIcon__Artboard14Svg"; // plasmic-import: RNiMy76HG5_X/icon
 
 const emptyProxy: any = new Proxy(() => "", {
@@ -143,34 +139,8 @@ export type PlasmicHomepage__OverridesType = {
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
-  tickerHeader?: Flex__<typeof TickerHeader>;
-  headerHeroSection?: Flex__<"div">;
-  loved?: Flex__<"div">;
-  variant1?: Flex__<"div">;
-  _1?: Flex__<"div">;
-  img?: Flex__<"div">;
-  e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg?: Flex__<"div">;
-  _2?: Flex__<"div">;
-  img2?: Flex__<"div">;
-  tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg?: Flex__<"div">;
-  _3?: Flex__<"div">;
-  img3?: Flex__<"div">;
-  hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg?: Flex__<"div">;
-  _4?: Flex__<"div">;
-  img4?: Flex__<"div">;
-  _069SD4E4Rbd50L3X97XsgTvpcJpg?: Flex__<"div">;
-  _5?: Flex__<"div">;
-  img5?: Flex__<"div">;
-  vk7E0Slt7OvlQa7QVqyREh2TxqcJpg?: Flex__<"div">;
-  ratingDetails?: Flex__<"div">;
-  ratingInfo?: Flex__<"div">;
-  ratingScore?: Flex__<"div">;
-  container?: Flex__<"div">;
-  starsContainer?: Flex__<"div">;
-  svg?: Flex__<"div">;
-  ratingText?: Flex__<"div">;
-  container2?: Flex__<"div">;
   headerHeroSection2?: Flex__<"div">;
+  scrollPlayVideo?: Flex__<typeof ScrollPlayVideo>;
   headerHeroSection3?: Flex__<"div">;
   sectionCards2?: Flex__<"div">;
   left?: Flex__<"div">;
@@ -366,373 +336,21 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 </DataCtxReader__>
               </ScrollDetector>
-              <TickerHeader
-                data-plasmic-name={"tickerHeader"}
-                data-plasmic-override={overrides.tickerHeader}
-                className={classNames("__wab_instance", sty.tickerHeader)}
-              />
-
-              <div
-                data-plasmic-name={"headerHeroSection"}
-                data-plasmic-override={overrides.headerHeroSection}
-                className={classNames(projectcss.all, sty.headerHeroSection)}
-              >
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___3615X)}
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__uRrq)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__gWq2W)}
-                    >
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.__wab_text,
-                          sty.h1__mmhLn
-                        )}
-                      >
-                        {"You don't need\r"}
-                      </h1>
-                    </div>
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__w9HbR
-                      )}
-                    >
-                      {"You need a powerful\r"}
-                    </h1>
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__lZvJn
-                      )}
-                    >
-                      {"\rwebsite template."}
-                    </h1>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__b4U6J)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__kwFjV
-                        )}
-                      >
-                        {
-                          "Launch a stunning website that looks like you hired a top design agency. In days.\r"
-                        }
-                      </div>
-                      <div
-                        data-plasmic-name={"loved"}
-                        data-plasmic-override={overrides.loved}
-                        className={classNames(projectcss.all, sty.loved)}
-                      >
-                        <div
-                          data-plasmic-name={"variant1"}
-                          data-plasmic-override={overrides.variant1}
-                          className={classNames(projectcss.all, sty.variant1)}
-                        >
-                          <div
-                            data-plasmic-name={"_1"}
-                            data-plasmic-override={overrides._1}
-                            className={classNames(projectcss.all, sty._1)}
-                          >
-                            <div
-                              data-plasmic-name={"img"}
-                              data-plasmic-override={overrides.img}
-                              className={classNames(projectcss.all, sty.img)}
-                            >
-                              <div
-                                data-plasmic-name={
-                                  "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"
-                                }
-                                data-plasmic-override={
-                                  overrides.e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg
-                                }
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg
-                                )}
-                              />
-                            </div>
-                          </div>
-                          <div
-                            data-plasmic-name={"_2"}
-                            data-plasmic-override={overrides._2}
-                            className={classNames(projectcss.all, sty._2)}
-                          >
-                            <div
-                              data-plasmic-name={"img2"}
-                              data-plasmic-override={overrides.img2}
-                              className={classNames(projectcss.all, sty.img2)}
-                            >
-                              <div
-                                data-plasmic-name={
-                                  "tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg"
-                                }
-                                data-plasmic-override={
-                                  overrides.tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg
-                                }
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg
-                                )}
-                              />
-                            </div>
-                          </div>
-                          <div
-                            data-plasmic-name={"_3"}
-                            data-plasmic-override={overrides._3}
-                            className={classNames(projectcss.all, sty._3)}
-                          >
-                            <div
-                              data-plasmic-name={"img3"}
-                              data-plasmic-override={overrides.img3}
-                              className={classNames(projectcss.all, sty.img3)}
-                            >
-                              <div
-                                data-plasmic-name={
-                                  "hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg"
-                                }
-                                data-plasmic-override={
-                                  overrides.hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg
-                                }
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg
-                                )}
-                              />
-                            </div>
-                          </div>
-                          <div
-                            data-plasmic-name={"_4"}
-                            data-plasmic-override={overrides._4}
-                            className={classNames(projectcss.all, sty._4)}
-                          >
-                            <div
-                              data-plasmic-name={"img4"}
-                              data-plasmic-override={overrides.img4}
-                              className={classNames(projectcss.all, sty.img4)}
-                            >
-                              <div
-                                data-plasmic-name={
-                                  "_069SD4E4Rbd50L3X97XsgTvpcJpg"
-                                }
-                                data-plasmic-override={
-                                  overrides._069SD4E4Rbd50L3X97XsgTvpcJpg
-                                }
-                                className={classNames(
-                                  projectcss.all,
-                                  sty._069Sd4E4Rbd50L3X97XsgTvpcJpg
-                                )}
-                              />
-                            </div>
-                          </div>
-                          <div
-                            data-plasmic-name={"_5"}
-                            data-plasmic-override={overrides._5}
-                            className={classNames(projectcss.all, sty._5)}
-                          >
-                            <div
-                              data-plasmic-name={"img5"}
-                              data-plasmic-override={overrides.img5}
-                              className={classNames(projectcss.all, sty.img5)}
-                            >
-                              <div
-                                data-plasmic-name={
-                                  "vk7E0Slt7OvlQa7QVqyREh2TxqcJpg"
-                                }
-                                data-plasmic-override={
-                                  overrides.vk7E0Slt7OvlQa7QVqyREh2TxqcJpg
-                                }
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.vk7E0Slt7OvlQa7QVqyREh2TxqcJpg
-                                )}
-                              />
-                            </div>
-                          </div>
-                          <div
-                            data-plasmic-name={"ratingDetails"}
-                            data-plasmic-override={overrides.ratingDetails}
-                            className={classNames(
-                              projectcss.all,
-                              sty.ratingDetails
-                            )}
-                          >
-                            <div
-                              data-plasmic-name={"ratingInfo"}
-                              data-plasmic-override={overrides.ratingInfo}
-                              className={classNames(
-                                projectcss.all,
-                                sty.ratingInfo
-                              )}
-                            >
-                              <div
-                                data-plasmic-name={"ratingScore"}
-                                data-plasmic-override={overrides.ratingScore}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.ratingScore
-                                )}
-                              >
-                                <div
-                                  data-plasmic-name={"container"}
-                                  data-plasmic-override={overrides.container}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.container
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__a6Yxe
-                                    )}
-                                  >
-                                    {"4.9 / 5"}
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                data-plasmic-name={"starsContainer"}
-                                data-plasmic-override={overrides.starsContainer}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.starsContainer
-                                )}
-                              >
-                                <div
-                                  data-plasmic-name={"svg"}
-                                  data-plasmic-override={overrides.svg}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg
-                                  )}
-                                >
-                                  <PlasmicImg__
-                                    alt={""}
-                                    className={classNames(sty.img__jHnJ)}
-                                    displayHeight={"10px"}
-                                    displayMaxHeight={"none"}
-                                    displayMaxWidth={"100%"}
-                                    displayMinHeight={"0"}
-                                    displayMinWidth={"0"}
-                                    displayWidth={"53px"}
-                                    loading={"lazy"}
-                                    src={{
-                                      src: "/plasmic/son_vo/images/svg20128190053524.svg",
-                                      fullWidth: 53,
-                                      fullHeight: 10,
-                                      aspectRatio: undefined
-                                    }}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-plasmic-name={"ratingText"}
-                              data-plasmic-override={overrides.ratingText}
-                              className={classNames(
-                                projectcss.all,
-                                sty.ratingText
-                              )}
-                            >
-                              <div
-                                data-plasmic-name={"container2"}
-                                data-plasmic-override={overrides.container2}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.container2
-                                )}
-                              >
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.text__wfuLh
-                                  )}
-                                >
-                                  {"Loved by 5 833+ creators"}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__ukTa0)}
-                    >
-                      <Button
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__wtE
-                        )}
-                        end={
-                          <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__xZx2
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        iconEnd={true}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__kCaav
-                            )}
-                          >
-                            {"Check Our Templates"}
-                          </div>
-                        }
-                        linkTo={"#"}
-                        size={"extraLarge"}
-                      />
-
-                      <Button
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button__z9MRt
-                        )}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__mCd6B
-                            )}
-                          >
-                            {"Check Our Case Study"}
-                          </div>
-                        }
-                        linkTo={"#"}
-                        size={"extraLarge"}
-                        type={"bordered"}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div
                 data-plasmic-name={"headerHeroSection2"}
                 data-plasmic-override={overrides.headerHeroSection2}
                 className={classNames(projectcss.all, sty.headerHeroSection2)}
               >
+                <ScrollPlayVideo
+                  data-plasmic-name={"scrollPlayVideo"}
+                  data-plasmic-override={overrides.scrollPlayVideo}
+                  className={classNames("__wab_instance", sty.scrollPlayVideo)}
+                  transitionSpeed={8}
+                  videoSrc={
+                    "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
+                  }
+                />
+
                 <div className={classNames(projectcss.all, sty.freeBox__xdgmx)}>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__gYGn)}
@@ -807,10 +425,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.headerHeroSection3}
                 className={classNames(projectcss.all, sty.headerHeroSection3)}
               >
-                <div
-                  className={classNames(projectcss.all, sty.freeBox__fPhNl)}
-                />
-
                 <div className={classNames(projectcss.all, sty.freeBox__ohi62)}>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__nU28D)}
@@ -2632,34 +2246,8 @@ const PlasmicDescendants = {
     "smoothScroll",
     "scrollDetector",
     "newMenu",
-    "tickerHeader",
-    "headerHeroSection",
-    "loved",
-    "variant1",
-    "_1",
-    "img",
-    "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg",
-    "_2",
-    "img2",
-    "tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg",
-    "_3",
-    "img3",
-    "hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg",
-    "_4",
-    "img4",
-    "_069SD4E4Rbd50L3X97XsgTvpcJpg",
-    "_5",
-    "img5",
-    "vk7E0Slt7OvlQa7QVqyREh2TxqcJpg",
-    "ratingDetails",
-    "ratingInfo",
-    "ratingScore",
-    "container",
-    "starsContainer",
-    "svg",
-    "ratingText",
-    "container2",
     "headerHeroSection2",
+    "scrollPlayVideo",
     "headerHeroSection3",
     "sectionCards2",
     "left",
@@ -2707,34 +2295,8 @@ const PlasmicDescendants = {
     "smoothScroll",
     "scrollDetector",
     "newMenu",
-    "tickerHeader",
-    "headerHeroSection",
-    "loved",
-    "variant1",
-    "_1",
-    "img",
-    "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg",
-    "_2",
-    "img2",
-    "tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg",
-    "_3",
-    "img3",
-    "hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg",
-    "_4",
-    "img4",
-    "_069SD4E4Rbd50L3X97XsgTvpcJpg",
-    "_5",
-    "img5",
-    "vk7E0Slt7OvlQa7QVqyREh2TxqcJpg",
-    "ratingDetails",
-    "ratingInfo",
-    "ratingScore",
-    "container",
-    "starsContainer",
-    "svg",
-    "ratingText",
-    "container2",
     "headerHeroSection2",
+    "scrollPlayVideo",
     "headerHeroSection3",
     "sectionCards2",
     "left",
@@ -2780,127 +2342,8 @@ const PlasmicDescendants = {
   ],
   scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
-  tickerHeader: ["tickerHeader"],
-  headerHeroSection: [
-    "headerHeroSection",
-    "loved",
-    "variant1",
-    "_1",
-    "img",
-    "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg",
-    "_2",
-    "img2",
-    "tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg",
-    "_3",
-    "img3",
-    "hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg",
-    "_4",
-    "img4",
-    "_069SD4E4Rbd50L3X97XsgTvpcJpg",
-    "_5",
-    "img5",
-    "vk7E0Slt7OvlQa7QVqyREh2TxqcJpg",
-    "ratingDetails",
-    "ratingInfo",
-    "ratingScore",
-    "container",
-    "starsContainer",
-    "svg",
-    "ratingText",
-    "container2"
-  ],
-  loved: [
-    "loved",
-    "variant1",
-    "_1",
-    "img",
-    "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg",
-    "_2",
-    "img2",
-    "tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg",
-    "_3",
-    "img3",
-    "hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg",
-    "_4",
-    "img4",
-    "_069SD4E4Rbd50L3X97XsgTvpcJpg",
-    "_5",
-    "img5",
-    "vk7E0Slt7OvlQa7QVqyREh2TxqcJpg",
-    "ratingDetails",
-    "ratingInfo",
-    "ratingScore",
-    "container",
-    "starsContainer",
-    "svg",
-    "ratingText",
-    "container2"
-  ],
-  variant1: [
-    "variant1",
-    "_1",
-    "img",
-    "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg",
-    "_2",
-    "img2",
-    "tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg",
-    "_3",
-    "img3",
-    "hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg",
-    "_4",
-    "img4",
-    "_069SD4E4Rbd50L3X97XsgTvpcJpg",
-    "_5",
-    "img5",
-    "vk7E0Slt7OvlQa7QVqyREh2TxqcJpg",
-    "ratingDetails",
-    "ratingInfo",
-    "ratingScore",
-    "container",
-    "starsContainer",
-    "svg",
-    "ratingText",
-    "container2"
-  ],
-  _1: ["_1", "img", "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
-  img: ["img", "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
-  e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg: ["e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
-  _2: ["_2", "img2", "tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg"],
-  img2: ["img2", "tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg"],
-  tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg: ["tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg"],
-  _3: ["_3", "img3", "hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg"],
-  img3: ["img3", "hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg"],
-  hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg: ["hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg"],
-  _4: ["_4", "img4", "_069SD4E4Rbd50L3X97XsgTvpcJpg"],
-  img4: ["img4", "_069SD4E4Rbd50L3X97XsgTvpcJpg"],
-  _069SD4E4Rbd50L3X97XsgTvpcJpg: ["_069SD4E4Rbd50L3X97XsgTvpcJpg"],
-  _5: ["_5", "img5", "vk7E0Slt7OvlQa7QVqyREh2TxqcJpg"],
-  img5: ["img5", "vk7E0Slt7OvlQa7QVqyREh2TxqcJpg"],
-  vk7E0Slt7OvlQa7QVqyREh2TxqcJpg: ["vk7E0Slt7OvlQa7QVqyREh2TxqcJpg"],
-  ratingDetails: [
-    "ratingDetails",
-    "ratingInfo",
-    "ratingScore",
-    "container",
-    "starsContainer",
-    "svg",
-    "ratingText",
-    "container2"
-  ],
-  ratingInfo: [
-    "ratingInfo",
-    "ratingScore",
-    "container",
-    "starsContainer",
-    "svg"
-  ],
-  ratingScore: ["ratingScore", "container"],
-  container: ["container"],
-  starsContainer: ["starsContainer", "svg"],
-  svg: ["svg"],
-  ratingText: ["ratingText", "container2"],
-  container2: ["container2"],
-  headerHeroSection2: ["headerHeroSection2"],
+  headerHeroSection2: ["headerHeroSection2", "scrollPlayVideo"],
+  scrollPlayVideo: ["scrollPlayVideo"],
   headerHeroSection3: ["headerHeroSection3"],
   sectionCards2: [
     "sectionCards2",
@@ -3059,34 +2502,8 @@ type NodeDefaultElementType = {
   smoothScroll: typeof SmoothScroll;
   scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
-  tickerHeader: typeof TickerHeader;
-  headerHeroSection: "div";
-  loved: "div";
-  variant1: "div";
-  _1: "div";
-  img: "div";
-  e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg: "div";
-  _2: "div";
-  img2: "div";
-  tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg: "div";
-  _3: "div";
-  img3: "div";
-  hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg: "div";
-  _4: "div";
-  img4: "div";
-  _069SD4E4Rbd50L3X97XsgTvpcJpg: "div";
-  _5: "div";
-  img5: "div";
-  vk7E0Slt7OvlQa7QVqyREh2TxqcJpg: "div";
-  ratingDetails: "div";
-  ratingInfo: "div";
-  ratingScore: "div";
-  container: "div";
-  starsContainer: "div";
-  svg: "div";
-  ratingText: "div";
-  container2: "div";
   headerHeroSection2: "div";
+  scrollPlayVideo: typeof ScrollPlayVideo;
   headerHeroSection3: "div";
   sectionCards2: "div";
   left: "div";
@@ -3221,44 +2638,8 @@ export const PlasmicHomepage = Object.assign(
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
-    tickerHeader: makeNodeComponent("tickerHeader"),
-    headerHeroSection: makeNodeComponent("headerHeroSection"),
-    loved: makeNodeComponent("loved"),
-    variant1: makeNodeComponent("variant1"),
-    _1: makeNodeComponent("_1"),
-    img: makeNodeComponent("img"),
-    e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg: makeNodeComponent(
-      "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"
-    ),
-    _2: makeNodeComponent("_2"),
-    img2: makeNodeComponent("img2"),
-    tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg: makeNodeComponent(
-      "tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg"
-    ),
-    _3: makeNodeComponent("_3"),
-    img3: makeNodeComponent("img3"),
-    hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg: makeNodeComponent(
-      "hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg"
-    ),
-    _4: makeNodeComponent("_4"),
-    img4: makeNodeComponent("img4"),
-    _069SD4E4Rbd50L3X97XsgTvpcJpg: makeNodeComponent(
-      "_069SD4E4Rbd50L3X97XsgTvpcJpg"
-    ),
-    _5: makeNodeComponent("_5"),
-    img5: makeNodeComponent("img5"),
-    vk7E0Slt7OvlQa7QVqyREh2TxqcJpg: makeNodeComponent(
-      "vk7E0Slt7OvlQa7QVqyREh2TxqcJpg"
-    ),
-    ratingDetails: makeNodeComponent("ratingDetails"),
-    ratingInfo: makeNodeComponent("ratingInfo"),
-    ratingScore: makeNodeComponent("ratingScore"),
-    container: makeNodeComponent("container"),
-    starsContainer: makeNodeComponent("starsContainer"),
-    svg: makeNodeComponent("svg"),
-    ratingText: makeNodeComponent("ratingText"),
-    container2: makeNodeComponent("container2"),
     headerHeroSection2: makeNodeComponent("headerHeroSection2"),
+    scrollPlayVideo: makeNodeComponent("scrollPlayVideo"),
     headerHeroSection3: makeNodeComponent("headerHeroSection3"),
     sectionCards2: makeNodeComponent("sectionCards2"),
     left: makeNodeComponent("left"),
