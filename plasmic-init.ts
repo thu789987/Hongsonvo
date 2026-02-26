@@ -40,7 +40,6 @@ import { HoverLogoCard } from './components/HoverLogoCard'; // Thêm dòng impor
 import { RevealWidthOnScroll } from './components/RevealWidthOnScroll';
 import { CustomCursorWrapper } from './components/CustomCursorWrapper'; // Thêm ở đầu file
 import { InfiniteScroll } from './components/InfiniteScroll'; // Thêm ở đầu file
-import { ScrollPlayVideo } from './components/ScrollPlayVideo'; // Thêm ở đầu file
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -408,17 +407,4 @@ direction: {
     }
   },
   importPath: "./components/InfiniteScroll",
-});
-
-PLASMIC.registerComponent(ScrollPlayVideo, {
-  name: "ScrollPlayVideo",
-  props: {
-    videoSrc: "string",
-    scrollHeight: {
-      type: "string",
-      defaultValue: "300vh",
-      description: "Độ dài khung cuộn (VD: 200vh là gấp đôi màn hình, cuộn càng dài tua càng chậm)",
-    }
-  },
-  importPath: "./components/ScrollPlayVideo",
 });
