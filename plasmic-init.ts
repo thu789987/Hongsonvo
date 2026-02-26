@@ -40,6 +40,7 @@ import { HoverLogoCard } from './components/HoverLogoCard'; // Thêm dòng impor
 import { RevealWidthOnScroll } from './components/RevealWidthOnScroll';
 import { CustomCursorWrapper } from './components/CustomCursorWrapper'; // Thêm ở đầu file
 import { InfiniteScroll } from './components/InfiniteScroll'; // Thêm ở đầu file
+import { ScrollPlayVideo } from "./components/ScrollPlayVideo";
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -407,4 +408,21 @@ direction: {
     }
   },
   importPath: "./components/InfiniteScroll",
+});
+
+PLASMIC.registerComponent(ScrollPlayVideo, {
+  name: "ScrollPlayVideo",
+  props: {
+    videoSrc: {
+      type: "string",
+      defaultValue: "https://scrollyvideo.js.org/goldengate.mp4",
+      description: "Đường link file .mp4 của bạn",
+    },
+    transitionSpeed: {
+      type: "number",
+      defaultValue: 8,
+      description: "Tốc độ phản hồi (Số nhỏ = Tua đầm, mượt, trễ nhiều / Số lớn = Tua gắt theo sát chuột)",
+    }
+  },
+  importPath: "./components/ScrollPlayVideo",
 });
