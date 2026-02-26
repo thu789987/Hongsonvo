@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 // 👇 Thêm @ts-ignore để TypeScript không bắt bẻ thư viện thiếu file type
-// @ts-ignore
 import ScrollyVideo from 'scrolly-video';
 
 interface ScrollPlayVideoProps {
