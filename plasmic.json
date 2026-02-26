@@ -2316,6 +2316,12 @@
           "name": "InfiniteScroll",
           "displayName": "InfiniteScroll",
           "componentImportPath": "./components/InfiniteScroll"
+        },
+        {
+          "id": "nqEdA202CaaA",
+          "name": "ScrollPlayVideo",
+          "displayName": "ScrollPlayVideo",
+          "componentImportPath": "./components/ScrollPlayVideo"
         }
       ],
       "customFunctions": []

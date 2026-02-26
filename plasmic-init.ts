@@ -413,10 +413,11 @@ direction: {
 PLASMIC.registerComponent(ScrollPlayVideo, {
   name: "ScrollPlayVideo",
   props: {
-    videoSrc: {
+    videoSrc: "string",
+    scrollHeight: {
       type: "string",
-      defaultValue: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-      description: "Đường dẫn file .mp4 của bạn",
+      defaultValue: "300vh",
+      description: "Độ dài khung cuộn (VD: 200vh là gấp đôi màn hình, cuộn càng dài tua càng chậm)",
     }
   },
   importPath: "./components/ScrollPlayVideo",

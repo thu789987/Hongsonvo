@@ -73,6 +73,7 @@ import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6Al
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
+import { ScrollPlayVideo } from "../../ScrollPlayVideo"; // plasmic-import: nqEdA202CaaA/codeComponent
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
@@ -171,6 +172,7 @@ export type PlasmicHomepage__OverridesType = {
   ratingText?: Flex__<"div">;
   container2?: Flex__<"div">;
   headerHeroSection2?: Flex__<"div">;
+  scrollPlayVideo?: Flex__<typeof ScrollPlayVideo>;
   headerHeroSection3?: Flex__<"div">;
   sectionCards2?: Flex__<"div">;
   left?: Flex__<"div">;
@@ -733,6 +735,15 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.headerHeroSection2}
                 className={classNames(projectcss.all, sty.headerHeroSection2)}
               >
+                <ScrollPlayVideo
+                  data-plasmic-name={"scrollPlayVideo"}
+                  data-plasmic-override={overrides.scrollPlayVideo}
+                  className={classNames("__wab_instance", sty.scrollPlayVideo)}
+                  videoSrc={
+                    "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
+                  }
+                />
+
                 <div className={classNames(projectcss.all, sty.freeBox__xdgmx)}>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__gYGn)}
@@ -2656,6 +2667,7 @@ const PlasmicDescendants = {
     "ratingText",
     "container2",
     "headerHeroSection2",
+    "scrollPlayVideo",
     "headerHeroSection3",
     "sectionCards2",
     "left",
@@ -2731,6 +2743,7 @@ const PlasmicDescendants = {
     "ratingText",
     "container2",
     "headerHeroSection2",
+    "scrollPlayVideo",
     "headerHeroSection3",
     "sectionCards2",
     "left",
@@ -2896,7 +2909,8 @@ const PlasmicDescendants = {
   svg: ["svg"],
   ratingText: ["ratingText", "container2"],
   container2: ["container2"],
-  headerHeroSection2: ["headerHeroSection2"],
+  headerHeroSection2: ["headerHeroSection2", "scrollPlayVideo"],
+  scrollPlayVideo: ["scrollPlayVideo"],
   headerHeroSection3: ["headerHeroSection3"],
   sectionCards2: [
     "sectionCards2",
@@ -3083,6 +3097,7 @@ type NodeDefaultElementType = {
   ratingText: "div";
   container2: "div";
   headerHeroSection2: "div";
+  scrollPlayVideo: typeof ScrollPlayVideo;
   headerHeroSection3: "div";
   sectionCards2: "div";
   left: "div";
@@ -3255,6 +3270,7 @@ export const PlasmicHomepage = Object.assign(
     ratingText: makeNodeComponent("ratingText"),
     container2: makeNodeComponent("container2"),
     headerHeroSection2: makeNodeComponent("headerHeroSection2"),
+    scrollPlayVideo: makeNodeComponent("scrollPlayVideo"),
     headerHeroSection3: makeNodeComponent("headerHeroSection3"),
     sectionCards2: makeNodeComponent("sectionCards2"),
     left: makeNodeComponent("left"),
