@@ -68,7 +68,7 @@ export const ScrollPlayVideo = ({
   return (
     <div className={className} style={{ width: '100%', position: 'relative' }}>
       {/* Container rỗng cho thư viện chèn Video vào */}
-      <div ref={containerRef} style={{ width: '100%', height: '100vh' }}></div>
+      <div ref={containerRef} style={{ width: '100%', height: '300vh' }}></div>
     </div>
   );
 };
