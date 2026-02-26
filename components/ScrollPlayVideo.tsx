@@ -65,10 +65,13 @@ export const ScrollPlayVideo = ({
     };
   }, [isScriptLoaded, videoSrc, transitionSpeed]);
 
-  return (
-    <div className={className} style={{ width: '100%', position: 'relative' }}>
-      {/* Container rỗng cho thư viện chèn Video vào */}
-      <div ref={containerRef} style={{ width: '100%', height: '300vh' }}></div>
+return (
+    // THẺ CHA: Nhận class từ Plasmic, chiều cao 100% để bám sát thẻ bọc ngoài
+    <div className={className} style={{ width: '100%', height: '100%', position: 'relative' }}>
+      
+      {/* THẺ CON: Đổi 300vh thành 100% */}
+      <div ref={containerRef} style={{ width: '100%', height: '100%' }}></div>
+
     </div>
   );
 };
