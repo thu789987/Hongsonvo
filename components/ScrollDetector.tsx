@@ -1,8 +1,8 @@
-"use client"; // 👇 BẮT BUỘC PHẢI CÓ DÒNG NÀY ĐẦU TIÊN
+"use client";
 
 import React, { useState, useEffect } from 'react';
-// Chuyển sang dùng @plasmicapp/host để tương thích tốt nhất với Plasmic Studio
-import { DataProvider } from '@plasmicapp/host'; 
+// 👇 1. BẮT BUỘC: Trả lại import từ loader-nextjs hoặc react-web
+import { DataProvider } from '@plasmicapp/loader-nextjs'; 
 
 interface ScrollDetectorProps {
   children: React.ReactNode;
@@ -16,25 +16,29 @@ export const ScrollDetector: React.FC<ScrollDetectorProps> = ({
   className 
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  // 👇 2. Cờ đánh dấu để báo Next.js biết Component đã lên Trình duyệt an toàn
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Chỉ chạy trên Client, an toàn tuyệt đối với Next.js
-    if (typeof window === 'undefined') return;
+    setMounted(true); // Bật cờ khi đã ở Client
 
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > threshold);
+      // Dùng window.scrollY (hoặc document.documentElement.scrollTop để an toàn hơn)
+      const currentScrollY = window.scrollY || document.documentElement.scrollTop;
+      setIsScrolled(currentScrollY > threshold);
     };
     
-    // Kích hoạt ngay lần đầu tiên đề phòng trường hợp user đã cuộn sẵn khi F5
     handleScroll(); 
-
-    window.addEventListener('scroll', handleScroll);
+    
+    // Thêm passive: true giúp trình duyệt cuộn mượt hơn và bắt sự kiện tốt hơn
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [threshold]);
 
   return (
     <div className={className}>
-      <DataProvider name="scrollData" data={{ isScrolled: isScrolled }}>
+      {/* 👇 3. Chỉ truyền giá trị thật khi đã mounted, tránh Next.js SSR bị loạn */}
+      <DataProvider name="scrollData" data={{ isScrolled: mounted ? isScrolled : false }}>
         {children}
       </DataProvider>
     </div>
