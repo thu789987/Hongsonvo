@@ -20,49 +20,56 @@ export const ScrollPlayVideo = ({
     const video = videoRef.current;
     if (!container || !video) return;
 
-    // Khi load xong dữ liệu nền, ép video dừng ở giây số 0
+    let animationFrameId: number;
+    // Khai báo 2 biến: Thời gian mục tiêu (theo chuột) và Thời gian thực tế của video
+    let targetTime = 0;
+    let currentTime = 0;
+
     const handleLoadedMetadata = () => {
       video.pause();
       video.currentTime = 0;
     };
     video.addEventListener('loadedmetadata', handleLoadedMetadata);
 
-    let animationFrameId: number;
-
+    // 1. Hàm tính toán phần trăm cuộn (Chỉ cập nhật targetTime)
     const handleScroll = () => {
-      // Đợi video tải xong thông tin thời lượng (duration) mới tính toán
       if (!video.duration || Number.isNaN(video.duration)) return;
-
       const rect = container.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-
-      // Tính toán quãng đường có thể cuộn (tổng chiều cao container trừ đi màn hình)
-      const scrollableDistance = rect.height - viewportHeight;
+      const scrollableDistance = rect.height - window.innerHeight;
+      
       if (scrollableDistance <= 0) return;
-
-      // Tính % cuộn (Bắt đầu tua khi mép trên container chạm đỉnh màn hình)
+      
       let scrollFraction = -rect.top / scrollableDistance;
-
-      // Khóa giới hạn % từ 0 (đầu video) đến 1 (cuối video)
       scrollFraction = Math.max(0, Math.min(1, scrollFraction));
-
-      // Dùng requestAnimationFrame để việc tua frame mượt mà, không bị giật lag
-      if (animationFrameId) cancelAnimationFrame(animationFrameId);
-      animationFrameId = requestAnimationFrame(() => {
-        // Thay đổi frame của video tương ứng với % thanh cuộn
-        video.currentTime = video.duration * scrollFraction;
-      });
+      
+      // Gán thời gian mục tiêu mà video CẦN phải tới
+      targetTime = video.duration * scrollFraction;
     };
 
-    // Lắng nghe sự kiện cuộn
+    // 2. Vòng lặp Render 60fps tạo quán tính (LERP)
+    const renderLoop = () => {
+      // Công thức thần thánh: Cộng thêm 8% khoảng cách còn lại mỗi khung hình.
+      // Số 0.08 càng nhỏ -> Quán tính càng lớn, video tua càng chậm và mượt.
+      // Số này tiến gần về 1 -> Video tua gắt theo chuột.
+      currentTime += (targetTime - currentTime) * 0.08;
+
+      // Cập nhật frame video nếu khoảng cách đủ lớn (chống rung lắc)
+      if (Math.abs(targetTime - currentTime) > 0.001) {
+        video.currentTime = currentTime;
+      }
+
+      animationFrameId = requestAnimationFrame(renderLoop);
+    };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     
-    // Gọi hàm 1 lần lúc web vừa load để set đúng frame ban đầu
+    // Kích hoạt tính toán lần đầu và khởi động vòng lặp
     handleScroll();
+    renderLoop();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      cancelAnimationFrame(animationFrameId);
       video.removeEventListener('loadedmetadata', handleLoadedMetadata);
     };
   }, []);
