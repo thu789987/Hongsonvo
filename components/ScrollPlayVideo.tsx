@@ -1,7 +1,6 @@
 "use client"; 
 
 import React, { useEffect, useRef } from 'react';
-import ScrollyVideo from 'scrolly-video';
 
 interface ScrollPlayVideoProps {
   videoSrc?: string;
@@ -17,17 +16,28 @@ export const ScrollPlayVideo = ({
   useEffect(() => {
     if (typeof window === 'undefined' || !containerRef.current) return;
 
-    // 👇 CHÌA KHÓA SỬA LỖI Ở ĐÂY 👇
-    // Trích xuất Class chuẩn xác bất chấp Next.js đóng gói kiểu gì
-    const ScrollyVideoConstructor = (ScrollyVideo as any).default || ScrollyVideo;
-    // Khởi tạo video bằng biến Constructor vừa lấy được
-    const scrollyVideoInstance = new ScrollyVideoConstructor({
-      scrollyVideoContainer: containerRef.current,
-      src: videoSrc || "https://scrollyvideo.js.org/goldengate.mp4",
-      transitionSpeed: 8,
-      cover: true,
-      sticky: true
-    });
+    let scrollyVideoInstance: any = null;
+
+    const initVideo = async () => {
+      try {
+        // 👇 Bí quyết ép TypeScript đầu hàng nằm ở chữ ": any"
+        const module: any = await import('scrolly-video');
+        
+        const ScrollyVideoClass = module.default?.default || module.default || module;
+
+        scrollyVideoInstance = new ScrollyVideoClass({
+          scrollyVideoContainer: containerRef.current,
+          src: videoSrc || "https://scrollyvideo.js.org/goldengate.mp4",
+          transitionSpeed: 8,
+          cover: true,
+          sticky: true
+        });
+      } catch (error) {
+        console.error("Không thể tải thư viện ScrollyVideo:", error);
+      }
+    };
+
+    initVideo();
 
     return () => {
       if (scrollyVideoInstance && typeof scrollyVideoInstance.destroy === 'function') {
