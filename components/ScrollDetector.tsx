@@ -18,31 +18,37 @@ export const ScrollDetector: React.FC<ScrollDetectorProps> = ({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // 🔍 THEO DÕI 1: Xem Component có thực sự được chạy trên Trình duyệt không
+    console.log("🟢 [ScrollDetector] Đã Mounted thành công trên Client!");
     setMounted(true); 
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY || document.documentElement.scrollTop;
-      setIsScrolled(currentScrollY > threshold);
+      const newIsScrolled = currentScrollY > threshold;
+
+      setIsScrolled((prev) => {
+        // 🔍 THEO DÕI 2: Chỉ in ra khi trạng thái thực sự thay đổi (tránh spam)
+        if (prev !== newIsScrolled) {
+          console.warn(`📉 [ScrollDetector] Trạng thái cuộn thay đổi: ${prev} ➡️ ${newIsScrolled} (Tọa độ: ${currentScrollY})`);
+        }
+        return newIsScrolled;
+      });
     };
     
     handleScroll(); 
-    
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [threshold]);
 
-  // 🚀 BÍ QUYẾT 1: Đóng gói Data bằng useMemo. 
-  // Chỉ báo cho Plasmic biết khi nào giá trị THỰC SỰ thay đổi.
-  const contextData = useMemo(() => ({
-    isScrolled: mounted ? isScrolled : false
-  }), [mounted, isScrolled]);
-
-  // 🚀 BÍ QUYẾT 2: Tự động gắn thêm class 'is-scrolled' khi cuộn qua threshold.
-  // Đây là lớp bảo vệ cuối cùng, không phụ thuộc vào Context của Plasmic.
-  const wrapperClass = `${className} ${mounted && isScrolled ? 'is-scrolled' : ''}`.trim();
+  const contextData = useMemo(() => {
+    const data = { isScrolled: mounted ? isScrolled : false };
+    // 🔍 THEO DÕI 3: Xem DataProvider có nhận được dữ liệu mới để đẩy đi không
+    console.log("📦 [ScrollDetector] Context Data chuẩn bị đẩy vào Plasmic:", data);
+    return data;
+  }, [mounted, isScrolled]);
 
   return (
-    <div className={wrapperClass}>
+    <div className={className}>
       <DataProvider name="scrollData" data={contextData}>
         {children}
       </DataProvider>
