@@ -13,23 +13,24 @@ import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProv
 import { ContentfulCredentialsProvider } from "@plasmicpkgs/plasmic-contentful";
 import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css";
 import { ParallaxProviderWrapper } from "@plasmicpkgs/react-scroll-parallax";
+import { ScrollProvider } from "../../ScrollContext"; // plasmic-import: 3-jE_xbm8Z75/codeComponent
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactElement;
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
-
   contentfulCredentialsProviderProps?: Partial<
     Omit<React.ComponentProps<typeof ContentfulCredentialsProvider>, "children">
   >;
-
   embedCssProps?: Partial<
     Omit<React.ComponentProps<typeof EmbedCss>, "children">
   >;
-
   parallaxProviderWrapperProps?: Partial<
     Omit<React.ComponentProps<typeof ParallaxProviderWrapper>, "children">
+  >;
+  scrollProviderProps?: Partial<
+    Omit<React.ComponentProps<typeof ScrollProvider>, "children">
   >;
 }
 
@@ -41,7 +42,8 @@ export default function GlobalContextsProvider(
     antdConfigProviderProps,
     contentfulCredentialsProviderProps,
     embedCssProps,
-    parallaxProviderWrapperProps
+    parallaxProviderWrapperProps,
+    scrollProviderProps
   } = props;
 
   const globalVariants = _useGlobalVariants();
@@ -185,7 +187,7 @@ export default function GlobalContextsProvider(
                 : "vertical"
             }
           >
-            {children}
+            <ScrollProvider {...scrollProviderProps}>{children}</ScrollProvider>
           </ParallaxProviderWrapper>
         </EmbedCss>
       </ContentfulCredentialsProvider>

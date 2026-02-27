@@ -69,8 +69,8 @@ import {
 
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
-import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
+import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
 import { ScrollPlayVideo } from "../../ScrollPlayVideo"; // plasmic-import: nqEdA202CaaA/codeComponent
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
@@ -137,8 +137,8 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   smoothScroll?: Flex__<typeof SmoothScroll>;
-  scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
+  scrollDetector?: Flex__<typeof ScrollDetector>;
   headerHeroSection2?: Flex__<"div">;
   scrollPlayVideo?: Flex__<typeof ScrollPlayVideo>;
   headerHeroSection3?: Flex__<"div">;
@@ -306,44 +306,41 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={classNames("__wab_instance", sty.lineBg__zFsLc)}
                 />
               </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  sty.freeBox__vFcq,
+                  "my-sticky-menu"
+                )}
+              >
+                <NewMenu
+                  data-plasmic-name={"newMenu"}
+                  data-plasmic-override={overrides.newMenu}
+                  className={classNames("__wab_instance", sty.newMenu)}
+                  headerTitle={"[ 2026 ]"}
+                  scrolledState={(() => {
+                    try {
+                      return $ctx.isScrolled;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return [];
+                      }
+                      throw e;
+                    }
+                  })()}
+                />
+              </div>
               <ScrollDetector
                 data-plasmic-name={"scrollDetector"}
                 data-plasmic-override={overrides.scrollDetector}
+                children={null}
                 className={classNames("__wab_instance", sty.scrollDetector)}
                 threshold={50}
-              >
-                <DataCtxReader__>
-                  {$ctx => (
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox__vFcq,
-                        "my-sticky-menu"
-                      )}
-                    >
-                      <NewMenu
-                        data-plasmic-name={"newMenu"}
-                        data-plasmic-override={overrides.newMenu}
-                        className={classNames("__wab_instance", sty.newMenu)}
-                        headerTitle={"[ 2026 ]"}
-                        scrolledState={(() => {
-                          try {
-                            return $ctx.scrollData.isScrolled;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return [];
-                            }
-                            throw e;
-                          }
-                        })()}
-                      />
-                    </div>
-                  )}
-                </DataCtxReader__>
-              </ScrollDetector>
+              />
+
               <div
                 data-plasmic-name={"headerHeroSection2"}
                 data-plasmic-override={overrides.headerHeroSection2}
@@ -2400,8 +2397,8 @@ const PlasmicDescendants = {
   root: [
     "root",
     "smoothScroll",
-    "scrollDetector",
     "newMenu",
+    "scrollDetector",
     "headerHeroSection2",
     "scrollPlayVideo",
     "headerHeroSection3",
@@ -2449,8 +2446,8 @@ const PlasmicDescendants = {
   ],
   smoothScroll: [
     "smoothScroll",
-    "scrollDetector",
     "newMenu",
+    "scrollDetector",
     "headerHeroSection2",
     "scrollPlayVideo",
     "headerHeroSection3",
@@ -2496,8 +2493,8 @@ const PlasmicDescendants = {
     "service55",
     "section"
   ],
-  scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
+  scrollDetector: ["scrollDetector"],
   headerHeroSection2: ["headerHeroSection2", "scrollPlayVideo"],
   scrollPlayVideo: ["scrollPlayVideo"],
   headerHeroSection3: ["headerHeroSection3"],
@@ -2656,8 +2653,8 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   smoothScroll: typeof SmoothScroll;
-  scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
+  scrollDetector: typeof ScrollDetector;
   headerHeroSection2: "div";
   scrollPlayVideo: typeof ScrollPlayVideo;
   headerHeroSection3: "div";
@@ -2792,8 +2789,8 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     smoothScroll: makeNodeComponent("smoothScroll"),
-    scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
+    scrollDetector: makeNodeComponent("scrollDetector"),
     headerHeroSection2: makeNodeComponent("headerHeroSection2"),
     scrollPlayVideo: makeNodeComponent("scrollPlayVideo"),
     headerHeroSection3: makeNodeComponent("headerHeroSection3"),

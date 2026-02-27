@@ -2350,6 +2350,12 @@
           "name": "ScrollPlayVideo",
           "displayName": "ScrollPlayVideo",
           "componentImportPath": "./components/ScrollPlayVideo"
+        },
+        {
+          "id": "3-jE_xbm8Z75",
+          "name": "ScrollProvider",
+          "displayName": "ScrollProvider",
+          "componentImportPath": "./components/ScrollContext"
         }
       ],
       "customFunctions": []
