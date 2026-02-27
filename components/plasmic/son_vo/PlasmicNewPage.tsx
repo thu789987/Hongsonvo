@@ -3999,16 +3999,16 @@ function PlasmicNewPage__RenderFunc(props: {
               </div>
             </div>
             <FotterMain
-              className={classNames("__wab_instance", sty.fotterMain__pucQa)}
+              className={classNames("__wab_instance", sty.fotterMain__fvD6D)}
             />
 
             <FotterMain
-              className={classNames("__wab_instance", sty.fotterMain__o1XR6)}
+              className={classNames("__wab_instance", sty.fotterMain__amIgq)}
             />
 
-            <div className={classNames(projectcss.all, sty.freeBox__stki4)}>
+            <div className={classNames(projectcss.all, sty.freeBox___4Krzw)}>
               <LineBg
-                className={classNames("__wab_instance", sty.lineBg___64Xr9)}
+                className={classNames("__wab_instance", sty.lineBg__qTmh2)}
               />
             </div>
           </SmoothScroll>
