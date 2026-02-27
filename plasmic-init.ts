@@ -448,6 +448,6 @@ PLASMIC.registerGlobalContext(ScrollProvider, {
   name: "ScrollProvider",
   providesData: true,
   props: {},
-  importPath: "./components/ScrollContext", // Bạn đã làm đúng dòng này!
-  importName: "ScrollProvider", // 👇 BẠN ĐANG THIẾU DÒNG NÀY NÈ
+  importPath: "./components/ScrollContext", 
+  importName: "ScrollProvider" // 👈 Chắc chắn phải có dòng này nhé!
 });
