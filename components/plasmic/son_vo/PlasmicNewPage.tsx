@@ -976,60 +976,6 @@ function PlasmicNewPage__RenderFunc(props: {
                           />
                         </PlasmicLink__>
                       ) : null}
-                      {(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return false;
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            const content = currentItem?.["Link"];
-                            return content && content.toString().trim() !== "";
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return true;
-                          }
-                          throw e;
-                        }
-                      })() ? (
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__vmJrD
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              if (!pageId) return "Đang đợi tham số...";
-                              const list = $queries.allList?.data || [];
-                              const currentItem = list.find(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              return (
-                                currentItem?.Link ||
-                                currentItem?.link ||
-                                "Không tìm thấy bài"
-                              );
-                            })()}
-                          </React.Fragment>
-                        </div>
-                      ) : null}
                     </div>
                   </div>
                 </div>
