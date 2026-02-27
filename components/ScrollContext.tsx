@@ -50,3 +50,5 @@ export default function ScrollContext({ children, className }: ScrollContextProp
     </div>
   );
 }
+
+export { ScrollContext as ScrollProvider };
