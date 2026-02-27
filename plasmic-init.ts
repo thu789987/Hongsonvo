@@ -448,5 +448,5 @@ PLASMIC.registerGlobalContext(ScrollProvider, {
   name: "ScrollProvider",
   providesData: true,
   props: {},
-  importPath: "./components/ScrollContext"
+  importPath: "./components/ScrollProvider"
 });
