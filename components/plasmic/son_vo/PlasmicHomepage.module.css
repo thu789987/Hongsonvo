@@ -62,12 +62,23 @@
   right: 0;
   mix-blend-mode: difference;
 }
-.newMenu:global(.__wab_instance) {
-  animation: none;
+.freeBox__vFcq {
+  display: flex;
+  flex-direction: row;
   position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
   top: auto;
   left: auto;
   z-index: 5;
+  min-width: 0;
+  padding: 0px;
+}
+.newMenu:global(.__wab_instance) {
+  animation: none;
   width: 100%;
   min-width: 0;
 }

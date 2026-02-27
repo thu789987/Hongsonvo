@@ -357,7 +357,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                     <NewMenu
                       data-plasmic-name={"newMenu"}
                       data-plasmic-override={overrides.newMenu}
-                      activePage={"myJourney"}
+                      activePage={"myServices"}
                       className={classNames("__wab_instance", sty.newMenu)}
                       headerTitle={"[ 2026 ]"}
                       scrolledState={(() => {
