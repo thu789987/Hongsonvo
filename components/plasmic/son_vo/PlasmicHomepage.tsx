@@ -314,25 +314,33 @@ function PlasmicHomepage__RenderFunc(props: {
               >
                 <DataCtxReader__>
                   {$ctx => (
-                    <NewMenu
-                      data-plasmic-name={"newMenu"}
-                      data-plasmic-override={overrides.newMenu}
-                      className={classNames("__wab_instance", sty.newMenu)}
-                      headerTitle={"[ 2026 ]"}
-                      scrolledState={(() => {
-                        try {
-                          return $ctx.scrollData.isScrolled;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return [];
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox__vFcq,
+                        "my-sticky-menu"
+                      )}
+                    >
+                      <NewMenu
+                        data-plasmic-name={"newMenu"}
+                        data-plasmic-override={overrides.newMenu}
+                        className={classNames("__wab_instance", sty.newMenu)}
+                        headerTitle={"[ 2026 ]"}
+                        scrolledState={(() => {
+                          try {
+                            return $ctx.scrollData.isScrolled;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
                           }
-                          throw e;
-                        }
-                      })()}
-                    />
+                        })()}
+                      />
+                    </div>
                   )}
                 </DataCtxReader__>
               </ScrollDetector>

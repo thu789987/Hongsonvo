@@ -72,11 +72,11 @@ createPlasmicElementProxy;
 
 export type PlasmicNewMenu__VariantMembers = {
   scrolledState: "scrolledState";
-  activePage: "myJourney" | "works";
+  activePage: "myJourney" | "works" | "myServices";
 };
 export type PlasmicNewMenu__VariantsArgs = {
   scrolledState?: SingleBooleanChoiceArg<"scrolledState">;
-  activePage?: SingleChoiceArg<"myJourney" | "works">;
+  activePage?: SingleChoiceArg<"myJourney" | "works" | "myServices">;
 };
 type VariantPropType = keyof PlasmicNewMenu__VariantsArgs;
 export const PlasmicNewMenu__VariantProps = new Array<VariantPropType>(
@@ -95,7 +95,7 @@ export type PlasmicNewMenu__OverridesType = {
 export interface DefaultNewMenuProps {
   headerTitle?: React.ReactNode;
   scrolledState?: SingleBooleanChoiceArg<"scrolledState">;
-  activePage?: SingleChoiceArg<"myJourney" | "works">;
+  activePage?: SingleChoiceArg<"myJourney" | "works" | "myServices">;
   className?: string;
 }
 
@@ -221,8 +221,24 @@ function PlasmicNewMenu__RenderFunc(props: {
           {"HSV"}
         </div>
       </div>
-      <div className={classNames(projectcss.all, sty.freeBox___6LhCd)}>
-        <div className={classNames(projectcss.all, sty.freeBox__ieTg)}>
+      <div
+        className={classNames(projectcss.all, sty.freeBox___6LhCd, {
+          [sty.freeBoxactivePage_myServices___6LhCdBgSi8]: hasVariant(
+            $state,
+            "activePage",
+            "myServices"
+          )
+        })}
+      >
+        <div
+          className={classNames(projectcss.all, sty.freeBox__ieTg, {
+            [sty.freeBoxactivePage_myServices__ieTgBgSi8]: hasVariant(
+              $state,
+              "activePage",
+              "myServices"
+            )
+          })}
+        >
           <PlasmicLink__
             className={classNames(
               projectcss.all,
@@ -285,6 +301,11 @@ function PlasmicNewMenu__RenderFunc(props: {
                   "activePage",
                   "myJourney"
                 ),
+                [sty.linkactivePage_myServices__fvRmQBgSi8]: hasVariant(
+                  $state,
+                  "activePage",
+                  "myServices"
+                ),
                 [sty.linkactivePage_works__fvRmQoqHx2]: hasVariant(
                   $state,
                   "activePage",
@@ -311,6 +332,11 @@ function PlasmicNewMenu__RenderFunc(props: {
                     "activePage",
                     "myJourney"
                   ),
+                  [sty.freeBoxactivePage_myServices__dfhMwBgSi8]: hasVariant(
+                    $state,
+                    "activePage",
+                    "myServices"
+                  ),
                   [sty.freeBoxactivePage_works__dfhMwOqHx2]: hasVariant(
                     $state,
                     "activePage",
@@ -332,13 +358,70 @@ function PlasmicNewMenu__RenderFunc(props: {
               text={"Works"}
             />
           </PlasmicLink__>
-          <HackerText
-            className={classNames("__wab_instance", sty.hackerText__lpsI)}
-            defaultColor={"#ffffff"}
-            hoverColor={true ? "var(--antd-colorWarning)" : undefined}
-            text={"My Services"}
-          />
-
+          <PlasmicLink__
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__aqvms,
+              {
+                [sty.linkactivePage_myServices__aqvmsBgSi8]: hasVariant(
+                  $state,
+                  "activePage",
+                  "myServices"
+                ),
+                [sty.linkactivePage_works__aqvmsOqHx2]: hasVariant(
+                  $state,
+                  "activePage",
+                  "works"
+                )
+              }
+            )}
+            component={Link}
+            legacyBehavior={false}
+            platform={"nextjs"}
+          >
+            {(
+              hasVariant($state, "activePage", "myServices")
+                ? true
+                : hasVariant($state, "activePage", "works")
+                  ? true
+                  : hasVariant($state, "activePage", "myJourney")
+                    ? true
+                    : false
+            ) ? (
+              <div
+                className={classNames(projectcss.all, sty.freeBox__xplVk, {
+                  [sty.freeBoxactivePage_myJourney__xplVkTmLyG]: hasVariant(
+                    $state,
+                    "activePage",
+                    "myJourney"
+                  ),
+                  [sty.freeBoxactivePage_myServices__xplVkBgSi8]: hasVariant(
+                    $state,
+                    "activePage",
+                    "myServices"
+                  ),
+                  [sty.freeBoxactivePage_works__xplVkOqHx2]: hasVariant(
+                    $state,
+                    "activePage",
+                    "works"
+                  )
+                })}
+              />
+            ) : null}
+            <HackerText
+              className={classNames("__wab_instance", sty.hackerText__lpsI, {
+                [sty.hackerTextactivePage_myServices__lpsIBgSi8]: hasVariant(
+                  $state,
+                  "activePage",
+                  "myServices"
+                )
+              })}
+              defaultColor={"#ffffff"}
+              hoverColor={true ? "var(--antd-colorWarning)" : undefined}
+              text={"My Services"}
+            />
+          </PlasmicLink__>
           <HackerText
             className={classNames("__wab_instance", sty.hackerText__sm9PM)}
             defaultColor={"#ffffff"}
