@@ -2352,9 +2352,9 @@
           "componentImportPath": "./components/ScrollPlayVideo"
         },
         {
-          "id": "3-jE_xbm8Z75",
-          "name": "ScrollProvider",
-          "displayName": "ScrollProvider",
+          "id": "4JSGC86CDgyw",
+          "name": "ScrollContext",
+          "displayName": "ScrollContext",
           "componentImportPath": "./components/ScrollContext"
         }
       ],

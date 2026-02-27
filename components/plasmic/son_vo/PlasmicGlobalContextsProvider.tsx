@@ -13,28 +13,20 @@ import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProv
 import { ContentfulCredentialsProvider } from "@plasmicpkgs/plasmic-contentful";
 import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css";
 import { ParallaxProviderWrapper } from "@plasmicpkgs/react-scroll-parallax";
-import { ScrollProvider } from "../../ScrollContext"; // plasmic-import: 3-jE_xbm8Z75/codeComponent
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactElement;
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
-
   contentfulCredentialsProviderProps?: Partial<
     Omit<React.ComponentProps<typeof ContentfulCredentialsProvider>, "children">
   >;
-
   embedCssProps?: Partial<
     Omit<React.ComponentProps<typeof EmbedCss>, "children">
   >;
-
   parallaxProviderWrapperProps?: Partial<
     Omit<React.ComponentProps<typeof ParallaxProviderWrapper>, "children">
-  >;
-
-  scrollProviderProps?: Partial<
-    Omit<React.ComponentProps<typeof ScrollProvider>, "children">
   >;
 }
 
@@ -46,8 +38,7 @@ export default function GlobalContextsProvider(
     antdConfigProviderProps,
     contentfulCredentialsProviderProps,
     embedCssProps,
-    parallaxProviderWrapperProps,
-    scrollProviderProps
+    parallaxProviderWrapperProps
   } = props;
 
   const globalVariants = _useGlobalVariants();
@@ -179,7 +170,7 @@ export default function GlobalContextsProvider(
           css={
             embedCssProps && "css" in embedCssProps
               ? embedCssProps.css!
-              : undefined
+              : ".my-sticky-menu {\r\n  transition: all 0.3s ease-in-out !important;\r\n}\r\n\r\n/* Tr\u1ea1ng th\u00e1i khi \u0111\u00e3 cu\u1ed9n (b\u1eaft class t\u1eeb th\u1ebb cha ScrollContext) */\r\n.is-scrolled .my-sticky-menu {\r\n  background-color: rgba(255, 255, 255, 0.9) !important;\r\n  backdrop-filter: blur(10px) !important;\r\n  -webkit-backdrop-filter: blur(10px) !important;\r\n  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;\r\n}"
           }
         >
           <ParallaxProviderWrapper
@@ -191,7 +182,7 @@ export default function GlobalContextsProvider(
                 : "vertical"
             }
           >
-            <ScrollProvider {...scrollProviderProps}>{children}</ScrollProvider>
+            {children}
           </ParallaxProviderWrapper>
         </EmbedCss>
       </ContentfulCredentialsProvider>
