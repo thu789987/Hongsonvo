@@ -297,7 +297,7 @@ function PlasmicNewMenu__RenderFunc(props: {
               }
             )}
             component={Link}
-            href={`/new-page`}
+            href={`/Works`}
             legacyBehavior={false}
             platform={"nextjs"}
           >

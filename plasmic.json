@@ -1205,7 +1205,7 @@
           "projectId": "bLa1shfC4noziDsvmxjKJF",
           "renderModuleFilePath": "plasmic/son_vo/PlasmicWorks.tsx",
           "importSpec": {
-            "modulePath": "../pages/new-page.tsx"
+            "modulePath": "../pages/Works.tsx"
           },
           "cssFilePath": "plasmic/son_vo/PlasmicWorks.module.css",
           "scheme": "blackbox",
