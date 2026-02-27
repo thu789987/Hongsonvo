@@ -444,10 +444,11 @@ PLASMIC.registerComponent(ScrollPlayVideo, {
   importPath: "./components/ScrollPlayVideo",
 });
 
-PLASMIC.registerGlobalContext(ScrollProvider, {
-  name: "ScrollProvider",
-  providesData: true,
-  props: {},
-  importPath: "./components/ScrollContext", 
-  importName: "ScrollProvider" // 👈 Chắc chắn phải có dòng này nhé!
+PLASMIC.registerComponent(ScrollContext, {
+  name: "ScrollContext",
+  props: {
+    children: "slot",
+  },
+  importPath: "./components/ScrollContext",
+  isDefaultExport: true, // 👈 Rất quan trọng vì file mới dùng export default
 });
