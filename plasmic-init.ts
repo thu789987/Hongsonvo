@@ -41,6 +41,7 @@ import { RevealWidthOnScroll } from './components/RevealWidthOnScroll';
 import { CustomCursorWrapper } from './components/CustomCursorWrapper'; // Thêm ở đầu file
 import { InfiniteScroll } from './components/InfiniteScroll'; // Thêm ở đầu file
 import { ScrollPlayVideo } from "./components/ScrollPlayVideo";
+import { ScrollProvider } from "./components/ScrollContext";
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -441,4 +442,10 @@ PLASMIC.registerComponent(ScrollPlayVideo, {
     }
   },
   importPath: "./components/ScrollPlayVideo",
+});
+
+PLASMIC.registerGlobalContext(ScrollProvider, {
+  name: "ScrollProvider",
+  providesData: true,
+  props: {},
 });

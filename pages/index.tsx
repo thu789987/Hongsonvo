@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 import { PlasmicQueryDataProvider } from "@plasmicapp/react-web/lib/query";
 import type { GetStaticProps } from "next";
 import { extractPlasmicQueryData } from "@plasmicapp/react-web/lib/prepass";
-import { ScrollProvider } from "../components/ScrollContext";
 
 export const getStaticProps: GetStaticProps = async context => {
   const queryCache = await extractPlasmicQueryData(<PlasmicHomepage />);
@@ -44,9 +43,7 @@ function Homepage({ queryCache }: { queryCache?: any }) {
           params={useRouter()?.query}
           query={useRouter()?.query}
         >
-          <ScrollProvider>
           <PlasmicHomepage />
-          </ScrollProvider>
         </PageParamsProvider__>
       </PlasmicQueryDataProvider>
     </GlobalContextsProvider>
