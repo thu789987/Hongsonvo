@@ -110,14 +110,14 @@ function wrapQueriesWithLoadingProxy($q: any): any {
 
 export function generateDynamicMetadata($q: any, $ctx: any) {
   return {
-    title: "Home",
+    title: "Works",
 
     openGraph: {
-      title: "Home"
+      title: "Works"
     },
     twitter: {
       card: "summary",
-      title: "Home"
+      title: "Works"
     }
   };
 }
@@ -2121,7 +2121,7 @@ export const PlasmicWorks = Object.assign(
     internalArgProps: PlasmicWorks__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
-      pagePath: "/new-page",
+      pagePath: "/Works",
       searchParams: {},
       params: {}
     })

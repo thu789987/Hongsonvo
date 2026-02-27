@@ -13,7 +13,6 @@ import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProv
 import { ContentfulCredentialsProvider } from "@plasmicpkgs/plasmic-contentful";
 import { EmbedCss } from "@plasmicpkgs/plasmic-embed-css";
 import { ParallaxProviderWrapper } from "@plasmicpkgs/react-scroll-parallax";
-import { ScrollProvider } from "../../ScrollContext"; // plasmic-import: 3-jE_xbm8Z75/codeComponent
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactElement;
@@ -32,10 +31,6 @@ export interface GlobalContextsProviderProps {
   parallaxProviderWrapperProps?: Partial<
     Omit<React.ComponentProps<typeof ParallaxProviderWrapper>, "children">
   >;
-
-  scrollProviderProps?: Partial<
-    Omit<React.ComponentProps<typeof ScrollProvider>, "children">
-  >;
 }
 
 export default function GlobalContextsProvider(
@@ -46,8 +41,7 @@ export default function GlobalContextsProvider(
     antdConfigProviderProps,
     contentfulCredentialsProviderProps,
     embedCssProps,
-    parallaxProviderWrapperProps,
-    scrollProviderProps
+    parallaxProviderWrapperProps
   } = props;
 
   const globalVariants = _useGlobalVariants();
@@ -179,7 +173,7 @@ export default function GlobalContextsProvider(
           css={
             embedCssProps && "css" in embedCssProps
               ? embedCssProps.css!
-              : undefined
+              : "/* Tr\u1ea1ng th\u00e1i m\u1eb7c \u0111\u1ecbnh: C\u00f3 vi\u1ec1n d\u01b0\u1edbi 1px */\r\n.my-sticky-menu {\r\n  /* Thi\u1ebft l\u1eadp vi\u1ec1n d\u01b0\u1edbi 1px n\u00e9t li\u1ec1n (c\u00f3 th\u1ec3 thay \u0111\u1ed5i m\u00e3 m\u00e0u rgba cho h\u1ee3p thi\u1ebft k\u1ebf c\u1ee7a b\u1ea1n) */\r\n  border-bottom: 1px solid rgba(255, 255, 255, 0.8) !important; \r\n  \r\n  /* Ch\u1ec9 t\u1eadp trung t\u1ea1o hi\u1ec7u \u1ee9ng m\u01b0\u1ee3t m\u00e0 cho \u0111\u1ed9 d\u00e0y c\u1ee7a vi\u1ec1n */\r\ntransition: border-color 0.4s ease-in-out !important;\r\n}\r\n\r\n/* Tr\u1ea1ng th\u00e1i khi \u0111\u00e3 cu\u1ed9n: Vi\u1ec1n d\u01b0\u1edbi m\u1ecfng d\u1ea7n v\u1ec1 0px, b\u1ecf hi\u1ec7u \u1ee9ng background */\r\n.is-scrolled .my-sticky-menu {\r\n  /* Gi\u1eef nguy\u00ean 1px, nh\u01b0ng m\u00e0u s\u1eafc b\u1ed1c h\u01a1i ho\u00e0n to\u00e0n */\r\n  border-bottom-color: transparent !important; \r\n}"
           }
         >
           <ParallaxProviderWrapper
@@ -191,7 +185,7 @@ export default function GlobalContextsProvider(
                 : "vertical"
             }
           >
-            <ScrollProvider {...scrollProviderProps}>{children}</ScrollProvider>
+            {children}
           </ParallaxProviderWrapper>
         </EmbedCss>
       </ContentfulCredentialsProvider>

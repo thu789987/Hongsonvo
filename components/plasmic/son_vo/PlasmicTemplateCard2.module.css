@@ -99,6 +99,20 @@
   align-self: stretch;
   flex-direction: column;
 }
+.img__cD443 {
+  animation: none;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  background: url("/plasmic/son_vo/images/gHOkTYo9C3G7TejBsyg9X2SjueJpg.png");
+  width: 100%;
+  aspect-ratio: 3/4;
+  min-width: 0;
+  border-radius: 8px;
+}
+.img__cD443 > picture > img {
+  object-fit: cover;
+}
 .bottom {
   background: none;
   height: auto;
@@ -140,7 +154,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.text__dZw7R {
+.text___21AfZ {
   animation: none;
   display: block;
   font-size: 14px;
@@ -161,7 +175,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.freeBox__qrLsn {
+.freeBox__scK8P {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -174,7 +188,7 @@
   min-width: 0;
   padding: 0px;
 }
-.freeBox__zl0Sx {
+.freeBox__dMAcD {
   display: flex;
   flex-direction: row;
   width: auto;
@@ -188,7 +202,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__bEoHv {
+.text__bz3Rk {
   animation: none;
   display: block;
   font-size: 8px;
@@ -200,7 +214,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.freeBox__m0QFu {
+.freeBox___0195R {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -216,7 +230,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__bfvur {
+.text__yPp2F {
   animation: none;
   display: block;
   font-size: 8px;
@@ -228,7 +242,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.freeBox___3HTu0 {
+.freeBox__aHsjc {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -244,7 +258,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__idsCo {
+.text___2J73T {
   animation: none;
   display: block;
   font-size: 8px;
@@ -256,7 +270,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.freeBox__mdfGw {
+.freeBox__iCxR3 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -272,7 +286,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__xJhCh {
+.text__gZ9Si {
   animation: none;
   display: block;
   font-size: 8px;
@@ -284,7 +298,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.freeBox__yOgF {
+.freeBox__rD0Oo {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -300,7 +314,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__l4V4Y {
+.text__vHqhX {
   animation: none;
   display: block;
   font-size: 8px;
@@ -312,7 +326,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.freeBox__hnjqN {
+.freeBox__uecmB {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -328,7 +342,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__lP0Jn {
+.text__lfNE {
   animation: none;
   display: block;
   font-size: 8px;
