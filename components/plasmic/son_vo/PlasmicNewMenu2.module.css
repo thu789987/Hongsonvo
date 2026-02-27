@@ -1,0 +1,113 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  mix-blend-mode: normal;
+  position: relative;
+  transition-property: all;
+  transition-duration: 300ms;
+  min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 300ms;
+  padding: 24px 60px;
+  border-bottom: 1px solid #ffffff80;
+}
+.menuscrolledState {
+  border-bottom-color: #ffffff00;
+}
+.freeBox__qknUp {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 0px;
+}
+.img {
+  object-fit: cover;
+  max-width: 100%;
+  width: 120px;
+  flex-shrink: 0;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+.freeBox___44Q1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  min-width: 0;
+  padding: 0px;
+}
+.freeBox__lopyv {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 0px;
+}
+.hackerText__ybLzV:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.hackerText__dsPPq:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.hackerText__mAvGv:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.hackerText__giAbD:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.freeBox__x6CJv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+.slotTargetHeaderTitle {
+  font-family: "Arial";
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  text-align: right;
+  line-height: 24px;
+  letter-spacing: -1.7999999523162842px;
+}

@@ -1239,6 +1239,58 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/my-journey-2"
+        },
+        {
+          "id": "JOkR_GpRIk06",
+          "name": "NewMenu2",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicNewMenu2.tsx",
+          "importSpec": {
+            "modulePath": "NewMenu2.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicNewMenu2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "GVnoh3mVfS2-",
+          "name": "LineBg2",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicLineBg2.tsx",
+          "importSpec": {
+            "modulePath": "LineBg2.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicLineBg2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "M0LGX-R-9kuT",
+          "name": "TemplateCard2",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicTemplateCard2.tsx",
+          "importSpec": {
+            "modulePath": "TemplateCard2.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicTemplateCard2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "n_BrlO7zQbu5",
+          "name": "FotterMain2",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicFotterMain2.tsx",
+          "importSpec": {
+            "modulePath": "FotterMain2.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicFotterMain2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
