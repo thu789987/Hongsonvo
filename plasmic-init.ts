@@ -42,6 +42,7 @@ import { CustomCursorWrapper } from './components/CustomCursorWrapper'; // Thêm
 import { InfiniteScroll } from './components/InfiniteScroll'; // Thêm ở đầu file
 import { ScrollPlayVideo } from "./components/ScrollPlayVideo";
 import ScrollContext from "./components/ScrollContext";
+import GlobalLoading from "./components/GlobalLoading";
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -451,4 +452,18 @@ PLASMIC.registerComponent(ScrollContext, {
   },
   importPath: "./components/ScrollContext",
   isDefaultExport: true, // 👈 Rất quan trọng vì file mới dùng export default
+});
+
+// Thêm "as any" vào sau component để TypeScript không tự ý bắt lỗi Overload nữa
+PLASMIC.registerComponent(GlobalLoading as any, {
+  name: "GlobalLoading",
+  props: {
+    // Đã xóa className ở đây vì Plasmic tự động quản lý nó
+    barColor: "string",    
+    bgColor: "string",     
+    textColor: "string",   
+    durationMs: "number",
+  },
+  importPath: "./components/GlobalLoading",
+  isDefaultExport: true,
 });
