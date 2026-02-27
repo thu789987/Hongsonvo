@@ -181,7 +181,9 @@ function PlasmicNewMenu__RenderFunc(props: {
         projectcss.plasmic_mixins,
         styleTokensClassNames,
         sty.menu,
-        hasVariant($state, "scrolledState", "scrolledState") ? `` : ``,
+        hasVariant($state, "scrolledState", "scrolledState")
+          ? ``
+          : "my-sticky-menu",
         {
           [sty.menuscrolledState]: hasVariant(
             $state,
