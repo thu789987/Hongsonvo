@@ -7,7 +7,7 @@ interface GlobalLoadingProps {
   barColor?: string;
   bgColor?: string;
   textColor?: string;
-  textSize?: string; // Bổ sung prop chỉnh kích thước chữ
+  textSize?: string;
   durationMs?: number;
 }
 
@@ -16,7 +16,7 @@ export default function GlobalLoading({
   barColor = "#000000",
   bgColor = "#ffffff",
   textColor = "#000000",
-  textSize = "3rem", // Mặc định là 3rem, bạn có thể đổi trên Plasmic
+  textSize = "3rem",
   durationMs = 2000,
 }: GlobalLoadingProps) {
   const [progress, setProgress] = useState(0);
@@ -57,30 +57,32 @@ export default function GlobalLoading({
         backgroundColor: bgColor,
         display: "flex",
         flexDirection: "column",
-        alignItems: "center", // Giữa màn hình theo chiều ngang
-        justifyContent: "center", // Giữa màn hình theo chiều dọc
+        alignItems: "center",
+        justifyContent: "center",
         zIndex: 99999,
         transition: "opacity 0.5s ease-out",
         opacity: progress === 100 ? 0 : 1,
         pointerEvents: progress === 100 ? "none" : "auto",
       }}
     >
-      {/* KHUNG CHỨA RỘNG 80% MÀN HÌNH */}
+      {/* KHUNG CHỨA RỘNG 80% */}
       <div
         style={{
-          width: "80%", // Thanh loading dài 80% viewport
+          width: "80%", 
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start", // Ép toàn bộ nội dung bên trong (chữ số) sang lề trái
+          alignItems: "flex-start",
+          gap: "20px", // BÍ QUYẾT 1: Dùng gap để tạo khoảng cách cố định vĩnh viễn giữa chữ và thanh bar
         }}
       >
         {/* Khối hiển thị số % */}
         <h1
           style={{
             color: textColor,
-            fontSize: textSize, // Kích thước chữ tùy chỉnh
+            fontSize: textSize, 
             fontWeight: "bold",
-            margin: "0 0 20px 0", // Bỏ margin thừa, chỉ cách thanh bar ở dưới 20px
+            lineHeight: 1, // BÍ QUYẾT 2: Ép chiều cao dòng ôm sát vào chữ, không cho đè xuống dưới
+            margin: 0, // Xóa bỏ margin mặc định thừa thãi
           }}
         >
           {Math.floor(progress)}%
@@ -89,7 +91,7 @@ export default function GlobalLoading({
         {/* Thanh Background Progress */}
         <div
           style={{
-            width: "100%", // Chiếm trọn 100% của cái khung 80% ở trên
+            width: "100%", 
             height: "6px",
             backgroundColor: "rgba(0,0,0,0.1)",
             borderRadius: "10px",
