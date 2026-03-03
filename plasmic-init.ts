@@ -458,10 +458,10 @@ PLASMIC.registerComponent(ScrollContext, {
 PLASMIC.registerComponent(GlobalLoading as any, {
   name: "GlobalLoading",
   props: {
-    // Đã xóa className ở đây vì Plasmic tự động quản lý nó
-    barColor: "string",    
-    bgColor: "string",     
-    textColor: "string",   
+    barColor: "string",
+    bgColor: "string",
+    textColor: "string",
+    textSize: "string",   // 👇 Bổ sung dòng này để chỉnh size chữ trên Studio
     durationMs: "number",
   },
   importPath: "./components/GlobalLoading",
