@@ -33,7 +33,11 @@ export default function GlobalLoading({
         const newProgress = oldProgress + step;
         if (newProgress >= 100) {
           clearInterval(timer);
-          setTimeout(() => setIsHidden(true), 500);
+          setTimeout(() => {
+            setIsHidden(true);
+            // 👇 BÍ QUYẾT Ở ĐÂY: Gắn thẻ 'page-loaded' vào body khi loading xong
+            document.body.classList.add("page-loaded"); 
+          }, 500);
           return 100;
         }
         return newProgress;
