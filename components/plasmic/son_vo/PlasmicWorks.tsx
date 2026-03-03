@@ -184,13 +184,13 @@ export type PlasmicWorks__OverridesType = {
   templateCard7?: Flex__<typeof TemplateCard>;
   templateCard8?: Flex__<typeof TemplateCard>;
   patternGrid?: Flex__<typeof PatternGrid>;
-  templateCard9?: Flex__<typeof TemplateCard>;
-  service05?: Flex__<"div">;
-  service15?: Flex__<"div">;
-  service25?: Flex__<"div">;
-  service35?: Flex__<"div">;
-  service45?: Flex__<"div">;
-  service55?: Flex__<"div">;
+  templateCard10?: Flex__<typeof TemplateCard>;
+  service06?: Flex__<"div">;
+  service16?: Flex__<"div">;
+  service26?: Flex__<"div">;
+  service36?: Flex__<"div">;
+  service46?: Flex__<"div">;
+  service56?: Flex__<"div">;
   section?: Flex__<typeof Section>;
 };
 
@@ -1060,7 +1060,7 @@ function PlasmicWorks__RenderFunc(props: {
                     data-plasmic-name={"patternGrid"}
                     data-plasmic-override={overrides.patternGrid}
                     className={classNames("__wab_instance", sty.patternGrid)}
-                    columnGap={16}
+                    columnGap={24}
                     rowGap={40}
                   >
                     {(_par =>
@@ -1086,7 +1086,7 @@ function PlasmicWorks__RenderFunc(props: {
                           blurAmount={5}
                           className={classNames(
                             "__wab_instance",
-                            sty.revealOnScroll___07YrR
+                            sty.revealOnScroll__j7Ipg
                           )}
                           delay={(() => {
                             try {
@@ -1101,22 +1101,37 @@ function PlasmicWorks__RenderFunc(props: {
                               throw e;
                             }
                           })()}
-                          duration={0.8}
+                          duration={1.6}
                           key={currentIndex}
                           yOffset={50}
                         >
                           <TemplateCard
-                            data-plasmic-name={"templateCard9"}
-                            data-plasmic-override={overrides.templateCard9}
+                            data-plasmic-name={"templateCard10"}
+                            data-plasmic-override={overrides.templateCard10}
                             className={classNames(
                               "__wab_instance",
-                              sty.templateCard9
+                              sty.templateCard10
                             )}
+                            image2={currentItem["Main Image"]}
+                            imageCondition={(() => {
+                              try {
+                                return !currentItem["Video"];
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return false;
+                                }
+                                throw e;
+                              }
+                            })()}
+                            link={`/works/${currentItem.Slug}`}
                             softwareContainerSoftware2={
                               <div
                                 className={classNames(
                                   projectcss.all,
-                                  sty.freeBox___304
+                                  sty.freeBox__lYi1A
                                 )}
                               >
                                 {(() => {
@@ -1139,18 +1154,18 @@ function PlasmicWorks__RenderFunc(props: {
                                   }
                                 })() ? (
                                   <div
-                                    data-plasmic-name={"service05"}
-                                    data-plasmic-override={overrides.service05}
+                                    data-plasmic-name={"service06"}
+                                    data-plasmic-override={overrides.service06}
                                     className={classNames(
                                       projectcss.all,
-                                      sty.service05
+                                      sty.service06
                                     )}
                                   >
                                     <div
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.__wab_text,
-                                        sty.text__f7Hw2
+                                        sty.text__qwHxq
                                       )}
                                     >
                                       {"UI/UX Design"}
@@ -1177,18 +1192,18 @@ function PlasmicWorks__RenderFunc(props: {
                                   }
                                 })() ? (
                                   <div
-                                    data-plasmic-name={"service15"}
-                                    data-plasmic-override={overrides.service15}
+                                    data-plasmic-name={"service16"}
+                                    data-plasmic-override={overrides.service16}
                                     className={classNames(
                                       projectcss.all,
-                                      sty.service15
+                                      sty.service16
                                     )}
                                   >
                                     <div
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.__wab_text,
-                                        sty.text__b9H2Y
+                                        sty.text___8GuF
                                       )}
                                     >
                                       {"E-commerce"}
@@ -1213,18 +1228,18 @@ function PlasmicWorks__RenderFunc(props: {
                                   }
                                 })() ? (
                                   <div
-                                    data-plasmic-name={"service25"}
-                                    data-plasmic-override={overrides.service25}
+                                    data-plasmic-name={"service26"}
+                                    data-plasmic-override={overrides.service26}
                                     className={classNames(
                                       projectcss.all,
-                                      sty.service25
+                                      sty.service26
                                     )}
                                   >
                                     <div
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.__wab_text,
-                                        sty.text__mXaRk
+                                        sty.text__bHe8O
                                       )}
                                     >
                                       {"SEO"}
@@ -1249,18 +1264,18 @@ function PlasmicWorks__RenderFunc(props: {
                                   }
                                 })() ? (
                                   <div
-                                    data-plasmic-name={"service35"}
-                                    data-plasmic-override={overrides.service35}
+                                    data-plasmic-name={"service36"}
+                                    data-plasmic-override={overrides.service36}
                                     className={classNames(
                                       projectcss.all,
-                                      sty.service35
+                                      sty.service36
                                     )}
                                   >
                                     <div
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.__wab_text,
-                                        sty.text___6Mveo
+                                        sty.text__xtLgu
                                       )}
                                     >
                                       {"Content"}
@@ -1287,18 +1302,18 @@ function PlasmicWorks__RenderFunc(props: {
                                   }
                                 })() ? (
                                   <div
-                                    data-plasmic-name={"service45"}
-                                    data-plasmic-override={overrides.service45}
+                                    data-plasmic-name={"service46"}
+                                    data-plasmic-override={overrides.service46}
                                     className={classNames(
                                       projectcss.all,
-                                      sty.service45
+                                      sty.service46
                                     )}
                                   >
                                     <div
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.__wab_text,
-                                        sty.text__p5Jz
+                                        sty.text__qIfPb
                                       )}
                                     >
                                       {"Brand Idenity"}
@@ -1325,18 +1340,18 @@ function PlasmicWorks__RenderFunc(props: {
                                   }
                                 })() ? (
                                   <div
-                                    data-plasmic-name={"service55"}
-                                    data-plasmic-override={overrides.service55}
+                                    data-plasmic-name={"service56"}
+                                    data-plasmic-override={overrides.service56}
                                     className={classNames(
                                       projectcss.all,
-                                      sty.service55
+                                      sty.service56
                                     )}
                                   >
                                     <div
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.__wab_text,
-                                        sty.text___6KvRw
+                                        sty.text___6E2C
                                       )}
                                     >
                                       {"Web Development"}
@@ -1345,6 +1360,21 @@ function PlasmicWorks__RenderFunc(props: {
                                 ) : null}
                               </div>
                             }
+                            title={currentItem["Title"]}
+                            video={currentItem.Video}
+                            videoCondition={(() => {
+                              try {
+                                return currentItem["Video"];
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()}
                           />
                         </RevealOnScroll>
                       );
@@ -1469,13 +1499,13 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55",
+    "templateCard10",
+    "service06",
+    "service16",
+    "service26",
+    "service36",
+    "service46",
+    "service56",
     "section"
   ],
   smoothScroll: [
@@ -1522,13 +1552,13 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55",
+    "templateCard10",
+    "service06",
+    "service16",
+    "service26",
+    "service36",
+    "service46",
+    "service56",
     "section"
   ],
   scrollDetector: ["scrollDetector", "newMenu"],
@@ -1667,13 +1697,13 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
+    "templateCard10",
+    "service06",
+    "service16",
+    "service26",
+    "service36",
+    "service46",
+    "service56"
   ],
   container49: [
     "container49",
@@ -1686,13 +1716,13 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
+    "templateCard10",
+    "service06",
+    "service16",
+    "service26",
+    "service36",
+    "service46",
+    "service56"
   ],
   templateCard: ["templateCard"],
   templateCard2: ["templateCard2"],
@@ -1704,29 +1734,29 @@ const PlasmicDescendants = {
   templateCard8: ["templateCard8"],
   patternGrid: [
     "patternGrid",
-    "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
+    "templateCard10",
+    "service06",
+    "service16",
+    "service26",
+    "service36",
+    "service46",
+    "service56"
   ],
-  templateCard9: [
-    "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
+  templateCard10: [
+    "templateCard10",
+    "service06",
+    "service16",
+    "service26",
+    "service36",
+    "service46",
+    "service56"
   ],
-  service05: ["service05"],
-  service15: ["service15"],
-  service25: ["service25"],
-  service35: ["service35"],
-  service45: ["service45"],
-  service55: ["service55"],
+  service06: ["service06"],
+  service16: ["service16"],
+  service26: ["service26"],
+  service36: ["service36"],
+  service46: ["service46"],
+  service56: ["service56"],
   section: ["section"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1777,13 +1807,13 @@ type NodeDefaultElementType = {
   templateCard7: typeof TemplateCard;
   templateCard8: typeof TemplateCard;
   patternGrid: typeof PatternGrid;
-  templateCard9: typeof TemplateCard;
-  service05: "div";
-  service15: "div";
-  service25: "div";
-  service35: "div";
-  service45: "div";
-  service55: "div";
+  templateCard10: typeof TemplateCard;
+  service06: "div";
+  service16: "div";
+  service26: "div";
+  service36: "div";
+  service46: "div";
+  service56: "div";
   section: typeof Section;
 };
 
@@ -1927,13 +1957,13 @@ export const PlasmicWorks = Object.assign(
     templateCard7: makeNodeComponent("templateCard7"),
     templateCard8: makeNodeComponent("templateCard8"),
     patternGrid: makeNodeComponent("patternGrid"),
-    templateCard9: makeNodeComponent("templateCard9"),
-    service05: makeNodeComponent("service05"),
-    service15: makeNodeComponent("service15"),
-    service25: makeNodeComponent("service25"),
-    service35: makeNodeComponent("service35"),
-    service45: makeNodeComponent("service45"),
-    service55: makeNodeComponent("service55"),
+    templateCard10: makeNodeComponent("templateCard10"),
+    service06: makeNodeComponent("service06"),
+    service16: makeNodeComponent("service16"),
+    service26: makeNodeComponent("service26"),
+    service36: makeNodeComponent("service36"),
+    service46: makeNodeComponent("service46"),
+    service56: makeNodeComponent("service56"),
     section: makeNodeComponent("section"),
 
     // Metadata about props expected for PlasmicWorks

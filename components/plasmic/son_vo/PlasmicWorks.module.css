@@ -1575,19 +1575,23 @@
   position: relative;
 }
 .patternGrid:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
   z-index: 10;
 }
-.revealOnScroll___07YrR:global(.__wab_instance) {
+.revealOnScroll__j7Ipg:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
   z-index: 10;
 }
-.templateCard9:global(.__wab_instance) {
+.templateCard10:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
 }
-.freeBox___304 {
+.freeBox__lYi1A {
+  animation: none;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -1600,7 +1604,8 @@
   min-width: 0;
   padding: 0px;
 }
-.service05 {
+.service06 {
+  animation: none;
   display: flex;
   flex-direction: row;
   width: auto;
@@ -1614,7 +1619,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__f7Hw2 {
+.text__qwHxq {
   animation: none;
   display: block;
   font-size: 12px;
@@ -1626,7 +1631,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.service15 {
+.service16 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -1642,7 +1647,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__b9H2Y {
+.text___8GuF {
   animation: none;
   display: block;
   font-size: 12px;
@@ -1654,7 +1659,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.service25 {
+.service26 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -1670,7 +1675,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__mXaRk {
+.text__bHe8O {
   animation: none;
   display: block;
   font-size: 12px;
@@ -1682,7 +1687,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.service35 {
+.service36 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -1698,7 +1703,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text___6Mveo {
+.text__xtLgu {
   animation: none;
   display: block;
   font-size: 12px;
@@ -1710,7 +1715,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.service45 {
+.service46 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -1726,7 +1731,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__p5Jz {
+.text__qIfPb {
   animation: none;
   display: block;
   font-size: 12px;
@@ -1738,7 +1743,7 @@
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.service55 {
+.service56 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -1754,7 +1759,7 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text___6KvRw {
+.text___6E2C {
   animation: none;
   display: block;
   font-size: 12px;
