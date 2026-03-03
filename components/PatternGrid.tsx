@@ -72,8 +72,21 @@ export function PatternGrid({
         </div>
       ))}
       
-      {/* Style Responsive - Mobile về 1 cột */}
+      {/* Style Responsive - Tablet 2 cột, Mobile 1 cột */}
       <style dangerouslySetInnerHTML={{__html: `
+        /* Tablet: Dưới 1024px -> 2 cột */
+        @media (max-width: 1024px) {
+          ${selector} {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+          ${selector} > div {
+            /* Ép tất cả các khối về 1 cột để nó chia thành 2 cột đều nhau. 
+               (Nếu bạn muốn những khối to chiếm trọn cả dòng ở Tablet thì xóa dòng grid-column bên dưới đi nhé) */
+            grid-column: span 1 !important; 
+          }
+        }
+
+        /* Mobile: Dưới 768px -> 1 cột */
         @media (max-width: 768px) {
           ${selector} {
             grid-template-columns: 1fr !important;
