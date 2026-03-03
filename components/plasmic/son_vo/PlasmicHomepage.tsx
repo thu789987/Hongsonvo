@@ -1822,7 +1822,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               throw e;
                             }
                           })()}
-                          link={currentItem.Slug}
+                          link={`/works/${currentItem.Slug}`}
                           softwareContainerSoftware2={
                             <div
                               className={classNames(
