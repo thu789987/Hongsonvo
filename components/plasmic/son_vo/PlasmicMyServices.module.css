@@ -773,43 +773,6 @@
   animation: none;
   max-width: 100%;
 }
-.link__mkAzK {
-  animation: none;
-  display: flex;
-  pointer-events: none;
-}
-.htmlVideo4:global(.__wab_instance) {
-  animation: none;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: cover;
-  min-width: 0;
-}
-.img__mQ4Ed {
-  animation: none;
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-  background: url("/plasmic/son_vo/images/gHOkTYo9C3G7TejBsyg9X2SjueJpg.png");
-  width: 100%;
-  min-width: 0;
-  border-radius: 8px;
-}
-.img__mQ4Ed > picture > img {
-  object-fit: cover;
-}
-.link__fqVcp {
-  animation: none;
-  display: block;
-  font-size: 16px;
-  font-family: "Outfit", sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.47999998927116394px;
-  line-height: 160%;
-  color: var(--token-VsMZPNxcE2dF);
-  position: relative;
-}
 .freeBox__lpcRy {
   animation: none;
   flex-direction: row;

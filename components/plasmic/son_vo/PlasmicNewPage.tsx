@@ -101,7 +101,14 @@ function wrapQueriesWithLoadingProxy($q: any): any {
   });
 }
 
-export function generateDynamicMetadata($q: any, $ctx: any) {
+export type PageCtx = {
+  pageRoute: string;
+  pagePath: string;
+  params: Record<string, string | string[] | undefined>;
+  query: Record<string, string | string[] | undefined>;
+};
+
+export function generateDynamicMetadata($q: any, $ctx: PageCtx) {
   return {
     openGraph: {},
     twitter: {
@@ -143,6 +150,7 @@ export type PlasmicNewPage__OverridesType = {
   container13?: Flex__<"div">;
   scrollParallax?: Flex__<typeof ParallaxWrapper>;
   img2?: Flex__<"div">;
+  img?: Flex__<typeof PlasmicImg__>;
   htmlVideo?: Flex__<typeof Video>;
   section2?: Flex__<"div">;
   container2?: Flex__<"div">;
@@ -186,7 +194,6 @@ export type PlasmicNewPage__OverridesType = {
   theWebsiteBecameAnImportantSpaceToShowcase?: Flex__<"div">;
   section10?: Flex__<"div">;
   prevous?: Flex__<typeof TemplateCard>;
-  htmlVideo13?: Flex__<typeof Video>;
   service06?: Flex__<"div">;
   service16?: Flex__<"div">;
   service26?: Flex__<"div">;
@@ -194,7 +201,6 @@ export type PlasmicNewPage__OverridesType = {
   service46?: Flex__<"div">;
   service56?: Flex__<"div">;
   nExt?: Flex__<typeof TemplateCard>;
-  htmlVideo12?: Flex__<typeof Video>;
   service05?: Flex__<"div">;
   service15?: Flex__<"div">;
   service25?: Flex__<"div">;
@@ -282,7 +288,7 @@ function PlasmicNewPage__RenderFunc(props: {
 
   const pageMetadata = generateDynamicMetadata(
     wrapQueriesWithLoadingProxy({}),
-    $ctx
+    $ctx as PageCtx
   );
 
   const styleTokensClassNames = _useStyleTokens();
@@ -1030,8 +1036,10 @@ function PlasmicNewPage__RenderFunc(props: {
                         }
                       })() ? (
                         <PlasmicImg__
+                          data-plasmic-name={"img"}
+                          data-plasmic-override={overrides.img}
                           alt={""}
-                          className={classNames(sty.img___1NeM)}
+                          className={classNames(sty.img)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -2834,197 +2842,6 @@ function PlasmicNewPage__RenderFunc(props: {
                       data-plasmic-name={"prevous"}
                       data-plasmic-override={overrides.prevous}
                       className={classNames("__wab_instance", sty.prevous)}
-                      container9={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__p5ASl
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              const list = $queries.allList?.data || [];
-                              const currentIndex = list.findIndex(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              if (currentIndex === -1) return "";
-                              const prevIndex =
-                                currentIndex === 0
-                                  ? list.length - 1
-                                  : currentIndex - 1;
-                              const prevItem = list[prevIndex];
-                              return (
-                                prevItem?.["Title"] ||
-                                prevItem?.["title"] ||
-                                "Bài mới nhất"
-                              );
-                            })()}
-                          </React.Fragment>
-                        </div>
-                      }
-                      img2={
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return !(() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return false;
-                                const prevIndex =
-                                  currentIndex === 0
-                                    ? list.length - 1
-                                    : currentIndex - 1;
-                                const prevItem = list[prevIndex];
-                                const video =
-                                  prevItem?.["Video"] || prevItem?.["video"];
-                                return !!video;
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })() ? (
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__bVe35)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"100%"}
-                              loading={"lazy"}
-                              src={(() => {
-                                try {
-                                  return (() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    const list = $queries.allList?.data || [];
-                                    const currentIndex = list.findIndex(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    if (currentIndex === -1) return "";
-                                    const prevIndex =
-                                      currentIndex === 0
-                                        ? list.length - 1
-                                        : currentIndex - 1;
-                                    const prevItem = list[prevIndex];
-                                    return (
-                                      prevItem?.["Main Image"] ||
-                                      prevItem?.["Main Image"] ||
-                                      "Bài mới nhất"
-                                    );
-                                  })();
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return undefined;
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            />
-                          ) : null}
-                          {(() => {
-                            try {
-                              return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return false;
-                                const prevIndex =
-                                  currentIndex === 0
-                                    ? list.length - 1
-                                    : currentIndex - 1;
-                                const prevItem = list[prevIndex];
-                                const video =
-                                  prevItem?.["Video"] || prevItem?.["video"];
-                                return !!video;
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })() ? (
-                            <Video
-                              data-plasmic-name={"htmlVideo13"}
-                              data-plasmic-override={overrides.htmlVideo13}
-                              autoPlay={true}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.htmlVideo13
-                              )}
-                              controls={false}
-                              loop={true}
-                              muted={true}
-                              ref={ref => {
-                                $refs["htmlVideo13"] = ref;
-                              }}
-                              src={(() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return "";
-                                const prevIndex =
-                                  currentIndex === 0
-                                    ? list.length - 1
-                                    : currentIndex - 1;
-                                const prevItem = list[prevIndex];
-                                return (
-                                  prevItem?.["Video"] ||
-                                  prevItem?.["Video"] ||
-                                  "Bài mới nhất"
-                                );
-                              })()}
-                            />
-                          ) : null}
-                        </React.Fragment>
-                      }
                       softwareContainerSoftware2={
                         <div
                           className={classNames(
@@ -3427,197 +3244,6 @@ function PlasmicNewPage__RenderFunc(props: {
                       data-plasmic-name={"nExt"}
                       data-plasmic-override={overrides.nExt}
                       className={classNames("__wab_instance", sty.nExt)}
-                      container9={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text___3FTAd
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              const list = $queries.allList?.data || [];
-                              const currentIndex = list.findIndex(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              if (currentIndex === -1) return "";
-                              const nextIndex =
-                                currentIndex === list.length - 1
-                                  ? 0
-                                  : currentIndex + 1;
-                              const nextItem = list[nextIndex];
-                              return (
-                                nextItem?.["Title"] ||
-                                nextItem?.["title"] ||
-                                "Bài đầu tiên"
-                              );
-                            })()}
-                          </React.Fragment>
-                        </div>
-                      }
-                      img2={
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return !(() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return false;
-                                const nextIndex =
-                                  currentIndex === list.length - 1
-                                    ? 0
-                                    : currentIndex + 1;
-                                const nextItem = list[nextIndex];
-                                const video =
-                                  nextItem?.["Video"] || nextItem?.["video"];
-                                return !!video;
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })() ? (
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__eJbxW)}
-                              displayHeight={"auto"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"0"}
-                              displayWidth={"100%"}
-                              loading={"lazy"}
-                              src={(() => {
-                                try {
-                                  return (() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    const list = $queries.allList?.data || [];
-                                    const currentIndex = list.findIndex(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    if (currentIndex === -1) return "";
-                                    const nextIndex =
-                                      currentIndex === list.length - 1
-                                        ? 0
-                                        : currentIndex + 1;
-                                    const nextItem = list[nextIndex];
-                                    return (
-                                      nextItem?.["Main Image"] ||
-                                      nextItem?.["Main Image"] ||
-                                      "Bài đầu tiên"
-                                    );
-                                  })();
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return undefined;
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            />
-                          ) : null}
-                          {(() => {
-                            try {
-                              return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return false;
-                                const prevIndex =
-                                  currentIndex === 0
-                                    ? list.length - 1
-                                    : currentIndex - 1;
-                                const prevItem = list[prevIndex];
-                                const video =
-                                  prevItem?.["Video"] || prevItem?.["video"];
-                                return !!video;
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })() ? (
-                            <Video
-                              data-plasmic-name={"htmlVideo12"}
-                              data-plasmic-override={overrides.htmlVideo12}
-                              autoPlay={true}
-                              className={classNames(
-                                "__wab_instance",
-                                sty.htmlVideo12
-                              )}
-                              controls={false}
-                              loop={true}
-                              muted={true}
-                              ref={ref => {
-                                $refs["htmlVideo12"] = ref;
-                              }}
-                              src={(() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return "";
-                                const nextIndex =
-                                  currentIndex === list.length - 1
-                                    ? 0
-                                    : currentIndex + 1;
-                                const nextItem = list[nextIndex];
-                                return (
-                                  nextItem?.["Video"] ||
-                                  nextItem?.["video"] ||
-                                  "Bài đầu tiên"
-                                );
-                              })()}
-                            />
-                          ) : null}
-                        </React.Fragment>
-                      }
                       softwareContainerSoftware2={
                         <div
                           className={classNames(
@@ -4041,6 +3667,7 @@ const PlasmicDescendants = {
     "container13",
     "scrollParallax",
     "img2",
+    "img",
     "htmlVideo",
     "section2",
     "container2",
@@ -4084,7 +3711,6 @@ const PlasmicDescendants = {
     "theWebsiteBecameAnImportantSpaceToShowcase",
     "section10",
     "prevous",
-    "htmlVideo13",
     "service06",
     "service16",
     "service26",
@@ -4092,7 +3718,6 @@ const PlasmicDescendants = {
     "service46",
     "service56",
     "nExt",
-    "htmlVideo12",
     "service05",
     "service15",
     "service25",
@@ -4121,6 +3746,7 @@ const PlasmicDescendants = {
     "container13",
     "scrollParallax",
     "img2",
+    "img",
     "htmlVideo",
     "section2",
     "container2",
@@ -4164,7 +3790,6 @@ const PlasmicDescendants = {
     "theWebsiteBecameAnImportantSpaceToShowcase",
     "section10",
     "prevous",
-    "htmlVideo13",
     "service06",
     "service16",
     "service26",
@@ -4172,7 +3797,6 @@ const PlasmicDescendants = {
     "service46",
     "service56",
     "nExt",
-    "htmlVideo12",
     "service05",
     "service15",
     "service25",
@@ -4257,8 +3881,9 @@ const PlasmicDescendants = {
   text8: ["text8"],
   text5: ["text5"],
   container13: ["container13"],
-  scrollParallax: ["scrollParallax", "img2", "htmlVideo"],
-  img2: ["img2", "htmlVideo"],
+  scrollParallax: ["scrollParallax", "img2", "img", "htmlVideo"],
+  img2: ["img2", "img", "htmlVideo"],
+  img: ["img"],
   htmlVideo: ["htmlVideo"],
   section2: [
     "section2",
@@ -4383,7 +4008,6 @@ const PlasmicDescendants = {
   section10: [
     "section10",
     "prevous",
-    "htmlVideo13",
     "service06",
     "service16",
     "service26",
@@ -4391,7 +4015,6 @@ const PlasmicDescendants = {
     "service46",
     "service56",
     "nExt",
-    "htmlVideo12",
     "service05",
     "service15",
     "service25",
@@ -4401,7 +4024,6 @@ const PlasmicDescendants = {
   ],
   prevous: [
     "prevous",
-    "htmlVideo13",
     "service06",
     "service16",
     "service26",
@@ -4409,7 +4031,6 @@ const PlasmicDescendants = {
     "service46",
     "service56"
   ],
-  htmlVideo13: ["htmlVideo13"],
   service06: ["service06"],
   service16: ["service16"],
   service26: ["service26"],
@@ -4418,7 +4039,6 @@ const PlasmicDescendants = {
   service56: ["service56"],
   nExt: [
     "nExt",
-    "htmlVideo12",
     "service05",
     "service15",
     "service25",
@@ -4426,7 +4046,6 @@ const PlasmicDescendants = {
     "service45",
     "service55"
   ],
-  htmlVideo12: ["htmlVideo12"],
   service05: ["service05"],
   service15: ["service15"],
   service25: ["service25"],
@@ -4459,6 +4078,7 @@ type NodeDefaultElementType = {
   container13: "div";
   scrollParallax: typeof ParallaxWrapper;
   img2: "div";
+  img: typeof PlasmicImg__;
   htmlVideo: typeof Video;
   section2: "div";
   container2: "div";
@@ -4502,7 +4122,6 @@ type NodeDefaultElementType = {
   theWebsiteBecameAnImportantSpaceToShowcase: "div";
   section10: "div";
   prevous: typeof TemplateCard;
-  htmlVideo13: typeof Video;
   service06: "div";
   service16: "div";
   service26: "div";
@@ -4510,7 +4129,6 @@ type NodeDefaultElementType = {
   service46: "div";
   service56: "div";
   nExt: typeof TemplateCard;
-  htmlVideo12: typeof Video;
   service05: "div";
   service15: "div";
   service25: "div";
@@ -4626,6 +4244,7 @@ export const PlasmicNewPage = Object.assign(
     container13: makeNodeComponent("container13"),
     scrollParallax: makeNodeComponent("scrollParallax"),
     img2: makeNodeComponent("img2"),
+    img: makeNodeComponent("img"),
     htmlVideo: makeNodeComponent("htmlVideo"),
     section2: makeNodeComponent("section2"),
     container2: makeNodeComponent("container2"),
@@ -4677,7 +4296,6 @@ export const PlasmicNewPage = Object.assign(
     ),
     section10: makeNodeComponent("section10"),
     prevous: makeNodeComponent("prevous"),
-    htmlVideo13: makeNodeComponent("htmlVideo13"),
     service06: makeNodeComponent("service06"),
     service16: makeNodeComponent("service16"),
     service26: makeNodeComponent("service26"),
@@ -4685,7 +4303,6 @@ export const PlasmicNewPage = Object.assign(
     service46: makeNodeComponent("service46"),
     service56: makeNodeComponent("service56"),
     nExt: makeNodeComponent("nExt"),
-    htmlVideo12: makeNodeComponent("htmlVideo12"),
     service05: makeNodeComponent("service05"),
     service15: makeNodeComponent("service15"),
     service25: makeNodeComponent("service25"),
@@ -4698,9 +4315,10 @@ export const PlasmicNewPage = Object.assign(
     internalArgProps: PlasmicNewPage__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
+      pageRoute: "/works/[Slug]",
       pagePath: "/works/[Slug]",
-      searchParams: {},
-      params: {}
+      params: {},
+      query: {}
     })
   }
 );

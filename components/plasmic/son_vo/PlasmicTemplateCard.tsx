@@ -59,6 +59,9 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { HoverController } from "../../HoverController"; // plasmic-import: NVKDfXP9Roz4/codeComponent
+import { Video } from "@plasmicpkgs/plasmic-basic-components";
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/styleTokensProvider
 
@@ -70,26 +73,34 @@ import sty from "./PlasmicTemplateCard.module.css"; // plasmic-import: u1Kyfwr4M
 createPlasmicElementProxy;
 
 export type PlasmicTemplateCard__VariantMembers = {
-  hover: "hover";
+  project1: "project1";
 };
 export type PlasmicTemplateCard__VariantsArgs = {
-  hover?: SingleBooleanChoiceArg<"hover">;
+  project1?: SingleBooleanChoiceArg<"project1">;
 };
 type VariantPropType = keyof PlasmicTemplateCard__VariantsArgs;
 export const PlasmicTemplateCard__VariantProps = new Array<VariantPropType>(
-  "hover"
+  "project1"
 );
 
 export type PlasmicTemplateCard__ArgsType = {
-  img2?: React.ReactNode;
-  container9?: React.ReactNode;
+  video?: string;
+  videoCondition?: boolean;
+  imageCondition?: boolean;
+  link?: string;
+  title?: string;
   softwareContainerSoftware2?: React.ReactNode;
+  image2?: string;
 };
 type ArgPropType = keyof PlasmicTemplateCard__ArgsType;
 export const PlasmicTemplateCard__ArgProps = new Array<ArgPropType>(
-  "img2",
-  "container9",
-  "softwareContainerSoftware2"
+  "video",
+  "videoCondition",
+  "imageCondition",
+  "link",
+  "title",
+  "softwareContainerSoftware2",
+  "image2"
 );
 
 export type PlasmicTemplateCard__OverridesType = {
@@ -102,18 +113,25 @@ export type PlasmicTemplateCard__OverridesType = {
   _3?: Flex__<"div">;
   _4?: Flex__<"div">;
   overlay2?: Flex__<"div">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  hoverController?: Flex__<typeof HoverController>;
+  htmlVideo?: Flex__<typeof Video>;
   bottom?: Flex__<"div">;
   top2?: Flex__<"div">;
   templateName?: Flex__<"div">;
-  container8?: Flex__<"div">;
+  text?: Flex__<"div">;
   container10?: Flex__<"div">;
 };
 
 export interface DefaultTemplateCardProps {
-  img2?: React.ReactNode;
-  container9?: React.ReactNode;
+  video?: string;
+  videoCondition?: boolean;
+  imageCondition?: boolean;
+  link?: string;
+  title?: string;
   softwareContainerSoftware2?: React.ReactNode;
-  hover?: SingleBooleanChoiceArg<"hover">;
+  image2?: string;
+  project1?: SingleBooleanChoiceArg<"project1">;
   className?: string;
 }
 
@@ -137,7 +155,14 @@ function PlasmicTemplateCard__RenderFunc(props: {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          video:
+            "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
+          videoCondition: false,
+          imageCondition: true,
+          image2:
+            "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp"
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -161,16 +186,42 @@ function PlasmicTemplateCard__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "variable",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
-      },
-      {
-        path: "hover",
+        path: "project1",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.hover
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
+          (() => {
+            try {
+              return $state.hover2;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })() ?? $props.project1
+      },
+      {
+        path: "hover2",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $q, $ctx }) =>
+          (() => {
+            try {
+              return false;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return false;
+              }
+              throw e;
+            }
+          })()
       }
     ],
     [$props, $ctx, $refs]
@@ -198,7 +249,13 @@ function PlasmicTemplateCard__RenderFunc(props: {
         projectcss.plasmic_mixins,
         styleTokensClassNames,
         sty.linkDesktopColored,
-        { [sty.linkDesktopColoredhover]: hasVariant($state, "hover", "hover") }
+        {
+          [sty.linkDesktopColoredproject1]: hasVariant(
+            $state,
+            "project1",
+            "project1"
+          )
+        }
       )}
     >
       <div
@@ -245,20 +302,231 @@ function PlasmicTemplateCard__RenderFunc(props: {
           data-plasmic-name={"overlay2"}
           data-plasmic-override={overrides.overlay2}
           className={classNames(projectcss.all, sty.overlay2, {
-            [sty.overlay2hover]: hasVariant($state, "hover", "hover")
+            [sty.overlay2project1]: hasVariant($state, "project1", "project1")
           })}
         >
-          {renderPlasmicSlot({
-            defaultContents: null,
-            value: args.img2
-          })}
+          <PlasmicLink__
+            data-plasmic-name={"link"}
+            data-plasmic-override={overrides.link}
+            className={classNames(projectcss.all, projectcss.a, sty.link, {
+              [sty.linkproject1]: hasVariant($state, "project1", "project1")
+            })}
+            component={Link}
+            href={args.link}
+            legacyBehavior={false}
+            platform={"nextjs"}
+          >
+            <HoverController
+              data-plasmic-name={"hoverController"}
+              data-plasmic-override={overrides.hoverController}
+              className={classNames("__wab_instance", sty.hoverController, {
+                [sty.hoverControllerproject1]: hasVariant(
+                  $state,
+                  "project1",
+                  "project1"
+                )
+              })}
+              onHoverChange={async isHovered => {
+                const $steps = {};
+
+                $steps["updateHover2"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["hover2"]
+                        },
+                        operation: 0,
+                        value: isHovered
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+
+                        $stateSet(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateHover2"] != null &&
+                  typeof $steps["updateHover2"] === "object" &&
+                  typeof $steps["updateHover2"].then === "function"
+                ) {
+                  $steps["updateHover2"] = await $steps["updateHover2"];
+                }
+              }}
+              trigger={
+                <DataCtxReader__>
+                  {$ctx => (
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $props.videoCondition;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <Video
+                          data-plasmic-name={"htmlVideo"}
+                          data-plasmic-override={overrides.htmlVideo}
+                          autoPlay={true}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.htmlVideo,
+                            {
+                              [sty.htmlVideoproject1]: hasVariant(
+                                $state,
+                                "project1",
+                                "project1"
+                              )
+                            }
+                          )}
+                          controls={false}
+                          loop={true}
+                          muted={true}
+                          ref={ref => {
+                            $refs["htmlVideo"] = ref;
+                          }}
+                          src={args.video}
+                        />
+                      ) : null}
+                      {(() => {
+                        try {
+                          return $props.imageCondition;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__czgbX, {
+                            [sty.imgproject1__czgbXz20FZ]: hasVariant(
+                              $state,
+                              "project1",
+                              "project1"
+                            )
+                          })}
+                          displayHeight={"100%"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"100%"}
+                          loading={"lazy"}
+                          src={(() => {
+                            try {
+                              return $props.image2;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return undefined;
+                              }
+                              throw e;
+                            }
+                          })()}
+                        />
+                      ) : null}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__qDo,
+                          {
+                            [sty.freeBoxproject1__qDOz20FZ]: hasVariant(
+                              $state,
+                              "project1",
+                              "project1"
+                            )
+                          }
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__hrNtM,
+                            {
+                              [sty.freeBoxproject1__hrNtMz20FZ]: hasVariant(
+                                $state,
+                                "project1",
+                                "project1"
+                              )
+                            }
+                          )}
+                        >
+                          <PlasmicImg__
+                            alt={""}
+                            className={classNames(sty.img__yMKni, {
+                              [sty.imgproject1__yMKniz20FZ]: hasVariant(
+                                $state,
+                                "project1",
+                                "project1"
+                              )
+                            })}
+                            displayHeight={
+                              hasVariant($state, "project1", "project1")
+                                ? "auto"
+                                : "auto"
+                            }
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={
+                              hasVariant($state, "project1", "project1")
+                                ? "100%"
+                                : "100%"
+                            }
+                            loading={"lazy"}
+                            src={(() => {
+                              try {
+                                return $props.image2;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return undefined;
+                                }
+                                throw e;
+                              }
+                            })()}
+                          />
+                        </div>
+                      </div>
+                    </React.Fragment>
+                  )}
+                </DataCtxReader__>
+              }
+            />
+          </PlasmicLink__>
         </div>
       </div>
       <div
         data-plasmic-name={"bottom"}
         data-plasmic-override={overrides.bottom}
         className={classNames(projectcss.all, sty.bottom, {
-          [sty.bottomhover]: hasVariant($state, "hover", "hover")
+          [sty.bottomproject1]: hasVariant($state, "project1", "project1")
         })}
       >
         <div
@@ -272,24 +540,29 @@ function PlasmicTemplateCard__RenderFunc(props: {
             className={classNames(projectcss.all, sty.templateName)}
           >
             <div
-              data-plasmic-name={"container8"}
-              data-plasmic-override={overrides.container8}
-              className={classNames(projectcss.all, sty.container8)}
+              data-plasmic-name={"text"}
+              data-plasmic-override={overrides.text}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text
+              )}
             >
-              {renderPlasmicSlot({
-                defaultContents: (
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__dZw7R
-                    )}
-                  >
-                    {"Vectura"}
-                  </div>
-                ),
-                value: args.container9
-              })}
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $props.title;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "Vectura";
+                    }
+                    throw e;
+                  }
+                })()}
+              </React.Fragment>
             </div>
           </div>
         </div>
@@ -390,24 +663,42 @@ const PlasmicDescendants = {
     "_3",
     "_4",
     "overlay2",
+    "link",
+    "hoverController",
+    "htmlVideo",
     "bottom",
     "top2",
     "templateName",
-    "container8",
+    "text",
     "container10"
   ],
-  image: ["image", "border", "screws", "_1", "_2", "_3", "_4", "overlay2"],
+  image: [
+    "image",
+    "border",
+    "screws",
+    "_1",
+    "_2",
+    "_3",
+    "_4",
+    "overlay2",
+    "link",
+    "hoverController",
+    "htmlVideo"
+  ],
   border: ["border"],
   screws: ["screws", "_1", "_2", "_3", "_4"],
   _1: ["_1"],
   _2: ["_2"],
   _3: ["_3"],
   _4: ["_4"],
-  overlay2: ["overlay2"],
-  bottom: ["bottom", "top2", "templateName", "container8", "container10"],
-  top2: ["top2", "templateName", "container8"],
-  templateName: ["templateName", "container8"],
-  container8: ["container8"],
+  overlay2: ["overlay2", "link", "hoverController", "htmlVideo"],
+  link: ["link", "hoverController", "htmlVideo"],
+  hoverController: ["hoverController", "htmlVideo"],
+  htmlVideo: ["htmlVideo"],
+  bottom: ["bottom", "top2", "templateName", "text", "container10"],
+  top2: ["top2", "templateName", "text"],
+  templateName: ["templateName", "text"],
+  text: ["text"],
   container10: ["container10"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -423,10 +714,13 @@ type NodeDefaultElementType = {
   _3: "div";
   _4: "div";
   overlay2: "div";
+  link: "a";
+  hoverController: typeof HoverController;
+  htmlVideo: typeof Video;
   bottom: "div";
   top2: "div";
   templateName: "div";
-  container8: "div";
+  text: "div";
   container10: "div";
 };
 
@@ -500,10 +794,13 @@ export const PlasmicTemplateCard = Object.assign(
     _3: makeNodeComponent("_3"),
     _4: makeNodeComponent("_4"),
     overlay2: makeNodeComponent("overlay2"),
+    link: makeNodeComponent("link"),
+    hoverController: makeNodeComponent("hoverController"),
+    htmlVideo: makeNodeComponent("htmlVideo"),
     bottom: makeNodeComponent("bottom"),
     top2: makeNodeComponent("top2"),
     templateName: makeNodeComponent("templateName"),
-    container8: makeNodeComponent("container8"),
+    text: makeNodeComponent("text"),
     container10: makeNodeComponent("container10"),
 
     // Metadata about props expected for PlasmicTemplateCard

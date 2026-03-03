@@ -81,7 +81,6 @@ import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUt
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI/codeComponent
-import { Video } from "@plasmicpkgs/plasmic-basic-components";
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
@@ -110,7 +109,14 @@ function wrapQueriesWithLoadingProxy($q: any): any {
   });
 }
 
-export function generateDynamicMetadata($q: any, $ctx: any) {
+export type PageCtx = {
+  pageRoute: string;
+  pagePath: string;
+  params: Record<string, string | string[] | undefined>;
+  query: Record<string, string | string[] | undefined>;
+};
+
+export function generateDynamicMetadata($q: any, $ctx: PageCtx) {
   return {
     title: "Home",
 
@@ -175,8 +181,16 @@ export type PlasmicHomepage__OverridesType = {
   sectionCards3?: Flex__<"div">;
   top5?: Flex__<"div">;
   title3?: Flex__<"div">;
+  templateCard?: Flex__<typeof TemplateCard>;
+  templateCard2?: Flex__<typeof TemplateCard>;
+  templateCard3?: Flex__<typeof TemplateCard>;
+  templateCard4?: Flex__<typeof TemplateCard>;
+  templateCard5?: Flex__<typeof TemplateCard>;
+  templateCard6?: Flex__<typeof TemplateCard>;
+  templateCard7?: Flex__<typeof TemplateCard>;
+  templateCard8?: Flex__<typeof TemplateCard>;
   patternGrid?: Flex__<typeof PatternGrid>;
-  htmlVideo4?: Flex__<typeof Video>;
+  templateCard9?: Flex__<typeof TemplateCard>;
   service05?: Flex__<"div">;
   service15?: Flex__<"div">;
   service25?: Flex__<"div">;
@@ -255,7 +269,7 @@ function PlasmicHomepage__RenderFunc(props: {
 
   const pageMetadata = generateDynamicMetadata(
     wrapQueriesWithLoadingProxy({}),
-    $ctx
+    $ctx as PageCtx
   );
 
   const styleTokensClassNames = _useStyleTokens();
@@ -1557,29 +1571,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__eCiDz)}>
                   <TemplateCard
-                    className={classNames(
-                      "__wab_instance",
-                      sty.templateCard__kjLfa
-                    )}
-                    img2={
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__vJhaM)}
-                        displayHeight={"334px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"100%"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                          fullWidth: 511,
-                          fullHeight: 596,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    }
+                    data-plasmic-name={"templateCard"}
+                    data-plasmic-override={overrides.templateCard}
+                    className={classNames("__wab_instance", sty.templateCard)}
                     softwareContainerSoftware2={
                       <React.Fragment>
                         <div
@@ -1610,29 +1604,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   />
 
                   <TemplateCard
-                    className={classNames(
-                      "__wab_instance",
-                      sty.templateCard__zzcE3
-                    )}
-                    img2={
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__dr4K9)}
-                        displayHeight={"334px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"100%"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                          fullWidth: 511,
-                          fullHeight: 596,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    }
+                    data-plasmic-name={"templateCard2"}
+                    data-plasmic-override={overrides.templateCard2}
+                    className={classNames("__wab_instance", sty.templateCard2)}
                     softwareContainerSoftware2={
                       <React.Fragment>
                         <div
@@ -1663,107 +1637,27 @@ function PlasmicHomepage__RenderFunc(props: {
                   />
 
                   <TemplateCard
-                    className={classNames(
-                      "__wab_instance",
-                      sty.templateCard__tJ9Vu
-                    )}
-                    img2={
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img___4IvH)}
-                        displayHeight={"334px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"100%"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                          fullWidth: 511,
-                          fullHeight: 596,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    }
+                    data-plasmic-name={"templateCard3"}
+                    data-plasmic-override={overrides.templateCard3}
+                    className={classNames("__wab_instance", sty.templateCard3)}
                   />
 
                   <TemplateCard
-                    className={classNames(
-                      "__wab_instance",
-                      sty.templateCard__ph9Rz
-                    )}
-                    img2={
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__xcLz3)}
-                        displayHeight={"334px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"100%"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                          fullWidth: 511,
-                          fullHeight: 596,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    }
+                    data-plasmic-name={"templateCard4"}
+                    data-plasmic-override={overrides.templateCard4}
+                    className={classNames("__wab_instance", sty.templateCard4)}
                   />
 
                   <TemplateCard
-                    className={classNames(
-                      "__wab_instance",
-                      sty.templateCard__aFDmY
-                    )}
-                    img2={
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__cYMln)}
-                        displayHeight={"334px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"100%"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                          fullWidth: 511,
-                          fullHeight: 596,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    }
+                    data-plasmic-name={"templateCard5"}
+                    data-plasmic-override={overrides.templateCard5}
+                    className={classNames("__wab_instance", sty.templateCard5)}
                   />
 
                   <TemplateCard
-                    className={classNames(
-                      "__wab_instance",
-                      sty.templateCard__aIxZ1
-                    )}
-                    img2={
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__k3Ja4)}
-                        displayHeight={"334px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"100%"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                          fullWidth: 511,
-                          fullHeight: 596,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    }
+                    data-plasmic-name={"templateCard6"}
+                    data-plasmic-override={overrides.templateCard6}
+                    className={classNames("__wab_instance", sty.templateCard6)}
                     softwareContainerSoftware2={
                       <React.Fragment>
                         <div
@@ -1794,29 +1688,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   />
 
                   <TemplateCard
-                    className={classNames(
-                      "__wab_instance",
-                      sty.templateCard___4Ry74
-                    )}
-                    img2={
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__aMmid)}
-                        displayHeight={"334px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"100%"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                          fullWidth: 511,
-                          fullHeight: 596,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    }
+                    data-plasmic-name={"templateCard7"}
+                    data-plasmic-override={overrides.templateCard7}
+                    className={classNames("__wab_instance", sty.templateCard7)}
                     softwareContainerSoftware2={
                       <React.Fragment>
                         <div
@@ -1847,29 +1721,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   />
 
                   <TemplateCard
-                    className={classNames(
-                      "__wab_instance",
-                      sty.templateCard__rQccR
-                    )}
-                    img2={
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__i5C4E)}
-                        displayHeight={"334px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"100%"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                          fullWidth: 511,
-                          fullHeight: 596,
-                          aspectRatio: undefined
-                        }}
-                      />
-                    }
+                    data-plasmic-name={"templateCard8"}
+                    data-plasmic-override={overrides.templateCard8}
+                    className={classNames("__wab_instance", sty.templateCard8)}
                     softwareContainerSoftware2={
                       <React.Fragment>
                         <div
@@ -1948,131 +1802,27 @@ function PlasmicHomepage__RenderFunc(props: {
                         yOffset={50}
                       >
                         <TemplateCard
+                          data-plasmic-name={"templateCard9"}
+                          data-plasmic-override={overrides.templateCard9}
                           className={classNames(
                             "__wab_instance",
-                            sty.templateCard__v8YCw
+                            sty.templateCard9
                           )}
-                          container9={
-                            <PlasmicLink__
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                projectcss.__wab_text,
-                                sty.link___65S8H
-                              )}
-                              component={Link}
-                              href={`/works/${currentItem.Slug}`}
-                              legacyBehavior={false}
-                              platform={"nextjs"}
-                            >
-                              <React.Fragment>
-                                {(() => {
-                                  try {
-                                    return currentItem.Title;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "Vectura";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                              </React.Fragment>
-                            </PlasmicLink__>
-                          }
-                          img2={
-                            <PlasmicLink__
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                sty.link__zpuve
-                              )}
-                              component={Link}
-                              href={`/works/${currentItem.Slug}`}
-                              legacyBehavior={false}
-                              platform={"nextjs"}
-                            >
-                              {(() => {
-                                try {
-                                  return currentItem["Video"];
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <Video
-                                  data-plasmic-name={"htmlVideo4"}
-                                  data-plasmic-override={overrides.htmlVideo4}
-                                  autoPlay={true}
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.htmlVideo4
-                                  )}
-                                  controls={false}
-                                  loop={true}
-                                  muted={true}
-                                  ref={ref => {
-                                    $refs["htmlVideo4"] = ref;
-                                  }}
-                                  src={currentItem.Video}
-                                />
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return !currentItem["Video"];
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <PlasmicImg__
-                                  alt={""}
-                                  className={classNames(sty.img___61Kud)}
-                                  displayHeight={"auto"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"100%"}
-                                  loading={"lazy"}
-                                  src={(() => {
-                                    try {
-                                      return currentItem["Main Image"];
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return {
-                                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                                          fullWidth: 511,
-                                          fullHeight: 596,
-                                          aspectRatio: undefined
-                                        };
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                />
-                              ) : null}
-                            </PlasmicLink__>
-                          }
+                          image2={currentItem["Main Image"]}
+                          imageCondition={(() => {
+                            try {
+                              return !currentItem["Video"];
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return false;
+                              }
+                              throw e;
+                            }
+                          })()}
+                          link={currentItem.Slug}
                           softwareContainerSoftware2={
                             <div
                               className={classNames(
@@ -2304,6 +2054,21 @@ function PlasmicHomepage__RenderFunc(props: {
                               ) : null}
                             </div>
                           }
+                          title={currentItem["Title"]}
+                          video={currentItem.Video}
+                          videoCondition={(() => {
+                            try {
+                              return currentItem["Video"];
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })()}
                         />
                       </RevealOnScroll>
                     );
@@ -2422,8 +2187,16 @@ const PlasmicDescendants = {
     "sectionCards3",
     "top5",
     "title3",
+    "templateCard",
+    "templateCard2",
+    "templateCard3",
+    "templateCard4",
+    "templateCard5",
+    "templateCard6",
+    "templateCard7",
+    "templateCard8",
     "patternGrid",
-    "htmlVideo4",
+    "templateCard9",
     "service05",
     "service15",
     "service25",
@@ -2471,8 +2244,16 @@ const PlasmicDescendants = {
     "sectionCards3",
     "top5",
     "title3",
+    "templateCard",
+    "templateCard2",
+    "templateCard3",
+    "templateCard4",
+    "templateCard5",
+    "templateCard6",
+    "templateCard7",
+    "templateCard8",
     "patternGrid",
-    "htmlVideo4",
+    "templateCard9",
     "service05",
     "service15",
     "service25",
@@ -2592,8 +2373,16 @@ const PlasmicDescendants = {
     "sectionCards3",
     "top5",
     "title3",
+    "templateCard",
+    "templateCard2",
+    "templateCard3",
+    "templateCard4",
+    "templateCard5",
+    "templateCard6",
+    "templateCard7",
+    "templateCard8",
     "patternGrid",
-    "htmlVideo4",
+    "templateCard9",
     "service05",
     "service15",
     "service25",
@@ -2603,9 +2392,17 @@ const PlasmicDescendants = {
   ],
   top5: ["top5", "title3"],
   title3: ["title3"],
+  templateCard: ["templateCard"],
+  templateCard2: ["templateCard2"],
+  templateCard3: ["templateCard3"],
+  templateCard4: ["templateCard4"],
+  templateCard5: ["templateCard5"],
+  templateCard6: ["templateCard6"],
+  templateCard7: ["templateCard7"],
+  templateCard8: ["templateCard8"],
   patternGrid: [
     "patternGrid",
-    "htmlVideo4",
+    "templateCard9",
     "service05",
     "service15",
     "service25",
@@ -2613,7 +2410,15 @@ const PlasmicDescendants = {
     "service45",
     "service55"
   ],
-  htmlVideo4: ["htmlVideo4"],
+  templateCard9: [
+    "templateCard9",
+    "service05",
+    "service15",
+    "service25",
+    "service35",
+    "service45",
+    "service55"
+  ],
   service05: ["service05"],
   service15: ["service15"],
   service25: ["service25"],
@@ -2665,8 +2470,16 @@ type NodeDefaultElementType = {
   sectionCards3: "div";
   top5: "div";
   title3: "div";
+  templateCard: typeof TemplateCard;
+  templateCard2: typeof TemplateCard;
+  templateCard3: typeof TemplateCard;
+  templateCard4: typeof TemplateCard;
+  templateCard5: typeof TemplateCard;
+  templateCard6: typeof TemplateCard;
+  templateCard7: typeof TemplateCard;
+  templateCard8: typeof TemplateCard;
   patternGrid: typeof PatternGrid;
-  htmlVideo4: typeof Video;
+  templateCard9: typeof TemplateCard;
   service05: "div";
   service15: "div";
   service25: "div";
@@ -2816,8 +2629,16 @@ export const PlasmicHomepage = Object.assign(
     sectionCards3: makeNodeComponent("sectionCards3"),
     top5: makeNodeComponent("top5"),
     title3: makeNodeComponent("title3"),
+    templateCard: makeNodeComponent("templateCard"),
+    templateCard2: makeNodeComponent("templateCard2"),
+    templateCard3: makeNodeComponent("templateCard3"),
+    templateCard4: makeNodeComponent("templateCard4"),
+    templateCard5: makeNodeComponent("templateCard5"),
+    templateCard6: makeNodeComponent("templateCard6"),
+    templateCard7: makeNodeComponent("templateCard7"),
+    templateCard8: makeNodeComponent("templateCard8"),
     patternGrid: makeNodeComponent("patternGrid"),
-    htmlVideo4: makeNodeComponent("htmlVideo4"),
+    templateCard9: makeNodeComponent("templateCard9"),
     service05: makeNodeComponent("service05"),
     service15: makeNodeComponent("service15"),
     service25: makeNodeComponent("service25"),
@@ -2831,9 +2652,10 @@ export const PlasmicHomepage = Object.assign(
     internalArgProps: PlasmicHomepage__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
+      pageRoute: "/",
       pagePath: "/",
-      searchParams: {},
-      params: {}
+      params: {},
+      query: {}
     })
   }
 );

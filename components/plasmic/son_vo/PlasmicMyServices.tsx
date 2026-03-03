@@ -76,7 +76,6 @@ import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
-import { Video } from "@plasmicpkgs/plasmic-basic-components";
 import { RevealWidthOnScroll } from "../../RevealWidthOnScroll"; // plasmic-import: OrcqYiNWCo3G/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
@@ -113,7 +112,14 @@ function wrapQueriesWithLoadingProxy($q: any): any {
   });
 }
 
-export function generateDynamicMetadata($q: any, $ctx: any) {
+export type PageCtx = {
+  pageRoute: string;
+  pagePath: string;
+  params: Record<string, string | string[] | undefined>;
+  query: Record<string, string | string[] | undefined>;
+};
+
+export function generateDynamicMetadata($q: any, $ctx: PageCtx) {
   return {
     title: "My Journey",
 
@@ -174,7 +180,6 @@ export type PlasmicMyServices__OverridesType = {
   headerHeroSection3?: Flex__<"div">;
   infiniteScroll?: Flex__<typeof InfiniteScroll>;
   templateCard?: Flex__<typeof TemplateCard>;
-  htmlVideo4?: Flex__<typeof Video>;
   service05?: Flex__<"div">;
   service15?: Flex__<"div">;
   service25?: Flex__<"div">;
@@ -306,7 +311,7 @@ function PlasmicMyServices__RenderFunc(props: {
 
   const pageMetadata = generateDynamicMetadata(
     wrapQueriesWithLoadingProxy({}),
-    $ctx
+    $ctx as PageCtx
   );
 
   const styleTokensClassNames = _useStyleTokens();
@@ -921,127 +926,6 @@ function PlasmicMyServices__RenderFunc(props: {
                             "__wab_instance",
                             sty.templateCard
                           )}
-                          container9={
-                            <PlasmicLink__
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                projectcss.__wab_text,
-                                sty.link__fqVcp
-                              )}
-                              component={Link}
-                              href={`/works/${currentItem.Slug}`}
-                              legacyBehavior={false}
-                              platform={"nextjs"}
-                            >
-                              <React.Fragment>
-                                {(() => {
-                                  try {
-                                    return currentItem.Title;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "Vectura";
-                                    }
-                                    throw e;
-                                  }
-                                })()}
-                              </React.Fragment>
-                            </PlasmicLink__>
-                          }
-                          img2={
-                            <PlasmicLink__
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                sty.link__mkAzK
-                              )}
-                              component={Link}
-                              href={`/works/${currentItem.Slug}`}
-                              legacyBehavior={false}
-                              platform={"nextjs"}
-                            >
-                              {(() => {
-                                try {
-                                  return currentItem["Video"];
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <Video
-                                  data-plasmic-name={"htmlVideo4"}
-                                  data-plasmic-override={overrides.htmlVideo4}
-                                  autoPlay={true}
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.htmlVideo4
-                                  )}
-                                  controls={false}
-                                  loop={true}
-                                  muted={true}
-                                  ref={ref => {
-                                    $refs["htmlVideo4"] = ref;
-                                  }}
-                                  src={currentItem.Video}
-                                />
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return !currentItem["Video"];
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <PlasmicImg__
-                                  alt={""}
-                                  className={classNames(sty.img__mQ4Ed)}
-                                  displayHeight={"auto"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"100%"}
-                                  loading={"lazy"}
-                                  src={(() => {
-                                    try {
-                                      return currentItem["Main Image"];
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return {
-                                          src: "/plasmic/son_vo/images/frame20Jpg.jpg",
-                                          fullWidth: 511,
-                                          fullHeight: 596,
-                                          aspectRatio: undefined
-                                        };
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                />
-                              ) : null}
-                            </PlasmicLink__>
-                          }
                           softwareContainerSoftware2={
                             <div
                               className={classNames(
@@ -3107,7 +2991,6 @@ const PlasmicDescendants = {
     "headerHeroSection3",
     "infiniteScroll",
     "templateCard",
-    "htmlVideo4",
     "service05",
     "service15",
     "service25",
@@ -3204,7 +3087,6 @@ const PlasmicDescendants = {
     "headerHeroSection3",
     "infiniteScroll",
     "templateCard",
-    "htmlVideo4",
     "service05",
     "service15",
     "service25",
@@ -3393,7 +3275,6 @@ const PlasmicDescendants = {
     "headerHeroSection3",
     "infiniteScroll",
     "templateCard",
-    "htmlVideo4",
     "service05",
     "service15",
     "service25",
@@ -3404,7 +3285,6 @@ const PlasmicDescendants = {
   infiniteScroll: [
     "infiniteScroll",
     "templateCard",
-    "htmlVideo4",
     "service05",
     "service15",
     "service25",
@@ -3414,7 +3294,6 @@ const PlasmicDescendants = {
   ],
   templateCard: [
     "templateCard",
-    "htmlVideo4",
     "service05",
     "service15",
     "service25",
@@ -3422,7 +3301,6 @@ const PlasmicDescendants = {
     "service45",
     "service55"
   ],
-  htmlVideo4: ["htmlVideo4"],
   service05: ["service05"],
   service15: ["service15"],
   service25: ["service25"],
@@ -3709,7 +3587,6 @@ type NodeDefaultElementType = {
   headerHeroSection3: "div";
   infiniteScroll: typeof InfiniteScroll;
   templateCard: typeof TemplateCard;
-  htmlVideo4: typeof Video;
   service05: "div";
   service15: "div";
   service25: "div";
@@ -3903,7 +3780,6 @@ export const PlasmicMyServices = Object.assign(
     headerHeroSection3: makeNodeComponent("headerHeroSection3"),
     infiniteScroll: makeNodeComponent("infiniteScroll"),
     templateCard: makeNodeComponent("templateCard"),
-    htmlVideo4: makeNodeComponent("htmlVideo4"),
     service05: makeNodeComponent("service05"),
     service15: makeNodeComponent("service15"),
     service25: makeNodeComponent("service25"),
@@ -3997,9 +3873,10 @@ export const PlasmicMyServices = Object.assign(
     internalArgProps: PlasmicMyServices__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
+      pageRoute: "/my-services",
       pagePath: "/my-services",
-      searchParams: {},
-      params: {}
+      params: {},
+      query: {}
     })
   }
 );

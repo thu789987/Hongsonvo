@@ -636,7 +636,7 @@
   min-width: 0;
   padding: 0px 60px 60px;
 }
-.img___1NeM {
+.img {
   animation: none;
   object-fit: cover;
   max-width: 100%;
@@ -644,7 +644,7 @@
   height: auto;
   min-width: 0;
 }
-.img___1NeM > picture > img {
+.img > picture > img {
   object-fit: cover;
 }
 .htmlVideo:global(.__wab_instance) {
@@ -1320,45 +1320,6 @@
   width: 100%;
   min-width: 0;
 }
-.img__bVe35 {
-  animation: none;
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-  background: url("/plasmic/son_vo/images/gHOkTYo9C3G7TejBsyg9X2SjueJpg.png");
-  width: 100%;
-  min-width: 0;
-  border-radius: 8px;
-}
-.img__bVe35 > picture > img {
-  object-fit: cover;
-}
-.htmlVideo13:global(.__wab_instance) {
-  animation: none;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: cover;
-  min-width: 0;
-}
-.text__p5ASl {
-  animation: none;
-  display: block;
-  font-size: 14px;
-  font-family: "Outfit", sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.47999998927116394px;
-  line-height: 24px;
-  color: var(--token-VsMZPNxcE2dF);
-  position: relative;
-  font-style: normal;
-  text-align: center;
-  text-transform: none;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none !important;
-  text-overflow: clip !important;
-}
 .freeBox__iHDxO {
   animation: none;
   display: flex;
@@ -1599,45 +1560,6 @@
   max-width: 100%;
   width: 100%;
   min-width: 0;
-}
-.img__eJbxW {
-  animation: none;
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-  background: url("/plasmic/son_vo/images/gHOkTYo9C3G7TejBsyg9X2SjueJpg.png");
-  width: 100%;
-  min-width: 0;
-  border-radius: 8px;
-}
-.img__eJbxW > picture > img {
-  object-fit: cover;
-}
-.htmlVideo12:global(.__wab_instance) {
-  animation: none;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: cover;
-  min-width: 0;
-}
-.text___3FTAd {
-  animation: none;
-  display: block;
-  font-size: 14px;
-  font-family: "Outfit", sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.47999998927116394px;
-  line-height: 24px;
-  color: var(--token-VsMZPNxcE2dF);
-  position: relative;
-  font-style: normal;
-  text-align: center;
-  text-transform: none;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none !important;
-  text-overflow: clip !important;
 }
 .freeBox__cmlsh {
   animation: none;

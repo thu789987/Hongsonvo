@@ -2408,6 +2408,12 @@
           "name": "ScrollContext",
           "displayName": "ScrollContext",
           "componentImportPath": "./components/ScrollContext"
+        },
+        {
+          "id": "Nh0NyKxfMgZY",
+          "name": "GlobalLoading",
+          "displayName": "GlobalLoading",
+          "componentImportPath": "./components/GlobalLoading"
         }
       ],
       "customFunctions": []
