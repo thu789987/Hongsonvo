@@ -67,6 +67,7 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
+import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import ScrollContext from "../../ScrollContext"; // plasmic-import: 4JSGC86CDgyw/codeComponent
@@ -143,6 +144,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollContext?: Flex__<typeof ScrollContext>;
   newMenu?: Flex__<typeof NewMenu>;
@@ -308,6 +310,13 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <GlobalLoading
+            data-plasmic-name={"globalLoading"}
+            data-plasmic-override={overrides.globalLoading}
+            className={classNames("__wab_instance", sty.globalLoading)}
+            textSize={"160px"}
+          />
+
           <SmoothScroll
             data-plasmic-name={"smoothScroll"}
             data-plasmic-override={overrides.smoothScroll}
@@ -359,7 +368,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.headerHeroSection2}
                 className={classNames(projectcss.all, sty.headerHeroSection2)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__gqa29)}>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox__gqa29, ``)}
+                >
                   <ScrollPlayVideo
                     data-plasmic-name={"scrollPlayVideo"}
                     data-plasmic-override={overrides.scrollPlayVideo}
@@ -371,10 +382,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     videoSrc={
                       "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
                     }
-                  />
-
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__fjXEg)}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.freeBox__xdgmx)}>
@@ -418,7 +425,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         projectcss.all,
                         projectcss.h1,
                         projectcss.__wab_text,
-                        sty.h1___5DzwJ
+                        sty.h1___5DzwJ,
+                        "animate-text"
                       )}
                     >
                       {"H"}
@@ -428,7 +436,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         projectcss.all,
                         projectcss.h1,
                         projectcss.__wab_text,
-                        sty.h1__tfuZe
+                        sty.h1__tfuZe,
+                        "animate-text"
                       )}
                     >
                       {"S"}
@@ -438,7 +447,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         projectcss.all,
                         projectcss.h1,
                         projectcss.__wab_text,
-                        sty.h1___5AEnJ
+                        sty.h1___5AEnJ,
+                        "animate-text"
                       )}
                     >
                       {"V"}
@@ -499,7 +509,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.h1__qg2Zx
                           )}
                         >
-                          {"is the folio of"}
+                          {"is the portfolio of"}
                         </h1>
                       </div>
                     </RevealOnScroll>
@@ -2149,6 +2159,7 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "globalLoading",
     "smoothScroll",
     "scrollContext",
     "newMenu",
@@ -2205,6 +2216,7 @@ const PlasmicDescendants = {
     "service55",
     "section"
   ],
+  globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
     "scrollContext",
@@ -2432,6 +2444,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
   scrollContext: typeof ScrollContext;
   newMenu: typeof NewMenu;
@@ -2576,6 +2589,7 @@ export const PlasmicHomepage = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
+    globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollContext: makeNodeComponent("scrollContext"),
     newMenu: makeNodeComponent("newMenu"),
