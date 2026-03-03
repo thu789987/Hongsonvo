@@ -8,6 +8,12 @@
   min-width: 0;
   min-height: 0;
 }
+.globalLoading:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  min-width: 0;
+}
 .smoothScroll:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
@@ -127,22 +133,6 @@
   height: 100%;
   min-height: 0;
 }
-.freeBox__fjXEg {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  background: #00000040;
-  z-index: 1;
-  min-width: 0;
-  padding: 8px;
-}
 .freeBox__xdgmx {
   display: flex;
   position: relative;
@@ -234,6 +224,10 @@
   line-height: 80%;
   font-size: 300px;
   letter-spacing: 0%;
+  transition-property: all;
+  transition-duration: 1s;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
 }
 @media (max-width: 930px) {
   .h1___5DzwJ {
