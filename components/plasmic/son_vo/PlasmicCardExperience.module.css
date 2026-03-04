@@ -46,22 +46,25 @@
   padding: 0px;
 }
 .freeBox__m1Fy {
-  display: grid;
+  display: flex;
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
   top: auto;
   left: auto;
-  grid-template-rows: auto auto;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-row-gap: 16px;
-  grid-column-gap: 16px;
-  grid-auto-rows: auto;
-  grid-auto-columns: 1fr;
   overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 16px;
   min-width: 0;
   padding: 0px;
+}
+@media (max-width: 1024px) {
+  .freeBox__m1Fy {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 .freeBox__ml4R {
   display: block;
@@ -69,9 +72,8 @@
   width: 100%;
   height: 100%;
   max-width: 100%;
-  left: -1000px;
+  left: -800px;
   top: 0px;
-  grid-column-end: span 12;
   background: var(--token-47ovROB-Xr2C);
   transition-property: all;
   transition-duration: 600ms;
@@ -84,9 +86,20 @@
   -webkit-transition-duration: 600ms;
   padding: 0px;
 }
+@media (max-width: 1024px) {
+  .freeBox__ml4R {
+    left: -1000px;
+    top: auto;
+  }
+}
+@media (max-width: 930px) {
+  .freeBox__ml4R {
+    left: -1000px;
+  }
+}
 .freeBoxproject1__ml4RuWrEk {
-  top: 0;
-  left: 0;
+  top: auto;
+  left: auto;
   display: block;
   background: var(--token-47ovROB-Xr2C);
 }
@@ -99,8 +112,6 @@
   max-width: 100%;
   justify-content: center;
   align-items: center;
-  grid-column-start: 1;
-  grid-column-end: span 6;
   min-width: 0;
   padding: 0px;
 }
@@ -129,7 +140,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: auto;
+  width: 100%;
   height: auto;
   max-width: 100%;
   justify-content: flex-end;
@@ -138,9 +149,38 @@
   left: auto;
   bottom: auto;
   right: auto;
-  grid-column-start: 7;
-  grid-column-end: span 12;
-  padding: 0px;
+  row-gap: 8px;
+  min-width: 0;
+  padding: 0px 0px 8px;
+}
+@media (max-width: 1024px) {
+  .freeBox__jfKvs {
+    left: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+  }
+}
+.freeBoxproject1__jfKvSuWrEk {
+  left: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+}
+.img {
+  object-fit: cover;
+  max-width: 100%;
+  width: 50%;
+  display: none;
+  border-radius: 8px;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .img {
+    display: block;
+  }
 }
 .titleArtDirection3 {
   display: block;

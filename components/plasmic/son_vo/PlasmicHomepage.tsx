@@ -1356,6 +1356,12 @@ function PlasmicHomepage__RenderFunc(props: {
                           content={
                             "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
                           }
+                          logo={{
+                            src: "/plasmic/son_vo/images/frame12Png.png",
+                            fullWidth: 160,
+                            fullHeight: 160,
+                            aspectRatio: undefined
+                          }}
                           number={"[ Oct 2022 - Present ]"}
                           project1={(() => {
                             try {
@@ -1389,6 +1395,12 @@ function PlasmicHomepage__RenderFunc(props: {
                           content={
                             "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
                           }
+                          logo={{
+                            src: "/plasmic/son_vo/images/gleadsPng.avif",
+                            fullWidth: 825,
+                            fullHeight: 377,
+                            aspectRatio: undefined
+                          }}
                           number={"[ Oct 2022 - Present ]"}
                           project1={(() => {
                             try {
@@ -1422,6 +1434,12 @@ function PlasmicHomepage__RenderFunc(props: {
                           content={
                             "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
                           }
+                          logo={{
+                            src: "/plasmic/son_vo/images/adAvif.avif",
+                            fullWidth: 1000,
+                            fullHeight: 700,
+                            aspectRatio: undefined
+                          }}
                           number={"[ Oct 2016 - Feb 2020 ]"}
                           project1={(() => {
                             try {
@@ -1456,6 +1474,12 @@ function PlasmicHomepage__RenderFunc(props: {
                           content={
                             "Conducted user research, facilitated workshops with stakeholders, and brainstormed ideas with BOD. Developed wireframes, prototypes of Package, and visual designs for proposed solutions"
                           }
+                          logo={{
+                            src: "/plasmic/son_vo/images/mnkPng.png",
+                            fullWidth: 160,
+                            fullHeight: 160,
+                            aspectRatio: undefined
+                          }}
                           number={"[ Oct 2016 - Feb 2020 ]"}
                           project1={(() => {
                             try {
@@ -1489,6 +1513,12 @@ function PlasmicHomepage__RenderFunc(props: {
                           content={
                             "During my internship at EPTC Printing Company, I worked on designing and preparing plates for billboard and digital printing. My responsibilities included creating and adjusting designs for large-format prints, ensuring high-quality outputs, and collaborating with the production team to optimize printing processes. This experience strengthened my skills in digital printing, design software, and large-scale print production."
                           }
+                          logo={{
+                            src: "/plasmic/son_vo/images/eptcAvif.avif",
+                            fullWidth: 225,
+                            fullHeight: 225,
+                            aspectRatio: undefined
+                          }}
                           number={"[ Aug 2019 - Oct 2019 ]"}
                           project1={(() => {
                             try {
@@ -1523,6 +1553,12 @@ function PlasmicHomepage__RenderFunc(props: {
                           content={
                             "During my internship at Khuyen Hoc Phia nam, I assisted in designing and developing innovative plate concepts using software like Adobe Illustrator, Indesign, Sigma. I conducted market research, contributed to prototype development, and collaborated with the team to refine designs for aesthetics and functionality. This experience enhanced my technical skills, creativity, and teamwork."
                           }
+                          logo={{
+                            src: "/plasmic/son_vo/images/phiaNamPng.png",
+                            fullWidth: 160,
+                            fullHeight: 160,
+                            aspectRatio: undefined
+                          }}
                           number={"[ Jan 2019 - Feb 2019 ]"}
                           project1={(() => {
                             try {

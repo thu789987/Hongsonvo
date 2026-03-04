@@ -108,6 +108,12 @@
   min-width: 0;
   padding: 97px 60px;
 }
+@media (max-width: 930px) {
+  .section1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .container {
   animation: none;
   display: grid;
@@ -119,6 +125,13 @@
   grid-column-gap: 16px;
   grid-auto-rows: auto;
   grid-auto-columns: 1fr;
+}
+@media (max-width: 930px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+  }
 }
 .freeBox__u2REa {
   animation: none;
@@ -156,6 +169,12 @@
   text-decoration-line: none;
   text-overflow: clip;
   min-width: 0;
+}
+@media (max-width: 930px) {
+  .text__xtF5Q {
+    font-size: 40px;
+    line-height: 110%;
+  }
 }
 .container3 {
   animation: none;
@@ -530,6 +549,11 @@
   min-width: 0;
   padding: 0px 0px 0px 120px;
 }
+@media (max-width: 930px) {
+  .freeBox__dGBo4 {
+    padding-left: 0px;
+  }
+}
 .link__iyRh8 {
   animation: none;
   display: flex;
@@ -654,13 +678,14 @@
   margin-top: 0px;
   min-width: 0;
 }
-.revealOnScroll__uA49S:global(.__wab_instance) {
+.original:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   object-fit: cover;
   width: 100%;
   z-index: 4;
   min-width: 0;
+  display: none;
 }
 .section2 {
   animation: none;
@@ -936,6 +961,136 @@
   text-overflow: clip;
   min-width: 0;
 }
+.revealOnScroll__kuAq4:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  min-width: 0;
+}
+.section4 {
+  animation: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 4;
+  background: none;
+  min-width: 0;
+  padding: 97px 60px;
+}
+.container8 {
+  animation: none;
+  display: grid;
+  position: relative;
+  align-self: stretch;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-auto-rows: auto;
+  grid-auto-columns: 1fr;
+}
+@media (max-width: 930px) {
+  .container8 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    column-gap: 0px;
+  }
+}
+.freeBox__m5Wjt {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  min-width: 0;
+  padding: 0px;
+}
+.text__uZa {
+  animation: none;
+  display: block;
+  flex-grow: 1;
+  font-size: 40px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-style: italic;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  padding-top: 0px;
+  min-width: 0;
+}
+.container19 {
+  animation: none;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-column-start: 5;
+  grid-column-end: span 4;
+  width: 100%;
+  min-width: 0;
+}
+.container20 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay6 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffcc;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
 .revealOnScroll__q7R7A:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
@@ -999,6 +1154,160 @@
   flex-shrink: 0;
   border-radius: 8px;
 }
+.revealOnScroll__zvZQr:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  min-width: 0;
+}
+.section3 {
+  animation: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 4;
+  background: none;
+  min-width: 0;
+  padding: 97px 60px;
+}
+.container7 {
+  animation: none;
+  display: grid;
+  position: relative;
+  align-self: stretch;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-auto-rows: auto;
+  grid-auto-columns: 1fr;
+}
+@media (max-width: 930px) {
+  .container7 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    column-gap: 0px;
+  }
+}
+.freeBox__dI42A {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  min-width: 0;
+  padding: 0px;
+}
+.text__ugU2J {
+  animation: none;
+  display: block;
+  flex-grow: 1;
+  font-size: 40px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-style: italic;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  padding-top: 0px;
+  min-width: 0;
+}
+.container17 {
+  animation: none;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-column-start: 5;
+  grid-column-end: span 4;
+  width: 100%;
+  min-width: 0;
+}
+.container38 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay4 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffcc;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.revealOnScroll__tKaho:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.section11 {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  row-gap: 40px;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+  padding: 0px 60px;
+}
 .image3:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
@@ -1035,6 +1344,160 @@
   min-width: 0;
   flex-shrink: 0;
   border-radius: 8px;
+}
+.original2:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  min-width: 0;
+}
+.section5 {
+  animation: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 4;
+  background: none;
+  min-width: 0;
+  padding: 97px 60px;
+}
+.container9 {
+  animation: none;
+  display: grid;
+  position: relative;
+  align-self: stretch;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-auto-rows: auto;
+  grid-auto-columns: 1fr;
+}
+@media (max-width: 930px) {
+  .container9 {
+    flex-direction: column;
+    display: flex;
+    row-gap: 24px;
+    column-gap: 0px;
+  }
+}
+.freeBox__hvRqL {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  min-width: 0;
+  padding: 0px;
+}
+.text__k2Guy {
+  animation: none;
+  display: block;
+  flex-grow: 1;
+  font-size: 40px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-style: italic;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  padding-top: 0px;
+  min-width: 0;
+}
+.container18 {
+  animation: none;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 32px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-column-start: 5;
+  grid-column-end: span 4;
+  width: 100%;
+  min-width: 0;
+}
+.container40 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay7 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffcc;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.revealOnScroll___9SI2F:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.section12 {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  row-gap: 40px;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+  padding: 0px 60px;
 }
 .image5:global(.__wab_instance) {
   animation: none;
@@ -1295,6 +1758,14 @@
   z-index: 4;
   min-width: 0;
   padding: 96px 60px;
+}
+@media (max-width: 930px) {
+  .section10 {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0px;
+    padding: 16px;
+  }
 }
 .revealOnScroll__k8CBf:global(.__wab_instance) {
   animation: none;

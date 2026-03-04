@@ -8,6 +8,13 @@
   min-width: 0;
   min-height: 0;
 }
+.globalLoading:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  min-width: 0;
+}
 .smoothScroll:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
@@ -2319,13 +2326,15 @@
   min-width: 0;
   display: none;
 }
-.revealOnScroll__bd37H:global(.__wab_instance) {
+.revealOnScroll__rOr6V:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
   z-index: 4;
   overflow: visible;
 }
-.sectionCards7 {
+.sectionCards8 {
+  animation: none;
   width: 100%;
   height: auto;
   display: flex;
@@ -2334,13 +2343,19 @@
   z-index: 3;
   flex-direction: row;
   column-gap: 40px;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   overflow: visible;
   min-width: 0;
 }
-.heading5 {
-  width: 40vw;
+@media (max-width: 1024px) {
+  .sectionCards8 {
+    animation: none;
+  }
+}
+.heading6 {
+  animation: none;
+  width: 100%;
   height: auto;
   display: flex;
   position: sticky;
@@ -2353,9 +2368,9 @@
   z-index: 4;
   padding-top: 160px;
   overflow: visible;
-  flex-shrink: 0;
 }
-.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5 {
+.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7 {
+  animation: none;
   position: relative;
   top: auto;
   width: 100%;
@@ -2367,7 +2382,8 @@
   left: auto;
   min-width: 0;
 }
-.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6 {
+.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8 {
+  animation: none;
   display: block;
   font-size: 14px;
   text-align: right;
@@ -2377,7 +2393,8 @@
   line-height: 19.600000381469727px;
   color: #ffffff;
 }
-.eXpertise3 {
+.eXpertise4 {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
@@ -2389,7 +2406,8 @@
   align-items: flex-start;
   min-width: 0;
 }
-.text__mNyWc {
+.text__as67T {
+  animation: none;
   display: block;
   font-size: 80px;
   font-family: "Koulen";
@@ -2398,7 +2416,15 @@
   line-height: 96px;
   color: #fcfcfc;
 }
-.freeBox___9GtiU {
+@media (max-width: 1024px) {
+  .text__as67T {
+    animation: none;
+    font-size: 70px;
+    line-height: 100%;
+  }
+}
+.freeBox__szcDe {
+  animation: none;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -2414,7 +2440,8 @@
   min-width: 0;
   padding: 0px;
 }
-.an3 {
+.an4 {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
@@ -2424,7 +2451,8 @@
   flex-direction: column;
   justify-content: center;
 }
-.text__ltGhW {
+.text__hXzSg {
+  animation: none;
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0);
   display: block;
   font-size: 145px;
@@ -2434,7 +2462,15 @@
   line-height: 40%;
   color: rgba(138, 116, 50, 1);
 }
-.skills3 {
+@media (max-width: 1024px) {
+  .text__hXzSg {
+    animation: none;
+    font-size: 70px;
+    line-height: 100%;
+  }
+}
+.skills4 {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
@@ -2444,7 +2480,8 @@
   flex-direction: column;
   justify-content: center;
 }
-.text__tuyXj {
+.text__fOny {
+  animation: none;
   display: block;
   font-size: 185px;
   font-family: "Koulen";
@@ -2453,7 +2490,14 @@
   line-height: 100%;
   color: #ffffff;
 }
-.freeBox__vFjgn {
+@media (max-width: 1024px) {
+  .text__fOny {
+    animation: none;
+    font-size: 70px;
+  }
+}
+.freeBox__ewQx {
+  animation: none;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -2469,7 +2513,8 @@
   min-width: 0;
   padding: 0px;
 }
-.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5 {
+.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7 {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
@@ -2480,7 +2525,8 @@
   justify-content: center;
   flex-shrink: 0;
 }
-.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6 {
+.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8 {
+  animation: none;
   display: block;
   font-size: 14px;
   font-family: "Roboto Mono";
@@ -2490,7 +2536,13 @@
   color: #ffffff;
   text-align: left;
 }
-.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3 {
+@media (max-width: 1024px) {
+  .bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8 {
+    animation: none;
+  }
+}
+.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2 {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
@@ -2502,7 +2554,8 @@
   justify-content: center;
   flex-shrink: 0;
 }
-.text__yg8Bs {
+.text__zhvVm {
+  animation: none;
   display: block;
   font-size: 14px;
   font-family: "Roboto Mono";
@@ -2512,7 +2565,8 @@
   color: #ffffff;
   text-align: left;
 }
-.container32 {
+.container33 {
+  animation: none;
   width: 100%;
   height: auto;
   display: flex;
@@ -2528,7 +2582,13 @@
   padding-right: 40px;
   min-width: 0;
 }
-.subContainer3 {
+@media (max-width: 1024px) {
+  .container33 {
+    animation: none;
+  }
+}
+.subContainer4 {
+  animation: none;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -2542,94 +2602,110 @@
   padding: 8px;
 }
 .gridDistortion:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
 }
-.link__jKm7D {
-  display: flex;
-}
-.hoverLogoCard__o8Fnb:global(.__wab_instance) {
+.hoverLogoCard__l9ZaV:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
 }
-.cardExperience__g0CSz:global(.__wab_instance) {
+@media (max-width: 1024px) {
+  .hoverLogoCard__l9ZaV:global(.__wab_instance) {
+    animation: none;
+  }
+}
+.cardExperience___6DbFn:global(.__wab_instance) {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
   right: auto;
 }
-.link___2ApgH {
-  display: flex;
+@media (max-width: 1024px) {
+  .cardExperience___6DbFn:global(.__wab_instance) {
+    animation: none;
+  }
 }
-.hoverLogoCard__qwzZ:global(.__wab_instance) {
+.hoverLogoCard__cp6Io:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
 }
-.cardExperience___4MXlP:global(.__wab_instance) {
+.cardExperience__fupQn:global(.__wab_instance) {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
   right: auto;
 }
-.link__rVhvz {
-  display: flex;
-}
-.hoverLogoCard__xuaFh:global(.__wab_instance) {
+.hoverLogoCard__v5Eh9:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
 }
-.cardExperience__ynxw0:global(.__wab_instance) {
+.cardExperience__gggRm:global(.__wab_instance) {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
   right: auto;
 }
-.link__nMq7I {
-  display: flex;
-}
-.hoverLogoCard__d5GUz:global(.__wab_instance) {
+.hoverLogoCard__cuNdz:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
 }
-.cardExperience___9ACr9:global(.__wab_instance) {
+.cardExperience__eq2Ze:global(.__wab_instance) {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
   right: auto;
 }
-.link__ssCe7 {
-  display: flex;
-}
-.hoverLogoCard__d0Lzq:global(.__wab_instance) {
+.hoverLogoCard__om86V:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
 }
-.cardExperience__hDot:global(.__wab_instance) {
+.cardExperience__rYoxr:global(.__wab_instance) {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
   right: auto;
 }
-.link__j3F12 {
-  display: flex;
+@media (max-width: 1024px) {
+  .cardExperience__rYoxr:global(.__wab_instance) {
+    animation: none;
+  }
 }
-.hoverLogoCard__et6J:global(.__wab_instance) {
+.hoverLogoCard__pcSvT:global(.__wab_instance) {
+  animation: none;
   max-width: 100%;
   object-fit: cover;
 }
-.cardExperience__nUPeJ:global(.__wab_instance) {
+.cardExperience__hpF9J:global(.__wab_instance) {
+  animation: none;
   position: relative;
   top: auto;
   left: auto;
   right: auto;
 }
-.cardWhatAboutUs6:global(.__wab_instance) {
+.cardWhatAboutUs7:global(.__wab_instance) {
+  animation: none;
   position: relative;
   align-self: stretch;
   width: 100%;
   height: auto;
   min-width: 0;
   display: none;
+}
+@media (max-width: 930px) {
+  .cardWhatAboutUs7:global(.__wab_instance) {
+    animation: none;
+  }
 }
 .revealOnScroll__qYi5X:global(.__wab_instance) {
   max-width: 100%;

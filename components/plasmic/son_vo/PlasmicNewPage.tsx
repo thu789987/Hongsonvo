@@ -152,6 +152,7 @@ export type PlasmicNewPage__OverridesType = {
   img2?: Flex__<"div">;
   img?: Flex__<typeof PlasmicImg__>;
   htmlVideo?: Flex__<typeof Video>;
+  original?: Flex__<typeof RevealOnScroll>;
   section2?: Flex__<"div">;
   container2?: Flex__<"div">;
   container15?: Flex__<"div">;
@@ -164,15 +165,33 @@ export type PlasmicNewPage__OverridesType = {
   container37?: Flex__<"div">;
   heading15?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay2?: Flex__<"div">;
+  section4?: Flex__<"div">;
+  container8?: Flex__<"div">;
+  container19?: Flex__<"div">;
+  container20?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay6?: Flex__<"div">;
   section7?: Flex__<"div">;
   image1?: Flex__<typeof GridDistortion>;
   video1?: Flex__<typeof Video>;
   image2?: Flex__<typeof GridDistortion>;
   video2?: Flex__<typeof Video>;
+  section3?: Flex__<"div">;
+  container7?: Flex__<"div">;
+  container17?: Flex__<"div">;
+  container38?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay4?: Flex__<"div">;
+  section11?: Flex__<"div">;
   image3?: Flex__<typeof GridDistortion>;
   video3?: Flex__<typeof Video>;
   image4?: Flex__<typeof GridDistortion>;
   video4?: Flex__<typeof Video>;
+  original2?: Flex__<typeof RevealOnScroll>;
+  section5?: Flex__<"div">;
+  container9?: Flex__<"div">;
+  container18?: Flex__<"div">;
+  container40?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay7?: Flex__<"div">;
+  section12?: Flex__<"div">;
   image5?: Flex__<typeof GridDistortion>;
   video5?: Flex__<typeof Video>;
   image6?: Flex__<typeof GridDistortion>;
@@ -249,6 +268,8 @@ function PlasmicNewPage__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+
+  const globalVariants = _useGlobalVariants();
 
   const currentUser = useCurrentUser?.() || {};
 
@@ -1133,11 +1154,10 @@ function PlasmicNewPage__RenderFunc(props: {
                 </div>
               </RevealOnScroll>
               <RevealOnScroll
+                data-plasmic-name={"original"}
+                data-plasmic-override={overrides.original}
                 blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll__uA49S
-                )}
+                className={classNames("__wab_instance", sty.original)}
                 delay={0}
                 duration={1.5}
                 yOffset={20}
@@ -1326,6 +1346,86 @@ function PlasmicNewPage__RenderFunc(props: {
                               );
                               return (
                                 currentItem?.["Solution"] ||
+                                "Không tìm thấy bài"
+                              );
+                            })()}
+                          </React.Fragment>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </RevealOnScroll>
+              <RevealOnScroll
+                blurAmount={5}
+                className={classNames(
+                  "__wab_instance",
+                  sty.revealOnScroll__kuAq4
+                )}
+                delay={0}
+                duration={1.5}
+                yOffset={20}
+              >
+                <div
+                  data-plasmic-name={"section4"}
+                  data-plasmic-override={overrides.section4}
+                  className={classNames(projectcss.all, sty.section4)}
+                >
+                  <div
+                    data-plasmic-name={"container8"}
+                    data-plasmic-override={overrides.container8}
+                    className={classNames(projectcss.all, sty.container8)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__m5Wjt)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__uZa
+                        )}
+                      >
+                        {"OVERVIEW"}
+                      </div>
+                    </div>
+                    <div
+                      data-plasmic-name={"container19"}
+                      data-plasmic-override={overrides.container19}
+                      className={classNames(projectcss.all, sty.container19)}
+                    >
+                      <div
+                        data-plasmic-name={"container20"}
+                        data-plasmic-override={overrides.container20}
+                        className={classNames(projectcss.all, sty.container20)}
+                      >
+                        <div
+                          data-plasmic-name={
+                            "payJustNowIsSouthAfricasLeadingBuyNowPay6"
+                          }
+                          data-plasmic-override={
+                            overrides.payJustNowIsSouthAfricasLeadingBuyNowPay6
+                          }
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.payJustNowIsSouthAfricasLeadingBuyNowPay6
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Project Overview"] ||
                                 "Không tìm thấy bài"
                               );
                             })()}
@@ -1583,6 +1683,103 @@ function PlasmicNewPage__RenderFunc(props: {
                       })()}
                     />
                   ) : null}
+                </div>
+              </RevealOnScroll>
+              <RevealOnScroll
+                blurAmount={5}
+                className={classNames(
+                  "__wab_instance",
+                  sty.revealOnScroll__zvZQr
+                )}
+                delay={0}
+                duration={1.5}
+                yOffset={20}
+              >
+                <div
+                  data-plasmic-name={"section3"}
+                  data-plasmic-override={overrides.section3}
+                  className={classNames(projectcss.all, sty.section3)}
+                >
+                  <div
+                    data-plasmic-name={"container7"}
+                    data-plasmic-override={overrides.container7}
+                    className={classNames(projectcss.all, sty.container7)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__dI42A)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ugU2J
+                        )}
+                      >
+                        {"Challenge"}
+                      </div>
+                    </div>
+                    <div
+                      data-plasmic-name={"container17"}
+                      data-plasmic-override={overrides.container17}
+                      className={classNames(projectcss.all, sty.container17)}
+                    >
+                      <div
+                        data-plasmic-name={"container38"}
+                        data-plasmic-override={overrides.container38}
+                        className={classNames(projectcss.all, sty.container38)}
+                      >
+                        <div
+                          data-plasmic-name={
+                            "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+                          }
+                          data-plasmic-override={
+                            overrides.payJustNowIsSouthAfricasLeadingBuyNowPay4
+                          }
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.payJustNowIsSouthAfricasLeadingBuyNowPay4
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Challenge"] ||
+                                "Không tìm thấy bài"
+                              );
+                            })()}
+                          </React.Fragment>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </RevealOnScroll>
+              <RevealOnScroll
+                blurAmount={5}
+                className={classNames(
+                  "__wab_instance",
+                  sty.revealOnScroll__tKaho
+                )}
+                delay={0}
+                duration={0.8}
+                yOffset={50}
+              >
+                <div
+                  data-plasmic-name={"section11"}
+                  data-plasmic-override={overrides.section11}
+                  className={classNames(projectcss.all, sty.section11)}
+                >
                   {(() => {
                     try {
                       return (() => {
@@ -1815,6 +2012,102 @@ function PlasmicNewPage__RenderFunc(props: {
                       })()}
                     />
                   ) : null}
+                </div>
+              </RevealOnScroll>
+              <RevealOnScroll
+                data-plasmic-name={"original2"}
+                data-plasmic-override={overrides.original2}
+                blurAmount={5}
+                className={classNames("__wab_instance", sty.original2)}
+                delay={0}
+                duration={1.5}
+                yOffset={20}
+              >
+                <div
+                  data-plasmic-name={"section5"}
+                  data-plasmic-override={overrides.section5}
+                  className={classNames(projectcss.all, sty.section5)}
+                >
+                  <div
+                    data-plasmic-name={"container9"}
+                    data-plasmic-override={overrides.container9}
+                    className={classNames(projectcss.all, sty.container9)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__hvRqL)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__k2Guy
+                        )}
+                      >
+                        {"Solution"}
+                      </div>
+                    </div>
+                    <div
+                      data-plasmic-name={"container18"}
+                      data-plasmic-override={overrides.container18}
+                      className={classNames(projectcss.all, sty.container18)}
+                    >
+                      <div
+                        data-plasmic-name={"container40"}
+                        data-plasmic-override={overrides.container40}
+                        className={classNames(projectcss.all, sty.container40)}
+                      >
+                        <div
+                          data-plasmic-name={
+                            "payJustNowIsSouthAfricasLeadingBuyNowPay7"
+                          }
+                          data-plasmic-override={
+                            overrides.payJustNowIsSouthAfricasLeadingBuyNowPay7
+                          }
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.payJustNowIsSouthAfricasLeadingBuyNowPay7
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Solution"] ||
+                                "Không tìm thấy bài"
+                              );
+                            })()}
+                          </React.Fragment>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </RevealOnScroll>
+              <RevealOnScroll
+                blurAmount={5}
+                className={classNames(
+                  "__wab_instance",
+                  sty.revealOnScroll___9SI2F
+                )}
+                delay={0}
+                duration={0.8}
+                yOffset={50}
+              >
+                <div
+                  data-plasmic-name={"section12"}
+                  data-plasmic-override={overrides.section12}
+                  className={classNames(projectcss.all, sty.section12)}
+                >
                   {(() => {
                     try {
                       return (() => {
@@ -2842,6 +3135,193 @@ function PlasmicNewPage__RenderFunc(props: {
                       data-plasmic-name={"prevous"}
                       data-plasmic-override={overrides.prevous}
                       className={classNames("__wab_instance", sty.prevous)}
+                      image2={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return "";
+                                  const prevIndex =
+                                    currentIndex === 0
+                                      ? list.length - 1
+                                      : currentIndex - 1;
+                                  const prevItem = list[prevIndex];
+                                  return (
+                                    prevItem?.["Main Image"] ||
+                                    prevItem?.["Main Image"] ||
+                                    "Bài mới nhất"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
+                                }
+                                throw e;
+                              }
+                            })()
+                          : (() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return "";
+                                  const prevIndex =
+                                    currentIndex === 0
+                                      ? list.length - 1
+                                      : currentIndex - 1;
+                                  const prevItem = list[prevIndex];
+                                  return (
+                                    prevItem?.["Main Image"] ||
+                                    prevItem?.["Main Image"] ||
+                                    "Bài mới nhất"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
+                                }
+                                throw e;
+                              }
+                            })()
+                      }
+                      imageCondition={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              try {
+                                return !(() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return false;
+                                  const prevIndex =
+                                    currentIndex === 0
+                                      ? list.length - 1
+                                      : currentIndex - 1;
+                                  const prevItem = list[prevIndex];
+                                  const video =
+                                    prevItem?.["Video"] || prevItem?.["video"];
+                                  return !!video;
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()
+                          : (() => {
+                              try {
+                                return !(() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return false;
+                                  const prevIndex =
+                                    currentIndex === 0
+                                      ? list.length - 1
+                                      : currentIndex - 1;
+                                  const prevItem = list[prevIndex];
+                                  const video =
+                                    prevItem?.["Video"] || prevItem?.["video"];
+                                  return !!video;
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()
+                      }
+                      link={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "/";
+                              const prevIndex =
+                                currentIndex === 0
+                                  ? list.length - 1
+                                  : currentIndex - 1;
+                              const prevItem = list[prevIndex];
+                              if (!prevItem) return "/";
+                              const newSlug =
+                                prevItem.slug || prevItem.Slug || prevItem.id;
+                              return `/works/${newSlug}`;
+                            })()
+                          : (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "/";
+                              const prevIndex =
+                                currentIndex === 0
+                                  ? list.length - 1
+                                  : currentIndex - 1;
+                              const prevItem = list[prevIndex];
+                              if (!prevItem) return "/";
+                              const newSlug =
+                                prevItem.slug || prevItem.Slug || prevItem.id;
+                              return `/works/${newSlug}`;
+                            })()
+                      }
                       softwareContainerSoftware2={
                         <div
                           className={classNames(
@@ -3217,6 +3697,169 @@ function PlasmicNewPage__RenderFunc(props: {
                           ) : null}
                         </div>
                       }
+                      title={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "";
+                              const prevIndex =
+                                currentIndex === 0
+                                  ? list.length - 1
+                                  : currentIndex - 1;
+                              const prevItem = list[prevIndex];
+                              return (
+                                prevItem?.["Title"] ||
+                                prevItem?.["title"] ||
+                                "Bài mới nhất"
+                              );
+                            })()
+                          : (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "";
+                              const prevIndex =
+                                currentIndex === 0
+                                  ? list.length - 1
+                                  : currentIndex - 1;
+                              const prevItem = list[prevIndex];
+                              return (
+                                prevItem?.["Title"] ||
+                                prevItem?.["title"] ||
+                                "Bài mới nhất"
+                              );
+                            })()
+                      }
+                      video={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "";
+                              const prevIndex =
+                                currentIndex === 0
+                                  ? list.length - 1
+                                  : currentIndex - 1;
+                              const prevItem = list[prevIndex];
+                              return (
+                                prevItem?.["Video"] ||
+                                prevItem?.["Video"] ||
+                                "Bài mới nhất"
+                              );
+                            })()
+                          : (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "";
+                              const prevIndex =
+                                currentIndex === 0
+                                  ? list.length - 1
+                                  : currentIndex - 1;
+                              const prevItem = list[prevIndex];
+                              return (
+                                prevItem?.["Video"] ||
+                                prevItem?.["Video"] ||
+                                "Bài mới nhất"
+                              );
+                            })()
+                      }
+                      videoCondition={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return false;
+                                  const prevIndex =
+                                    currentIndex === 0
+                                      ? list.length - 1
+                                      : currentIndex - 1;
+                                  const prevItem = list[prevIndex];
+                                  const video =
+                                    prevItem?.["Video"] || prevItem?.["video"];
+                                  return !!video;
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return false;
+                                }
+                                throw e;
+                              }
+                            })()
+                          : (() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return false;
+                                  const prevIndex =
+                                    currentIndex === 0
+                                      ? list.length - 1
+                                      : currentIndex - 1;
+                                  const prevItem = list[prevIndex];
+                                  const video =
+                                    prevItem?.["Video"] || prevItem?.["video"];
+                                  return !!video;
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return false;
+                                }
+                                throw e;
+                              }
+                            })()
+                      }
                     />
                   </PlasmicLink__>
                 </RevealOnScroll>
@@ -3244,6 +3887,193 @@ function PlasmicNewPage__RenderFunc(props: {
                       data-plasmic-name={"nExt"}
                       data-plasmic-override={overrides.nExt}
                       className={classNames("__wab_instance", sty.nExt)}
+                      image2={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return "";
+                                  const nextIndex =
+                                    currentIndex === list.length - 1
+                                      ? 0
+                                      : currentIndex + 1;
+                                  const nextItem = list[nextIndex];
+                                  return (
+                                    nextItem?.["Main Image"] ||
+                                    nextItem?.["Main Image"] ||
+                                    "Bài đầu tiên"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
+                                }
+                                throw e;
+                              }
+                            })()
+                          : (() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return "";
+                                  const nextIndex =
+                                    currentIndex === list.length - 1
+                                      ? 0
+                                      : currentIndex + 1;
+                                  const nextItem = list[nextIndex];
+                                  return (
+                                    nextItem?.["Main Image"] ||
+                                    nextItem?.["Main Image"] ||
+                                    "Bài đầu tiên"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
+                                }
+                                throw e;
+                              }
+                            })()
+                      }
+                      imageCondition={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              try {
+                                return !(() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return false;
+                                  const nextIndex =
+                                    currentIndex === list.length - 1
+                                      ? 0
+                                      : currentIndex + 1;
+                                  const nextItem = list[nextIndex];
+                                  const video =
+                                    nextItem?.["Video"] || nextItem?.["video"];
+                                  return !!video;
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()
+                          : (() => {
+                              try {
+                                return !(() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return false;
+                                  const nextIndex =
+                                    currentIndex === list.length - 1
+                                      ? 0
+                                      : currentIndex + 1;
+                                  const nextItem = list[nextIndex];
+                                  const video =
+                                    nextItem?.["Video"] || nextItem?.["video"];
+                                  return !!video;
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()
+                      }
+                      link={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "/";
+                              const nextIndex =
+                                currentIndex === list.length - 1
+                                  ? 0
+                                  : currentIndex + 1;
+                              const nextItem = list[nextIndex];
+                              if (!nextItem) return "/";
+                              const newSlug =
+                                nextItem.slug || nextItem.Slug || nextItem.id;
+                              return `/works/${newSlug}`;
+                            })()
+                          : (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "/";
+                              const nextIndex =
+                                currentIndex === list.length - 1
+                                  ? 0
+                                  : currentIndex + 1;
+                              const nextItem = list[nextIndex];
+                              if (!nextItem) return "/";
+                              const newSlug =
+                                nextItem.slug || nextItem.Slug || nextItem.id;
+                              return `/works/${newSlug}`;
+                            })()
+                      }
                       softwareContainerSoftware2={
                         <div
                           className={classNames(
@@ -3619,6 +4449,169 @@ function PlasmicNewPage__RenderFunc(props: {
                           ) : null}
                         </div>
                       }
+                      title={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "";
+                              const nextIndex =
+                                currentIndex === list.length - 1
+                                  ? 0
+                                  : currentIndex + 1;
+                              const nextItem = list[nextIndex];
+                              return (
+                                nextItem?.["Title"] ||
+                                nextItem?.["title"] ||
+                                "Bài đầu tiên"
+                              );
+                            })()
+                          : (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "";
+                              const nextIndex =
+                                currentIndex === list.length - 1
+                                  ? 0
+                                  : currentIndex + 1;
+                              const nextItem = list[nextIndex];
+                              return (
+                                nextItem?.["Title"] ||
+                                nextItem?.["title"] ||
+                                "Bài đầu tiên"
+                              );
+                            })()
+                      }
+                      video={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "";
+                              const nextIndex =
+                                currentIndex === list.length - 1
+                                  ? 0
+                                  : currentIndex + 1;
+                              const nextItem = list[nextIndex];
+                              return (
+                                nextItem?.["Video"] ||
+                                nextItem?.["video"] ||
+                                "Bài đầu tiên"
+                              );
+                            })()
+                          : (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              const list = $queries.allList?.data || [];
+                              const currentIndex = list.findIndex(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              if (currentIndex === -1) return "";
+                              const nextIndex =
+                                currentIndex === list.length - 1
+                                  ? 0
+                                  : currentIndex + 1;
+                              const nextItem = list[nextIndex];
+                              return (
+                                nextItem?.["Video"] ||
+                                nextItem?.["video"] ||
+                                "Bài đầu tiên"
+                              );
+                            })()
+                      }
+                      videoCondition={
+                        hasVariant(globalVariants, "screen", "mobile")
+                          ? (() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return false;
+                                  const prevIndex =
+                                    currentIndex === 0
+                                      ? list.length - 1
+                                      : currentIndex - 1;
+                                  const prevItem = list[prevIndex];
+                                  const video =
+                                    prevItem?.["Video"] || prevItem?.["video"];
+                                  return !!video;
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return false;
+                                }
+                                throw e;
+                              }
+                            })()
+                          : (() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  const list = $queries.allList?.data || [];
+                                  const currentIndex = list.findIndex(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  if (currentIndex === -1) return false;
+                                  const prevIndex =
+                                    currentIndex === 0
+                                      ? list.length - 1
+                                      : currentIndex - 1;
+                                  const prevItem = list[prevIndex];
+                                  const video =
+                                    prevItem?.["Video"] || prevItem?.["video"];
+                                  return !!video;
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return false;
+                                }
+                                throw e;
+                              }
+                            })()
+                      }
                     />
                   </PlasmicLink__>
                 </RevealOnScroll>
@@ -3669,6 +4662,7 @@ const PlasmicDescendants = {
     "img2",
     "img",
     "htmlVideo",
+    "original",
     "section2",
     "container2",
     "container15",
@@ -3681,15 +4675,33 @@ const PlasmicDescendants = {
     "container37",
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2",
+    "section4",
+    "container8",
+    "container19",
+    "container20",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6",
     "section7",
     "image1",
     "video1",
     "image2",
     "video2",
+    "section3",
+    "container7",
+    "container17",
+    "container38",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay4",
+    "section11",
     "image3",
     "video3",
     "image4",
     "video4",
+    "original2",
+    "section5",
+    "container9",
+    "container18",
+    "container40",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay7",
+    "section12",
     "image5",
     "video5",
     "image6",
@@ -3748,6 +4760,7 @@ const PlasmicDescendants = {
     "img2",
     "img",
     "htmlVideo",
+    "original",
     "section2",
     "container2",
     "container15",
@@ -3760,15 +4773,33 @@ const PlasmicDescendants = {
     "container37",
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2",
+    "section4",
+    "container8",
+    "container19",
+    "container20",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6",
     "section7",
     "image1",
     "video1",
     "image2",
     "video2",
+    "section3",
+    "container7",
+    "container17",
+    "container38",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay4",
+    "section11",
     "image3",
     "video3",
     "image4",
     "video4",
+    "original2",
+    "section5",
+    "container9",
+    "container18",
+    "container40",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay7",
+    "section12",
     "image5",
     "video5",
     "image6",
@@ -3885,6 +4916,21 @@ const PlasmicDescendants = {
   img2: ["img2", "img", "htmlVideo"],
   img: ["img"],
   htmlVideo: ["htmlVideo"],
+  original: [
+    "original",
+    "section2",
+    "container2",
+    "container15",
+    "container16",
+    "heading3",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay",
+    "container36",
+    "heading14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay1",
+    "container37",
+    "heading15",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay2"
+  ],
   section2: [
     "section2",
     "container2",
@@ -3951,29 +4997,91 @@ const PlasmicDescendants = {
   payJustNowIsSouthAfricasLeadingBuyNowPay2: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay2"
   ],
-  section7: [
-    "section7",
-    "image1",
-    "video1",
-    "image2",
-    "video2",
-    "image3",
-    "video3",
-    "image4",
-    "video4",
-    "image5",
-    "video5",
-    "image6",
-    "video6"
+  section4: [
+    "section4",
+    "container8",
+    "container19",
+    "container20",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
   ],
+  container8: [
+    "container8",
+    "container19",
+    "container20",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
+  ],
+  container19: [
+    "container19",
+    "container20",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
+  ],
+  container20: ["container20", "payJustNowIsSouthAfricasLeadingBuyNowPay6"],
+  payJustNowIsSouthAfricasLeadingBuyNowPay6: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
+  ],
+  section7: ["section7", "image1", "video1", "image2", "video2"],
   image1: ["image1"],
   video1: ["video1"],
   image2: ["image2"],
   video2: ["video2"],
+  section3: [
+    "section3",
+    "container7",
+    "container17",
+    "container38",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+  ],
+  container7: [
+    "container7",
+    "container17",
+    "container38",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+  ],
+  container17: [
+    "container17",
+    "container38",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+  ],
+  container38: ["container38", "payJustNowIsSouthAfricasLeadingBuyNowPay4"],
+  payJustNowIsSouthAfricasLeadingBuyNowPay4: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+  ],
+  section11: ["section11", "image3", "video3", "image4", "video4"],
   image3: ["image3"],
   video3: ["video3"],
   image4: ["image4"],
   video4: ["video4"],
+  original2: [
+    "original2",
+    "section5",
+    "container9",
+    "container18",
+    "container40",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay7"
+  ],
+  section5: [
+    "section5",
+    "container9",
+    "container18",
+    "container40",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay7"
+  ],
+  container9: [
+    "container9",
+    "container18",
+    "container40",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay7"
+  ],
+  container18: [
+    "container18",
+    "container40",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay7"
+  ],
+  container40: ["container40", "payJustNowIsSouthAfricasLeadingBuyNowPay7"],
+  payJustNowIsSouthAfricasLeadingBuyNowPay7: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay7"
+  ],
+  section12: ["section12", "image5", "video5", "image6", "video6"],
   image5: ["image5"],
   video5: ["video5"],
   image6: ["image6"],
@@ -4080,6 +5188,7 @@ type NodeDefaultElementType = {
   img2: "div";
   img: typeof PlasmicImg__;
   htmlVideo: typeof Video;
+  original: typeof RevealOnScroll;
   section2: "div";
   container2: "div";
   container15: "div";
@@ -4092,15 +5201,33 @@ type NodeDefaultElementType = {
   container37: "div";
   heading15: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay2: "div";
+  section4: "div";
+  container8: "div";
+  container19: "div";
+  container20: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay6: "div";
   section7: "div";
   image1: typeof GridDistortion;
   video1: typeof Video;
   image2: typeof GridDistortion;
   video2: typeof Video;
+  section3: "div";
+  container7: "div";
+  container17: "div";
+  container38: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay4: "div";
+  section11: "div";
   image3: typeof GridDistortion;
   video3: typeof Video;
   image4: typeof GridDistortion;
   video4: typeof Video;
+  original2: typeof RevealOnScroll;
+  section5: "div";
+  container9: "div";
+  container18: "div";
+  container40: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay7: "div";
+  section12: "div";
   image5: typeof GridDistortion;
   video5: typeof Video;
   image6: typeof GridDistortion;
@@ -4246,6 +5373,7 @@ export const PlasmicNewPage = Object.assign(
     img2: makeNodeComponent("img2"),
     img: makeNodeComponent("img"),
     htmlVideo: makeNodeComponent("htmlVideo"),
+    original: makeNodeComponent("original"),
     section2: makeNodeComponent("section2"),
     container2: makeNodeComponent("container2"),
     container15: makeNodeComponent("container15"),
@@ -4264,15 +5392,39 @@ export const PlasmicNewPage = Object.assign(
     payJustNowIsSouthAfricasLeadingBuyNowPay2: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay2"
     ),
+    section4: makeNodeComponent("section4"),
+    container8: makeNodeComponent("container8"),
+    container19: makeNodeComponent("container19"),
+    container20: makeNodeComponent("container20"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay6: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay6"
+    ),
     section7: makeNodeComponent("section7"),
     image1: makeNodeComponent("image1"),
     video1: makeNodeComponent("video1"),
     image2: makeNodeComponent("image2"),
     video2: makeNodeComponent("video2"),
+    section3: makeNodeComponent("section3"),
+    container7: makeNodeComponent("container7"),
+    container17: makeNodeComponent("container17"),
+    container38: makeNodeComponent("container38"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay4: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+    ),
+    section11: makeNodeComponent("section11"),
     image3: makeNodeComponent("image3"),
     video3: makeNodeComponent("video3"),
     image4: makeNodeComponent("image4"),
     video4: makeNodeComponent("video4"),
+    original2: makeNodeComponent("original2"),
+    section5: makeNodeComponent("section5"),
+    container9: makeNodeComponent("container9"),
+    container18: makeNodeComponent("container18"),
+    container40: makeNodeComponent("container40"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay7: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay7"
+    ),
+    section12: makeNodeComponent("section12"),
     image5: makeNodeComponent("image5"),
     video5: makeNodeComponent("video5"),
     image6: makeNodeComponent("image6"),

@@ -67,6 +67,7 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
+import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
@@ -144,6 +145,7 @@ export const PlasmicMyJourney__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicMyJourney__OverridesType = {
   root?: Flex__<"div">;
+  globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
@@ -216,20 +218,20 @@ export type PlasmicMyJourney__OverridesType = {
   _25?: Flex__<"div">;
   _18?: Flex__<"div">;
   cardWhatAboutUs5?: Flex__<typeof CardWhatAboutUs>;
-  sectionCards7?: Flex__<"div">;
-  heading5?: Flex__<"div">;
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5?: Flex__<"div">;
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6?: Flex__<"div">;
-  eXpertise3?: Flex__<"div">;
-  an3?: Flex__<"div">;
-  skills3?: Flex__<"div">;
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5?: Flex__<"div">;
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6?: Flex__<"div">;
-  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3?: Flex__<"div">;
-  container32?: Flex__<"div">;
-  subContainer3?: Flex__<"div">;
+  sectionCards8?: Flex__<"div">;
+  heading6?: Flex__<"div">;
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7?: Flex__<"div">;
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8?: Flex__<"div">;
+  eXpertise4?: Flex__<"div">;
+  an4?: Flex__<"div">;
+  skills4?: Flex__<"div">;
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7?: Flex__<"div">;
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8?: Flex__<"div">;
+  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2?: Flex__<"div">;
+  container33?: Flex__<"div">;
+  subContainer4?: Flex__<"div">;
   gridDistortion?: Flex__<typeof GridDistortion>;
-  cardWhatAboutUs6?: Flex__<typeof CardWhatAboutUs>;
+  cardWhatAboutUs7?: Flex__<typeof CardWhatAboutUs>;
 };
 
 export interface DefaultMyJourneyProps {}
@@ -340,6 +342,13 @@ function PlasmicMyJourney__RenderFunc(props: {
             sty.root
           )}
         >
+          <GlobalLoading
+            data-plasmic-name={"globalLoading"}
+            data-plasmic-override={overrides.globalLoading}
+            className={classNames("__wab_instance", sty.globalLoading)}
+            textSize={"160px"}
+          />
+
           <SmoothScroll
             data-plasmic-name={"smoothScroll"}
             data-plasmic-override={overrides.smoothScroll}
@@ -761,21 +770,27 @@ function PlasmicMyJourney__RenderFunc(props: {
                         projectcss.all,
                         projectcss.h1,
                         projectcss.__wab_text,
-                        sty.h1__c8Grs
+                        sty.h1__c8Grs,
+                        "animate-text"
                       )}
                     >
                       {"IN"}
                     </h1>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__an56F)}
+                    className={classNames(
+                      projectcss.all,
+                      sty.freeBox__an56F,
+                      "animate-text"
+                    )}
                   >
                     <h1
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
                         projectcss.__wab_text,
-                        sty.h1__fmTt
+                        sty.h1__fmTt,
+                        ``
                       )}
                     >
                       {"H"}
@@ -809,7 +824,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                         projectcss.all,
                         projectcss.h1,
                         projectcss.__wab_text,
-                        sty.h1___4La3P
+                        sty.h1___4La3P,
+                        "animate-text"
                       )}
                     >
                       {"FO"}
@@ -2185,96 +2201,93 @@ function PlasmicMyJourney__RenderFunc(props: {
                 blurAmount={5}
                 className={classNames(
                   "__wab_instance",
-                  sty.revealOnScroll__bd37H
+                  sty.revealOnScroll__rOr6V
                 )}
                 delay={0}
                 duration={1.6}
-                yOffset={80}
+                yOffset={100}
               >
                 <div
-                  data-plasmic-name={"sectionCards7"}
-                  data-plasmic-override={overrides.sectionCards7}
-                  className={classNames(projectcss.all, sty.sectionCards7)}
+                  data-plasmic-name={"sectionCards8"}
+                  data-plasmic-override={overrides.sectionCards8}
+                  className={classNames(projectcss.all, sty.sectionCards8)}
                 >
                   <div
-                    data-plasmic-name={"heading5"}
-                    data-plasmic-override={overrides.heading5}
-                    className={classNames(projectcss.all, sty.heading5)}
+                    data-plasmic-name={"heading6"}
+                    data-plasmic-override={overrides.heading6}
+                    className={classNames(projectcss.all, sty.heading6)}
                   >
                     <div
                       data-plasmic-name={
-                        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5"
+                        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7"
                       }
                       data-plasmic-override={
-                        overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5
+                        overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7
                       }
                       className={classNames(
                         projectcss.all,
-                        sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5
+                        sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7
                       )}
                     >
                       <div
                         data-plasmic-name={
-                          "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6"
+                          "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
                         }
                         data-plasmic-override={
-                          overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6
+                          overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8
                         }
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6
+                          sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8
                         )}
                       >
                         {"[MY OFFERINGS]"}
                       </div>
                     </div>
                     <div
-                      data-plasmic-name={"eXpertise3"}
-                      data-plasmic-override={overrides.eXpertise3}
-                      className={classNames(projectcss.all, sty.eXpertise3)}
+                      data-plasmic-name={"eXpertise4"}
+                      data-plasmic-override={overrides.eXpertise4}
+                      className={classNames(projectcss.all, sty.eXpertise4)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__mNyWc
+                          sty.text__as67T
                         )}
                       >
                         {"EXpertise"}
                       </div>
                     </div>
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___9GtiU
-                      )}
+                      className={classNames(projectcss.all, sty.freeBox__szcDe)}
                     >
                       <div
-                        data-plasmic-name={"an3"}
-                        data-plasmic-override={overrides.an3}
-                        className={classNames(projectcss.all, sty.an3)}
+                        data-plasmic-name={"an4"}
+                        data-plasmic-override={overrides.an4}
+                        className={classNames(projectcss.all, sty.an4)}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__ltGhW
+                            sty.text__hXzSg
                           )}
                         >
                           {"and"}
                         </div>
                       </div>
                       <div
-                        data-plasmic-name={"skills3"}
-                        data-plasmic-override={overrides.skills3}
-                        className={classNames(projectcss.all, sty.skills3)}
+                        data-plasmic-name={"skills4"}
+                        data-plasmic-override={overrides.skills4}
+                        className={classNames(projectcss.all, sty.skills4)}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__tuyXj
+                            sty.text__fOny
                           )}
                         >
                           {"Skills"}
@@ -2282,31 +2295,31 @@ function PlasmicMyJourney__RenderFunc(props: {
                       </div>
                     </div>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__vFjgn)}
+                      className={classNames(projectcss.all, sty.freeBox__ewQx)}
                     >
                       <div
                         data-plasmic-name={
-                          "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5"
+                          "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7"
                         }
                         data-plasmic-override={
-                          overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5
+                          overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7
                         }
                         className={classNames(
                           projectcss.all,
-                          sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5
+                          sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7
                         )}
                       >
                         <div
                           data-plasmic-name={
-                            "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6"
+                            "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
                           }
                           data-plasmic-override={
-                            overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6
+                            overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8
                           }
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6
+                            sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8
                           )}
                         >
                           {
@@ -2316,21 +2329,21 @@ function PlasmicMyJourney__RenderFunc(props: {
                       </div>
                       <div
                         data-plasmic-name={
-                          "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3"
+                          "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
                         }
                         data-plasmic-override={
-                          overrides.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3
+                          overrides.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2
                         }
                         className={classNames(
                           projectcss.all,
-                          sty.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3
+                          sty.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__yg8Bs
+                            sty.text__zhvVm
                           )}
                         >
                           {
@@ -2341,14 +2354,14 @@ function PlasmicMyJourney__RenderFunc(props: {
                     </div>
                   </div>
                   <div
-                    data-plasmic-name={"container32"}
-                    data-plasmic-override={overrides.container32}
-                    className={classNames(projectcss.all, sty.container32)}
+                    data-plasmic-name={"container33"}
+                    data-plasmic-override={overrides.container33}
+                    className={classNames(projectcss.all, sty.container33)}
                   >
                     <div
-                      data-plasmic-name={"subContainer3"}
-                      data-plasmic-override={overrides.subContainer3}
-                      className={classNames(projectcss.all, sty.subContainer3)}
+                      data-plasmic-name={"subContainer4"}
+                      data-plasmic-override={overrides.subContainer4}
+                      className={classNames(projectcss.all, sty.subContainer4)}
                     >
                       <GridDistortion
                         data-plasmic-name={"gridDistortion"}
@@ -2367,296 +2380,252 @@ function PlasmicMyJourney__RenderFunc(props: {
                         strength={0.25}
                       />
 
-                      <PlasmicLink__
+                      <HoverLogoCard
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          sty.link__jKm7D
+                          "__wab_instance",
+                          sty.hoverLogoCard__l9ZaV
                         )}
-                        component={Link}
-                        href={"https://bbcincorp.com/hk"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
-                      >
-                        <HoverLogoCard
-                          className={classNames(
-                            "__wab_instance",
-                            sty.hoverLogoCard__o8Fnb
-                          )}
-                          logoSrc={
-                            "/plasmic/son_vo/images/q3Nl1VOj9SdNlGqUyhPfv86EwPng.png"
-                          }
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience__g0CSz
-                            )}
-                            company={"BBCIncorp"}
-                            content={
-                              "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
-                            }
-                            number={"[ Oct 2022 - Present ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
-                              }
-                            })()}
-                            title={"Senior UI/UX"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          sty.link___2ApgH
-                        )}
-                        component={Link}
-                        href={"https://gleadsglobal.com/"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
-                      >
-                        <HoverLogoCard
-                          className={classNames(
-                            "__wab_instance",
-                            sty.hoverLogoCard__qwzZ
-                          )}
-                          logoSrc={"/plasmic/son_vo/images/gleadsPng.avif"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience___4MXlP
-                            )}
-                            company={"GLEADS COMPANY"}
-                            content={
-                              "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
-                            }
-                            number={"[ Oct 2022 - Present ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
-                              }
-                            })()}
-                            title={"Senior UI/UX"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          sty.link__rVhvz
-                        )}
-                        component={Link}
-                        href={"https://www.averydennison.com/en/home.html"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
-                      >
-                        <HoverLogoCard
-                          className={classNames(
-                            "__wab_instance",
-                            sty.hoverLogoCard__xuaFh
-                          )}
-                          logoSrc={"/plasmic/son_vo/images/adAvif.avif"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience__ynxw0
-                            )}
-                            company={"Avery Dennison"}
-                            content={
-                              "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
-                            }
-                            number={"[ Oct 2016 - Feb 2020 ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
-                              }
-                            })()}
-                            time={"[ Oct 2016 - Feb 2020 ]"}
-                            title={"Graphic Design"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          sty.link__nMq7I
-                        )}
-                        component={Link}
-                        href={
-                          "https://www.facebook.com/p/CO-KHI-MnK-100067757482737/"
+                        logoSrc={
+                          "/plasmic/son_vo/images/q3Nl1VOj9SdNlGqUyhPfv86EwPng.png"
                         }
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
                       >
-                        <HoverLogoCard
+                        <CardExperience
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverLogoCard__d5GUz
+                            sty.cardExperience___6DbFn
                           )}
-                          logoSrc={"/plasmic/son_vo/images/mnkPng.png"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience___9ACr9
-                            )}
-                            company={"MNK Company"}
-                            content={
-                              "Conducted user research, facilitated workshops with stakeholders, and brainstormed ideas with BOD. Developed wireframes, prototypes of Package, and visual designs for proposed solutions"
-                            }
-                            number={"[ Oct 2016 - Feb 2020 ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
+                          company={"BBCIncorp"}
+                          content={
+                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/frame12Png.png",
+                            fullWidth: 160,
+                            fullHeight: 160,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Oct 2022 - Present ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
                               }
-                            })()}
-                            title={"Graphic Design"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
+                              throw e;
+                            }
+                          })()}
+                          title={"Senior UI/UX"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          sty.link__ssCe7
+                          "__wab_instance",
+                          sty.hoverLogoCard__cp6Io
                         )}
-                        component={Link}
-                        href={"https://eptcenter.vn/"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
+                        logoSrc={"/plasmic/son_vo/images/gleadsPng.avif"}
                       >
-                        <HoverLogoCard
+                        <CardExperience
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverLogoCard__d0Lzq
+                            sty.cardExperience__fupQn
                           )}
-                          logoSrc={"/plasmic/son_vo/images/eptcAvif.avif"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience__hDot
-                            )}
-                            company={"EPTC Printing"}
-                            content={
-                              "During my internship at EPTC Printing Company, I worked on designing and preparing plates for billboard and digital printing. My responsibilities included creating and adjusting designs for large-format prints, ensuring high-quality outputs, and collaborating with the production team to optimize printing processes. This experience strengthened my skills in digital printing, design software, and large-scale print production."
-                            }
-                            number={"[ Aug 2019 - Oct 2019 ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
+                          company={"GLEADS COMPANY"}
+                          content={
+                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/gleadsPng.avif",
+                            fullWidth: 825,
+                            fullHeight: 377,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Oct 2022 - Present ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
                               }
-                            })()}
-                            time={"[ Present ][ Aug 2019 - Oct 2019 ]"}
-                            title={"Digital Printer Internship"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
+                              throw e;
+                            }
+                          })()}
+                          title={"Senior UI/UX"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          sty.link__j3F12
+                          "__wab_instance",
+                          sty.hoverLogoCard__v5Eh9
                         )}
-                        component={Link}
-                        href={"http://inkhuyenhocphianam.vn/"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
+                        logoSrc={"/plasmic/son_vo/images/adAvif.avif"}
                       >
-                        <HoverLogoCard
+                        <CardExperience
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverLogoCard__et6J
+                            sty.cardExperience__gggRm
                           )}
-                          logoSrc={"/plasmic/son_vo/images/phiaNamPng.png"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience__nUPeJ
-                            )}
-                            company={"Khuyen hoc phia nam"}
-                            content={
-                              "During my internship at Khuyen Hoc Phia nam, I assisted in designing and developing innovative plate concepts using software like Adobe Illustrator, Indesign, Sigma. I conducted market research, contributed to prototype development, and collaborated with the team to refine designs for aesthetics and functionality. This experience enhanced my technical skills, creativity, and teamwork."
-                            }
-                            number={"[ Jan 2019 - Feb 2019 ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
+                          company={"Avery Dennison"}
+                          content={
+                            "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/adAvif.avif",
+                            fullWidth: 1000,
+                            fullHeight: 700,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Oct 2016 - Feb 2020 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
                               }
-                            })()}
-                            time={"[ Jan 2019 - Feb 2019 ]"}
-                            title={"Plate Designer INTERSHIP"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
+                              throw e;
+                            }
+                          })()}
+                          time={"[ Oct 2016 - Feb 2020 ]"}
+                          title={"Graphic Design"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.hoverLogoCard__cuNdz
+                        )}
+                        logoSrc={"/plasmic/son_vo/images/mnkPng.png"}
+                      >
+                        <CardExperience
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardExperience__eq2Ze
+                          )}
+                          company={"MNK Company"}
+                          content={
+                            "Conducted user research, facilitated workshops with stakeholders, and brainstormed ideas with BOD. Developed wireframes, prototypes of Package, and visual designs for proposed solutions"
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/mnkPng.png",
+                            fullWidth: 160,
+                            fullHeight: 160,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Oct 2016 - Feb 2020 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()}
+                          title={"Graphic Design"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.hoverLogoCard__om86V
+                        )}
+                        logoSrc={"/plasmic/son_vo/images/eptcAvif.avif"}
+                      >
+                        <CardExperience
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardExperience__rYoxr
+                          )}
+                          company={"EPTC Printing"}
+                          content={
+                            "During my internship at EPTC Printing Company, I worked on designing and preparing plates for billboard and digital printing. My responsibilities included creating and adjusting designs for large-format prints, ensuring high-quality outputs, and collaborating with the production team to optimize printing processes. This experience strengthened my skills in digital printing, design software, and large-scale print production."
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/eptcAvif.avif",
+                            fullWidth: 225,
+                            fullHeight: 225,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Aug 2019 - Oct 2019 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()}
+                          time={"[ Present ][ Aug 2019 - Oct 2019 ]"}
+                          title={"Digital Printer Internship"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
+                        className={classNames(
+                          "__wab_instance",
+                          sty.hoverLogoCard__pcSvT
+                        )}
+                        logoSrc={"/plasmic/son_vo/images/phiaNamPng.png"}
+                      >
+                        <CardExperience
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cardExperience__hpF9J
+                          )}
+                          company={"Khuyen hoc phia nam"}
+                          content={
+                            "During my internship at Khuyen Hoc Phia nam, I assisted in designing and developing innovative plate concepts using software like Adobe Illustrator, Indesign, Sigma. I conducted market research, contributed to prototype development, and collaborated with the team to refine designs for aesthetics and functionality. This experience enhanced my technical skills, creativity, and teamwork."
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/phiaNamPng.png",
+                            fullWidth: 160,
+                            fullHeight: 160,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Jan 2019 - Feb 2019 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
+                              }
+                              throw e;
+                            }
+                          })()}
+                          time={"[ Jan 2019 - Feb 2019 ]"}
+                          title={"Plate Designer INTERSHIP"}
+                        />
+                      </HoverLogoCard>
                     </div>
                     <CardWhatAboutUs
-                      data-plasmic-name={"cardWhatAboutUs6"}
-                      data-plasmic-override={overrides.cardWhatAboutUs6}
+                      data-plasmic-name={"cardWhatAboutUs7"}
+                      data-plasmic-override={overrides.cardWhatAboutUs7}
                       className={classNames(
                         "__wab_instance",
-                        sty.cardWhatAboutUs6
+                        sty.cardWhatAboutUs7
                       )}
                     />
                   </div>
@@ -2734,6 +2703,7 @@ function PlasmicMyJourney__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "globalLoading",
     "smoothScroll",
     "scrollDetector",
     "newMenu",
@@ -2806,21 +2776,22 @@ const PlasmicDescendants = {
     "_25",
     "_18",
     "cardWhatAboutUs5",
-    "sectionCards7",
-    "heading5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6",
-    "eXpertise3",
-    "an3",
-    "skills3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6",
-    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3",
-    "container32",
-    "subContainer3",
+    "sectionCards8",
+    "heading6",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8",
+    "eXpertise4",
+    "an4",
+    "skills4",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
+    "container33",
+    "subContainer4",
     "gridDistortion",
-    "cardWhatAboutUs6"
+    "cardWhatAboutUs7"
   ],
+  globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
     "scrollDetector",
@@ -2894,20 +2865,20 @@ const PlasmicDescendants = {
     "_25",
     "_18",
     "cardWhatAboutUs5",
-    "sectionCards7",
-    "heading5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6",
-    "eXpertise3",
-    "an3",
-    "skills3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6",
-    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3",
-    "container32",
-    "subContainer3",
+    "sectionCards8",
+    "heading6",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8",
+    "eXpertise4",
+    "an4",
+    "skills4",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
+    "container33",
+    "subContainer4",
     "gridDistortion",
-    "cardWhatAboutUs6"
+    "cardWhatAboutUs7"
   ],
   scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
@@ -3212,73 +3183,74 @@ const PlasmicDescendants = {
   _25: ["_25", "_18"],
   _18: ["_18"],
   cardWhatAboutUs5: ["cardWhatAboutUs5"],
-  sectionCards7: [
-    "sectionCards7",
-    "heading5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6",
-    "eXpertise3",
-    "an3",
-    "skills3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6",
-    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3",
-    "container32",
-    "subContainer3",
+  sectionCards8: [
+    "sectionCards8",
+    "heading6",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8",
+    "eXpertise4",
+    "an4",
+    "skills4",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
+    "container33",
+    "subContainer4",
     "gridDistortion",
-    "cardWhatAboutUs6"
+    "cardWhatAboutUs7"
   ],
-  heading5: [
-    "heading5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6",
-    "eXpertise3",
-    "an3",
-    "skills3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6",
-    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3"
+  heading6: [
+    "heading6",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8",
+    "eXpertise4",
+    "an4",
+    "skills4",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
   ],
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5:
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7:
     [
-      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6"
+      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
     ],
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6:
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8:
     [
-      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6"
+      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
     ],
-  eXpertise3: ["eXpertise3"],
-  an3: ["an3"],
-  skills3: ["skills3"],
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5:
+  eXpertise4: ["eXpertise4"],
+  an4: ["an4"],
+  skills4: ["skills4"],
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7:
     [
-      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6"
+      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
     ],
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6:
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8:
     [
-      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6"
+      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
     ],
-  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3:
+  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2:
     [
-      "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3"
+      "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
     ],
-  container32: [
-    "container32",
-    "subContainer3",
+  container33: [
+    "container33",
+    "subContainer4",
     "gridDistortion",
-    "cardWhatAboutUs6"
+    "cardWhatAboutUs7"
   ],
-  subContainer3: ["subContainer3", "gridDistortion"],
+  subContainer4: ["subContainer4", "gridDistortion"],
   gridDistortion: ["gridDistortion"],
-  cardWhatAboutUs6: ["cardWhatAboutUs6"]
+  cardWhatAboutUs7: ["cardWhatAboutUs7"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
   scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
@@ -3351,20 +3323,20 @@ type NodeDefaultElementType = {
   _25: "div";
   _18: "div";
   cardWhatAboutUs5: typeof CardWhatAboutUs;
-  sectionCards7: "div";
-  heading5: "div";
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5: "div";
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6: "div";
-  eXpertise3: "div";
-  an3: "div";
-  skills3: "div";
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5: "div";
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6: "div";
-  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3: "div";
-  container32: "div";
-  subContainer3: "div";
+  sectionCards8: "div";
+  heading6: "div";
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7: "div";
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8: "div";
+  eXpertise4: "div";
+  an4: "div";
+  skills4: "div";
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7: "div";
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8: "div";
+  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2: "div";
+  container33: "div";
+  subContainer4: "div";
   gridDistortion: typeof GridDistortion;
-  cardWhatAboutUs6: typeof CardWhatAboutUs;
+  cardWhatAboutUs7: typeof CardWhatAboutUs;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3454,6 +3426,7 @@ export const PlasmicMyJourney = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
+    globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
@@ -3548,35 +3521,35 @@ export const PlasmicMyJourney = Object.assign(
     _25: makeNodeComponent("_25"),
     _18: makeNodeComponent("_18"),
     cardWhatAboutUs5: makeNodeComponent("cardWhatAboutUs5"),
-    sectionCards7: makeNodeComponent("sectionCards7"),
-    heading5: makeNodeComponent("heading5"),
-    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5:
+    sectionCards8: makeNodeComponent("sectionCards8"),
+    heading6: makeNodeComponent("heading6"),
+    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7:
       makeNodeComponent(
-        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5"
+        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7"
       ),
-    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6:
+    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8:
       makeNodeComponent(
-        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6"
+        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
       ),
-    eXpertise3: makeNodeComponent("eXpertise3"),
-    an3: makeNodeComponent("an3"),
-    skills3: makeNodeComponent("skills3"),
-    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5:
+    eXpertise4: makeNodeComponent("eXpertise4"),
+    an4: makeNodeComponent("an4"),
+    skills4: makeNodeComponent("skills4"),
+    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7:
       makeNodeComponent(
-        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5"
+        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7"
       ),
-    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6:
+    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8:
       makeNodeComponent(
-        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6"
+        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
       ),
-    theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3:
+    theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2:
       makeNodeComponent(
-        "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3"
+        "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
       ),
-    container32: makeNodeComponent("container32"),
-    subContainer3: makeNodeComponent("subContainer3"),
+    container33: makeNodeComponent("container33"),
+    subContainer4: makeNodeComponent("subContainer4"),
     gridDistortion: makeNodeComponent("gridDistortion"),
-    cardWhatAboutUs6: makeNodeComponent("cardWhatAboutUs6"),
+    cardWhatAboutUs7: makeNodeComponent("cardWhatAboutUs7"),
 
     // Metadata about props expected for PlasmicMyJourney
     internalVariantProps: PlasmicMyJourney__VariantProps,

@@ -94,6 +94,7 @@ export type PlasmicCardExperience__ArgsType = {
   image12?: React.ComponentProps<typeof PlasmicImg__>["src"];
   company?: string;
   time?: string;
+  logo?: React.ComponentProps<typeof PlasmicImg__>["src"];
 };
 type ArgPropType = keyof PlasmicCardExperience__ArgsType;
 export const PlasmicCardExperience__ArgProps = new Array<ArgPropType>(
@@ -105,13 +106,15 @@ export const PlasmicCardExperience__ArgProps = new Array<ArgPropType>(
   "image11",
   "image12",
   "company",
-  "time"
+  "time",
+  "logo"
 );
 
 export type PlasmicCardExperience__OverridesType = {
   root?: Flex__<"div">;
   hoverController?: Flex__<typeof HoverController>;
   titleArtDirection2?: Flex__<"div">;
+  img?: Flex__<typeof PlasmicImg__>;
   titleArtDirection3?: Flex__<"div">;
   number012?: Flex__<"div">;
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure?: Flex__<"div">;
@@ -128,6 +131,7 @@ export interface DefaultCardExperienceProps {
   image12?: React.ComponentProps<typeof PlasmicImg__>["src"];
   company?: string;
   time?: string;
+  logo?: React.ComponentProps<typeof PlasmicImg__>["src"];
   project1?: SingleBooleanChoiceArg<"project1">;
   project2?: SingleBooleanChoiceArg<"project2">;
   className?: string;
@@ -192,6 +196,8 @@ function PlasmicCardExperience__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+
+  const globalVariants = _useGlobalVariants();
 
   const currentUser = useCurrentUser?.() || {};
 
@@ -443,6 +449,27 @@ function PlasmicCardExperience__RenderFunc(props: {
                         }
                       )}
                     >
+                      <PlasmicImg__
+                        data-plasmic-name={"img"}
+                        data-plasmic-override={overrides.img}
+                        alt={""}
+                        className={classNames(sty.img, {
+                          [sty.imgproject1]: hasVariant(
+                            $state,
+                            "project1",
+                            "project1"
+                          )
+                        })}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"50%"}
+                        loading={"lazy"}
+                        src={args.logo}
+                      />
+
                       <div
                         data-plasmic-name={"titleArtDirection3"}
                         data-plasmic-override={overrides.titleArtDirection3}
@@ -594,6 +621,7 @@ const PlasmicDescendants = {
     "root",
     "hoverController",
     "titleArtDirection2",
+    "img",
     "titleArtDirection3",
     "number012",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure",
@@ -602,12 +630,14 @@ const PlasmicDescendants = {
   hoverController: [
     "hoverController",
     "titleArtDirection2",
+    "img",
     "titleArtDirection3",
     "number012",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2"
   ],
   titleArtDirection2: ["titleArtDirection2"],
+  img: ["img"],
   titleArtDirection3: ["titleArtDirection3"],
   number012: ["number012"],
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure:
@@ -627,6 +657,7 @@ type NodeDefaultElementType = {
   root: "div";
   hoverController: typeof HoverController;
   titleArtDirection2: "div";
+  img: typeof PlasmicImg__;
   titleArtDirection3: "div";
   number012: "div";
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure: "div";
@@ -697,6 +728,7 @@ export const PlasmicCardExperience = Object.assign(
     // Helper components rendering sub-elements
     hoverController: makeNodeComponent("hoverController"),
     titleArtDirection2: makeNodeComponent("titleArtDirection2"),
+    img: makeNodeComponent("img"),
     titleArtDirection3: makeNodeComponent("titleArtDirection3"),
     number012: makeNodeComponent("number012"),
     weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure:

@@ -137,7 +137,7 @@
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   width: 100%;
   height: 100%;
@@ -211,12 +211,20 @@
   position: relative;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   height: auto;
   max-width: 100%;
-  column-gap: 160px;
+  column-gap: 0px;
+  padding-left: 200px;
+  padding-right: 200px;
   min-width: 0;
+}
+@media (max-width: 1024px) {
+  .freeBox___45NKw {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 .h1___5DzwJ {
   text-align: right;
@@ -228,6 +236,11 @@
   transition-duration: 1s;
   -webkit-transition-property: all;
   -webkit-transition-duration: 1s;
+}
+@media (max-width: 1024px) {
+  .h1___5DzwJ {
+    font-size: 200px;
+  }
 }
 @media (max-width: 930px) {
   .h1___5DzwJ {
@@ -241,6 +254,11 @@
   font-size: 300px;
   letter-spacing: 0%;
 }
+@media (max-width: 1024px) {
+  .h1__tfuZe {
+    font-size: 200px;
+  }
+}
 @media (max-width: 930px) {
   .h1__tfuZe {
     max-width: 800px;
@@ -252,6 +270,11 @@
   line-height: 80%;
   font-size: 300px;
   letter-spacing: 0%;
+}
+@media (max-width: 1024px) {
+  .h1___5AEnJ {
+    font-size: 200px;
+  }
 }
 @media (max-width: 930px) {
   .h1___5AEnJ {
@@ -332,6 +355,11 @@
   color: var(--token-VsMZPNxcE2dF);
   line-height: 100%;
 }
+@media (max-width: 1024px) {
+  .h1__pfjH6 {
+    font-size: 40px;
+  }
+}
 @media (max-width: 930px) {
   .h1__pfjH6 {
     max-width: 800px;
@@ -345,6 +373,11 @@
   font-weight: 400;
   line-height: 140%;
 }
+@media (max-width: 1024px) {
+  .h1___4S00K {
+    font-size: 16px;
+  }
+}
 @media (max-width: 930px) {
   .h1___4S00K {
     max-width: 800px;
@@ -355,6 +388,11 @@
   text-align: left;
   color: var(--token-VsMZPNxcE2dF);
   line-height: 100%;
+}
+@media (max-width: 1024px) {
+  .h1__qg2Zx {
+    font-size: 40px;
+  }
 }
 @media (max-width: 930px) {
   .h1__qg2Zx {
@@ -380,6 +418,11 @@
   text-align: left;
   color: var(--token-VsMZPNxcE2dF);
   line-height: 100%;
+}
+@media (max-width: 1024px) {
+  .h1__bf2CR {
+    font-size: 40px;
+  }
 }
 @media (max-width: 930px) {
   .h1__bf2CR {
@@ -428,6 +471,11 @@
   color: var(--token-VsMZPNxcE2dF);
   line-height: 100%;
 }
+@media (max-width: 1024px) {
+  .h1__svsYs {
+    font-size: 40px;
+  }
+}
 @media (max-width: 930px) {
   .h1__svsYs {
     max-width: 800px;
@@ -456,6 +504,11 @@
   font-weight: 400;
   line-height: 100%;
 }
+@media (max-width: 1024px) {
+  .h1__q37Zf {
+    font-size: 40px;
+  }
+}
 @media (max-width: 930px) {
   .h1__q37Zf {
     max-width: 800px;
@@ -466,6 +519,11 @@
   text-align: left;
   color: var(--token-VsMZPNxcE2dF);
   line-height: 100%;
+}
+@media (max-width: 1024px) {
+  .h1__c5Rym {
+    font-size: 40px;
+  }
 }
 @media (max-width: 930px) {
   .h1__c5Rym {
@@ -1045,13 +1103,13 @@
   z-index: 3;
   flex-direction: row;
   column-gap: 40px;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   overflow: visible;
   min-width: 0;
 }
 .heading4 {
-  width: 40vw;
+  width: 100%;
   height: auto;
   display: flex;
   position: sticky;
@@ -1064,7 +1122,6 @@
   z-index: 4;
   padding-top: 160px;
   overflow: visible;
-  flex-shrink: 0;
 }
 .weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3 {
   position: relative;
@@ -1109,6 +1166,12 @@
   line-height: 96px;
   color: #fcfcfc;
 }
+@media (max-width: 1024px) {
+  .text__qqIdU {
+    font-size: 70px;
+    line-height: 100%;
+  }
+}
 .freeBox___96BuF {
   display: flex;
   flex-direction: column;
@@ -1145,6 +1208,12 @@
   line-height: 40%;
   color: rgba(138, 116, 50, 1);
 }
+@media (max-width: 1024px) {
+  .text__kTVgZ {
+    font-size: 70px;
+    line-height: 100%;
+  }
+}
 .skills2 {
   position: relative;
   top: auto;
@@ -1163,6 +1232,11 @@
   letter-spacing: 0em;
   line-height: 100%;
   color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .text__uyfyd {
+    font-size: 70px;
+  }
 }
 .freeBox___83PE {
   display: flex;
