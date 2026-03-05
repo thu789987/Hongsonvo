@@ -413,9 +413,27 @@ function PlasmicNewMenu__RenderFunc(props: {
           />
         </div>
       </div>
-      <div className={classNames(projectcss.all, sty.freeBox___2ndUm)}>
+      <div
+        className={classNames(projectcss.all, sty.freeBox___2ndUm, {
+          [sty.freeBoxscrolledState___2ndUmsVRjT]: hasVariant(
+            $state,
+            "scrolledState",
+            "scrolledState"
+          )
+        })}
+      >
         {renderPlasmicSlot({
-          defaultContents: "[ 2026 ]",
+          defaultContents: (
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___36Be
+              )}
+            >
+              {"[ 2026 ]"}
+            </div>
+          ),
           value: args.headerTitle,
           className: classNames(sty.slotTargetHeaderTitle)
         })}

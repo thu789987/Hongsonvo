@@ -741,7 +741,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {
-                          "I design software with the belief it's one of the most malleable mediums we have. At the moment, I'm interested in how tools connect with each other, how they act on our behalf, and how we interact with them across different modes. I currently UI/UX Deisigner at Gleads\u2197, an applied research lab building AI tooling for software creation. I studied Communication Design\u2197 and Human-Computer Interaction\u2197 at Carnegie Mellon University, an experience I hold fondly and will cherish for the rest of my life. If you have an interesting idea, get in touch\u2197."
+                          "I design software with the belief that it's one of the most malleable mediums we have. At the moment, I'm interested in how tools connect with each other, how they act on our behalf, and how we interact with them across different modes. With 4 years of experience as a UI/UX Designer, I currently work at both Gleads\u2197 and BBCIncorp\u2197. I graduated from the Ho Chi Minh City University of Technology and Education (HCMUTE)\u2197, an experience I hold fondly and will cherish for the rest of my life. If you have an interesting idea, get in touch\u2197."
                         }
                       </div>
                     </div>
