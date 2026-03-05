@@ -2280,6 +2280,16 @@
           "id": "7ohycUN6VNEU",
           "name": "Vector.png 3",
           "filePath": "../public/plasmic/son_vo/images/vectorPng3.png"
+        },
+        {
+          "id": "WSqoaZHQIbxJ",
+          "name": "1.jpg",
+          "filePath": "../public/plasmic/son_vo/images/_1Jpg.jpg"
+        },
+        {
+          "id": "m4jSKEWRfS-D",
+          "name": "2.png",
+          "filePath": "../public/plasmic/son_vo/images/_2Png.png"
         }
       ],
       "indirect": false,

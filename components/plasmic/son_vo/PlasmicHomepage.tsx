@@ -77,6 +77,7 @@ import { ScrollPlayVideo } from "../../ScrollPlayVideo"; // plasmic-import: nqEd
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
+import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
 import { HoverLogoCard } from "../../HoverLogoCard"; // plasmic-import: 8gew1WdMY0jF/codeComponent
 import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUtTr/component
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
@@ -179,6 +180,7 @@ export type PlasmicHomepage__OverridesType = {
   container31?: Flex__<"div">;
   subContainer2?: Flex__<"div">;
   gridDistortion?: Flex__<typeof GridDistortion>;
+  infiniteScroll?: Flex__<typeof InfiniteScroll>;
   cardWhatAboutUs5?: Flex__<typeof CardWhatAboutUs>;
   sectionCards3?: Flex__<"div">;
   top5?: Flex__<"div">;
@@ -339,7 +341,17 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"newMenu"}
                   data-plasmic-override={overrides.newMenu}
                   className={classNames("__wab_instance", sty.newMenu)}
-                  headerTitle={"[ 2026 ]"}
+                  headerTitle={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xOeBx
+                      )}
+                    >
+                      {"[ 2026 ]"}
+                    </div>
+                  }
                   scrolledState={(() => {
                     try {
                       return $ctx.isScrolled;
@@ -383,77 +395,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
                     }
                   />
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__xdgmx)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__gYGn)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__bskKq)}
-                    >
-                      <PlasmicImg__
-                        alt={""}
-                        className={classNames(sty.img__mG268)}
-                        displayHeight={"326px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"336px"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/son_vo/images/image4.png",
-                          fullWidth: 1170,
-                          fullHeight: 1560,
-                          aspectRatio: undefined
-                        }}
-                      />
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__qfmit
-                        )}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___45NKw)}
-                  >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1___5DzwJ,
-                        "animate-text"
-                      )}
-                    >
-                      {"H"}
-                    </h1>
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1__tfuZe,
-                        "animate-text"
-                      )}
-                    >
-                      {"S"}
-                    </h1>
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.__wab_text,
-                        sty.h1___5AEnJ,
-                        "animate-text"
-                      )}
-                    >
-                      {"V"}
-                    </h1>
-                  </div>
                 </div>
               </div>
               <div
@@ -740,9 +681,93 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text__eNwwS
                         )}
                       >
-                        {
-                          "I design software with the belief that it's one of the most malleable mediums we have. At the moment, I'm interested in how tools connect with each other, how they act on our behalf, and how we interact with them across different modes. With 4 years of experience as a UI/UX Designer, I currently work at both Gleads\u2197 and BBCIncorp\u2197. I graduated from the Ho Chi Minh City University of Technology and Education (HCMUTE)\u2197, an experience I hold fondly and will cherish for the rest of my life. If you have an interesting idea, get in touch\u2197."
-                        }
+                        <React.Fragment>
+                          <React.Fragment>
+                            {
+                              "I design software with the belief that it's one of the most malleable mediums we have. At the moment, I'm interested in how tools connect with each other, how they act on our behalf, and how we interact with them across different modes. With 4 years of experience as a UI/UX Designer, I currently work at both "
+                            }
+                          </React.Fragment>
+                          {
+                            <PlasmicLink__
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                projectcss.__wab_text,
+                                projectcss.plasmic_default__inline,
+                                sty.link__w0L0X
+                              )}
+                              component={Link}
+                              href={"https://gleadsglobal.com/"}
+                              legacyBehavior={false}
+                              platform={"nextjs"}
+                            >
+                              {"Gleads\u2197"}
+                            </PlasmicLink__>
+                          }
+                          <React.Fragment>{" and "}</React.Fragment>
+                          {
+                            <PlasmicLink__
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                projectcss.__wab_text,
+                                projectcss.plasmic_default__inline,
+                                sty.link___3AV08
+                              )}
+                              component={Link}
+                              href={"https://bbcincorp.com/hk"}
+                              legacyBehavior={false}
+                              platform={"nextjs"}
+                            >
+                              {"BBCIncorp\u2197"}
+                            </PlasmicLink__>
+                          }
+                          <React.Fragment>
+                            {
+                              ". I graduated from the Ho Chi Minh City University of Technology and Education "
+                            }
+                          </React.Fragment>
+                          {
+                            <PlasmicLink__
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                projectcss.__wab_text,
+                                projectcss.plasmic_default__inline,
+                                sty.link__cqpwv
+                              )}
+                              component={Link}
+                              href={"https://hcmute.edu.vn/"}
+                              legacyBehavior={false}
+                              platform={"nextjs"}
+                            >
+                              {"(HCMUTE)\u2197"}
+                            </PlasmicLink__>
+                          }
+                          <React.Fragment>
+                            {
+                              ", an experience I hold fondly and will cherish for the rest of my life. If you have an interesting idea, "
+                            }
+                          </React.Fragment>
+                          {
+                            <PlasmicLink__
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                projectcss.__wab_text,
+                                projectcss.plasmic_default__inline,
+                                sty.link__laJbp
+                              )}
+                              component={Link}
+                              href={"/info"}
+                              legacyBehavior={false}
+                              platform={"nextjs"}
+                            >
+                              {"get in touch\u2197"}
+                            </PlasmicLink__>
+                          }
+                          <React.Fragment>{"."}</React.Fragment>
+                        </React.Fragment>
                       </div>
                     </div>
                   </div>
@@ -1197,7 +1222,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4
                         )}
                       >
-                        {"[MY OFFERINGS]"}
+                        {"[ MY OFFERINGS ]"}
                       </div>
                     </div>
                     <div
@@ -1281,7 +1306,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           {
-                            "Bridging emotion and clarity, my design practice \ngenerally evolves around storytelling, research \nand enterprise design thinking. "
+                            "Bridging emotion and clarity, my design practice generally evolves around storytelling, research and enterprise design thinking."
                           }
                         </div>
                       </div>
@@ -1305,7 +1330,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           {
-                            "The aim is always the same for all projects, which \nis to create one of a kind, human-centred \nexperiences that leave a positive impact."
+                            "The aim is always the same for all projects, which is to create one of a kind, human-centred experiences that leave a positive impact."
                           }
                         </div>
                       </div>
@@ -1330,14 +1355,111 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                         enableEffect={true}
                         grid={20}
-                        imageSrc={
-                          "/plasmic/son_vo/images/yrStH7Lcoh9O5WxFsPetODyteSmPngJpg.jpg"
-                        }
+                        imageSrc={"/plasmic/son_vo/images/_1Jpg.jpg"}
                         mouse={0.1}
                         relaxation={0.9}
                         strength={0.25}
                       />
 
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__nvBlI
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__vu6GM
+                          )}
+                        >
+                          <InfiniteScroll
+                            data-plasmic-name={"infiniteScroll"}
+                            data-plasmic-override={overrides.infiniteScroll}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.infiniteScroll
+                            )}
+                            direction={"left"}
+                            gap={40}
+                            pauseOnHover={true}
+                            repeatCount={4}
+                            showFade={false}
+                            speed={100}
+                          >
+                            {(_par =>
+                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
+                              (() => {
+                                try {
+                                  return $queries.works.data;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return [];
+                                  }
+                                  throw e;
+                                }
+                              })()
+                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                              const currentItem = __plasmic_item_0;
+                              const currentIndex = __plasmic_idx_0;
+                              return (
+                                <PlasmicImg__
+                                  alt={""}
+                                  className={classNames(sty.img___2C4Ah)}
+                                  displayHeight={"auto"}
+                                  displayMaxHeight={"none"}
+                                  displayMaxWidth={"100%"}
+                                  displayMinHeight={"0"}
+                                  displayMinWidth={"0"}
+                                  displayWidth={"240px"}
+                                  key={currentIndex}
+                                  loading={"lazy"}
+                                  src={(() => {
+                                    try {
+                                      return currentItem["Main Image"];
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return {
+                                          src: "/plasmic/son_vo/images/_2Png.png",
+                                          fullWidth: 6048,
+                                          fullHeight: 4024,
+                                          aspectRatio: undefined
+                                        };
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                />
+                              );
+                            })}
+                          </InfiniteScroll>
+                        </div>
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__wXhWg)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/_2Png.png",
+                            fullWidth: 6048,
+                            fullHeight: 4024,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </div>
                       <HoverLogoCard
                         className={classNames(
                           "__wab_instance",
@@ -1354,7 +1476,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                           company={"BBCIncorp"}
                           content={
-                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
+                            "Planned and conducted surveys and competitive analysis to identify issues and test solutions for business incorporation and legal compliance web applications, including BBCIncorp Portal, Incorpsec, the Sales Onboarding system, and the main Website. Redesigned the products to address business goals and recapture users' needs. Collaborated directly with the product team, including PMs and fellow UI/UX Designers, to establish workflows and produce prototypes, as well as working closely with front-end and back-end developers to implement the designs."
                           }
                           logo={{
                             src: "/plasmic/son_vo/images/frame12Png.png",
@@ -1393,7 +1515,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                           company={"GLEADS COMPANY"}
                           content={
-                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
+                            "Strategized and executed user research and competitor benchmarking to pinpoint pain points and validate design approaches for the Agency's core website, alongside developing custom web apps and sites for clients. Crafted interactive web experiences utilizing platforms like WordPress, Framer, and Webflow. Worked closely with Project Managers and fellow UI/UX designers to map out user journeys and deliver interactive prototypes, while partnering with engineering teams to guarantee a seamless design-to-code transition."
                           }
                           logo={{
                             src: "/plasmic/son_vo/images/gleadsPng.avif",
@@ -1432,7 +1554,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                           company={"Avery Dennison"}
                           content={
-                            "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
+                            "Actively participated in the end-to-end production process for apparel and footwear labels, overseeing everything from initial artwork conceptualization to final manufacturing. Designed and developed high-quality brand labels, hangtags, and packaging elements for top-tier global brands, including Adidas, Nike, and Uniqlo. Ensured all design outputs strictly adhered to their rigorous international brand identity guidelines and quality standards."
                           }
                           logo={{
                             src: "/plasmic/son_vo/images/adAvif.avif",
@@ -1472,7 +1594,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                           company={"MNK Company"}
                           content={
-                            "Conducted user research, facilitated workshops with stakeholders, and brainstormed ideas with BOD. Developed wireframes, prototypes of Package, and visual designs for proposed solutions"
+                            "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
                           }
                           logo={{
                             src: "/plasmic/son_vo/images/mnkPng.png",
@@ -2230,6 +2352,7 @@ const PlasmicDescendants = {
     "container31",
     "subContainer2",
     "gridDistortion",
+    "infiniteScroll",
     "cardWhatAboutUs5",
     "sectionCards3",
     "top5",
@@ -2288,6 +2411,7 @@ const PlasmicDescendants = {
     "container31",
     "subContainer2",
     "gridDistortion",
+    "infiniteScroll",
     "cardWhatAboutUs5",
     "sectionCards3",
     "top5",
@@ -2370,6 +2494,7 @@ const PlasmicDescendants = {
     "container31",
     "subContainer2",
     "gridDistortion",
+    "infiniteScroll",
     "cardWhatAboutUs5"
   ],
   heading4: [
@@ -2412,10 +2537,12 @@ const PlasmicDescendants = {
     "container31",
     "subContainer2",
     "gridDistortion",
+    "infiniteScroll",
     "cardWhatAboutUs5"
   ],
-  subContainer2: ["subContainer2", "gridDistortion"],
+  subContainer2: ["subContainer2", "gridDistortion", "infiniteScroll"],
   gridDistortion: ["gridDistortion"],
+  infiniteScroll: ["infiniteScroll"],
   cardWhatAboutUs5: ["cardWhatAboutUs5"],
   sectionCards3: [
     "sectionCards3",
@@ -2515,6 +2642,7 @@ type NodeDefaultElementType = {
   container31: "div";
   subContainer2: "div";
   gridDistortion: typeof GridDistortion;
+  infiniteScroll: typeof InfiniteScroll;
   cardWhatAboutUs5: typeof CardWhatAboutUs;
   sectionCards3: "div";
   top5: "div";
@@ -2675,6 +2803,7 @@ export const PlasmicHomepage = Object.assign(
     container31: makeNodeComponent("container31"),
     subContainer2: makeNodeComponent("subContainer2"),
     gridDistortion: makeNodeComponent("gridDistortion"),
+    infiniteScroll: makeNodeComponent("infiniteScroll"),
     cardWhatAboutUs5: makeNodeComponent("cardWhatAboutUs5"),
     sectionCards3: makeNodeComponent("sectionCards3"),
     top5: makeNodeComponent("top5"),
