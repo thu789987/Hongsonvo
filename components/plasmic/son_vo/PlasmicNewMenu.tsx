@@ -90,6 +90,7 @@ export const PlasmicNewMenu__ArgProps = new Array<ArgPropType>("headerTitle");
 
 export type PlasmicNewMenu__OverridesType = {
   menu?: Flex__<"div">;
+  text?: Flex__<"div">;
 };
 
 export interface DefaultNewMenuProps {
@@ -194,15 +195,20 @@ function PlasmicNewMenu__RenderFunc(props: {
       )}
     >
       <div className={classNames(projectcss.all, sty.freeBox__eCo7W)}>
-        <div
+        <PlasmicLink__
           className={classNames(
             projectcss.all,
+            projectcss.a,
             projectcss.__wab_text,
-            sty.text__xdhB6
+            sty.link__xdhB6
           )}
+          component={Link}
+          href={`/`}
+          legacyBehavior={false}
+          platform={"nextjs"}
         >
           {"HSV"}
-        </div>
+        </PlasmicLink__>
       </div>
       <div
         className={classNames(projectcss.all, sty.freeBox___6LhCd, {
@@ -439,12 +445,14 @@ function PlasmicNewMenu__RenderFunc(props: {
         })}
         <div className={classNames(projectcss.all, sty.freeBox__aBbEh)}>
           <div
+            data-plasmic-name={"text"}
+            data-plasmic-override={overrides.text}
             className={classNames(
               projectcss.all,
               projectcss.__wab_text,
-              sty.text__eNxCg,
+              sty.text,
               {
-                [sty.textscrolledState__eNxCgsVRjT]: hasVariant(
+                [sty.textscrolledState]: hasVariant(
                   $state,
                   "scrolledState",
                   "scrolledState"
@@ -461,13 +469,15 @@ function PlasmicNewMenu__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  menu: ["menu"]
+  menu: ["menu", "text"],
+  text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   menu: "div";
+  text: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -532,6 +542,7 @@ export const PlasmicNewMenu = Object.assign(
   makeNodeComponent("menu"),
   {
     // Helper components rendering sub-elements
+    text: makeNodeComponent("text"),
 
     // Metadata about props expected for PlasmicNewMenu
     internalVariantProps: PlasmicNewMenu__VariantProps,
