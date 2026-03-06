@@ -94,8 +94,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: F5b4pw36Rhyj/css
 
-import Artboard14SvgIcon from "./icons/PlasmicIcon__Artboard14Svg"; // plasmic-import: RNiMy76HG5_X/icon
-
 const emptyProxy: any = new Proxy(() => "", {
   get(_, prop) {
     return prop === Symbol.toPrimitive ? () => "" : emptyProxy;
@@ -195,12 +193,6 @@ export type PlasmicHomepage__OverridesType = {
   templateCard8?: Flex__<typeof TemplateCard>;
   patternGrid?: Flex__<typeof PatternGrid>;
   templateCard9?: Flex__<typeof TemplateCard>;
-  service05?: Flex__<"div">;
-  service15?: Flex__<"div">;
-  service25?: Flex__<"div">;
-  service35?: Flex__<"div">;
-  service45?: Flex__<"div">;
-  service55?: Flex__<"div">;
   section?: Flex__<typeof Section>;
 };
 
@@ -1742,66 +1734,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-name={"templateCard"}
                     data-plasmic-override={overrides.templateCard}
                     className={classNames("__wab_instance", sty.templateCard)}
-                    softwareContainerSoftware2={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__sibwu
-                          )}
-                        >
-                          <Artboard14SvgIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__f7YRv
-                            )}
-                            role={"img"}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__wjKzC
-                          )}
-                        >
-                          {"Framer"}
-                        </div>
-                      </React.Fragment>
-                    }
                   />
 
                   <TemplateCard
                     data-plasmic-name={"templateCard2"}
                     data-plasmic-override={overrides.templateCard2}
                     className={classNames("__wab_instance", sty.templateCard2)}
-                    softwareContainerSoftware2={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__cDlMg
-                          )}
-                        >
-                          <Artboard14SvgIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__e4W4B
-                            )}
-                            role={"img"}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__p0Not
-                          )}
-                        >
-                          {"Framer"}
-                        </div>
-                      </React.Fragment>
-                    }
                   />
 
                   <TemplateCard
@@ -1826,99 +1764,18 @@ function PlasmicHomepage__RenderFunc(props: {
                     data-plasmic-name={"templateCard6"}
                     data-plasmic-override={overrides.templateCard6}
                     className={classNames("__wab_instance", sty.templateCard6)}
-                    softwareContainerSoftware2={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__ccPtW
-                          )}
-                        >
-                          <Artboard14SvgIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg___1OYjA
-                            )}
-                            role={"img"}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__sbTRk
-                          )}
-                        >
-                          {"Framer"}
-                        </div>
-                      </React.Fragment>
-                    }
                   />
 
                   <TemplateCard
                     data-plasmic-name={"templateCard7"}
                     data-plasmic-override={overrides.templateCard7}
                     className={classNames("__wab_instance", sty.templateCard7)}
-                    softwareContainerSoftware2={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__imMaw
-                          )}
-                        >
-                          <Artboard14SvgIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__x68Sn
-                            )}
-                            role={"img"}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__p2R85
-                          )}
-                        >
-                          {"Framer"}
-                        </div>
-                      </React.Fragment>
-                    }
                   />
 
                   <TemplateCard
                     data-plasmic-name={"templateCard8"}
                     data-plasmic-override={overrides.templateCard8}
                     className={classNames("__wab_instance", sty.templateCard8)}
-                    softwareContainerSoftware2={
-                      <React.Fragment>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__e77Zt
-                          )}
-                        >
-                          <Artboard14SvgIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__dVoub
-                            )}
-                            role={"img"}
-                          />
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__xQ6I6
-                          )}
-                        >
-                          {"Framer"}
-                        </div>
-                      </React.Fragment>
-                    }
                   />
                 </div>
                 <PatternGrid
@@ -1991,237 +1848,86 @@ function PlasmicHomepage__RenderFunc(props: {
                             }
                           })()}
                           link={`/works/${currentItem.Slug}`}
-                          softwareContainerSoftware2={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__yjJzD
-                              )}
-                            >
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes(
-                                      "UI/UX Design"
-                                    )
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service05"}
-                                  data-plasmic-override={overrides.service05}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service05
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text___3Hss2
-                                    )}
-                                  >
-                                    {"UI/UX Design"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes("E-commerce")
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service15"}
-                                  data-plasmic-override={overrides.service15}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service15
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__lst75
-                                    )}
-                                  >
-                                    {"E-commerce"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes("SEO")
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service25"}
-                                  data-plasmic-override={overrides.service25}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service25
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__yMJf1
-                                    )}
-                                  >
-                                    {"SEO"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes("Content")
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service35"}
-                                  data-plasmic-override={overrides.service35}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service35
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text___30HbQ
-                                    )}
-                                  >
-                                    {"Content"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes(
-                                      "Brand Idenity"
-                                    )
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service45"}
-                                  data-plasmic-override={overrides.service45}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service45
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__k8Svf
-                                    )}
-                                  >
-                                    {"Brand Idenity"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes(
-                                      "Web Development"
-                                    )
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service55"}
-                                  data-plasmic-override={overrides.service55}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service55
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__dPcUv
-                                    )}
-                                  >
-                                    {"Web Development"}
-                                  </div>
-                                </div>
-                              ) : null}
-                            </div>
-                          }
+                          tag1={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("UI")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })()}
+                          tag22={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("UX")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })()}
+                          tag32={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("FRAMER")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })()}
+                          tag42={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("E-COMMERCE")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })()}
+                          tag52={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("BRAND IDENTITY")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })()}
                           title={currentItem["Title"]}
                           video={currentItem.Video}
                           videoCondition={(() => {
@@ -2367,12 +2073,6 @@ const PlasmicDescendants = {
     "templateCard8",
     "patternGrid",
     "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55",
     "section"
   ],
   globalLoading: ["globalLoading"],
@@ -2426,12 +2126,6 @@ const PlasmicDescendants = {
     "templateCard8",
     "patternGrid",
     "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55",
     "section"
   ],
   scrollContext: ["scrollContext", "newMenu"],
@@ -2557,13 +2251,7 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
+    "templateCard9"
   ],
   top5: ["top5", "title3"],
   title3: ["title3"],
@@ -2575,31 +2263,8 @@ const PlasmicDescendants = {
   templateCard6: ["templateCard6"],
   templateCard7: ["templateCard7"],
   templateCard8: ["templateCard8"],
-  patternGrid: [
-    "patternGrid",
-    "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
-  ],
-  templateCard9: [
-    "templateCard9",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
-  ],
-  service05: ["service05"],
-  service15: ["service15"],
-  service25: ["service25"],
-  service35: ["service35"],
-  service45: ["service45"],
-  service55: ["service55"],
+  patternGrid: ["patternGrid", "templateCard9"],
+  templateCard9: ["templateCard9"],
   section: ["section"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -2657,12 +2322,6 @@ type NodeDefaultElementType = {
   templateCard8: typeof TemplateCard;
   patternGrid: typeof PatternGrid;
   templateCard9: typeof TemplateCard;
-  service05: "div";
-  service15: "div";
-  service25: "div";
-  service35: "div";
-  service45: "div";
-  service55: "div";
   section: typeof Section;
 };
 
@@ -2818,12 +2477,6 @@ export const PlasmicHomepage = Object.assign(
     templateCard8: makeNodeComponent("templateCard8"),
     patternGrid: makeNodeComponent("patternGrid"),
     templateCard9: makeNodeComponent("templateCard9"),
-    service05: makeNodeComponent("service05"),
-    service15: makeNodeComponent("service15"),
-    service25: makeNodeComponent("service25"),
-    service35: makeNodeComponent("service35"),
-    service45: makeNodeComponent("service45"),
-    service55: makeNodeComponent("service55"),
     section: makeNodeComponent("section"),
 
     // Metadata about props expected for PlasmicHomepage

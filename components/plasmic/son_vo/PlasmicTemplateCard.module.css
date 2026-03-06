@@ -11,13 +11,7 @@
   justify-content: flex-start;
   position: relative;
   width: 100%;
-  transition-property: all;
-  transition-duration: 600ms;
-  transition-timing-function: ease-in-out;
   min-width: 0;
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in-out;
-  -webkit-transition-duration: 600ms;
 }
 .image {
   height: auto;
@@ -152,12 +146,6 @@
   top: 0;
   right: 0;
   bottom: 0;
-  transition-property: all;
-  transition-duration: 600ms;
-  transition-timing-function: ease-in;
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in;
-  -webkit-transition-duration: 600ms;
   padding: 8px;
 }
 .freeBoxproject1__qDOz20FZ {
@@ -204,15 +192,15 @@
   width: 100%;
   position: absolute;
   left: 0;
-  top: -1000px;
+  top: -600px;
   right: 0;
   transition-property: all;
-  transition-duration: 500ms;
-  transition-timing-function: ease-in-out;
+  transition-duration: 600ms;
+  transition-timing-function: ease-in;
   min-width: 0;
   -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in-out;
-  -webkit-transition-duration: 500ms;
+  -webkit-transition-timing-function: ease-in;
+  -webkit-transition-duration: 600ms;
 }
 .img__yMKni > picture > img {
   object-fit: cover;
@@ -259,7 +247,7 @@
   justify-content: flex-start;
   min-width: 0;
 }
-.text {
+.text__dZw7R {
   animation: none;
   display: block;
   font-size: 18px;
@@ -280,7 +268,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.freeBox__qrLsn {
+.freeBox__xuawq {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -293,7 +281,7 @@
   min-width: 0;
   padding: 0px;
 }
-.freeBox__zl0Sx {
+.tag12 {
   display: flex;
   flex-direction: row;
   width: auto;
@@ -307,19 +295,19 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__bEoHv {
+.text__lp8F {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 100%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.freeBox__m0QFu {
+.tag2 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -335,19 +323,19 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__bfvur {
+.text__zXxRh {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 100%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.freeBox___3HTu0 {
+.tag3 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -363,19 +351,19 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__idsCo {
+.text__yeXuh {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 100%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.freeBox__mdfGw {
+.tag4 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -391,19 +379,19 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__xJhCh {
+.text__cyIpp {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 100%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }
-.freeBox__yOgF {
+.tag5 {
   animation: none;
   display: flex;
   flex-direction: row;
@@ -419,43 +407,15 @@
   border-radius: 2px;
   padding: 4px;
 }
-.text__l4V4Y {
+.text__fzgWb {
   animation: none;
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
-  color: rgba(34, 34, 34, 1);
-  position: relative;
-}
-.freeBox__hnjqN {
-  animation: none;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  column-gap: 4px;
-  background: var(--token-Yq556PvPjGii);
-  overflow: visible;
-  border-radius: 2px;
-  padding: 4px;
-}
-.text__lP0Jn {
-  animation: none;
-  display: block;
-  font-size: 8px;
-  text-transform: uppercase;
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.10000000149011612px;
-  line-height: 10px;
+  line-height: 100%;
   color: rgba(34, 34, 34, 1);
   position: relative;
 }

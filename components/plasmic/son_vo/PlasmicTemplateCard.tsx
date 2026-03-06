@@ -89,8 +89,12 @@ export type PlasmicTemplateCard__ArgsType = {
   imageCondition?: boolean;
   link?: string;
   title?: string;
-  softwareContainerSoftware2?: React.ReactNode;
   image2?: string;
+  tag1?: boolean;
+  tag22?: boolean;
+  tag32?: boolean;
+  tag42?: boolean;
+  tag52?: boolean;
 };
 type ArgPropType = keyof PlasmicTemplateCard__ArgsType;
 export const PlasmicTemplateCard__ArgProps = new Array<ArgPropType>(
@@ -99,8 +103,12 @@ export const PlasmicTemplateCard__ArgProps = new Array<ArgPropType>(
   "imageCondition",
   "link",
   "title",
-  "softwareContainerSoftware2",
-  "image2"
+  "image2",
+  "tag1",
+  "tag22",
+  "tag32",
+  "tag42",
+  "tag52"
 );
 
 export type PlasmicTemplateCard__OverridesType = {
@@ -119,8 +127,12 @@ export type PlasmicTemplateCard__OverridesType = {
   bottom?: Flex__<"div">;
   top2?: Flex__<"div">;
   templateName?: Flex__<"div">;
-  text?: Flex__<"div">;
   container10?: Flex__<"div">;
+  tag12?: Flex__<"div">;
+  tag2?: Flex__<"div">;
+  tag3?: Flex__<"div">;
+  tag4?: Flex__<"div">;
+  tag5?: Flex__<"div">;
 };
 
 export interface DefaultTemplateCardProps {
@@ -129,8 +141,12 @@ export interface DefaultTemplateCardProps {
   imageCondition?: boolean;
   link?: string;
   title?: string;
-  softwareContainerSoftware2?: React.ReactNode;
   image2?: string;
+  tag1?: boolean;
+  tag22?: boolean;
+  tag32?: boolean;
+  tag42?: boolean;
+  tag52?: boolean;
   project1?: SingleBooleanChoiceArg<"project1">;
   className?: string;
 }
@@ -161,7 +177,12 @@ function PlasmicTemplateCard__RenderFunc(props: {
           videoCondition: false,
           imageCondition: true,
           image2:
-            "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp"
+            "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp",
+          tag1: true,
+          tag22: true,
+          tag32: true,
+          tag42: true,
+          tag52: true
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
@@ -540,12 +561,10 @@ function PlasmicTemplateCard__RenderFunc(props: {
             className={classNames(projectcss.all, sty.templateName)}
           >
             <div
-              data-plasmic-name={"text"}
-              data-plasmic-override={overrides.text}
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text
+                sty.text__dZw7R
               )}
             >
               <React.Fragment>
@@ -571,81 +590,153 @@ function PlasmicTemplateCard__RenderFunc(props: {
           data-plasmic-override={overrides.container10}
           className={classNames(projectcss.all, sty.container10)}
         >
-          {renderPlasmicSlot({
-            defaultContents: (
-              <div className={classNames(projectcss.all, sty.freeBox__qrLsn)}>
-                <div className={classNames(projectcss.all, sty.freeBox__zl0Sx)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__bEoHv
-                    )}
-                  >
-                    {"Framer"}
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__m0QFu)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__bfvur
-                    )}
-                  >
-                    {"Framer"}
-                  </div>
-                </div>
+          <div className={classNames(projectcss.all, sty.freeBox__xuawq)}>
+            {(() => {
+              try {
+                return $props.tag1;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <div
+                data-plasmic-name={"tag12"}
+                data-plasmic-override={overrides.tag12}
+                className={classNames(projectcss.all, sty.tag12)}
+              >
                 <div
-                  className={classNames(projectcss.all, sty.freeBox___3HTu0)}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__lp8F
+                  )}
                 >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__idsCo
-                    )}
-                  >
-                    {"Framer"}
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__mdfGw)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__xJhCh
-                    )}
-                  >
-                    {"Framer"}
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__yOgF)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__l4V4Y
-                    )}
-                  >
-                    {"Framer"}
-                  </div>
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__hnjqN)}>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__lP0Jn
-                    )}
-                  >
-                    {"Framer"}
-                  </div>
+                  {"UI"}
                 </div>
               </div>
-            ),
-            value: args.softwareContainerSoftware2
-          })}
+            ) : null}
+            {(() => {
+              try {
+                return $props.tag22;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <div
+                data-plasmic-name={"tag2"}
+                data-plasmic-override={overrides.tag2}
+                className={classNames(projectcss.all, sty.tag2)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__zXxRh
+                  )}
+                >
+                  {"UX"}
+                </div>
+              </div>
+            ) : null}
+            {(() => {
+              try {
+                return $props.tag32;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <div
+                data-plasmic-name={"tag3"}
+                data-plasmic-override={overrides.tag3}
+                className={classNames(projectcss.all, sty.tag3)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__yeXuh
+                  )}
+                >
+                  {"Framer"}
+                </div>
+              </div>
+            ) : null}
+            {(() => {
+              try {
+                return $props.tag42;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <div
+                data-plasmic-name={"tag4"}
+                data-plasmic-override={overrides.tag4}
+                className={classNames(projectcss.all, sty.tag4)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__cyIpp
+                  )}
+                >
+                  {"E-COMMERCE"}
+                </div>
+              </div>
+            ) : null}
+            {(() => {
+              try {
+                return $props.tag52;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return true;
+                }
+                throw e;
+              }
+            })() ? (
+              <div
+                data-plasmic-name={"tag5"}
+                data-plasmic-override={overrides.tag5}
+                className={classNames(projectcss.all, sty.tag5)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__fzgWb
+                  )}
+                >
+                  {"BRAND IDENTITY"}
+                </div>
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>
@@ -669,8 +760,12 @@ const PlasmicDescendants = {
     "bottom",
     "top2",
     "templateName",
-    "text",
-    "container10"
+    "container10",
+    "tag12",
+    "tag2",
+    "tag3",
+    "tag4",
+    "tag5"
   ],
   image: [
     "image",
@@ -695,11 +790,25 @@ const PlasmicDescendants = {
   link: ["link", "hoverController", "htmlVideo"],
   hoverController: ["hoverController", "htmlVideo"],
   htmlVideo: ["htmlVideo"],
-  bottom: ["bottom", "top2", "templateName", "text", "container10"],
-  top2: ["top2", "templateName", "text"],
-  templateName: ["templateName", "text"],
-  text: ["text"],
-  container10: ["container10"]
+  bottom: [
+    "bottom",
+    "top2",
+    "templateName",
+    "container10",
+    "tag12",
+    "tag2",
+    "tag3",
+    "tag4",
+    "tag5"
+  ],
+  top2: ["top2", "templateName"],
+  templateName: ["templateName"],
+  container10: ["container10", "tag12", "tag2", "tag3", "tag4", "tag5"],
+  tag12: ["tag12"],
+  tag2: ["tag2"],
+  tag3: ["tag3"],
+  tag4: ["tag4"],
+  tag5: ["tag5"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -720,8 +829,12 @@ type NodeDefaultElementType = {
   bottom: "div";
   top2: "div";
   templateName: "div";
-  text: "div";
   container10: "div";
+  tag12: "div";
+  tag2: "div";
+  tag3: "div";
+  tag4: "div";
+  tag5: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -800,8 +913,12 @@ export const PlasmicTemplateCard = Object.assign(
     bottom: makeNodeComponent("bottom"),
     top2: makeNodeComponent("top2"),
     templateName: makeNodeComponent("templateName"),
-    text: makeNodeComponent("text"),
     container10: makeNodeComponent("container10"),
+    tag12: makeNodeComponent("tag12"),
+    tag2: makeNodeComponent("tag2"),
+    tag3: makeNodeComponent("tag3"),
+    tag4: makeNodeComponent("tag4"),
+    tag5: makeNodeComponent("tag5"),
 
     // Metadata about props expected for PlasmicTemplateCard
     internalVariantProps: PlasmicTemplateCard__VariantProps,

@@ -180,12 +180,6 @@ export type PlasmicMyServices__OverridesType = {
   headerHeroSection3?: Flex__<"div">;
   infiniteScroll?: Flex__<typeof InfiniteScroll>;
   templateCard?: Flex__<typeof TemplateCard>;
-  service05?: Flex__<"div">;
-  service15?: Flex__<"div">;
-  service25?: Flex__<"div">;
-  service35?: Flex__<"div">;
-  service45?: Flex__<"div">;
-  service55?: Flex__<"div">;
   sectionCards2?: Flex__<"div">;
   left?: Flex__<"div">;
   title2?: Flex__<"div">;
@@ -926,237 +920,6 @@ function PlasmicMyServices__RenderFunc(props: {
                             "__wab_instance",
                             sty.templateCard
                           )}
-                          softwareContainerSoftware2={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                sty.freeBox__lpcRy
-                              )}
-                            >
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes(
-                                      "UI/UX Design"
-                                    )
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service05"}
-                                  data-plasmic-override={overrides.service05}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service05
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__mJOpN
-                                    )}
-                                  >
-                                    {"UI/UX Design"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes("E-commerce")
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service15"}
-                                  data-plasmic-override={overrides.service15}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service15
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__iYm7J
-                                    )}
-                                  >
-                                    {"E-commerce"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes("SEO")
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service25"}
-                                  data-plasmic-override={overrides.service25}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service25
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text___4MDdJ
-                                    )}
-                                  >
-                                    {"SEO"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes("Content")
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service35"}
-                                  data-plasmic-override={overrides.service35}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service35
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__kuRvB
-                                    )}
-                                  >
-                                    {"Content"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes(
-                                      "Brand Idenity"
-                                    )
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service45"}
-                                  data-plasmic-override={overrides.service45}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service45
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text___9IerM
-                                    )}
-                                  >
-                                    {"Brand Idenity"}
-                                  </div>
-                                </div>
-                              ) : null}
-                              {(() => {
-                                try {
-                                  return (
-                                    currentItem.Services &&
-                                    currentItem.Services.includes(
-                                      "Web Development"
-                                    )
-                                  );
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return true;
-                                  }
-                                  throw e;
-                                }
-                              })() ? (
-                                <div
-                                  data-plasmic-name={"service55"}
-                                  data-plasmic-override={overrides.service55}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.service55
-                                  )}
-                                >
-                                  <div
-                                    className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
-                                      sty.text__eyiL1
-                                    )}
-                                  >
-                                    {"Web Development"}
-                                  </div>
-                                </div>
-                              ) : null}
-                            </div>
-                          }
                         />
                       </RevealOnScroll>
                     );
@@ -2991,12 +2754,6 @@ const PlasmicDescendants = {
     "headerHeroSection3",
     "infiniteScroll",
     "templateCard",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55",
     "sectionCards2",
     "left",
     "title2",
@@ -3087,12 +2844,6 @@ const PlasmicDescendants = {
     "headerHeroSection3",
     "infiniteScroll",
     "templateCard",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55",
     "sectionCards2",
     "left",
     "title2",
@@ -3271,42 +3022,9 @@ const PlasmicDescendants = {
   ratingText: ["ratingText", "container2"],
   container2: ["container2"],
   headerHeroSection2: ["headerHeroSection2"],
-  headerHeroSection3: [
-    "headerHeroSection3",
-    "infiniteScroll",
-    "templateCard",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
-  ],
-  infiniteScroll: [
-    "infiniteScroll",
-    "templateCard",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
-  ],
-  templateCard: [
-    "templateCard",
-    "service05",
-    "service15",
-    "service25",
-    "service35",
-    "service45",
-    "service55"
-  ],
-  service05: ["service05"],
-  service15: ["service15"],
-  service25: ["service25"],
-  service35: ["service35"],
-  service45: ["service45"],
-  service55: ["service55"],
+  headerHeroSection3: ["headerHeroSection3", "infiniteScroll", "templateCard"],
+  infiniteScroll: ["infiniteScroll", "templateCard"],
+  templateCard: ["templateCard"],
   sectionCards2: [
     "sectionCards2",
     "left",
@@ -3587,12 +3305,6 @@ type NodeDefaultElementType = {
   headerHeroSection3: "div";
   infiniteScroll: typeof InfiniteScroll;
   templateCard: typeof TemplateCard;
-  service05: "div";
-  service15: "div";
-  service25: "div";
-  service35: "div";
-  service45: "div";
-  service55: "div";
   sectionCards2: "div";
   left: "div";
   title2: "div";
@@ -3780,12 +3492,6 @@ export const PlasmicMyServices = Object.assign(
     headerHeroSection3: makeNodeComponent("headerHeroSection3"),
     infiniteScroll: makeNodeComponent("infiniteScroll"),
     templateCard: makeNodeComponent("templateCard"),
-    service05: makeNodeComponent("service05"),
-    service15: makeNodeComponent("service15"),
-    service25: makeNodeComponent("service25"),
-    service35: makeNodeComponent("service35"),
-    service45: makeNodeComponent("service45"),
-    service55: makeNodeComponent("service55"),
     sectionCards2: makeNodeComponent("sectionCards2"),
     left: makeNodeComponent("left"),
     title2: makeNodeComponent("title2"),
