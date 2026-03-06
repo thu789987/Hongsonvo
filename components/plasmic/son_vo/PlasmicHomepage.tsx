@@ -388,6 +388,47 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   />
                 </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___0PzuY)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__yFg1O)}
+                  >
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__txiRz,
+                        "animate-text"
+                      )}
+                    >
+                      {"H"}
+                    </h1>
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1___4DeY9,
+                        "animate-text"
+                      )}
+                    >
+                      {"S"}
+                    </h1>
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1__l3QyM,
+                        "animate-text"
+                      )}
+                    >
+                      {"V"}
+                    </h1>
+                  </div>
+                </div>
               </div>
               <div
                 data-plasmic-name={"headerHeroSection3"}
