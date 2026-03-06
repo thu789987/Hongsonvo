@@ -154,9 +154,9 @@
   bottom: 0;
   transition-property: all;
   transition-duration: 600ms;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in;
   -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in;
   -webkit-transition-duration: 600ms;
   padding: 8px;
 }
