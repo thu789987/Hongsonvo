@@ -500,39 +500,6 @@
   text-decoration-line: none;
   text-overflow: clip;
 }
-.text8 {
-  animation: none;
-  background: rgba(255, 255, 255, 1);
-  width: auto;
-  height: 32px;
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  border-radius: 33554400px;
-  padding: 8px 16px;
-}
-.text__lsh52 {
-  animation: none;
-  display: block;
-  font-size: 12px;
-  font-family: "Arial";
-  font-weight: 400;
-  letter-spacing: 0.30000001192092896px;
-  line-height: 16px;
-  color: rgba(0, 0, 0, 1);
-  position: relative;
-  width: auto;
-  font-style: normal;
-  text-align: center;
-  text-transform: none;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
-}
 .freeBox__dGBo4 {
   animation: none;
   display: flex;

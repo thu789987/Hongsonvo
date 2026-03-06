@@ -145,7 +145,6 @@ export type PlasmicNewPage__OverridesType = {
   text9?: Flex__<"div">;
   text10?: Flex__<"div">;
   text11?: Flex__<"div">;
-  text8?: Flex__<"div">;
   text5?: Flex__<"div">;
   container13?: Flex__<"div">;
   scrollParallax?: Flex__<typeof ParallaxWrapper>;
@@ -587,7 +586,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   currentItem["Services"] ||
                                   currentItem["services"];
                                 if (!tagsData) return false;
-                                const targetValue = "UI/UX Design";
+                                const targetValue = "UI";
                                 if (Array.isArray(tagsData)) {
                                   return tagsData.includes(targetValue);
                                 } else {
@@ -618,7 +617,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   sty.text__lNz64
                                 )}
                               >
-                                {"UI/UX Design"}
+                                {"UI"}
                               </div>
                             </div>
                           ) : null}
@@ -641,7 +640,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   currentItem["Services"] ||
                                   currentItem["services"];
                                 if (!tagsData) return false;
-                                const targetValue = "E-Commerce";
+                                const targetValue = "UX";
                                 if (Array.isArray(tagsData)) {
                                   return tagsData.includes(targetValue);
                                 } else {
@@ -672,7 +671,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   sty.text__r8Chi
                                 )}
                               >
-                                {"E-Commerce "}
+                                {"UX"}
                               </div>
                             </div>
                           ) : null}
@@ -695,7 +694,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   currentItem["Services"] ||
                                   currentItem["services"];
                                 if (!tagsData) return false;
-                                const targetValue = "SEO";
+                                const targetValue = "FRAMER";
                                 if (Array.isArray(tagsData)) {
                                   return tagsData.includes(targetValue);
                                 } else {
@@ -726,7 +725,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   sty.text__zckMs
                                 )}
                               >
-                                {"SEO"}
+                                {"FRAMER"}
                               </div>
                             </div>
                           ) : null}
@@ -749,7 +748,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   currentItem["Services"] ||
                                   currentItem["services"];
                                 if (!tagsData) return false;
-                                const targetValue = "Content";
+                                const targetValue = "E-COMMERCE";
                                 if (Array.isArray(tagsData)) {
                                   return tagsData.includes(targetValue);
                                 } else {
@@ -780,7 +779,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   sty.text___9DElc
                                 )}
                               >
-                                {"Content"}
+                                {"E-COMMERCE"}
                               </div>
                             </div>
                           ) : null}
@@ -803,7 +802,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   currentItem["Services"] ||
                                   currentItem["services"];
                                 if (!tagsData) return false;
-                                const targetValue = "Brand Identity";
+                                const targetValue = "BRAND IDENTITY";
                                 if (Array.isArray(tagsData)) {
                                   return tagsData.includes(targetValue);
                                 } else {
@@ -834,61 +833,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   sty.text__vvDXt
                                 )}
                               >
-                                {"Brand Identity"}
-                              </div>
-                            </div>
-                          ) : null}
-                          {(() => {
-                            try {
-                              return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
-                                const currentItem = list.find(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (!currentItem) return false;
-                                const tagsData =
-                                  currentItem["Services"] ||
-                                  currentItem["services"];
-                                if (!tagsData) return false;
-                                const targetValue = "Web Development";
-                                if (Array.isArray(tagsData)) {
-                                  return tagsData.includes(targetValue);
-                                } else {
-                                  return tagsData
-                                    .toString()
-                                    .includes(targetValue);
-                                }
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })() ? (
-                            <div
-                              data-plasmic-name={"text8"}
-                              data-plasmic-override={overrides.text8}
-                              className={classNames(projectcss.all, sty.text8)}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__lsh52
-                                )}
-                              >
-                                {"Web Development"}
+                                {"BRAND IDENTITY"}
                               </div>
                             </div>
                           ) : null}
@@ -3893,7 +3838,6 @@ const PlasmicDescendants = {
     "text9",
     "text10",
     "text11",
-    "text8",
     "text5",
     "container13",
     "scrollParallax",
@@ -3979,7 +3923,6 @@ const PlasmicDescendants = {
     "text9",
     "text10",
     "text11",
-    "text8",
     "text5",
     "container13",
     "scrollParallax",
@@ -4064,7 +4007,6 @@ const PlasmicDescendants = {
     "text9",
     "text10",
     "text11",
-    "text8",
     "text5",
     "container13"
   ],
@@ -4080,7 +4022,6 @@ const PlasmicDescendants = {
     "text9",
     "text10",
     "text11",
-    "text8",
     "text5",
     "container13"
   ],
@@ -4094,8 +4035,7 @@ const PlasmicDescendants = {
     "text6",
     "text9",
     "text10",
-    "text11",
-    "text8"
+    "text11"
   ],
   container4: ["container4"],
   container5: ["container5"],
@@ -4106,24 +4046,14 @@ const PlasmicDescendants = {
     "text6",
     "text9",
     "text10",
-    "text11",
-    "text8"
+    "text11"
   ],
-  container35: [
-    "container35",
-    "text7",
-    "text6",
-    "text9",
-    "text10",
-    "text11",
-    "text8"
-  ],
+  container35: ["container35", "text7", "text6", "text9", "text10", "text11"],
   text7: ["text7"],
   text6: ["text6"],
   text9: ["text9"],
   text10: ["text10"],
   text11: ["text11"],
-  text8: ["text8"],
   text5: ["text5"],
   container13: ["container13"],
   scrollParallax: ["scrollParallax", "img2", "img", "htmlVideo"],
@@ -4351,7 +4281,6 @@ type NodeDefaultElementType = {
   text9: "div";
   text10: "div";
   text11: "div";
-  text8: "div";
   text5: "div";
   container13: "div";
   scrollParallax: typeof ParallaxWrapper;
@@ -4524,7 +4453,6 @@ export const PlasmicNewPage = Object.assign(
     text9: makeNodeComponent("text9"),
     text10: makeNodeComponent("text10"),
     text11: makeNodeComponent("text11"),
-    text8: makeNodeComponent("text8"),
     text5: makeNodeComponent("text5"),
     container13: makeNodeComponent("container13"),
     scrollParallax: makeNodeComponent("scrollParallax"),
