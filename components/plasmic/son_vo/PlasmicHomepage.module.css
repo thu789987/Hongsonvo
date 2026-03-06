@@ -1421,7 +1421,7 @@
   align-items: center;
   justify-content: center;
   max-width: none;
-  z-index: 10;
+  z-index: 6;
   row-gap: 40px;
   min-width: 0;
   padding: 130px 40px 110px;

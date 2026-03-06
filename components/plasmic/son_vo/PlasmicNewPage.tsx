@@ -3255,6 +3255,201 @@ function PlasmicNewPage__RenderFunc(props: {
                               return `/works/${newSlug}`;
                             })()
                       }
+                      tag1={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const prevIndex =
+                              currentIndex === 0
+                                ? list.length - 1
+                                : currentIndex - 1;
+                            const prevItem = list[prevIndex];
+                            if (!prevItem) return false;
+                            const tagsData =
+                              prevItem["Services"] || prevItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "UI";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      tag22={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const prevIndex =
+                              currentIndex === 0
+                                ? list.length - 1
+                                : currentIndex - 1;
+                            const prevItem = list[prevIndex];
+                            if (!prevItem) return false;
+                            const tagsData =
+                              prevItem["Services"] || prevItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "UX";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      tag32={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const prevIndex =
+                              currentIndex === 0
+                                ? list.length - 1
+                                : currentIndex - 1;
+                            const prevItem = list[prevIndex];
+                            if (!prevItem) return false;
+                            const tagsData =
+                              prevItem["Services"] || prevItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "FRAMER";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      tag42={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const prevIndex =
+                              currentIndex === 0
+                                ? list.length - 1
+                                : currentIndex - 1;
+                            const prevItem = list[prevIndex];
+                            if (!prevItem) return false;
+                            const tagsData =
+                              prevItem["Services"] || prevItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "E-COMMERCE";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      tag52={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const prevIndex =
+                              currentIndex === 0
+                                ? list.length - 1
+                                : currentIndex - 1;
+                            const prevItem = list[prevIndex];
+                            if (!prevItem) return false;
+                            const tagsData =
+                              prevItem["Services"] || prevItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "BRAND IDENTITY";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
                       title={
                         hasVariant(globalVariants, "screen", "mobile")
                           ? (() => {
@@ -3632,6 +3827,201 @@ function PlasmicNewPage__RenderFunc(props: {
                               return `/works/${newSlug}`;
                             })()
                       }
+                      tag1={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const nextIndex =
+                              currentIndex === list.length - 1
+                                ? 0
+                                : currentIndex + 1;
+                            const nextItem = list[nextIndex];
+                            if (!nextItem) return false;
+                            const tagsData =
+                              nextItem["Services"] || nextItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "UI";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      tag22={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const nextIndex =
+                              currentIndex === list.length - 1
+                                ? 0
+                                : currentIndex + 1;
+                            const nextItem = list[nextIndex];
+                            if (!nextItem) return false;
+                            const tagsData =
+                              nextItem["Services"] || nextItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "UX";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      tag32={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const nextIndex =
+                              currentIndex === list.length - 1
+                                ? 0
+                                : currentIndex + 1;
+                            const nextItem = list[nextIndex];
+                            if (!nextItem) return false;
+                            const tagsData =
+                              nextItem["Services"] || nextItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "FRAMER";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      tag42={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const nextIndex =
+                              currentIndex === list.length - 1
+                                ? 0
+                                : currentIndex + 1;
+                            const nextItem = list[nextIndex];
+                            if (!nextItem) return false;
+                            const tagsData =
+                              nextItem["Services"] || nextItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "E-COMMERCE";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      tag52={(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return false;
+                            const nextIndex =
+                              currentIndex === list.length - 1
+                                ? 0
+                                : currentIndex + 1;
+                            const nextItem = list[nextIndex];
+                            if (!nextItem) return false;
+                            const tagsData =
+                              nextItem["Services"] || nextItem["services"];
+                            if (!tagsData) return false;
+                            const targetValue = "BRAND IDENTITY";
+                            if (Array.isArray(tagsData)) {
+                              return tagsData.includes(targetValue);
+                            } else {
+                              return tagsData.toString().includes(targetValue);
+                            }
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })()}
                       title={
                         hasVariant(globalVariants, "screen", "mobile")
                           ? (() => {
