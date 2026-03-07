@@ -447,7 +447,7 @@ function PlasmicTemplateCard__RenderFunc(props: {
                               "project1"
                             )
                           })}
-                          displayHeight={"100%"}
+                          displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
                           displayMinHeight={"0"}

@@ -116,19 +116,17 @@
 }
 .htmlVideo:global(.__wab_instance) {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: 100%;
   object-fit: cover;
   min-width: 0;
-  min-height: 0;
 }
 .img__czgbX {
   object-fit: cover;
   max-width: 100%;
   width: 100%;
-  height: 100%;
+  height: auto;
   min-width: 0;
-  min-height: 0;
 }
 .img__czgbX > picture > img {
   object-fit: cover;
@@ -201,6 +199,7 @@
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in;
   -webkit-transition-duration: 600ms;
+  border-radius: 8px;
 }
 .img__yMKni > picture > img {
   object-fit: cover;
