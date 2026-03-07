@@ -68,6 +68,8 @@ import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziD
 import sty from "./PlasmicFotterMain.module.css"; // plasmic-import: pJp_GqmWQ71r/css
 
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: 2WxnB5zdkiqv/icon
+import LinkedinSvg2Icon from "./icons/PlasmicIcon__LinkedinSvg2"; // plasmic-import: IGmKTdFrHdSH/icon
+import BehanceSvgIcon from "./icons/PlasmicIcon__BehanceSvg"; // plasmic-import: PUdu4Eq0YgkH/icon
 
 createPlasmicElementProxy;
 
@@ -209,55 +211,77 @@ function PlasmicFotterMain__RenderFunc(props: {
                   role={"img"}
                 />
 
-                <div
+                <PlasmicLink__
                   className={classNames(
                     projectcss.all,
+                    projectcss.a,
                     projectcss.__wab_text,
-                    sty.text__wEneb
+                    sty.link__wEneb
                   )}
+                  component={Link}
+                  href={"https://www.facebook.com/vo.hong.son.674759/"}
+                  legacyBehavior={false}
+                  platform={"nextjs"}
+                  target={"_blank"}
                 >
                   {"Facebook"}
-                </div>
+                </PlasmicLink__>
               </div>
               <div
                 data-plasmic-name={"link29"}
                 data-plasmic-override={overrides.link29}
                 className={classNames(projectcss.all, sty.link29)}
               >
-                <Icon2Icon
-                  className={classNames(projectcss.all, sty.svg__mjXz)}
-                  role={"img"}
-                />
-
-                <div
+                <div className={classNames(projectcss.all, sty.freeBox__al4Jh)}>
+                  <LinkedinSvg2Icon
+                    className={classNames(projectcss.all, sty.svg__mjXz)}
+                    role={"img"}
+                  />
+                </div>
+                <PlasmicLink__
                   className={classNames(
                     projectcss.all,
+                    projectcss.a,
                     projectcss.__wab_text,
-                    sty.text__xYUhD
+                    sty.link__xYUhD
                   )}
+                  component={Link}
+                  href={
+                    "https://www.linkedin.com/in/s%C6%A1n-v%C3%B5-h%E1%BB%93ng-9a138a240/"
+                  }
+                  legacyBehavior={false}
+                  platform={"nextjs"}
+                  target={"_blank"}
                 >
                   {"LinkedIn"}
-                </div>
+                </PlasmicLink__>
               </div>
               <div
                 data-plasmic-name={"link30"}
                 data-plasmic-override={overrides.link30}
                 className={classNames(projectcss.all, sty.link30)}
               >
-                <Icon2Icon
-                  className={classNames(projectcss.all, sty.svg__oJr32)}
-                  role={"img"}
-                />
-
-                <div
+                <div className={classNames(projectcss.all, sty.freeBox__n3Oul)}>
+                  <BehanceSvgIcon
+                    className={classNames(projectcss.all, sty.svg__oJr32)}
+                    role={"img"}
+                  />
+                </div>
+                <PlasmicLink__
                   className={classNames(
                     projectcss.all,
+                    projectcss.a,
                     projectcss.__wab_text,
-                    sty.text__eC7U4
+                    sty.link__eC7U4
                   )}
+                  component={Link}
+                  href={"https://www.behance.net/vhngsn"}
+                  legacyBehavior={false}
+                  platform={"nextjs"}
+                  target={"_blank"}
                 >
                   {"Behance"}
-                </div>
+                </PlasmicLink__>
               </div>
             </div>
           </div>
@@ -293,7 +317,7 @@ function PlasmicFotterMain__RenderFunc(props: {
                   sty.text__pqy7Y
                 )}
               >
-                {"+27 (0) 78 054 8476"}
+                {"(+84) 35 765 2075"}
               </div>
               <div
                 className={classNames(
@@ -302,7 +326,7 @@ function PlasmicFotterMain__RenderFunc(props: {
                   sty.text__lYxxo
                 )}
               >
-                {"Thu789987@gmail.com"}
+                {"hongson789987@gmail.com"}
               </div>
               <div
                 className={classNames(
@@ -311,7 +335,7 @@ function PlasmicFotterMain__RenderFunc(props: {
                   sty.text__wqQZp
                 )}
               >
-                {"Write Us"}
+                {"Contact with me"}
               </div>
             </div>
           </div>

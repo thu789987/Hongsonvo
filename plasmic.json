@@ -1498,6 +1498,16 @@
           "id": "ZjisMCZ39fRq",
           "name": "FrameSvg2Icon",
           "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__FrameSvg2.tsx"
+        },
+        {
+          "id": "IGmKTdFrHdSH",
+          "name": "LinkedinSvg2Icon",
+          "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__LinkedinSvg2.tsx"
+        },
+        {
+          "id": "PUdu4Eq0YgkH",
+          "name": "BehanceSvgIcon",
+          "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__BehanceSvg.tsx"
         }
       ],
       "images": [
@@ -2290,6 +2300,11 @@
           "id": "m4jSKEWRfS-D",
           "name": "2.png",
           "filePath": "../public/plasmic/son_vo/images/_2Png.png"
+        },
+        {
+          "id": "rB0MEMxaOgxk",
+          "name": "Gemini_Generated_Image_gquse5gquse5gqus 1.jpg",
+          "filePath": "../public/plasmic/son_vo/images/geminiGeneratedImageGquse5Gquse5Gqus1Jpg.jpg"
         }
       ],
       "indirect": false,
