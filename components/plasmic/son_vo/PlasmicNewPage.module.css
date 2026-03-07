@@ -21,6 +21,13 @@
 .root > * {
   grid-column: 4;
 }
+.globalLoading:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  min-width: 0;
+}
 .smoothScroll:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
@@ -236,12 +243,14 @@
   top: auto;
   left: auto;
   font-style: normal;
-  text-align: center;
+  text-align: left;
   text-transform: none;
   white-space: pre-wrap;
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
+  width: 100%;
+  min-width: 0;
 }
 .container5 {
   animation: none;
@@ -1763,14 +1772,6 @@
   max-width: 100%;
   object-fit: cover;
   height: auto;
-  width: 100%;
-  grid-column-start: 4;
-  grid-column-end: span 6;
-  min-width: 0;
-}
-.link__pFvfa {
-  animation: none;
-  display: flex;
   width: 100%;
   grid-column-start: 4;
   grid-column-end: span 6;

@@ -67,6 +67,7 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
+import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
@@ -130,6 +131,7 @@ export const PlasmicNewPage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicNewPage__OverridesType = {
   root?: Flex__<"div">;
+  globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
@@ -326,6 +328,13 @@ function PlasmicNewPage__RenderFunc(props: {
             sty.root
           )}
         >
+          <GlobalLoading
+            data-plasmic-name={"globalLoading"}
+            data-plasmic-override={overrides.globalLoading}
+            className={classNames("__wab_instance", sty.globalLoading)}
+            textSize={"160px"}
+          />
+
           <SmoothScroll
             data-plasmic-name={"smoothScroll"}
             data-plasmic-override={overrides.smoothScroll}
@@ -426,7 +435,11 @@ function PlasmicNewPage__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.container)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__u2REa)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox__u2REa,
+                        "animate-text"
+                      )}
                     >
                       <div
                         className={classNames(
@@ -479,7 +492,8 @@ function PlasmicNewPage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text___4N2Ey
+                            sty.text___4N2Ey,
+                            "animate-text"
                           )}
                         >
                           <React.Fragment>
@@ -521,7 +535,8 @@ function PlasmicNewPage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__fFwab
+                            sty.text__fFwab,
+                            "animate-text"
                           )}
                         >
                           <React.Fragment>
@@ -564,7 +579,8 @@ function PlasmicNewPage__RenderFunc(props: {
                           data-plasmic-override={overrides.container35}
                           className={classNames(
                             projectcss.all,
-                            sty.container35
+                            sty.container35,
+                            "animate-text"
                           )}
                         >
                           {(() => {
@@ -873,7 +889,8 @@ function PlasmicNewPage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.a,
-                            sty.link__iyRh8
+                            sty.link__iyRh8,
+                            "animate-text"
                           )}
                           component={Link}
                           href={(() => {
@@ -3626,210 +3643,155 @@ function PlasmicNewPage__RenderFunc(props: {
                   duration={0.8}
                   yOffset={50}
                 >
-                  <PlasmicLink__
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__pFvfa
-                    )}
-                    component={Link}
-                    legacyBehavior={false}
-                    platform={"nextjs"}
-                  >
-                    <TemplateCard
-                      data-plasmic-name={"nExt"}
-                      data-plasmic-override={overrides.nExt}
-                      className={classNames("__wab_instance", sty.nExt)}
-                      image2={
-                        hasVariant(globalVariants, "screen", "mobile")
-                          ? (() => {
-                              try {
-                                return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return "";
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  return (
-                                    nextItem?.["Main Image"] ||
-                                    nextItem?.["Main Image"] ||
-                                    "Bài đầu tiên"
-                                  );
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
-                                }
-                                throw e;
+                  <TemplateCard
+                    data-plasmic-name={"nExt"}
+                    data-plasmic-override={overrides.nExt}
+                    className={classNames("__wab_instance", sty.nExt)}
+                    image2={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? (() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                const list = $queries.allList?.data || [];
+                                const currentIndex = list.findIndex(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                if (currentIndex === -1) return "";
+                                const nextIndex =
+                                  currentIndex === list.length - 1
+                                    ? 0
+                                    : currentIndex + 1;
+                                const nextItem = list[nextIndex];
+                                return (
+                                  nextItem?.["Main Image"] ||
+                                  nextItem?.["Main Image"] ||
+                                  "Bài đầu tiên"
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
                               }
-                            })()
-                          : (() => {
-                              try {
-                                return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return "";
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  return (
-                                    nextItem?.["Main Image"] ||
-                                    nextItem?.["Main Image"] ||
-                                    "Bài đầu tiên"
-                                  );
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()
+                        : (() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                const list = $queries.allList?.data || [];
+                                const currentIndex = list.findIndex(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                if (currentIndex === -1) return "";
+                                const nextIndex =
+                                  currentIndex === list.length - 1
+                                    ? 0
+                                    : currentIndex + 1;
+                                const nextItem = list[nextIndex];
+                                return (
+                                  nextItem?.["Main Image"] ||
+                                  nextItem?.["Main Image"] ||
+                                  "Bài đầu tiên"
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
                               }
-                            })()
-                      }
-                      imageCondition={
-                        hasVariant(globalVariants, "screen", "mobile")
-                          ? (() => {
-                              try {
-                                return !(() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return false;
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  const video =
-                                    nextItem?.["Video"] || nextItem?.["video"];
-                                  return !!video;
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()
+                    }
+                    imageCondition={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? (() => {
+                            try {
+                              return !(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                const list = $queries.allList?.data || [];
+                                const currentIndex = list.findIndex(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                if (currentIndex === -1) return false;
+                                const nextIndex =
+                                  currentIndex === list.length - 1
+                                    ? 0
+                                    : currentIndex + 1;
+                                const nextItem = list[nextIndex];
+                                const video =
+                                  nextItem?.["Video"] || nextItem?.["video"];
+                                return !!video;
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
                               }
-                            })()
-                          : (() => {
-                              try {
-                                return !(() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return false;
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  const video =
-                                    nextItem?.["Video"] || nextItem?.["video"];
-                                  return !!video;
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()
+                        : (() => {
+                            try {
+                              return !(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                const list = $queries.allList?.data || [];
+                                const currentIndex = list.findIndex(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                if (currentIndex === -1) return false;
+                                const nextIndex =
+                                  currentIndex === list.length - 1
+                                    ? 0
+                                    : currentIndex + 1;
+                                const nextItem = list[nextIndex];
+                                const video =
+                                  nextItem?.["Video"] || nextItem?.["video"];
+                                return !!video;
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
                               }
-                            })()
-                      }
-                      link={
-                        hasVariant(globalVariants, "screen", "mobile")
-                          ? (() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              const list = $queries.allList?.data || [];
-                              const currentIndex = list.findIndex(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              if (currentIndex === -1) return "/";
-                              const nextIndex =
-                                currentIndex === list.length - 1
-                                  ? 0
-                                  : currentIndex + 1;
-                              const nextItem = list[nextIndex];
-                              if (!nextItem) return "/";
-                              const newSlug =
-                                nextItem.slug || nextItem.Slug || nextItem.id;
-                              return `/works/${newSlug}`;
-                            })()
-                          : (() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              const list = $queries.allList?.data || [];
-                              const currentIndex = list.findIndex(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              if (currentIndex === -1) return "/";
-                              const nextIndex =
-                                currentIndex === list.length - 1
-                                  ? 0
-                                  : currentIndex + 1;
-                              const nextItem = list[nextIndex];
-                              if (!nextItem) return "/";
-                              const newSlug =
-                                nextItem.slug || nextItem.Slug || nextItem.id;
-                              return `/works/${newSlug}`;
-                            })()
-                      }
-                      tag1={(() => {
-                        try {
-                          return (() => {
+                              throw e;
+                            }
+                          })()
+                    }
+                    link={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? (() => {
                             const pageId = $ctx.params.id || $ctx.params.Slug;
                             const list = $queries.allList?.data || [];
                             const currentIndex = list.findIndex(
@@ -3839,36 +3801,18 @@ function PlasmicNewPage__RenderFunc(props: {
                                 item.slug == pageId ||
                                 item.Slug == pageId
                             );
-                            if (currentIndex === -1) return false;
+                            if (currentIndex === -1) return "/";
                             const nextIndex =
                               currentIndex === list.length - 1
                                 ? 0
                                 : currentIndex + 1;
                             const nextItem = list[nextIndex];
-                            if (!nextItem) return false;
-                            const tagsData =
-                              nextItem["Services"] || nextItem["services"];
-                            if (!tagsData) return false;
-                            const targetValue = "UI";
-                            if (Array.isArray(tagsData)) {
-                              return tagsData.includes(targetValue);
-                            } else {
-                              return tagsData.toString().includes(targetValue);
-                            }
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return true;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      tag22={(() => {
-                        try {
-                          return (() => {
+                            if (!nextItem) return "/";
+                            const newSlug =
+                              nextItem.slug || nextItem.Slug || nextItem.id;
+                            return `/works/${newSlug}`;
+                          })()
+                        : (() => {
                             const pageId = $ctx.params.id || $ctx.params.Slug;
                             const list = $queries.allList?.data || [];
                             const currentIndex = list.findIndex(
@@ -3878,315 +3822,377 @@ function PlasmicNewPage__RenderFunc(props: {
                                 item.slug == pageId ||
                                 item.Slug == pageId
                             );
-                            if (currentIndex === -1) return false;
+                            if (currentIndex === -1) return "/";
                             const nextIndex =
                               currentIndex === list.length - 1
                                 ? 0
                                 : currentIndex + 1;
                             const nextItem = list[nextIndex];
-                            if (!nextItem) return false;
-                            const tagsData =
-                              nextItem["Services"] || nextItem["services"];
-                            if (!tagsData) return false;
-                            const targetValue = "UX";
-                            if (Array.isArray(tagsData)) {
-                              return tagsData.includes(targetValue);
-                            } else {
-                              return tagsData.toString().includes(targetValue);
-                            }
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return true;
+                            if (!nextItem) return "/";
+                            const newSlug =
+                              nextItem.slug || nextItem.Slug || nextItem.id;
+                            return `/works/${newSlug}`;
+                          })()
+                    }
+                    tag1={(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          const list = $queries.allList?.data || [];
+                          const currentIndex = list.findIndex(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          if (currentIndex === -1) return false;
+                          const nextIndex =
+                            currentIndex === list.length - 1
+                              ? 0
+                              : currentIndex + 1;
+                          const nextItem = list[nextIndex];
+                          if (!nextItem) return false;
+                          const tagsData =
+                            nextItem["Services"] || nextItem["services"];
+                          if (!tagsData) return false;
+                          const targetValue = "UI";
+                          if (Array.isArray(tagsData)) {
+                            return tagsData.includes(targetValue);
+                          } else {
+                            return tagsData.toString().includes(targetValue);
                           }
-                          throw e;
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      tag32={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            const list = $queries.allList?.data || [];
-                            const currentIndex = list.findIndex(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            if (currentIndex === -1) return false;
-                            const nextIndex =
-                              currentIndex === list.length - 1
-                                ? 0
-                                : currentIndex + 1;
-                            const nextItem = list[nextIndex];
-                            if (!nextItem) return false;
-                            const tagsData =
-                              nextItem["Services"] || nextItem["services"];
-                            if (!tagsData) return false;
-                            const targetValue = "FRAMER";
-                            if (Array.isArray(tagsData)) {
-                              return tagsData.includes(targetValue);
-                            } else {
-                              return tagsData.toString().includes(targetValue);
-                            }
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return true;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      tag42={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            const list = $queries.allList?.data || [];
-                            const currentIndex = list.findIndex(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            if (currentIndex === -1) return false;
-                            const nextIndex =
-                              currentIndex === list.length - 1
-                                ? 0
-                                : currentIndex + 1;
-                            const nextItem = list[nextIndex];
-                            if (!nextItem) return false;
-                            const tagsData =
-                              nextItem["Services"] || nextItem["services"];
-                            if (!tagsData) return false;
-                            const targetValue = "E-COMMERCE";
-                            if (Array.isArray(tagsData)) {
-                              return tagsData.includes(targetValue);
-                            } else {
-                              return tagsData.toString().includes(targetValue);
-                            }
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return true;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      tag52={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            const list = $queries.allList?.data || [];
-                            const currentIndex = list.findIndex(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            if (currentIndex === -1) return false;
-                            const nextIndex =
-                              currentIndex === list.length - 1
-                                ? 0
-                                : currentIndex + 1;
-                            const nextItem = list[nextIndex];
-                            if (!nextItem) return false;
-                            const tagsData =
-                              nextItem["Services"] || nextItem["services"];
-                            if (!tagsData) return false;
-                            const targetValue = "BRAND IDENTITY";
-                            if (Array.isArray(tagsData)) {
-                              return tagsData.includes(targetValue);
-                            } else {
-                              return tagsData.toString().includes(targetValue);
-                            }
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return true;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      title={
-                        hasVariant(globalVariants, "screen", "mobile")
-                          ? (() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              const list = $queries.allList?.data || [];
-                              const currentIndex = list.findIndex(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              if (currentIndex === -1) return "";
-                              const nextIndex =
-                                currentIndex === list.length - 1
-                                  ? 0
-                                  : currentIndex + 1;
-                              const nextItem = list[nextIndex];
-                              return (
-                                nextItem?.["Title"] ||
-                                nextItem?.["title"] ||
-                                "Bài đầu tiên"
-                              );
-                            })()
-                          : (() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              const list = $queries.allList?.data || [];
-                              const currentIndex = list.findIndex(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              if (currentIndex === -1) return "";
-                              const nextIndex =
-                                currentIndex === list.length - 1
-                                  ? 0
-                                  : currentIndex + 1;
-                              const nextItem = list[nextIndex];
-                              return (
-                                nextItem?.["Title"] ||
-                                nextItem?.["title"] ||
-                                "Bài đầu tiên"
-                              );
-                            })()
+                        throw e;
                       }
-                      video={
-                        hasVariant(globalVariants, "screen", "mobile")
-                          ? (() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              const list = $queries.allList?.data || [];
-                              const currentIndex = list.findIndex(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              if (currentIndex === -1) return "";
-                              const nextIndex =
-                                currentIndex === list.length - 1
-                                  ? 0
-                                  : currentIndex + 1;
-                              const nextItem = list[nextIndex];
-                              return (
-                                nextItem?.["Video"] ||
-                                nextItem?.["video"] ||
-                                "Bài đầu tiên"
-                              );
-                            })()
-                          : (() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              const list = $queries.allList?.data || [];
-                              const currentIndex = list.findIndex(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              if (currentIndex === -1) return "";
-                              const nextIndex =
-                                currentIndex === list.length - 1
-                                  ? 0
-                                  : currentIndex + 1;
-                              const nextItem = list[nextIndex];
-                              return (
-                                nextItem?.["Video"] ||
-                                nextItem?.["video"] ||
-                                "Bài đầu tiên"
-                              );
-                            })()
+                    })()}
+                    tag22={(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          const list = $queries.allList?.data || [];
+                          const currentIndex = list.findIndex(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          if (currentIndex === -1) return false;
+                          const nextIndex =
+                            currentIndex === list.length - 1
+                              ? 0
+                              : currentIndex + 1;
+                          const nextItem = list[nextIndex];
+                          if (!nextItem) return false;
+                          const tagsData =
+                            nextItem["Services"] || nextItem["services"];
+                          if (!tagsData) return false;
+                          const targetValue = "UX";
+                          if (Array.isArray(tagsData)) {
+                            return tagsData.includes(targetValue);
+                          } else {
+                            return tagsData.toString().includes(targetValue);
+                          }
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
                       }
-                      videoCondition={
-                        hasVariant(globalVariants, "screen", "mobile")
-                          ? (() => {
-                              try {
-                                return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return false;
-                                  const prevIndex =
-                                    currentIndex === 0
-                                      ? list.length - 1
-                                      : currentIndex - 1;
-                                  const prevItem = list[prevIndex];
-                                  const video =
-                                    prevItem?.["Video"] || prevItem?.["video"];
-                                  return !!video;
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return false;
-                                }
-                                throw e;
+                    })()}
+                    tag32={(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          const list = $queries.allList?.data || [];
+                          const currentIndex = list.findIndex(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          if (currentIndex === -1) return false;
+                          const nextIndex =
+                            currentIndex === list.length - 1
+                              ? 0
+                              : currentIndex + 1;
+                          const nextItem = list[nextIndex];
+                          if (!nextItem) return false;
+                          const tagsData =
+                            nextItem["Services"] || nextItem["services"];
+                          if (!tagsData) return false;
+                          const targetValue = "FRAMER";
+                          if (Array.isArray(tagsData)) {
+                            return tagsData.includes(targetValue);
+                          } else {
+                            return tagsData.toString().includes(targetValue);
+                          }
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    tag42={(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          const list = $queries.allList?.data || [];
+                          const currentIndex = list.findIndex(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          if (currentIndex === -1) return false;
+                          const nextIndex =
+                            currentIndex === list.length - 1
+                              ? 0
+                              : currentIndex + 1;
+                          const nextItem = list[nextIndex];
+                          if (!nextItem) return false;
+                          const tagsData =
+                            nextItem["Services"] || nextItem["services"];
+                          if (!tagsData) return false;
+                          const targetValue = "E-COMMERCE";
+                          if (Array.isArray(tagsData)) {
+                            return tagsData.includes(targetValue);
+                          } else {
+                            return tagsData.toString().includes(targetValue);
+                          }
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    tag52={(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          const list = $queries.allList?.data || [];
+                          const currentIndex = list.findIndex(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          if (currentIndex === -1) return false;
+                          const nextIndex =
+                            currentIndex === list.length - 1
+                              ? 0
+                              : currentIndex + 1;
+                          const nextItem = list[nextIndex];
+                          if (!nextItem) return false;
+                          const tagsData =
+                            nextItem["Services"] || nextItem["services"];
+                          if (!tagsData) return false;
+                          const targetValue = "BRAND IDENTITY";
+                          if (Array.isArray(tagsData)) {
+                            return tagsData.includes(targetValue);
+                          } else {
+                            return tagsData.toString().includes(targetValue);
+                          }
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    title={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return "";
+                            const nextIndex =
+                              currentIndex === list.length - 1
+                                ? 0
+                                : currentIndex + 1;
+                            const nextItem = list[nextIndex];
+                            return (
+                              nextItem?.["Title"] ||
+                              nextItem?.["title"] ||
+                              "Bài đầu tiên"
+                            );
+                          })()
+                        : (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return "";
+                            const nextIndex =
+                              currentIndex === list.length - 1
+                                ? 0
+                                : currentIndex + 1;
+                            const nextItem = list[nextIndex];
+                            return (
+                              nextItem?.["Title"] ||
+                              nextItem?.["title"] ||
+                              "Bài đầu tiên"
+                            );
+                          })()
+                    }
+                    video={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return "";
+                            const nextIndex =
+                              currentIndex === list.length - 1
+                                ? 0
+                                : currentIndex + 1;
+                            const nextItem = list[nextIndex];
+                            return (
+                              nextItem?.["Video"] ||
+                              nextItem?.["video"] ||
+                              "Bài đầu tiên"
+                            );
+                          })()
+                        : (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            const list = $queries.allList?.data || [];
+                            const currentIndex = list.findIndex(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            if (currentIndex === -1) return "";
+                            const nextIndex =
+                              currentIndex === list.length - 1
+                                ? 0
+                                : currentIndex + 1;
+                            const nextItem = list[nextIndex];
+                            return (
+                              nextItem?.["Video"] ||
+                              nextItem?.["video"] ||
+                              "Bài đầu tiên"
+                            );
+                          })()
+                    }
+                    videoCondition={
+                      hasVariant(globalVariants, "screen", "mobile")
+                        ? (() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                const list = $queries.allList?.data || [];
+                                const currentIndex = list.findIndex(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                if (currentIndex === -1) return false;
+                                const prevIndex =
+                                  currentIndex === 0
+                                    ? list.length - 1
+                                    : currentIndex - 1;
+                                const prevItem = list[prevIndex];
+                                const video =
+                                  prevItem?.["Video"] || prevItem?.["video"];
+                                return !!video;
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return false;
                               }
-                            })()
-                          : (() => {
-                              try {
-                                return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return false;
-                                  const prevIndex =
-                                    currentIndex === 0
-                                      ? list.length - 1
-                                      : currentIndex - 1;
-                                  const prevItem = list[prevIndex];
-                                  const video =
-                                    prevItem?.["Video"] || prevItem?.["video"];
-                                  return !!video;
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return false;
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()
+                        : (() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                const list = $queries.allList?.data || [];
+                                const currentIndex = list.findIndex(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                if (currentIndex === -1) return false;
+                                const prevIndex =
+                                  currentIndex === 0
+                                    ? list.length - 1
+                                    : currentIndex - 1;
+                                const prevItem = list[prevIndex];
+                                const video =
+                                  prevItem?.["Video"] || prevItem?.["video"];
+                                return !!video;
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return false;
                               }
-                            })()
-                      }
-                    />
-                  </PlasmicLink__>
+                              throw e;
+                            }
+                          })()
+                    }
+                  />
                 </RevealOnScroll>
               </div>
             </div>
@@ -4213,6 +4219,7 @@ function PlasmicNewPage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "globalLoading",
     "smoothScroll",
     "scrollDetector",
     "newMenu",
@@ -4297,6 +4304,7 @@ const PlasmicDescendants = {
     "prevous",
     "nExt"
   ],
+  globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
     "scrollDetector",
@@ -4656,6 +4664,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
   scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
@@ -4828,6 +4837,7 @@ export const PlasmicNewPage = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
+    globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),

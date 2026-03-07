@@ -67,6 +67,7 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
+import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
@@ -115,14 +116,14 @@ export type PageCtx = {
 
 export function generateDynamicMetadata($q: any, $ctx: PageCtx) {
   return {
-    title: "Works",
+    title: "works",
 
     openGraph: {
-      title: "Works"
+      title: "works"
     },
     twitter: {
       card: "summary" as const,
-      title: "Works"
+      title: "works"
     }
   };
 }
@@ -140,6 +141,7 @@ export const PlasmicWorks__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicWorks__OverridesType = {
   root?: Flex__<"div">;
+  globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
@@ -295,6 +297,13 @@ function PlasmicWorks__RenderFunc(props: {
             sty.root
           )}
         >
+          <GlobalLoading
+            data-plasmic-name={"globalLoading"}
+            data-plasmic-override={overrides.globalLoading}
+            className={classNames("__wab_instance", sty.globalLoading)}
+            textSize={"160px"}
+          />
+
           <SmoothScroll
             data-plasmic-name={"smoothScroll"}
             data-plasmic-override={overrides.smoothScroll}
@@ -709,7 +718,11 @@ function PlasmicWorks__RenderFunc(props: {
               >
                 <div className={classNames(projectcss.all, sty.freeBox__exuy7)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__bhbVe)}
+                    className={classNames(
+                      projectcss.all,
+                      sty.freeBox__bhbVe,
+                      "animate-text"
+                    )}
                   >
                     <h1
                       className={classNames(
@@ -723,7 +736,11 @@ function PlasmicWorks__RenderFunc(props: {
                     </h1>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__y7Ofn)}
+                    className={classNames(
+                      projectcss.all,
+                      sty.freeBox__y7Ofn,
+                      "animate-text"
+                    )}
                   >
                     <h1
                       className={classNames(
@@ -757,7 +774,11 @@ function PlasmicWorks__RenderFunc(props: {
                     </h1>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__bxJq4)}
+                    className={classNames(
+                      projectcss.all,
+                      sty.freeBox__bxJq4,
+                      "animate-text"
+                    )}
                   >
                     <h1
                       className={classNames(
@@ -1081,6 +1102,7 @@ function PlasmicWorks__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "globalLoading",
     "smoothScroll",
     "scrollDetector",
     "newMenu",
@@ -1127,6 +1149,7 @@ const PlasmicDescendants = {
     "templateCard10",
     "section"
   ],
+  globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
     "scrollDetector",
@@ -1342,6 +1365,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
   scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
@@ -1476,6 +1500,7 @@ export const PlasmicWorks = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
+    globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
@@ -1537,8 +1562,8 @@ export const PlasmicWorks = Object.assign(
     internalArgProps: PlasmicWorks__ArgProps,
 
     pageMetadata: generateDynamicMetadata(wrapQueriesWithLoadingProxy({}), {
-      pageRoute: "/Works",
-      pagePath: "/Works",
+      pageRoute: "/works",
+      pagePath: "/works",
       params: {},
       query: {}
     })
