@@ -69,6 +69,7 @@ import {
 
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
+import ScrollContext from "../../ScrollContext"; // plasmic-import: 4JSGC86CDgyw/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
@@ -132,7 +133,8 @@ export type PlasmicNewPage__OverridesType = {
   root?: Flex__<"div">;
   globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
-  newMenu?: Flex__<typeof NewMenu>;
+  scrollContext?: Flex__<typeof ScrollContext>;
+  newMenu2?: Flex__<typeof NewMenu>;
   section1?: Flex__<"div">;
   container?: Flex__<"div">;
   container3?: Flex__<"div">;
@@ -340,68 +342,42 @@ function PlasmicNewPage__RenderFunc(props: {
             duration={1.2}
             wheelMultiplier={1}
           >
-            <NewMenu
-              data-plasmic-name={"newMenu"}
-              data-plasmic-override={overrides.newMenu}
-              activePage={"works"}
-              className={classNames("__wab_instance", sty.newMenu)}
-              headerTitle={
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link__gb2C2
-                  )}
-                  component={Link}
-                  href={(() => {
-                    const pageId = $ctx.params.id || $ctx.params.Slug;
-                    if (!pageId) return "Đang đợi tham số...";
-                    const list = $queries.allList?.data || [];
-                    const currentItem = list.find(
-                      item =>
-                        item.id == pageId ||
-                        item.Id == pageId ||
-                        item.slug == pageId ||
-                        item.Slug == pageId
-                    );
-                    return currentItem?.Link || null;
-                  })()}
-                  legacyBehavior={false}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      const pageId = $ctx.params.id || $ctx.params.Slug;
-                      if (!pageId) return "Đang đợi tham số...";
-                      const list = $queries.allList?.data || [];
-                      const currentItem = list.find(
-                        item =>
-                          item.id == pageId ||
-                          item.Id == pageId ||
-                          item.slug == pageId ||
-                          item.Slug == pageId
-                      );
-                      return currentItem?.Link || "[ 2026 ]";
-                    })()}
-                  </React.Fragment>
-                </PlasmicLink__>
-              }
-              scrolledState={(() => {
-                try {
-                  return $ctx.scrollData.isScrolled;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return [];
-                  }
-                  throw e;
+            <ScrollContext
+              data-plasmic-name={"scrollContext"}
+              data-plasmic-override={overrides.scrollContext}
+              className={classNames("__wab_instance", sty.scrollContext)}
+            >
+              <NewMenu
+                data-plasmic-name={"newMenu2"}
+                data-plasmic-override={overrides.newMenu2}
+                activePage={"works"}
+                className={classNames("__wab_instance", sty.newMenu2)}
+                headerTitle={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__aGvEh
+                    )}
+                  >
+                    {"[ 2026 ]"}
+                  </div>
                 }
-              })()}
-            />
-
+                scrolledState={(() => {
+                  try {
+                    return $ctx.isScrolled;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()}
+              />
+            </ScrollContext>
             <div className={classNames(projectcss.all, sty.freeBox__rsPuk)}>
               <RevealOnScroll
                 blurAmount={5}
@@ -4210,7 +4186,8 @@ const PlasmicDescendants = {
     "root",
     "globalLoading",
     "smoothScroll",
-    "newMenu",
+    "scrollContext",
+    "newMenu2",
     "section1",
     "container",
     "container3",
@@ -4295,7 +4272,8 @@ const PlasmicDescendants = {
   globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
-    "newMenu",
+    "scrollContext",
+    "newMenu2",
     "section1",
     "container",
     "container3",
@@ -4377,7 +4355,8 @@ const PlasmicDescendants = {
     "prevous",
     "nExt"
   ],
-  newMenu: ["newMenu"],
+  scrollContext: ["scrollContext", "newMenu2"],
+  newMenu2: ["newMenu2"],
   section1: [
     "section1",
     "container",
@@ -4652,7 +4631,8 @@ type NodeDefaultElementType = {
   root: "div";
   globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
-  newMenu: typeof NewMenu;
+  scrollContext: typeof ScrollContext;
+  newMenu2: typeof NewMenu;
   section1: "div";
   container: "div";
   container3: "div";
@@ -4824,7 +4804,8 @@ export const PlasmicNewPage = Object.assign(
     // Helper components rendering sub-elements
     globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
-    newMenu: makeNodeComponent("newMenu"),
+    scrollContext: makeNodeComponent("scrollContext"),
+    newMenu2: makeNodeComponent("newMenu2"),
     section1: makeNodeComponent("section1"),
     container: makeNodeComponent("container"),
     container3: makeNodeComponent("container3"),

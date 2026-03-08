@@ -70,6 +70,7 @@ import {
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
+import ScrollContext from "../../ScrollContext"; // plasmic-import: 4JSGC86CDgyw/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
@@ -142,7 +143,8 @@ export type PlasmicWorks__OverridesType = {
   root?: Flex__<"div">;
   globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
-  newMenu?: Flex__<typeof NewMenu>;
+  scrollContext?: Flex__<typeof ScrollContext>;
+  newMenu2?: Flex__<typeof NewMenu>;
   tickerHeader?: Flex__<typeof TickerHeader>;
   headerHeroSection?: Flex__<"div">;
   loved?: Flex__<"div">;
@@ -315,27 +317,42 @@ function PlasmicWorks__RenderFunc(props: {
                   className={classNames("__wab_instance", sty.lineBg__wJgIr)}
                 />
               </div>
-              <NewMenu
-                data-plasmic-name={"newMenu"}
-                data-plasmic-override={overrides.newMenu}
-                activePage={"works"}
-                className={classNames("__wab_instance", sty.newMenu)}
-                headerTitle={"[ 2026 ]"}
-                scrolledState={(() => {
-                  try {
-                    return $ctx.scrollData.isScrolled;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return [];
-                    }
-                    throw e;
+              <ScrollContext
+                data-plasmic-name={"scrollContext"}
+                data-plasmic-override={overrides.scrollContext}
+                className={classNames("__wab_instance", sty.scrollContext)}
+              >
+                <NewMenu
+                  data-plasmic-name={"newMenu2"}
+                  data-plasmic-override={overrides.newMenu2}
+                  activePage={"works"}
+                  className={classNames("__wab_instance", sty.newMenu2)}
+                  headerTitle={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ndGkf
+                      )}
+                    >
+                      {"[ 2026 ]"}
+                    </div>
                   }
-                })()}
-              />
-
+                  scrolledState={(() => {
+                    try {
+                      return $ctx.isScrolled;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return [];
+                      }
+                      throw e;
+                    }
+                  })()}
+                />
+              </ScrollContext>
               <TickerHeader
                 data-plasmic-name={"tickerHeader"}
                 data-plasmic-override={overrides.tickerHeader}
@@ -1092,7 +1109,8 @@ const PlasmicDescendants = {
     "root",
     "globalLoading",
     "smoothScroll",
-    "newMenu",
+    "scrollContext",
+    "newMenu2",
     "tickerHeader",
     "headerHeroSection",
     "loved",
@@ -1139,7 +1157,8 @@ const PlasmicDescendants = {
   globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
-    "newMenu",
+    "scrollContext",
+    "newMenu2",
     "tickerHeader",
     "headerHeroSection",
     "loved",
@@ -1183,7 +1202,8 @@ const PlasmicDescendants = {
     "templateCard10",
     "section"
   ],
-  newMenu: ["newMenu"],
+  scrollContext: ["scrollContext", "newMenu2"],
+  newMenu2: ["newMenu2"],
   tickerHeader: ["tickerHeader"],
   headerHeroSection: [
     "headerHeroSection",
@@ -1352,7 +1372,8 @@ type NodeDefaultElementType = {
   root: "div";
   globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
-  newMenu: typeof NewMenu;
+  scrollContext: typeof ScrollContext;
+  newMenu2: typeof NewMenu;
   tickerHeader: typeof TickerHeader;
   headerHeroSection: "div";
   loved: "div";
@@ -1486,7 +1507,8 @@ export const PlasmicWorks = Object.assign(
     // Helper components rendering sub-elements
     globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
-    newMenu: makeNodeComponent("newMenu"),
+    scrollContext: makeNodeComponent("scrollContext"),
+    newMenu2: makeNodeComponent("newMenu2"),
     tickerHeader: makeNodeComponent("tickerHeader"),
     headerHeroSection: makeNodeComponent("headerHeroSection"),
     loved: makeNodeComponent("loved"),

@@ -58,14 +58,30 @@
   min-width: 0;
   min-height: 0;
 }
-.newMenu:global(.__wab_instance) {
+.scrollContext:global(.__wab_instance) {
   animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  z-index: 10;
   position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 5;
+  right: 0;
+  mix-blend-mode: difference;
+}
+.newMenu2:global(.__wab_instance) {
+  animation: none;
   width: 100%;
   min-width: 0;
+}
+@media (max-width: 1024px) {
+  .newMenu2:global(.__wab_instance) {
+    animation: none;
+  }
+}
+.text__ndGkf {
+  animation: none;
+  letter-spacing: 0px;
 }
 .tickerHeader:global(.__wab_instance) {
   position: sticky;
