@@ -4125,7 +4125,7 @@ function PlasmicNewPage__RenderFunc(props: {
                           })()
                         : (() => {
                             try {
-                              return !(() => {
+                              return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 const list = $queries.allList?.data || [];
