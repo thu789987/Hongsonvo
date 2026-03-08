@@ -58,22 +58,11 @@
   min-width: 0;
   min-height: 0;
 }
-.scrollDetector:global(.__wab_instance) {
-  animation: none;
-  max-width: 100%;
-  object-fit: cover;
-  left: 0;
-  top: 0;
-  z-index: 5;
-  position: fixed;
-  right: 0;
-  mix-blend-mode: difference;
-}
 .newMenu:global(.__wab_instance) {
   animation: none;
-  position: relative;
-  top: auto;
-  left: auto;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   z-index: 5;
   width: 100%;
   min-width: 0;

@@ -186,6 +186,7 @@ function PlasmicNewMenu__RenderFunc(props: {
           ? ``
           : "my-sticky-menu",
         {
+          [sty.menuactivePage_works]: hasVariant($state, "activePage", "works"),
           [sty.menuscrolledState]: hasVariant(
             $state,
             "scrolledState",

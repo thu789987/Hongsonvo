@@ -343,6 +343,7 @@ function PlasmicNewPage__RenderFunc(props: {
             <NewMenu
               data-plasmic-name={"newMenu"}
               data-plasmic-override={overrides.newMenu}
+              activePage={"works"}
               className={classNames("__wab_instance", sty.newMenu)}
               headerTitle={
                 <PlasmicLink__

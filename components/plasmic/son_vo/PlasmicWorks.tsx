@@ -70,7 +70,6 @@ import {
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
-import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
@@ -143,7 +142,6 @@ export type PlasmicWorks__OverridesType = {
   root?: Flex__<"div">;
   globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
-  scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
   tickerHeader?: Flex__<typeof TickerHeader>;
   headerHeroSection?: Flex__<"div">;
@@ -317,37 +315,27 @@ function PlasmicWorks__RenderFunc(props: {
                   className={classNames("__wab_instance", sty.lineBg__wJgIr)}
                 />
               </div>
-              <ScrollDetector
-                data-plasmic-name={"scrollDetector"}
-                data-plasmic-override={overrides.scrollDetector}
-                className={classNames("__wab_instance", sty.scrollDetector)}
-                threshold={50}
-              >
-                <DataCtxReader__>
-                  {$ctx => (
-                    <NewMenu
-                      data-plasmic-name={"newMenu"}
-                      data-plasmic-override={overrides.newMenu}
-                      activePage={"works"}
-                      className={classNames("__wab_instance", sty.newMenu)}
-                      headerTitle={"[ 2026 ]"}
-                      scrolledState={(() => {
-                        try {
-                          return $ctx.scrollData.isScrolled;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return [];
-                          }
-                          throw e;
-                        }
-                      })()}
-                    />
-                  )}
-                </DataCtxReader__>
-              </ScrollDetector>
+              <NewMenu
+                data-plasmic-name={"newMenu"}
+                data-plasmic-override={overrides.newMenu}
+                activePage={"works"}
+                className={classNames("__wab_instance", sty.newMenu)}
+                headerTitle={"[ 2026 ]"}
+                scrolledState={(() => {
+                  try {
+                    return $ctx.scrollData.isScrolled;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()}
+              />
+
               <TickerHeader
                 data-plasmic-name={"tickerHeader"}
                 data-plasmic-override={overrides.tickerHeader}
@@ -1104,7 +1092,6 @@ const PlasmicDescendants = {
     "root",
     "globalLoading",
     "smoothScroll",
-    "scrollDetector",
     "newMenu",
     "tickerHeader",
     "headerHeroSection",
@@ -1152,7 +1139,6 @@ const PlasmicDescendants = {
   globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
-    "scrollDetector",
     "newMenu",
     "tickerHeader",
     "headerHeroSection",
@@ -1197,7 +1183,6 @@ const PlasmicDescendants = {
     "templateCard10",
     "section"
   ],
-  scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
   tickerHeader: ["tickerHeader"],
   headerHeroSection: [
@@ -1367,7 +1352,6 @@ type NodeDefaultElementType = {
   root: "div";
   globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
-  scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
   tickerHeader: typeof TickerHeader;
   headerHeroSection: "div";
@@ -1502,7 +1486,6 @@ export const PlasmicWorks = Object.assign(
     // Helper components rendering sub-elements
     globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
-    scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
     tickerHeader: makeNodeComponent("tickerHeader"),
     headerHeroSection: makeNodeComponent("headerHeroSection"),
