@@ -69,7 +69,6 @@ import {
 
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
-import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
@@ -133,7 +132,6 @@ export type PlasmicNewPage__OverridesType = {
   root?: Flex__<"div">;
   globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
-  scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
   section1?: Flex__<"div">;
   container?: Flex__<"div">;
@@ -342,77 +340,67 @@ function PlasmicNewPage__RenderFunc(props: {
             duration={1.2}
             wheelMultiplier={1}
           >
-            <ScrollDetector
-              data-plasmic-name={"scrollDetector"}
-              data-plasmic-override={overrides.scrollDetector}
-              className={classNames("__wab_instance", sty.scrollDetector)}
-              threshold={50}
-            >
-              <DataCtxReader__>
-                {$ctx => (
-                  <NewMenu
-                    data-plasmic-name={"newMenu"}
-                    data-plasmic-override={overrides.newMenu}
-                    className={classNames("__wab_instance", sty.newMenu)}
-                    headerTitle={
-                      <PlasmicLink__
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.__wab_text,
-                          sty.link__gb2C2
-                        )}
-                        component={Link}
-                        href={(() => {
-                          const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return "Đang đợi tham số...";
-                          const list = $queries.allList?.data || [];
-                          const currentItem = list.find(
-                            item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
-                          );
-                          return currentItem?.Link || null;
-                        })()}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                      >
-                        <React.Fragment>
-                          {(() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return currentItem?.Link || "[ 2026 ]";
-                          })()}
-                        </React.Fragment>
-                      </PlasmicLink__>
-                    }
-                    scrolledState={(() => {
-                      try {
-                        return $ctx.scrollData.isScrolled;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return [];
-                        }
-                        throw e;
-                      }
+            <NewMenu
+              data-plasmic-name={"newMenu"}
+              data-plasmic-override={overrides.newMenu}
+              className={classNames("__wab_instance", sty.newMenu)}
+              headerTitle={
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__gb2C2
+                  )}
+                  component={Link}
+                  href={(() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return "Đang đợi tham số...";
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    return currentItem?.Link || null;
+                  })()}
+                  legacyBehavior={false}
+                  platform={"nextjs"}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      const pageId = $ctx.params.id || $ctx.params.Slug;
+                      if (!pageId) return "Đang đợi tham số...";
+                      const list = $queries.allList?.data || [];
+                      const currentItem = list.find(
+                        item =>
+                          item.id == pageId ||
+                          item.Id == pageId ||
+                          item.slug == pageId ||
+                          item.Slug == pageId
+                      );
+                      return currentItem?.Link || "[ 2026 ]";
                     })()}
-                  />
-                )}
-              </DataCtxReader__>
-            </ScrollDetector>
+                  </React.Fragment>
+                </PlasmicLink__>
+              }
+              scrolledState={(() => {
+                try {
+                  return $ctx.scrollData.isScrolled;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return [];
+                  }
+                  throw e;
+                }
+              })()}
+            />
+
             <div className={classNames(projectcss.all, sty.freeBox__rsPuk)}>
               <RevealOnScroll
                 blurAmount={5}
@@ -4221,7 +4209,6 @@ const PlasmicDescendants = {
     "root",
     "globalLoading",
     "smoothScroll",
-    "scrollDetector",
     "newMenu",
     "section1",
     "container",
@@ -4307,7 +4294,6 @@ const PlasmicDescendants = {
   globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
-    "scrollDetector",
     "newMenu",
     "section1",
     "container",
@@ -4390,7 +4376,6 @@ const PlasmicDescendants = {
     "prevous",
     "nExt"
   ],
-  scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
   section1: [
     "section1",
@@ -4666,7 +4651,6 @@ type NodeDefaultElementType = {
   root: "div";
   globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
-  scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
   section1: "div";
   container: "div";
@@ -4839,7 +4823,6 @@ export const PlasmicNewPage = Object.assign(
     // Helper components rendering sub-elements
     globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
-    scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
     section1: makeNodeComponent("section1"),
     container: makeNodeComponent("container"),
