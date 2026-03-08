@@ -109,6 +109,7 @@
   transition-property: all;
   transition-duration: 600ms;
   transition-timing-function: ease-in-out;
+  height: auto;
   min-width: 0;
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in-out;
