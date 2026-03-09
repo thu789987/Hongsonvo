@@ -4,41 +4,50 @@ import * as React from "react";
 import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-web/lib/host";
 import GlobalContextsProvider from "../components/plasmic/son_vo/PlasmicGlobalContextsProvider";
 
-import { PlasmicHomepage } from "../components/plasmic/son_vo/PlasmicHomepage";
+import { PlasmicMyJourney } from "../components/plasmic/son_vo/PlasmicMyJourney";
 import { useRouter } from "next/router";
 import { PlasmicQueryDataProvider } from "@plasmicapp/react-web/lib/query";
 import type { GetStaticProps } from "next";
 import { extractPlasmicQueryData } from "@plasmicapp/react-web/lib/prepass";
 
-// 👇 1. IMPORT COMPONENT VÀO ĐÂY (Nhớ kiểm tra lại đường dẫn cho đúng với thư mục của bạn nhé)
-import ScrollToTop from "../components/ScrollToTop"; 
-
 export const getStaticProps: GetStaticProps = async context => {
-  const queryCache = await extractPlasmicQueryData(<PlasmicHomepage />);
-  return {
-    props: { queryCache }
-  };
+  const queryCache = await extractPlasmicQueryData(<PlasmicMyJourney />);
+  return {
+    props: { queryCache }
+  };
 };
 
-function Homepage({ queryCache }: { queryCache?: any }) {
-  // ... (các comment của Plasmic giữ nguyên) ...
+function MyJourney({ queryCache }: { queryCache?: any }) {
+  // Use PlasmicMyJourney to render this component as it was
+  // designed in Plasmic, by activating the appropriate variants,
+  // attaching the appropriate event handlers, etc.  You
+  // can also install whatever React hooks you need here to manage state or
+  // fetch data.
+  //
+  // Props you can pass into PlasmicMyJourney are:
+  // 1. Variants you want to activate,
+  // 2. Contents for slots you want to fill,
+  // 3. Overrides for any named node in the component to attach behavior and data,
+  // 4. Props to set on the root node.
+  //
+  // By default, PlasmicMyJourney is wrapped by your project's global
+  // variant context providers. These wrappers may be moved to
+  // Next.js Custom App component
+  // (https://nextjs.org/docs/advanced-features/custom-app).
 
-  return (
-    <GlobalContextsProvider>
-      <PlasmicQueryDataProvider prefetchedCache={queryCache}>
-        <PageParamsProvider__
-          route={useRouter()?.pathname}
-          params={useRouter()?.query}
-          query={useRouter()?.query}
-        >
-          {/* 👇 2. GẮN COMPONENT VÀO NGAY TRÊN PLASMIC HOMEPAGE */}
-          <ScrollToTop /> 
-          
-          <PlasmicHomepage />
-        </PageParamsProvider__>
-      </PlasmicQueryDataProvider>
-    </GlobalContextsProvider>
-  );
+  return (
+    <GlobalContextsProvider>
+      <PlasmicQueryDataProvider prefetchedCache={queryCache}>
+        <PageParamsProvider__
+          route={useRouter()?.pathname}
+          params={useRouter()?.query}
+          query={useRouter()?.query}
+        >
+          <PlasmicMyJourney />
+        </PageParamsProvider__>
+      </PlasmicQueryDataProvider>
+    </GlobalContextsProvider>
+  );
 }
 
-export default Homepage;
+export default MyJourney;

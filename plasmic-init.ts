@@ -43,6 +43,7 @@ import { InfiniteScroll } from './components/InfiniteScroll'; // Thêm ở đầ
 import { ScrollPlayVideo } from "./components/ScrollPlayVideo";
 import ScrollContext from "./components/ScrollContext";
 import GlobalLoading from "./components/GlobalLoading";
+import ScrollToTop from "./components/ScrollToTop";
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -465,5 +466,12 @@ PLASMIC.registerComponent(GlobalLoading as any, {
     durationMs: "number",
   },
   importPath: "./components/GlobalLoading",
+  isDefaultExport: true,
+});
+
+PLASMIC.registerComponent(ScrollToTop as any, {
+  name: "ScrollToTop",
+  props: {}, // Component này chạy ngầm, không cần props gì cả
+  importPath: "./components/ScrollToTop",
   isDefaultExport: true,
 });
