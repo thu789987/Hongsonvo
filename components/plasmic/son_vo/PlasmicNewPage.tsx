@@ -4137,13 +4137,13 @@ function PlasmicNewPage__RenderFunc(props: {
                                     item.Slug == pageId
                                 );
                                 if (currentIndex === -1) return false;
-                                const prevIndex =
-                                  currentIndex === 0
-                                    ? list.length - 1
-                                    : currentIndex - 1;
-                                const prevItem = list[prevIndex];
+                                const nextIndex =
+                                  currentIndex === list.length - 1
+                                    ? 0
+                                    : currentIndex + 1;
+                                const nextItem = list[nextIndex];
                                 const video =
-                                  prevItem?.["Video"] || prevItem?.["video"];
+                                  nextItem?.["Video"] || nextItem?.["video"];
                                 return !!video;
                               })();
                             } catch (e) {
