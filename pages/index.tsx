@@ -10,6 +10,9 @@ import { PlasmicQueryDataProvider } from "@plasmicapp/react-web/lib/query";
 import type { GetStaticProps } from "next";
 import { extractPlasmicQueryData } from "@plasmicapp/react-web/lib/prepass";
 
+// 👇 1. IMPORT COMPONENT VÀO ĐÂY (Nhớ kiểm tra lại đường dẫn cho đúng với thư mục của bạn nhé)
+import ScrollToTop from "../components/ScrollToTop"; 
+
 export const getStaticProps: GetStaticProps = async context => {
   const queryCache = await extractPlasmicQueryData(<PlasmicHomepage />);
   return {
@@ -18,22 +21,7 @@ export const getStaticProps: GetStaticProps = async context => {
 };
 
 function Homepage({ queryCache }: { queryCache?: any }) {
-  // Use PlasmicHomepage to render this component as it was
-  // designed in Plasmic, by activating the appropriate variants,
-  // attaching the appropriate event handlers, etc.  You
-  // can also install whatever React hooks you need here to manage state or
-  // fetch data.
-  //
-  // Props you can pass into PlasmicHomepage are:
-  // 1. Variants you want to activate,
-  // 2. Contents for slots you want to fill,
-  // 3. Overrides for any named node in the component to attach behavior and data,
-  // 4. Props to set on the root node.
-  //
-  // By default, PlasmicHomepage is wrapped by your project's global
-  // variant context providers. These wrappers may be moved to
-  // Next.js Custom App component
-  // (https://nextjs.org/docs/advanced-features/custom-app).
+  // ... (các comment của Plasmic giữ nguyên) ...
 
   return (
     <GlobalContextsProvider>
@@ -43,6 +31,9 @@ function Homepage({ queryCache }: { queryCache?: any }) {
           params={useRouter()?.query}
           query={useRouter()?.query}
         >
+          {/* 👇 2. GẮN COMPONENT VÀO NGAY TRÊN PLASMIC HOMEPAGE */}
+          <ScrollToTop /> 
+          
           <PlasmicHomepage />
         </PageParamsProvider__>
       </PlasmicQueryDataProvider>
