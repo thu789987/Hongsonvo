@@ -309,6 +309,7 @@ function PlasmicWorks__RenderFunc(props: {
             data-plasmic-name={"globalLoading"}
             data-plasmic-override={overrides.globalLoading}
             className={classNames("__wab_instance", sty.globalLoading)}
+            durationMs={6000}
             textSize={"160px"}
           />
 
