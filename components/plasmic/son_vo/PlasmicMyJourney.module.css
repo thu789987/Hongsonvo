@@ -8,6 +8,11 @@
   min-width: 0;
   min-height: 0;
 }
+.scrollToTop:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+}
 .globalLoading:global(.__wab_instance) {
   animation: none;
   max-width: 100%;

@@ -2439,6 +2439,12 @@
           "name": "GlobalLoading",
           "displayName": "GlobalLoading",
           "componentImportPath": "./components/GlobalLoading"
+        },
+        {
+          "id": "amMlHTsYYfNZ",
+          "name": "ScrollToTop",
+          "displayName": "ScrollToTop",
+          "componentImportPath": "./components/ScrollToTop"
         }
       ],
       "customFunctions": []
