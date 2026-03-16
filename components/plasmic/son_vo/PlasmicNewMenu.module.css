@@ -16,6 +16,12 @@
   padding: 24px 60px;
   border-bottom: 1px solid #ffffff80;
 }
+@media (max-width: 930px) {
+  .menu {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .menuscrolledState {
   border-bottom-color: #ffffff00;
 }
@@ -67,6 +73,12 @@
   align-items: flex-start;
   min-width: 0;
   padding: 0px;
+}
+@media (max-width: 930px) {
+  .freeBox__ieTg {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
 }
 .link__fVudO {
   display: flex;
@@ -182,6 +194,11 @@
   justify-content: flex-start;
   row-gap: 8px;
   min-width: 0;
+}
+@media (max-width: 930px) {
+  .freeBox___2ndUm {
+    display: none;
+  }
 }
 .slotTargetHeaderTitle {
   font-family: "Arial";

@@ -68,6 +68,7 @@ import {
 } from "@plasmicapp/react-web/lib/data-sources";
 
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
+import ScrollToTop from "../../ScrollToTop"; // plasmic-import: amMlHTsYYfNZ/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import ScrollContext from "../../ScrollContext"; // plasmic-import: 4JSGC86CDgyw/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
@@ -132,6 +133,7 @@ export const PlasmicNewPage__ArgProps = new Array<ArgPropType>();
 export type PlasmicNewPage__OverridesType = {
   root?: Flex__<"div">;
   globalLoading?: Flex__<typeof GlobalLoading>;
+  scrollToTop?: Flex__<typeof ScrollToTop>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollContext?: Flex__<typeof ScrollContext>;
   newMenu2?: Flex__<typeof NewMenu>;
@@ -332,7 +334,14 @@ function PlasmicNewPage__RenderFunc(props: {
             data-plasmic-name={"globalLoading"}
             data-plasmic-override={overrides.globalLoading}
             className={classNames("__wab_instance", sty.globalLoading)}
+            durationMs={6000}
             textSize={"160px"}
+          />
+
+          <ScrollToTop
+            data-plasmic-name={"scrollToTop"}
+            data-plasmic-override={overrides.scrollToTop}
+            className={classNames("__wab_instance", sty.scrollToTop)}
           />
 
           <SmoothScroll
@@ -4185,6 +4194,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "globalLoading",
+    "scrollToTop",
     "smoothScroll",
     "scrollContext",
     "newMenu2",
@@ -4270,6 +4280,7 @@ const PlasmicDescendants = {
     "nExt"
   ],
   globalLoading: ["globalLoading"],
+  scrollToTop: ["scrollToTop"],
   smoothScroll: [
     "smoothScroll",
     "scrollContext",
@@ -4630,6 +4641,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   globalLoading: typeof GlobalLoading;
+  scrollToTop: typeof ScrollToTop;
   smoothScroll: typeof SmoothScroll;
   scrollContext: typeof ScrollContext;
   newMenu2: typeof NewMenu;
@@ -4803,6 +4815,7 @@ export const PlasmicNewPage = Object.assign(
   {
     // Helper components rendering sub-elements
     globalLoading: makeNodeComponent("globalLoading"),
+    scrollToTop: makeNodeComponent("scrollToTop"),
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollContext: makeNodeComponent("scrollContext"),
     newMenu2: makeNodeComponent("newMenu2"),

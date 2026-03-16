@@ -67,6 +67,7 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
+import ScrollToTop from "../../ScrollToTop"; // plasmic-import: amMlHTsYYfNZ/codeComponent
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
@@ -145,6 +146,7 @@ export const PlasmicMyJourney__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicMyJourney__OverridesType = {
   root?: Flex__<"div">;
+  scrollToTop?: Flex__<typeof ScrollToTop>;
   globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollDetector?: Flex__<typeof ScrollDetector>;
@@ -342,10 +344,17 @@ function PlasmicMyJourney__RenderFunc(props: {
             sty.root
           )}
         >
+          <ScrollToTop
+            data-plasmic-name={"scrollToTop"}
+            data-plasmic-override={overrides.scrollToTop}
+            className={classNames("__wab_instance", sty.scrollToTop)}
+          />
+
           <GlobalLoading
             data-plasmic-name={"globalLoading"}
             data-plasmic-override={overrides.globalLoading}
             className={classNames("__wab_instance", sty.globalLoading)}
+            durationMs={6000}
             textSize={"160px"}
           />
 
@@ -2703,6 +2712,7 @@ function PlasmicMyJourney__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "scrollToTop",
     "globalLoading",
     "smoothScroll",
     "scrollDetector",
@@ -2791,6 +2801,7 @@ const PlasmicDescendants = {
     "gridDistortion",
     "cardWhatAboutUs7"
   ],
+  scrollToTop: ["scrollToTop"],
   globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
@@ -3250,6 +3261,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  scrollToTop: typeof ScrollToTop;
   globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
   scrollDetector: typeof ScrollDetector;
@@ -3426,6 +3438,7 @@ export const PlasmicMyJourney = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
+    scrollToTop: makeNodeComponent("scrollToTop"),
     globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollDetector: makeNodeComponent("scrollDetector"),
