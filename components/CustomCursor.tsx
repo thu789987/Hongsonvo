@@ -38,8 +38,8 @@ export function CustomCursor() {
       <div
         style={{
           // Kích thước và hình dáng đúng yêu cầu
-          width: '2px', // Hình vuông 2x2px
-          height: '2px',
+          width: '8px', // Hình vuông 2x2px
+          height: '8px',
           borderRadius: '2px', // Radius 2px
 
           // Style cơ bản cho con trỏ
