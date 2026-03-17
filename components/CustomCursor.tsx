@@ -1,59 +1,75 @@
 import React, { useState, useEffect } from 'react';
+import { useCursor } from './CursorContext';
 
 export function CustomCursor() {
-  // 1. Khởi tạo state để lưu tọa độ x, y của chuột
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const { cursorMode } = useCursor(); 
 
-  // 2. useEffect để lắng nghe sự kiện chuột di chuyển (mousemove)
+  // Kiểm tra xem có đang ở chế độ View không
+  const isViewMode = cursorMode === 'view';
+
   useEffect(() => {
-    // Chỉ chạy trên trình duyệt (tránh lỗi SSR của Next.js)
     if (typeof window === 'undefined') return;
 
-    // Hàm callback sẽ chạy mỗi khi chuột di chuyển
     const handleMouseMove = (event: MouseEvent) => {
-      // clientX, clientY là tọa độ chuột so với cửa sổ trình duyệt
       setPosition({ x: event.clientX, y: event.clientY });
     };
 
-    // Gắn listener lắng nghe sự kiện trên toàn bộ cửa sổ (window)
     window.addEventListener('mousemove', handleMouseMove);
-
-    // Hàm dọn dẹp (clean up) để gỡ bỏ listener khi component bị tắt
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []); // Chỉ chạy 1 lần duy nhất khi component được mount
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   return (
     <>
-      {/* 3. Thẻ <style> để ẩn con trỏ chuột mặc định của trình duyệt trên toàn web */}
-      <style dangerouslySetInnerHTML={{__html: `
-        /* Ép buộc ẩn con trỏ chuột mặc định bằng !important */
-        * {
-          cursor: none !important;
-        }
-      `}} />
-
-      {/* 4. Thẻ div làm con trỏ tùy chỉnh của chúng ta */}
+      <style dangerouslySetInnerHTML={{__html: `* { cursor: none !important; }`}} />
+      
+      {/* CHỈ DÙNG 1 THẺ DIV DUY NHẤT ĐỂ ANIMATION HOẠT ĐỘNG */}
       <div
         style={{
-          // Kích thước và hình dáng đúng yêu cầu
-          width: '8px', // Hình vuông 2x2px
-          height: '8px',
-          borderRadius: '2px', // Radius 2px
+          position: 'fixed',
+          pointerEvents: 'none',
+          zIndex: 9999,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          overflow: 'hidden', // Ẩn chữ đi khi con trỏ đang thu nhỏ thành 2px
 
-          // Style cơ bản cho con trỏ
-          backgroundColor: 'black', // Màu sắc con trỏ (bạn có thể đổi màu tùy thích)
-          position: 'fixed', // Giữ vị trí cố định trên màn hình (không bị cuộn)
-          pointerEvents: 'none', // Cho phép bấm xuyên qua nó (để còn bấm được link, nút bấm ở dưới)
-          zIndex: 9999, // Đảm bảo nó luôn nằm trên cùng mọi thứ
+          // 👇 LINH HỒN CỦA ANIMATION: Chuyển động mượt mà cho mọi thay đổi (0.3s)
+          transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
 
-          // 👇 BÍ QUYẾT Ở ĐÂY: Vị trí động đi theo tọa độ chuột
-          // Chúng ta offset -1px để con trỏ chuột thật sự nằm ở tâm của hình vuông 2x2.
-          left: `${position.x - 1}px`,
-          top: `${position.y - 1}px`,
+          // 👇 THAY ĐỔI KÍCH THƯỚC VÀ HÌNH DÁNG ĐỘNG
+          width: isViewMode ? '80px' : '8px',
+          height: isViewMode ? '32px' : '8px',
+          borderRadius: isViewMode ? '20px' : '2px',
+          backgroundColor: isViewMode ? '#1a1a1a' : 'black',
+
+          // 👇 XỬ LÝ TỌA ĐỘ TÂM CỦA CON TRỎ
+          // Nếu là view mode (80x32) -> lùi lại 40px và 16px
+          // Nếu là default mode (2x2) -> lùi lại 1px và 1px
+          transform: `translate(${position.x - (isViewMode ? 40 : 1)}px, ${position.y - (isViewMode ? 16 : 1)}px)`,
         }}
-      />
+      >
+        {/* NỘI DUNG CHỮ VÀ ICON BÊN TRONG */}
+        <span 
+          style={{
+            color: 'white',
+            fontSize: '12px',
+            fontWeight: 'bold',
+            fontFamily: 'sans-serif',
+            whiteSpace: 'nowrap', // Không cho chữ rớt dòng
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px',
+            
+            // 👇 HIỆU ỨNG CỦA CHỮ: Từ từ hiện ra sau khi cái khung đã phình to
+            opacity: isViewMode ? 1 : 0,
+            transition: 'opacity 0.2s ease-in-out',
+            transitionDelay: isViewMode ? '0.1s' : '0s' // Khi hover vào thì chờ 0.1s mới hiện chữ
+          }}
+        >
+          VIEW ↗
+        </span>
+      </div>
     </>
   );
 }

@@ -45,6 +45,7 @@ import ScrollContext from "./components/ScrollContext";
 import GlobalLoading from "./components/GlobalLoading";
 import ScrollToTop from "./components/ScrollToTop";
 import { CustomCursor } from "./components/CustomCursor";
+import { CursorHoverWrapper } from "./components/CursorHoverWrapper"; // Thêm dòng này
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -482,4 +483,18 @@ PLASMIC.registerComponent(CustomCursor as any, {
   props: {}, // Component này chạy ngầm, không cần props gì cả
   importPath: "./components/CustomCursor",
   isDefaultExport: false, // Vì mình dùng export function thay vì export default
+});
+
+PLASMIC.registerComponent(CursorHoverWrapper as any, {
+  name: "CursorHoverWrapper",
+  props: {
+    children: {
+      type: "slot",
+      defaultValue: {
+        type: "text",
+        value: "Wrap project card here",
+      },
+    },
+  },
+  importPath: "./components/CursorHoverWrapper",
 });
