@@ -44,6 +44,7 @@ import { ScrollPlayVideo } from "./components/ScrollPlayVideo";
 import ScrollContext from "./components/ScrollContext";
 import GlobalLoading from "./components/GlobalLoading";
 import ScrollToTop from "./components/ScrollToTop";
+import { CustomCursor } from "./components/CustomCursor";
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -474,4 +475,11 @@ PLASMIC.registerComponent(ScrollToTop as any, {
   props: {}, // Component này chạy ngầm, không cần props gì cả
   importPath: "./components/ScrollToTop",
   isDefaultExport: true,
+});
+
+PLASMIC.registerComponent(CustomCursor as any, {
+  name: "CustomCursor",
+  props: {}, // Component này chạy ngầm, không cần props gì cả
+  importPath: "./components/CustomCursor",
+  isDefaultExport: false, // Vì mình dùng export function thay vì export default
 });
