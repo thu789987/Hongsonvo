@@ -387,6 +387,7 @@ function PlasmicWorks__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__czfVh
                         )}
@@ -398,6 +399,7 @@ function PlasmicWorks__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__tuaGm
                       )}
@@ -408,6 +410,7 @@ function PlasmicWorks__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__bjaYl
                       )}
@@ -742,6 +745,7 @@ function PlasmicWorks__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__asJid
                       )}
@@ -760,6 +764,7 @@ function PlasmicWorks__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__kAy9W
                       )}
@@ -770,6 +775,7 @@ function PlasmicWorks__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__nIj0
                       )}
@@ -780,6 +786,7 @@ function PlasmicWorks__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__q8W0U
                       )}
@@ -798,6 +805,7 @@ function PlasmicWorks__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__maMnc
                       )}
@@ -816,6 +824,7 @@ function PlasmicWorks__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.h1,
+                    projectcss.h1__bLa1s,
                     projectcss.__wab_text,
                     sty.h1__xfsmG
                   )}
@@ -826,6 +835,7 @@ function PlasmicWorks__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.h1,
+                    projectcss.h1__bLa1s,
                     projectcss.__wab_text,
                     sty.h1___4905H
                   )}
@@ -850,6 +860,7 @@ function PlasmicWorks__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.h1,
+                    projectcss.h1__bLa1s,
                     projectcss.__wab_text,
                     sty.h1__mNq9S
                   )}
@@ -860,6 +871,7 @@ function PlasmicWorks__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.h1,
+                    projectcss.h1__bLa1s,
                     projectcss.__wab_text,
                     sty.h1__gfPmt
                   )}
@@ -1072,6 +1084,7 @@ function PlasmicWorks__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1___4LdUv
                         )}
@@ -1082,6 +1095,7 @@ function PlasmicWorks__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__xs414
                         )}

@@ -188,7 +188,9 @@ function PlasmicFotterMain__RenderFunc(props: {
               >
                 <React.Fragment>
                   <span
-                    className={"plasmic_default__all plasmic_default__span"}
+                    className={
+                      "plasmic_default__all plasmic_default__span plasmic_default__span__bLa1s"
+                    }
                     style={{ fontWeight: 700 }}
                   >
                     {"COME SAY HELLO"}
@@ -215,6 +217,7 @@ function PlasmicFotterMain__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
+                    projectcss.a__bLa1s,
                     projectcss.__wab_text,
                     sty.link__wEneb
                   )}
@@ -242,6 +245,7 @@ function PlasmicFotterMain__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
+                    projectcss.a__bLa1s,
                     projectcss.__wab_text,
                     sty.link__xYUhD
                   )}
@@ -271,6 +275,7 @@ function PlasmicFotterMain__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
+                    projectcss.a__bLa1s,
                     projectcss.__wab_text,
                     sty.link__eC7U4
                   )}

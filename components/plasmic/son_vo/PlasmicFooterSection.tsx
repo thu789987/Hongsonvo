@@ -237,6 +237,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.h4,
+              projectcss.h4__bLa1s,
               projectcss.__wab_text,
               sty.h4__dwGlh
             )}
@@ -247,6 +248,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
+              projectcss.a__bLa1s,
               projectcss.__wab_text,
               sty.link__iYwO6
             )}
@@ -261,6 +263,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
+              projectcss.a__bLa1s,
               projectcss.__wab_text,
               sty.link__qDqns
             )}
@@ -275,6 +278,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
+              projectcss.a__bLa1s,
               projectcss.__wab_text,
               sty.link__t8V8Z
             )}
@@ -291,6 +295,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.h4,
+              projectcss.h4__bLa1s,
               projectcss.__wab_text,
               sty.h4__zqlw8
             )}
@@ -301,6 +306,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
+              projectcss.a__bLa1s,
               projectcss.__wab_text,
               sty.link__fHvuF
             )}
@@ -315,6 +321,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
+              projectcss.a__bLa1s,
               projectcss.__wab_text,
               sty.link__wPyOg
             )}
@@ -331,6 +338,7 @@ function PlasmicFooterSection__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.h4,
+              projectcss.h4__bLa1s,
               projectcss.__wab_text,
               sty.h4__fUy8D
             )}

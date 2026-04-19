@@ -233,6 +233,7 @@ function PlasmicTest__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.h1,
+                projectcss.h1__bLa1s,
                 projectcss.__wab_text,
                 sty.h1__iKctv
               )}
@@ -243,6 +244,7 @@ function PlasmicTest__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.h1,
+                projectcss.h1__bLa1s,
                 projectcss.__wab_text,
                 sty.h1___4GBrK
               )}
@@ -253,6 +255,7 @@ function PlasmicTest__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.h1,
+                projectcss.h1__bLa1s,
                 projectcss.__wab_text,
                 sty.h1__yOkTo
               )}

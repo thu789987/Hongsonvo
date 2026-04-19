@@ -333,16 +333,26 @@ function PlasmicTextInput__RenderFunc(props: {
         data-plasmic-override={overrides.input}
         aria-label={args["aria-label"]}
         aria-labelledby={args["aria-labelledby"]}
-        className={classNames(projectcss.all, projectcss.input, sty.input, {
-          [sty.input___focusVisibleWithin]: triggers.focusVisibleWithin_root,
-          [sty.inputcolor_dark]: hasVariant($state, "color", "dark"),
-          [sty.inputisDisabled]: hasVariant($state, "isDisabled", "isDisabled"),
-          [sty.inputshowStartIcon]: hasVariant(
-            $state,
-            "showStartIcon",
-            "showStartIcon"
-          )
-        })}
+        className={classNames(
+          projectcss.all,
+          projectcss.input,
+          projectcss.input__bLa1s,
+          sty.input,
+          {
+            [sty.input___focusVisibleWithin]: triggers.focusVisibleWithin_root,
+            [sty.inputcolor_dark]: hasVariant($state, "color", "dark"),
+            [sty.inputisDisabled]: hasVariant(
+              $state,
+              "isDisabled",
+              "isDisabled"
+            ),
+            [sty.inputshowStartIcon]: hasVariant(
+              $state,
+              "showStartIcon",
+              "showStartIcon"
+            )
+          }
+        )}
         disabled={
           hasVariant($state, "isDisabled", "isDisabled") ? true : undefined
         }

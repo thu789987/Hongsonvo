@@ -424,6 +424,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__s1JRr
                         )}
@@ -435,6 +436,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__f9Cbc
                       )}
@@ -445,6 +447,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1___5TDkx
                       )}
@@ -778,6 +781,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__c8Grs,
                         "animate-text"
@@ -797,6 +801,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__fmTt,
                         ``
@@ -808,6 +813,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__i2V2N
                       )}
@@ -818,6 +824,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__vmNkV
                       )}
@@ -832,6 +839,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1___4La3P,
                         "animate-text"
@@ -867,6 +875,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__w6FXm
                         )}
@@ -890,6 +899,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__vpZd
                         )}
@@ -954,6 +964,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__b2Gqs
                         )}
@@ -970,6 +981,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.h1,
+                            projectcss.h1__bLa1s,
                             projectcss.__wab_text,
                             sty.h1__yxiHg
                           )}
@@ -980,6 +992,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.h1,
+                            projectcss.h1__bLa1s,
                             projectcss.__wab_text,
                             sty.h1__mbLz5
                           )}
@@ -2668,6 +2681,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1___2AVgX
                         )}
@@ -2678,6 +2692,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__k1OJ
                         )}

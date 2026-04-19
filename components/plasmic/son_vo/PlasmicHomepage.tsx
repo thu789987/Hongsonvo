@@ -67,6 +67,7 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
+import { CustomCursor } from "../../CustomCursor"; // plasmic-import: -0J1pl1GDQ1s/codeComponent
 import ScrollToTop from "../../ScrollToTop"; // plasmic-import: amMlHTsYYfNZ/codeComponent
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
@@ -144,6 +145,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  customCursor?: Flex__<typeof CustomCursor>;
   scrollToTop?: Flex__<typeof ScrollToTop>;
   globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
@@ -306,6 +308,12 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <CustomCursor
+            data-plasmic-name={"customCursor"}
+            data-plasmic-override={overrides.customCursor}
+            className={classNames("__wab_instance", sty.customCursor)}
+          />
+
           <ScrollToTop
             data-plasmic-name={"scrollToTop"}
             data-plasmic-override={overrides.scrollToTop}
@@ -407,6 +415,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__txiRz,
                         "animate-text"
@@ -418,6 +427,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1___4DeY9,
                         "animate-text"
@@ -429,6 +439,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__l3QyM,
                         "animate-text"
@@ -468,6 +479,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.h1,
+                            projectcss.h1__bLa1s,
                             projectcss.__wab_text,
                             sty.h1__pfjH6
                           )}
@@ -478,6 +490,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.h1,
+                            projectcss.h1__bLa1s,
                             projectcss.__wab_text,
                             sty.h1___4S00K
                           )}
@@ -488,6 +501,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.h1,
+                            projectcss.h1__bLa1s,
                             projectcss.__wab_text,
                             sty.h1__qg2Zx
                           )}
@@ -516,6 +530,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.h1,
+                            projectcss.h1__bLa1s,
                             projectcss.__wab_text,
                             sty.h1__bf2CR
                           )}
@@ -562,6 +577,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.h1,
+                            projectcss.h1__bLa1s,
                             projectcss.__wab_text,
                             sty.h1__svsYs
                           )}
@@ -589,6 +605,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.h1,
+                              projectcss.h1__bLa1s,
                               projectcss.__wab_text,
                               sty.h1__q37Zf
                             )}
@@ -599,6 +616,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.h1,
+                              projectcss.h1__bLa1s,
                               projectcss.__wab_text,
                               sty.h1__c5Rym
                             )}
@@ -625,6 +643,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__fYqar
                       )}
@@ -646,6 +665,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__lAiEk
                       )}
@@ -667,6 +687,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__ee6RD
                       )}
@@ -734,6 +755,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               className={classNames(
                                 projectcss.all,
                                 projectcss.a,
+                                projectcss.a__bLa1s,
                                 projectcss.__wab_text,
                                 projectcss.plasmic_default__inline,
                                 sty.link__w0L0X
@@ -752,6 +774,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               className={classNames(
                                 projectcss.all,
                                 projectcss.a,
+                                projectcss.a__bLa1s,
                                 projectcss.__wab_text,
                                 projectcss.plasmic_default__inline,
                                 sty.link___3AV08
@@ -774,6 +797,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               className={classNames(
                                 projectcss.all,
                                 projectcss.a,
+                                projectcss.a__bLa1s,
                                 projectcss.__wab_text,
                                 projectcss.plasmic_default__inline,
                                 sty.link__cqpwv
@@ -796,6 +820,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               className={classNames(
                                 projectcss.all,
                                 projectcss.a,
+                                projectcss.a__bLa1s,
                                 projectcss.__wab_text,
                                 projectcss.plasmic_default__inline,
                                 sty.link__laJbp
@@ -2029,6 +2054,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__g5Obq
                         )}
@@ -2039,6 +2065,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__oXjNt
                         )}
@@ -2073,6 +2100,7 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "customCursor",
     "scrollToTop",
     "globalLoading",
     "smoothScroll",
@@ -2126,6 +2154,7 @@ const PlasmicDescendants = {
     "templateCard9",
     "section"
   ],
+  customCursor: ["customCursor"],
   scrollToTop: ["scrollToTop"],
   globalLoading: ["globalLoading"],
   smoothScroll: [
@@ -2324,6 +2353,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  customCursor: typeof CustomCursor;
   scrollToTop: typeof ScrollToTop;
   globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
@@ -2465,6 +2495,7 @@ export const PlasmicHomepage = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
+    customCursor: makeNodeComponent("customCursor"),
     scrollToTop: makeNodeComponent("scrollToTop"),
     globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),

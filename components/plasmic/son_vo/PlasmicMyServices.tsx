@@ -410,6 +410,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__m0J8S
                         )}
@@ -421,6 +422,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__wEnLr
                       )}
@@ -431,6 +433,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__ydl6D
                       )}
@@ -761,6 +764,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__wfe
                       )}
@@ -775,6 +779,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__r3B3D
                       )}
@@ -785,6 +790,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1___9TpTa
                       )}
@@ -795,6 +801,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__dfbZx
                       )}
@@ -809,6 +816,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.h1,
+                        projectcss.h1__bLa1s,
                         projectcss.__wab_text,
                         sty.h1__ja90G
                       )}
@@ -843,6 +851,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__ugmRb
                         )}
@@ -945,6 +954,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__bSm9
                         )}
@@ -2354,6 +2364,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.a,
+                          projectcss.a__bLa1s,
                           sty.link___01MFq
                         )}
                         component={Link}
@@ -2402,6 +2413,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.a,
+                          projectcss.a__bLa1s,
                           sty.link__tJPo
                         )}
                         component={Link}
@@ -2448,6 +2460,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.a,
+                          projectcss.a__bLa1s,
                           sty.link__qaP7B
                         )}
                         component={Link}
@@ -2495,6 +2508,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.a,
+                          projectcss.a__bLa1s,
                           sty.link___6EbV5
                         )}
                         component={Link}
@@ -2543,6 +2557,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.a,
+                          projectcss.a__bLa1s,
                           sty.link__tlQc6
                         )}
                         component={Link}
@@ -2590,6 +2605,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.a,
+                          projectcss.a__bLa1s,
                           sty.link___2NuNu
                         )}
                         component={Link}
@@ -2676,6 +2692,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1__hfO0
                         )}
@@ -2686,6 +2703,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
+                          projectcss.h1__bLa1s,
                           projectcss.__wab_text,
                           sty.h1___0OjCv
                         )}

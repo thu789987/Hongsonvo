@@ -863,6 +863,7 @@ function PlasmicNewPage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.a,
+                            projectcss.a__bLa1s,
                             sty.link__iyRh8,
                             "animate-text"
                           )}
@@ -3030,6 +3031,7 @@ function PlasmicNewPage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.a,
+                      projectcss.a__bLa1s,
                       sty.link__pzJAf
                     )}
                     component={Link}

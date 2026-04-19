@@ -2445,6 +2445,18 @@
           "name": "ScrollToTop",
           "displayName": "ScrollToTop",
           "componentImportPath": "./components/ScrollToTop"
+        },
+        {
+          "id": "-0J1pl1GDQ1s",
+          "name": "CustomCursor",
+          "displayName": "CustomCursor",
+          "componentImportPath": "./components/CustomCursor"
+        },
+        {
+          "id": "bGYpSBKGrRUQ",
+          "name": "CursorHoverWrapper",
+          "displayName": "CursorHoverWrapper",
+          "componentImportPath": "./components/CursorHoverWrapper"
         }
       ],
       "customFunctions": []

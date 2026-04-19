@@ -202,6 +202,7 @@ function PlasmicNewMenu__RenderFunc(props: {
           className={classNames(
             projectcss.all,
             projectcss.a,
+            projectcss.a__bLa1s,
             projectcss.__wab_text,
             sty.link__xdhB6
           )}
@@ -235,6 +236,7 @@ function PlasmicNewMenu__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
+              projectcss.a__bLa1s,
               sty.link__fVudO,
               {
                 [sty.linkactivePage_myJourney__fVudOtmLyG]: hasVariant(
@@ -286,6 +288,7 @@ function PlasmicNewMenu__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
+              projectcss.a__bLa1s,
               sty.link__fvRmQ,
               {
                 [sty.linkactivePage_myJourney__fvRmQtmLyG]: hasVariant(
@@ -354,6 +357,7 @@ function PlasmicNewMenu__RenderFunc(props: {
             className={classNames(
               projectcss.all,
               projectcss.a,
+              projectcss.a__bLa1s,
               sty.link__aqvms,
               {
                 [sty.linkactivePage_myServices__aqvmsBgSi8]: hasVariant(

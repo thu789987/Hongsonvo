@@ -329,9 +329,13 @@ function PlasmicTemplateCard__RenderFunc(props: {
           <PlasmicLink__
             data-plasmic-name={"link"}
             data-plasmic-override={overrides.link}
-            className={classNames(projectcss.all, projectcss.a, sty.link, {
-              [sty.linkproject1]: hasVariant($state, "project1", "project1")
-            })}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.a__bLa1s,
+              sty.link,
+              { [sty.linkproject1]: hasVariant($state, "project1", "project1") }
+            )}
             component={Link}
             href={args.link}
             legacyBehavior={false}
