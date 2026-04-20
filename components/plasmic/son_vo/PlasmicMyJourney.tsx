@@ -79,7 +79,7 @@ import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcr
 import { RevealWidthOnScroll } from "../../RevealWidthOnScroll"; // plasmic-import: OrcqYiNWCo3G/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
-import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
+import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
 import { HoverLogoCard } from "../../HoverLogoCard"; // plasmic-import: 8gew1WdMY0jF/codeComponent
 import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUtTr/component
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
@@ -232,7 +232,7 @@ export type PlasmicMyJourney__OverridesType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2?: Flex__<"div">;
   container33?: Flex__<"div">;
   subContainer4?: Flex__<"div">;
-  gridDistortion?: Flex__<typeof GridDistortion>;
+  infiniteScroll?: Flex__<typeof InfiniteScroll>;
   cardWhatAboutUs7?: Flex__<typeof CardWhatAboutUs>;
 };
 
@@ -2385,23 +2385,105 @@ function PlasmicMyJourney__RenderFunc(props: {
                       data-plasmic-override={overrides.subContainer4}
                       className={classNames(projectcss.all, sty.subContainer4)}
                     >
-                      <GridDistortion
-                        data-plasmic-name={"gridDistortion"}
-                        data-plasmic-override={overrides.gridDistortion}
+                      <div
                         className={classNames(
-                          "__wab_instance",
-                          sty.gridDistortion
+                          projectcss.all,
+                          sty.freeBox__avlwZ
                         )}
-                        enableEffect={true}
-                        grid={20}
-                        imageSrc={
-                          "/plasmic/son_vo/images/yrStH7Lcoh9O5WxFsPetODyteSmPngJpg.jpg"
-                        }
-                        mouse={0.1}
-                        relaxation={0.9}
-                        strength={0.25}
-                      />
-
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__gBXf
+                          )}
+                        >
+                          <InfiniteScroll
+                            data-plasmic-name={"infiniteScroll"}
+                            data-plasmic-override={overrides.infiniteScroll}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.infiniteScroll
+                            )}
+                            direction={"left"}
+                            gap={40}
+                            pauseOnHover={true}
+                            repeatCount={4}
+                            showFade={false}
+                            speed={100}
+                          >
+                            {(_par =>
+                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
+                              (() => {
+                                try {
+                                  return $queries.works.data;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return [];
+                                  }
+                                  throw e;
+                                }
+                              })()
+                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                              const currentItem = __plasmic_item_0;
+                              const currentIndex = __plasmic_idx_0;
+                              return (
+                                <PlasmicImg__
+                                  alt={""}
+                                  className={classNames(sty.img__ngBMw)}
+                                  displayHeight={"auto"}
+                                  displayMaxHeight={"none"}
+                                  displayMaxWidth={"100%"}
+                                  displayMinHeight={"0"}
+                                  displayMinWidth={"0"}
+                                  displayWidth={"240px"}
+                                  key={currentIndex}
+                                  loading={"lazy"}
+                                  src={(() => {
+                                    try {
+                                      return currentItem["Main Image"];
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return {
+                                          src: "/plasmic/son_vo/images/_2Png.png",
+                                          fullWidth: 6048,
+                                          fullHeight: 4024,
+                                          aspectRatio: undefined
+                                        };
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                />
+                              );
+                            })}
+                          </InfiniteScroll>
+                        </div>
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img___6Mgu1)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/_2Png.png",
+                            fullWidth: 6048,
+                            fullHeight: 4024,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </div>
                       <HoverLogoCard
                         className={classNames(
                           "__wab_instance",
@@ -2813,7 +2895,7 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container33",
     "subContainer4",
-    "gridDistortion",
+    "infiniteScroll",
     "cardWhatAboutUs7"
   ],
   scrollToTop: ["scrollToTop"],
@@ -2903,7 +2985,7 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container33",
     "subContainer4",
-    "gridDistortion",
+    "infiniteScroll",
     "cardWhatAboutUs7"
   ],
   scrollDetector: ["scrollDetector", "newMenu"],
@@ -3222,7 +3304,7 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container33",
     "subContainer4",
-    "gridDistortion",
+    "infiniteScroll",
     "cardWhatAboutUs7"
   ],
   heading6: [
@@ -3264,11 +3346,11 @@ const PlasmicDescendants = {
   container33: [
     "container33",
     "subContainer4",
-    "gridDistortion",
+    "infiniteScroll",
     "cardWhatAboutUs7"
   ],
-  subContainer4: ["subContainer4", "gridDistortion"],
-  gridDistortion: ["gridDistortion"],
+  subContainer4: ["subContainer4", "infiniteScroll"],
+  infiniteScroll: ["infiniteScroll"],
   cardWhatAboutUs7: ["cardWhatAboutUs7"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -3362,7 +3444,7 @@ type NodeDefaultElementType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2: "div";
   container33: "div";
   subContainer4: "div";
-  gridDistortion: typeof GridDistortion;
+  infiniteScroll: typeof InfiniteScroll;
   cardWhatAboutUs7: typeof CardWhatAboutUs;
 };
 
@@ -3576,7 +3658,7 @@ export const PlasmicMyJourney = Object.assign(
       ),
     container33: makeNodeComponent("container33"),
     subContainer4: makeNodeComponent("subContainer4"),
-    gridDistortion: makeNodeComponent("gridDistortion"),
+    infiniteScroll: makeNodeComponent("infiniteScroll"),
     cardWhatAboutUs7: makeNodeComponent("cardWhatAboutUs7"),
 
     // Metadata about props expected for PlasmicMyJourney
