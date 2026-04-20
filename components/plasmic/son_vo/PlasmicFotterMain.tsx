@@ -92,9 +92,9 @@ export type PlasmicFotterMain__OverridesType = {
   link28?: Flex__<"div">;
   link29?: Flex__<"div">;
   link30?: Flex__<"div">;
-  heading17?: Flex__<"div">;
   container43?: Flex__<"div">;
   frame1618873422?: Flex__<"div">;
+  heading17?: Flex__<"div">;
 };
 
 export interface DefaultFotterMainProps {
@@ -139,6 +139,8 @@ function PlasmicFotterMain__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+
+  const globalVariants = _useGlobalVariants();
 
   const currentUser = useCurrentUser?.() || {};
 
@@ -186,16 +188,49 @@ function PlasmicFotterMain__RenderFunc(props: {
                   sty.text__p0IDw
                 )}
               >
-                <React.Fragment>
-                  <span
-                    className={
-                      "plasmic_default__all plasmic_default__span plasmic_default__span__bLa1s"
-                    }
-                    style={{ fontWeight: 700 }}
-                  >
-                    {"COME SAY HELLO"}
-                  </span>
-                </React.Fragment>
+                {hasVariant(globalVariants, "screen", "tablet") ? (
+                  <React.Fragment>
+                    <span
+                      className={
+                        "plasmic_default__all plasmic_default__span plasmic_default__span__bLa1s"
+                      }
+                      style={{ fontWeight: 700 }}
+                    >
+                      {"Interested to work with me?"}
+                    </span>
+                    <React.Fragment>{"\n"}</React.Fragment>
+                    <span
+                      className={
+                        "plasmic_default__all plasmic_default__span plasmic_default__span__bLa1s"
+                      }
+                      style={{ fontWeight: 700 }}
+                    >
+                      {"hongson789987"}
+                    </span>
+                    <React.Fragment>{"@mail.com"}</React.Fragment>
+                  </React.Fragment>
+                ) : (
+                  <React.Fragment>
+                    <span
+                      className={
+                        "plasmic_default__all plasmic_default__span plasmic_default__span__bLa1s"
+                      }
+                      style={{ fontWeight: 700 }}
+                    >
+                      {"Interested to work with me?"}
+                    </span>
+                    <React.Fragment>{"\n"}</React.Fragment>
+                    <span
+                      className={
+                        "plasmic_default__all plasmic_default__span plasmic_default__span__bLa1s"
+                      }
+                      style={{ fontWeight: 700 }}
+                    >
+                      {"hongson789987"}
+                    </span>
+                    <React.Fragment>{"@mail.com"}</React.Fragment>
+                  </React.Fragment>
+                )}
               </div>
             </div>
             <div
@@ -289,60 +324,60 @@ function PlasmicFotterMain__RenderFunc(props: {
                 </PlasmicLink__>
               </div>
             </div>
-          </div>
-          <div
-            data-plasmic-name={"heading17"}
-            data-plasmic-override={overrides.heading17}
-            className={classNames(projectcss.all, sty.heading17)}
-          >
             <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___2HGin
-              )}
-            >
-              {"H\nS\nV"}
-            </div>
-          </div>
-          <div
-            data-plasmic-name={"container43"}
-            data-plasmic-override={overrides.container43}
-            className={classNames(projectcss.all, sty.container43)}
-          >
-            <div
-              data-plasmic-name={"frame1618873422"}
-              data-plasmic-override={overrides.frame1618873422}
-              className={classNames(projectcss.all, sty.frame1618873422)}
+              data-plasmic-name={"container43"}
+              data-plasmic-override={overrides.container43}
+              className={classNames(projectcss.all, sty.container43)}
             >
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__pqy7Y
-                )}
+                data-plasmic-name={"frame1618873422"}
+                data-plasmic-override={overrides.frame1618873422}
+                className={classNames(projectcss.all, sty.frame1618873422)}
               >
-                {"(+84) 35 765 2075"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__lYxxo
-                )}
-              >
-                {"hongson789987@gmail.com"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__wqQZp
-                )}
-              >
-                {"Contact with me"}
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__pqy7Y
+                  )}
+                >
+                  {"(+84) 35 765 2075"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__lYxxo
+                  )}
+                >
+                  {"hongson789987@gmail.com"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__wqQZp
+                  )}
+                >
+                  {"Contact with me"}
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div
+          data-plasmic-name={"heading17"}
+          data-plasmic-override={overrides.heading17}
+          className={classNames(projectcss.all, sty.heading17)}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text___2HGin
+            )}
+          >
+            {"H S V"}
           </div>
         </div>
       </div>
@@ -361,9 +396,9 @@ const PlasmicDescendants = {
     "link28",
     "link29",
     "link30",
-    "heading17",
     "container43",
-    "frame1618873422"
+    "frame1618873422",
+    "heading17"
   ],
   container41: [
     "container41",
@@ -374,9 +409,9 @@ const PlasmicDescendants = {
     "link28",
     "link29",
     "link30",
-    "heading17",
     "container43",
-    "frame1618873422"
+    "frame1618873422",
+    "heading17"
   ],
   frame1618873418: [
     "frame1618873418",
@@ -386,7 +421,6 @@ const PlasmicDescendants = {
     "link28",
     "link29",
     "link30",
-    "heading17",
     "container43",
     "frame1618873422"
   ],
@@ -396,16 +430,18 @@ const PlasmicDescendants = {
     "frame1618873420",
     "link28",
     "link29",
-    "link30"
+    "link30",
+    "container43",
+    "frame1618873422"
   ],
   link27: ["link27"],
   frame1618873420: ["frame1618873420", "link28", "link29", "link30"],
   link28: ["link28"],
   link29: ["link29"],
   link30: ["link30"],
-  heading17: ["heading17"],
   container43: ["container43", "frame1618873422"],
-  frame1618873422: ["frame1618873422"]
+  frame1618873422: ["frame1618873422"],
+  heading17: ["heading17"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -420,9 +456,9 @@ type NodeDefaultElementType = {
   link28: "div";
   link29: "div";
   link30: "div";
-  heading17: "div";
   container43: "div";
   frame1618873422: "div";
+  heading17: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -495,9 +531,9 @@ export const PlasmicFotterMain = Object.assign(
     link28: makeNodeComponent("link28"),
     link29: makeNodeComponent("link29"),
     link30: makeNodeComponent("link30"),
-    heading17: makeNodeComponent("heading17"),
     container43: makeNodeComponent("container43"),
     frame1618873422: makeNodeComponent("frame1618873422"),
+    heading17: makeNodeComponent("heading17"),
 
     // Metadata about props expected for PlasmicFotterMain
     internalVariantProps: PlasmicFotterMain__VariantProps,
