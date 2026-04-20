@@ -1508,6 +1508,21 @@
           "id": "PUdu4Eq0YgkH",
           "name": "BehanceSvgIcon",
           "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__BehanceSvg.tsx"
+        },
+        {
+          "id": "sy98iCjT69--",
+          "name": "HSvgIcon",
+          "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__HSvg.tsx"
+        },
+        {
+          "id": "NkVFZd6iU3-5",
+          "name": "SSvgIcon",
+          "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__SSvg.tsx"
+        },
+        {
+          "id": "XBxj4iigjQvC",
+          "name": "VSvgIcon",
+          "moduleFilePath": "plasmic/son_vo/icons/PlasmicIcon__VSvg.tsx"
         }
       ],
       "images": [

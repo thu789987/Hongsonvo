@@ -70,6 +70,9 @@ import sty from "./PlasmicFotterMain.module.css"; // plasmic-import: pJp_GqmWQ71
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: 2WxnB5zdkiqv/icon
 import LinkedinSvg2Icon from "./icons/PlasmicIcon__LinkedinSvg2"; // plasmic-import: IGmKTdFrHdSH/icon
 import BehanceSvgIcon from "./icons/PlasmicIcon__BehanceSvg"; // plasmic-import: PUdu4Eq0YgkH/icon
+import HSvgIcon from "./icons/PlasmicIcon__HSvg"; // plasmic-import: sy98iCjT69--/icon
+import SSvgIcon from "./icons/PlasmicIcon__SSvg"; // plasmic-import: NkVFZd6iU3-5/icon
+import VSvgIcon from "./icons/PlasmicIcon__VSvg"; // plasmic-import: XBxj4iigjQvC/icon
 
 createPlasmicElementProxy;
 
@@ -370,15 +373,20 @@ function PlasmicFotterMain__RenderFunc(props: {
           data-plasmic-override={overrides.heading17}
           className={classNames(projectcss.all, sty.heading17)}
         >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text___2HGin
-            )}
-          >
-            {"H S V"}
-          </div>
+          <HSvgIcon
+            className={classNames(projectcss.all, sty.svg__zOngi)}
+            role={"img"}
+          />
+
+          <SSvgIcon
+            className={classNames(projectcss.all, sty.svg__lzbwl)}
+            role={"img"}
+          />
+
+          <VSvgIcon
+            className={classNames(projectcss.all, sty.svg___1ZzsS)}
+            role={"img"}
+          />
         </div>
       </div>
     </div>
