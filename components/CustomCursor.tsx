@@ -41,7 +41,7 @@ export function CustomCursor() {
           width: isViewMode ? '80px' : '8px',
           height: isViewMode ? '32px' : '8px',
           borderRadius: isViewMode ? '20px' : '2px',
-          backgroundColor: isViewMode ? '#1a1a1a' : 'black',
+          backgroundColor: isViewMode ? '#ffffff' : 'white',
 
           // 👇 XỬ LÝ TỌA ĐỘ TÂM CỦA CON TRỎ
           // Nếu là view mode (80x32) -> lùi lại 40px và 16px
