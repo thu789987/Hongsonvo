@@ -40,7 +40,7 @@ return (
         <div 
           onMouseEnter={() => handleHover(true)}
           onMouseLeave={() => handleHover(false)}
-          style={{ width: 'fit-content', border: 'none' }} 
+          style={{ width: '100%', border: 'none' }} 
         >
           {trigger}
         </div>
