@@ -117,10 +117,10 @@
   -webkit-transition-duration: 600ms;
 }
 .htmlVideo:global(.__wab_instance) {
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
+  pointer-events: auto;
   height: auto;
+  width: 100%;
+  object-fit: cover;
   min-width: 0;
 }
 .img__czgbX {
@@ -170,7 +170,7 @@
   align-items: center;
   justify-content: center;
   width: 80%;
-  height: 80%;
+  height: auto;
   max-width: 100%;
   top: auto;
   left: auto;

@@ -187,7 +187,7 @@ export type PlasmicWorks__OverridesType = {
   templateCard7?: Flex__<typeof TemplateCard>;
   templateCard8?: Flex__<typeof TemplateCard>;
   patternGrid?: Flex__<typeof PatternGrid>;
-  templateCard10?: Flex__<typeof TemplateCard>;
+  templateCard9?: Flex__<typeof TemplateCard>;
   section?: Flex__<typeof Section>;
 };
 
@@ -309,7 +309,7 @@ function PlasmicWorks__RenderFunc(props: {
             data-plasmic-name={"globalLoading"}
             data-plasmic-override={overrides.globalLoading}
             className={classNames("__wab_instance", sty.globalLoading)}
-            durationMs={6000}
+            durationMs={3000}
             textSize={"160px"}
           />
 
@@ -991,7 +991,7 @@ function PlasmicWorks__RenderFunc(props: {
                           blurAmount={5}
                           className={classNames(
                             "__wab_instance",
-                            sty.revealOnScroll__j7Ipg
+                            sty.revealOnScroll__wZfiP
                           )}
                           delay={(() => {
                             try {
@@ -1011,11 +1011,11 @@ function PlasmicWorks__RenderFunc(props: {
                           yOffset={50}
                         >
                           <TemplateCard
-                            data-plasmic-name={"templateCard10"}
-                            data-plasmic-override={overrides.templateCard10}
+                            data-plasmic-name={"templateCard9"}
+                            data-plasmic-override={overrides.templateCard9}
                             className={classNames(
                               "__wab_instance",
-                              sty.templateCard10
+                              sty.templateCard9
                             )}
                             image2={currentItem["Main Image"]}
                             imageCondition={(() => {
@@ -1032,6 +1032,88 @@ function PlasmicWorks__RenderFunc(props: {
                               }
                             })()}
                             link={`/works/${currentItem.Slug}`}
+                            tag1={(() => {
+                              try {
+                                return (
+                                  currentItem.Services &&
+                                  currentItem.Services.includes("UI")
+                                );
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()}
+                            tag22={(() => {
+                              try {
+                                return (
+                                  currentItem.Services &&
+                                  currentItem.Services.includes("UX")
+                                );
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()}
+                            tag32={(() => {
+                              try {
+                                return (
+                                  currentItem.Services &&
+                                  currentItem.Services.includes("FRAMER")
+                                );
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()}
+                            tag42={(() => {
+                              try {
+                                return (
+                                  currentItem.Services &&
+                                  currentItem.Services.includes("E-COMMERCE")
+                                );
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()}
+                            tag52={(() => {
+                              try {
+                                return (
+                                  currentItem.Services &&
+                                  currentItem.Services.includes(
+                                    "BRAND IDENTITY"
+                                  )
+                                );
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })()}
                             title={currentItem["Title"]}
                             video={currentItem.Video}
                             videoCondition={(() => {
@@ -1175,7 +1257,7 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "templateCard10",
+    "templateCard9",
     "section"
   ],
   scrollToTop: ["scrollToTop"],
@@ -1224,7 +1306,7 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "templateCard10",
+    "templateCard9",
     "section"
   ],
   scrollContext: ["scrollContext", "newMenu2"],
@@ -1363,7 +1445,7 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "templateCard10"
+    "templateCard9"
   ],
   container49: [
     "container49",
@@ -1376,7 +1458,7 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "templateCard10"
+    "templateCard9"
   ],
   templateCard: ["templateCard"],
   templateCard2: ["templateCard2"],
@@ -1386,8 +1468,8 @@ const PlasmicDescendants = {
   templateCard6: ["templateCard6"],
   templateCard7: ["templateCard7"],
   templateCard8: ["templateCard8"],
-  patternGrid: ["patternGrid", "templateCard10"],
-  templateCard10: ["templateCard10"],
+  patternGrid: ["patternGrid", "templateCard9"],
+  templateCard9: ["templateCard9"],
   section: ["section"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1440,7 +1522,7 @@ type NodeDefaultElementType = {
   templateCard7: typeof TemplateCard;
   templateCard8: typeof TemplateCard;
   patternGrid: typeof PatternGrid;
-  templateCard10: typeof TemplateCard;
+  templateCard9: typeof TemplateCard;
   section: typeof Section;
 };
 
@@ -1586,7 +1668,7 @@ export const PlasmicWorks = Object.assign(
     templateCard7: makeNodeComponent("templateCard7"),
     templateCard8: makeNodeComponent("templateCard8"),
     patternGrid: makeNodeComponent("patternGrid"),
-    templateCard10: makeNodeComponent("templateCard10"),
+    templateCard9: makeNodeComponent("templateCard9"),
     section: makeNodeComponent("section"),
 
     // Metadata about props expected for PlasmicWorks

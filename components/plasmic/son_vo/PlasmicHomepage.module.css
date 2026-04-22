@@ -161,6 +161,12 @@
   flex-shrink: 0;
   padding: 0px 160px 80px;
 }
+@media (max-width: 1024px) {
+  .freeBox___0PzuY {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
 @media (max-width: 930px) {
   .freeBox___0PzuY {
     animation: none;
@@ -192,6 +198,11 @@
 @media (max-width: 930px) {
   .freeBox__yFg1O {
     animation: none;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    row-gap: 16px;
+    column-gap: 0px;
   }
 }
 .h1__txiRz {
@@ -222,11 +233,13 @@
 @media (max-width: 930px) {
   .h1__txiRz {
     animation: none;
-    max-width: 800px;
-    width: 100%;
+    width: auto;
     font-size: 110px;
     text-align: left;
-    min-width: 0;
+    position: relative;
+    left: auto;
+    top: auto;
+    align-self: auto;
   }
 }
 .h1___4DeY9 {
@@ -253,11 +266,9 @@
 @media (max-width: 930px) {
   .h1___4DeY9 {
     animation: none;
-    max-width: 800px;
-    width: 100%;
+    width: auto;
     font-size: 110px;
     text-align: center;
-    min-width: 0;
   }
 }
 .h1__l3QyM {
@@ -279,10 +290,8 @@
 @media (max-width: 930px) {
   .h1__l3QyM {
     animation: none;
-    max-width: 800px;
-    width: 100%;
+    width: auto;
     font-size: 110px;
-    min-width: 0;
   }
 }
 .headerHeroSection3 {
@@ -614,6 +623,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 40px;
+    padding-top: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
     column-gap: 0px;
   }
 }
@@ -1140,6 +1152,8 @@
     display: flex;
     flex-direction: column;
     row-gap: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
     column-gap: 0px;
   }
 }
@@ -1159,9 +1173,17 @@
   overflow: visible;
   min-width: 0;
 }
+@media (max-width: 1024px) {
+  .heading4 {
+    width: 50%;
+  }
+}
 @media (max-width: 930px) {
   .heading4 {
     padding-top: 40px;
+    position: relative;
+    left: auto;
+    top: auto;
   }
 }
 .weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3 {
@@ -1216,6 +1238,7 @@
 @media (max-width: 930px) {
   .text__qqIdU {
     font-size: 40px;
+    line-height: 40px;
   }
 }
 .freeBox___96BuF {
@@ -1263,6 +1286,7 @@
 @media (max-width: 930px) {
   .text__kTVgZ {
     font-size: 40px;
+    line-height: 36px;
   }
 }
 .skills2 {
@@ -1321,6 +1345,13 @@
   justify-content: center;
   flex-shrink: 0;
 }
+@media (max-width: 1024px) {
+  .bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3 {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+  }
+}
 @media (max-width: 930px) {
   .bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3 {
     width: 100%;
@@ -1355,10 +1386,23 @@
   justify-content: center;
   flex-shrink: 0;
 }
+@media (max-width: 1024px) {
+  .theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2 {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+  }
+}
 @media (max-width: 930px) {
   .theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2 {
     width: 100%;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    margin-bottom: 0px;
     min-width: 0;
+    padding: 0px;
   }
 }
 .text__mSceM {
@@ -1397,9 +1441,7 @@
   .container31 {
     left: auto;
     top: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 40px;
+    padding: 0px;
   }
 }
 .subContainer2 {
@@ -1415,10 +1457,23 @@
   min-width: 0;
   padding: 8px;
 }
+@media (max-width: 930px) {
+  .subContainer2 {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 40px;
+    padding: 0px;
+  }
+}
 .gridDistortion:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   display: none;
+}
+@media (max-width: 930px) {
+  .gridDistortion:global(.__wab_instance) {
+    display: none;
+  }
 }
 .freeBox__nvBlI {
   display: flex;
@@ -1771,9 +1826,11 @@
 .fotterMain__js16N:global(.__wab_instance) {
   max-width: 100%;
   position: fixed;
-  left: 0px;
-  top: 40px;
+  left: 0;
+  top: 0px;
+  height: auto;
   z-index: 5;
+  right: 0;
 }
 .fotterMain__qvw1P:global(.__wab_instance) {
   max-width: 100%;

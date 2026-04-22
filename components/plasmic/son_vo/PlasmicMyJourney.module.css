@@ -13,7 +13,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.globalLoading:global(.__wab_instance) {
+.globalLoading__ompmk:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   object-fit: cover;
@@ -2928,4 +2928,11 @@
   height: 100%;
   min-width: 0;
   min-height: 0;
+}
+.globalLoading__gr6X0:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  min-width: 0;
 }
