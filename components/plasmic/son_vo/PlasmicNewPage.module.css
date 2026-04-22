@@ -3910,15 +3910,15 @@
   max-width: 100%;
   position: fixed;
   left: 0px;
-  top: 40px;
-  height: 100vh;
+  top: 300px;
+  height: auto;
   z-index: 1;
 }
 .fotterMain__amIgq:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   opacity: 0;
-  height: 100vh;
+  height: auto;
 }
 .freeBox___4Krzw {
   animation: none;

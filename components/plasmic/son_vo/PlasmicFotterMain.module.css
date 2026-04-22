@@ -9,7 +9,7 @@
   justify-content: flex-end;
   overflow: hidden;
   justify-self: flex-start;
-  background: #000000;
+  background: none;
   opacity: 1;
   position: relative;
   grid-column-start: 1 !important;
