@@ -10,7 +10,10 @@
   position: relative;
   transition-property: all;
   transition-duration: 300ms;
+  background: #ffffff00;
+  backdrop-filter: blur(0px);
   min-width: 0;
+  -webkit-backdrop-filter: blur(0px);
   -webkit-transition-property: all;
   -webkit-transition-duration: 300ms;
   padding: 24px 60px;
@@ -24,6 +27,9 @@
 }
 .menuscrolledState {
   border-bottom-color: #ffffff00;
+  background: #ffffff80;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .freeBox__eCo7W {
   display: flex;
@@ -104,6 +110,15 @@
   background: #ffffff;
   flex-shrink: 0;
   padding: 0px;
+}
+.freeBoxactivePage_myJourney__thJcfTmLyG {
+  display: none;
+}
+.freeBoxactivePage_works__thJcfOqHx2 {
+  display: none;
+}
+.freeBoxactivePage_contact__thJcfBgSi8 {
+  display: none;
 }
 .hackerText__jmcv1:global(.__wab_instance) {
   max-width: 100%;

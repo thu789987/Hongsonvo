@@ -197,7 +197,15 @@ function PlasmicNewMenu__RenderFunc(props: {
         }
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__eCo7W)}>
+      <div
+        className={classNames(projectcss.all, sty.freeBox__eCo7W, {
+          [sty.freeBoxactivePage_myJourney__eCo7WtmLyG]: hasVariant(
+            $state,
+            "activePage",
+            "myJourney"
+          )
+        })}
+      >
         <PlasmicLink__
           className={classNames(
             projectcss.all,
@@ -220,6 +228,11 @@ function PlasmicNewMenu__RenderFunc(props: {
             $state,
             "activePage",
             "contact"
+          ),
+          [sty.freeBoxactivePage_myJourney___6LhCdTmLyG]: hasVariant(
+            $state,
+            "activePage",
+            "myJourney"
           )
         })}
       >
@@ -229,6 +242,11 @@ function PlasmicNewMenu__RenderFunc(props: {
               $state,
               "activePage",
               "contact"
+            ),
+            [sty.freeBoxactivePage_myJourney__ieTgTmLyG]: hasVariant(
+              $state,
+              "activePage",
+              "myJourney"
             )
           })}
         >
@@ -263,6 +281,11 @@ function PlasmicNewMenu__RenderFunc(props: {
           >
             <div
               className={classNames(projectcss.all, sty.freeBox__thJcf, {
+                [sty.freeBoxactivePage_contact__thJcfBgSi8]: hasVariant(
+                  $state,
+                  "activePage",
+                  "contact"
+                ),
                 [sty.freeBoxactivePage_homepage__thJcfXsBe6]: hasVariant(
                   $state,
                   "activePage",
@@ -489,6 +512,11 @@ function PlasmicNewMenu__RenderFunc(props: {
       </div>
       <div
         className={classNames(projectcss.all, sty.freeBox___2ndUm, {
+          [sty.freeBoxactivePage_myJourney___2ndUmTmLyG]: hasVariant(
+            $state,
+            "activePage",
+            "myJourney"
+          ),
           [sty.freeBoxscrolledState___2ndUmsVRjT]: hasVariant(
             $state,
             "scrolledState",
