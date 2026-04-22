@@ -569,7 +569,7 @@
   top: auto;
   left: auto;
   right: auto;
-  background: none;
+  background: url("/plasmic/son_vo/images/heroImageSvg2.svg") top 129% left 0% / cover repeat;
   height: 100vh;
   row-gap: 64px;
   z-index: 2;
@@ -579,9 +579,7 @@
 @media (max-width: 930px) {
   .headerHeroSection2 {
     padding-bottom: 0px;
-    background:
-      url("/plasmic/son_vo/images/heroImageSvg2.svg") top 129% left 0% / cover repeat,
-      #e5eeff;
+    background: url("/plasmic/son_vo/images/heroImageSvg2.svg") top 129% left 0% / cover repeat;
     left: auto;
     top: auto;
     right: auto;
@@ -761,15 +759,21 @@
   z-index: 2;
   padding: 80px 160px;
 }
+@media (max-width: 1024px) {
+  .headerHeroSection3 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 @media (max-width: 930px) {
   .headerHeroSection3 {
-    padding-bottom: 0px;
-    background:
-      url("/plasmic/son_vo/images/heroImageSvg2.svg") top 129% left 0% / cover repeat,
-      #e5eeff;
+    background: url("/plasmic/son_vo/images/heroImageSvg2.svg") top 129% left 0% / cover repeat;
     left: auto;
     top: auto;
     right: auto;
+    width: 100%;
+    min-width: 0;
+    padding: 40px 16px 0px;
   }
 }
 .revealOnScroll__nwxQd:global(.__wab_instance) {
@@ -848,18 +852,6 @@
   object-fit: cover;
   width: 100%;
   min-width: 0;
-}
-.freeBox__edta3 {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  min-width: 0;
-  padding: 20px;
 }
 .freeBox__mw2Ob {
   display: flex;
@@ -975,6 +967,16 @@
   min-height: 100vh;
   min-width: 0;
   padding: 130px 40px 0px;
+}
+@media (max-width: 930px) {
+  .sectionCards2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    column-gap: 0px;
+  }
 }
 .left {
   height: auto;
@@ -1491,6 +1493,14 @@
   min-width: 0;
   padding: 40px 12px;
 }
+@media (max-width: 930px) {
+  .sectionCards6 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    column-gap: 0px;
+  }
+}
 .heading4 {
   width: 40vw;
   height: auto;
@@ -1550,6 +1560,11 @@
   line-height: 96px;
   color: #fcfcfc;
 }
+@media (max-width: 930px) {
+  .text__ln78 {
+    text-align: left;
+  }
+}
 .freeBox__aMulk {
   display: flex;
   flex-direction: column;
@@ -1565,6 +1580,15 @@
   row-gap: 0px;
   min-width: 0;
   padding: 0px;
+}
+@media (max-width: 930px) {
+  .freeBox__aMulk {
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 8px;
+    align-content: flex-start;
+    justify-content: flex-start;
+  }
 }
 .an2 {
   position: relative;
@@ -1605,6 +1629,12 @@
   line-height: 100%;
   color: #ffffff;
 }
+@media (max-width: 930px) {
+  .text__e60G {
+    font-size: 80px;
+    text-align: left;
+  }
+}
 .freeBox___6OnB6 {
   display: flex;
   flex-direction: column;
@@ -1642,6 +1672,12 @@
   color: #ffffff;
   text-align: left;
 }
+@media (max-width: 930px) {
+  .bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4 {
+    width: 100%;
+    min-width: 0;
+  }
+}
 .container31 {
   width: 100%;
   height: auto;
@@ -1657,6 +1693,15 @@
   padding-left: 40px;
   padding-right: 40px;
   min-width: 0;
+}
+@media (max-width: 930px) {
+  .container31 {
+    left: auto;
+    top: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 80px;
+  }
 }
 .subContainer2 {
   display: flex;
@@ -2899,9 +2944,10 @@
 .fotterMain__ul9Lo:global(.__wab_instance) {
   max-width: 100%;
   position: fixed;
-  left: 0px;
-  top: 40px;
+  left: 0;
+  top: 300px;
   z-index: 5;
+  right: 0;
 }
 .fotterMain___1BBe1:global(.__wab_instance) {
   max-width: 100%;

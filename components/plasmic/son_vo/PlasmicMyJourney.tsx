@@ -934,21 +934,6 @@ function PlasmicMyJourney__RenderFunc(props: {
                   yOffset={80}
                 >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__edta3)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___5XldI
-                      )}
-                    >
-                      {
-                        "K\u00e9o n\u1ed9i dung c\u1ea7n hi\u1ec7u \u1ee9ng v\u00e0o \u0111\u00e2y"
-                      }
-                    </div>
-                  </div>
-                  <div
                     className={classNames(projectcss.all, sty.freeBox__mw2Ob)}
                   >
                     <div

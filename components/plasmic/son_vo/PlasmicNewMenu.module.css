@@ -10,10 +10,10 @@
   position: relative;
   transition-property: all;
   transition-duration: 300ms;
-  background: #ffffff00;
-  backdrop-filter: blur(0px);
+  background: none;
+  backdrop-filter: none;
   min-width: 0;
-  -webkit-backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: none;
   -webkit-transition-property: all;
   -webkit-transition-duration: 300ms;
   padding: 24px 60px;
@@ -27,9 +27,10 @@
 }
 .menuscrolledState {
   border-bottom-color: #ffffff00;
-  background: #ffffff80;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: none;
+  backdrop-filter: none;
+  mix-blend-mode: difference;
+  -webkit-backdrop-filter: none;
 }
 .freeBox__eCo7W {
   display: flex;
