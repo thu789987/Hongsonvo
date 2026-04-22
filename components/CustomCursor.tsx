@@ -11,9 +11,9 @@ export function CustomCursor() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    const handleMouseMove = (event: MouseEvent) => {
-      setPosition({ x: event.clientX, y: event.clientY });
-    };
+const handleMouseMove = (event: MouseEvent) => {
+  setPosition({ x: event.clientX, y: event.clientY });
+};
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
@@ -32,9 +32,12 @@ export function CustomCursor() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          overflow: 'hidden', // Ẩn chữ đi khi con trỏ đang thu nhỏ thành 2px
+          overflow: 'hidden', 
 
-          // 👇 LINH HỒN CỦA ANIMATION: Chuyển động mượt mà cho mọi thay đổi (0.3s)
+          // 👇 HIỆU ỨNG ĐẢO MÀU (BLEND MODE)
+          mixBlendMode: 'difference',
+
+          // 👇 LINH HỒN CỦA ANIMATION
           transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
 
           // 👇 THAY ĐỔI KÍCH THƯỚC VÀ HÌNH DÁNG ĐỘNG
@@ -44,27 +47,26 @@ export function CustomCursor() {
           backgroundColor: isViewMode ? '#ffffff' : 'white',
 
           // 👇 XỬ LÝ TỌA ĐỘ TÂM CỦA CON TRỎ
-          // Nếu là view mode (80x32) -> lùi lại 40px và 16px
-          // Nếu là default mode (2x2) -> lùi lại 1px và 1px
           transform: `translate(${position.x - (isViewMode ? 40 : 1)}px, ${position.y - (isViewMode ? 16 : 1)}px)`,
         }}
       >
         {/* NỘI DUNG CHỮ VÀ ICON BÊN TRONG */}
         <span 
           style={{
-            color: 'white',
+            // Đã đổi thành màu đen để tương phản với nền trắng khi dùng difference
+            color: 'black', 
             fontSize: '12px',
             fontWeight: 'bold',
             fontFamily: 'sans-serif',
-            whiteSpace: 'nowrap', // Không cho chữ rớt dòng
+            whiteSpace: 'nowrap', 
             display: 'flex',
             alignItems: 'center',
             gap: '4px',
             
-            // 👇 HIỆU ỨNG CỦA CHỮ: Từ từ hiện ra sau khi cái khung đã phình to
+            // 👇 HIỆU ỨNG CỦA CHỮ
             opacity: isViewMode ? 1 : 0,
             transition: 'opacity 0.2s ease-in-out',
-            transitionDelay: isViewMode ? '0.1s' : '0s' // Khi hover vào thì chờ 0.1s mới hiện chữ
+            transitionDelay: isViewMode ? '0.1s' : '0s' 
           }}
         >
           VIEW ↗
