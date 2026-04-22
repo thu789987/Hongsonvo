@@ -8,6 +8,7 @@
   justify-items: center;
   justify-content: flex-start;
   align-items: center;
+  overflow: visible;
   min-width: 0;
   min-height: 0;
   grid-template-columns:
@@ -32,16 +33,22 @@
   max-width: 100%;
   object-fit: cover;
 }
+.customCursor:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+}
 .smoothScroll:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   object-fit: cover;
   width: 100%;
   height: auto;
+  overflow: visible;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
 }
-.scrollContext:global(.__wab_instance) {
+.scrollContext__aDom:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   object-fit: cover;
@@ -80,7 +87,7 @@
   height: auto;
   background: none;
   z-index: 2;
-  overflow: hidden;
+  overflow: visible;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
   padding: 80px 0px 0px;
@@ -947,7 +954,7 @@
   position: relative;
   top: auto;
   left: auto;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   z-index: 4;
@@ -955,39 +962,16 @@
   min-width: 0;
   padding: 97px 60px;
 }
-.container8 {
-  animation: none;
-  display: grid;
-  position: relative;
-  align-self: stretch;
-  grid-template-rows: auto auto;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  grid-row-gap: 16px;
-  grid-column-gap: 16px;
-  grid-auto-rows: auto;
-  grid-auto-columns: 1fr;
-}
-@media (max-width: 930px) {
-  .container8 {
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-    column-gap: 0px;
-  }
-}
 .freeBox__m5Wjt {
   animation: none;
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
+  width: 60%;
   height: auto;
   max-width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
-  grid-column-start: 1;
-  grid-column-end: span 4;
-  min-width: 0;
   padding: 0px;
 }
 .text__uZa {
@@ -1016,27 +1000,13 @@
   animation: none;
   display: flex;
   position: relative;
-  flex-grow: 1;
+  flex-grow: 0;
   flex-direction: column;
   row-gap: 32px;
   align-items: flex-start;
   justify-content: flex-start;
-  grid-column-start: 5;
-  grid-column-end: span 4;
   width: 100%;
-  min-width: 0;
-}
-.container20 {
-  animation: none;
   height: auto;
-  display: flex;
-  position: relative;
-  align-self: stretch;
-  flex-direction: column;
-  row-gap: 12px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
   min-width: 0;
 }
 .payJustNowIsSouthAfricasLeadingBuyNowPay6 {
@@ -1105,7 +1075,965 @@
   min-width: 0;
   flex-shrink: 0;
 }
-.image2:global(.__wab_instance) {
+.h11:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  overflow: visible;
+  min-width: 0;
+}
+.section6 {
+  animation: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 4;
+  background: none;
+  column-gap: 40px;
+  overflow: visible;
+  min-width: 0;
+  padding: 97px 60px;
+}
+.freeBox___7SkLt {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  width: 60%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: 0px;
+  top: 160px;
+  z-index: 1;
+  padding: 0px;
+}
+.text__c6Emw {
+  animation: none;
+  display: block;
+  flex-grow: 0;
+  font-size: 40px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 46px;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-style: italic;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  padding-top: 0px;
+  min-width: 0;
+}
+.container23 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay9 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffcc;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.container21 {
+  animation: none;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.h22H11 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay8 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay10 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay10 {
+    left: auto;
+    top: auto;
+  }
+}
+.h31H21H11 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay11 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay12 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay12 {
+    left: auto;
+    top: auto;
+  }
+}
+.h31H21H112 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay13 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay14 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay14 {
+    left: auto;
+    top: auto;
+  }
+}
+.h22H112 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay15 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay16 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay16 {
+    left: auto;
+    top: auto;
+  }
+}
+.h31H21H113 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay17 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay18 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay18 {
+    left: auto;
+    top: auto;
+  }
+}
+.h32H21H114 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay19 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay20 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay20 {
+    left: auto;
+    top: auto;
+  }
+}
+.h33H21H115 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay21 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay22 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay22 {
+    left: auto;
+    top: auto;
+  }
+}
+.h34H21H116 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay23 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay24 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay24 {
+    left: auto;
+    top: auto;
+  }
+}
+.h35H21H117 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay25 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay26 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay26 {
+    left: auto;
+    top: auto;
+  }
+}
+.scrollContext__jFSo:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  min-width: 0;
+}
+.lineAnimation:global(.__wab_instance) {
+  max-width: 100%;
+  width: 100%;
+  min-width: 0;
+}
+.lineBg___4PSAk:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  height: 100%;
+  margin-top: 0px;
+  min-height: 0;
+}
+.h12:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  overflow: visible;
+  min-width: 0;
+}
+.section14 {
+  animation: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 4;
+  background: none;
+  overflow: visible;
+  column-gap: 40px;
+  min-width: 0;
+  padding: 97px 60px;
+}
+.h122 {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  width: 60%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: 0px;
+  top: 160px;
+  z-index: 1;
+  overflow: visible;
+  padding: 0px;
+}
+.text__gvQXt {
+  animation: none;
+  display: block;
+  flex-grow: 0;
+  font-size: 46px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 1);
+  position: sticky;
+  width: 100%;
+  text-align: left;
+  font-style: italic;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  padding-top: 0px;
+  left: 0px;
+  top: 40px;
+  z-index: 1;
+  min-width: 0;
+}
+.container24 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay27 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffcc;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.container22 {
+  animation: none;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.h22H113 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay28 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay29 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay29 {
+    left: auto;
+    top: auto;
+  }
+}
+.imageH21H121:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image16:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.imageH21H1212:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+  border-radius: 10px;
+}
+.image17:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.imageH21H1213:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image18:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.revealOnScroll__wJwe:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.section13 {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  top: auto;
+  left: auto;
+  row-gap: 40px;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+  padding: 0px 60px;
+}
+.image15:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   object-fit: cover;
@@ -1114,7 +2042,7 @@
   z-index: 1;
   min-width: 0;
 }
-.video2:global(.__wab_instance) {
+.video12:global(.__wab_instance) {
   animation: none;
   width: 100%;
   height: 80vh;
@@ -1124,7 +2052,1208 @@
   flex-shrink: 0;
   border-radius: 8px;
 }
-.revealOnScroll__zvZQr:global(.__wab_instance) {
+.h13:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  overflow: visible;
+  min-width: 0;
+}
+.section16 {
+  animation: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 4;
+  background: none;
+  overflow: visible;
+  column-gap: 40px;
+  min-width: 0;
+  padding: 97px 60px;
+}
+.h124 {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  width: 60%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: 0px;
+  top: 160px;
+  z-index: 1;
+  overflow: visible;
+  padding: 0px;
+}
+.text__f3WlM {
+  animation: none;
+  display: block;
+  flex-grow: 0;
+  font-size: 46px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 1);
+  position: sticky;
+  width: 100%;
+  text-align: left;
+  font-style: italic;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  padding-top: 0px;
+  left: 0px;
+  top: 40px;
+  z-index: 1;
+  min-width: 0;
+}
+.container25 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay30 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffcc;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.container26 {
+  animation: none;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.h22H114 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay31 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay32 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay32 {
+    left: auto;
+    top: auto;
+  }
+}
+.imageH21H1214:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image19:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.h22H115 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay33 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay34 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay34 {
+    left: auto;
+    top: auto;
+  }
+}
+.imageH21H1215:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image20:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.h22H116 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay35 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay36 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay36 {
+    left: auto;
+    top: auto;
+  }
+}
+.imageH21H1216:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image21:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.h22H117 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay37 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay38 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay38 {
+    left: auto;
+    top: auto;
+  }
+}
+.imageH21H1217:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image22:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.h22H118 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay39 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay40 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay40 {
+    left: auto;
+    top: auto;
+  }
+}
+.imageH21H1218:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image23:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.h22H119 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay41 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay42 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay42 {
+    left: auto;
+    top: auto;
+  }
+}
+.h14:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  overflow: visible;
+  min-width: 0;
+}
+.section17 {
+  animation: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  left: auto;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 4;
+  background: none;
+  overflow: visible;
+  column-gap: 40px;
+  min-width: 0;
+  padding: 97px 60px;
+}
+.h125 {
+  animation: none;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  width: 60%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: 0px;
+  top: 160px;
+  z-index: 1;
+  overflow: visible;
+  padding: 0px;
+}
+.text__us39S {
+  animation: none;
+  display: block;
+  flex-grow: 0;
+  font-size: 46px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 1);
+  position: sticky;
+  width: 100%;
+  text-align: left;
+  font-style: italic;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  padding-top: 0px;
+  left: 0px;
+  top: 40px;
+  z-index: 1;
+  min-width: 0;
+}
+.container27 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay43 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffcc;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.container28 {
+  animation: none;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 40px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.h21H1110 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay44 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay45 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay45 {
+    left: auto;
+    top: auto;
+  }
+}
+.imageH21H1219:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image24:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.h22H14 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay46 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay47 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay47 {
+    left: auto;
+    top: auto;
+  }
+}
+.h23H142 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay48 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay49 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay49 {
+    left: auto;
+    top: auto;
+  }
+}
+.h24H14 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay50 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay51 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay51 {
+    left: auto;
+    top: auto;
+  }
+}
+.h25H14 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay52 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay53 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay53 {
+    left: auto;
+    top: auto;
+  }
+}
+.h26H14 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay54 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay55 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay55 {
+    left: auto;
+    top: auto;
+  }
+}
+.h27H142 {
+  animation: none;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay56 {
+  animation: none;
+  display: block;
+  font-size: 24px;
+  font-family: "Arial";
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffff;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.payJustNowIsSouthAfricasLeadingBuyNowPay57 {
+  animation: none;
+  display: block;
+  font-size: 20px;
+  font-family: "Arial";
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 32.5px;
+  color: #ffffffe6;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  text-transform: none;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+@media (max-width: 930px) {
+  .payJustNowIsSouthAfricasLeadingBuyNowPay57 {
+    left: auto;
+    top: auto;
+  }
+}
+.imageH21H12110:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image25:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.imageH21H12111:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image26:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.revealOnScroll___1TGe9:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   object-fit: cover;
@@ -1132,7 +3261,7 @@
   z-index: 4;
   min-width: 0;
 }
-.section3 {
+.section15 {
   animation: none;
   width: 100%;
   height: auto;
@@ -1148,7 +3277,7 @@
   min-width: 0;
   padding: 97px 60px;
 }
-.container7 {
+.container8 {
   animation: none;
   display: grid;
   position: relative;
@@ -1161,14 +3290,14 @@
   grid-auto-columns: 1fr;
 }
 @media (max-width: 930px) {
-  .container7 {
+  .container8 {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
     column-gap: 0px;
   }
 }
-.freeBox__dI42A {
+.freeBox__lakn {
   animation: none;
   display: flex;
   flex-direction: column;
@@ -1183,7 +3312,7 @@
   min-width: 0;
   padding: 0px;
 }
-.text__ugU2J {
+.text__xqCvl {
   animation: none;
   display: block;
   flex-grow: 1;
@@ -1205,7 +3334,7 @@
   padding-top: 0px;
   min-width: 0;
 }
-.container17 {
+.container20 {
   animation: none;
   display: flex;
   position: relative;
@@ -1219,7 +3348,7 @@
   width: 100%;
   min-width: 0;
 }
-.container38 {
+.container39 {
   animation: none;
   height: auto;
   display: flex;
@@ -1230,7 +3359,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.payJustNowIsSouthAfricasLeadingBuyNowPay4 {
+.payJustNowIsSouthAfricasLeadingBuyNowPay5 {
   animation: none;
   display: block;
   font-size: 20px;
@@ -1608,14 +3737,13 @@
   align-items: stretch;
   justify-content: flex-start;
   width: auto;
-  height: 100%;
+  height: auto;
   max-width: 100%;
   top: 0vh;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 2;
-  min-height: 0;
   padding: 0px;
 }
 .lineBg__ijLt7:global(.__wab_instance) {

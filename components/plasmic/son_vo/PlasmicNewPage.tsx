@@ -69,6 +69,7 @@ import {
 
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import ScrollToTop from "../../ScrollToTop"; // plasmic-import: amMlHTsYYfNZ/codeComponent
+import { CustomCursor } from "../../CustomCursor"; // plasmic-import: -0J1pl1GDQ1s/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import ScrollContext from "../../ScrollContext"; // plasmic-import: 4JSGC86CDgyw/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
@@ -76,6 +77,7 @@ import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcr
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import { Video } from "@plasmicpkgs/plasmic-basic-components";
 import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
+import LineAnimation from "../../LineAnimation"; // plasmic-import: dKZrPBt4B-lj/component
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
@@ -134,8 +136,8 @@ export type PlasmicNewPage__OverridesType = {
   root?: Flex__<"div">;
   globalLoading?: Flex__<typeof GlobalLoading>;
   scrollToTop?: Flex__<typeof ScrollToTop>;
+  customCursor?: Flex__<typeof CustomCursor>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
-  scrollContext?: Flex__<typeof ScrollContext>;
   newMenu2?: Flex__<typeof NewMenu>;
   section1?: Flex__<"div">;
   container?: Flex__<"div">;
@@ -169,20 +171,134 @@ export type PlasmicNewPage__OverridesType = {
   heading15?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay2?: Flex__<"div">;
   section4?: Flex__<"div">;
-  container8?: Flex__<"div">;
   container19?: Flex__<"div">;
-  container20?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay6?: Flex__<"div">;
   section7?: Flex__<"div">;
   image1?: Flex__<typeof GridDistortion>;
   video1?: Flex__<typeof Video>;
-  image2?: Flex__<typeof GridDistortion>;
-  video2?: Flex__<typeof Video>;
-  section3?: Flex__<"div">;
-  container7?: Flex__<"div">;
-  container17?: Flex__<"div">;
-  container38?: Flex__<"div">;
-  payJustNowIsSouthAfricasLeadingBuyNowPay4?: Flex__<"div">;
+  h11?: Flex__<typeof RevealOnScroll>;
+  section6?: Flex__<"div">;
+  container23?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay9?: Flex__<"div">;
+  container21?: Flex__<"div">;
+  h22H11?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay8?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay10?: Flex__<"div">;
+  h31H21H11?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay11?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay12?: Flex__<"div">;
+  h31H21H112?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay13?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay14?: Flex__<"div">;
+  h22H112?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay15?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay16?: Flex__<"div">;
+  h31H21H113?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay17?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay18?: Flex__<"div">;
+  h32H21H114?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay19?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay20?: Flex__<"div">;
+  h33H21H115?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay21?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay22?: Flex__<"div">;
+  h34H21H116?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay23?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay24?: Flex__<"div">;
+  h35H21H117?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay25?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay26?: Flex__<"div">;
+  lineAnimation?: Flex__<typeof LineAnimation>;
+  h12?: Flex__<typeof RevealOnScroll>;
+  section14?: Flex__<"div">;
+  h122?: Flex__<"div">;
+  container24?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay27?: Flex__<"div">;
+  container22?: Flex__<"div">;
+  h22H113?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay28?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay29?: Flex__<"div">;
+  imageH21H121?: Flex__<typeof RevealOnScroll>;
+  image16?: Flex__<typeof GridDistortion>;
+  imageH21H1212?: Flex__<typeof RevealOnScroll>;
+  image17?: Flex__<typeof GridDistortion>;
+  imageH21H1213?: Flex__<typeof RevealOnScroll>;
+  image18?: Flex__<typeof GridDistortion>;
+  section13?: Flex__<"div">;
+  image15?: Flex__<typeof GridDistortion>;
+  video12?: Flex__<typeof Video>;
+  h13?: Flex__<typeof RevealOnScroll>;
+  section16?: Flex__<"div">;
+  h124?: Flex__<"div">;
+  container25?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay30?: Flex__<"div">;
+  container26?: Flex__<"div">;
+  h22H114?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay31?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay32?: Flex__<"div">;
+  imageH21H1214?: Flex__<typeof RevealOnScroll>;
+  image19?: Flex__<typeof GridDistortion>;
+  h22H115?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay33?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay34?: Flex__<"div">;
+  imageH21H1215?: Flex__<typeof RevealOnScroll>;
+  image20?: Flex__<typeof GridDistortion>;
+  h22H116?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay35?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay36?: Flex__<"div">;
+  imageH21H1216?: Flex__<typeof RevealOnScroll>;
+  image21?: Flex__<typeof GridDistortion>;
+  h22H117?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay37?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay38?: Flex__<"div">;
+  imageH21H1217?: Flex__<typeof RevealOnScroll>;
+  image22?: Flex__<typeof GridDistortion>;
+  h22H118?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay39?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay40?: Flex__<"div">;
+  imageH21H1218?: Flex__<typeof RevealOnScroll>;
+  image23?: Flex__<typeof GridDistortion>;
+  h22H119?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay41?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay42?: Flex__<"div">;
+  h14?: Flex__<typeof RevealOnScroll>;
+  section17?: Flex__<"div">;
+  h125?: Flex__<"div">;
+  container27?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay43?: Flex__<"div">;
+  container28?: Flex__<"div">;
+  h21H1110?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay44?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay45?: Flex__<"div">;
+  imageH21H1219?: Flex__<typeof RevealOnScroll>;
+  image24?: Flex__<typeof GridDistortion>;
+  h22H14?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay46?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay47?: Flex__<"div">;
+  h23H142?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay48?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay49?: Flex__<"div">;
+  h24H14?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay50?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay51?: Flex__<"div">;
+  h25H14?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay52?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay53?: Flex__<"div">;
+  h26H14?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay54?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay55?: Flex__<"div">;
+  h27H142?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay56?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay57?: Flex__<"div">;
+  imageH21H12110?: Flex__<typeof RevealOnScroll>;
+  image25?: Flex__<typeof GridDistortion>;
+  imageH21H12111?: Flex__<typeof RevealOnScroll>;
+  image26?: Flex__<typeof GridDistortion>;
+  section15?: Flex__<"div">;
+  container8?: Flex__<"div">;
+  container20?: Flex__<"div">;
+  container39?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay5?: Flex__<"div">;
   section11?: Flex__<"div">;
   image3?: Flex__<typeof GridDistortion>;
   video3?: Flex__<typeof Video>;
@@ -344,6 +460,12 @@ function PlasmicNewPage__RenderFunc(props: {
             className={classNames("__wab_instance", sty.scrollToTop)}
           />
 
+          <CustomCursor
+            data-plasmic-name={"customCursor"}
+            data-plasmic-override={overrides.customCursor}
+            className={classNames("__wab_instance", sty.customCursor)}
+          />
+
           <SmoothScroll
             data-plasmic-name={"smoothScroll"}
             data-plasmic-override={overrides.smoothScroll}
@@ -352,9 +474,7 @@ function PlasmicNewPage__RenderFunc(props: {
             wheelMultiplier={1}
           >
             <ScrollContext
-              data-plasmic-name={"scrollContext"}
-              data-plasmic-override={overrides.scrollContext}
-              className={classNames("__wab_instance", sty.scrollContext)}
+              className={classNames("__wab_instance", sty.scrollContext__aDom)}
             >
               <NewMenu
                 data-plasmic-name={"newMenu2"}
@@ -369,7 +489,35 @@ function PlasmicNewPage__RenderFunc(props: {
                       sty.text__aGvEh
                     )}
                   >
-                    {"[ 2026 ]"}
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return "Đang đợi tham số...";
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            return (
+                              currentItem?.["Link"] || "Không tìm thấy bài"
+                            );
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "[ 2026 ]";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
                   </div>
                 }
                 scrolledState={(() => {
@@ -1281,25 +1429,46 @@ function PlasmicNewPage__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
-              <RevealOnScroll
-                blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll__kuAq4
-                )}
-                delay={0}
-                duration={1.5}
-                yOffset={20}
-              >
-                <div
-                  data-plasmic-name={"section4"}
-                  data-plasmic-override={overrides.section4}
-                  className={classNames(projectcss.all, sty.section4)}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["Project Overview"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  blurAmount={5}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll__kuAq4
+                  )}
+                  delay={0}
+                  duration={1.5}
+                  yOffset={20}
                 >
                   <div
-                    data-plasmic-name={"container8"}
-                    data-plasmic-override={overrides.container8}
-                    className={classNames(projectcss.all, sty.container8)}
+                    data-plasmic-name={"section4"}
+                    data-plasmic-override={overrides.section4}
+                    className={classNames(projectcss.all, sty.section4)}
                   >
                     <div
                       className={classNames(projectcss.all, sty.freeBox__m5Wjt)}
@@ -1320,47 +1489,41 @@ function PlasmicNewPage__RenderFunc(props: {
                       className={classNames(projectcss.all, sty.container19)}
                     >
                       <div
-                        data-plasmic-name={"container20"}
-                        data-plasmic-override={overrides.container20}
-                        className={classNames(projectcss.all, sty.container20)}
+                        data-plasmic-name={
+                          "payJustNowIsSouthAfricasLeadingBuyNowPay6"
+                        }
+                        data-plasmic-override={
+                          overrides.payJustNowIsSouthAfricasLeadingBuyNowPay6
+                        }
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.payJustNowIsSouthAfricasLeadingBuyNowPay6
+                        )}
                       >
-                        <div
-                          data-plasmic-name={
-                            "payJustNowIsSouthAfricasLeadingBuyNowPay6"
-                          }
-                          data-plasmic-override={
-                            overrides.payJustNowIsSouthAfricasLeadingBuyNowPay6
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.payJustNowIsSouthAfricasLeadingBuyNowPay6
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              if (!pageId) return "Đang đợi tham số...";
-                              const list = $queries.allList?.data || [];
-                              const currentItem = list.find(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              return (
-                                currentItem?.["Project Overview"] ||
-                                "Không tìm thấy bài"
-                              );
-                            })()}
-                          </React.Fragment>
-                        </div>
+                        <React.Fragment>
+                          {(() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return "Đang đợi tham số...";
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            return (
+                              currentItem?.["Project Overview"] ||
+                              "Không tìm thấy bài"
+                            );
+                          })()}
+                        </React.Fragment>
                       </div>
                     </div>
                   </div>
-                </div>
-              </RevealOnScroll>
+                </RevealOnScroll>
+              ) : null}
               <RevealOnScroll
                 blurAmount={5}
                 className={classNames(
@@ -1492,43 +1655,97 @@ function PlasmicNewPage__RenderFunc(props: {
                       })()}
                     />
                   ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 2"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image2"}
-                      data-plasmic-override={overrides.image2}
-                      className={classNames("__wab_instance", sty.image2)}
-                      enableEffect={true}
-                      grid={50}
-                      imageSrc={(() => {
+                </div>
+              </RevealOnScroll>
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["H1_1"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  data-plasmic-name={"h11"}
+                  data-plasmic-override={overrides.h11}
+                  blurAmount={5}
+                  className={classNames("__wab_instance", sty.h11)}
+                  delay={0}
+                  duration={1.5}
+                  yOffset={20}
+                >
+                  <div
+                    data-plasmic-name={"section6"}
+                    data-plasmic-override={overrides.section6}
+                    className={classNames(projectcss.all, sty.section6)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___7SkLt
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__c6Emw
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H1_1"] || "Không tìm thấy bài"
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "OVERVIEW";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      {(() => {
                         try {
                           return (() => {
                             const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
+                            if (!pageId) return false;
                             const list = $queries.allList?.data || [];
                             const currentItem = list.find(
                               item =>
@@ -1537,137 +1754,1683 @@ function PlasmicNewPage__RenderFunc(props: {
                                 item.slug == pageId ||
                                 item.Slug == pageId
                             );
-                            return (
-                              currentItem?.["Image 2"] || "Không tìm thấy bài"
-                            );
+                            const content = currentItem?.["H1_1_content"];
+                            return content && content.toString().trim() !== "";
                           })();
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
                             e?.plasmicType === "PlasmicUndefinedDataError"
                           ) {
-                            return "https://picsum.photos/1920/1080";
+                            return true;
                           }
                           throw e;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
+                      })() ? (
+                        <div
+                          data-plasmic-name={"container23"}
+                          data-plasmic-override={overrides.container23}
+                          className={classNames(
+                            projectcss.all,
+                            sty.container23
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay9"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay9
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay9
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H1_1_content"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      ) : null}
+                    </div>
+                    <div
+                      data-plasmic-name={"container21"}
+                      data-plasmic-override={overrides.container21}
+                      className={classNames(projectcss.all, sty.container21)}
+                    >
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_1_H1_1"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H11"}
+                          data-plasmic-override={overrides.h22H11}
+                          className={classNames(projectcss.all, sty.h22H11)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay8"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay8
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay8
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_1_H1_1"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay10"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay10
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay10
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_1_H1_1_content"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return false;
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                const content = currentItem?.["H3_1_H2_1_H1_1"];
+                                return (
+                                  content && content.toString().trim() !== ""
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              data-plasmic-name={"h31H21H11"}
+                              data-plasmic-override={overrides.h31H21H11}
+                              className={classNames(
+                                projectcss.all,
+                                sty.h31H21H11
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay11"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay11
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay11
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_1_H2_1_H1_1"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay12"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay12
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay12
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_1_H2_1_H1_1_content"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                            </div>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return false;
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                const content = currentItem?.["H3_2_H2_1_H1_1"];
+                                return (
+                                  content && content.toString().trim() !== ""
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              data-plasmic-name={"h31H21H112"}
+                              data-plasmic-override={overrides.h31H21H112}
+                              className={classNames(
+                                projectcss.all,
+                                sty.h31H21H112
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay13"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay13
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay13
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_2_H2_1_H1_1"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay14"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay14
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay14
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_2_H2_1_H1_1_content"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                            </div>
+                          ) : null}
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_2_H1_1"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H112"}
+                          data-plasmic-override={overrides.h22H112}
+                          className={classNames(projectcss.all, sty.h22H112)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay15"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay15
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay15
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_2_H1_1"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return false;
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                const content =
+                                  currentItem?.["H2_2_H1_1_content"];
+                                return (
+                                  content && content.toString().trim() !== ""
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              data-plasmic-name={
+                                "payJustNowIsSouthAfricasLeadingBuyNowPay16"
+                              }
+                              data-plasmic-override={
+                                overrides.payJustNowIsSouthAfricasLeadingBuyNowPay16
+                              }
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.payJustNowIsSouthAfricasLeadingBuyNowPay16
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_2_H1_1_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()}
+                              </React.Fragment>
+                            </div>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return false;
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                const content = currentItem?.["H3_1_H2_2_H1_1"];
+                                return (
+                                  content && content.toString().trim() !== ""
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              data-plasmic-name={"h31H21H113"}
+                              data-plasmic-override={overrides.h31H21H113}
+                              className={classNames(
+                                projectcss.all,
+                                sty.h31H21H113
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay17"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay17
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay17
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_1_H2_2_H1_1"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay18"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay18
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay18
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_1_H2_2_H1_1_content"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                            </div>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return false;
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                const content = currentItem?.["H3_2_H2_2_H1_1"];
+                                return (
+                                  content && content.toString().trim() !== ""
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              data-plasmic-name={"h32H21H114"}
+                              data-plasmic-override={overrides.h32H21H114}
+                              className={classNames(
+                                projectcss.all,
+                                sty.h32H21H114
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay19"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay19
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay19
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_2_H2_2_H1_1"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay20"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay20
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay20
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_2_H2_2_H1_1_content"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                            </div>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return false;
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                const content = currentItem?.["H3_3_H2_2_H1_1"];
+                                return (
+                                  content && content.toString().trim() !== ""
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              data-plasmic-name={"h33H21H115"}
+                              data-plasmic-override={overrides.h33H21H115}
+                              className={classNames(
+                                projectcss.all,
+                                sty.h33H21H115
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay21"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay21
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay21
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_3_H2_2_H1_1"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay22"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay22
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay22
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_3_H2_2_H1_1_content"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                            </div>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return false;
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                const content = currentItem?.["H3_4_H2_2_H1_1"];
+                                return (
+                                  content && content.toString().trim() !== ""
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              data-plasmic-name={"h34H21H116"}
+                              data-plasmic-override={overrides.h34H21H116}
+                              className={classNames(
+                                projectcss.all,
+                                sty.h34H21H116
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay23"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay23
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay23
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_4_H2_2_H1_1"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay24"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay24
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay24
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_4_H2_2_H1_1_content"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                            </div>
+                          ) : null}
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return false;
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                const content = currentItem?.["H3_4_H2_2_H1_1"];
+                                return (
+                                  content && content.toString().trim() !== ""
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              data-plasmic-name={"h35H21H117"}
+                              data-plasmic-override={overrides.h35H21H117}
+                              className={classNames(
+                                projectcss.all,
+                                sty.h35H21H117
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay25"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay25
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay25
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_5_H2_2_H1_1"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                              <div
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay26"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay26
+                                }
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay26
+                                )}
+                              >
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H3_5_H2_2_H1_1_content"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
+                              </div>
+                            </div>
+                          ) : null}
+                        </div>
+                      ) : null}
+                    </div>
+                  </div>
+                </RevealOnScroll>
+              ) : null}
+              <ScrollContext
+                className={classNames(
+                  "__wab_instance",
+                  sty.scrollContext__jFSo
+                )}
+              >
+                <LineAnimation
+                  data-plasmic-name={"lineAnimation"}
+                  data-plasmic-override={overrides.lineAnimation}
+                  className={classNames("__wab_instance", sty.lineAnimation)}
+                  scrolledState={(() => {
                     try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Video 2"];
-                        return content && content.toString().trim() !== "";
-                      })();
+                      return $ctx.isScrolled;
                     } catch (e) {
                       if (
                         e instanceof TypeError ||
                         e?.plasmicType === "PlasmicUndefinedDataError"
                       ) {
-                        return true;
+                        return [];
                       }
                       throw e;
                     }
-                  })() ? (
-                    <Video
-                      data-plasmic-name={"video2"}
-                      data-plasmic-override={overrides.video2}
-                      autoPlay={true}
-                      className={classNames("__wab_instance", sty.video2)}
-                      controls={false}
-                      loop={true}
-                      muted={true}
-                      ref={ref => {
-                        $refs["video2"] = ref;
-                      }}
-                      src={(() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return "Đang đợi tham số...";
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        return currentItem?.["Video 2"] || "Không tìm thấy bài";
-                      })()}
-                    />
-                  ) : null}
-                </div>
-              </RevealOnScroll>
-              <RevealOnScroll
-                blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll__zvZQr
-                )}
-                delay={0}
-                duration={1.5}
-                yOffset={20}
-              >
-                <div
-                  data-plasmic-name={"section3"}
-                  data-plasmic-override={overrides.section3}
-                  className={classNames(projectcss.all, sty.section3)}
+                  })()}
+                />
+              </ScrollContext>
+              <LineBg
+                className={classNames("__wab_instance", sty.lineBg___4PSAk)}
+              />
+
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["H1_2"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  data-plasmic-name={"h12"}
+                  data-plasmic-override={overrides.h12}
+                  blurAmount={5}
+                  className={classNames("__wab_instance", sty.h12)}
+                  delay={0}
+                  duration={1.5}
+                  yOffset={20}
                 >
                   <div
-                    data-plasmic-name={"container7"}
-                    data-plasmic-override={overrides.container7}
-                    className={classNames(projectcss.all, sty.container7)}
+                    data-plasmic-name={"section14"}
+                    data-plasmic-override={overrides.section14}
+                    className={classNames(projectcss.all, sty.section14)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__dI42A)}
+                      data-plasmic-name={"h122"}
+                      data-plasmic-override={overrides.h122}
+                      className={classNames(projectcss.all, sty.h122)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__ugU2J
+                          sty.text__gvQXt
                         )}
                       >
-                        {"Challenge"}
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H1_2"] || "Không tìm thấy bài"
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "OVERVIEW";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
                       </div>
-                    </div>
-                    <div
-                      data-plasmic-name={"container17"}
-                      data-plasmic-override={overrides.container17}
-                      className={classNames(projectcss.all, sty.container17)}
-                    >
-                      <div
-                        data-plasmic-name={"container38"}
-                        data-plasmic-override={overrides.container38}
-                        className={classNames(projectcss.all, sty.container38)}
-                      >
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H1_2_content"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
                         <div
-                          data-plasmic-name={
-                            "payJustNowIsSouthAfricasLeadingBuyNowPay4"
-                          }
-                          data-plasmic-override={
-                            overrides.payJustNowIsSouthAfricasLeadingBuyNowPay4
-                          }
+                          data-plasmic-name={"container24"}
+                          data-plasmic-override={overrides.container24}
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.payJustNowIsSouthAfricasLeadingBuyNowPay4
+                            sty.container24
                           )}
                         >
-                          <React.Fragment>
-                            {(() => {
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay27"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay27
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay27
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H1_2_content"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      ) : null}
+                    </div>
+                    <div
+                      data-plasmic-name={"container22"}
+                      data-plasmic-override={overrides.container22}
+                      className={classNames(projectcss.all, sty.container22)}
+                    >
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_1_H1_1"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H113"}
+                          data-plasmic-override={overrides.h22H113}
+                          className={classNames(projectcss.all, sty.h22H113)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay28"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay28
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay28
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_1_H1_2"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay29"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay29
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay29
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_1_H1_2_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_1_H1_2_1"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H121"}
+                          data-plasmic-override={overrides.imageH21H121}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H121
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image16"}
+                            data-plasmic-override={overrides.image16}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image16
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_1_H1_2_1"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_1_H1_2_2"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H1212"}
+                          data-plasmic-override={overrides.imageH21H1212}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H1212
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return false;
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                const content =
+                                  currentItem?.["Image H2_1_H1_2_2"];
+                                return (
+                                  content && content.toString().trim() !== ""
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <GridDistortion
+                              data-plasmic-name={"image17"}
+                              data-plasmic-override={overrides.image17}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.image17
+                              )}
+                              enableEffect={true}
+                              grid={50}
+                              imageSrc={(() => {
+                                try {
+                                  return (() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["Image H2_1_H1_2_2"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })();
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "https://picsum.photos/1920/1080";
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              mouse={0.1}
+                              relaxation={0.9}
+                              strength={0.5}
+                            />
+                          ) : null}
+                        </RevealOnScroll>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_1_H1_2_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H1213"}
+                          data-plasmic-override={overrides.imageH21H1213}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H1213
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image18"}
+                            data-plasmic-override={overrides.image18}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image18
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_1_H1_2_3"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                    </div>
+                  </div>
+                </RevealOnScroll>
+              ) : null}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["Image 2"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  blurAmount={5}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll__wJwe
+                  )}
+                  delay={0}
+                  duration={0.8}
+                  yOffset={50}
+                >
+                  <div
+                    data-plasmic-name={"section13"}
+                    data-plasmic-override={overrides.section13}
+                    className={classNames(projectcss.all, sty.section13)}
+                  >
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 2"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image15"}
+                        data-plasmic-override={overrides.image15}
+                        className={classNames("__wab_instance", sty.image15)}
+                        enableEffect={true}
+                        grid={50}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
                               const pageId = $ctx.params.id || $ctx.params.Slug;
                               if (!pageId) return "Đang đợi tham số...";
                               const list = $queries.allList?.data || [];
@@ -1679,323 +3442,2577 @@ function PlasmicNewPage__RenderFunc(props: {
                                   item.Slug == pageId
                               );
                               return (
-                                currentItem?.["Challenge"] ||
-                                "Không tìm thấy bài"
+                                currentItem?.["Image 2"] || "Không tìm thấy bài"
                               );
-                            })()}
-                          </React.Fragment>
-                        </div>
-                      </div>
-                    </div>
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
+                          }
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Video 2"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <Video
+                        data-plasmic-name={"video12"}
+                        data-plasmic-override={overrides.video12}
+                        autoPlay={true}
+                        className={classNames("__wab_instance", sty.video12)}
+                        controls={false}
+                        loop={true}
+                        muted={true}
+                        ref={ref => {
+                          $refs["video12"] = ref;
+                        }}
+                        src={(() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return "Đang đợi tham số...";
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          return (
+                            currentItem?.["Video 2"] || "Không tìm thấy bài"
+                          );
+                        })()}
+                      />
+                    ) : null}
                   </div>
-                </div>
-              </RevealOnScroll>
-              <RevealOnScroll
-                blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll__tKaho
-                )}
-                delay={0}
-                duration={0.8}
-                yOffset={50}
-              >
-                <div
-                  data-plasmic-name={"section11"}
-                  data-plasmic-override={overrides.section11}
-                  className={classNames(projectcss.all, sty.section11)}
-                >
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 3"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image3"}
-                      data-plasmic-override={overrides.image3}
-                      className={classNames("__wab_instance", sty.image3)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 3"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
-                          }
-                          throw e;
-                        }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Video 3"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <Video
-                      data-plasmic-name={"video3"}
-                      data-plasmic-override={overrides.video3}
-                      autoPlay={true}
-                      className={classNames("__wab_instance", sty.video3)}
-                      controls={false}
-                      loop={true}
-                      muted={true}
-                      ref={ref => {
-                        $refs["video3"] = ref;
-                      }}
-                      src={(() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return "Đang đợi tham số...";
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        return currentItem?.["Video 3"] || "Không tìm thấy bài";
-                      })()}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 4"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image4"}
-                      data-plasmic-override={overrides.image4}
-                      className={classNames("__wab_instance", sty.image4)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 4"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
-                          }
-                          throw e;
-                        }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Video 4"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <Video
-                      data-plasmic-name={"video4"}
-                      data-plasmic-override={overrides.video4}
-                      autoPlay={true}
-                      className={classNames("__wab_instance", sty.video4)}
-                      controls={false}
-                      loop={true}
-                      muted={true}
-                      ref={ref => {
-                        $refs["video4"] = ref;
-                      }}
-                      src={(() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return "Đang đợi tham số...";
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        return currentItem?.["Video 4"] || "Không tìm thấy bài";
-                      })()}
-                    />
-                  ) : null}
-                </div>
-              </RevealOnScroll>
-              <RevealOnScroll
-                data-plasmic-name={"original2"}
-                data-plasmic-override={overrides.original2}
-                blurAmount={5}
-                className={classNames("__wab_instance", sty.original2)}
-                delay={0}
-                duration={1.5}
-                yOffset={20}
-              >
-                <div
-                  data-plasmic-name={"section5"}
-                  data-plasmic-override={overrides.section5}
-                  className={classNames(projectcss.all, sty.section5)}
+                </RevealOnScroll>
+              ) : null}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["H1_3"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  data-plasmic-name={"h13"}
+                  data-plasmic-override={overrides.h13}
+                  blurAmount={5}
+                  className={classNames("__wab_instance", sty.h13)}
+                  delay={0}
+                  duration={1.5}
+                  yOffset={20}
                 >
                   <div
-                    data-plasmic-name={"container9"}
-                    data-plasmic-override={overrides.container9}
-                    className={classNames(projectcss.all, sty.container9)}
+                    data-plasmic-name={"section16"}
+                    data-plasmic-override={overrides.section16}
+                    className={classNames(projectcss.all, sty.section16)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__hvRqL)}
+                      data-plasmic-name={"h124"}
+                      data-plasmic-override={overrides.h124}
+                      className={classNames(projectcss.all, sty.h124)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__k2Guy
+                          sty.text__f3WlM
                         )}
                       >
-                        {"Solution"}
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H1_3"] || "Không tìm thấy bài"
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "OVERVIEW";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
                       </div>
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H1_3_content"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"container25"}
+                          data-plasmic-override={overrides.container25}
+                          className={classNames(
+                            projectcss.all,
+                            sty.container25
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay30"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay30
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay30
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H1_3_content"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      ) : null}
                     </div>
                     <div
-                      data-plasmic-name={"container18"}
-                      data-plasmic-override={overrides.container18}
-                      className={classNames(projectcss.all, sty.container18)}
+                      data-plasmic-name={"container26"}
+                      data-plasmic-override={overrides.container26}
+                      className={classNames(projectcss.all, sty.container26)}
+                    >
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_1_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H114"}
+                          data-plasmic-override={overrides.h22H114}
+                          className={classNames(projectcss.all, sty.h22H114)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay31"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay31
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay31
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_1_H1_3"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay32"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay32
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay32
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_1_H1_3_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_1_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H1214"}
+                          data-plasmic-override={overrides.imageH21H1214}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H1214
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image19"}
+                            data-plasmic-override={overrides.image19}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image19
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_1_H1_3"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_2_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H115"}
+                          data-plasmic-override={overrides.h22H115}
+                          className={classNames(projectcss.all, sty.h22H115)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay33"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay33
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay33
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_2_H1_3"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay34"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay34
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay34
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_2_H1_3_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_2_H1_3_1"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H1215"}
+                          data-plasmic-override={overrides.imageH21H1215}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H1215
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image20"}
+                            data-plasmic-override={overrides.image20}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image20
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_2_H1_3_1"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_3_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H116"}
+                          data-plasmic-override={overrides.h22H116}
+                          className={classNames(projectcss.all, sty.h22H116)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay35"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay35
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay35
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_3_H1_3"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay36"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay36
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay36
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_3_H1_3_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_3_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H1216"}
+                          data-plasmic-override={overrides.imageH21H1216}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H1216
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image21"}
+                            data-plasmic-override={overrides.image21}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image21
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_3_H1_3"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_4_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H117"}
+                          data-plasmic-override={overrides.h22H117}
+                          className={classNames(projectcss.all, sty.h22H117)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay37"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay37
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay37
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_4_H1_3"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay38"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay38
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay38
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_4_H1_3_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_4_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H1217"}
+                          data-plasmic-override={overrides.imageH21H1217}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H1217
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image22"}
+                            data-plasmic-override={overrides.image22}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image22
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_4_H1_3"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_5_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H118"}
+                          data-plasmic-override={overrides.h22H118}
+                          className={classNames(projectcss.all, sty.h22H118)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay39"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay39
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay39
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_5_H1_3"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay40"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay40
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay40
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_5_H1_3_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_5_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H1218"}
+                          data-plasmic-override={overrides.imageH21H1218}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H1218
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image23"}
+                            data-plasmic-override={overrides.image23}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image23
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_5_H1_3"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_6_H1_3"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H119"}
+                          data-plasmic-override={overrides.h22H119}
+                          className={classNames(projectcss.all, sty.h22H119)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay41"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay41
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay41
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_6_H1_3"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay42"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay42
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay42
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_6_H1_3_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                    </div>
+                  </div>
+                </RevealOnScroll>
+              ) : null}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["H1_3"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  data-plasmic-name={"h14"}
+                  data-plasmic-override={overrides.h14}
+                  blurAmount={5}
+                  className={classNames("__wab_instance", sty.h14)}
+                  delay={0}
+                  duration={1.5}
+                  yOffset={20}
+                >
+                  <div
+                    data-plasmic-name={"section17"}
+                    data-plasmic-override={overrides.section17}
+                    className={classNames(projectcss.all, sty.section17)}
+                  >
+                    <div
+                      data-plasmic-name={"h125"}
+                      data-plasmic-override={overrides.h125}
+                      className={classNames(projectcss.all, sty.h125)}
                     >
                       <div
-                        data-plasmic-name={"container40"}
-                        data-plasmic-override={overrides.container40}
-                        className={classNames(projectcss.all, sty.container40)}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__us39S
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return (() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H1_4"] || "Không tìm thấy bài"
+                                );
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "OVERVIEW";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H1_3_content"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"container27"}
+                          data-plasmic-override={overrides.container27}
+                          className={classNames(
+                            projectcss.all,
+                            sty.container27
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay43"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay43
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay43
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H1_3_content"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      ) : null}
+                    </div>
+                    <div
+                      data-plasmic-name={"container28"}
+                      data-plasmic-override={overrides.container28}
+                      className={classNames(projectcss.all, sty.container28)}
+                    >
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_1_H1_4"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h21H1110"}
+                          data-plasmic-override={overrides.h21H1110}
+                          className={classNames(projectcss.all, sty.h21H1110)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay44"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay44
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay44
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_1_H1_4"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay45"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay45
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay45
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_1_H1_4_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_1_H1_4"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H1219"}
+                          data-plasmic-override={overrides.imageH21H1219}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H1219
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image24"}
+                            data-plasmic-override={overrides.image24}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image24
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_1_H1_4"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_2_H1_4"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h22H14"}
+                          data-plasmic-override={overrides.h22H14}
+                          className={classNames(projectcss.all, sty.h22H14)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay46"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay46
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay46
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_2_H1_4"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay47"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay47
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay47
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_2_H1_4_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_3_H1_4"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h23H142"}
+                          data-plasmic-override={overrides.h23H142}
+                          className={classNames(projectcss.all, sty.h23H142)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay48"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay48
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay48
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_3_H1_4"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay49"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay49
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay49
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_3_H1_4_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_4_H1_4"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h24H14"}
+                          data-plasmic-override={overrides.h24H14}
+                          className={classNames(projectcss.all, sty.h24H14)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay50"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay50
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay50
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_4_H1_4"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay51"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay51
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay51
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_4_H1_4_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_5_H1_4"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h25H14"}
+                          data-plasmic-override={overrides.h25H14}
+                          className={classNames(projectcss.all, sty.h25H14)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay52"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay52
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay52
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_5_H1_4"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay53"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay53
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay53
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_5_H1_4_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_6_H1_4"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h26H14"}
+                          data-plasmic-override={overrides.h26H14}
+                          className={classNames(projectcss.all, sty.h26H14)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay54"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay54
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay54
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_6_H1_4"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay55"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay55
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay55
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_6_H1_4_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["H2_7_H1_4"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <div
+                          data-plasmic-name={"h27H142"}
+                          data-plasmic-override={overrides.h27H142}
+                          className={classNames(projectcss.all, sty.h27H142)}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay56"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay56
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay56
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["H2_7_H1_4"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay57"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay57
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay57
+                            )}
+                          >
+                            <div
+                              className={projectcss.__wab_expr_html_text}
+                              dangerouslySetInnerHTML={{
+                                __html: (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_7_H1_4_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_5_H1_4_1"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H12110"}
+                          data-plasmic-override={overrides.imageH21H12110}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H12110
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image25"}
+                            data-plasmic-override={overrides.image25}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image25
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_5_H1_4_1"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                      {(() => {
+                        try {
+                          return (() => {
+                            const pageId = $ctx.params.id || $ctx.params.Slug;
+                            if (!pageId) return false;
+                            const list = $queries.allList?.data || [];
+                            const currentItem = list.find(
+                              item =>
+                                item.id == pageId ||
+                                item.Id == pageId ||
+                                item.slug == pageId ||
+                                item.Slug == pageId
+                            );
+                            const content = currentItem?.["Image H2_5_H1_4_2"];
+                            return content && content.toString().trim() !== "";
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return true;
+                          }
+                          throw e;
+                        }
+                      })() ? (
+                        <RevealOnScroll
+                          data-plasmic-name={"imageH21H12111"}
+                          data-plasmic-override={overrides.imageH21H12111}
+                          blurAmount={5}
+                          className={classNames(
+                            "__wab_instance",
+                            sty.imageH21H12111
+                          )}
+                          delay={0}
+                          duration={0.8}
+                          yOffset={50}
+                        >
+                          <GridDistortion
+                            data-plasmic-name={"image26"}
+                            data-plasmic-override={overrides.image26}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.image26
+                            )}
+                            enableEffect={true}
+                            grid={50}
+                            imageSrc={(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["Image H2_5_H1_4_2"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "https://picsum.photos/1920/1080";
+                                }
+                                throw e;
+                              }
+                            })()}
+                            mouse={0.1}
+                            relaxation={0.9}
+                            strength={0.5}
+                          />
+                        </RevealOnScroll>
+                      ) : null}
+                    </div>
+                  </div>
+                </RevealOnScroll>
+              ) : null}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["Challenge"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  blurAmount={5}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll___1TGe9
+                  )}
+                  delay={0}
+                  duration={1.5}
+                  yOffset={20}
+                >
+                  <div
+                    data-plasmic-name={"section15"}
+                    data-plasmic-override={overrides.section15}
+                    className={classNames(projectcss.all, sty.section15)}
+                  >
+                    <div
+                      data-plasmic-name={"container8"}
+                      data-plasmic-override={overrides.container8}
+                      className={classNames(projectcss.all, sty.container8)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__lakn
+                        )}
                       >
                         <div
-                          data-plasmic-name={
-                            "payJustNowIsSouthAfricasLeadingBuyNowPay7"
-                          }
-                          data-plasmic-override={
-                            overrides.payJustNowIsSouthAfricasLeadingBuyNowPay7
-                          }
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.payJustNowIsSouthAfricasLeadingBuyNowPay7
+                            sty.text__xqCvl
                           )}
                         >
-                          <React.Fragment>
-                            {(() => {
+                          {"Challenge"}
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"container20"}
+                        data-plasmic-override={overrides.container20}
+                        className={classNames(projectcss.all, sty.container20)}
+                      >
+                        <div
+                          data-plasmic-name={"container39"}
+                          data-plasmic-override={overrides.container39}
+                          className={classNames(
+                            projectcss.all,
+                            sty.container39
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay5"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay5
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay5
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["Challenge"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </RevealOnScroll>
+              ) : null}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["Image 3"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  blurAmount={5}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll__tKaho
+                  )}
+                  delay={0}
+                  duration={0.8}
+                  yOffset={50}
+                >
+                  <div
+                    data-plasmic-name={"section11"}
+                    data-plasmic-override={overrides.section11}
+                    className={classNames(projectcss.all, sty.section11)}
+                  >
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 3"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image3"}
+                        data-plasmic-override={overrides.image3}
+                        className={classNames("__wab_instance", sty.image3)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
                               const pageId = $ctx.params.id || $ctx.params.Slug;
                               if (!pageId) return "Đang đợi tham số...";
                               const list = $queries.allList?.data || [];
@@ -2007,749 +6024,1109 @@ function PlasmicNewPage__RenderFunc(props: {
                                   item.Slug == pageId
                               );
                               return (
-                                currentItem?.["Solution"] ||
-                                "Không tìm thấy bài"
+                                currentItem?.["Image 3"] || "Không tìm thấy bài"
                               );
-                            })()}
-                          </React.Fragment>
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
+                          }
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Video 3"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <Video
+                        data-plasmic-name={"video3"}
+                        data-plasmic-override={overrides.video3}
+                        autoPlay={true}
+                        className={classNames("__wab_instance", sty.video3)}
+                        controls={false}
+                        loop={true}
+                        muted={true}
+                        ref={ref => {
+                          $refs["video3"] = ref;
+                        }}
+                        src={(() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return "Đang đợi tham số...";
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          return (
+                            currentItem?.["Video 3"] || "Không tìm thấy bài"
+                          );
+                        })()}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 4"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image4"}
+                        data-plasmic-override={overrides.image4}
+                        className={classNames("__wab_instance", sty.image4)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 4"] || "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
+                          }
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Video 4"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <Video
+                        data-plasmic-name={"video4"}
+                        data-plasmic-override={overrides.video4}
+                        autoPlay={true}
+                        className={classNames("__wab_instance", sty.video4)}
+                        controls={false}
+                        loop={true}
+                        muted={true}
+                        ref={ref => {
+                          $refs["video4"] = ref;
+                        }}
+                        src={(() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return "Đang đợi tham số...";
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          return (
+                            currentItem?.["Video 4"] || "Không tìm thấy bài"
+                          );
+                        })()}
+                      />
+                    ) : null}
+                  </div>
+                </RevealOnScroll>
+              ) : null}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["Solution"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  data-plasmic-name={"original2"}
+                  data-plasmic-override={overrides.original2}
+                  blurAmount={5}
+                  className={classNames("__wab_instance", sty.original2)}
+                  delay={0}
+                  duration={1.5}
+                  yOffset={20}
+                >
+                  <div
+                    data-plasmic-name={"section5"}
+                    data-plasmic-override={overrides.section5}
+                    className={classNames(projectcss.all, sty.section5)}
+                  >
+                    <div
+                      data-plasmic-name={"container9"}
+                      data-plasmic-override={overrides.container9}
+                      className={classNames(projectcss.all, sty.container9)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__hvRqL
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__k2Guy
+                          )}
+                        >
+                          {"Solution"}
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"container18"}
+                        data-plasmic-override={overrides.container18}
+                        className={classNames(projectcss.all, sty.container18)}
+                      >
+                        <div
+                          data-plasmic-name={"container40"}
+                          data-plasmic-override={overrides.container40}
+                          className={classNames(
+                            projectcss.all,
+                            sty.container40
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay7"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay7
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay7
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["Solution"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </RevealOnScroll>
-              <RevealOnScroll
-                blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll___9SI2F
-                )}
-                delay={0}
-                duration={0.8}
-                yOffset={50}
-              >
-                <div
-                  data-plasmic-name={"section12"}
-                  data-plasmic-override={overrides.section12}
-                  className={classNames(projectcss.all, sty.section12)}
+                </RevealOnScroll>
+              ) : null}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["Image 5"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  blurAmount={5}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll___9SI2F
+                  )}
+                  delay={0}
+                  duration={0.8}
+                  yOffset={50}
                 >
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 5"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image5"}
-                      data-plasmic-override={overrides.image5}
-                      className={classNames("__wab_instance", sty.image5)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 5"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
-                          }
-                          throw e;
+                  <div
+                    data-plasmic-name={"section12"}
+                    data-plasmic-override={overrides.section12}
+                    className={classNames(projectcss.all, sty.section12)}
+                  >
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 5"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Video 5"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <Video
-                      data-plasmic-name={"video5"}
-                      data-plasmic-override={overrides.video5}
-                      autoPlay={true}
-                      className={classNames("__wab_instance", sty.video5)}
-                      controls={false}
-                      loop={true}
-                      muted={true}
-                      ref={ref => {
-                        $refs["video5"] = ref;
-                      }}
-                      src={(() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return "Đang đợi tham số...";
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        return currentItem?.["Video 5"] || "Không tìm thấy bài";
-                      })()}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 6"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image6"}
-                      data-plasmic-override={overrides.image6}
-                      className={classNames("__wab_instance", sty.image6)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 6"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image5"}
+                        data-plasmic-override={overrides.image5}
+                        className={classNames("__wab_instance", sty.image5)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 5"] || "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
                           }
-                          throw e;
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Video 5"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Video 6"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <Video
-                      data-plasmic-name={"video6"}
-                      data-plasmic-override={overrides.video6}
-                      autoPlay={true}
-                      className={classNames("__wab_instance", sty.video6)}
-                      controls={false}
-                      loop={true}
-                      muted={true}
-                      ref={ref => {
-                        $refs["video6"] = ref;
-                      }}
-                      src={(() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return "Đang đợi tham số...";
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        return currentItem?.["Video 6"] || "Không tìm thấy bài";
-                      })()}
-                    />
-                  ) : null}
-                </div>
-              </RevealOnScroll>
-              <RevealOnScroll
-                blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll__dwFS
-                )}
-                delay={0}
-                duration={0.8}
-                yOffset={50}
-              >
-                <div
-                  data-plasmic-name={"section8"}
-                  data-plasmic-override={overrides.section8}
-                  className={classNames(projectcss.all, sty.section8)}
+                    })() ? (
+                      <Video
+                        data-plasmic-name={"video5"}
+                        data-plasmic-override={overrides.video5}
+                        autoPlay={true}
+                        className={classNames("__wab_instance", sty.video5)}
+                        controls={false}
+                        loop={true}
+                        muted={true}
+                        ref={ref => {
+                          $refs["video5"] = ref;
+                        }}
+                        src={(() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return "Đang đợi tham số...";
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          return (
+                            currentItem?.["Video 5"] || "Không tìm thấy bài"
+                          );
+                        })()}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 6"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image6"}
+                        data-plasmic-override={overrides.image6}
+                        className={classNames("__wab_instance", sty.image6)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 6"] || "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
+                          }
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Video 6"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <Video
+                        data-plasmic-name={"video6"}
+                        data-plasmic-override={overrides.video6}
+                        autoPlay={true}
+                        className={classNames("__wab_instance", sty.video6)}
+                        controls={false}
+                        loop={true}
+                        muted={true}
+                        ref={ref => {
+                          $refs["video6"] = ref;
+                        }}
+                        src={(() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return "Đang đợi tham số...";
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          return (
+                            currentItem?.["Video 6"] || "Không tìm thấy bài"
+                          );
+                        })()}
+                      />
+                    ) : null}
+                  </div>
+                </RevealOnScroll>
+              ) : null}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["Image 7"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  blurAmount={5}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll__dwFS
+                  )}
+                  delay={0}
+                  duration={0.8}
+                  yOffset={50}
                 >
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 7"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image7"}
-                      data-plasmic-override={overrides.image7}
-                      className={classNames("__wab_instance", sty.image7)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 7"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
-                          }
-                          throw e;
+                  <div
+                    data-plasmic-name={"section8"}
+                    data-plasmic-override={overrides.section8}
+                    className={classNames(projectcss.all, sty.section8)}
+                  >
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 7"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Video 7"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <Video
-                      data-plasmic-name={"video7"}
-                      data-plasmic-override={overrides.video7}
-                      autoPlay={true}
-                      className={classNames("__wab_instance", sty.video7)}
-                      controls={false}
-                      loop={true}
-                      muted={true}
-                      ref={ref => {
-                        $refs["video7"] = ref;
-                      }}
-                      src={(() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return "Đang đợi tham số...";
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        return currentItem?.["Video 7"] || "Không tìm thấy bài";
-                      })()}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 8"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image8"}
-                      data-plasmic-override={overrides.image8}
-                      className={classNames("__wab_instance", sty.image8)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 8"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image7"}
+                        data-plasmic-override={overrides.image7}
+                        className={classNames("__wab_instance", sty.image7)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 7"] || "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
                           }
-                          throw e;
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Video 7"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Video 8"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <Video
-                      data-plasmic-name={"video8"}
-                      data-plasmic-override={overrides.video8}
-                      autoPlay={true}
-                      className={classNames("__wab_instance", sty.video8)}
-                      controls={false}
-                      loop={true}
-                      muted={true}
-                      ref={ref => {
-                        $refs["video8"] = ref;
-                      }}
-                      src={(() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return "Đang đợi tham số...";
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        return currentItem?.["Video 8"] || "Không tìm thấy bài";
-                      })()}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 9"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                    })() ? (
+                      <Video
+                        data-plasmic-name={"video7"}
+                        data-plasmic-override={overrides.video7}
+                        autoPlay={true}
+                        className={classNames("__wab_instance", sty.video7)}
+                        controls={false}
+                        loop={true}
+                        muted={true}
+                        ref={ref => {
+                          $refs["video7"] = ref;
+                        }}
+                        src={(() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return "Đang đợi tham số...";
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          return (
+                            currentItem?.["Video 7"] || "Không tìm thấy bài"
+                          );
+                        })()}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 8"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image9"}
-                      data-plasmic-override={overrides.image9}
-                      className={classNames("__wab_instance", sty.image9)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 9"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image8"}
+                        data-plasmic-override={overrides.image8}
+                        className={classNames("__wab_instance", sty.image8)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 8"] || "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
                           }
-                          throw e;
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Video 8"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Video 9"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <Video
-                      data-plasmic-name={"video9"}
-                      data-plasmic-override={overrides.video9}
-                      autoPlay={true}
-                      className={classNames("__wab_instance", sty.video9)}
-                      controls={false}
-                      loop={true}
-                      muted={true}
-                      ref={ref => {
-                        $refs["video9"] = ref;
-                      }}
-                      src={(() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return "Đang đợi tham số...";
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        return currentItem?.["Video 9"] || "Không tìm thấy bài";
-                      })()}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 10"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                    })() ? (
+                      <Video
+                        data-plasmic-name={"video8"}
+                        data-plasmic-override={overrides.video8}
+                        autoPlay={true}
+                        className={classNames("__wab_instance", sty.video8)}
+                        controls={false}
+                        loop={true}
+                        muted={true}
+                        ref={ref => {
+                          $refs["video8"] = ref;
+                        }}
+                        src={(() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return "Đang đợi tham số...";
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          return (
+                            currentItem?.["Video 8"] || "Không tìm thấy bài"
+                          );
+                        })()}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 9"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image10"}
-                      data-plasmic-override={overrides.image10}
-                      className={classNames("__wab_instance", sty.image10)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 10"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image9"}
+                        data-plasmic-override={overrides.image9}
+                        className={classNames("__wab_instance", sty.image9)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 9"] || "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
                           }
-                          throw e;
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Video 9"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Video 10"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <Video
-                      data-plasmic-name={"video10"}
-                      data-plasmic-override={overrides.video10}
-                      autoPlay={true}
-                      className={classNames("__wab_instance", sty.video10)}
-                      controls={false}
-                      loop={true}
-                      muted={true}
-                      ref={ref => {
-                        $refs["video10"] = ref;
-                      }}
-                      src={(() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return "Đang đợi tham số...";
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        return (
-                          currentItem?.["Video 10"] || "Không tìm thấy bài"
-                        );
-                      })()}
-                    />
-                  ) : null}
-                </div>
-              </RevealOnScroll>
+                    })() ? (
+                      <Video
+                        data-plasmic-name={"video9"}
+                        data-plasmic-override={overrides.video9}
+                        autoPlay={true}
+                        className={classNames("__wab_instance", sty.video9)}
+                        controls={false}
+                        loop={true}
+                        muted={true}
+                        ref={ref => {
+                          $refs["video9"] = ref;
+                        }}
+                        src={(() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return "Đang đợi tham số...";
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          return (
+                            currentItem?.["Video 9"] || "Không tìm thấy bài"
+                          );
+                        })()}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 10"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image10"}
+                        data-plasmic-override={overrides.image10}
+                        className={classNames("__wab_instance", sty.image10)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 10"] ||
+                                "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
+                          }
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Video 10"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
+                        }
+                        throw e;
+                      }
+                    })() ? (
+                      <Video
+                        data-plasmic-name={"video10"}
+                        data-plasmic-override={overrides.video10}
+                        autoPlay={true}
+                        className={classNames("__wab_instance", sty.video10)}
+                        controls={false}
+                        loop={true}
+                        muted={true}
+                        ref={ref => {
+                          $refs["video10"] = ref;
+                        }}
+                        src={(() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return "Đang đợi tham số...";
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          return (
+                            currentItem?.["Video 10"] || "Không tìm thấy bài"
+                          );
+                        })()}
+                      />
+                    ) : null}
+                  </div>
+                </RevealOnScroll>
+              ) : null}
               <div className={classNames(projectcss.all, sty.freeBox__z5JPi)}>
                 <LineBg
                   className={classNames("__wab_instance", sty.lineBg__ijLt7)}
@@ -4197,8 +8574,8 @@ const PlasmicDescendants = {
     "root",
     "globalLoading",
     "scrollToTop",
+    "customCursor",
     "smoothScroll",
-    "scrollContext",
     "newMenu2",
     "section1",
     "container",
@@ -4232,20 +8609,134 @@ const PlasmicDescendants = {
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2",
     "section4",
-    "container8",
     "container19",
-    "container20",
     "payJustNowIsSouthAfricasLeadingBuyNowPay6",
     "section7",
     "image1",
     "video1",
-    "image2",
-    "video2",
-    "section3",
-    "container7",
-    "container17",
-    "container38",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay4",
+    "h11",
+    "section6",
+    "container23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay9",
+    "container21",
+    "h22H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay8",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay10",
+    "h31H21H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay12",
+    "h31H21H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay13",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay14",
+    "h22H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay15",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay16",
+    "h31H21H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay17",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay18",
+    "h32H21H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay20",
+    "h33H21H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay21",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay22",
+    "h34H21H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay24",
+    "h35H21H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay26",
+    "lineAnimation",
+    "h12",
+    "section14",
+    "h122",
+    "container24",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay27",
+    "container22",
+    "h22H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay28",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay29",
+    "imageH21H121",
+    "image16",
+    "imageH21H1212",
+    "image17",
+    "imageH21H1213",
+    "image18",
+    "section13",
+    "image15",
+    "video12",
+    "h13",
+    "section16",
+    "h124",
+    "container25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay30",
+    "container26",
+    "h22H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay31",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay32",
+    "imageH21H1214",
+    "image19",
+    "h22H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay33",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay34",
+    "imageH21H1215",
+    "image20",
+    "h22H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay35",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay36",
+    "imageH21H1216",
+    "image21",
+    "h22H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay37",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay38",
+    "imageH21H1217",
+    "image22",
+    "h22H118",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay40",
+    "imageH21H1218",
+    "image23",
+    "h22H119",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay41",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay42",
+    "h14",
+    "section17",
+    "h125",
+    "container27",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay43",
+    "container28",
+    "h21H1110",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay44",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay45",
+    "imageH21H1219",
+    "image24",
+    "h22H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay46",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay47",
+    "h23H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay48",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay49",
+    "h24H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay50",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay51",
+    "h25H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay52",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay53",
+    "h26H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay54",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay55",
+    "h27H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay56",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay57",
+    "imageH21H12110",
+    "image25",
+    "imageH21H12111",
+    "image26",
+    "section15",
+    "container8",
+    "container20",
+    "container39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay5",
     "section11",
     "image3",
     "video3",
@@ -4283,9 +8774,9 @@ const PlasmicDescendants = {
   ],
   globalLoading: ["globalLoading"],
   scrollToTop: ["scrollToTop"],
+  customCursor: ["customCursor"],
   smoothScroll: [
     "smoothScroll",
-    "scrollContext",
     "newMenu2",
     "section1",
     "container",
@@ -4319,20 +8810,134 @@ const PlasmicDescendants = {
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2",
     "section4",
-    "container8",
     "container19",
-    "container20",
     "payJustNowIsSouthAfricasLeadingBuyNowPay6",
     "section7",
     "image1",
     "video1",
-    "image2",
-    "video2",
-    "section3",
-    "container7",
-    "container17",
-    "container38",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay4",
+    "h11",
+    "section6",
+    "container23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay9",
+    "container21",
+    "h22H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay8",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay10",
+    "h31H21H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay12",
+    "h31H21H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay13",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay14",
+    "h22H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay15",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay16",
+    "h31H21H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay17",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay18",
+    "h32H21H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay20",
+    "h33H21H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay21",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay22",
+    "h34H21H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay24",
+    "h35H21H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay26",
+    "lineAnimation",
+    "h12",
+    "section14",
+    "h122",
+    "container24",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay27",
+    "container22",
+    "h22H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay28",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay29",
+    "imageH21H121",
+    "image16",
+    "imageH21H1212",
+    "image17",
+    "imageH21H1213",
+    "image18",
+    "section13",
+    "image15",
+    "video12",
+    "h13",
+    "section16",
+    "h124",
+    "container25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay30",
+    "container26",
+    "h22H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay31",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay32",
+    "imageH21H1214",
+    "image19",
+    "h22H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay33",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay34",
+    "imageH21H1215",
+    "image20",
+    "h22H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay35",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay36",
+    "imageH21H1216",
+    "image21",
+    "h22H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay37",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay38",
+    "imageH21H1217",
+    "image22",
+    "h22H118",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay40",
+    "imageH21H1218",
+    "image23",
+    "h22H119",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay41",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay42",
+    "h14",
+    "section17",
+    "h125",
+    "container27",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay43",
+    "container28",
+    "h21H1110",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay44",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay45",
+    "imageH21H1219",
+    "image24",
+    "h22H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay46",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay47",
+    "h23H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay48",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay49",
+    "h24H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay50",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay51",
+    "h25H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay52",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay53",
+    "h26H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay54",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay55",
+    "h27H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay56",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay57",
+    "imageH21H12110",
+    "image25",
+    "imageH21H12111",
+    "image26",
+    "section15",
+    "container8",
+    "container20",
+    "container39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay5",
     "section11",
     "image3",
     "video3",
@@ -4368,7 +8973,6 @@ const PlasmicDescendants = {
     "prevous",
     "nExt"
   ],
-  scrollContext: ["scrollContext", "newMenu2"],
   newMenu2: ["newMenu2"],
   section1: [
     "section1",
@@ -4519,52 +9123,699 @@ const PlasmicDescendants = {
   ],
   section4: [
     "section4",
-    "container8",
     "container19",
-    "container20",
     "payJustNowIsSouthAfricasLeadingBuyNowPay6"
   ],
-  container8: [
-    "container8",
-    "container19",
-    "container20",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
-  ],
-  container19: [
-    "container19",
-    "container20",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
-  ],
-  container20: ["container20", "payJustNowIsSouthAfricasLeadingBuyNowPay6"],
+  container19: ["container19", "payJustNowIsSouthAfricasLeadingBuyNowPay6"],
   payJustNowIsSouthAfricasLeadingBuyNowPay6: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay6"
   ],
-  section7: ["section7", "image1", "video1", "image2", "video2"],
+  section7: ["section7", "image1", "video1"],
   image1: ["image1"],
   video1: ["video1"],
-  image2: ["image2"],
-  video2: ["video2"],
-  section3: [
-    "section3",
-    "container7",
-    "container17",
-    "container38",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+  h11: [
+    "h11",
+    "section6",
+    "container23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay9",
+    "container21",
+    "h22H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay8",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay10",
+    "h31H21H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay12",
+    "h31H21H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay13",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay14",
+    "h22H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay15",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay16",
+    "h31H21H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay17",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay18",
+    "h32H21H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay20",
+    "h33H21H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay21",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay22",
+    "h34H21H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay24",
+    "h35H21H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay26"
   ],
-  container7: [
-    "container7",
-    "container17",
-    "container38",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+  section6: [
+    "section6",
+    "container23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay9",
+    "container21",
+    "h22H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay8",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay10",
+    "h31H21H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay12",
+    "h31H21H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay13",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay14",
+    "h22H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay15",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay16",
+    "h31H21H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay17",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay18",
+    "h32H21H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay20",
+    "h33H21H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay21",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay22",
+    "h34H21H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay24",
+    "h35H21H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay26"
   ],
-  container17: [
-    "container17",
-    "container38",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+  container23: ["container23", "payJustNowIsSouthAfricasLeadingBuyNowPay9"],
+  payJustNowIsSouthAfricasLeadingBuyNowPay9: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay9"
   ],
-  container38: ["container38", "payJustNowIsSouthAfricasLeadingBuyNowPay4"],
-  payJustNowIsSouthAfricasLeadingBuyNowPay4: [
-    "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+  container21: [
+    "container21",
+    "h22H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay8",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay10",
+    "h31H21H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay12",
+    "h31H21H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay13",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay14",
+    "h22H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay15",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay16",
+    "h31H21H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay17",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay18",
+    "h32H21H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay20",
+    "h33H21H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay21",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay22",
+    "h34H21H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay24",
+    "h35H21H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay26"
+  ],
+  h22H11: [
+    "h22H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay8",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay10",
+    "h31H21H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay12",
+    "h31H21H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay13",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay14"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay8: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay8"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay10: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay10"
+  ],
+  h31H21H11: [
+    "h31H21H11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay11",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay12"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay11: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay11"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay12: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay12"
+  ],
+  h31H21H112: [
+    "h31H21H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay13",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay14"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay13: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay13"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay14: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay14"
+  ],
+  h22H112: [
+    "h22H112",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay15",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay16",
+    "h31H21H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay17",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay18",
+    "h32H21H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay20",
+    "h33H21H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay21",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay22",
+    "h34H21H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay24",
+    "h35H21H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay26"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay15: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay15"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay16: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay16"
+  ],
+  h31H21H113: [
+    "h31H21H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay17",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay18"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay17: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay17"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay18: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay18"
+  ],
+  h32H21H114: [
+    "h32H21H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay20"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay19: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay19"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay20: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay20"
+  ],
+  h33H21H115: [
+    "h33H21H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay21",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay22"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay21: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay21"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay22: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay22"
+  ],
+  h34H21H116: [
+    "h34H21H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay23",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay24"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay23: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay23"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay24: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay24"
+  ],
+  h35H21H117: [
+    "h35H21H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay26"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay25: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay25"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay26: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay26"
+  ],
+  lineAnimation: ["lineAnimation"],
+  h12: [
+    "h12",
+    "section14",
+    "h122",
+    "container24",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay27",
+    "container22",
+    "h22H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay28",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay29",
+    "imageH21H121",
+    "image16",
+    "imageH21H1212",
+    "image17",
+    "imageH21H1213",
+    "image18"
+  ],
+  section14: [
+    "section14",
+    "h122",
+    "container24",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay27",
+    "container22",
+    "h22H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay28",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay29",
+    "imageH21H121",
+    "image16",
+    "imageH21H1212",
+    "image17",
+    "imageH21H1213",
+    "image18"
+  ],
+  h122: ["h122", "container24", "payJustNowIsSouthAfricasLeadingBuyNowPay27"],
+  container24: ["container24", "payJustNowIsSouthAfricasLeadingBuyNowPay27"],
+  payJustNowIsSouthAfricasLeadingBuyNowPay27: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay27"
+  ],
+  container22: [
+    "container22",
+    "h22H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay28",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay29",
+    "imageH21H121",
+    "image16",
+    "imageH21H1212",
+    "image17",
+    "imageH21H1213",
+    "image18"
+  ],
+  h22H113: [
+    "h22H113",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay28",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay29"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay28: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay28"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay29: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay29"
+  ],
+  imageH21H121: ["imageH21H121", "image16"],
+  image16: ["image16"],
+  imageH21H1212: ["imageH21H1212", "image17"],
+  image17: ["image17"],
+  imageH21H1213: ["imageH21H1213", "image18"],
+  image18: ["image18"],
+  section13: ["section13", "image15", "video12"],
+  image15: ["image15"],
+  video12: ["video12"],
+  h13: [
+    "h13",
+    "section16",
+    "h124",
+    "container25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay30",
+    "container26",
+    "h22H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay31",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay32",
+    "imageH21H1214",
+    "image19",
+    "h22H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay33",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay34",
+    "imageH21H1215",
+    "image20",
+    "h22H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay35",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay36",
+    "imageH21H1216",
+    "image21",
+    "h22H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay37",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay38",
+    "imageH21H1217",
+    "image22",
+    "h22H118",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay40",
+    "imageH21H1218",
+    "image23",
+    "h22H119",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay41",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay42"
+  ],
+  section16: [
+    "section16",
+    "h124",
+    "container25",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay30",
+    "container26",
+    "h22H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay31",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay32",
+    "imageH21H1214",
+    "image19",
+    "h22H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay33",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay34",
+    "imageH21H1215",
+    "image20",
+    "h22H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay35",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay36",
+    "imageH21H1216",
+    "image21",
+    "h22H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay37",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay38",
+    "imageH21H1217",
+    "image22",
+    "h22H118",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay40",
+    "imageH21H1218",
+    "image23",
+    "h22H119",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay41",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay42"
+  ],
+  h124: ["h124", "container25", "payJustNowIsSouthAfricasLeadingBuyNowPay30"],
+  container25: ["container25", "payJustNowIsSouthAfricasLeadingBuyNowPay30"],
+  payJustNowIsSouthAfricasLeadingBuyNowPay30: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay30"
+  ],
+  container26: [
+    "container26",
+    "h22H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay31",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay32",
+    "imageH21H1214",
+    "image19",
+    "h22H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay33",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay34",
+    "imageH21H1215",
+    "image20",
+    "h22H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay35",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay36",
+    "imageH21H1216",
+    "image21",
+    "h22H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay37",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay38",
+    "imageH21H1217",
+    "image22",
+    "h22H118",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay40",
+    "imageH21H1218",
+    "image23",
+    "h22H119",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay41",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay42"
+  ],
+  h22H114: [
+    "h22H114",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay31",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay32"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay31: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay31"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay32: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay32"
+  ],
+  imageH21H1214: ["imageH21H1214", "image19"],
+  image19: ["image19"],
+  h22H115: [
+    "h22H115",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay33",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay34"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay33: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay33"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay34: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay34"
+  ],
+  imageH21H1215: ["imageH21H1215", "image20"],
+  image20: ["image20"],
+  h22H116: [
+    "h22H116",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay35",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay36"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay35: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay35"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay36: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay36"
+  ],
+  imageH21H1216: ["imageH21H1216", "image21"],
+  image21: ["image21"],
+  h22H117: [
+    "h22H117",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay37",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay38"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay37: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay37"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay38: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay38"
+  ],
+  imageH21H1217: ["imageH21H1217", "image22"],
+  image22: ["image22"],
+  h22H118: [
+    "h22H118",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay40"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay39: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay39"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay40: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay40"
+  ],
+  imageH21H1218: ["imageH21H1218", "image23"],
+  image23: ["image23"],
+  h22H119: [
+    "h22H119",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay41",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay42"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay41: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay41"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay42: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay42"
+  ],
+  h14: [
+    "h14",
+    "section17",
+    "h125",
+    "container27",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay43",
+    "container28",
+    "h21H1110",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay44",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay45",
+    "imageH21H1219",
+    "image24",
+    "h22H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay46",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay47",
+    "h23H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay48",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay49",
+    "h24H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay50",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay51",
+    "h25H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay52",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay53",
+    "h26H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay54",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay55",
+    "h27H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay56",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay57",
+    "imageH21H12110",
+    "image25",
+    "imageH21H12111",
+    "image26"
+  ],
+  section17: [
+    "section17",
+    "h125",
+    "container27",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay43",
+    "container28",
+    "h21H1110",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay44",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay45",
+    "imageH21H1219",
+    "image24",
+    "h22H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay46",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay47",
+    "h23H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay48",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay49",
+    "h24H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay50",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay51",
+    "h25H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay52",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay53",
+    "h26H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay54",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay55",
+    "h27H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay56",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay57",
+    "imageH21H12110",
+    "image25",
+    "imageH21H12111",
+    "image26"
+  ],
+  h125: ["h125", "container27", "payJustNowIsSouthAfricasLeadingBuyNowPay43"],
+  container27: ["container27", "payJustNowIsSouthAfricasLeadingBuyNowPay43"],
+  payJustNowIsSouthAfricasLeadingBuyNowPay43: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay43"
+  ],
+  container28: [
+    "container28",
+    "h21H1110",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay44",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay45",
+    "imageH21H1219",
+    "image24",
+    "h22H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay46",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay47",
+    "h23H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay48",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay49",
+    "h24H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay50",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay51",
+    "h25H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay52",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay53",
+    "h26H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay54",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay55",
+    "h27H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay56",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay57",
+    "imageH21H12110",
+    "image25",
+    "imageH21H12111",
+    "image26"
+  ],
+  h21H1110: [
+    "h21H1110",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay44",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay45"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay44: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay44"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay45: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay45"
+  ],
+  imageH21H1219: ["imageH21H1219", "image24"],
+  image24: ["image24"],
+  h22H14: [
+    "h22H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay46",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay47"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay46: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay46"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay47: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay47"
+  ],
+  h23H142: [
+    "h23H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay48",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay49"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay48: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay48"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay49: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay49"
+  ],
+  h24H14: [
+    "h24H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay50",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay51"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay50: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay50"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay51: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay51"
+  ],
+  h25H14: [
+    "h25H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay52",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay53"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay52: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay52"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay53: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay53"
+  ],
+  h26H14: [
+    "h26H14",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay54",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay55"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay54: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay54"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay55: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay55"
+  ],
+  h27H142: [
+    "h27H142",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay56",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay57"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay56: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay56"
+  ],
+  payJustNowIsSouthAfricasLeadingBuyNowPay57: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay57"
+  ],
+  imageH21H12110: ["imageH21H12110", "image25"],
+  image25: ["image25"],
+  imageH21H12111: ["imageH21H12111", "image26"],
+  image26: ["image26"],
+  section15: [
+    "section15",
+    "container8",
+    "container20",
+    "container39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay5"
+  ],
+  container8: [
+    "container8",
+    "container20",
+    "container39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay5"
+  ],
+  container20: [
+    "container20",
+    "container39",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay5"
+  ],
+  container39: ["container39", "payJustNowIsSouthAfricasLeadingBuyNowPay5"],
+  payJustNowIsSouthAfricasLeadingBuyNowPay5: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay5"
   ],
   section11: ["section11", "image3", "video3", "image4", "video4"],
   image3: ["image3"],
@@ -4644,8 +9895,8 @@ type NodeDefaultElementType = {
   root: "div";
   globalLoading: typeof GlobalLoading;
   scrollToTop: typeof ScrollToTop;
+  customCursor: typeof CustomCursor;
   smoothScroll: typeof SmoothScroll;
-  scrollContext: typeof ScrollContext;
   newMenu2: typeof NewMenu;
   section1: "div";
   container: "div";
@@ -4679,20 +9930,134 @@ type NodeDefaultElementType = {
   heading15: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay2: "div";
   section4: "div";
-  container8: "div";
   container19: "div";
-  container20: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay6: "div";
   section7: "div";
   image1: typeof GridDistortion;
   video1: typeof Video;
-  image2: typeof GridDistortion;
-  video2: typeof Video;
-  section3: "div";
-  container7: "div";
-  container17: "div";
-  container38: "div";
-  payJustNowIsSouthAfricasLeadingBuyNowPay4: "div";
+  h11: typeof RevealOnScroll;
+  section6: "div";
+  container23: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay9: "div";
+  container21: "div";
+  h22H11: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay8: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay10: "div";
+  h31H21H11: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay11: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay12: "div";
+  h31H21H112: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay13: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay14: "div";
+  h22H112: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay15: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay16: "div";
+  h31H21H113: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay17: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay18: "div";
+  h32H21H114: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay19: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay20: "div";
+  h33H21H115: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay21: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay22: "div";
+  h34H21H116: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay23: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay24: "div";
+  h35H21H117: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay25: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay26: "div";
+  lineAnimation: typeof LineAnimation;
+  h12: typeof RevealOnScroll;
+  section14: "div";
+  h122: "div";
+  container24: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay27: "div";
+  container22: "div";
+  h22H113: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay28: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay29: "div";
+  imageH21H121: typeof RevealOnScroll;
+  image16: typeof GridDistortion;
+  imageH21H1212: typeof RevealOnScroll;
+  image17: typeof GridDistortion;
+  imageH21H1213: typeof RevealOnScroll;
+  image18: typeof GridDistortion;
+  section13: "div";
+  image15: typeof GridDistortion;
+  video12: typeof Video;
+  h13: typeof RevealOnScroll;
+  section16: "div";
+  h124: "div";
+  container25: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay30: "div";
+  container26: "div";
+  h22H114: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay31: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay32: "div";
+  imageH21H1214: typeof RevealOnScroll;
+  image19: typeof GridDistortion;
+  h22H115: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay33: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay34: "div";
+  imageH21H1215: typeof RevealOnScroll;
+  image20: typeof GridDistortion;
+  h22H116: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay35: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay36: "div";
+  imageH21H1216: typeof RevealOnScroll;
+  image21: typeof GridDistortion;
+  h22H117: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay37: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay38: "div";
+  imageH21H1217: typeof RevealOnScroll;
+  image22: typeof GridDistortion;
+  h22H118: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay39: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay40: "div";
+  imageH21H1218: typeof RevealOnScroll;
+  image23: typeof GridDistortion;
+  h22H119: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay41: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay42: "div";
+  h14: typeof RevealOnScroll;
+  section17: "div";
+  h125: "div";
+  container27: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay43: "div";
+  container28: "div";
+  h21H1110: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay44: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay45: "div";
+  imageH21H1219: typeof RevealOnScroll;
+  image24: typeof GridDistortion;
+  h22H14: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay46: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay47: "div";
+  h23H142: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay48: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay49: "div";
+  h24H14: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay50: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay51: "div";
+  h25H14: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay52: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay53: "div";
+  h26H14: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay54: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay55: "div";
+  h27H142: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay56: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay57: "div";
+  imageH21H12110: typeof RevealOnScroll;
+  image25: typeof GridDistortion;
+  imageH21H12111: typeof RevealOnScroll;
+  image26: typeof GridDistortion;
+  section15: "div";
+  container8: "div";
+  container20: "div";
+  container39: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay5: "div";
   section11: "div";
   image3: typeof GridDistortion;
   video3: typeof Video;
@@ -4818,8 +10183,8 @@ export const PlasmicNewPage = Object.assign(
     // Helper components rendering sub-elements
     globalLoading: makeNodeComponent("globalLoading"),
     scrollToTop: makeNodeComponent("scrollToTop"),
+    customCursor: makeNodeComponent("customCursor"),
     smoothScroll: makeNodeComponent("smoothScroll"),
-    scrollContext: makeNodeComponent("scrollContext"),
     newMenu2: makeNodeComponent("newMenu2"),
     section1: makeNodeComponent("section1"),
     container: makeNodeComponent("container"),
@@ -4859,23 +10224,237 @@ export const PlasmicNewPage = Object.assign(
       "payJustNowIsSouthAfricasLeadingBuyNowPay2"
     ),
     section4: makeNodeComponent("section4"),
-    container8: makeNodeComponent("container8"),
     container19: makeNodeComponent("container19"),
-    container20: makeNodeComponent("container20"),
     payJustNowIsSouthAfricasLeadingBuyNowPay6: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay6"
     ),
     section7: makeNodeComponent("section7"),
     image1: makeNodeComponent("image1"),
     video1: makeNodeComponent("video1"),
-    image2: makeNodeComponent("image2"),
-    video2: makeNodeComponent("video2"),
-    section3: makeNodeComponent("section3"),
-    container7: makeNodeComponent("container7"),
-    container17: makeNodeComponent("container17"),
-    container38: makeNodeComponent("container38"),
-    payJustNowIsSouthAfricasLeadingBuyNowPay4: makeNodeComponent(
-      "payJustNowIsSouthAfricasLeadingBuyNowPay4"
+    h11: makeNodeComponent("h11"),
+    section6: makeNodeComponent("section6"),
+    container23: makeNodeComponent("container23"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay9: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay9"
+    ),
+    container21: makeNodeComponent("container21"),
+    h22H11: makeNodeComponent("h22H11"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay8: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay8"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay10: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay10"
+    ),
+    h31H21H11: makeNodeComponent("h31H21H11"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay11: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay11"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay12: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay12"
+    ),
+    h31H21H112: makeNodeComponent("h31H21H112"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay13: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay13"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay14: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay14"
+    ),
+    h22H112: makeNodeComponent("h22H112"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay15: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay15"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay16: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay16"
+    ),
+    h31H21H113: makeNodeComponent("h31H21H113"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay17: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay17"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay18: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay18"
+    ),
+    h32H21H114: makeNodeComponent("h32H21H114"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay19: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay19"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay20: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay20"
+    ),
+    h33H21H115: makeNodeComponent("h33H21H115"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay21: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay21"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay22: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay22"
+    ),
+    h34H21H116: makeNodeComponent("h34H21H116"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay23: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay23"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay24: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay24"
+    ),
+    h35H21H117: makeNodeComponent("h35H21H117"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay25: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay25"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay26: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay26"
+    ),
+    lineAnimation: makeNodeComponent("lineAnimation"),
+    h12: makeNodeComponent("h12"),
+    section14: makeNodeComponent("section14"),
+    h122: makeNodeComponent("h122"),
+    container24: makeNodeComponent("container24"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay27: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay27"
+    ),
+    container22: makeNodeComponent("container22"),
+    h22H113: makeNodeComponent("h22H113"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay28: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay28"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay29: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay29"
+    ),
+    imageH21H121: makeNodeComponent("imageH21H121"),
+    image16: makeNodeComponent("image16"),
+    imageH21H1212: makeNodeComponent("imageH21H1212"),
+    image17: makeNodeComponent("image17"),
+    imageH21H1213: makeNodeComponent("imageH21H1213"),
+    image18: makeNodeComponent("image18"),
+    section13: makeNodeComponent("section13"),
+    image15: makeNodeComponent("image15"),
+    video12: makeNodeComponent("video12"),
+    h13: makeNodeComponent("h13"),
+    section16: makeNodeComponent("section16"),
+    h124: makeNodeComponent("h124"),
+    container25: makeNodeComponent("container25"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay30: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay30"
+    ),
+    container26: makeNodeComponent("container26"),
+    h22H114: makeNodeComponent("h22H114"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay31: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay31"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay32: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay32"
+    ),
+    imageH21H1214: makeNodeComponent("imageH21H1214"),
+    image19: makeNodeComponent("image19"),
+    h22H115: makeNodeComponent("h22H115"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay33: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay33"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay34: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay34"
+    ),
+    imageH21H1215: makeNodeComponent("imageH21H1215"),
+    image20: makeNodeComponent("image20"),
+    h22H116: makeNodeComponent("h22H116"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay35: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay35"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay36: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay36"
+    ),
+    imageH21H1216: makeNodeComponent("imageH21H1216"),
+    image21: makeNodeComponent("image21"),
+    h22H117: makeNodeComponent("h22H117"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay37: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay37"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay38: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay38"
+    ),
+    imageH21H1217: makeNodeComponent("imageH21H1217"),
+    image22: makeNodeComponent("image22"),
+    h22H118: makeNodeComponent("h22H118"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay39: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay39"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay40: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay40"
+    ),
+    imageH21H1218: makeNodeComponent("imageH21H1218"),
+    image23: makeNodeComponent("image23"),
+    h22H119: makeNodeComponent("h22H119"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay41: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay41"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay42: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay42"
+    ),
+    h14: makeNodeComponent("h14"),
+    section17: makeNodeComponent("section17"),
+    h125: makeNodeComponent("h125"),
+    container27: makeNodeComponent("container27"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay43: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay43"
+    ),
+    container28: makeNodeComponent("container28"),
+    h21H1110: makeNodeComponent("h21H1110"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay44: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay44"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay45: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay45"
+    ),
+    imageH21H1219: makeNodeComponent("imageH21H1219"),
+    image24: makeNodeComponent("image24"),
+    h22H14: makeNodeComponent("h22H14"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay46: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay46"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay47: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay47"
+    ),
+    h23H142: makeNodeComponent("h23H142"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay48: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay48"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay49: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay49"
+    ),
+    h24H14: makeNodeComponent("h24H14"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay50: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay50"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay51: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay51"
+    ),
+    h25H14: makeNodeComponent("h25H14"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay52: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay52"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay53: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay53"
+    ),
+    h26H14: makeNodeComponent("h26H14"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay54: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay54"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay55: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay55"
+    ),
+    h27H142: makeNodeComponent("h27H142"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay56: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay56"
+    ),
+    payJustNowIsSouthAfricasLeadingBuyNowPay57: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay57"
+    ),
+    imageH21H12110: makeNodeComponent("imageH21H12110"),
+    image25: makeNodeComponent("image25"),
+    imageH21H12111: makeNodeComponent("imageH21H12111"),
+    image26: makeNodeComponent("image26"),
+    section15: makeNodeComponent("section15"),
+    container8: makeNodeComponent("container8"),
+    container20: makeNodeComponent("container20"),
+    container39: makeNodeComponent("container39"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay5: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay5"
     ),
     section11: makeNodeComponent("section11"),
     image3: makeNodeComponent("image3"),

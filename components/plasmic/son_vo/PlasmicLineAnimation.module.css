@@ -37,7 +37,8 @@
   -webkit-transition-duration: 600ms;
   padding: 0px;
 }
-.freeBoxinViewData {
+.freeBoxscrolledState {
   width: 100%;
+  background: #ffffffcc;
   min-width: 0;
 }
