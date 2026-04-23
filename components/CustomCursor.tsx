@@ -41,8 +41,8 @@ const handleMouseMove = (event: MouseEvent) => {
           transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
 
           // 👇 THAY ĐỔI KÍCH THƯỚC VÀ HÌNH DÁNG ĐỘNG
-          width: isViewMode ? '80px' : '8px',
-          height: isViewMode ? '32px' : '8px',
+          width: isViewMode ? '80px' : '16px',
+          height: isViewMode ? '32px' : '16px',
           borderRadius: isViewMode ? '20px' : '2px',
           backgroundColor: isViewMode ? '#ffffff' : 'white',
 
