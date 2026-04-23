@@ -46,6 +46,7 @@ import GlobalLoading from "./components/GlobalLoading";
 import ScrollToTop from "./components/ScrollToTop";
 import { CustomCursor } from "./components/CustomCursor";
 import { CursorHoverWrapper } from "./components/CursorHoverWrapper"; // Thêm dòng này
+import { ScrollVariantTrigger } from "./components/ScrollVariantTrigger";
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -497,4 +498,21 @@ PLASMIC.registerComponent(CursorHoverWrapper as any, {
     },
   },
   importPath: "./components/CursorHoverWrapper",
+});
+
+PLASMIC.registerComponent(ScrollVariantTrigger, {
+  name: "ScrollVariantTrigger",
+  props: {
+    children: "slot", // Cho phép kéo các component khác vào trong
+    once: {
+      type: "boolean",
+      description: "Chỉ chạy animation 1 lần duy nhất khi cuộn tới",
+      defaultValue: true,
+    },
+    threshold: {
+      type: "number",
+      description: "Mức độ hiển thị để kích hoạt (0.1 = 10%, 1 = 100%)",
+      defaultValue: 0.2,
+    },
+  },
 });
