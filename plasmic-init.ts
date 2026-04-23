@@ -46,7 +46,7 @@ import GlobalLoading from "./components/GlobalLoading";
 import ScrollToTop from "./components/ScrollToTop";
 import { CustomCursor } from "./components/CustomCursor";
 import { CursorHoverWrapper } from "./components/CursorHoverWrapper"; // Thêm dòng này
-import { ScrollVariantTrigger } from "./components/ScrollVariantTrigger";
+import { AnimatedLineOnScroll } from "./components/AnimatedLineOnScroll"; // Nhớ trỏ đúng đường dẫn file của bạn
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -500,19 +500,24 @@ PLASMIC.registerComponent(CursorHoverWrapper as any, {
   importPath: "./components/CursorHoverWrapper",
 });
 
-PLASMIC.registerComponent(ScrollVariantTrigger, {
-  name: "ScrollVariantTrigger",
+PLASMIC.registerComponent(AnimatedLineOnScroll, {
+  name: "AnimatedLineOnScroll",
+  displayName: "Animated Line", // Tên hiển thị đẹp trong Studio
   props: {
-    children: "slot", // Cho phép kéo các component khác vào trong
-    once: {
-      type: "boolean",
-      description: "Chỉ chạy animation 1 lần duy nhất khi cuộn tới",
-      defaultValue: true,
+    color: {
+      type: "color",
+      defaultValue: "#000000",
+      description: "Màu sắc của đường kẻ",
     },
-    threshold: {
+    duration: {
       type: "number",
-      description: "Mức độ hiển thị để kích hoạt (0.1 = 10%, 1 = 100%)",
-      defaultValue: 0.2,
+      defaultValue: 0.8,
+      description: "Thời gian chạy animation (giây)",
+    },
+    delay: {
+      type: "number",
+      defaultValue: 0,
+      description: "Thời gian chờ trước khi chạy (giây)",
     },
   },
 });
