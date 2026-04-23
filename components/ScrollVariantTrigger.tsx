@@ -7,8 +7,8 @@ import { DataProvider } from "@plasmicapp/loader-nextjs"; // Hoặc @plasmicapp/
 interface ScrollVariantTriggerProps {
   children: React.ReactNode;
   className?: string;
-  once?: boolean;    // Chạy 1 lần hay mỗi lần scroll tới?
-  threshold?: number; // Thấy bao nhiêu % thì kích hoạt (0.1 đến 1)
+  once?: boolean;
+  threshold?: number;
 }
 
 export function ScrollVariantTrigger({
@@ -18,29 +18,22 @@ export function ScrollVariantTrigger({
   threshold = 0.2,
 }: ScrollVariantTriggerProps) {
   const ref = useRef(null);
-  
-  // Kiểm tra xem component đã hiện ra trên màn hình chưa
-  const isInView = useInView(ref, { 
-    once: once, 
-    amount: threshold 
-  });
+  const isInView = useInView(ref, { once, amount: threshold });
 
-  // Tránh lỗi Hydration cho Next.js
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  if (!isMounted) {
-    return <div ref={ref} className={className}>{children}</div>;
-  }
-
   return (
     <div ref={ref} className={className}>
-      {/* Cung cấp biến "isReached" vào hệ thống Data của Plasmic. 
-         Component con nằm trong slot sẽ đọc được biến này.
+      {/* LUÔN LUÔN bọc DataProvider. 
+          Nếu chưa mount xong (trên server) thì ép giá trị isReached = false 
       */}
-      <DataProvider name="scrollStatus" data={{ isReached: isInView }}>
+      <DataProvider 
+        name="scrollStatus" 
+        data={{ isReached: isMounted ? isInView : false }}
+      >
         {children}
       </DataProvider>
     </div>
