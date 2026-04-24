@@ -527,7 +527,7 @@ PLASMIC.registerComponent(AnimatedLineOnScroll, {
 registerComponent(HoverVariantWrapper, {
   name: 'HoverVariantWrapper',
   displayName: 'Hover Variant Switcher',
-  importPath: './components/HoverVariantWrapper', // Thêm dòng này vào! (Sửa lại đường dẫn nếu file của bạn nằm ở thư mục khác)
+  importPath: './components/HoverVariantWrapper',
   props: {
     children: {
       type: 'slot',
@@ -536,23 +536,28 @@ registerComponent(HoverVariantWrapper, {
         value: 'Thả component có variant vào đây',
       },
     },
+    // 👇 THÊM NÚT BẬT/TẮT NÀY VÀO STUDIO
+    isStandaloneVariant: {
+      type: 'boolean',
+      displayName: 'Là Biến thể độc lập (Không có nhóm)',
+      description: 'Bật lên nếu Variant của bạn không nằm trong Group nào',
+      defaultValue: true,
+    },
     variantGroupName: {
       type: 'string',
-      displayName: 'Variant Group Prop Name',
-      description: 'Tên của prop variant (thường là "variant")',
+      displayName: 'Tên Nhóm Variant',
+      description: 'Chỉ cần điền nếu tắt nút phía trên',
       defaultValue: 'variant',
-    },
+      hidden: (props: any) => props.isStandaloneVariant,    },
     baseVariant: {
       type: 'string',
-      displayName: 'Base Variant Name',
-      description: 'Tên variant lúc không hover (VD: base)',
+      displayName: 'Tên Variant mặc định (VD: base)',
       defaultValue: 'base',
     },
     hoverVariant: {
       type: 'string',
-      displayName: 'Hover Variant Name',
-      description: 'Tên variant lúc hover (VD: project 1)',
-      defaultValue: 'project 1',
+      displayName: 'Tên Variant khi Hover (VD: project 1)',
+      defaultValue: 'project1', // LƯU Ý: Với standalone variant, Plasmic thường bỏ dấu cách khi sinh code, ví dụ 'project 1' thành 'project1'
     },
   },
 });

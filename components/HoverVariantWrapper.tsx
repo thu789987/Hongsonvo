@@ -3,27 +3,44 @@ import React, { useState, ReactElement, cloneElement, Children, isValidElement }
 export interface HoverVariantWrapperProps {
   children?: React.ReactNode;
   className?: string;
-  variantGroupName?: string; // Tên nhóm variant (mặc định trong Plasmic thường là 'variant')
-  baseVariant?: string;      // Tên variant lúc bình thường (VD: 'base')
-  hoverVariant?: string;     // Tên variant lúc hover (VD: 'project 1')
+  isStandaloneVariant?: boolean; // THÊM MỚI: Checkbox kiểm tra loại variant
+  variantGroupName?: string; 
+  baseVariant?: string;      
+  hoverVariant?: string;     
 }
 
 export function HoverVariantWrapper({
   children,
   className,
+  isStandaloneVariant = true, // Giả sử mặc định là không có nhóm
   variantGroupName = 'variant',
   baseVariant = 'base',
   hoverVariant = 'project 1',
 }: HoverVariantWrapperProps) {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Hàm này sẽ "tiêm" variant prop vào các component con
   const childrenWithProps = Children.map(children, (child) => {
     if (isValidElement(child)) {
-      return cloneElement(child as ReactElement<any>, {
-        // Truyền variant dựa trên trạng thái hover
-        [variantGroupName]: isHovered ? hoverVariant : baseVariant,
-      });
+      
+      // XỬ LÝ LÔ-GIC TRUYỀN PROPS DỰA TRÊN LOẠI VARIANT
+      let variantProps = {};
+
+      if (isStandaloneVariant) {
+        // TRƯỜNG HỢP KHÔNG CÓ NHÓM: Bật/Tắt trực tiếp tên variant
+        variantProps = {
+          // Khi hover thì bật hoverVariant lên (true)
+          [hoverVariant]: isHovered,
+          // Nếu có baseVariant thì tắt nó khi hover (tuy nhiên Plasmic thường tự hiểu base là mặc định khi mọi thứ khác false)
+          ...(baseVariant ? { [baseVariant]: !isHovered } : {}),
+        };
+      } else {
+        // TRƯỜNG HỢP CÓ NHÓM: Đổi giá trị string
+        variantProps = {
+          [variantGroupName]: isHovered ? hoverVariant : baseVariant,
+        };
+      }
+
+      return cloneElement(child as ReactElement<any>, variantProps);
     }
     return child;
   });
@@ -33,7 +50,7 @@ export function HoverVariantWrapper({
       className={className}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{ display: 'contents' }} // Đảm bảo wrapper không làm hỏng layout CSS
+      style={{ display: 'contents' }}
     >
       {childrenWithProps}
     </div>
