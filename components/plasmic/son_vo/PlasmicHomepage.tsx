@@ -84,7 +84,6 @@ import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUt
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI/codeComponent
-import { HoverVariantWrapper } from "../../HoverVariantWrapper"; // plasmic-import: yEMEJHkHTLEe/codeComponent
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
@@ -195,7 +194,6 @@ export type PlasmicHomepage__OverridesType = {
   templateCard7?: Flex__<typeof TemplateCard>;
   templateCard8?: Flex__<typeof TemplateCard>;
   patternGrid?: Flex__<typeof PatternGrid>;
-  hoverVariantSwitcher?: Flex__<typeof HoverVariantWrapper>;
   templateCard9?: Flex__<typeof TemplateCard>;
   section?: Flex__<typeof Section>;
 };
@@ -1898,140 +1896,125 @@ function PlasmicHomepage__RenderFunc(props: {
                         key={currentIndex}
                         yOffset={50}
                       >
-                        <HoverVariantWrapper
-                          data-plasmic-name={"hoverVariantSwitcher"}
-                          data-plasmic-override={overrides.hoverVariantSwitcher}
-                          baseVariant={"Base"}
+                        <TemplateCard
+                          data-plasmic-name={"templateCard9"}
+                          data-plasmic-override={overrides.templateCard9}
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverVariantSwitcher
+                            sty.templateCard9
                           )}
-                          hoverVariant={"Project 1"}
-                          isStandaloneVariant={true}
-                          variantGroupName={"variant"}
-                        >
-                          <TemplateCard
-                            data-plasmic-name={"templateCard9"}
-                            data-plasmic-override={overrides.templateCard9}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.templateCard9
-                            )}
-                            image2={currentItem["Main Image"]}
-                            imageCondition={(() => {
-                              try {
-                                return !currentItem["Video"];
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return false;
-                                }
-                                throw e;
+                          image2={currentItem["Main Image"]}
+                          imageCondition={(() => {
+                            try {
+                              return !currentItem["Video"];
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return false;
                               }
-                            })()}
-                            link={`/works/${currentItem.Slug}`}
-                            project1={undefined}
-                            tag1={(() => {
-                              try {
-                                return (
-                                  currentItem.Services &&
-                                  currentItem.Services.includes("UI")
-                                );
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()}
+                          link={`/works/${currentItem.Slug}`}
+                          project1={undefined}
+                          tag1={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("UI")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
                               }
-                            })()}
-                            tag22={(() => {
-                              try {
-                                return (
-                                  currentItem.Services &&
-                                  currentItem.Services.includes("UX")
-                                );
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()}
+                          tag22={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("UX")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
                               }
-                            })()}
-                            tag32={(() => {
-                              try {
-                                return (
-                                  currentItem.Services &&
-                                  currentItem.Services.includes("FRAMER")
-                                );
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()}
+                          tag32={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("FRAMER")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
                               }
-                            })()}
-                            tag42={(() => {
-                              try {
-                                return (
-                                  currentItem.Services &&
-                                  currentItem.Services.includes("E-COMMERCE")
-                                );
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()}
+                          tag42={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("E-COMMERCE")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
                               }
-                            })()}
-                            tag52={(() => {
-                              try {
-                                return (
-                                  currentItem.Services &&
-                                  currentItem.Services.includes(
-                                    "BRAND IDENTITY"
-                                  )
-                                );
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()}
+                          tag52={(() => {
+                            try {
+                              return (
+                                currentItem.Services &&
+                                currentItem.Services.includes("BRAND IDENTITY")
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
                               }
-                            })()}
-                            title={currentItem["Title"]}
-                            video={currentItem.Video}
-                            videoCondition={(() => {
-                              try {
-                                return currentItem["Video"];
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
+                              throw e;
+                            }
+                          })()}
+                          title={currentItem["Title"]}
+                          video={currentItem.Video}
+                          videoCondition={(() => {
+                            try {
+                              return currentItem["Video"];
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
                               }
-                            })()}
-                          />
-                        </HoverVariantWrapper>
+                              throw e;
+                            }
+                          })()}
+                        />
                       </RevealOnScroll>
                     );
                   })}
@@ -2163,7 +2146,6 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "hoverVariantSwitcher",
     "templateCard9",
     "section"
   ],
@@ -2218,7 +2200,6 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "hoverVariantSwitcher",
     "templateCard9",
     "section"
   ],
@@ -2345,7 +2326,6 @@ const PlasmicDescendants = {
     "templateCard7",
     "templateCard8",
     "patternGrid",
-    "hoverVariantSwitcher",
     "templateCard9"
   ],
   top5: ["top5", "title3"],
@@ -2358,8 +2338,7 @@ const PlasmicDescendants = {
   templateCard6: ["templateCard6"],
   templateCard7: ["templateCard7"],
   templateCard8: ["templateCard8"],
-  patternGrid: ["patternGrid", "hoverVariantSwitcher", "templateCard9"],
-  hoverVariantSwitcher: ["hoverVariantSwitcher", "templateCard9"],
+  patternGrid: ["patternGrid", "templateCard9"],
   templateCard9: ["templateCard9"],
   section: ["section"]
 } as const;
@@ -2418,7 +2397,6 @@ type NodeDefaultElementType = {
   templateCard7: typeof TemplateCard;
   templateCard8: typeof TemplateCard;
   patternGrid: typeof PatternGrid;
-  hoverVariantSwitcher: typeof HoverVariantWrapper;
   templateCard9: typeof TemplateCard;
   section: typeof Section;
 };
@@ -2575,7 +2553,6 @@ export const PlasmicHomepage = Object.assign(
     templateCard7: makeNodeComponent("templateCard7"),
     templateCard8: makeNodeComponent("templateCard8"),
     patternGrid: makeNodeComponent("patternGrid"),
-    hoverVariantSwitcher: makeNodeComponent("hoverVariantSwitcher"),
     templateCard9: makeNodeComponent("templateCard9"),
     section: makeNodeComponent("section"),
 
