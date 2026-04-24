@@ -67,7 +67,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import { CustomCursor } from "../../CustomCursor"; // plasmic-import: -0J1pl1GDQ1s/codeComponent
 import ScrollToTop from "../../ScrollToTop"; // plasmic-import: amMlHTsYYfNZ/codeComponent
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
@@ -145,7 +144,6 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  customCursor?: Flex__<typeof CustomCursor>;
   scrollToTop?: Flex__<typeof ScrollToTop>;
   globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
@@ -308,12 +306,6 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <CustomCursor
-            data-plasmic-name={"customCursor"}
-            data-plasmic-override={overrides.customCursor}
-            className={classNames("__wab_instance", sty.customCursor)}
-          />
-
           <ScrollToTop
             data-plasmic-name={"scrollToTop"}
             data-plasmic-override={overrides.scrollToTop}
@@ -2103,7 +2095,6 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "customCursor",
     "scrollToTop",
     "globalLoading",
     "smoothScroll",
@@ -2157,7 +2148,6 @@ const PlasmicDescendants = {
     "templateCard9",
     "section"
   ],
-  customCursor: ["customCursor"],
   scrollToTop: ["scrollToTop"],
   globalLoading: ["globalLoading"],
   smoothScroll: [
@@ -2356,7 +2346,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  customCursor: typeof CustomCursor;
   scrollToTop: typeof ScrollToTop;
   globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
@@ -2498,7 +2487,6 @@ export const PlasmicHomepage = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
-    customCursor: makeNodeComponent("customCursor"),
     scrollToTop: makeNodeComponent("scrollToTop"),
     globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),

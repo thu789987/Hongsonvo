@@ -77,8 +77,8 @@ import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcr
 import { ParallaxWrapper } from "@plasmicpkgs/react-scroll-parallax";
 import { Video } from "@plasmicpkgs/plasmic-basic-components";
 import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
-import LineAnimation from "../../LineAnimation"; // plasmic-import: dKZrPBt4B-lj/component
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
+import { AnimatedLineOnScroll } from "../../AnimatedLineOnScroll"; // plasmic-import: Al7stYh33MDE/codeComponent
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
@@ -138,6 +138,7 @@ export type PlasmicNewPage__OverridesType = {
   scrollToTop?: Flex__<typeof ScrollToTop>;
   customCursor?: Flex__<typeof CustomCursor>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
+  scrollContext?: Flex__<typeof ScrollContext>;
   newMenu2?: Flex__<typeof NewMenu>;
   section1?: Flex__<"div">;
   container?: Flex__<"div">;
@@ -157,6 +158,9 @@ export type PlasmicNewPage__OverridesType = {
   img2?: Flex__<"div">;
   img?: Flex__<typeof PlasmicImg__>;
   htmlVideo?: Flex__<typeof Video>;
+  section4?: Flex__<"div">;
+  container19?: Flex__<"div">;
+  payJustNowIsSouthAfricasLeadingBuyNowPay6?: Flex__<"div">;
   original?: Flex__<typeof RevealOnScroll>;
   section2?: Flex__<"div">;
   container2?: Flex__<"div">;
@@ -170,9 +174,6 @@ export type PlasmicNewPage__OverridesType = {
   container37?: Flex__<"div">;
   heading15?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay2?: Flex__<"div">;
-  section4?: Flex__<"div">;
-  container19?: Flex__<"div">;
-  payJustNowIsSouthAfricasLeadingBuyNowPay6?: Flex__<"div">;
   section7?: Flex__<"div">;
   image1?: Flex__<typeof GridDistortion>;
   video1?: Flex__<typeof Video>;
@@ -212,7 +213,6 @@ export type PlasmicNewPage__OverridesType = {
   h35H21H117?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay25?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay26?: Flex__<"div">;
-  lineAnimation?: Flex__<typeof LineAnimation>;
   h12?: Flex__<typeof RevealOnScroll>;
   section14?: Flex__<"div">;
   h122?: Flex__<"div">;
@@ -539,7 +539,9 @@ function PlasmicNewPage__RenderFunc(props: {
             wheelMultiplier={1}
           >
             <ScrollContext
-              className={classNames("__wab_instance", sty.scrollContext__aDom)}
+              data-plasmic-name={"scrollContext"}
+              data-plasmic-override={overrides.scrollContext}
+              className={classNames("__wab_instance", sty.scrollContext)}
             >
               <NewMenu
                 data-plasmic-name={"newMenu2"}
@@ -1291,209 +1293,6 @@ function PlasmicNewPage__RenderFunc(props: {
                   </ParallaxWrapper>
                 </div>
               </RevealOnScroll>
-              <RevealOnScroll
-                data-plasmic-name={"original"}
-                data-plasmic-override={overrides.original}
-                blurAmount={5}
-                className={classNames("__wab_instance", sty.original)}
-                delay={0}
-                duration={1.5}
-                yOffset={20}
-              >
-                <div
-                  data-plasmic-name={"section2"}
-                  data-plasmic-override={overrides.section2}
-                  className={classNames(projectcss.all, sty.section2)}
-                >
-                  <div
-                    data-plasmic-name={"container2"}
-                    data-plasmic-override={overrides.container2}
-                    className={classNames(projectcss.all, sty.container2)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___1MtXi
-                      )}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___2WsU
-                        )}
-                      >
-                        {"The Brief"}
-                      </div>
-                    </div>
-                    <div
-                      data-plasmic-name={"container15"}
-                      data-plasmic-override={overrides.container15}
-                      className={classNames(projectcss.all, sty.container15)}
-                    >
-                      <div
-                        data-plasmic-name={"container16"}
-                        data-plasmic-override={overrides.container16}
-                        className={classNames(projectcss.all, sty.container16)}
-                      >
-                        <div
-                          data-plasmic-name={"heading3"}
-                          data-plasmic-override={overrides.heading3}
-                          className={classNames(projectcss.all, sty.heading3)}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__rZab
-                            )}
-                          >
-                            {"Overview"}
-                          </div>
-                        </div>
-                        <div
-                          data-plasmic-name={
-                            "payJustNowIsSouthAfricasLeadingBuyNowPay"
-                          }
-                          data-plasmic-override={
-                            overrides.payJustNowIsSouthAfricasLeadingBuyNowPay
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.payJustNowIsSouthAfricasLeadingBuyNowPay
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              if (!pageId) return "Đang đợi tham số...";
-                              const list = $queries.allList?.data || [];
-                              const currentItem = list.find(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              return (
-                                currentItem?.["Project Overview"] ||
-                                "Không tìm thấy bài"
-                              );
-                            })()}
-                          </React.Fragment>
-                        </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"container36"}
-                        data-plasmic-override={overrides.container36}
-                        className={classNames(projectcss.all, sty.container36)}
-                      >
-                        <div
-                          data-plasmic-name={"heading14"}
-                          data-plasmic-override={overrides.heading14}
-                          className={classNames(projectcss.all, sty.heading14)}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__oxC7
-                            )}
-                          >
-                            {"Challenge"}
-                          </div>
-                        </div>
-                        <div
-                          data-plasmic-name={
-                            "payJustNowIsSouthAfricasLeadingBuyNowPay1"
-                          }
-                          data-plasmic-override={
-                            overrides.payJustNowIsSouthAfricasLeadingBuyNowPay1
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.payJustNowIsSouthAfricasLeadingBuyNowPay1
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              if (!pageId) return "Đang đợi tham số...";
-                              const list = $queries.allList?.data || [];
-                              const currentItem = list.find(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              return (
-                                currentItem?.["Challenge"] ||
-                                "Không tìm thấy bài"
-                              );
-                            })()}
-                          </React.Fragment>
-                        </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"container37"}
-                        data-plasmic-override={overrides.container37}
-                        className={classNames(projectcss.all, sty.container37)}
-                      >
-                        <div
-                          data-plasmic-name={"heading15"}
-                          data-plasmic-override={overrides.heading15}
-                          className={classNames(projectcss.all, sty.heading15)}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__uDzrf
-                            )}
-                          >
-                            {"Solution"}
-                          </div>
-                        </div>
-                        <div
-                          data-plasmic-name={
-                            "payJustNowIsSouthAfricasLeadingBuyNowPay2"
-                          }
-                          data-plasmic-override={
-                            overrides.payJustNowIsSouthAfricasLeadingBuyNowPay2
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.payJustNowIsSouthAfricasLeadingBuyNowPay2
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              const pageId = $ctx.params.id || $ctx.params.Slug;
-                              if (!pageId) return "Đang đợi tham số...";
-                              const list = $queries.allList?.data || [];
-                              const currentItem = list.find(
-                                item =>
-                                  item.id == pageId ||
-                                  item.Id == pageId ||
-                                  item.slug == pageId ||
-                                  item.Slug == pageId
-                              );
-                              return (
-                                currentItem?.["Solution"] ||
-                                "Không tìm thấy bài"
-                              );
-                            })()}
-                          </React.Fragment>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </RevealOnScroll>
               {(() => {
                 try {
                   return (() => {
@@ -1584,6 +1383,254 @@ function PlasmicNewPage__RenderFunc(props: {
                             );
                           })()}
                         </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                </RevealOnScroll>
+              ) : null}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    const content = currentItem?.["Challenge"];
+                    return content && content.toString().trim() !== "";
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  data-plasmic-name={"original"}
+                  data-plasmic-override={overrides.original}
+                  blurAmount={5}
+                  className={classNames("__wab_instance", sty.original)}
+                  delay={0}
+                  duration={1.5}
+                  yOffset={20}
+                >
+                  <div
+                    data-plasmic-name={"section2"}
+                    data-plasmic-override={overrides.section2}
+                    className={classNames(projectcss.all, sty.section2)}
+                  >
+                    <div
+                      data-plasmic-name={"container2"}
+                      data-plasmic-override={overrides.container2}
+                      className={classNames(projectcss.all, sty.container2)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___1MtXi
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___2WsU
+                          )}
+                        >
+                          {"The Brief"}
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"container15"}
+                        data-plasmic-override={overrides.container15}
+                        className={classNames(projectcss.all, sty.container15)}
+                      >
+                        <div
+                          data-plasmic-name={"container16"}
+                          data-plasmic-override={overrides.container16}
+                          className={classNames(
+                            projectcss.all,
+                            sty.container16
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={"heading3"}
+                            data-plasmic-override={overrides.heading3}
+                            className={classNames(projectcss.all, sty.heading3)}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__rZab
+                              )}
+                            >
+                              {"Overview"}
+                            </div>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["Project Overview"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          data-plasmic-name={"container36"}
+                          data-plasmic-override={overrides.container36}
+                          className={classNames(
+                            projectcss.all,
+                            sty.container36
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={"heading14"}
+                            data-plasmic-override={overrides.heading14}
+                            className={classNames(
+                              projectcss.all,
+                              sty.heading14
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__oxC7
+                              )}
+                            >
+                              {"Challenge"}
+                            </div>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay1"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay1
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay1
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["Challenge"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
+                        <div
+                          data-plasmic-name={"container37"}
+                          data-plasmic-override={overrides.container37}
+                          className={classNames(
+                            projectcss.all,
+                            sty.container37
+                          )}
+                        >
+                          <div
+                            data-plasmic-name={"heading15"}
+                            data-plasmic-override={overrides.heading15}
+                            className={classNames(
+                              projectcss.all,
+                              sty.heading15
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__uDzrf
+                              )}
+                            >
+                              {"Solution"}
+                            </div>
+                          </div>
+                          <div
+                            data-plasmic-name={
+                              "payJustNowIsSouthAfricasLeadingBuyNowPay2"
+                            }
+                            data-plasmic-override={
+                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay2
+                            }
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay2
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                const pageId =
+                                  $ctx.params.id || $ctx.params.Slug;
+                                if (!pageId) return "Đang đợi tham số...";
+                                const list = $queries.allList?.data || [];
+                                const currentItem = list.find(
+                                  item =>
+                                    item.id == pageId ||
+                                    item.Id == pageId ||
+                                    item.slug == pageId ||
+                                    item.Slug == pageId
+                                );
+                                return (
+                                  currentItem?.["Solution"] ||
+                                  "Không tìm thấy bài"
+                                );
+                              })()}
+                            </React.Fragment>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1974,24 +2021,12 @@ function PlasmicNewPage__RenderFunc(props: {
                               })()}
                             </React.Fragment>
                           </div>
-                          <div
-                            data-plasmic-name={
-                              "payJustNowIsSouthAfricasLeadingBuyNowPay10"
-                            }
-                            data-plasmic-override={
-                              overrides.payJustNowIsSouthAfricasLeadingBuyNowPay10
-                            }
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.payJustNowIsSouthAfricasLeadingBuyNowPay10
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
+                          {(() => {
+                            try {
+                              return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return "Đang đợi tham số...";
+                                if (!pageId) return false;
                                 const list = $queries.allList?.data || [];
                                 const currentItem = list.find(
                                   item =>
@@ -2000,13 +2035,56 @@ function PlasmicNewPage__RenderFunc(props: {
                                     item.slug == pageId ||
                                     item.Slug == pageId
                                 );
+                                const content =
+                                  currentItem?.["H2_1_H1_1_content"];
                                 return (
-                                  currentItem?.["H2_1_H1_1_content"] ||
-                                  "Không tìm thấy bài"
+                                  content && content.toString().trim() !== ""
                                 );
-                              })()}
-                            </React.Fragment>
-                          </div>
+                              })();
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return true;
+                              }
+                              throw e;
+                            }
+                          })() ? (
+                            <div
+                              data-plasmic-name={
+                                "payJustNowIsSouthAfricasLeadingBuyNowPay10"
+                              }
+                              data-plasmic-override={
+                                overrides.payJustNowIsSouthAfricasLeadingBuyNowPay10
+                              }
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.payJustNowIsSouthAfricasLeadingBuyNowPay10
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId) return "Đang đợi tham số...";
+                                  const list = $queries.allList?.data || [];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  return (
+                                    currentItem?.["H2_1_H1_1_content"] ||
+                                    "Không tìm thấy bài"
+                                  );
+                                })()}
+                              </React.Fragment>
+                            </div>
+                          ) : null}
                           {(() => {
                             try {
                               return (() => {
@@ -3052,33 +3130,18 @@ function PlasmicNewPage__RenderFunc(props: {
                   </div>
                 </RevealOnScroll>
               ) : null}
-              <ScrollContext
-                className={classNames(
-                  "__wab_instance",
-                  sty.scrollContext__jFSo
-                )}
-              >
-                <LineAnimation
-                  data-plasmic-name={"lineAnimation"}
-                  data-plasmic-override={overrides.lineAnimation}
-                  className={classNames("__wab_instance", sty.lineAnimation)}
-                  scrolledState={(() => {
-                    try {
-                      return $ctx.isScrolled;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return [];
-                      }
-                      throw e;
-                    }
-                  })()}
-                />
-              </ScrollContext>
               <LineBg
                 className={classNames("__wab_instance", sty.lineBg___4PSAk)}
+              />
+
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLine__dcuAu
+                )}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
               />
 
               {(() => {
@@ -4113,6 +4176,13 @@ function PlasmicNewPage__RenderFunc(props: {
                   </div>
                 </RevealOnScroll>
               ) : null}
+              <AnimatedLineOnScroll
+                className={classNames("__wab_instance", sty.animatedLine__srFc)}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
+              />
+
               {(() => {
                 try {
                   return (() => {
@@ -5541,6 +5611,16 @@ function PlasmicNewPage__RenderFunc(props: {
                   </div>
                 </RevealOnScroll>
               ) : null}
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLine__y4Ogn
+                )}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
+              />
+
               {(() => {
                 try {
                   return (() => {
@@ -7322,6 +7402,13 @@ function PlasmicNewPage__RenderFunc(props: {
                   </div>
                 </RevealOnScroll>
               ) : null}
+              <AnimatedLineOnScroll
+                className={classNames("__wab_instance", sty.animatedLine__k0Es)}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
+              />
+
               {(() => {
                 try {
                   return (() => {
@@ -8283,6 +8370,16 @@ function PlasmicNewPage__RenderFunc(props: {
                   </div>
                 </RevealOnScroll>
               ) : null}
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLine__vNk4H
+                )}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
+              />
+
               {(() => {
                 try {
                   return (() => {
@@ -11036,6 +11133,7 @@ const PlasmicDescendants = {
     "scrollToTop",
     "customCursor",
     "smoothScroll",
+    "scrollContext",
     "newMenu2",
     "section1",
     "container",
@@ -11055,6 +11153,9 @@ const PlasmicDescendants = {
     "img2",
     "img",
     "htmlVideo",
+    "section4",
+    "container19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6",
     "original",
     "section2",
     "container2",
@@ -11068,9 +11169,6 @@ const PlasmicDescendants = {
     "container37",
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2",
-    "section4",
-    "container19",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay6",
     "section7",
     "image1",
     "video1",
@@ -11110,7 +11208,6 @@ const PlasmicDescendants = {
     "h35H21H117",
     "payJustNowIsSouthAfricasLeadingBuyNowPay25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay26",
-    "lineAnimation",
     "h12",
     "section14",
     "h122",
@@ -11302,6 +11399,7 @@ const PlasmicDescendants = {
   customCursor: ["customCursor"],
   smoothScroll: [
     "smoothScroll",
+    "scrollContext",
     "newMenu2",
     "section1",
     "container",
@@ -11321,6 +11419,9 @@ const PlasmicDescendants = {
     "img2",
     "img",
     "htmlVideo",
+    "section4",
+    "container19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6",
     "original",
     "section2",
     "container2",
@@ -11334,9 +11435,6 @@ const PlasmicDescendants = {
     "container37",
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2",
-    "section4",
-    "container19",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay6",
     "section7",
     "image1",
     "video1",
@@ -11376,7 +11474,6 @@ const PlasmicDescendants = {
     "h35H21H117",
     "payJustNowIsSouthAfricasLeadingBuyNowPay25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay26",
-    "lineAnimation",
     "h12",
     "section14",
     "h122",
@@ -11563,6 +11660,7 @@ const PlasmicDescendants = {
     "prevous",
     "nExt"
   ],
+  scrollContext: ["scrollContext", "newMenu2"],
   newMenu2: ["newMenu2"],
   section1: [
     "section1",
@@ -11630,6 +11728,15 @@ const PlasmicDescendants = {
   img2: ["img2", "img", "htmlVideo"],
   img: ["img"],
   htmlVideo: ["htmlVideo"],
+  section4: [
+    "section4",
+    "container19",
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
+  ],
+  container19: ["container19", "payJustNowIsSouthAfricasLeadingBuyNowPay6"],
+  payJustNowIsSouthAfricasLeadingBuyNowPay6: [
+    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
+  ],
   original: [
     "original",
     "section2",
@@ -11710,15 +11817,6 @@ const PlasmicDescendants = {
   heading15: ["heading15"],
   payJustNowIsSouthAfricasLeadingBuyNowPay2: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay2"
-  ],
-  section4: [
-    "section4",
-    "container19",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
-  ],
-  container19: ["container19", "payJustNowIsSouthAfricasLeadingBuyNowPay6"],
-  payJustNowIsSouthAfricasLeadingBuyNowPay6: [
-    "payJustNowIsSouthAfricasLeadingBuyNowPay6"
   ],
   section7: ["section7", "image1", "video1"],
   image1: ["image1"],
@@ -11964,7 +12062,6 @@ const PlasmicDescendants = {
   payJustNowIsSouthAfricasLeadingBuyNowPay26: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay26"
   ],
-  lineAnimation: ["lineAnimation"],
   h12: [
     "h12",
     "section14",
@@ -12838,6 +12935,7 @@ type NodeDefaultElementType = {
   scrollToTop: typeof ScrollToTop;
   customCursor: typeof CustomCursor;
   smoothScroll: typeof SmoothScroll;
+  scrollContext: typeof ScrollContext;
   newMenu2: typeof NewMenu;
   section1: "div";
   container: "div";
@@ -12857,6 +12955,9 @@ type NodeDefaultElementType = {
   img2: "div";
   img: typeof PlasmicImg__;
   htmlVideo: typeof Video;
+  section4: "div";
+  container19: "div";
+  payJustNowIsSouthAfricasLeadingBuyNowPay6: "div";
   original: typeof RevealOnScroll;
   section2: "div";
   container2: "div";
@@ -12870,9 +12971,6 @@ type NodeDefaultElementType = {
   container37: "div";
   heading15: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay2: "div";
-  section4: "div";
-  container19: "div";
-  payJustNowIsSouthAfricasLeadingBuyNowPay6: "div";
   section7: "div";
   image1: typeof GridDistortion;
   video1: typeof Video;
@@ -12912,7 +13010,6 @@ type NodeDefaultElementType = {
   h35H21H117: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay25: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay26: "div";
-  lineAnimation: typeof LineAnimation;
   h12: typeof RevealOnScroll;
   section14: "div";
   h122: "div";
@@ -13191,6 +13288,7 @@ export const PlasmicNewPage = Object.assign(
     scrollToTop: makeNodeComponent("scrollToTop"),
     customCursor: makeNodeComponent("customCursor"),
     smoothScroll: makeNodeComponent("smoothScroll"),
+    scrollContext: makeNodeComponent("scrollContext"),
     newMenu2: makeNodeComponent("newMenu2"),
     section1: makeNodeComponent("section1"),
     container: makeNodeComponent("container"),
@@ -13210,6 +13308,11 @@ export const PlasmicNewPage = Object.assign(
     img2: makeNodeComponent("img2"),
     img: makeNodeComponent("img"),
     htmlVideo: makeNodeComponent("htmlVideo"),
+    section4: makeNodeComponent("section4"),
+    container19: makeNodeComponent("container19"),
+    payJustNowIsSouthAfricasLeadingBuyNowPay6: makeNodeComponent(
+      "payJustNowIsSouthAfricasLeadingBuyNowPay6"
+    ),
     original: makeNodeComponent("original"),
     section2: makeNodeComponent("section2"),
     container2: makeNodeComponent("container2"),
@@ -13228,11 +13331,6 @@ export const PlasmicNewPage = Object.assign(
     heading15: makeNodeComponent("heading15"),
     payJustNowIsSouthAfricasLeadingBuyNowPay2: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay2"
-    ),
-    section4: makeNodeComponent("section4"),
-    container19: makeNodeComponent("container19"),
-    payJustNowIsSouthAfricasLeadingBuyNowPay6: makeNodeComponent(
-      "payJustNowIsSouthAfricasLeadingBuyNowPay6"
     ),
     section7: makeNodeComponent("section7"),
     image1: makeNodeComponent("image1"),
@@ -13311,7 +13409,6 @@ export const PlasmicNewPage = Object.assign(
     payJustNowIsSouthAfricasLeadingBuyNowPay26: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay26"
     ),
-    lineAnimation: makeNodeComponent("lineAnimation"),
     h12: makeNodeComponent("h12"),
     section14: makeNodeComponent("section14"),
     h122: makeNodeComponent("h122"),
