@@ -2478,6 +2478,12 @@
           "name": "AnimatedLineOnScroll",
           "displayName": "AnimatedLineOnScroll",
           "componentImportPath": "./components/AnimatedLineOnScroll"
+        },
+        {
+          "id": "yEMEJHkHTLEe",
+          "name": "HoverVariantWrapper",
+          "displayName": "HoverVariantWrapper",
+          "componentImportPath": "./components/HoverVariantWrapper"
         }
       ],
       "customFunctions": []
