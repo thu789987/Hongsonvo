@@ -24,28 +24,28 @@ export function HoverController({
     }
   };
 
-return (
+  return (
     <DataProvider name="hoverData" data={{ isHovered: isHovered }}>
+      {/* 👇 BÍ QUYẾT SỬA LỖI: Đưa sự kiện bắt chuột lên thẻ div ngoài cùng này */}
       <div 
         className={className} 
+        onMouseEnter={() => handleHover(true)}
+        onMouseLeave={() => handleHover(false)}
         style={{ 
           display: 'flex', 
           flexDirection: 'column', 
           gap: '10px',
           border: 'none', 
-          outline: 'none'
+          outline: 'none',
+          position: 'relative' // Nên có relative để định vị Card lơ lửng nếu cần
         }}
       >
         
-        <div 
-          onMouseEnter={() => handleHover(true)}
-          onMouseLeave={() => handleHover(false)}
-          style={{ width: '100%', border: 'none' }} 
-        >
+        {/* Thẻ bọc Trigger giờ chỉ làm nhiệm vụ hiển thị */}
+        <div style={{ width: '100%', border: 'none' }}>
           {trigger}
         </div>
 
-        {/* 👇 BÍ QUYẾT Ở ĐÂY: Dùng {children && ...} để ẩn hoàn toàn thẻ div khi không có nội dung */}
         {children && (
           <div style={{ border: 'none' }}>
              {children}
