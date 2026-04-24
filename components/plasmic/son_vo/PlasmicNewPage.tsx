@@ -3137,7 +3137,7 @@ function PlasmicNewPage__RenderFunc(props: {
               <AnimatedLineOnScroll
                 className={classNames(
                   "__wab_instance",
-                  sty.animatedLine__dcuAu
+                  sty.animatedLineOnScroll__dcuAu
                 )}
                 color={"#FFFFFFB3"}
                 delay={0.2}
@@ -4177,7 +4177,10 @@ function PlasmicNewPage__RenderFunc(props: {
                 </RevealOnScroll>
               ) : null}
               <AnimatedLineOnScroll
-                className={classNames("__wab_instance", sty.animatedLine__srFc)}
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLineOnScroll__srFc
+                )}
                 color={"#FFFFFFB3"}
                 delay={0.2}
                 duration={1.2}
@@ -5614,7 +5617,7 @@ function PlasmicNewPage__RenderFunc(props: {
               <AnimatedLineOnScroll
                 className={classNames(
                   "__wab_instance",
-                  sty.animatedLine__y4Ogn
+                  sty.animatedLineOnScroll__y4Ogn
                 )}
                 color={"#FFFFFFB3"}
                 delay={0.2}
@@ -7403,7 +7406,10 @@ function PlasmicNewPage__RenderFunc(props: {
                 </RevealOnScroll>
               ) : null}
               <AnimatedLineOnScroll
-                className={classNames("__wab_instance", sty.animatedLine__k0Es)}
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLineOnScroll__k0Es
+                )}
                 color={"#FFFFFFB3"}
                 delay={0.2}
                 duration={1.2}
@@ -8373,7 +8379,7 @@ function PlasmicNewPage__RenderFunc(props: {
               <AnimatedLineOnScroll
                 className={classNames(
                   "__wab_instance",
-                  sty.animatedLine__vNk4H
+                  sty.animatedLineOnScroll__vNk4H
                 )}
                 color={"#FFFFFFB3"}
                 delay={0.2}

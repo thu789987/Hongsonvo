@@ -1823,7 +1823,7 @@
   margin-top: 0px;
   min-height: 0;
 }
-.animatedLine__dcuAu:global(.__wab_instance) {
+.animatedLineOnScroll__dcuAu:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   width: 100%;
@@ -2347,7 +2347,7 @@
   min-width: 0;
   border-radius: 10px;
 }
-.animatedLine__srFc:global(.__wab_instance) {
+.animatedLineOnScroll__srFc:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   width: 100%;
@@ -3016,7 +3016,7 @@
     top: auto;
   }
 }
-.animatedLine__y4Ogn:global(.__wab_instance) {
+.animatedLineOnScroll__y4Ogn:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   width: 100%;
@@ -3798,7 +3798,7 @@
   min-width: 0;
   border-radius: 10px;
 }
-.animatedLine__k0Es:global(.__wab_instance) {
+.animatedLineOnScroll__k0Es:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   width: 100%;
@@ -4390,7 +4390,7 @@
     top: auto;
   }
 }
-.animatedLine__vNk4H:global(.__wab_instance) {
+.animatedLineOnScroll__vNk4H:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
   width: 100%;

@@ -11,7 +11,13 @@
   justify-content: flex-start;
   position: relative;
   width: 100%;
+  transition-property: all;
+  transition-duration: 300s;
+  transition-timing-function: ease-out;
   min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 300s;
 }
 .image {
   height: auto;
