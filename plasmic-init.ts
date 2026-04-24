@@ -503,6 +503,7 @@ PLASMIC.registerComponent(CursorHoverWrapper as any, {
 PLASMIC.registerComponent(AnimatedLineOnScroll, {
   name: "AnimatedLineOnScroll",
   displayName: "Animated Line", // Tên hiển thị đẹp trong Studio
+  importPath: "./components/AnimatedLineOnScroll",
   props: {
     color: {
       type: "color",
