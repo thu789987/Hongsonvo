@@ -47,6 +47,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import { CustomCursor } from "./components/CustomCursor";
 import { CursorHoverWrapper } from "./components/CursorHoverWrapper"; // Thêm dòng này
 import { AnimatedLineOnScroll } from "./components/AnimatedLineOnScroll"; // Nhớ trỏ đúng đường dẫn file của bạn
+import { registerComponent } from '@plasmicapp/react-web/lib/host';
+import { HoverVariantWrapper } from './components/HoverVariantWrapper';
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -518,6 +520,38 @@ PLASMIC.registerComponent(AnimatedLineOnScroll, {
       type: "number",
       defaultValue: 0,
       description: "Thời gian chờ trước khi chạy (giây)",
+    },
+  },
+});
+
+registerComponent(HoverVariantWrapper, {
+  name: 'HoverVariantWrapper',
+  displayName: 'Hover Variant Switcher',
+  props: {
+    children: {
+      type: 'slot',
+      defaultValue: {
+        type: 'text',
+        value: 'Thả component có variant vào đây',
+      },
+    },
+    variantGroupName: {
+      type: 'string',
+      displayName: 'Variant Group Prop Name',
+      description: 'Tên của prop variant (thường là "variant")',
+      defaultValue: 'variant',
+    },
+    baseVariant: {
+      type: 'string',
+      displayName: 'Base Variant Name',
+      description: 'Tên variant lúc không hover (VD: base)',
+      defaultValue: 'base',
+    },
+    hoverVariant: {
+      type: 'string',
+      displayName: 'Hover Variant Name',
+      description: 'Tên variant lúc hover (VD: project 1)',
+      defaultValue: 'project 1',
     },
   },
 });

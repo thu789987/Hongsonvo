@@ -305,7 +305,10 @@ function PlasmicCardExperience__RenderFunc(props: {
         projectcss.plasmic_mixins,
         styleTokensClassNames,
         sty.root,
-        { [sty.rootproject1]: hasVariant($state, "project1", "project1") }
+        {
+          [sty.rootproject1]: hasVariant($state, "project1", "project1"),
+          [sty.rootproject2]: hasVariant($state, "project2", "project2")
+        }
       )}
     >
       <HoverController
@@ -316,6 +319,11 @@ function PlasmicCardExperience__RenderFunc(props: {
             $state,
             "project1",
             "project1"
+          ),
+          [sty.hoverControllerproject2]: hasVariant(
+            $state,
+            "project2",
+            "project2"
           )
         })}
         onHoverChange={async isHovered => {

@@ -24,7 +24,7 @@
   display: flex;
   position: relative;
   align-self: stretch;
-  overflow: hidden;
+  overflow: visible;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -122,6 +122,24 @@
   -webkit-transition-timing-function: ease-in-out;
   -webkit-transition-duration: 600ms;
 }
+.freeBox__vui4C {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  transition-property: all;
+  transition-duration: 300s;
+  transition-timing-function: ease-in-out;
+  min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 300s;
+  padding: 0px;
+}
 .htmlVideo:global(.__wab_instance) {
   pointer-events: auto;
   height: auto;
@@ -153,6 +171,13 @@
   top: 0;
   right: 0;
   bottom: 0;
+  transition-property: all;
+  transition-duration: 300s;
+  transition-timing-function: ease-in-out;
+  z-index: 10;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 300s;
   padding: 0px;
 }
 .freeBoxproject1__qDOz20FZ {
@@ -167,6 +192,7 @@
   bottom: 0;
   width: auto;
   background: #0000004d;
+  z-index: 1;
   padding: 0px;
 }
 .freeBox__hrNtM {
@@ -182,6 +208,7 @@
   left: auto;
   right: auto;
   overflow: hidden;
+  transform: none;
   padding: 0px;
 }
 .freeBoxproject1__hrNtMz20FZ {
@@ -195,7 +222,6 @@
 }
 .img__yMKni {
   object-fit: cover;
-  max-width: 100%;
   width: 100%;
   position: absolute;
   left: 0;
@@ -204,6 +230,7 @@
   transition-property: all;
   transition-duration: 600ms;
   transition-timing-function: ease-in;
+  max-width: 100%;
   min-width: 0;
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in;
