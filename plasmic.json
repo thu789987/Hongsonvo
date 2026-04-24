@@ -2472,6 +2472,12 @@
           "name": "CursorHoverWrapper",
           "displayName": "CursorHoverWrapper",
           "componentImportPath": "./components/CursorHoverWrapper"
+        },
+        {
+          "id": "Al7stYh33MDE",
+          "name": "AnimatedLineOnScroll",
+          "displayName": "AnimatedLineOnScroll",
+          "componentImportPath": "./components/AnimatedLineOnScroll"
         }
       ],
       "customFunctions": []
