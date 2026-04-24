@@ -527,6 +527,7 @@ PLASMIC.registerComponent(AnimatedLineOnScroll, {
 registerComponent(HoverVariantWrapper, {
   name: 'HoverVariantWrapper',
   displayName: 'Hover Variant Switcher',
+  importPath: './components/HoverVariantWrapper', // Thêm dòng này vào! (Sửa lại đường dẫn nếu file của bạn nằm ở thư mục khác)
   props: {
     children: {
       type: 'slot',
