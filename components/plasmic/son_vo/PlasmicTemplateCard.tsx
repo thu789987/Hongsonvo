@@ -562,13 +562,26 @@ function PlasmicTemplateCard__RenderFunc(props: {
           <div
             data-plasmic-name={"templateName"}
             data-plasmic-override={overrides.templateName}
-            className={classNames(projectcss.all, sty.templateName)}
+            className={classNames(projectcss.all, sty.templateName, {
+              [sty.templateNameproject1]: hasVariant(
+                $state,
+                "project1",
+                "project1"
+              )
+            })}
           >
             <div
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__dZw7R
+                sty.text__dZw7R,
+                {
+                  [sty.textproject1__dZw7Rz20FZ]: hasVariant(
+                    $state,
+                    "project1",
+                    "project1"
+                  )
+                }
               )}
             >
               <React.Fragment>
@@ -592,7 +605,13 @@ function PlasmicTemplateCard__RenderFunc(props: {
         <div
           data-plasmic-name={"container10"}
           data-plasmic-override={overrides.container10}
-          className={classNames(projectcss.all, sty.container10)}
+          className={classNames(projectcss.all, sty.container10, {
+            [sty.container10project1]: hasVariant(
+              $state,
+              "project1",
+              "project1"
+            )
+          })}
         >
           <div className={classNames(projectcss.all, sty.freeBox__xuawq)}>
             {(() => {

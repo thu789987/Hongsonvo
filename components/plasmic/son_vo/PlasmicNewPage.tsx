@@ -3139,9 +3139,9 @@ function PlasmicNewPage__RenderFunc(props: {
                   "__wab_instance",
                   sty.animatedLine__dcuAu
                 )}
-                color={"#FFFFFFCC"}
-                delay={0.5}
-                duration={1.6}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
               />
 
               {(() => {
@@ -4178,9 +4178,9 @@ function PlasmicNewPage__RenderFunc(props: {
               ) : null}
               <AnimatedLineOnScroll
                 className={classNames("__wab_instance", sty.animatedLine__srFc)}
-                color={"#FFFFFFCC"}
-                delay={0.5}
-                duration={1.6}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
               />
 
               {(() => {
@@ -5616,9 +5616,9 @@ function PlasmicNewPage__RenderFunc(props: {
                   "__wab_instance",
                   sty.animatedLine__y4Ogn
                 )}
-                color={"#FFFFFFCC"}
-                delay={1}
-                duration={1.6}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
               />
 
               {(() => {
@@ -7404,9 +7404,9 @@ function PlasmicNewPage__RenderFunc(props: {
               ) : null}
               <AnimatedLineOnScroll
                 className={classNames("__wab_instance", sty.animatedLine__k0Es)}
-                color={"#FFFFFFCC"}
-                delay={0.5}
-                duration={1.6}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
               />
 
               {(() => {
@@ -8375,9 +8375,9 @@ function PlasmicNewPage__RenderFunc(props: {
                   "__wab_instance",
                   sty.animatedLine__vNk4H
                 )}
-                color={"#FFFFFFCC"}
-                delay={0.5}
-                duration={1.6}
+                color={"#FFFFFFB3"}
+                delay={0.2}
+                duration={1.2}
               />
 
               {(() => {
