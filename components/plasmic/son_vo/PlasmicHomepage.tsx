@@ -1918,21 +1918,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             }
                           })()}
                           link={`/works/${currentItem.Slug}`}
-                          project1={(() => {
-                            try {
-                              return $ctx.hoverData?.isHovered
-                                ? "Project 1"
-                                : "Base";
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return [];
-                              }
-                              throw e;
-                            }
-                          })()}
+                          project1={undefined}
                           tag1={(() => {
                             try {
                               return (
