@@ -12,6 +12,7 @@
   background: none;
   opacity: 1;
   position: relative;
+  flex-shrink: 1;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
   padding: 60px;
@@ -101,7 +102,7 @@
   height: auto;
   display: flex;
   position: relative;
-  align-self: stretch;
+  align-self: auto;
   flex-direction: column;
   row-gap: 8px;
   align-items: center;
