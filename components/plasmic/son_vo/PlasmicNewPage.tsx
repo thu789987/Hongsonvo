@@ -2064,25 +2064,28 @@ function PlasmicNewPage__RenderFunc(props: {
                                 sty.payJustNowIsSouthAfricasLeadingBuyNowPay10
                               )}
                             >
-                              <React.Fragment>
-                                {(() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return "Đang đợi tham số...";
-                                  const list = $queries.allList?.data || [];
-                                  const currentItem = list.find(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  return (
-                                    currentItem?.["H2_1_H1_1_content"] ||
-                                    "Không tìm thấy bài"
-                                  );
-                                })()}
-                              </React.Fragment>
+                              <div
+                                className={projectcss.__wab_expr_html_text}
+                                dangerouslySetInnerHTML={{
+                                  __html: (() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = $queries.allList?.data || [];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item.id == pageId ||
+                                        item.Id == pageId ||
+                                        item.slug == pageId ||
+                                        item.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H2_1_H1_1_content"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()
+                                }}
+                              />
                             </div>
                           ) : null}
                           {(() => {
