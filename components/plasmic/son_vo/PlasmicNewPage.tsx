@@ -80,6 +80,7 @@ import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTY
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import { AnimatedLineOnScroll } from "../../AnimatedLineOnScroll"; // plasmic-import: Al7stYh33MDE/codeComponent
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
+import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectModule
@@ -396,8 +397,10 @@ export type PlasmicNewPage__OverridesType = {
   section09?: Flex__<"div">;
   theWebsiteBecameAnImportantSpaceToShowcase?: Flex__<"div">;
   section10?: Flex__<"div">;
+  title3?: Flex__<"div">;
   prevous?: Flex__<typeof TemplateCard>;
   nExt?: Flex__<typeof TemplateCard>;
+  section?: Flex__<typeof Section>;
 };
 
 export interface DefaultNewPageProps {}
@@ -9698,215 +9701,250 @@ function PlasmicNewPage__RenderFunc(props: {
                   className={classNames("__wab_instance", sty.lineBg__ijLt7)}
                 />
               </div>
-              <RevealOnScroll
-                blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll__x90PK
-                )}
-                delay={0}
-                duration={0.8}
-                yOffset={50}
-              >
-                <div
-                  data-plasmic-name={"section9"}
-                  data-plasmic-override={overrides.section9}
-                  className={classNames(projectcss.all, sty.section9)}
+              {(() => {
+                try {
+                  return (() => {
+                    const pageId = $ctx.params.id || $ctx.params.Slug;
+                    if (!pageId) return false;
+                    const list = $queries.allList?.data || [];
+                    const currentItem = list.find(
+                      item =>
+                        item.id == pageId ||
+                        item.Id == pageId ||
+                        item.slug == pageId ||
+                        item.Slug == pageId
+                    );
+                    if (!currentItem) return false;
+                    const checkImage = img =>
+                      img && img.toString().trim() !== "";
+                    const hasImg11 = checkImage(currentItem["Image 11"]);
+                    const hasImg12 = checkImage(currentItem["Image 12"]);
+                    const hasImg13 = checkImage(currentItem["Image 13"]);
+                    return hasImg11 || hasImg12 || hasImg13;
+                  })();
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return true;
+                  }
+                  throw e;
+                }
+              })() ? (
+                <RevealOnScroll
+                  blurAmount={5}
+                  className={classNames(
+                    "__wab_instance",
+                    sty.revealOnScroll__x90PK
+                  )}
+                  delay={0}
+                  duration={0.8}
+                  yOffset={50}
                 >
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 11"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
-                      }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image11"}
-                      data-plasmic-override={overrides.image11}
-                      className={classNames("__wab_instance", sty.image11)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 11"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
-                          }
-                          throw e;
+                  <div
+                    data-plasmic-name={"section9"}
+                    data-plasmic-override={overrides.section9}
+                    className={classNames(projectcss.all, sty.section9)}
+                  >
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 11"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 12"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image12"}
-                      data-plasmic-override={overrides.image12}
-                      className={classNames("__wab_instance", sty.image12)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 12"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image11"}
+                        data-plasmic-override={overrides.image11}
+                        className={classNames("__wab_instance", sty.image11)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 11"] ||
+                                "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
                           }
-                          throw e;
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 12"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                  {(() => {
-                    try {
-                      return (() => {
-                        const pageId = $ctx.params.id || $ctx.params.Slug;
-                        if (!pageId) return false;
-                        const list = $queries.allList?.data || [];
-                        const currentItem = list.find(
-                          item =>
-                            item.id == pageId ||
-                            item.Id == pageId ||
-                            item.slug == pageId ||
-                            item.Slug == pageId
-                        );
-                        const content = currentItem?.["Image 13"];
-                        return content && content.toString().trim() !== "";
-                      })();
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return true;
+                        throw e;
                       }
-                      throw e;
-                    }
-                  })() ? (
-                    <GridDistortion
-                      data-plasmic-name={"image13"}
-                      data-plasmic-override={overrides.image13}
-                      className={classNames("__wab_instance", sty.image13)}
-                      enableEffect={true}
-                      grid={40}
-                      imageSrc={(() => {
-                        try {
-                          return (() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            if (!pageId) return "Đang đợi tham số...";
-                            const list = $queries.allList?.data || [];
-                            const currentItem = list.find(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            return (
-                              currentItem?.["Image 13"] || "Không tìm thấy bài"
-                            );
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "https://picsum.photos/1920/1080";
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image12"}
+                        data-plasmic-override={overrides.image12}
+                        className={classNames("__wab_instance", sty.image12)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 12"] ||
+                                "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
                           }
-                          throw e;
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                    {(() => {
+                      try {
+                        return (() => {
+                          const pageId = $ctx.params.id || $ctx.params.Slug;
+                          if (!pageId) return false;
+                          const list = $queries.allList?.data || [];
+                          const currentItem = list.find(
+                            item =>
+                              item.id == pageId ||
+                              item.Id == pageId ||
+                              item.slug == pageId ||
+                              item.Slug == pageId
+                          );
+                          const content = currentItem?.["Image 13"];
+                          return content && content.toString().trim() !== "";
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return true;
                         }
-                      })()}
-                      mouse={0.1}
-                      relaxation={0.9}
-                      strength={0.5}
-                    />
-                  ) : null}
-                </div>
-              </RevealOnScroll>
+                        throw e;
+                      }
+                    })() ? (
+                      <GridDistortion
+                        data-plasmic-name={"image13"}
+                        data-plasmic-override={overrides.image13}
+                        className={classNames("__wab_instance", sty.image13)}
+                        enableEffect={true}
+                        grid={40}
+                        imageSrc={(() => {
+                          try {
+                            return (() => {
+                              const pageId = $ctx.params.id || $ctx.params.Slug;
+                              if (!pageId) return "Đang đợi tham số...";
+                              const list = $queries.allList?.data || [];
+                              const currentItem = list.find(
+                                item =>
+                                  item.id == pageId ||
+                                  item.Id == pageId ||
+                                  item.slug == pageId ||
+                                  item.Slug == pageId
+                              );
+                              return (
+                                currentItem?.["Image 13"] ||
+                                "Không tìm thấy bài"
+                              );
+                            })();
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "https://picsum.photos/1920/1080";
+                            }
+                            throw e;
+                          }
+                        })()}
+                        mouse={0.1}
+                        relaxation={0.9}
+                        strength={0.5}
+                      />
+                    ) : null}
+                  </div>
+                </RevealOnScroll>
+              ) : null}
               {(() => {
                 try {
                   return (() => {
@@ -9960,6 +9998,30 @@ function PlasmicNewPage__RenderFunc(props: {
                 data-plasmic-override={overrides.section10}
                 className={classNames(projectcss.all, sty.section10)}
               >
+                <div
+                  data-plasmic-name={"title3"}
+                  data-plasmic-override={overrides.title3}
+                  className={classNames(projectcss.all, sty.title3)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ll6Ly
+                    )}
+                  >
+                    {"WORKS"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__fw86A
+                    )}
+                  >
+                    {"\u2014 up until yesterday"}
+                  </div>
+                </div>
                 <RevealOnScroll
                   blurAmount={5}
                   className={classNames(
@@ -11115,6 +11177,52 @@ function PlasmicNewPage__RenderFunc(props: {
                 </RevealOnScroll>
               </div>
             </div>
+            <RevealOnScroll
+              blurAmount={5}
+              className={classNames(
+                "__wab_instance",
+                sty.revealOnScroll__rt8H5
+              )}
+              delay={0}
+              duration={1.6}
+              yOffset={100}
+            >
+              <Section
+                data-plasmic-name={"section"}
+                data-plasmic-override={overrides.section}
+                className={classNames("__wab_instance", sty.section)}
+                size={"fullContentWidth"}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__oCcu)}>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__hjOTs)}
+                  >
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.h1__bLa1s,
+                        projectcss.__wab_text,
+                        sty.h1__z3Aye
+                      )}
+                    >
+                      {"WITH ME\n\r"}
+                    </h1>
+                    <h1
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.h1__bLa1s,
+                        projectcss.__wab_text,
+                        sty.h1__r2B6Q
+                      )}
+                    >
+                      {"Write the next story\r\n\r"}
+                    </h1>
+                  </div>
+                </div>
+              </Section>
+            </RevealOnScroll>
             <FotterMain
               className={classNames("__wab_instance", sty.fotterMain__fvD6D)}
             />
@@ -11400,8 +11508,10 @@ const PlasmicDescendants = {
     "section09",
     "theWebsiteBecameAnImportantSpaceToShowcase",
     "section10",
+    "title3",
     "prevous",
-    "nExt"
+    "nExt",
+    "section"
   ],
   globalLoading: ["globalLoading"],
   scrollToTop: ["scrollToTop"],
@@ -11666,8 +11776,10 @@ const PlasmicDescendants = {
     "section09",
     "theWebsiteBecameAnImportantSpaceToShowcase",
     "section10",
+    "title3",
     "prevous",
-    "nExt"
+    "nExt",
+    "section"
   ],
   scrollContext: ["scrollContext", "newMenu2"],
   newMenu2: ["newMenu2"],
@@ -12931,9 +13043,11 @@ const PlasmicDescendants = {
   theWebsiteBecameAnImportantSpaceToShowcase: [
     "theWebsiteBecameAnImportantSpaceToShowcase"
   ],
-  section10: ["section10", "prevous", "nExt"],
+  section10: ["section10", "title3", "prevous", "nExt"],
+  title3: ["title3"],
   prevous: ["prevous"],
-  nExt: ["nExt"]
+  nExt: ["nExt"],
+  section: ["section"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -13202,8 +13316,10 @@ type NodeDefaultElementType = {
   section09: "div";
   theWebsiteBecameAnImportantSpaceToShowcase: "div";
   section10: "div";
+  title3: "div";
   prevous: typeof TemplateCard;
   nExt: typeof TemplateCard;
+  section: typeof Section;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -13715,8 +13831,10 @@ export const PlasmicNewPage = Object.assign(
       "theWebsiteBecameAnImportantSpaceToShowcase"
     ),
     section10: makeNodeComponent("section10"),
+    title3: makeNodeComponent("title3"),
     prevous: makeNodeComponent("prevous"),
     nExt: makeNodeComponent("nExt"),
+    section: makeNodeComponent("section"),
 
     // Metadata about props expected for PlasmicNewPage
     internalVariantProps: PlasmicNewPage__VariantProps,
