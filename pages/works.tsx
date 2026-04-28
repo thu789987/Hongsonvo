@@ -13,7 +13,8 @@ import { extractPlasmicQueryData } from "@plasmicapp/react-web/lib/prepass";
 export const getStaticProps: GetStaticProps = async context => {
   const queryCache = await extractPlasmicQueryData(<PlasmicWorks />);
   return {
-    props: { queryCache }
+    props: { queryCache },
+    revalidate: 3600,
   };
 };
 

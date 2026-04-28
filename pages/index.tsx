@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps = async context => {
   const queryCache = await extractPlasmicQueryData(<PlasmicHomepage />);
   return {
     props: { queryCache },
-    revalidate: 60,
+    revalidate: 3600,
   };
 };
 

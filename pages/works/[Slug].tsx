@@ -20,7 +20,8 @@ export const getStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async context => {
   const queryCache = await extractPlasmicQueryData(<PlasmicNewPage />);
   return {
-    props: { queryCache }
+    props: { queryCache },
+        revalidate: 3600,
   };
 };
 
