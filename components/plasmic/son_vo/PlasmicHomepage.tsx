@@ -2082,9 +2082,11 @@ function PlasmicHomepage__RenderFunc(props: {
             />
 
             <div className={classNames(projectcss.all, sty.freeBox__vPq2)}>
-              <LineBg
-                className={classNames("__wab_instance", sty.lineBg__yYWzm)}
-              />
+              <div className={classNames(projectcss.all, sty.freeBox__dhaVw)}>
+                <LineBg
+                  className={classNames("__wab_instance", sty.lineBg__yYWzm)}
+                />
+              </div>
             </div>
           </SmoothScroll>
         </div>
