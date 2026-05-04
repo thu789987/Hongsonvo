@@ -49,6 +49,7 @@ import { CursorHoverWrapper } from "./components/CursorHoverWrapper"; // Thêm d
 import { AnimatedLineOnScroll } from "./components/AnimatedLineOnScroll"; // Nhớ trỏ đúng đường dẫn file của bạn
 import { registerComponent } from '@plasmicapp/react-web/lib/host';
 import { HoverVariantWrapper } from './components/HoverVariantWrapper';
+import { CachedAirtable } from "./components/CachedAirtable"; // Đảm bảo đường dẫn đúng
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -560,4 +561,28 @@ registerComponent(HoverVariantWrapper, {
       defaultValue: 'project1', // LƯU Ý: Với standalone variant, Plasmic thường bỏ dấu cách khi sinh code, ví dụ 'project 1' thành 'project1'
     },
   },
+});
+
+PLASMIC.registerComponent(CachedAirtable, {
+  name: "Cached Airtable Fetcher",
+  providesData: true,
+  props: {
+    baseId: {
+      type: "string",
+      displayName: "Base ID",
+      description: "Ví dụ: appXyZ123..."
+    },
+    tableName: {
+      type: "string",
+      displayName: "Table Name (Tên bảng)",
+      description: "Ví dụ: Products"
+    },
+    limit: {
+      type: "number",
+      defaultValue: 10
+    },
+    children: {
+      type: "slot"
+    }
+  }
 });
