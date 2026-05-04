@@ -43,7 +43,11 @@ export default async function handler(
         detail: errorText,
       });
     }
-
+    const params = new URLSearchParams({
+       maxRecords: String(safeLimit),
+       "sort[0][field]": "Order",
+        "sort[0][direction]": "asc",
+    });
     const json = await airtableRes.json();
 
     res.setHeader(
