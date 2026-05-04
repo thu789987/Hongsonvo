@@ -579,10 +579,22 @@ PLASMIC.registerComponent(CachedAirtable, {
     },
     limit: {
       type: "number",
+      displayName: "Limit",
       defaultValue: 10,
+    },
+    filterField: {
+      type: "string",
+      displayName: "Filter Field",
+      defaultValue: "",
+    },
+    filterValue: {
+      type: "string",
+      displayName: "Filter Value",
+      defaultValue: "",
     },
     children: {
       type: "slot",
+      displayName: "Children",
     },
   },
 });
