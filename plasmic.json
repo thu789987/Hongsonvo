@@ -2487,7 +2487,7 @@
         },
         {
           "id": "tDnPdfRHgNXX",
-          "name": "CachedAirtableFetcher",
+          "name": "CachedAirtable",
           "displayName": "CachedAirtableFetcher",
           "componentImportPath": "./components/CachedAirtable"
         }
