@@ -1,88 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import { DataProvider } from '@plasmicapp/loader-nextjs';
+import * as React from "react";
+import { DataProvider } from "@plasmicapp/host";
 
-const CACHE_DURATION = 3 * 60 * 60 * 1000; // 3 tiếng
-
-interface CachedAirtableProps {
-  children?: React.ReactNode;
-  className?: string;
-  baseId: string;
-  tableName: string;
+type CachedAirtableProps = {
+  baseId?: string;
+  tableName?: string;
   limit?: number;
-}
+  children?: React.ReactNode;
+};
 
-export function CachedAirtable({ 
-  children, 
-  className, 
-  baseId, 
-  tableName, 
-  limit = 10 
+export function CachedAirtable({
+  baseId,
+  tableName,
+  limit = 10,
+  children,
 }: CachedAirtableProps) {
-  console.log("=== KIỂM TRA TỪ TERMINAL ===");
-  console.log("1. Token:", process.env.NEXT_PUBLIC_AIRTABLE_PAT);
-  console.log("2. Base ID nhận được:", baseId);
-  console.log("3. Table Name nhận được:", tableName);
-  console.log("============================");
-  
-  const [data, setData] = useState<any[] | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [records, setRecords] = React.useState<any[]>([]);
 
-  useEffect(() => {
-    if (!baseId || !tableName) return;
+  React.useEffect(() => {
+    async function fetchData() {
+      if (!baseId || !tableName) return;
 
-    const cacheKey = `plasmic_airtable_${baseId}_${tableName}_${limit}`;
-    const now = Date.now();
+      const token = process.env.NEXT_PUBLIC_AIRTABLE_TOKEN;
 
-    // 1. KIỂM TRA TRONG Ổ CỨNG TRÌNH DUYỆT (localStorage)
-    const cachedString = window.localStorage.getItem(cacheKey);
-    
-    if (cachedString) {
-      const cachedItem = JSON.parse(cachedString);
-      
-      // Nếu có dữ liệu VÀ chưa quá 3 tiếng
-      if (now - cachedItem.timestamp < CACHE_DURATION) {
-        console.log("💎 Dùng dữ liệu từ LocalStorage (Bất tử F5)");
-        setData(cachedItem.data);
-        return; 
+      if (!token) {
+        console.warn("Missing Airtable token");
+        return;
       }
+
+      const res = await fetch(
+        `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(
+          tableName
+        )}?maxRecords=${limit}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      const json = await res.json();
+      setRecords(json.records || []);
     }
-
-    // 2. NẾU QUÁ 3 TIẾNG HOẶC CHƯA CÓ: Gọi Airtable
-    const fetchData = async () => {
-      try {
-        console.log("🚀 Vượt quá 3h hoặc chưa có data, đang gọi API mới...");
-        const token = process.env.NEXT_PUBLIC_AIRTABLE_PAT; 
-        
-        const res = await fetch(
-          `https://api.airtable.com/v0/${baseId}/${tableName}?maxRecords=${limit}`, 
-          { headers: { Authorization: `Bearer ${token}` } }
-        );
-
-        if (!res.ok) throw new Error("Lỗi gọi dữ liệu Airtable");
-
-        const json = await res.json();
-        
-        // 3. CẬP NHẬT VÀO LOCALSTORAGE
-        window.localStorage.setItem(cacheKey, JSON.stringify({
-          data: json.records,
-          timestamp: Date.now()
-        }));
-        
-        setData(json.records);
-
-      } catch (err: any) {
-        setError(err.message);
-      }
-    };
 
     fetchData();
   }, [baseId, tableName, limit]);
 
   return (
-    <DataProvider name="cachedData" data={data}>
-      <div className={className}>
-        {error ? <p style={{color: 'red'}}>{error}</p> : children}
-      </div>
+    <DataProvider name="airtableRecords" data={records}>
+      {children}
     </DataProvider>
   );
 }
