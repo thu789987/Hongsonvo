@@ -18,6 +18,11 @@ export function CachedAirtable({
   tableName, 
   limit = 10 
 }: CachedAirtableProps) {
+  console.log("=== KIỂM TRA TỪ TERMINAL ===");
+  console.log("1. Token:", process.env.NEXT_PUBLIC_AIRTABLE_PAT);
+  console.log("2. Base ID nhận được:", baseId);
+  console.log("3. Table Name nhận được:", tableName);
+  console.log("============================");
   
   const [data, setData] = useState<any[] | null>(null);
   const [error, setError] = useState<string | null>(null);
