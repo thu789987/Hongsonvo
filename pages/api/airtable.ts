@@ -45,7 +45,7 @@ export default async function handler(
     }
     const params = new URLSearchParams({
        maxRecords: String(safeLimit),
-       "sort[0][field]": "Order",
+       "sort[0][field]": "Id",
         "sort[0][direction]": "asc",
     });
     const json = await airtableRes.json();
