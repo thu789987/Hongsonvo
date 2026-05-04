@@ -51,3 +51,5 @@ export function CachedAirtable({
     </DataProvider>
   );
 }
+
+export { CachedAirtable as CachedAirtableFetcher };
