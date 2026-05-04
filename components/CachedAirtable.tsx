@@ -1,10 +1,13 @@
 import * as React from "react";
 import { DataProvider } from "@plasmicapp/host";
+import { useRouter } from "next/router";
 
 type CachedAirtableProps = {
   baseId?: string;
   tableName?: string;
   limit?: number;
+  filterField?: string;
+  filterValue?: string;
   children?: React.ReactNode;
 };
 
@@ -12,8 +15,17 @@ export function CachedAirtable({
   baseId,
   tableName,
   limit = 10,
+  filterField,
+  filterValue,
   children,
 }: CachedAirtableProps) {
+  const router = useRouter();
+
+  const slugFromUrl =
+    typeof router.query.slug === "string" ? router.query.slug : "";
+
+  const finalFilterValue = filterValue || slugFromUrl;
+
   const [records, setRecords] = React.useState<any[]>([]);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -31,6 +43,11 @@ export function CachedAirtable({
           tableName,
           limit: String(limit),
         });
+
+        if (filterField && finalFilterValue) {
+          params.set("filterField", filterField);
+          params.set("filterValue", finalFilterValue);
+        }
 
         const res = await fetch(`/api/airtable?${params.toString()}`);
 
@@ -51,19 +68,18 @@ export function CachedAirtable({
     }
 
     fetchData();
-  }, [baseId, tableName, limit]);
+  }, [baseId, tableName, limit, filterField, finalFilterValue]);
 
   return (
-    <DataProvider
-      name="cachedData"
-      data={records}
-    >
+    <DataProvider name="cachedData" data={records}>
       <DataProvider
         name="cachedDataState"
         data={{
           loading,
           error,
           count: records.length,
+          firstRecord: records[0] || null,
+          slug: slugFromUrl,
         }}
       >
         {children}
