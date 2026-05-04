@@ -2690,9 +2690,9 @@
   max-width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
-  row-gap: 24px;
+  row-gap: 80px;
   min-width: 0;
-  padding: 8px;
+  padding: 0px;
 }
 .freeBox__avlwZ {
   animation: none;
