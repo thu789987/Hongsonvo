@@ -80,7 +80,7 @@ import { RevealWidthOnScroll } from "../../RevealWidthOnScroll"; // plasmic-impo
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
 import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
-import { CachedAirtableFetcher } from "../../CachedAirtable"; // plasmic-import: tDnPdfRHgNXX/codeComponent
+import { CachedAirtable as CachedAirtableFetcher } from "../../CachedAirtable"; // plasmic-import: tDnPdfRHgNXX/codeComponent
 import { HoverLogoCard } from "../../HoverLogoCard"; // plasmic-import: 8gew1WdMY0jF/codeComponent
 import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUtTr/component
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
