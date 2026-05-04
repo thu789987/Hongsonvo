@@ -2484,6 +2484,12 @@
           "name": "HoverVariantWrapper",
           "displayName": "HoverVariantWrapper",
           "componentImportPath": "./components/HoverVariantWrapper"
+        },
+        {
+          "id": "tDnPdfRHgNXX",
+          "name": "CachedAirtableFetcher",
+          "displayName": "CachedAirtableFetcher",
+          "componentImportPath": "./components/CachedAirtable"
         }
       ],
       "customFunctions": []

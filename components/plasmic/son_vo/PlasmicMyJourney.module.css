@@ -2735,37 +2735,55 @@
   height: 100%;
   min-height: 0;
 }
-.img__ngBMw {
+.cachedAirtableFetcher:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.img__ciMu {
   animation: none;
+  object-fit: cover;
   max-width: 100%;
   position: relative;
   left: auto;
   top: auto;
-  width: 240px;
+  width: auto;
   height: auto;
   bottom: auto;
   right: auto;
-  object-fit: cover;
-  box-shadow: none;
-  border-radius: 8px;
 }
-.img__ngBMw > picture > img {
+.img__ciMu > picture > img {
   object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .img__ciMu {
+    left: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+  }
 }
 .img___6Mgu1 {
   animation: none;
   object-fit: cover;
   max-width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative;
+  left: auto;
+  top: auto;
   width: auto;
   height: auto;
-  bottom: 0;
-  right: 0;
+  bottom: auto;
+  right: auto;
 }
 .img___6Mgu1 > picture > img {
   object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .img___6Mgu1 {
+    left: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+  }
 }
 .hoverLogoCard__l9ZaV:global(.__wab_instance) {
   animation: none;
