@@ -80,6 +80,7 @@ import { RevealWidthOnScroll } from "../../RevealWidthOnScroll"; // plasmic-impo
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
 import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
+import { CachedAirtableFetcher } from "../../CachedAirtable"; // plasmic-import: tDnPdfRHgNXX/codeComponent
 import { HoverLogoCard } from "../../HoverLogoCard"; // plasmic-import: 8gew1WdMY0jF/codeComponent
 import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUtTr/component
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
@@ -232,6 +233,7 @@ export type PlasmicMyJourney__OverridesType = {
   container33?: Flex__<"div">;
   subContainer4?: Flex__<"div">;
   infiniteScroll?: Flex__<typeof InfiniteScroll>;
+  cachedAirtableFetcher?: Flex__<typeof CachedAirtableFetcher>;
   cardWhatAboutUs7?: Flex__<typeof CardWhatAboutUs>;
 };
 
@@ -2393,59 +2395,55 @@ function PlasmicMyJourney__RenderFunc(props: {
                             showFade={false}
                             speed={100}
                           >
-                            {(_par =>
-                              !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                              (() => {
-                                try {
-                                  return $queries.works.data;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return [];
-                                  }
-                                  throw e;
-                                }
-                              })()
-                            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                              const currentItem = __plasmic_item_0;
-                              const currentIndex = __plasmic_idx_0;
-                              return (
-                                <PlasmicImg__
-                                  alt={""}
-                                  className={classNames(sty.img__ngBMw)}
-                                  displayHeight={"auto"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"240px"}
-                                  key={currentIndex}
-                                  loading={"lazy"}
-                                  src={(() => {
-                                    try {
-                                      return currentItem["Main Image"];
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return {
-                                          src: "/plasmic/son_vo/images/_2Png.png",
-                                          fullWidth: 6048,
-                                          fullHeight: 4024,
-                                          aspectRatio: undefined
-                                        };
+                            <CachedAirtableFetcher
+                              data-plasmic-name={"cachedAirtableFetcher"}
+                              data-plasmic-override={
+                                overrides.cachedAirtableFetcher
+                              }
+                              baseId={"appn8wTpF837qDigS"}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.cachedAirtableFetcher
+                              )}
+                              limit={10}
+                              tableName={"Assets"}
+                            >
+                              <DataCtxReader__>
+                                {$ctx => (
+                                  <PlasmicImg__
+                                    alt={""}
+                                    className={classNames(sty.img__ciMu)}
+                                    displayHeight={"auto"}
+                                    displayMaxHeight={"none"}
+                                    displayMaxWidth={"100%"}
+                                    displayMinHeight={"0"}
+                                    displayMinWidth={"0"}
+                                    displayWidth={"auto"}
+                                    loading={"lazy"}
+                                    src={(() => {
+                                      try {
+                                        return undefined$ctx.cachedData?.[0]
+                                          ?.fields?.["Main Image"]?.[0]?.url;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return {
+                                            src: "/plasmic/son_vo/images/_2Png.png",
+                                            fullWidth: 6048,
+                                            fullHeight: 4024,
+                                            aspectRatio: undefined
+                                          };
+                                        }
+                                        throw e;
                                       }
-                                      throw e;
-                                    }
-                                  })()}
-                                />
-                              );
-                            })}
+                                    })()}
+                                  />
+                                )}
+                              </DataCtxReader__>
+                            </CachedAirtableFetcher>
                           </InfiniteScroll>
                         </div>
                         <PlasmicImg__
@@ -2882,6 +2880,7 @@ const PlasmicDescendants = {
     "container33",
     "subContainer4",
     "infiniteScroll",
+    "cachedAirtableFetcher",
     "cardWhatAboutUs7"
   ],
   scrollToTop: ["scrollToTop"],
@@ -2971,6 +2970,7 @@ const PlasmicDescendants = {
     "container33",
     "subContainer4",
     "infiniteScroll",
+    "cachedAirtableFetcher",
     "cardWhatAboutUs7"
   ],
   scrollDetector: ["scrollDetector", "newMenu"],
@@ -3290,6 +3290,7 @@ const PlasmicDescendants = {
     "container33",
     "subContainer4",
     "infiniteScroll",
+    "cachedAirtableFetcher",
     "cardWhatAboutUs7"
   ],
   heading6: [
@@ -3332,10 +3333,12 @@ const PlasmicDescendants = {
     "container33",
     "subContainer4",
     "infiniteScroll",
+    "cachedAirtableFetcher",
     "cardWhatAboutUs7"
   ],
-  subContainer4: ["subContainer4", "infiniteScroll"],
-  infiniteScroll: ["infiniteScroll"],
+  subContainer4: ["subContainer4", "infiniteScroll", "cachedAirtableFetcher"],
+  infiniteScroll: ["infiniteScroll", "cachedAirtableFetcher"],
+  cachedAirtableFetcher: ["cachedAirtableFetcher"],
   cardWhatAboutUs7: ["cardWhatAboutUs7"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -3429,6 +3432,7 @@ type NodeDefaultElementType = {
   container33: "div";
   subContainer4: "div";
   infiniteScroll: typeof InfiniteScroll;
+  cachedAirtableFetcher: typeof CachedAirtableFetcher;
   cardWhatAboutUs7: typeof CardWhatAboutUs;
 };
 
@@ -3642,6 +3646,7 @@ export const PlasmicMyJourney = Object.assign(
     container33: makeNodeComponent("container33"),
     subContainer4: makeNodeComponent("subContainer4"),
     infiniteScroll: makeNodeComponent("infiniteScroll"),
+    cachedAirtableFetcher: makeNodeComponent("cachedAirtableFetcher"),
     cardWhatAboutUs7: makeNodeComponent("cardWhatAboutUs7"),
 
     // Metadata about props expected for PlasmicMyJourney
