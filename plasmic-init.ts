@@ -565,24 +565,24 @@ registerComponent(HoverVariantWrapper, {
 
 PLASMIC.registerComponent(CachedAirtable, {
   name: "CachedAirtableFetcher",
-  importPath: "./components/CachedAirtable", // <-- Kiểm tra dấu phẩy ở đây
-  importName: "CachedAirtable", // THÊM DÒNG NÀY: Để Plasmic biết tên hàm thật trong file là gì
-  providesData: true,                        // <-- Kiểm tra dấu phẩy ở đây
+  importPath: "./components/CachedAirtable",
+  importName: "CachedAirtable",
+  providesData: true,
   props: {
     baseId: {
       type: "string",
-      displayName: "Base ID"
-    },                                       // <-- Kiểm tra dấu phẩy ở đây
+      displayName: "Base ID",
+    },
     tableName: {
       type: "string",
-      displayName: "Table Name"
-    },                                       // <-- Kiểm tra dấu phẩy ở đây
+      displayName: "Table Name",
+    },
     limit: {
       type: "number",
-      defaultValue: 10
-    },                                       // <-- Kiểm tra dấu phẩy ở đây
+      defaultValue: 10,
+    },
     children: {
-      type: "slot"
-    }                                        // Dòng cuối cùng của props không bắt buộc nhưng nên có dấu phẩy
-  }                                          // Kết thúc props
+      type: "slot",
+    },
+  },
 });
