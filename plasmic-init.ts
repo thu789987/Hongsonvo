@@ -564,7 +564,7 @@ registerComponent(HoverVariantWrapper, {
 });
 
 PLASMIC.registerComponent(CachedAirtable, {
-  name: "Cached Airtable Fetcher",
+  name: "CachedAirtableFetcher",
   importPath: "./components/CachedAirtable", // <-- Kiểm tra dấu phẩy ở đây
   providesData: true,                        // <-- Kiểm tra dấu phẩy ở đây
   props: {
