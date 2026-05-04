@@ -15,39 +15,59 @@ export function CachedAirtable({
   children,
 }: CachedAirtableProps) {
   const [records, setRecords] = React.useState<any[]>([]);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     async function fetchData() {
       if (!baseId || !tableName) return;
 
-      const token = process.env.NEXT_PUBLIC_AIRTABLE_TOKEN;
+      try {
+        setLoading(true);
+        setError(null);
 
-      if (!token) {
-        console.warn("Missing Airtable token");
-        return;
-      }
+        const params = new URLSearchParams({
+          baseId,
+          tableName,
+          limit: String(limit),
+        });
 
-      const res = await fetch(
-        `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(
-          tableName
-        )}?maxRecords=${limit}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+        const res = await fetch(`/api/airtable?${params.toString()}`);
+
+        if (!res.ok) {
+          throw new Error(`API error: ${res.status}`);
         }
-      );
 
-      const json = await res.json();
-      setRecords(json.records || []);
+        const json = await res.json();
+
+        setRecords(json.records || []);
+      } catch (err: any) {
+        console.error("CachedAirtable error:", err);
+        setError(err?.message || "Unknown error");
+        setRecords([]);
+      } finally {
+        setLoading(false);
+      }
     }
 
     fetchData();
   }, [baseId, tableName, limit]);
 
   return (
-    <DataProvider name="airtableRecords" data={records}>
-      {children}
+    <DataProvider
+      name="cachedData"
+      data={records}
+    >
+      <DataProvider
+        name="cachedDataState"
+        data={{
+          loading,
+          error,
+          count: records.length,
+        }}
+      >
+        {children}
+      </DataProvider>
     </DataProvider>
   );
 }
