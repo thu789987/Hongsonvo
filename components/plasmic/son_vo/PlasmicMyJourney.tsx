@@ -379,7 +379,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                     <NewMenu
                       data-plasmic-name={"newMenu"}
                       data-plasmic-override={overrides.newMenu}
-                      activePage={"contact"}
+                      activePage={"myJourney"}
                       className={classNames("__wab_instance", sty.newMenu)}
                       headerTitle={"[ 2026 ]"}
                       scrolledState={(() => {
@@ -2568,7 +2568,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                             fullHeight: 700,
                             aspectRatio: undefined
                           }}
-                          number={"[ Oct 2016 - Feb 2020 ]"}
+                          number={"[ Oct 2020 - Feb 2022 ]"}
                           project1={(() => {
                             try {
                               return undefined;
