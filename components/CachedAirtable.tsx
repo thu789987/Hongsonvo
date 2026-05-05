@@ -45,9 +45,9 @@ export function CachedAirtable({
           limit: String(limit),
         });
 
-        if (filterField && finalFilterValue) {
-          params.set("filterField", filterField);
-          params.set("filterValue", finalFilterValue);
+        if (filterField && finalFilterValue && filterField !== "undefined" && finalFilterValue !== "undefined") {
+        params.set("filterField", filterField);
+        params.set("filterValue", finalFilterValue);
         }
 
         const res = await fetch(`/api/airtable?${params.toString()}`);
