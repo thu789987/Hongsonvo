@@ -70,23 +70,7 @@ export function CachedAirtable({
 
   return (
     <div className="airtable-fetcher-debug-wrapper">
-      {/* PHẦN DEBUG HIỂN THỊ TRỰC TIẾP TỪ STATE (KHÔNG QUA PLASMIC) */}
-      <div style={{
-        padding: '5px', 
-        background: '#fff3cd', 
-        color: '#856404', 
-        fontSize: '10px',
-        border: '1px solid #ffeeba',
-        marginBottom: '10px',
-        zIndex: 9999,
-        position: 'relative'
-      }}>
-        <b>Debug Hệ Thống:</b><br/>
-        - Số lần Render: {renderCount.current}<br/>
-        - State Records: {records.length} bài viết<br/>
-        - Loading: {loading ? "Đang chạy..." : "Xong"}<br/>
-        - API URL check: {baseId ? "Có BaseID" : "Thiếu BaseID"}
-      </div>
+      {/* Bạn có thể xóa cái bảng vàng Debug đi được rồi, vì nó đã hoàn thành sứ mệnh lịch sử */}
 
       <DataProvider name="cachedData" data={records}>
         <DataProvider
@@ -98,10 +82,18 @@ export function CachedAirtable({
             firstRecord: records[0] || null,
           }}
         >
-          {/* ÉP RENDER LẠI KHI CÓ DỮ LIỆU */}
-          <React.Fragment key={records.length > 0 ? "has-data" : "no-data"}>
-             {children}
-          </React.Fragment>
+          {/* CÚ CHỐT HẠ NẰM Ở ĐÂY: Chỉ cho phép Plasmic vẽ giao diện khi data > 0 */}
+          {records.length > 0 ? (
+            children
+          ) : loading ? (
+            <div style={{ padding: "20px", textAlign: "center", color: "#666" }}>
+              Đang tải dữ liệu...
+            </div>
+          ) : (
+            <div style={{ padding: "20px", textAlign: "center", color: "red" }}>
+              Không tìm thấy dự án nào.
+            </div>
+          )}
         </DataProvider>
       </DataProvider>
     </div>
