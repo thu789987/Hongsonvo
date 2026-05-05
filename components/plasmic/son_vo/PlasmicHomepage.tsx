@@ -1884,7 +1884,10 @@ function PlasmicHomepage__RenderFunc(props: {
                             {(() => {
                               try {
                                 return (
-                                  "Count: " + ($ctx.cachedData?.length || 0)
+                                  "Count: " +
+                                  ($ctx.cachedDataState?.count ??
+                                    $ctx.cachedData?.length ??
+                                    0)
                                 );
                               } catch (e) {
                                 if (
@@ -1935,7 +1938,9 @@ function PlasmicHomepage__RenderFunc(props: {
                                 )}
                                 delay={(() => {
                                   try {
-                                    return 0.5 * $ctx.plasmicIndex;
+                                    return Number.isFinite(currentIndex)
+                                      ? 0.5 * currentIndex
+                                      : 0;
                                   } catch (e) {
                                     if (
                                       e instanceof TypeError ||
