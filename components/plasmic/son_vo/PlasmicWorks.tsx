@@ -1000,7 +1000,7 @@ function PlasmicWorks__RenderFunc(props: {
                                 )}
                                 delay={(() => {
                                   try {
-                                    return 0.5 * $ctx.plasmicIndex;
+                                     return Number.isFinite(currentIndex) ? 0.5 * currentIndex : 0;
                                   } catch (e) {
                                     if (
                                       e instanceof TypeError ||
