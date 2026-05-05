@@ -1421,6 +1421,8 @@ function PlasmicHomepage__RenderFunc(props: {
                                 "__wab_instance",
                                 sty.cachedAirtableFetcher__f1BSa
                               )}
+                              filterField={""}
+                              filterValue={""}
                               limit={20}
                               tableName={"Assets"}
                             >
@@ -1863,6 +1865,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     "__wab_instance",
                     sty.cachedAirtableFetcher__cXm1S
                   )}
+                  filterField={""}
+                  filterValue={""}
                   limit={20}
                   tableName={"Assets"}
                 >
