@@ -21,15 +21,12 @@ export function CachedAirtable({
 }: CachedAirtableProps) {
   const router = useRouter();
 
-  const slugFromUrl =
-    typeof router.query.slug === "string" ? router.query.slug : "";
-
+  const slugFromUrl = typeof router.query.slug === "string" ? router.query.slug : "";
   const finalFilterValue = filterValue || slugFromUrl;
 
   const [records, setRecords] = React.useState<any[]>([]);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
-
 
   React.useEffect(() => {
     async function fetchData() {
@@ -46,9 +43,12 @@ export function CachedAirtable({
         });
 
         if (filterField && finalFilterValue && filterField !== "undefined" && finalFilterValue !== "undefined") {
-        params.set("filterField", filterField);
-        params.set("filterValue", finalFilterValue);
+          params.set("filterField", filterField);
+          params.set("filterValue", finalFilterValue);
         }
+        
+        // Chống kẹt Cache của Vercel
+        params.set("t", Date.now().toString());
 
         const res = await fetch(`/api/airtable?${params.toString()}`);
 
@@ -57,8 +57,11 @@ export function CachedAirtable({
         }
 
         const json = await res.json();
+        
+        // TẠO MẢNG MỚI HOÀN TOÀN để React nhận diện sự thay đổi trạng thái
+        const newData = json.records ? [...json.records] : [];
+        setRecords(newData);
 
-        setRecords(json.records || []);
       } catch (err: any) {
         console.error("CachedAirtable error:", err);
         setError(err?.message || "Unknown error");
@@ -83,7 +86,11 @@ export function CachedAirtable({
           slug: slugFromUrl,
         }}
       >
-        {children}
+        {/* CÚ ĐẤM THÉP: Dùng key để ép React đập đi xây lại UI khi độ dài mảng data thay đổi. */}
+        {/* style={{display: 'contents'}} giúp cái thẻ div này tàng hình, không làm vỡ bố cục Card của bạn */}
+        <div key={`airtable-render-${records.length}`} style={{ display: "contents" }}>
+          {children}
+        </div>
       </DataProvider>
     </DataProvider>
   );
