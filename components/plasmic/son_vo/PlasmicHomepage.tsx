@@ -1485,7 +1485,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                             src={(() => {
                                               try {
                                                 return (
-                                                  currentItem?.fields?.[
+                                                  $currentItem?.fields?.[
                                                     "Main Image"
                                                   ] || ""
                                                 );
