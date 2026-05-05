@@ -25,9 +25,17 @@ export default async function handler(
 
     const safeLimit = Math.min(Number(limit) || 10, 100);
 
+    // 1. CHUYỂN PARAMS LÊN ĐÂY (Trước khi gọi fetch)
+    const params = new URLSearchParams({
+       maxRecords: String(safeLimit),
+       "sort[0][field]": "Id",
+       "sort[0][direction]": "asc",
+    });
+
+    // 2. GẮN PARAMS VÀO URL (Thay vì viết cứng ?maxRecords=...)
     const airtableUrl = `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(
       String(tableName)
-    )}?maxRecords=${safeLimit}`;
+    )}?${params.toString()}`;
 
     const airtableRes = await fetch(airtableUrl, {
       headers: {
@@ -43,11 +51,7 @@ export default async function handler(
         detail: errorText,
       });
     }
-    const params = new URLSearchParams({
-       maxRecords: String(safeLimit),
-       "sort[0][field]": "Id",
-        "sort[0][direction]": "asc",
-    });
+    
     const json = await airtableRes.json();
 
     res.setHeader(
