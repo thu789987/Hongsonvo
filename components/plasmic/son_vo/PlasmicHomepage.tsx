@@ -1883,12 +1883,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           <React.Fragment>
                             {(() => {
                               try {
-                                return (
-                                  "Count: " +
-                                  ($ctx.cachedDataState?.count ??
-                                    $ctx.cachedData?.length ??
-                                    0)
-                                );
+                                return `Count: ${$ctx.cachedData?.length || 0} | Lỗi: ${$ctx.cachedDataState?.error || "Không"} | Trạng thái: ${$ctx.cachedDataState?.loading ? "Đang tải" : "Xong"}`;
                               } catch (e) {
                                 if (
                                   e instanceof TypeError ||
@@ -1938,9 +1933,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                 )}
                                 delay={(() => {
                                   try {
-                                    return Number.isFinite(currentIndex)
-                                      ? 0.5 * currentIndex
-                                      : 0;
+                                    return 0.5 * $ctx.plasmicIndex;
                                   } catch (e) {
                                     if (
                                       e instanceof TypeError ||
