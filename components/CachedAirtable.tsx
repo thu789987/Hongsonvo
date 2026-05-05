@@ -30,13 +30,6 @@ export function CachedAirtable({
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
-  // 1. THÊM BIẾN isMounted Ở ĐÂY (Giải quyết Thủ phạm số 3)
-  const [isMounted, setIsMounted] = React.useState(false);
-
-  // 2. BẬT CỜ BÁO HIỆU COMPONENT ĐÃ XUẤT HIỆN TRÊN TRÌNH DUYỆT
-  React.useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   React.useEffect(() => {
     async function fetchData() {
@@ -77,12 +70,6 @@ export function CachedAirtable({
 
     fetchData();
   }, [baseId, tableName, limit, filterField, finalFilterValue]);
-
-  // 3. CHẶN ĐỨNG RENDER TRÊN SERVER Ở ĐÂY
-  // Nếu web chưa load xong trên trình duyệt, không render gì cả để tránh lỗi hụt data
-  if (!isMounted) {
-    return null; 
-  }
 
   return (
     <DataProvider name="cachedData" data={records}>
