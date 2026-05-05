@@ -11,33 +11,39 @@ export function CachedAirtable({
   children,
 }: any) {
   const router = useRouter();
+  
+  // Dùng useEffect để lấy slug một cách an toàn chỉ khi ở Client
+  const [slugFromUrl, setSlugFromUrl] = React.useState("");
+  
+  // Trạng thái dữ liệu
   const [records, setRecords] = React.useState<any[]>([]);
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
 
-  // Thêm một biến đếm để theo dõi số lần render
-  const renderCount = React.useRef(0);
-  renderCount.current++;
-
+  // Bước 1: Lấy Slug an toàn
   React.useEffect(() => {
-    // Chỉ chạy khi router đã sẵn sàng (tránh lỗi query rỗng trên Vercel)
-    if (!router.isReady) return;
+    if (router.isReady && typeof router.query.slug === "string") {
+      setSlugFromUrl(router.query.slug);
+    }
+  }, [router.isReady, router.query.slug]);
 
+  // Bước 2: Gọi API
+  React.useEffect(() => {
     async function fetchData() {
-      if (!baseId || !tableName) return;
+      // Chặn nếu thiếu BaseID hoặc đang chờ Router nạp
+      if (!baseId || !tableName || !router.isReady) return;
 
       try {
         setLoading(true);
-        console.log("🚀 Bắt đầu gọi API cho:", tableName);
+        setError(null);
 
-        const slugFromUrl = typeof router.query.slug === "string" ? router.query.slug : "";
         const finalFilterValue = filterValue || slugFromUrl;
 
         const params = new URLSearchParams({
           baseId,
           tableName,
           limit: String(limit),
-          t: Date.now().toString(), // Phá cache
+          t: Date.now().toString() // Chống kẹt Cache
         });
 
         if (filterField && finalFilterValue) {
@@ -46,57 +52,45 @@ export function CachedAirtable({
         }
 
         const res = await fetch(`/api/airtable?${params.toString()}`);
+        if (!res.ok) throw new Error("API failed");
+
         const json = await res.json();
-
-        console.log("✅ Dữ liệu nhận được trong Component:", json);
-
+        
+        // Cập nhật State
         if (json.records && Array.isArray(json.records)) {
-          console.log(`📦 Đang nạp ${json.records.length} records vào State`);
-          setRecords([...json.records]);
+          setRecords(json.records);
         } else {
-          console.warn("⚠️ Cấu trúc JSON không có trường 'records':", json);
           setRecords([]);
         }
       } catch (err: any) {
-        console.error("❌ Lỗi Fetch:", err);
         setError(err.message);
+        setRecords([]);
       } finally {
         setLoading(false);
       }
     }
 
     fetchData();
-  }, [baseId, tableName, limit, filterField, filterValue, router.isReady, router.query.slug]);
+  }, [baseId, tableName, limit, filterField, filterValue, slugFromUrl, router.isReady]);
 
+  // Bước 3: Render an toàn
   return (
-    <div className="airtable-fetcher-debug-wrapper">
-      {/* Bạn có thể xóa cái bảng vàng Debug đi được rồi, vì nó đã hoàn thành sứ mệnh lịch sử */}
-
-      <DataProvider name="cachedData" data={records}>
-        <DataProvider
-          name="cachedDataState"
-          data={{
-            loading,
-            error,
-            count: records.length,
-            firstRecord: records[0] || null,
-          }}
-        >
-          {/* CÚ CHỐT HẠ NẰM Ở ĐÂY: Chỉ cho phép Plasmic vẽ giao diện khi data > 0 */}
-          {records.length > 0 ? (
-            children
-          ) : loading ? (
-            <div style={{ padding: "20px", textAlign: "center", color: "#666" }}>
-              Đang tải dữ liệu...
-            </div>
-          ) : (
-            <div style={{ padding: "20px", textAlign: "center", color: "red" }}>
-              Không tìm thấy dự án nào.
-            </div>
-          )}
-        </DataProvider>
+    <DataProvider name="cachedData" data={records}>
+      <DataProvider
+        name="cachedDataState"
+        data={{
+          loading,
+          error,
+          count: records.length,
+          firstRecord: records[0] || null,
+        }}
+      >
+        {/* Chỉ render children khi đã chạy xong trên Client và có Data */}
+        <div key={records.length > 0 ? "has-data" : "no-data"} style={{ display: "contents" }}>
+          {records.length > 0 ? children : null}
+        </div>
       </DataProvider>
-    </div>
+    </DataProvider>
   );
 }
 
