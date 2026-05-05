@@ -55,10 +55,7 @@ export default async function handler(
       `public, s-maxage=${CACHE_SECONDS}, stale-while-revalidate=600`
     );
 
-    res.setHeader(
-      "Cache-Control",
-      "public, max-age=0, must-revalidate"
-    );
+    res.setHeader("Cache-Control", "no-store");
 
     return res.status(200).json({
       records: json.records || [],
