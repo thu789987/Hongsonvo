@@ -810,6 +810,8 @@ function PlasmicWorks__RenderFunc(props: {
                     "__wab_instance",
                     sty.cachedAirtableFetcher__fXaAs
                   )}
+                  filterField={""}
+                  filterValue={""}
                   limit={20}
                   tableName={"Assets"}
                 >
@@ -954,6 +956,8 @@ function PlasmicWorks__RenderFunc(props: {
                       "__wab_instance",
                       sty.cachedAirtableFetcher___7C0Gu
                     )}
+                    filterField={""}
+                    filterValue={""}
                     limit={20}
                     tableName={"Assets"}
                   >

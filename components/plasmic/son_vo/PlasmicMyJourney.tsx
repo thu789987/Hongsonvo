@@ -2390,6 +2390,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               "__wab_instance",
                               sty.cachedAirtableFetcher__e0Ota
                             )}
+                            filterField={""}
+                            filterValue={""}
                             limit={10}
                             tableName={"Assets"}
                           >
@@ -2752,6 +2754,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                   "__wab_instance",
                   sty.cachedAirtableFetcher__nNiCg
                 )}
+                filterField={""}
+                filterValue={""}
                 limit={20}
                 tableName={"Assets"}
               >
