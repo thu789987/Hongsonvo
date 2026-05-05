@@ -1753,17 +1753,6 @@
   max-width: 100%;
   object-fit: cover;
 }
-.text___6VrF {
-  display: block;
-  font-size: 18px;
-  font-family: "Outfit", sans-serif;
-  font-weight: 300;
-  letter-spacing: -0.47999998927116394px;
-  line-height: 26.399999618530273px;
-  color: var(--token-VsMZPNxcE2dF);
-  position: relative;
-  text-align: left;
-}
 .patternGrid:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
