@@ -707,24 +707,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 )}
                               >
                                 <React.Fragment>
-                                  {(() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
-                                    const currentItem = list.find(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    return (
-                                      currentItem?.Client ||
-                                      currentItem?.client ||
-                                      "Không tìm thấy bài"
-                                    );
-                                  })()}
+                                  {
+                                    $ctx.cachedDataState?.firstRecord?.fields
+                                      ?.Client
+                                  }
                                 </React.Fragment>
                               </div>
                             </div>
@@ -754,24 +740,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 )}
                               >
                                 <React.Fragment>
-                                  {(() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
-                                    const currentItem = list.find(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    return (
-                                      currentItem?.Industry ||
-                                      currentItem?.industry ||
-                                      "Không tìm thấy bài"
-                                    );
-                                  })()}
+                                  {
+                                    $ctx.cachedDataState?.firstRecord?.fields
+                                      ?.Industry
+                                  }
                                 </React.Fragment>
                               </div>
                             </div>
