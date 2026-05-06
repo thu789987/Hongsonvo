@@ -666,17 +666,10 @@ function PlasmicNewPage__RenderFunc(props: {
                               )}
                             >
                               <React.Fragment>
-                                {(() => {
-                                  const currentItem = $ctx.cachedData?.[0];
-                                  if (!currentItem) {
-                                    return "Đang đợi dữ liệu...";
-                                  }
-                                  return (
-                                    currentItem?.fields?.["Title"] ||
-                                    currentItem?.fields?.["title"] ||
-                                    "Không tìm thấy bài"
-                                  );
-                                })()}
+                                {
+                                  $ctx.cachedDataState?.firstRecord?.fields
+                                    ?.Title
+                                }
                               </React.Fragment>
                             </div>
                           </div>
