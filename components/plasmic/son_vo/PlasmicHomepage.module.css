@@ -1513,16 +1513,14 @@
   position: absolute;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   max-width: 100%;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  min-width: 0;
-  min-height: 0;
-  padding: 140px 0px;
+  padding: 0px;
 }
 .cachedAirtableFetcher__f1BSa:global(.__wab_instance) {
   animation: none;
@@ -1533,8 +1531,7 @@
   animation: none;
   max-width: 100%;
   object-fit: cover;
-  height: 100%;
-  min-height: 0;
+  height: 30%;
 }
 .img__zEm40 {
   animation: none;
@@ -1543,7 +1540,7 @@
   position: relative;
   left: auto;
   top: auto;
-  width: auto;
+  width: 100%;
   height: auto;
   bottom: auto;
   right: auto;

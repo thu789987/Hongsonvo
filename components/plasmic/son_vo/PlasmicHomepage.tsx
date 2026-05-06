@@ -1442,7 +1442,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                     pauseOnHover={true}
                                     repeatCount={4}
                                     showFade={false}
-                                    speed={100}
+                                    speed={120}
                                   >
                                     {(_par =>
                                       !_par
@@ -1479,7 +1479,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                             displayMaxWidth={"100%"}
                                             displayMinHeight={"0"}
                                             displayMinWidth={"0"}
-                                            displayWidth={"auto"}
+                                            displayWidth={"100%"}
                                             key={currentIndex}
                                             loading={"lazy"}
                                             src={(() => {
