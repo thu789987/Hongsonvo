@@ -22,10 +22,10 @@ export function CachedAirtable({
 
   // Bước 1: Lấy Slug an toàn
   React.useEffect(() => {
-    if (router.isReady && typeof router.query.slug === "string") {
-      setSlugFromUrl(router.query.slug);
+    if (router.isReady && typeof router.query.Slug === "string") {
+      setSlugFromUrl(router.query.Slug);
     }
-  }, [router.isReady, router.query.slug]);
+  }, [router.isReady, router.query.Slug]);
 
   // Bước 2: Gọi API
   React.useEffect(() => {
