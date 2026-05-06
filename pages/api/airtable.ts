@@ -7,7 +7,8 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const { baseId, tableName, limit = "10" } = req.query;
+    // 1. ĐÓN THÊM 2 BIẾN FILTER TỪ FRONTEND GỬI LÊN
+    const { baseId, tableName, limit = "10", filterField, filterValue } = req.query;
 
     if (!baseId || !tableName) {
       return res.status(400).json({
@@ -25,14 +26,19 @@ export default async function handler(
 
     const safeLimit = Math.min(Number(limit) || 10, 100);
 
-    // 1. CHUYỂN PARAMS LÊN ĐÂY (Trước khi gọi fetch)
     const params = new URLSearchParams({
        maxRecords: String(safeLimit),
        "sort[0][field]": "Id",
        "sort[0][direction]": "asc",
     });
 
-    // 2. GẮN PARAMS VÀO URL (Thay vì viết cứng ?maxRecords=...)
+    // 2. THÊM LOGIC LỌC (FILTER) VÀO ĐÂY
+    // Nếu Plasmic có truyền filterField và filterValue thì ép Airtable phải tìm đúng ID/Slug
+    if (filterField && filterValue) {
+      // Công thức của Airtable bắt buộc phải là: {Tên Cột} = 'Giá Trị'
+      params.set("filterByFormula", `{${filterField}} = '${filterValue}'`);
+    }
+
     const airtableUrl = `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(
       String(tableName)
     )}?${params.toString()}`;
