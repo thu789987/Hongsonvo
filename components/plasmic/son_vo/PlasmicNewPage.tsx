@@ -1075,20 +1075,14 @@ function PlasmicNewPage__RenderFunc(props: {
                             {(() => {
                               try {
                                 return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
-                                  const currentItem = list.find(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  const content = currentItem?.["Link"];
-                                  return (
-                                    content && content.toString().trim() !== ""
+                                  const currentItem =
+                                    $ctx.cachedDataState?.firstRecord;
+                                  if (!currentItem) return false;
+                                  const content =
+                                    currentItem?.fields?.Link ||
+                                    currentItem?.Link;
+                                  return !!(
+                                    content && String(content).trim() !== ""
                                   );
                                 })();
                               } catch (e) {
@@ -1111,22 +1105,16 @@ function PlasmicNewPage__RenderFunc(props: {
                                 )}
                                 component={Link}
                                 href={(() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return "Đang đợi tham số...";
-                                  const list = $queries.allList?.data || [];
-                                  const currentItem = list.find(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  return (
+                                  const currentItem =
+                                    $ctx.cachedDataState?.firstRecord;
+                                  if (!currentItem)
+                                    return "Đang đợi tham số...";
+                                  const liveSite =
+                                    currentItem?.fields?.["Live Site"] ||
+                                    currentItem?.fields?.["live site"] ||
                                     currentItem?.["Live Site"] ||
-                                    currentItem?.["live site"] ||
-                                    "Không tìm thấy bài"
-                                  );
+                                    currentItem?.["live site"];
+                                  return liveSite || "Không tìm thấy bài";
                                 })()}
                                 legacyBehavior={false}
                                 platform={"nextjs"}
@@ -1211,21 +1199,15 @@ function PlasmicNewPage__RenderFunc(props: {
                           >
                             {(() => {
                               try {
-                                return !(() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
-                                  const currentItem = list.find(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  const content = currentItem?.["Video"];
-                                  return (
-                                    content && content.toString().trim() !== ""
+                                return !!(() => {
+                                  const currentItem =
+                                    $ctx.cachedDataState?.firstRecord;
+                                  if (!currentItem) return false;
+                                  const content =
+                                    currentItem?.fields?.Video ||
+                                    currentItem?.Video;
+                                  return !!(
+                                    content && String(content).trim() !== ""
                                   );
                                 })();
                               } catch (e) {
@@ -1253,21 +1235,14 @@ function PlasmicNewPage__RenderFunc(props: {
                                 src={(() => {
                                   try {
                                     return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      return (
-                                        currentItem?.["Main Image"] ||
-                                        "Không tìm thấy bài"
-                                      );
+                                      const currentItem =
+                                        $ctx.cachedDataState?.firstRecord;
+                                      if (!currentItem)
+                                        return "Đang đợi tham số...";
+                                      const mainImage =
+                                        currentItem?.fields?.["Main Image"] ||
+                                        currentItem?.["Main Image"];
+                                      return mainImage || "Không tìm thấy bài";
                                     })();
                                   } catch (e) {
                                     if (
@@ -1936,21 +1911,14 @@ function PlasmicNewPage__RenderFunc(props: {
                                 {(() => {
                                   try {
                                     return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      return (
-                                        currentItem?.["H1_1"] ||
-                                        "Không tìm thấy bài"
-                                      );
+                                      const currentItem =
+                                        $ctx.cachedDataState?.firstRecord;
+                                      if (!currentItem)
+                                        return "Đang đợi tham số...";
+                                      const h1Content =
+                                        currentItem?.fields?.["H1_1"] ||
+                                        currentItem?.["H1_1"];
+                                      return h1Content || "Không tìm thấy bài";
                                     })();
                                   } catch (e) {
                                     if (
@@ -1968,20 +1936,14 @@ function PlasmicNewPage__RenderFunc(props: {
                             {(() => {
                               try {
                                 return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
-                                  const currentItem = list.find(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  const content = currentItem?.["H1_1_content"];
-                                  return (
-                                    content && content.toString().trim() !== ""
+                                  const currentItem =
+                                    $ctx.cachedDataState?.firstRecord;
+                                  if (!currentItem) return false;
+                                  const content =
+                                    currentItem?.fields?.["H1_1_content"] ||
+                                    currentItem?.["H1_1_content"];
+                                  return !!(
+                                    content && String(content).trim() !== ""
                                   );
                                 })();
                               } catch (e) {
@@ -2098,21 +2060,14 @@ function PlasmicNewPage__RenderFunc(props: {
                                 >
                                   <React.Fragment>
                                     {(() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      return (
-                                        currentItem?.["H2_1_H1_1"] ||
-                                        "Không tìm thấy bài"
-                                      );
+                                      const currentItem =
+                                        $ctx.cachedDataState?.firstRecord;
+                                      if (!currentItem)
+                                        return "Đang đợi tham số...";
+                                      const h1Content =
+                                        currentItem?.fields?.["H2_1_H1_1"] ||
+                                        currentItem?.["H2_1_H1_1"];
+                                      return h1Content || "Không tìm thấy bài";
                                     })()}
                                   </React.Fragment>
                                 </div>
