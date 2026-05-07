@@ -143,8 +143,8 @@ export default function GlobalLoading({
               left: `${progress}%`,
               transform: `translateX(-${progress}%)`,
               transition: "left 0.1s linear, transform 0.1s linear",
-              width: "200px",
-              height: "200px",
+              width: "120px",
+              height: "120px",
               backgroundColor: "transparent",
               overflow: "hidden",
             }}
