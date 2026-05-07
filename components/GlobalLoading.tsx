@@ -85,7 +85,7 @@ export default function GlobalLoading({
     
     const imgTimer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 300); 
+    }, 600); 
     
     return () => clearInterval(imgTimer);
   }, [isReady, images.length]);
@@ -163,7 +163,7 @@ export default function GlobalLoading({
           
           {/* Cột giữa (Nhảy sang trái trên Mobile nhờ class loading-logo-center) */}
           <div className="loading-logo-center">
-            charmer
+            son vo
           </div>
           
           {/* Cột phải: Phần trăm (%) */}
