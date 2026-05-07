@@ -85,7 +85,7 @@ export default function GlobalLoading({
     
     const imgTimer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 600); 
+    }, 800); 
     
     return () => clearInterval(imgTimer);
   }, [isReady, images.length]);
@@ -203,7 +203,7 @@ export default function GlobalLoading({
                   objectFit: "cover",
                   display: "block",
                   opacity: 0, 
-                  animation: "fadeInEffect 0.3s ease-in-out forwards", 
+                  animation: "fadeInEffect 0.8s ease-in-out forwards", 
                 }}
               />
             )}
