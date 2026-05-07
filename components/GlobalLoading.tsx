@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 interface GlobalLoadingProps {
   className?: string;
@@ -18,6 +18,7 @@ export default function GlobalLoading({
   textColor = "#ffffff",
   durationMs = 3000,
   images = [
+    // Thay các link này bằng ảnh thực tế của bạn
     "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=300",
     "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=80&w=300",
     "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=300",
@@ -27,10 +28,15 @@ export default function GlobalLoading({
   const [progress, setProgress] = useState(0);
   const [isHidden, setIsHidden] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isReady, setIsReady] = useState(false); // Trạng thái đã tải xong hết ảnh
+  const [isReady, setIsReady] = useState(false);
 
-  // 1. QUAN TRỌNG NHẤT: PRELOAD ẢNH
+  // 1. PRELOAD TOÀN BỘ ẢNH (Chống kẹt)
   useEffect(() => {
+    if (!images || images.length === 0) {
+      setIsReady(true);
+      return;
+    }
+
     let loadedCount = 0;
     const totalImages = images.length;
 
@@ -39,18 +45,16 @@ export default function GlobalLoading({
       img.src = src;
       img.onload = () => {
         loadedCount++;
-        if (loadedCount === totalImages) {
-          setIsReady(true); // Chỉ khi tải xong toàn bộ ảnh mới cho phép bắt đầu hiệu ứng
-        }
+        if (loadedCount === totalImages) setIsReady(true);
       };
       img.onerror = () => {
-        loadedCount++; // Vẫn đếm nếu lỗi để tránh kẹt loading mãi mãi
+        loadedCount++;
         if (loadedCount === totalImages) setIsReady(true);
       };
     });
   }, [images]);
 
-  // 2. XỬ LÝ THANH PHẦN TRĂM (Chỉ chạy khi ảnh đã Ready)
+  // 2. CHẠY THANH PHẦN TRĂM (Chỉ chạy khi ảnh đã tải xong)
   useEffect(() => {
     if (typeof window === "undefined" || !isReady) return;
 
@@ -75,16 +79,16 @@ export default function GlobalLoading({
     return () => clearInterval(timer);
   }, [durationMs, isReady]);
 
-  // 3. XỬ LÝ ĐỔI ẢNH (Dùng useRef để tránh setInterval bị reset)
+  // 3. ĐỔI ẢNH LIÊN TỤC (100ms/lần giúp mượt mà hơn)
   useEffect(() => {
     if (!isReady || images.length === 0) return;
     
     const imgTimer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 60); // 60ms là tốc độ "vàng" cho stop-motion
+    }, 100); 
     
     return () => clearInterval(imgTimer);
-  }, [isReady, images.length]); // Chỉ phụ thuộc vào số lượng ảnh
+  }, [isReady, images.length]);
 
   if (isHidden) return null;
 
@@ -107,24 +111,30 @@ export default function GlobalLoading({
         opacity: progress === 100 ? 0 : 1,
         pointerEvents: progress === 100 ? "none" : "auto",
         color: textColor,
-        fontFamily: "serif",
+        fontFamily: "'Playfair Display', 'Times New Roman', Georgia, serif",
       }}
     >
       <div style={{ width: "90%", maxWidth: "1440px", position: "relative" }}>
         
-        {/* TOP LAYOUT */}
+        {/* TOP LAYOUT: Text - Logo - Progress */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "12px", position: "relative" }}>
-          <div style={{ fontSize: "1rem" }}>Hong Son / Portfolio</div>
-          <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", fontSize: "3rem", fontWeight: 900, textTransform: "lowercase" }}>son vo</div>
-          <div style={{ fontSize: "1.2rem" }}>{Math.floor(progress)}%</div>
+          <div style={{ fontSize: "1.2rem", letterSpacing: "0.5px" }}>
+            From <i style={{ fontStyle: "italic" }}>Vision</i> to <i style={{ fontStyle: "italic" }}>Value.</i>
+          </div>
+          <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", fontSize: "3.5rem", fontWeight: 900, letterSpacing: "-2px", lineHeight: 0.8 }}>
+            son vo
+          </div>
+          <div style={{ fontSize: "1.3rem" }}>
+            {Math.floor(progress)}%
+          </div>
         </div>
 
-        {/* LOADING LINE */}
-        <div style={{ width: "100%", height: "1px", backgroundColor: "rgba(255, 255, 255, 0.1)", position: "relative" }}>
+        {/* THIN PROGRESS BAR */}
+        <div style={{ width: "100%", height: "1px", backgroundColor: "rgba(255, 255, 255, 0.15)", position: "relative" }}>
           <div style={{ width: `${progress}%`, height: "100%", backgroundColor: barColor, transition: "width 0.1s linear" }} />
         </div>
 
-        {/* TRACKING IMAGE */}
+        {/* DYNAMIC TRACKING IMAGE */}
         <div style={{ width: "100%", position: "relative", marginTop: "15px" }}>
           <div
             style={{
@@ -133,27 +143,37 @@ export default function GlobalLoading({
               left: `${progress}%`,
               transform: `translateX(-${progress}%)`,
               transition: "left 0.1s linear, transform 0.1s linear",
-              // Chống nháy ảnh bằng cách giữ nguyên kích thước khung
               width: "160px",
               height: "200px",
-              backgroundColor: "#222", // Màu nền tạm khi ảnh chưa hiện
+              backgroundColor: "transparent",
+              overflow: "hidden",
             }}
           >
-            {/* Hiển thị ảnh hiện tại */}
-            <img
-              src={images[currentImageIndex]}
-              alt="loading"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-                // Chống việc ảnh bị khựng khi load
-                imageRendering: "auto",
-              }}
-            />
-            
-            {/* MẸO TÀI TÌNH: Render lén tất cả ảnh còn lại nhưng ẩn đi để trình duyệt giữ trong Cache */}
+            {images && images.length > 0 && (
+              <>
+                <style>{`
+                  @keyframes fadeInEffect {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                  }
+                `}</style>
+                <img
+                  key={currentImageIndex} 
+                  src={images[currentImageIndex]}
+                  alt="Dynamic tracking"
+                  style={{
+                    width: "100%", 
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    opacity: 0, 
+                    animation: "fadeInEffect 0.15s ease-in-out forwards", 
+                  }}
+                />
+              </>
+            )}
+
+            {/* PRELOAD HIDDEN DIV: Giữ ảnh trong DOM để không load lại */}
             <div style={{ display: "none" }}>
               {images.map((src, i) => (
                 <img key={i} src={src} alt="preload" />
@@ -161,6 +181,7 @@ export default function GlobalLoading({
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
