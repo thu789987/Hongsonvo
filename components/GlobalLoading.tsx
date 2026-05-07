@@ -54,7 +54,7 @@ export default function GlobalLoading({
     });
   }, [images]);
 
-  // 2. CHẠY THANH PHẦN TRĂM (Chỉ chạy khi ảnh đã tải xong)
+  // 2. CHẠY THANH PHẦN TRĂM
   useEffect(() => {
     if (typeof window === "undefined" || !isReady) return;
 
@@ -79,13 +79,13 @@ export default function GlobalLoading({
     return () => clearInterval(timer);
   }, [durationMs, isReady]);
 
-  // 3. ĐỔI ẢNH LIÊN TỤC (100ms/lần giúp mượt mà hơn)
+  // 3. ĐỔI ẢNH LIÊN TỤC
   useEffect(() => {
     if (!isReady || images.length === 0) return;
     
     const imgTimer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 1000); 
+    }, 300); 
     
     return () => clearInterval(imgTimer);
   }, [isReady, images.length]);
@@ -114,16 +114,59 @@ export default function GlobalLoading({
         fontFamily: "'Playfair Display', 'Times New Roman', Georgia, serif",
       }}
     >
+      {/* 💡 BÍ QUYẾT TẠI ĐÂY: Thêm khối style chứa Media Queries cho Mobile */}
+      <style>{`
+        @keyframes fadeInEffect {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        .loading-text-left {
+          font-size: 1.2rem;
+          letter-spacing: 0.5px;
+          display: block;
+        }
+
+        .loading-logo-center {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 3.5rem;
+          font-weight: 900;
+          letter-spacing: -2px;
+          line-height: 0.8;
+        }
+
+        /* Khi xuống màn hình điện thoại (dưới 768px) */
+        @media (max-width: 768px) {
+          .loading-text-left {
+            display: none !important; /* Ẩn dòng chữ phụ */
+          }
+          .loading-logo-center {
+            position: relative !important; /* Gỡ bỏ ghim ở giữa */
+            left: 0 !important;
+            transform: none !important; /* Tự động đẩy sang mép trái */
+            font-size: 2.8rem !important; /* Thu nhỏ logo lại một xíu */
+          }
+        }
+      `}</style>
+
       <div style={{ width: "90%", position: "relative" }}>
         
         {/* TOP LAYOUT: Text - Logo - Progress */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "12px", position: "relative" }}>
-          <div style={{ fontSize: "1.2rem", letterSpacing: "0.5px" }}>
+          
+          {/* Cột trái (Bị ẩn trên Mobile nhờ class loading-text-left) */}
+          <div className="loading-text-left">
             From <i style={{ fontStyle: "italic" }}>Vision</i> to <i style={{ fontStyle: "italic" }}>Value.</i>
           </div>
-          <div style={{ position: "absolute", left: "50%", transform: "translateX(-50%)", fontSize: "3.5rem", fontWeight: 900, letterSpacing: "-2px", lineHeight: 0.8 }}>
-            son vo
+          
+          {/* Cột giữa (Nhảy sang trái trên Mobile nhờ class loading-logo-center) */}
+          <div className="loading-logo-center">
+            charmer
           </div>
+          
+          {/* Cột phải: Phần trăm (%) */}
           <div style={{ fontSize: "1.3rem" }}>
             {Math.floor(progress)}%
           </div>
@@ -143,37 +186,28 @@ export default function GlobalLoading({
               left: `${progress}%`,
               transform: `translateX(-${progress}%)`,
               transition: "left 0.1s linear, transform 0.1s linear",
-              width: "120px",
-              height: "120px",
+              width: "160px",
+              height: "160px",
               backgroundColor: "transparent",
               overflow: "hidden",
             }}
           >
             {images && images.length > 0 && (
-              <>
-                <style>{`
-                  @keyframes fadeInEffect {
-                    from { opacity: 0; }
-                    to { opacity: 1; }
-                  }
-                `}</style>
-                <img
-                  key={currentImageIndex} 
-                  src={images[currentImageIndex]}
-                  alt="Dynamic tracking"
-                  style={{
-                    width: "100%", 
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                    opacity: 0, 
-                    animation: "fadeInEffect 0.6s ease-in-out forwards", 
-                  }}
-                />
-              </>
+              <img
+                key={currentImageIndex} 
+                src={images[currentImageIndex]}
+                alt="Dynamic tracking"
+                style={{
+                  width: "100%", 
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                  opacity: 0, 
+                  animation: "fadeInEffect 0.3s ease-in-out forwards", 
+                }}
+              />
             )}
 
-            {/* PRELOAD HIDDEN DIV: Giữ ảnh trong DOM để không load lại */}
             <div style={{ display: "none" }}>
               {images.map((src, i) => (
                 <img key={i} src={src} alt="preload" />
