@@ -114,7 +114,7 @@ export default function GlobalLoading({
         fontFamily: "'Playfair Display', 'Times New Roman', Georgia, serif",
       }}
     >
-      <div style={{ width: "90%", maxWidth: "1440px", position: "relative" }}>
+      <div style={{ width: "90%", position: "relative" }}>
         
         {/* TOP LAYOUT: Text - Logo - Progress */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "12px", position: "relative" }}>
@@ -167,7 +167,7 @@ export default function GlobalLoading({
                     objectFit: "cover",
                     display: "block",
                     opacity: 0, 
-                    animation: "fadeInEffect 0.3s ease-in-out forwards", 
+                    animation: "fadeInEffect 0.6s ease-in-out forwards", 
                   }}
                 />
               </>
