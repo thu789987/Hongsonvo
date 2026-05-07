@@ -85,7 +85,7 @@ export default function GlobalLoading({
     
     const imgTimer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 100); 
+    }, 300); 
     
     return () => clearInterval(imgTimer);
   }, [isReady, images.length]);
