@@ -19,10 +19,10 @@ export default function GlobalLoading({
   durationMs = 3000,
   images = [
     // Thay các link này bằng ảnh thực tế của bạn
-    "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/img/bbcincorp-portal/01.png?q=80&w=300",
-    "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/img/gleads-website/01.png?q=80&w=300",
-    "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/img/incorpsec-branding/01.png?q=80&w=300",
-    "https://cdn.jsdelivr.net/gh/thu789987/Gamma@main/public/img/Gleads-Mascot/01.png?q=80&w=300"
+    "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/img/bbcincorp-portal/01.png?q=300&w=300",
+    "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/img/gleads-website/01.png?q=300&w=300",
+    "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/img/incorpsec-branding/01.png?q=300&w=300",
+    "https://cdn.jsdelivr.net/gh/thu789987/Gamma@main/public/img/Gleads-Mascot/01.png?q=300&w=300"
   ],
 }: GlobalLoadingProps) {
   const [progress, setProgress] = useState(0);
