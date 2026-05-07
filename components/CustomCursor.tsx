@@ -28,7 +28,7 @@ const handleMouseMove = (event: MouseEvent) => {
         style={{
           position: 'fixed',
           pointerEvents: 'none',
-          zIndex: 9999,
+          zIndex: 100000,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
