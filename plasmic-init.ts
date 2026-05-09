@@ -566,6 +566,7 @@ registerComponent(HoverVariantWrapper, {
 PLASMIC.registerComponent(CachedAirtable, {
   name: "CachedAirtable",
   displayName: "Google Sheets Multi-Tool",
+  providesData: true,
   props: {
     children: {
       type: "slot",

@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useState } from 'react';
-import { DataProvider } from '@plasmicapp/loader-nextjs';
+import { DataProvider } from "@plasmicapp/react-web/lib/host";
 
 export interface CachedAirtableProps {
   children?: ReactNode;
