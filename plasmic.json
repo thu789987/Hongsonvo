@@ -2486,9 +2486,9 @@
           "componentImportPath": "./components/HoverVariantWrapper"
         },
         {
-          "id": "tDnPdfRHgNXX",
+          "id": "R8IeYWvKto_c",
           "name": "CachedAirtable",
-          "displayName": "CachedAirtableFetcher",
+          "displayName": "CachedAirtable",
           "componentImportPath": "./components/CachedAirtable"
         }
       ],
