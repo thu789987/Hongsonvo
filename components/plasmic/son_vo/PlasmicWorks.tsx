@@ -70,7 +70,7 @@ import ScrollContext from "../../ScrollContext"; // plasmic-import: 4JSGC86CDgyw
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
-import { CachedAirtable } from "../../CachedAirtable"; // plasmic-import: tDnPdfRHgNXX/codeComponent
+import { CachedAirtable } from "../../CachedAirtable"; // plasmic-import: R8IeYWvKto_c/codeComponent
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI/codeComponent
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
@@ -805,45 +805,37 @@ function PlasmicWorks__RenderFunc(props: {
                   {"[ "}
                 </h1>
                 <CachedAirtable
-                  baseId={"appn8wTpF837qDigS"}
                   className={classNames(
                     "__wab_instance",
-                    sty.cachedAirtableFetcher__fXaAs
+                    sty.googleSheetsMultiTool__fXaAs
                   )}
-                  filterField={""}
-                  filterValue={""}
-                  limit={20}
-                  tableName={"Assets"}
+                  sheetName={"Sheet1"}
                 >
-                  <DataCtxReader__>
-                    {$ctx => (
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
-                          sty.h1___4905H
-                        )}
-                      >
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return $ctx.cachedData?.length || 0;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "10 ";
-                              }
-                              throw e;
-                            }
-                          })()}
-                        </React.Fragment>
-                      </h1>
+                  <h1
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h1,
+                      projectcss.h1__bLa1s,
+                      projectcss.__wab_text,
+                      sty.h1___4905H
                     )}
-                  </DataCtxReader__>
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $ctx.cachedData?.length || 0;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "10 ";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </h1>
                 </CachedAirtable>
                 <h1
                   className={classNames(
@@ -951,202 +943,186 @@ function PlasmicWorks__RenderFunc(props: {
                     />
                   </div>
                   <CachedAirtable
-                    baseId={"appn8wTpF837qDigS"}
                     className={classNames(
                       "__wab_instance",
-                      sty.cachedAirtableFetcher___7C0Gu
+                      sty.googleSheetsMultiTool___7C0Gu
                     )}
-                    filterField={""}
-                    filterValue={""}
-                    limit={20}
-                    tableName={"Assets"}
+                    sheetName={"Sheet1"}
                   >
-                    <DataCtxReader__>
-                      {$ctx => (
-                        <PatternGrid
-                          data-plasmic-name={"patternGrid"}
-                          data-plasmic-override={overrides.patternGrid}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.patternGrid
-                          )}
-                          columnGap={24}
-                          rowGap={40}
-                        >
-                          {(_par =>
-                            !_par ? [] : Array.isArray(_par) ? _par : [_par])(
-                            (() => {
+                    <PatternGrid
+                      data-plasmic-name={"patternGrid"}
+                      data-plasmic-override={overrides.patternGrid}
+                      className={classNames("__wab_instance", sty.patternGrid)}
+                      columnGap={24}
+                      rowGap={40}
+                    >
+                      {(_par =>
+                        !_par ? [] : Array.isArray(_par) ? _par : [_par])(
+                        (() => {
+                          try {
+                            return $ctx.cachedData;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })()
+                      ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                        const currentItem = __plasmic_item_0;
+                        const currentIndex = __plasmic_idx_0;
+                        return (
+                          <RevealOnScroll
+                            blurAmount={5}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.revealOnScroll__wHfwU
+                            )}
+                            delay={(() => {
                               try {
-                                return $ctx.cachedData;
+                                return 0.5 * $ctx.plasmicIndex;
                               } catch (e) {
                                 if (
                                   e instanceof TypeError ||
                                   e?.plasmicType === "PlasmicUndefinedDataError"
                                 ) {
-                                  return [];
+                                  return 0;
                                 }
                                 throw e;
                               }
-                            })()
-                          ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                            const currentItem = __plasmic_item_0;
-                            const currentIndex = __plasmic_idx_0;
-                            return (
-                              <RevealOnScroll
-                                blurAmount={5}
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.revealOnScroll__wHfwU
-                                )}
-                                delay={(() => {
-                                  try {
-                                     return Number.isFinite(currentIndex) ? 0.5 * currentIndex : 0;
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return 0;
-                                    }
-                                    throw e;
+                            })()}
+                            duration={1.6}
+                            key={currentIndex}
+                            yOffset={50}
+                          >
+                            <TemplateCard
+                              data-plasmic-name={"templateCard9"}
+                              data-plasmic-override={overrides.templateCard9}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.templateCard9
+                              )}
+                              image2={currentItem?.fields?.["Main Image"] || ""}
+                              imageCondition={(() => {
+                                try {
+                                  return !currentItem?.fields?.["Video"];
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return false;
                                   }
-                                })()}
-                                duration={1.6}
-                                key={currentIndex}
-                                yOffset={50}
-                              >
-                                <TemplateCard
-                                  data-plasmic-name={"templateCard9"}
-                                  data-plasmic-override={
-                                    overrides.templateCard9
+                                  throw e;
+                                }
+                              })()}
+                              link={`/works/${currentItem?.fields?.["Slug"] || ""}`}
+                              project1={undefined}
+                              tag1={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("UI");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
                                   }
-                                  className={classNames(
-                                    "__wab_instance",
-                                    sty.templateCard9
-                                  )}
-                                  image2={
-                                    currentItem?.fields?.["Main Image"] || ""
+                                  throw e;
+                                }
+                              })()}
+                              tag22={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("UX");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
                                   }
-                                  imageCondition={(() => {
-                                    try {
-                                      return !currentItem?.fields?.["Video"];
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return false;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                  link={`/works/${currentItem?.fields?.["Slug"] || ""}`}
-                                  project1={undefined}
-                                  tag1={(() => {
-                                    try {
-                                      return currentItem?.fields?.[
-                                        "Services"
-                                      ]?.includes("UI");
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                  tag22={(() => {
-                                    try {
-                                      return currentItem?.fields?.[
-                                        "Services"
-                                      ]?.includes("UX");
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                  tag32={(() => {
-                                    try {
-                                      return currentItem?.fields?.[
-                                        "Services"
-                                      ]?.includes("FRAMER");
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                  tag42={(() => {
-                                    try {
-                                      return currentItem?.fields?.[
-                                        "Services"
-                                      ]?.includes("E-COMMERCE");
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                  tag52={(() => {
-                                    try {
-                                      return currentItem?.fields?.[
-                                        "Services"
-                                      ]?.includes("BRAND IDENTITY");
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                  title={currentItem?.fields?.["Title"] || ""}
-                                  video={currentItem?.fields?.["Video"] || ""}
-                                  videoCondition={(() => {
-                                    try {
-                                      return !!currentItem?.fields?.["Video"];
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })()}
-                                />
-                              </RevealOnScroll>
-                            );
-                          })}
-                        </PatternGrid>
-                      )}
-                    </DataCtxReader__>
+                                  throw e;
+                                }
+                              })()}
+                              tag32={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("FRAMER");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              tag42={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("E-COMMERCE");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              tag52={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("BRAND IDENTITY");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              title={currentItem?.fields?.["Title"] || ""}
+                              video={currentItem?.fields?.["Video"] || ""}
+                              videoCondition={(() => {
+                                try {
+                                  return !!currentItem?.fields?.["Video"];
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            />
+                          </RevealOnScroll>
+                        );
+                      })}
+                    </PatternGrid>
                   </CachedAirtable>
                 </div>
               </div>

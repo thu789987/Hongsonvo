@@ -2326,7 +2326,7 @@
       "globalContextsFilePath": "plasmic/son_vo/PlasmicGlobalContextsProvider.tsx",
       "splitsProviderFilePath": "",
       "styleTokensProviderFilePath": "plasmic/son_vo/PlasmicStyleTokensProvider.tsx",
-      "dataTokensFilePath": "",
+      "dataTokensFilePath": "plasmic/son_vo/plasmic-data-tokens.ts",
       "projectModuleFilePath": "plasmic/son_vo/plasmic.tsx",
       "codeComponents": [
         {
@@ -2486,9 +2486,9 @@
           "componentImportPath": "./components/HoverVariantWrapper"
         },
         {
-          "id": "tDnPdfRHgNXX",
+          "id": "R8IeYWvKto_c",
           "name": "CachedAirtable",
-          "displayName": "CachedAirtableFetcher",
+          "displayName": "CachedAirtable",
           "componentImportPath": "./components/CachedAirtable"
         }
       ],
