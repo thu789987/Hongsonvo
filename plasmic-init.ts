@@ -564,37 +564,33 @@ registerComponent(HoverVariantWrapper, {
 });
 
 PLASMIC.registerComponent(CachedAirtable, {
-  name: "CachedAirtableFetcher",
-  importPath: "./components/CachedAirtable",
-  importName: "CachedAirtable",
-  providesData: true,
+  name: "CachedAirtable",
+  displayName: "Google Sheets Multi-Tool",
   props: {
-    baseId: {
+    children: {
+      type: "slot",
+      defaultValue: { type: "text", value: "Nội dung hiển thị ở đây" }
+    },
+    sheetId: {
       type: "string",
-      displayName: "Base ID",
+      displayName: "Google Sheet ID",
     },
-    tableName: {
+    sheetName: {
       type: "string",
-      displayName: "Table Name",
+      displayName: "Tên Sheet",
+      defaultValue: "Sheet1"
     },
-    limit: {
-      type: "number",
-      displayName: "Limit",
-      defaultValue: 10,
-    },
+    // PHẦN THÊM MỚI CHO DETAIL PAGE:
     filterField: {
       type: "string",
-      displayName: "Filter Field",
-      defaultValue: "",
+      displayName: "Cột để lọc (vd: slug)",
+      description: "Nhập tên cột trong Google Sheets bạn dùng để định danh (vd: slug hoặc id)"
     },
     filterValue: {
       type: "string",
-      displayName: "Filter Value",
-      defaultValue: "",
-    },
-    children: {
-      type: "slot",
-      displayName: "Children",
-    },
+      displayName: "Giá trị lọc",
+      description: "Ở trang Detail, hãy chọn Dynamic Value là $ctx.params.slug"
+    }
   },
+  importPath: "./components/CachedAirtable"
 });

@@ -1,97 +1,61 @@
-import * as React from "react";
-import { DataProvider } from "@plasmicapp/host";
-import { useRouter } from "next/router";
+import React, { ReactNode, useEffect, useState } from 'react';
+import { DataProvider } from '@plasmicapp/loader-nextjs';
 
-export function CachedAirtable({
-  baseId,
-  tableName,
-  limit = 10,
+export interface CachedAirtableProps {
+  children?: ReactNode;
+  sheetId?: string;
+  sheetName?: string;
+  filterField?: string; // Tên cột để lọc (vd: slug)
+  filterValue?: string; // Giá trị để lọc (vd: dự án A)
+}
+
+export function CachedAirtable({ 
+  children, 
+  sheetId = "", 
+  sheetName = "Sheet1",
   filterField,
-  filterValue,
-  children,
-}: any) {
-  const router = useRouter();
-  
-  // Dùng useEffect để lấy slug một cách an toàn chỉ khi ở Client
-  const [slugFromUrl, setSlugFromUrl] = React.useState("");
-  
-  // Trạng thái dữ liệu
-  const [records, setRecords] = React.useState<any[]>([]);
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState<string | null>(null);
+  filterValue
+}: CachedAirtableProps) {
+  const [data, setData] = useState<any | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  // Bước 1: Lấy Slug an toàn
-  React.useEffect(() => {
-    if (router.isReady && typeof router.query.Slug === "string") {
-      setSlugFromUrl(router.query.Slug);
-    }
-  }, [router.isReady, router.query.Slug]);
-
-  // Bước 2: Gọi API
-  React.useEffect(() => {
+  useEffect(() => {
     async function fetchData() {
-      // Chặn nếu thiếu BaseID hoặc đang chờ Router nạp
-      if (!baseId || !tableName || !router.isReady) return;
-
+      if (!sheetId) {
+        setLoading(false);
+        return;
+      }
+      setLoading(true);
       try {
-        setLoading(true);
-        setError(null);
-
-        const finalFilterValue = filterValue || slugFromUrl;
-
-        const params = new URLSearchParams({
-          baseId,
-          tableName,
-          limit: String(limit),
-          t: Date.now().toString() // Chống kẹt Cache
-        });
-
-        if (filterField && finalFilterValue) {
-          params.set("filterField", filterField);
-          params.set("filterValue", finalFilterValue);
-        }
-
-        const res = await fetch(`/api/airtable?${params.toString()}`);
-        if (!res.ok) throw new Error("API failed");
-
-        const json = await res.json();
+        const response = await fetch(`https://opensheet.elk.sh/${sheetId}/${sheetName}`);
+        const json = await response.json();
         
-        // Cập nhật State
-        if (json.records && Array.isArray(json.records)) {
-          setRecords(json.records);
-        } else {
-          setRecords([]);
+        if (Array.isArray(json)) {
+            // LOGIC ĐA NĂNG:
+            // Nếu có điền filterField và filterValue -> Tìm 1 dự án duy nhất (cho trang Detail)
+            // Nếu không điền -> Lấy cả danh sách (cho trang List)
+            if (filterField && filterValue) {
+              const singleItem = json.find(item => String(item[filterField]) === String(filterValue));
+              setData(singleItem || null);
+            } else {
+              setData(json);
+            }
         }
-      } catch (err: any) {
-        setError(err.message);
-        setRecords([]);
+      } catch (e) {
+        console.error("Lỗi lấy dữ liệu:", e);
       } finally {
         setLoading(false);
       }
     }
-
     fetchData();
-  }, [baseId, tableName, limit, filterField, filterValue, slugFromUrl, router.isReady]);
+  }, [sheetId, sheetName, filterField, filterValue]);
 
-  // Bước 3: Render an toàn
+  if (loading) return <div style={{ padding: '20px' }}>⏳ Đang tải dữ liệu...</div>;
+  if (!data) return <div style={{ padding: '20px' }}>⚠️ Không tìm thấy dữ liệu phù hợp.</div>;
+
   return (
-    <DataProvider name="cachedData" data={records}>
-      <DataProvider
-        name="cachedDataState"
-        data={{
-          loading,
-          error,
-          count: records.length,
-          firstRecord: records[0] || null,
-        }}
-      >
-        {/* Chỉ render children khi đã chạy xong trên Client và có Data */}
-        <div key={records.length > 0 ? "has-data" : "no-data"} style={{ display: "contents" }}>
-          {records.length > 0 ? children : null}
-        </div>
-      </DataProvider>
+    <DataProvider name="cachedData" data={data}>
+      {children}
     </DataProvider>
   );
 }
-
-export { CachedAirtable as CachedAirtableFetcher };
