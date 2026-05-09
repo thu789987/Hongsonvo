@@ -27,8 +27,8 @@ export function CachedAirtable({
       }
       setLoading(true);
       try {
-        const response = await fetch(`https://opensheet.elk.sh/${sheetId}/${sheetName}`);
-        const json = await response.json();
+      const response = await fetch(`https://opensheet.elk.sh/${sheetId}/${encodeURIComponent(sheetName)}`);
+      const json = await response.json();
         
         if (Array.isArray(json)) {
             // LOGIC ĐA NĂNG:
