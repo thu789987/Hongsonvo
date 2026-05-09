@@ -34,7 +34,7 @@ export function CachedAirtable({
 
       try {
         const url = `https://opensheet.elk.sh/${sheetId}/${encodeURIComponent(sheetName)}`;
-        const response = await fetch(url);
+        const response = await fetch(`https://opensheet.elk.sh/${sheetId}/${encodeURIComponent(sheetName)}`);
         
         // 2. Kiểm tra nếu API trả về lỗi (thường do sai ID hoặc chưa bật Share)
         if (!response.ok) {
