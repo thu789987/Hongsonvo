@@ -5,44 +5,64 @@ export interface CachedAirtableProps {
   children?: ReactNode;
   sheetId?: string;
   sheetName?: string;
-  filterField?: string; // Tên cột để lọc (vd: slug)
-  filterValue?: string; // Giá trị để lọc (vd: dự án A)
+  filterField?: string;
+  filterValue?: string;
 }
 
 export function CachedAirtable({ 
   children, 
-  sheetId = "", 
+  sheetId, 
   sheetName = "Sheet1",
   filterField,
   filterValue
 }: CachedAirtableProps) {
   const [data, setData] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchData() {
-      if (!sheetId) {
+      // 1. Kiểm tra nếu chưa nhập ID
+      if (!sheetId || sheetId.trim() === "") {
+        setError("CHƯA NHẬP ID: Vui lòng dán Google Sheet ID vào ô bên phải.");
         setLoading(false);
         return;
       }
+
       setLoading(true);
+      setError(null);
+
       try {
-      const response = await fetch(`https://opensheet.elk.sh/${sheetId}/${encodeURIComponent(sheetName)}`);
-      const json = await response.json();
+        const url = `https://opensheet.elk.sh/${sheetId}/${encodeURIComponent(sheetName)}`;
+        const response = await fetch(url);
         
-        if (Array.isArray(json)) {
-            // LOGIC ĐA NĂNG:
-            // Nếu có điền filterField và filterValue -> Tìm 1 dự án duy nhất (cho trang Detail)
-            // Nếu không điền -> Lấy cả danh sách (cho trang List)
-            if (filterField && filterValue) {
-              const singleItem = json.find(item => String(item[filterField]) === String(filterValue));
-              setData(singleItem || null);
-            } else {
-              setData(json);
-            }
+        // 2. Kiểm tra nếu API trả về lỗi (thường do sai ID hoặc chưa bật Share)
+        if (!response.ok) {
+          throw new Error(`LỖI KẾT NỐI: Không thể đọc file. Hãy kiểm tra lại ID hoặc đảm bảo Sheet đã chọn "Anyone with the link can view".`);
         }
-      } catch (e) {
-        console.error("Lỗi lấy dữ liệu:", e);
+
+        const json = await response.json();
+
+        // 3. Kiểm tra nếu dữ liệu rỗng hoặc sai tên Sheet
+        if (!json || (Array.isArray(json) && json.length === 0)) {
+          setError(`TRỐNG: Sheet "${sheetName}" không có dữ liệu hoặc bạn gõ sai tên Sheet.`);
+          setLoading(false);
+          return;
+        }
+
+        // 4. Xử lý logic Lọc (Filter)
+        if (filterField && filterValue) {
+          const singleItem = json.find((item: any) => String(item[filterField]) === String(filterValue));
+          if (!singleItem) {
+            setError(`LỌC THẤT BẠI: Không tìm thấy dòng nào có cột "${filterField}" khớp với giá trị "${filterValue}".`);
+          } else {
+            setData(singleItem);
+          }
+        } else {
+          setData(json);
+        }
+      } catch (e: any) {
+        setError(e.message);
       } finally {
         setLoading(false);
       }
@@ -50,8 +70,32 @@ export function CachedAirtable({
     fetchData();
   }, [sheetId, sheetName, filterField, filterValue]);
 
-  if (loading) return <div style={{ padding: '20px' }}>⏳ Đang tải dữ liệu...</div>;
-  if (!data) return <div style={{ padding: '20px' }}>⚠️ Không tìm thấy dữ liệu phù hợp.</div>;
+  // Giao diện hiển thị trạng thái Lỗi/Loading
+  const errorStyle = {
+    padding: '15px',
+    margin: '10px',
+    border: '2px solid #ff4d4f',
+    borderRadius: '8px',
+    backgroundColor: '#fff2f0',
+    color: '#cf1322',
+    fontFamily: 'sans-serif'
+  };
+
+  if (loading) return <div style={{ padding: '20px' }}>⏳ Đang hút dữ liệu từ Google Sheets...</div>;
+
+  if (error) {
+    return (
+      <div style={errorStyle}>
+        <strong style={{fontSize: '16px'}}>⚠️ THÔNG BÁO TỪ HỆ THỐNG:</strong>
+        <p style={{marginTop: '8px'}}>{error}</p>
+        <ul style={{fontSize: '12px', marginTop: '10px', color: '#666'}}>
+          <li>ID hiện tại: {sheetId || "(Trống)"}</li>
+          <li>Tên Sheet: {sheetName}</li>
+          <li>Bộ lọc: {filterField || "Tắt"}</li>
+        </ul>
+      </div>
+    );
+  }
 
   return (
     <DataProvider name="cachedData" data={data}>
