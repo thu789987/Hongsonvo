@@ -2326,7 +2326,7 @@
       "globalContextsFilePath": "plasmic/son_vo/PlasmicGlobalContextsProvider.tsx",
       "splitsProviderFilePath": "",
       "styleTokensProviderFilePath": "plasmic/son_vo/PlasmicStyleTokensProvider.tsx",
-      "dataTokensFilePath": "",
+      "dataTokensFilePath": "plasmic/son_vo/plasmic-data-tokens.ts",
       "projectModuleFilePath": "plasmic/son_vo/plasmic.tsx",
       "codeComponents": [
         {

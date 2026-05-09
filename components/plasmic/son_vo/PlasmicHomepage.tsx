@@ -1420,11 +1420,10 @@ function PlasmicHomepage__RenderFunc(props: {
                                 "__wab_instance",
                                 sty.googleSheetsMultiTool__f1BSa
                               )}
-                              filterField={""}
                               sheetId={
                                 "1L3TDUwHRYbCHPb-Z18CfpS1SBdgO6IyMC-aVsyKXndg"
                               }
-                              sheetName={"Sheet1"}
+                              sheetName={"Assets-Grid view"}
                             >
                               <InfiniteScroll
                                 data-plasmic-name={"infiniteScroll"}
