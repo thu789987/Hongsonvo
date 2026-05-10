@@ -71,9 +71,9 @@ import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
 import { CachedAirtable } from "../../CachedAirtable"; // plasmic-import: R8IeYWvKto_c/codeComponent
-import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI/codeComponent
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
+import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectModule
@@ -173,16 +173,8 @@ export type PlasmicWorks__OverridesType = {
   headerHeroSection3?: Flex__<"div">;
   sectionCards3?: Flex__<"div">;
   container49?: Flex__<"div">;
-  templateCard?: Flex__<typeof TemplateCard>;
-  templateCard2?: Flex__<typeof TemplateCard>;
-  templateCard3?: Flex__<typeof TemplateCard>;
-  templateCard4?: Flex__<typeof TemplateCard>;
-  templateCard5?: Flex__<typeof TemplateCard>;
-  templateCard6?: Flex__<typeof TemplateCard>;
-  templateCard7?: Flex__<typeof TemplateCard>;
-  templateCard8?: Flex__<typeof TemplateCard>;
   patternGrid?: Flex__<typeof PatternGrid>;
-  templateCard9?: Flex__<typeof TemplateCard>;
+  templateCard10?: Flex__<typeof TemplateCard>;
   section?: Flex__<typeof Section>;
 };
 
@@ -809,7 +801,8 @@ function PlasmicWorks__RenderFunc(props: {
                     "__wab_instance",
                     sty.googleSheetsMultiTool__fXaAs
                   )}
-                  sheetName={"Sheet1"}
+                  sheetId={"1L3TDUwHRYbCHPb-Z18CfpS1SBdgO6IyMC-aVsyKXndg"}
+                  sheetName={"Assets-Grid view"}
                 >
                   <DataCtxReader__>
                     {$ctx => (
@@ -874,84 +867,13 @@ function PlasmicWorks__RenderFunc(props: {
                   data-plasmic-override={overrides.container49}
                   className={classNames(projectcss.all, sty.container49)}
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__gvyPv)}
-                  >
-                    <TemplateCard
-                      data-plasmic-name={"templateCard"}
-                      data-plasmic-override={overrides.templateCard}
-                      className={classNames("__wab_instance", sty.templateCard)}
-                    />
-
-                    <TemplateCard
-                      data-plasmic-name={"templateCard2"}
-                      data-plasmic-override={overrides.templateCard2}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard2
-                      )}
-                    />
-
-                    <TemplateCard
-                      data-plasmic-name={"templateCard3"}
-                      data-plasmic-override={overrides.templateCard3}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard3
-                      )}
-                    />
-
-                    <TemplateCard
-                      data-plasmic-name={"templateCard4"}
-                      data-plasmic-override={overrides.templateCard4}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard4
-                      )}
-                    />
-
-                    <TemplateCard
-                      data-plasmic-name={"templateCard5"}
-                      data-plasmic-override={overrides.templateCard5}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard5
-                      )}
-                    />
-
-                    <TemplateCard
-                      data-plasmic-name={"templateCard6"}
-                      data-plasmic-override={overrides.templateCard6}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard6
-                      )}
-                    />
-
-                    <TemplateCard
-                      data-plasmic-name={"templateCard7"}
-                      data-plasmic-override={overrides.templateCard7}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard7
-                      )}
-                    />
-
-                    <TemplateCard
-                      data-plasmic-name={"templateCard8"}
-                      data-plasmic-override={overrides.templateCard8}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.templateCard8
-                      )}
-                    />
-                  </div>
                   <CachedAirtable
                     className={classNames(
                       "__wab_instance",
-                      sty.googleSheetsMultiTool___7C0Gu
+                      sty.googleSheetsMultiTool__ysLzb
                     )}
-                    sheetName={"Sheet1"}
+                    sheetId={"1L3TDUwHRYbCHPb-Z18CfpS1SBdgO6IyMC-aVsyKXndg"}
+                    sheetName={"Assets-Grid view"}
                   >
                     <DataCtxReader__>
                       {$ctx => (
@@ -988,7 +910,7 @@ function PlasmicWorks__RenderFunc(props: {
                                 blurAmount={5}
                                 className={classNames(
                                   "__wab_instance",
-                                  sty.revealOnScroll__wHfwU
+                                  sty.revealOnScroll__r0AyH
                                 )}
                                 delay={(() => {
                                   try {
@@ -1009,20 +931,18 @@ function PlasmicWorks__RenderFunc(props: {
                                 yOffset={50}
                               >
                                 <TemplateCard
-                                  data-plasmic-name={"templateCard9"}
+                                  data-plasmic-name={"templateCard10"}
                                   data-plasmic-override={
-                                    overrides.templateCard9
+                                    overrides.templateCard10
                                   }
                                   className={classNames(
                                     "__wab_instance",
-                                    sty.templateCard9
+                                    sty.templateCard10
                                   )}
-                                  image2={
-                                    currentItem?.fields?.["Main Image"] || ""
-                                  }
+                                  image2={currentItem?.["Main Image"] || ""}
                                   imageCondition={(() => {
                                     try {
-                                      return !currentItem?.fields?.["Video"];
+                                      return !currentItem?.["Video"];
                                     } catch (e) {
                                       if (
                                         e instanceof TypeError ||
@@ -1034,11 +954,11 @@ function PlasmicWorks__RenderFunc(props: {
                                       throw e;
                                     }
                                   })()}
-                                  link={`/works/${currentItem?.fields?.["Slug"] || ""}`}
+                                  link={`/works/${currentItem?.["Slug"] || ""}`}
                                   project1={undefined}
                                   tag1={(() => {
                                     try {
-                                      return currentItem?.fields?.[
+                                      return currentItem?.[
                                         "Services"
                                       ]?.includes("UI");
                                     } catch (e) {
@@ -1054,7 +974,7 @@ function PlasmicWorks__RenderFunc(props: {
                                   })()}
                                   tag22={(() => {
                                     try {
-                                      return currentItem?.fields?.[
+                                      return currentItem?.[
                                         "Services"
                                       ]?.includes("UX");
                                     } catch (e) {
@@ -1070,7 +990,7 @@ function PlasmicWorks__RenderFunc(props: {
                                   })()}
                                   tag32={(() => {
                                     try {
-                                      return currentItem?.fields?.[
+                                      return currentItem?.[
                                         "Services"
                                       ]?.includes("FRAMER");
                                     } catch (e) {
@@ -1086,7 +1006,7 @@ function PlasmicWorks__RenderFunc(props: {
                                   })()}
                                   tag42={(() => {
                                     try {
-                                      return currentItem?.fields?.[
+                                      return currentItem?.[
                                         "Services"
                                       ]?.includes("E-COMMERCE");
                                     } catch (e) {
@@ -1102,7 +1022,7 @@ function PlasmicWorks__RenderFunc(props: {
                                   })()}
                                   tag52={(() => {
                                     try {
-                                      return currentItem?.fields?.[
+                                      return currentItem?.[
                                         "Services"
                                       ]?.includes("BRAND IDENTITY");
                                     } catch (e) {
@@ -1116,11 +1036,11 @@ function PlasmicWorks__RenderFunc(props: {
                                       throw e;
                                     }
                                   })()}
-                                  title={currentItem?.fields?.["Title"] || ""}
-                                  video={currentItem?.fields?.["Video"] || ""}
+                                  title={currentItem?.["Title"] || ""}
+                                  video={currentItem?.["Video"] || ""}
                                   videoCondition={(() => {
                                     try {
-                                      return !!currentItem?.fields?.["Video"];
+                                      return !!currentItem?.["Video"];
                                     } catch (e) {
                                       if (
                                         e instanceof TypeError ||
@@ -1254,16 +1174,8 @@ const PlasmicDescendants = {
     "headerHeroSection3",
     "sectionCards3",
     "container49",
-    "templateCard",
-    "templateCard2",
-    "templateCard3",
-    "templateCard4",
-    "templateCard5",
-    "templateCard6",
-    "templateCard7",
-    "templateCard8",
     "patternGrid",
-    "templateCard9",
+    "templateCard10",
     "section"
   ],
   scrollToTop: ["scrollToTop"],
@@ -1303,16 +1215,8 @@ const PlasmicDescendants = {
     "headerHeroSection3",
     "sectionCards3",
     "container49",
-    "templateCard",
-    "templateCard2",
-    "templateCard3",
-    "templateCard4",
-    "templateCard5",
-    "templateCard6",
-    "templateCard7",
-    "templateCard8",
     "patternGrid",
-    "templateCard9",
+    "templateCard10",
     "section"
   ],
   scrollContext: ["scrollContext", "newMenu2"],
@@ -1442,40 +1346,12 @@ const PlasmicDescendants = {
   sectionCards3: [
     "sectionCards3",
     "container49",
-    "templateCard",
-    "templateCard2",
-    "templateCard3",
-    "templateCard4",
-    "templateCard5",
-    "templateCard6",
-    "templateCard7",
-    "templateCard8",
     "patternGrid",
-    "templateCard9"
+    "templateCard10"
   ],
-  container49: [
-    "container49",
-    "templateCard",
-    "templateCard2",
-    "templateCard3",
-    "templateCard4",
-    "templateCard5",
-    "templateCard6",
-    "templateCard7",
-    "templateCard8",
-    "patternGrid",
-    "templateCard9"
-  ],
-  templateCard: ["templateCard"],
-  templateCard2: ["templateCard2"],
-  templateCard3: ["templateCard3"],
-  templateCard4: ["templateCard4"],
-  templateCard5: ["templateCard5"],
-  templateCard6: ["templateCard6"],
-  templateCard7: ["templateCard7"],
-  templateCard8: ["templateCard8"],
-  patternGrid: ["patternGrid", "templateCard9"],
-  templateCard9: ["templateCard9"],
+  container49: ["container49", "patternGrid", "templateCard10"],
+  patternGrid: ["patternGrid", "templateCard10"],
+  templateCard10: ["templateCard10"],
   section: ["section"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1519,16 +1395,8 @@ type NodeDefaultElementType = {
   headerHeroSection3: "div";
   sectionCards3: "div";
   container49: "div";
-  templateCard: typeof TemplateCard;
-  templateCard2: typeof TemplateCard;
-  templateCard3: typeof TemplateCard;
-  templateCard4: typeof TemplateCard;
-  templateCard5: typeof TemplateCard;
-  templateCard6: typeof TemplateCard;
-  templateCard7: typeof TemplateCard;
-  templateCard8: typeof TemplateCard;
   patternGrid: typeof PatternGrid;
-  templateCard9: typeof TemplateCard;
+  templateCard10: typeof TemplateCard;
   section: typeof Section;
 };
 
@@ -1665,16 +1533,8 @@ export const PlasmicWorks = Object.assign(
     headerHeroSection3: makeNodeComponent("headerHeroSection3"),
     sectionCards3: makeNodeComponent("sectionCards3"),
     container49: makeNodeComponent("container49"),
-    templateCard: makeNodeComponent("templateCard"),
-    templateCard2: makeNodeComponent("templateCard2"),
-    templateCard3: makeNodeComponent("templateCard3"),
-    templateCard4: makeNodeComponent("templateCard4"),
-    templateCard5: makeNodeComponent("templateCard5"),
-    templateCard6: makeNodeComponent("templateCard6"),
-    templateCard7: makeNodeComponent("templateCard7"),
-    templateCard8: makeNodeComponent("templateCard8"),
     patternGrid: makeNodeComponent("patternGrid"),
-    templateCard9: makeNodeComponent("templateCard9"),
+    templateCard10: makeNodeComponent("templateCard10"),
     section: makeNodeComponent("section"),
 
     // Metadata about props expected for PlasmicWorks

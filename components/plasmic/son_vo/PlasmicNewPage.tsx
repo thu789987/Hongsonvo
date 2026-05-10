@@ -139,7 +139,6 @@ export type PlasmicNewPage__OverridesType = {
   globalLoading?: Flex__<typeof GlobalLoading>;
   scrollToTop?: Flex__<typeof ScrollToTop>;
   customCursor?: Flex__<typeof CustomCursor>;
-  googleSheetsMultiTool?: Flex__<typeof CachedAirtable>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollContext?: Flex__<typeof ScrollContext>;
   newMenu2?: Flex__<typeof NewMenu>;
@@ -155,6 +154,7 @@ export type PlasmicNewPage__OverridesType = {
   text9?: Flex__<"div">;
   text10?: Flex__<"div">;
   text11?: Flex__<"div">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
   text5?: Flex__<"div">;
   container13?: Flex__<"div">;
   scrollParallax?: Flex__<typeof ParallaxWrapper>;
@@ -251,7 +251,6 @@ export type PlasmicNewPage__OverridesType = {
   h13?: Flex__<typeof RevealOnScroll>;
   section16?: Flex__<"div">;
   h124?: Flex__<"div">;
-  container25?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay30?: Flex__<"div">;
   container26?: Flex__<"div">;
   h21H13?: Flex__<"div">;
@@ -287,7 +286,6 @@ export type PlasmicNewPage__OverridesType = {
   h14?: Flex__<typeof RevealOnScroll>;
   section17?: Flex__<"div">;
   h125?: Flex__<"div">;
-  container27?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay43?: Flex__<"div">;
   container28?: Flex__<"div">;
   h21H1110?: Flex__<"div">;
@@ -336,7 +334,6 @@ export type PlasmicNewPage__OverridesType = {
   h15?: Flex__<typeof RevealOnScroll>;
   section18?: Flex__<"div">;
   h126?: Flex__<"div">;
-  container29?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay66?: Flex__<"div">;
   container30?: Flex__<"div">;
   h21H1111?: Flex__<"div">;
@@ -396,8 +393,6 @@ export type PlasmicNewPage__OverridesType = {
   image11?: Flex__<typeof GridDistortion>;
   image12?: Flex__<typeof GridDistortion>;
   image13?: Flex__<typeof GridDistortion>;
-  section09?: Flex__<"div">;
-  theWebsiteBecameAnImportantSpaceToShowcase?: Flex__<"div">;
   section10?: Flex__<"div">;
   title3?: Flex__<"div">;
   prevous?: Flex__<typeof TemplateCard>;
@@ -537,10 +532,26 @@ function PlasmicNewPage__RenderFunc(props: {
           />
 
           <CachedAirtable
-            data-plasmic-name={"googleSheetsMultiTool"}
-            data-plasmic-override={overrides.googleSheetsMultiTool}
-            className={classNames("__wab_instance", sty.googleSheetsMultiTool)}
-            sheetName={"Sheet1"}
+            className={classNames(
+              "__wab_instance",
+              sty.googleSheetsMultiTool__yjAiR
+            )}
+            filterField={"Slug"}
+            filterValue={(() => {
+              try {
+                return $ctx.params.Slug;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
+            sheetId={"1L3TDUwHRYbCHPb-Z18CfpS1SBdgO6IyMC-aVsyKXndg"}
+            sheetName={"Assets-Grid view"}
           >
             <DataCtxReader__>
               {$ctx => (
@@ -581,19 +592,24 @@ function PlasmicNewPage__RenderFunc(props: {
                                   if (!pageId) {
                                     return fallback;
                                   }
-                                  const list = $ctx.cachedData || [];
-                                  const currentItem = list.find(item => {
-                                    const fields = item?.fields || {};
-                                    return (
-                                      item?.id === pageId ||
-                                      fields?.["Id"] === pageId ||
-                                      fields?.["id"] === pageId ||
-                                      fields?.["Slug"] === pageId ||
-                                      fields?.["slug"] === pageId
+                                  const data = $ctx.cachedData;
+                                  if (!data) return fallback;
+                                  let currentItem = null;
+                                  if (Array.isArray(data)) {
+                                    currentItem = data.find(
+                                      item =>
+                                        item["Id"] == pageId ||
+                                        item["id"] == pageId ||
+                                        item["Slug"] == pageId ||
+                                        item["slug"] == pageId
                                     );
-                                  });
+                                  } else {
+                                    currentItem = data;
+                                  }
                                   return (
-                                    currentItem?.fields?.["Link"] || fallback
+                                    currentItem?.["Link"] ||
+                                    currentItem?.["link"] ||
+                                    fallback
                                   );
                                 })();
                               } catch (e) {
@@ -662,10 +678,7 @@ function PlasmicNewPage__RenderFunc(props: {
                               )}
                             >
                               <React.Fragment>
-                                {
-                                  $ctx.cachedDataState?.firstRecord?.fields
-                                    ?.Title
-                                }
+                                {$ctx.cachedData?.Title}
                               </React.Fragment>
                             </div>
                           </div>
@@ -703,10 +716,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 )}
                               >
                                 <React.Fragment>
-                                  {
-                                    $ctx.cachedDataState?.firstRecord?.fields
-                                      ?.Client
-                                  }
+                                  {$ctx.cachedData?.Client}
                                 </React.Fragment>
                               </div>
                             </div>
@@ -736,10 +746,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 )}
                               >
                                 <React.Fragment>
-                                  {
-                                    $ctx.cachedDataState?.firstRecord?.fields
-                                      ?.Industry
-                                  }
+                                  {$ctx.cachedData?.Industry}
                                 </React.Fragment>
                               </div>
                             </div>
@@ -772,17 +779,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 {(() => {
                                   try {
                                     return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
+                                      const currentItem = $ctx.cachedData;
                                       if (!currentItem) return false;
                                       const tagsData =
                                         currentItem["Services"] ||
@@ -792,9 +789,9 @@ function PlasmicNewPage__RenderFunc(props: {
                                       if (Array.isArray(tagsData)) {
                                         return tagsData.includes(targetValue);
                                       } else {
-                                        return tagsData
-                                          .toString()
-                                          .includes(targetValue);
+                                        return String(tagsData).includes(
+                                          targetValue
+                                        );
                                       }
                                     })();
                                   } catch (e) {
@@ -830,17 +827,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 {(() => {
                                   try {
                                     return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
+                                      const currentItem = $ctx.cachedData;
                                       if (!currentItem) return false;
                                       const tagsData =
                                         currentItem["Services"] ||
@@ -850,9 +837,9 @@ function PlasmicNewPage__RenderFunc(props: {
                                       if (Array.isArray(tagsData)) {
                                         return tagsData.includes(targetValue);
                                       } else {
-                                        return tagsData
-                                          .toString()
-                                          .includes(targetValue);
+                                        return String(tagsData).includes(
+                                          targetValue
+                                        );
                                       }
                                     })();
                                   } catch (e) {
@@ -888,17 +875,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 {(() => {
                                   try {
                                     return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
+                                      const currentItem = $ctx.cachedData;
                                       if (!currentItem) return false;
                                       const tagsData =
                                         currentItem["Services"] ||
@@ -908,9 +885,9 @@ function PlasmicNewPage__RenderFunc(props: {
                                       if (Array.isArray(tagsData)) {
                                         return tagsData.includes(targetValue);
                                       } else {
-                                        return tagsData
-                                          .toString()
-                                          .includes(targetValue);
+                                        return String(tagsData).includes(
+                                          targetValue
+                                        );
                                       }
                                     })();
                                   } catch (e) {
@@ -946,17 +923,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 {(() => {
                                   try {
                                     return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
+                                      const currentItem = $ctx.cachedData;
                                       if (!currentItem) return false;
                                       const tagsData =
                                         currentItem["Services"] ||
@@ -966,9 +933,9 @@ function PlasmicNewPage__RenderFunc(props: {
                                       if (Array.isArray(tagsData)) {
                                         return tagsData.includes(targetValue);
                                       } else {
-                                        return tagsData
-                                          .toString()
-                                          .includes(targetValue);
+                                        return String(tagsData).includes(
+                                          targetValue
+                                        );
                                       }
                                     })();
                                   } catch (e) {
@@ -1004,17 +971,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 {(() => {
                                   try {
                                     return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
+                                      const currentItem = $ctx.cachedData;
                                       if (!currentItem) return false;
                                       const tagsData =
                                         currentItem["Services"] ||
@@ -1024,9 +981,9 @@ function PlasmicNewPage__RenderFunc(props: {
                                       if (Array.isArray(tagsData)) {
                                         return tagsData.includes(targetValue);
                                       } else {
-                                        return tagsData
-                                          .toString()
-                                          .includes(targetValue);
+                                        return String(tagsData).includes(
+                                          targetValue
+                                        );
                                       }
                                     })();
                                   } catch (e) {
@@ -1071,12 +1028,10 @@ function PlasmicNewPage__RenderFunc(props: {
                             {(() => {
                               try {
                                 return (() => {
-                                  const currentItem =
-                                    $ctx.cachedDataState?.firstRecord;
+                                  const currentItem = $ctx.cachedData;
                                   if (!currentItem) return false;
                                   const content =
-                                    currentItem?.fields?.Link ||
-                                    currentItem?.Link;
+                                    currentItem["Link"] || currentItem["link"];
                                   return !!(
                                     content && String(content).trim() !== ""
                                   );
@@ -1092,24 +1047,23 @@ function PlasmicNewPage__RenderFunc(props: {
                               }
                             })() ? (
                               <PlasmicLink__
+                                data-plasmic-name={"link"}
+                                data-plasmic-override={overrides.link}
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.a,
                                   projectcss.a__bLa1s,
-                                  sty.link__iyRh8,
+                                  sty.link,
                                   "animate-text"
                                 )}
                                 component={Link}
                                 href={(() => {
-                                  const currentItem =
-                                    $ctx.cachedDataState?.firstRecord;
+                                  const currentItem = $ctx.cachedData;
                                   if (!currentItem)
                                     return "Đang đợi tham số...";
                                   const liveSite =
-                                    currentItem?.fields?.["Live Site"] ||
-                                    currentItem?.fields?.["live site"] ||
-                                    currentItem?.["Live Site"] ||
-                                    currentItem?.["live site"];
+                                    currentItem["Live Site"] ||
+                                    currentItem["live site"];
                                   return liveSite || "Không tìm thấy bài";
                                 })()}
                                 legacyBehavior={false}
@@ -1196,12 +1150,11 @@ function PlasmicNewPage__RenderFunc(props: {
                             {(() => {
                               try {
                                 return !(() => {
-                                  const currentItem =
-                                    $ctx.cachedDataState?.firstRecord;
+                                  const currentItem = $ctx.cachedData;
                                   if (!currentItem) return false;
                                   const content =
-                                    currentItem?.fields?.Video ||
-                                    currentItem?.Video;
+                                    currentItem["Video"] ||
+                                    currentItem["video"];
                                   return !!(
                                     content && String(content).trim() !== ""
                                   );
@@ -1231,13 +1184,12 @@ function PlasmicNewPage__RenderFunc(props: {
                                 src={(() => {
                                   try {
                                     return (() => {
-                                      const currentItem =
-                                        $ctx.cachedDataState?.firstRecord;
+                                      const currentItem = $ctx.cachedData;
                                       if (!currentItem)
                                         return "Đang đợi tham số...";
                                       const mainImage =
-                                        currentItem?.fields?.["Main Image"] ||
-                                        currentItem?.["Main Image"];
+                                        currentItem["Main Image"] ||
+                                        currentItem["main image"];
                                       return mainImage || "Không tìm thấy bài";
                                     })();
                                   } catch (e) {
@@ -1256,12 +1208,11 @@ function PlasmicNewPage__RenderFunc(props: {
                             {(() => {
                               try {
                                 return (() => {
-                                  const currentItem =
-                                    $ctx.cachedDataState?.firstRecord;
+                                  const currentItem = $ctx.cachedData;
                                   if (!currentItem) return false;
                                   const content =
-                                    currentItem?.fields?.Video ||
-                                    currentItem?.Video;
+                                    currentItem["Video"] ||
+                                    currentItem["video"];
                                   return !!(
                                     content && String(content).trim() !== ""
                                   );
@@ -1291,11 +1242,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                   $refs["htmlVideo"] = ref;
                                 }}
                                 src={(() => {
-                                  const currentItem =
-                                    $ctx.cachedDataState?.firstRecord;
+                                  const currentItem = $ctx.cachedData;
                                   const videoLink =
-                                    currentItem?.fields?.Video ||
-                                    currentItem?.Video;
+                                    currentItem?.["Video"] ||
+                                    currentItem?.["video"];
                                   return videoLink || null;
                                 })()}
                               />
@@ -1307,18 +1257,28 @@ function PlasmicNewPage__RenderFunc(props: {
                     {(() => {
                       try {
                         return (() => {
-                          const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
-                          const currentItem = list.find(
-                            item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
-                          );
-                          const content = currentItem?.["Project Overview"];
-                          return content && content.toString().trim() !== "";
+                          const pageId =
+                            $ctx.params?.id ||
+                            $ctx.params?.slug ||
+                            $ctx.params?.Slug;
+                          const data = $ctx.cachedData;
+                          if (!data) return false;
+                          let currentItem = data;
+                          if (Array.isArray(data)) {
+                            if (!pageId) return false;
+                            currentItem = data.find(
+                              item =>
+                                item["Id"] == pageId ||
+                                item["id"] == pageId ||
+                                item["Slug"] == pageId ||
+                                item["slug"] == pageId
+                            );
+                          }
+                          if (!currentItem) return false;
+                          const content =
+                            currentItem["Project Overview"] ||
+                            currentItem["project overview"];
+                          return !!(content && String(content).trim() !== "");
                         })();
                       } catch (e) {
                         if (
@@ -1385,20 +1345,26 @@ function PlasmicNewPage__RenderFunc(props: {
                               <React.Fragment>
                                 {(() => {
                                   const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return "Đang đợi tham số...";
-                                  const list = $queries.allList?.data || [];
-                                  const currentItem = list.find(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  return (
-                                    currentItem?.["Project Overview"] ||
-                                    "Không tìm thấy bài"
-                                  );
+                                    $ctx.params?.id ||
+                                    $ctx.params?.slug ||
+                                    $ctx.params?.Slug;
+                                  const data = $ctx.cachedData;
+                                  if (!data) return "Đang đợi tham số...";
+                                  let currentItem = data;
+                                  if (Array.isArray(data)) {
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    currentItem = data.find(
+                                      item =>
+                                        item["Id"] == pageId ||
+                                        item["id"] == pageId ||
+                                        item["Slug"] == pageId ||
+                                        item["slug"] == pageId
+                                    );
+                                  }
+                                  const content =
+                                    currentItem["Project Overview"] ||
+                                    currentItem["project overview"];
+                                  return content || "Không tìm thấy bài";
                                 })()}
                               </React.Fragment>
                             </div>
@@ -1410,8 +1376,10 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
                               item.id == pageId ||
@@ -1420,7 +1388,9 @@ function PlasmicNewPage__RenderFunc(props: {
                               item.Slug == pageId
                           );
                           const content = currentItem?.["Challenge"];
-                          return content && content.toString().trim() !== "";
+                          return !!(
+                            content && content.toString().trim() !== ""
+                          );
                         })();
                       } catch (e) {
                         if (
@@ -1522,13 +1492,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["Project Overview"] ||
@@ -1582,13 +1556,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["Challenge"] ||
@@ -1642,13 +1620,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["Solution"] ||
@@ -1667,17 +1649,21 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
+                              item?.id == pageId ||
+                              item?.Id == pageId ||
+                              item?.slug == pageId ||
+                              item?.Slug == pageId
                           );
                           const content = currentItem?.["Image 1"];
-                          return content && content.toString().trim() !== "";
+                          return !!(
+                            content && content.toString().trim() !== ""
+                          );
                         })();
                       } catch (e) {
                         if (
@@ -1709,17 +1695,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return !(() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 1"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -1748,13 +1736,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 1"] ||
@@ -1782,17 +1772,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 1"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -1824,13 +1816,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 1"] ||
@@ -1846,17 +1840,21 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
+                              item?.id == pageId ||
+                              item?.Id == pageId ||
+                              item?.slug == pageId ||
+                              item?.Slug == pageId
                           );
                           const content = currentItem?.["H1_1"];
-                          return content && content.toString().trim() !== "";
+                          return !!(
+                            content && content.toString().trim() !== ""
+                          );
                         })();
                       } catch (e) {
                         if (
@@ -1899,14 +1897,25 @@ function PlasmicNewPage__RenderFunc(props: {
                                 {(() => {
                                   try {
                                     return (() => {
-                                      const currentItem =
-                                        $ctx.cachedDataState?.firstRecord;
-                                      if (!currentItem)
-                                        return "Đang đợi tham số...";
-                                      const h1Content =
-                                        currentItem?.fields?.["H1_1"] ||
-                                        currentItem?.["H1_1"];
-                                      return h1Content || "Không tìm thấy bài";
+                                      const pageId =
+                                        $ctx.params.id || $ctx.params.Slug;
+                                      if (!pageId) return "Đang đợi tham số...";
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
+                                      const currentItem = list.find(
+                                        item =>
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
+                                      );
+                                      return (
+                                        currentItem?.["H1_1"] ||
+                                        "Không tìm thấy bài"
+                                      );
                                     })();
                                   } catch (e) {
                                     if (
@@ -1924,14 +1933,22 @@ function PlasmicNewPage__RenderFunc(props: {
                             {(() => {
                               try {
                                 return (() => {
-                                  const currentItem =
-                                    $ctx.cachedDataState?.firstRecord;
-                                  if (!currentItem) return false;
-                                  const content =
-                                    currentItem?.fields?.["H1_1_content"] ||
-                                    currentItem?.["H1_1_content"];
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item?.id == pageId ||
+                                      item?.Id == pageId ||
+                                      item?.slug == pageId ||
+                                      item?.Slug == pageId
+                                  );
+                                  const content = currentItem?.["H1_1_content"];
                                   return !!(
-                                    content && String(content).trim() !== ""
+                                    content && content.toString().trim() !== ""
                                   );
                                 })();
                               } catch (e) {
@@ -1970,13 +1987,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H1_1_content"] ||
@@ -2001,17 +2022,19 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
+                                      item?.id == pageId ||
+                                      item?.Id == pageId ||
+                                      item?.slug == pageId ||
+                                      item?.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_1_H1_1"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -2048,29 +2071,52 @@ function PlasmicNewPage__RenderFunc(props: {
                                 >
                                   <React.Fragment>
                                     {(() => {
-                                      const currentItem =
-                                        $ctx.cachedDataState?.firstRecord;
-                                      if (!currentItem)
-                                        return "Đang đợi tham số...";
-                                      const h1Content =
-                                        currentItem?.fields?.["H2_1_H1_1"] ||
-                                        currentItem?.["H2_1_H1_1"];
-                                      return h1Content || "Không tìm thấy bài";
+                                      const pageId =
+                                        $ctx.params.id || $ctx.params.Slug;
+                                      if (!pageId) return "Đang đợi tham số...";
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
+                                      const currentItem = list.find(
+                                        item =>
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
+                                      );
+                                      return (
+                                        currentItem?.["H2_1_H1_1"] ||
+                                        "Không tìm thấy bài"
+                                      );
                                     })()}
                                   </React.Fragment>
                                 </div>
                                 {(() => {
                                   try {
                                     return (() => {
-                                      const currentItem =
-                                        $ctx.cachedDataState?.firstRecord;
-                                      if (!currentItem) return false;
+                                      const pageId =
+                                        $ctx.params.id || $ctx.params.Slug;
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
+                                      const currentItem = list.find(
+                                        item =>
+                                          item.id == pageId ||
+                                          item.Id == pageId ||
+                                          item.slug == pageId ||
+                                          item.Slug == pageId
+                                      );
                                       const content =
-                                        currentItem?.fields?.[
-                                          "H2_1_H1_1_content"
-                                        ] || currentItem?.["H2_1_H1_1_content"];
+                                        currentItem?.["H2_1_H1_1_content"];
                                       return !!(
-                                        content && String(content).trim() !== ""
+                                        content &&
+                                        content.toString().trim() !== ""
                                       );
                                     })();
                                   } catch (e) {
@@ -2103,17 +2149,26 @@ function PlasmicNewPage__RenderFunc(props: {
                                       }
                                       dangerouslySetInnerHTML={{
                                         __html: (() => {
-                                          const currentItem =
-                                            $ctx.cachedDataState?.firstRecord;
-                                          if (!currentItem)
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const content =
-                                            currentItem?.fields?.[
-                                              "H2_1_H1_1_content"
-                                            ] ||
-                                            currentItem?.["H2_1_H1_1_content"];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
+                                          const currentItem = list.find(
+                                            item =>
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
+                                          );
                                           return (
-                                            content || "Không tìm thấy bài"
+                                            currentItem?.[
+                                              "H2_1_H1_1_content"
+                                            ] || "Không tìm thấy bài"
                                           );
                                         })()
                                       }}
@@ -2123,15 +2178,27 @@ function PlasmicNewPage__RenderFunc(props: {
                                 {(() => {
                                   try {
                                     return (() => {
-                                      const currentItem =
-                                        $ctx.cachedDataState?.firstRecord;
-                                      if (!currentItem) return false;
+                                      const pageId =
+                                        $ctx.params.id || $ctx.params.Slug;
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
+                                      const currentItem = list.find(
+                                        item =>
+                                          item.id == pageId ||
+                                          item.Id == pageId ||
+                                          item.slug == pageId ||
+                                          item.Slug == pageId
+                                      );
                                       const content =
-                                        currentItem?.fields?.[
-                                          "H3_1_H2_1_H1_1"
-                                        ] || currentItem?.["H3_1_H2_1_H1_1"];
+                                        currentItem?.["H3_1_H2_1_H1_1"];
                                       return !!(
-                                        content && String(content).trim() !== ""
+                                        content &&
+                                        content.toString().trim() !== ""
                                       );
                                     })();
                                   } catch (e) {
@@ -2168,17 +2235,25 @@ function PlasmicNewPage__RenderFunc(props: {
                                     >
                                       <React.Fragment>
                                         {(() => {
-                                          const currentItem =
-                                            $ctx.cachedDataState?.firstRecord;
-                                          if (!currentItem)
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const content =
-                                            currentItem?.fields?.[
-                                              "H3_1_H2_1_H1_1"
-                                            ] ||
-                                            currentItem?.["H3_1_H2_1_H1_1"];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
+                                          const currentItem = list.find(
+                                            item =>
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
+                                          );
                                           return (
-                                            content || "Không tìm thấy bài"
+                                            currentItem?.["H3_1_H2_1_H1_1"] ||
+                                            "Không tìm thấy bài"
                                           );
                                         })()}
                                       </React.Fragment>
@@ -2198,17 +2273,26 @@ function PlasmicNewPage__RenderFunc(props: {
                                     >
                                       <React.Fragment>
                                         {(() => {
-                                          const currentItem =
-                                            $ctx.cachedDataState?.firstRecord;
-                                          if (!currentItem)
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const content =
-                                            currentItem?.fields?.[
-                                              "H3_1_H2_1_H1_1_content"
-                                            ] ||
-                                            currentItem?.["H2_1_H1_1_content"];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
+                                          const currentItem = list.find(
+                                            item =>
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
+                                          );
                                           return (
-                                            content || "Không tìm thấy bài"
+                                            currentItem?.[
+                                              "H3_1_H2_1_H1_1_content"
+                                            ] || "Không tìm thấy bài"
                                           );
                                         })()}
                                       </React.Fragment>
@@ -2220,8 +2304,13 @@ function PlasmicNewPage__RenderFunc(props: {
                                     return (() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
                                           item.id == pageId ||
@@ -2231,7 +2320,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       );
                                       const content =
                                         currentItem?.["H3_2_H2_1_H1_1"];
-                                      return (
+                                      return !!(
                                         content &&
                                         content.toString().trim() !== ""
                                       );
@@ -2274,14 +2363,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.["H3_2_H2_1_H1_1"] ||
@@ -2309,14 +2401,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.[
@@ -2335,8 +2430,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -2345,7 +2442,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_2_H1_1"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -2385,13 +2482,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_2_H1_1"] ||
@@ -2405,8 +2506,13 @@ function PlasmicNewPage__RenderFunc(props: {
                                     return (() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
                                           item.id == pageId ||
@@ -2416,7 +2522,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       );
                                       const content =
                                         currentItem?.["Image H2_2_H1_1"];
-                                      return (
+                                      return !!(
                                         content &&
                                         content.toString().trim() !== ""
                                       );
@@ -2463,14 +2569,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                               $ctx.params.Slug;
                                             if (!pageId)
                                               return "Đang đợi tham số...";
-                                            const list =
-                                              $queries.allList?.data || [];
+                                            const list = Array.isArray(
+                                              $ctx.cachedData
+                                            )
+                                              ? $ctx.cachedData
+                                              : [$ctx.cachedData];
                                             const currentItem = list.find(
                                               item =>
-                                                item.id == pageId ||
-                                                item.Id == pageId ||
-                                                item.slug == pageId ||
-                                                item.Slug == pageId
+                                                item?.id == pageId ||
+                                                item?.Id == pageId ||
+                                                item?.slug == pageId ||
+                                                item?.Slug == pageId
                                             );
                                             return (
                                               currentItem?.[
@@ -2500,18 +2609,23 @@ function PlasmicNewPage__RenderFunc(props: {
                                     return (() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       const content =
                                         currentItem?.["H2_2_H1_1_content"];
-                                      return (
+                                      return !!(
                                         content &&
                                         content.toString().trim() !== ""
                                       );
@@ -2546,14 +2660,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_2_H1_1_content"] ||
@@ -2568,8 +2685,13 @@ function PlasmicNewPage__RenderFunc(props: {
                                     return (() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
                                           item.id == pageId ||
@@ -2579,7 +2701,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       );
                                       const content =
                                         currentItem?.["H3_1_H2_2_H1_1"];
-                                      return (
+                                      return !!(
                                         content &&
                                         content.toString().trim() !== ""
                                       );
@@ -2622,14 +2744,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.["H3_1_H2_2_H1_1"] ||
@@ -2657,14 +2782,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.[
@@ -2681,18 +2809,23 @@ function PlasmicNewPage__RenderFunc(props: {
                                     return (() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       const content =
                                         currentItem?.["H3_2_H2_2_H1_1"];
-                                      return (
+                                      return !!(
                                         content &&
                                         content.toString().trim() !== ""
                                       );
@@ -2735,14 +2868,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.["H3_2_H2_2_H1_1"] ||
@@ -2770,14 +2906,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.[
@@ -2794,18 +2933,23 @@ function PlasmicNewPage__RenderFunc(props: {
                                     return (() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       const content =
                                         currentItem?.["H3_3_H2_2_H1_1"];
-                                      return (
+                                      return !!(
                                         content &&
                                         content.toString().trim() !== ""
                                       );
@@ -2848,14 +2992,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.["H3_3_H2_2_H1_1"] ||
@@ -2883,14 +3030,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.[
@@ -2907,8 +3057,13 @@ function PlasmicNewPage__RenderFunc(props: {
                                     return (() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
                                           item.id == pageId ||
@@ -2918,7 +3073,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       );
                                       const content =
                                         currentItem?.["Image H3_5_H2_2_H1_1"];
-                                      return (
+                                      return !!(
                                         content &&
                                         content.toString().trim() !== ""
                                       );
@@ -2965,14 +3120,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                               $ctx.params.Slug;
                                             if (!pageId)
                                               return "Đang đợi tham số...";
-                                            const list =
-                                              $queries.allList?.data || [];
+                                            const list = Array.isArray(
+                                              $ctx.cachedData
+                                            )
+                                              ? $ctx.cachedData
+                                              : [$ctx.cachedData];
                                             const currentItem = list.find(
                                               item =>
-                                                item.id == pageId ||
-                                                item.Id == pageId ||
-                                                item.slug == pageId ||
-                                                item.Slug == pageId
+                                                item?.id == pageId ||
+                                                item?.Id == pageId ||
+                                                item?.slug == pageId ||
+                                                item?.Slug == pageId
                                             );
                                             return (
                                               currentItem?.[
@@ -3002,8 +3160,13 @@ function PlasmicNewPage__RenderFunc(props: {
                                     return (() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
                                           item.id == pageId ||
@@ -3013,7 +3176,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       );
                                       const content =
                                         currentItem?.["H3_4_H2_2_H1_1"];
-                                      return (
+                                      return !!(
                                         content &&
                                         content.toString().trim() !== ""
                                       );
@@ -3056,14 +3219,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.["H3_4_H2_2_H1_1"] ||
@@ -3091,14 +3257,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.[
@@ -3115,8 +3284,13 @@ function PlasmicNewPage__RenderFunc(props: {
                                     return (() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
                                           item.id == pageId ||
@@ -3126,7 +3300,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       );
                                       const content =
                                         currentItem?.["H3_4_H2_2_H1_1"];
-                                      return (
+                                      return !!(
                                         content &&
                                         content.toString().trim() !== ""
                                       );
@@ -3169,17 +3343,20 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
-                                            currentItem?.["H3_5_H2_2_H1_1"] ||
+                                            currentItem?.["H3_4_H2_2_H1_1"] ||
                                             "Không tìm thấy bài"
                                           );
                                         })()}
@@ -3204,14 +3381,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                             $ctx.params.id || $ctx.params.Slug;
                                           if (!pageId)
                                             return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [$ctx.cachedData];
                                           const currentItem = list.find(
                                             item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
                                           );
                                           return (
                                             currentItem?.[
@@ -3250,8 +3430,10 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
                               item.id == pageId ||
@@ -3260,7 +3442,9 @@ function PlasmicNewPage__RenderFunc(props: {
                               item.Slug == pageId
                           );
                           const content = currentItem?.["H1_2"];
-                          return content && content.toString().trim() !== "";
+                          return !!(
+                            content && content.toString().trim() !== ""
+                          );
                         })();
                       } catch (e) {
                         if (
@@ -3305,13 +3489,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H1_2"] ||
@@ -3336,8 +3524,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -3346,7 +3536,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H1_2_content"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -3386,13 +3576,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H1_2_content"] ||
@@ -3417,8 +3611,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -3427,7 +3623,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_1_H1_1"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -3467,13 +3663,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_1_H1_2"] ||
@@ -3503,14 +3703,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_1_H1_2_content"] ||
@@ -3527,8 +3730,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -3538,7 +3743,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_1_H1_2_1"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -3580,14 +3785,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_1_H1_2_1"] ||
@@ -3616,8 +3824,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -3627,7 +3837,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_1_H1_2_2"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -3653,85 +3863,54 @@ function PlasmicNewPage__RenderFunc(props: {
                                 duration={0.8}
                                 yOffset={50}
                               >
-                                {(() => {
-                                  try {
-                                    return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return false;
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      const content =
-                                        currentItem?.["Image H2_1_H1_2_2"];
-                                      return (
-                                        content &&
-                                        content.toString().trim() !== ""
-                                      );
-                                    })();
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })() ? (
-                                  <GridDistortion
-                                    data-plasmic-name={"image17"}
-                                    data-plasmic-override={overrides.image17}
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.image17
-                                    )}
-                                    enableEffect={true}
-                                    grid={50}
-                                    imageSrc={(() => {
-                                      try {
-                                        return (() => {
-                                          const pageId =
-                                            $ctx.params.id || $ctx.params.Slug;
-                                          if (!pageId)
-                                            return "Đang đợi tham số...";
-                                          const list =
-                                            $queries.allList?.data || [];
-                                          const currentItem = list.find(
-                                            item =>
-                                              item.id == pageId ||
-                                              item.Id == pageId ||
-                                              item.slug == pageId ||
-                                              item.Slug == pageId
-                                          );
-                                          return (
-                                            currentItem?.[
-                                              "Image H2_1_H1_2_2"
-                                            ] || "Không tìm thấy bài"
-                                          );
-                                        })();
-                                      } catch (e) {
-                                        if (
-                                          e instanceof TypeError ||
-                                          e?.plasmicType ===
-                                            "PlasmicUndefinedDataError"
-                                        ) {
-                                          return "https://picsum.photos/1920/1080";
-                                        }
-                                        throw e;
+                                <GridDistortion
+                                  data-plasmic-name={"image17"}
+                                  data-plasmic-override={overrides.image17}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.image17
+                                  )}
+                                  enableEffect={true}
+                                  grid={50}
+                                  imageSrc={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        if (!pageId)
+                                          return "Đang đợi tham số...";
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
+                                        const currentItem = list.find(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        return (
+                                          currentItem?.["Image H2_1_H1_2_2"] ||
+                                          "Không tìm thấy bài"
+                                        );
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "https://picsum.photos/1920/1080";
                                       }
-                                    })()}
-                                    mouse={0.1}
-                                    relaxation={0.9}
-                                    strength={0.5}
-                                  />
-                                ) : null}
+                                      throw e;
+                                    }
+                                  })()}
+                                  mouse={0.1}
+                                  relaxation={0.9}
+                                  strength={0.5}
+                                />
                               </RevealOnScroll>
                             ) : null}
                             {(() => {
@@ -3739,8 +3918,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -3750,7 +3931,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_1_H1_2_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -3792,14 +3973,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_1_H1_2_3"] ||
@@ -3828,8 +4012,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -3837,8 +4023,8 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.slug == pageId ||
                                       item.Slug == pageId
                                   );
-                                  const content = currentItem?.["H2_1_H1_1"];
-                                  return (
+                                  const content = currentItem?.["H2_2_H1_2"];
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -3878,13 +4064,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_2_H1_2"] ||
@@ -3914,14 +4104,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_2_H1_2_content"] ||
@@ -3938,8 +4131,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -3948,7 +4143,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_3_H1_2"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -3988,13 +4183,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_3_H1_2"] ||
@@ -4024,14 +4223,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_3_H1_2_content"] ||
@@ -4048,8 +4250,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -4058,7 +4262,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_4_H1_2"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -4098,13 +4302,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_4_H1_2"] ||
@@ -4134,14 +4342,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_4_H1_2_content"] ||
@@ -4158,8 +4369,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -4168,7 +4381,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_5_H1_2"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -4208,13 +4421,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_5_H1_2"] ||
@@ -4244,14 +4461,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_5_H1_2_content"] ||
@@ -4268,8 +4488,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -4279,7 +4501,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_2"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -4321,14 +4543,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_2"] ||
@@ -4370,17 +4595,26 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
+                              item?.id == pageId ||
+                              item?.Id == pageId ||
+                              item?.slug == pageId ||
+                              item?.Slug == pageId
                           );
-                          const content = currentItem?.["Image 2"];
-                          return content && content.toString().trim() !== "";
+                          const image2 = currentItem?.["Image 2"];
+                          const video2 = currentItem?.["Video 2"];
+                          const hasImage = !!(
+                            image2 && image2.toString().trim() !== ""
+                          );
+                          const hasVideo = !!(
+                            video2 && video2.toString().trim() !== ""
+                          );
+                          return hasImage || hasVideo;
                         })();
                       } catch (e) {
                         if (
@@ -4409,21 +4643,14 @@ function PlasmicNewPage__RenderFunc(props: {
                         >
                           {(() => {
                             try {
-                              return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
-                                const currentItem = list.find(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                const content = currentItem?.["Image 2"];
-                                return (
-                                  content && content.toString().trim() !== ""
+                              return !(() => {
+                                const currentItem = $ctx.cachedData;
+                                if (!currentItem) return false;
+                                const content =
+                                  currentItem["Video 2"] ||
+                                  currentItem["video"];
+                                return !!(
+                                  content && String(content).trim() !== ""
                                 );
                               })();
                             } catch (e) {
@@ -4448,21 +4675,13 @@ function PlasmicNewPage__RenderFunc(props: {
                               imageSrc={(() => {
                                 try {
                                   return (() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
-                                    const currentItem = list.find(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    return (
-                                      currentItem?.["Image 2"] ||
-                                      "Không tìm thấy bài"
-                                    );
+                                    const currentItem = $ctx.cachedData;
+                                    if (!currentItem)
+                                      return "Đang đợi tham số...";
+                                    const mainImage =
+                                      currentItem["Image 2"] ||
+                                      currentItem["Image 2"];
+                                    return mainImage || "Không tìm thấy bài";
                                   })();
                                 } catch (e) {
                                   if (
@@ -4483,20 +4702,13 @@ function PlasmicNewPage__RenderFunc(props: {
                           {(() => {
                             try {
                               return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
-                                const currentItem = list.find(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                const content = currentItem?.["Video 2"];
-                                return (
-                                  content && content.toString().trim() !== ""
+                                const currentItem = $ctx.cachedData;
+                                if (!currentItem) return false;
+                                const content =
+                                  currentItem["Video 2"] ||
+                                  currentItem["video"];
+                                return !!(
+                                  content && String(content).trim() !== ""
                                 );
                               })();
                             } catch (e) {
@@ -4527,13 +4739,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 2"] ||
@@ -4549,8 +4763,10 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
                               item.id == pageId ||
@@ -4559,7 +4775,9 @@ function PlasmicNewPage__RenderFunc(props: {
                               item.Slug == pageId
                           );
                           const content = currentItem?.["H1_3"];
-                          return content && content.toString().trim() !== "";
+                          return !!(
+                            content && content.toString().trim() !== ""
+                          );
                         })();
                       } catch (e) {
                         if (
@@ -4604,13 +4822,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H1_3"] ||
@@ -4635,8 +4857,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -4645,7 +4869,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H1_3_content"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -4660,46 +4884,39 @@ function PlasmicNewPage__RenderFunc(props: {
                               }
                             })() ? (
                               <div
-                                data-plasmic-name={"container25"}
-                                data-plasmic-override={overrides.container25}
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay30"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay30
+                                }
                                 className={classNames(
                                   projectcss.all,
-                                  sty.container25
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay30
                                 )}
                               >
-                                <div
-                                  data-plasmic-name={
-                                    "payJustNowIsSouthAfricasLeadingBuyNowPay30"
-                                  }
-                                  data-plasmic-override={
-                                    overrides.payJustNowIsSouthAfricasLeadingBuyNowPay30
-                                  }
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.payJustNowIsSouthAfricasLeadingBuyNowPay30
-                                  )}
-                                >
-                                  <React.Fragment>
-                                    {(() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
-                                      const currentItem = list.find(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      return (
-                                        currentItem?.["H1_3_content"] ||
-                                        "Không tìm thấy bài"
-                                      );
-                                    })()}
-                                  </React.Fragment>
-                                </div>
+                                <React.Fragment>
+                                  {(() => {
+                                    const pageId =
+                                      $ctx.params.id || $ctx.params.Slug;
+                                    if (!pageId) return "Đang đợi tham số...";
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
+                                    const currentItem = list.find(
+                                      item =>
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
+                                    );
+                                    return (
+                                      currentItem?.["H1_3_content"] ||
+                                      "Không tìm thấy bài"
+                                    );
+                                  })()}
+                                </React.Fragment>
                               </div>
                             ) : null}
                           </div>
@@ -4716,8 +4933,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -4726,7 +4945,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_1_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -4766,13 +4985,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_1_H1_3"] ||
@@ -4802,14 +5025,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_1_H1_3_content"] ||
@@ -4826,8 +5052,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -4837,7 +5065,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_1_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -4879,14 +5107,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_1_H1_3"] ||
@@ -4915,8 +5146,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -4925,7 +5158,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_2_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -4965,13 +5198,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_2_H1_3"] ||
@@ -5001,14 +5238,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_2_H1_3_content"] ||
@@ -5025,8 +5265,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -5036,7 +5278,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_2_H1_3_1"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -5078,14 +5320,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_2_H1_3_1"] ||
@@ -5114,8 +5359,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -5124,7 +5371,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_3_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -5164,13 +5411,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_3_H1_3"] ||
@@ -5200,14 +5451,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_3_H1_3_content"] ||
@@ -5224,8 +5478,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -5235,7 +5491,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_3_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -5277,14 +5533,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_3_H1_3"] ||
@@ -5313,8 +5572,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -5323,7 +5584,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_4_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -5363,13 +5624,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_4_H1_3"] ||
@@ -5399,14 +5664,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_4_H1_3_content"] ||
@@ -5423,8 +5691,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -5434,7 +5704,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_4_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -5476,14 +5746,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_4_H1_3"] ||
@@ -5512,8 +5785,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -5523,7 +5798,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_6_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -5565,14 +5840,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_6_H1_3"] ||
@@ -5601,8 +5879,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -5611,7 +5891,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_5_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -5651,13 +5931,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_5_H1_3"] ||
@@ -5687,14 +5971,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_5_H1_3_content"] ||
@@ -5711,8 +5998,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -5722,7 +6011,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -5764,14 +6053,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_3"] ||
@@ -5800,8 +6092,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -5810,7 +6104,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_6_H1_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -5850,13 +6144,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_6_H1_3"] ||
@@ -5886,14 +6184,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_6_H1_3_content"] ||
@@ -5923,8 +6224,10 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
                               item.id == pageId ||
@@ -5933,7 +6236,9 @@ function PlasmicNewPage__RenderFunc(props: {
                               item.Slug == pageId
                           );
                           const content = currentItem?.["H1_4"];
-                          return content && content.toString().trim() !== "";
+                          return !!(
+                            content && content.toString().trim() !== ""
+                          );
                         })();
                       } catch (e) {
                         if (
@@ -5978,13 +6283,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H1_4"] ||
@@ -6009,8 +6318,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6019,7 +6330,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H1_4_content"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -6034,51 +6345,44 @@ function PlasmicNewPage__RenderFunc(props: {
                               }
                             })() ? (
                               <div
-                                data-plasmic-name={"container27"}
-                                data-plasmic-override={overrides.container27}
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay43"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay43
+                                }
                                 className={classNames(
                                   projectcss.all,
-                                  sty.container27
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay43
                                 )}
                               >
                                 <div
-                                  data-plasmic-name={
-                                    "payJustNowIsSouthAfricasLeadingBuyNowPay43"
-                                  }
-                                  data-plasmic-override={
-                                    overrides.payJustNowIsSouthAfricasLeadingBuyNowPay43
-                                  }
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.payJustNowIsSouthAfricasLeadingBuyNowPay43
-                                  )}
-                                >
-                                  <div
-                                    className={projectcss.__wab_expr_html_text}
-                                    dangerouslySetInnerHTML={{
-                                      __html: (() => {
-                                        const pageId =
-                                          $ctx.params.id || $ctx.params.Slug;
-                                        if (!pageId)
-                                          return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
-                                        const currentItem = list.find(
-                                          item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
-                                        );
-                                        return (
-                                          currentItem?.["H1_4_content"] ||
-                                          "Không tìm thấy bài"
-                                        );
-                                      })()
-                                    }}
-                                  />
-                                </div>
+                                  className={projectcss.__wab_expr_html_text}
+                                  dangerouslySetInnerHTML={{
+                                    __html: (() => {
+                                      const pageId =
+                                        $ctx.params.id || $ctx.params.Slug;
+                                      if (!pageId) return "Đang đợi tham số...";
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
+                                      const currentItem = list.find(
+                                        item =>
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
+                                      );
+                                      return (
+                                        currentItem?.["H1_4_content"] ||
+                                        "Không tìm thấy bài"
+                                      );
+                                    })()
+                                  }}
+                                />
                               </div>
                             ) : null}
                           </div>
@@ -6095,8 +6399,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6105,7 +6411,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_1_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -6145,13 +6451,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_1_H1_4"] ||
@@ -6181,14 +6491,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_1_H1_4_content"] ||
@@ -6205,8 +6518,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6216,7 +6531,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_1_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -6258,14 +6573,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_1_H1_4"] ||
@@ -6294,8 +6612,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6304,7 +6624,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_2_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -6344,13 +6664,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_2_H1_4"] ||
@@ -6380,14 +6704,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_2_H1_4_content"] ||
@@ -6404,8 +6731,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6414,7 +6743,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_3_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -6454,13 +6783,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_3_H1_4"] ||
@@ -6490,14 +6823,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_3_H1_4_content"] ||
@@ -6514,8 +6850,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6524,7 +6862,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_4_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -6564,13 +6902,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_4_H1_4"] ||
@@ -6600,14 +6942,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_4_H1_4_content"] ||
@@ -6624,8 +6969,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6634,7 +6981,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_5_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -6674,13 +7021,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_5_H1_4"] ||
@@ -6710,14 +7061,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_5_H1_4_content"] ||
@@ -6734,8 +7088,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6744,7 +7100,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_6_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -6783,8 +7139,13 @@ function PlasmicNewPage__RenderFunc(props: {
                                     {(() => {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
-                                      if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      if (!pageId || !$ctx.cachedData)
+                                        return false;
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
                                           item.id == pageId ||
@@ -6792,9 +7153,11 @@ function PlasmicNewPage__RenderFunc(props: {
                                           item.slug == pageId ||
                                           item.Slug == pageId
                                       );
-                                      return (
-                                        currentItem?.["H2_6_H1_4"] ||
-                                        "Không tìm thấy bài"
+                                      const content =
+                                        currentItem?.["H2_6_H1_4"];
+                                      return !!(
+                                        content &&
+                                        content.toString().trim() !== ""
                                       );
                                     })()}
                                   </React.Fragment>
@@ -6820,14 +7183,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_6_H1_4_content"] ||
@@ -6844,8 +7210,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6854,7 +7222,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_7_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -6894,13 +7262,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_7_H1_4"] ||
@@ -6930,14 +7302,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_7_H1_4_content"] ||
@@ -6954,8 +7329,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -6965,7 +7342,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_1"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7007,14 +7384,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_1"] ||
@@ -7043,8 +7423,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7054,7 +7436,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_2"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7096,14 +7478,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_2"] ||
@@ -7132,8 +7517,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7143,7 +7530,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_3"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7185,14 +7572,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_3"] ||
@@ -7221,8 +7611,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7232,7 +7624,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7274,14 +7666,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_4"] ||
@@ -7310,8 +7705,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7321,7 +7718,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_5"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7363,14 +7760,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_5"] ||
@@ -7399,8 +7799,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7410,7 +7812,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_6"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7452,14 +7854,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_6"] ||
@@ -7488,8 +7893,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7499,7 +7906,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_7"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7541,14 +7948,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_7"] ||
@@ -7577,8 +7987,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7588,7 +8000,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_8"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7630,14 +8042,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_8"] ||
@@ -7666,8 +8081,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7677,7 +8094,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_9"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7719,14 +8136,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_9"] ||
@@ -7755,8 +8175,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7766,7 +8188,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_5_H1_4_10"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7808,14 +8230,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_5_H1_4_10"] ||
@@ -7857,8 +8282,10 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
                               item.id == pageId ||
@@ -7867,7 +8294,9 @@ function PlasmicNewPage__RenderFunc(props: {
                               item.Slug == pageId
                           );
                           const content = currentItem?.["H1_5"];
-                          return content && content.toString().trim() !== "";
+                          return !!(
+                            content && content.toString().trim() !== ""
+                          );
                         })();
                       } catch (e) {
                         if (
@@ -7912,13 +8341,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H1_5"] ||
@@ -7943,8 +8376,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -7953,7 +8388,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H1_5_content"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -7968,51 +8403,44 @@ function PlasmicNewPage__RenderFunc(props: {
                               }
                             })() ? (
                               <div
-                                data-plasmic-name={"container29"}
-                                data-plasmic-override={overrides.container29}
+                                data-plasmic-name={
+                                  "payJustNowIsSouthAfricasLeadingBuyNowPay66"
+                                }
+                                data-plasmic-override={
+                                  overrides.payJustNowIsSouthAfricasLeadingBuyNowPay66
+                                }
                                 className={classNames(
                                   projectcss.all,
-                                  sty.container29
+                                  projectcss.__wab_text,
+                                  sty.payJustNowIsSouthAfricasLeadingBuyNowPay66
                                 )}
                               >
                                 <div
-                                  data-plasmic-name={
-                                    "payJustNowIsSouthAfricasLeadingBuyNowPay66"
-                                  }
-                                  data-plasmic-override={
-                                    overrides.payJustNowIsSouthAfricasLeadingBuyNowPay66
-                                  }
-                                  className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
-                                    sty.payJustNowIsSouthAfricasLeadingBuyNowPay66
-                                  )}
-                                >
-                                  <div
-                                    className={projectcss.__wab_expr_html_text}
-                                    dangerouslySetInnerHTML={{
-                                      __html: (() => {
-                                        const pageId =
-                                          $ctx.params.id || $ctx.params.Slug;
-                                        if (!pageId)
-                                          return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
-                                        const currentItem = list.find(
-                                          item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
-                                        );
-                                        return (
-                                          currentItem?.["H1_5_content"] ||
-                                          "Không tìm thấy bài"
-                                        );
-                                      })()
-                                    }}
-                                  />
-                                </div>
+                                  className={projectcss.__wab_expr_html_text}
+                                  dangerouslySetInnerHTML={{
+                                    __html: (() => {
+                                      const pageId =
+                                        $ctx.params.id || $ctx.params.Slug;
+                                      if (!pageId) return "Đang đợi tham số...";
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
+                                      const currentItem = list.find(
+                                        item =>
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
+                                      );
+                                      return (
+                                        currentItem?.["H1_5_content"] ||
+                                        "Không tìm thấy bài"
+                                      );
+                                    })()
+                                  }}
+                                />
                               </div>
                             ) : null}
                           </div>
@@ -8029,8 +8457,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -8039,7 +8469,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_1_H1_5"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -8079,13 +8509,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_1_H1_5"] ||
@@ -8115,14 +8549,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_1_H1_5_content"] ||
@@ -8139,8 +8576,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -8150,7 +8589,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                   );
                                   const content =
                                     currentItem?.["Image H2_1_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -8192,14 +8631,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["Image H2_1_H1_4"] ||
@@ -8228,8 +8670,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -8238,7 +8682,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_2_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -8278,13 +8722,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_2_H1_4"] ||
@@ -8314,14 +8762,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_2_H1_4_content"] ||
@@ -8338,8 +8789,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -8348,7 +8801,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_3_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -8388,13 +8841,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_3_H1_4"] ||
@@ -8424,14 +8881,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_3_H1_4_content"] ||
@@ -8448,8 +8908,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -8458,7 +8920,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_4_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -8498,13 +8960,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_4_H1_4"] ||
@@ -8534,14 +9000,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_4_H1_4_content"] ||
@@ -8558,8 +9027,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -8568,7 +9039,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_5_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -8608,13 +9079,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_5_H1_4"] ||
@@ -8644,14 +9119,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_5_H1_4_content"] ||
@@ -8668,8 +9146,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -8678,7 +9158,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_6_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -8718,13 +9198,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_6_H1_4"] ||
@@ -8754,14 +9238,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_6_H1_4_content"] ||
@@ -8778,8 +9265,10 @@ function PlasmicNewPage__RenderFunc(props: {
                                 return (() => {
                                   const pageId =
                                     $ctx.params.id || $ctx.params.Slug;
-                                  if (!pageId) return false;
-                                  const list = $queries.allList?.data || [];
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
                                   const currentItem = list.find(
                                     item =>
                                       item.id == pageId ||
@@ -8788,7 +9277,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content = currentItem?.["H2_7_H1_4"];
-                                  return (
+                                  return !!(
                                     content && content.toString().trim() !== ""
                                   );
                                 })();
@@ -8828,13 +9317,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["H2_7_H1_4"] ||
@@ -8864,14 +9357,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                           $ctx.params.id || $ctx.params.Slug;
                                         if (!pageId)
                                           return "Đang đợi tham số...";
-                                        const list =
-                                          $queries.allList?.data || [];
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
                                         const currentItem = list.find(
                                           item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
                                         );
                                         return (
                                           currentItem?.["H2_7_H1_4_content"] ||
@@ -8901,8 +9397,10 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
                               item.id == pageId ||
@@ -8911,7 +9409,9 @@ function PlasmicNewPage__RenderFunc(props: {
                               item.Slug == pageId
                           );
                           const content = currentItem?.["Challenge"];
-                          return content && content.toString().trim() !== "";
+                          return !!(
+                            content && content.toString().trim() !== ""
+                          );
                         })();
                       } catch (e) {
                         if (
@@ -8996,13 +9496,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["Challenge"] ||
@@ -9021,17 +9525,34 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
+                              item?.id == pageId ||
+                              item?.Id == pageId ||
+                              item?.slug == pageId ||
+                              item?.Slug == pageId
                           );
-                          const content = currentItem?.["Image 3"];
-                          return content && content.toString().trim() !== "";
+                          const img3 = currentItem?.["Image 3"];
+                          const img4 = currentItem?.["Image 4"];
+                          const vid3 = currentItem?.["Video 3"];
+                          const vid4 = currentItem?.["Video 4"];
+                          const hasImg3 = !!(
+                            img3 && img3.toString().trim() !== ""
+                          );
+                          const hasImg4 = !!(
+                            img4 && img4.toString().trim() !== ""
+                          );
+                          const hasVid3 = !!(
+                            vid3 && vid3.toString().trim() !== ""
+                          );
+                          const hasVid4 = !!(
+                            vid4 && vid4.toString().trim() !== ""
+                          );
+                          return hasImg3 || hasImg4 || hasVid3 || hasVid4;
                         })();
                       } catch (e) {
                         if (
@@ -9063,17 +9584,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 3"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9102,13 +9625,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 3"] ||
@@ -9136,17 +9661,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 3"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9178,13 +9705,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 3"] ||
@@ -9198,17 +9727,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 4"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9237,13 +9768,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 4"] ||
@@ -9271,17 +9804,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 4"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9313,13 +9848,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 4"] ||
@@ -9335,8 +9872,10 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
                               item.id == pageId ||
@@ -9345,7 +9884,9 @@ function PlasmicNewPage__RenderFunc(props: {
                               item.Slug == pageId
                           );
                           const content = currentItem?.["Solution"];
-                          return content && content.toString().trim() !== "";
+                          return !!(
+                            content && content.toString().trim() !== ""
+                          );
                         })();
                       } catch (e) {
                         if (
@@ -9429,13 +9970,17 @@ function PlasmicNewPage__RenderFunc(props: {
                                       const pageId =
                                         $ctx.params.id || $ctx.params.Slug;
                                       if (!pageId) return "Đang đợi tham số...";
-                                      const list = $queries.allList?.data || [];
+                                      const list = Array.isArray(
+                                        $ctx.cachedData
+                                      )
+                                        ? $ctx.cachedData
+                                        : [$ctx.cachedData];
                                       const currentItem = list.find(
                                         item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
+                                          item?.id == pageId ||
+                                          item?.Id == pageId ||
+                                          item?.slug == pageId ||
+                                          item?.Slug == pageId
                                       );
                                       return (
                                         currentItem?.["Solution"] ||
@@ -9454,17 +9999,34 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
+                              item?.id == pageId ||
+                              item?.Id == pageId ||
+                              item?.slug == pageId ||
+                              item?.Slug == pageId
                           );
-                          const content = currentItem?.["Image 5"];
-                          return content && content.toString().trim() !== "";
+                          const img3 = currentItem?.["Image 5"];
+                          const img4 = currentItem?.["Image 6"];
+                          const vid3 = currentItem?.["Video 5"];
+                          const vid4 = currentItem?.["Video 6"];
+                          const hasImg3 = !!(
+                            img3 && img3.toString().trim() !== ""
+                          );
+                          const hasImg4 = !!(
+                            img4 && img4.toString().trim() !== ""
+                          );
+                          const hasVid3 = !!(
+                            vid3 && vid3.toString().trim() !== ""
+                          );
+                          const hasVid4 = !!(
+                            vid4 && vid4.toString().trim() !== ""
+                          );
+                          return hasImg3 || hasImg4 || hasVid3 || hasVid4;
                         })();
                       } catch (e) {
                         if (
@@ -9496,17 +10058,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 5"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9535,13 +10099,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 5"] ||
@@ -9569,17 +10135,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 5"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9611,13 +10179,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 5"] ||
@@ -9628,20 +10198,22 @@ function PlasmicNewPage__RenderFunc(props: {
                           ) : null}
                           {(() => {
                             try {
-                              return (() => {
+                              return !(() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 6"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9670,13 +10242,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 6"] ||
@@ -9701,20 +10275,22 @@ function PlasmicNewPage__RenderFunc(props: {
                           ) : null}
                           {(() => {
                             try {
-                              return (() => {
+                              return !(() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 6"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9746,13 +10322,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 6"] ||
@@ -9768,17 +10346,34 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
+                              item?.id == pageId ||
+                              item?.Id == pageId ||
+                              item?.slug == pageId ||
+                              item?.Slug == pageId
                           );
-                          const content = currentItem?.["Image 7"];
-                          return content && content.toString().trim() !== "";
+                          const fieldsToCheck = [
+                            "Image 7",
+                            "Image 8",
+                            "Image 9",
+                            "Image 10",
+                            "Video 7",
+                            "Video 8",
+                            "Video 9",
+                            "Video 10"
+                          ];
+
+                          return fieldsToCheck.some(field => {
+                            const content = currentItem?.[field];
+                            return !!(
+                              content && content.toString().trim() !== ""
+                            );
+                          });
                         })();
                       } catch (e) {
                         if (
@@ -9810,17 +10405,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 7"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9849,13 +10446,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 7"] ||
@@ -9883,17 +10482,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 7"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9925,13 +10526,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 7"] ||
@@ -9945,17 +10548,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 8"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -9984,13 +10589,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 8"] ||
@@ -10018,17 +10625,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 8"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -10060,13 +10669,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 8"] ||
@@ -10080,17 +10691,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 9"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -10119,13 +10732,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 9"] ||
@@ -10153,17 +10768,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 9"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -10195,13 +10812,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 9"] ||
@@ -10215,17 +10834,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 10"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -10254,13 +10875,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 10"] ||
@@ -10288,17 +10911,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Video 10"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -10330,13 +10955,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId) return "Đang đợi tham số...";
-                                const list = $queries.allList?.data || [];
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 return (
                                   currentItem?.["Video 10"] ||
@@ -10362,22 +10989,29 @@ function PlasmicNewPage__RenderFunc(props: {
                       try {
                         return (() => {
                           const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
+                          if (!pageId || !$ctx.cachedData) return false;
+                          const list = Array.isArray($ctx.cachedData)
+                            ? $ctx.cachedData
+                            : [$ctx.cachedData];
                           const currentItem = list.find(
                             item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
+                              item?.id == pageId ||
+                              item?.Id == pageId ||
+                              item?.slug == pageId ||
+                              item?.Slug == pageId
                           );
-                          if (!currentItem) return false;
-                          const checkImage = img =>
-                            img && img.toString().trim() !== "";
-                          const hasImg11 = checkImage(currentItem["Image 11"]);
-                          const hasImg12 = checkImage(currentItem["Image 12"]);
-                          const hasImg13 = checkImage(currentItem["Image 13"]);
-                          return hasImg11 || hasImg12 || hasImg13;
+                          const fieldsToCheck = [
+                            "Image 11",
+                            "Image 12",
+                            "Image 13"
+                          ];
+
+                          return fieldsToCheck.some(field => {
+                            const content = currentItem?.[field];
+                            return !!(
+                              content && content.toString().trim() !== ""
+                            );
+                          });
                         })();
                       } catch (e) {
                         if (
@@ -10409,17 +11043,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 11"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -10448,13 +11084,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 11"] ||
@@ -10482,17 +11120,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 12"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -10521,13 +11161,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 12"] ||
@@ -10555,17 +11197,19 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
-                                if (!pageId) return false;
-                                const list = $queries.allList?.data || [];
+                                if (!pageId || !$ctx.cachedData) return false;
+                                const list = Array.isArray($ctx.cachedData)
+                                  ? $ctx.cachedData
+                                  : [$ctx.cachedData];
                                 const currentItem = list.find(
                                   item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
+                                    item?.id == pageId ||
+                                    item?.Id == pageId ||
+                                    item?.slug == pageId ||
+                                    item?.Slug == pageId
                                 );
                                 const content = currentItem?.["Image 13"];
-                                return (
+                                return !!(
                                   content && content.toString().trim() !== ""
                                 );
                               })();
@@ -10594,13 +11238,15 @@ function PlasmicNewPage__RenderFunc(props: {
                                     const pageId =
                                       $ctx.params.id || $ctx.params.Slug;
                                     if (!pageId) return "Đang đợi tham số...";
-                                    const list = $queries.allList?.data || [];
+                                    const list = Array.isArray($ctx.cachedData)
+                                      ? $ctx.cachedData
+                                      : [$ctx.cachedData];
                                     const currentItem = list.find(
                                       item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
+                                        item?.id == pageId ||
+                                        item?.Id == pageId ||
+                                        item?.slug == pageId ||
+                                        item?.Slug == pageId
                                     );
                                     return (
                                       currentItem?.["Image 13"] ||
@@ -10625,54 +11271,6 @@ function PlasmicNewPage__RenderFunc(props: {
                           ) : null}
                         </div>
                       </RevealOnScroll>
-                    ) : null}
-                    {(() => {
-                      try {
-                        return (() => {
-                          const pageId = $ctx.params.id || $ctx.params.Slug;
-                          if (!pageId) return false;
-                          const list = $queries.allList?.data || [];
-                          const currentItem = list.find(
-                            item =>
-                              item.id == pageId ||
-                              item.Id == pageId ||
-                              item.slug == pageId ||
-                              item.Slug == pageId
-                          );
-                          const content = currentItem?.["End"];
-                          return content && content.toString().trim() !== "";
-                        })();
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return true;
-                        }
-                        throw e;
-                      }
-                    })() ? (
-                      <div
-                        data-plasmic-name={"section09"}
-                        data-plasmic-override={overrides.section09}
-                        className={classNames(projectcss.all, sty.section09)}
-                      >
-                        <div
-                          data-plasmic-name={
-                            "theWebsiteBecameAnImportantSpaceToShowcase"
-                          }
-                          data-plasmic-override={
-                            overrides.theWebsiteBecameAnImportantSpaceToShowcase
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.theWebsiteBecameAnImportantSpaceToShowcase
-                          )}
-                        >
-                          {""}
-                        </div>
-                      </div>
                     ) : null}
                     <div
                       data-plasmic-name={"section10"}
@@ -10703,1245 +11301,1452 @@ function PlasmicNewPage__RenderFunc(props: {
                           {"\u2014 up until yesterday"}
                         </div>
                       </div>
-                      <RevealOnScroll
-                        blurAmount={5}
+                      <CachedAirtable
                         className={classNames(
                           "__wab_instance",
-                          sty.revealOnScroll__k8CBf
+                          sty.googleSheetsMultiTool__ajYAc
                         )}
-                        delay={0}
-                        duration={0.8}
-                        yOffset={50}
+                        sheetId={"1L3TDUwHRYbCHPb-Z18CfpS1SBdgO6IyMC-aVsyKXndg"}
+                        sheetName={"Assets-Grid view"}
                       >
-                        <PlasmicLink__
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.a,
-                            projectcss.a__bLa1s,
-                            sty.link__pzJAf
+                        <DataCtxReader__>
+                          {$ctx => (
+                            <React.Fragment>
+                              <RevealOnScroll
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.revealOnScroll__k8CBf
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <TemplateCard
+                                  data-plasmic-name={"prevous"}
+                                  data-plasmic-override={overrides.prevous}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.prevous
+                                  )}
+                                  image2={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          try {
+                                            return (() => {
+                                              const pageId =
+                                                $ctx.params.id ||
+                                                $ctx.params.Slug;
+                                              const list =
+                                                $queries.allList?.data || [];
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item.id == pageId ||
+                                                    item.Id == pageId ||
+                                                    item.slug == pageId ||
+                                                    item.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return "";
+                                              const prevIndex =
+                                                currentIndex === 0
+                                                  ? list.length - 1
+                                                  : currentIndex - 1;
+                                              const prevItem = list[prevIndex];
+                                              return (
+                                                prevItem?.["Main Image"] ||
+                                                prevItem?.["Main Image"] ||
+                                                "Bài mới nhất"
+                                              );
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                      : (() => {
+                                          try {
+                                            return (() => {
+                                              const pageId =
+                                                $ctx.params.id ||
+                                                $ctx.params.Slug;
+                                              const list = Array.isArray(
+                                                $ctx.cachedData
+                                              )
+                                                ? $ctx.cachedData
+                                                : [];
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item?.id == pageId ||
+                                                    item?.Id == pageId ||
+                                                    item?.slug == pageId ||
+                                                    item?.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return "";
+                                              const prevIndex =
+                                                currentIndex === 0
+                                                  ? list.length - 1
+                                                  : currentIndex - 1;
+                                              const prevItem = list[prevIndex];
+                                              if (!prevItem) return "";
+                                              return (
+                                                prevItem?.["Main Image"] ||
+                                                prevItem?.["main image"] ||
+                                                "Bài mới nhất"
+                                              );
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                  }
+                                  imageCondition={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          try {
+                                            return !(() => {
+                                              const pageId =
+                                                $ctx.params.id ||
+                                                $ctx.params.Slug;
+                                              const list =
+                                                $queries.allList?.data || [];
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item.id == pageId ||
+                                                    item.Id == pageId ||
+                                                    item.slug == pageId ||
+                                                    item.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return false;
+                                              const prevIndex =
+                                                currentIndex === 0
+                                                  ? list.length - 1
+                                                  : currentIndex - 1;
+                                              const prevItem = list[prevIndex];
+                                              const video =
+                                                prevItem?.["Video"] ||
+                                                prevItem?.["video"];
+                                              return !!video;
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return true;
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                      : (() => {
+                                          try {
+                                            return !(() => {
+                                              const pageId =
+                                                $ctx.params.id ||
+                                                $ctx.params.Slug;
+                                              const list = Array.isArray(
+                                                $ctx.cachedData
+                                              )
+                                                ? $ctx.cachedData
+                                                : [];
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item?.id == pageId ||
+                                                    item?.Id == pageId ||
+                                                    item?.slug == pageId ||
+                                                    item?.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return false;
+                                              const prevIndex =
+                                                currentIndex === 0
+                                                  ? list.length - 1
+                                                  : currentIndex - 1;
+                                              const prevItem = list[prevIndex];
+                                              const video =
+                                                prevItem?.["Video"] ||
+                                                prevItem?.["video"];
+                                              return !!video;
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return true;
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                  }
+                                  link={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          const list =
+                                            $queries.allList?.data || [];
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item.id == pageId ||
+                                              item.Id == pageId ||
+                                              item.slug == pageId ||
+                                              item.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "/";
+                                          const prevIndex =
+                                            currentIndex === 0
+                                              ? list.length - 1
+                                              : currentIndex - 1;
+                                          const prevItem = list[prevIndex];
+                                          if (!prevItem) return "/";
+                                          const newSlug =
+                                            prevItem.slug ||
+                                            prevItem.Slug ||
+                                            prevItem.id;
+                                          return `/works/${newSlug}`;
+                                        })()
+                                      : (() => {
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [];
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "/";
+                                          const prevIndex =
+                                            currentIndex === 0
+                                              ? list.length - 1
+                                              : currentIndex - 1;
+                                          const prevItem = list[prevIndex];
+                                          if (!prevItem) return "/";
+                                          const newSlug =
+                                            prevItem?.Slug ||
+                                            prevItem?.slug ||
+                                            prevItem?.Id ||
+                                            prevItem?.id;
+                                          return `/works/${newSlug}`;
+                                        })()
+                                  }
+                                  tag1={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [];
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const prevIndex =
+                                          currentIndex === 0
+                                            ? list.length - 1
+                                            : currentIndex - 1;
+                                        const prevItem = list[prevIndex];
+                                        if (!prevItem) return false;
+                                        const tagsData =
+                                          prevItem?.["Services"] ||
+                                          prevItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "UI";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  tag22={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [];
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const prevIndex =
+                                          currentIndex === 0
+                                            ? list.length - 1
+                                            : currentIndex - 1;
+                                        const prevItem = list[prevIndex];
+                                        if (!prevItem) return false;
+                                        const tagsData =
+                                          prevItem?.["Services"] ||
+                                          prevItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "UX";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  tag32={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [];
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const prevIndex =
+                                          currentIndex === 0
+                                            ? list.length - 1
+                                            : currentIndex - 1;
+                                        const prevItem = list[prevIndex];
+                                        if (!prevItem) return false;
+                                        const tagsData =
+                                          prevItem?.["Services"] ||
+                                          prevItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "FRAMER";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  tag42={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [];
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const prevIndex =
+                                          currentIndex === 0
+                                            ? list.length - 1
+                                            : currentIndex - 1;
+                                        const prevItem = list[prevIndex];
+                                        if (!prevItem) return false;
+                                        const tagsData =
+                                          prevItem?.["Services"] ||
+                                          prevItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "E-COMMERCE";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  tag52={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [];
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const prevIndex =
+                                          currentIndex === 0
+                                            ? list.length - 1
+                                            : currentIndex - 1;
+                                        const prevItem = list[prevIndex];
+                                        if (!prevItem) return false;
+                                        const tagsData =
+                                          prevItem?.["Services"] ||
+                                          prevItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "BRAND IDENTITY";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  title={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          const list =
+                                            $queries.allList?.data || [];
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item.id == pageId ||
+                                              item.Id == pageId ||
+                                              item.slug == pageId ||
+                                              item.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "";
+                                          const prevIndex =
+                                            currentIndex === 0
+                                              ? list.length - 1
+                                              : currentIndex - 1;
+                                          const prevItem = list[prevIndex];
+                                          return (
+                                            prevItem?.["Title"] ||
+                                            prevItem?.["title"] ||
+                                            "Bài mới nhất"
+                                          );
+                                        })()
+                                      : (() => {
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [];
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "";
+                                          const prevIndex =
+                                            currentIndex === 0
+                                              ? list.length - 1
+                                              : currentIndex - 1;
+                                          const prevItem = list[prevIndex];
+                                          if (!prevItem) return "";
+                                          return (
+                                            prevItem?.["Title"] ||
+                                            prevItem?.["title"] ||
+                                            "Bài mới nhất"
+                                          );
+                                        })()
+                                  }
+                                  video={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          const list =
+                                            $queries.allList?.data || [];
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item.id == pageId ||
+                                              item.Id == pageId ||
+                                              item.slug == pageId ||
+                                              item.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "";
+                                          const prevIndex =
+                                            currentIndex === 0
+                                              ? list.length - 1
+                                              : currentIndex - 1;
+                                          const prevItem = list[prevIndex];
+                                          return (
+                                            prevItem?.["Video"] ||
+                                            prevItem?.["Video"] ||
+                                            "Bài mới nhất"
+                                          );
+                                        })()
+                                      : (() => {
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          const list = Array.isArray(
+                                            $ctx.cachedData
+                                          )
+                                            ? $ctx.cachedData
+                                            : [];
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "";
+                                          const prevIndex =
+                                            currentIndex === 0
+                                              ? list.length - 1
+                                              : currentIndex - 1;
+                                          const prevItem = list[prevIndex];
+                                          if (!prevItem) return "";
+                                          return (
+                                            prevItem?.["Video"] ||
+                                            prevItem?.["video"] ||
+                                            "Bài mới nhất"
+                                          );
+                                        })()
+                                  }
+                                  videoCondition={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          try {
+                                            return (() => {
+                                              const pageId =
+                                                $ctx.params.id ||
+                                                $ctx.params.Slug;
+                                              const list =
+                                                $queries.allList?.data || [];
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item.id == pageId ||
+                                                    item.Id == pageId ||
+                                                    item.slug == pageId ||
+                                                    item.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return false;
+                                              const prevIndex =
+                                                currentIndex === 0
+                                                  ? list.length - 1
+                                                  : currentIndex - 1;
+                                              const prevItem = list[prevIndex];
+                                              const video =
+                                                prevItem?.["Video"] ||
+                                                prevItem?.["video"];
+                                              return !!video;
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return false;
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                      : (() => {
+                                          try {
+                                            return (() => {
+                                              const pageId =
+                                                $ctx.params.id ||
+                                                $ctx.params.Slug;
+                                              const list = Array.isArray(
+                                                $ctx.cachedData
+                                              )
+                                                ? $ctx.cachedData
+                                                : [];
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item?.id == pageId ||
+                                                    item?.Id == pageId ||
+                                                    item?.slug == pageId ||
+                                                    item?.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return false;
+                                              const prevIndex =
+                                                currentIndex === 0
+                                                  ? list.length - 1
+                                                  : currentIndex - 1;
+                                              const prevItem = list[prevIndex];
+                                              const video =
+                                                prevItem?.["Video"] ||
+                                                prevItem?.["video"];
+                                              return !!video;
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return false;
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                  }
+                                />
+                              </RevealOnScroll>
+                              <RevealOnScroll
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.revealOnScroll__f0BoV
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <TemplateCard
+                                  data-plasmic-name={"nExt"}
+                                  data-plasmic-override={overrides.nExt}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.nExt
+                                  )}
+                                  image2={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          try {
+                                            return (() => {
+                                              const pageId =
+                                                $ctx.params.id ||
+                                                $ctx.params.Slug;
+                                              const list =
+                                                $queries.allList?.data || [];
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item.id == pageId ||
+                                                    item.Id == pageId ||
+                                                    item.slug == pageId ||
+                                                    item.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return "";
+                                              const nextIndex =
+                                                currentIndex === list.length - 1
+                                                  ? 0
+                                                  : currentIndex + 1;
+                                              const nextItem = list[nextIndex];
+                                              return (
+                                                nextItem?.["Main Image"] ||
+                                                nextItem?.["Main Image"] ||
+                                                "Bài đầu tiên"
+                                              );
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                      : (() => {
+                                          try {
+                                            return (() => {
+                                              const pageId =
+                                                $ctx.params?.id ||
+                                                $ctx.params?.Slug ||
+                                                $ctx.params?.slug;
+                                              const list =
+                                                $queries.allList?.data ||
+                                                (Array.isArray($ctx.cachedData)
+                                                  ? $ctx.cachedData
+                                                  : []);
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item?.id == pageId ||
+                                                    item?.Id == pageId ||
+                                                    item?.slug == pageId ||
+                                                    item?.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return "";
+                                              const nextIndex =
+                                                currentIndex === list.length - 1
+                                                  ? 0
+                                                  : currentIndex + 1;
+                                              const nextItem = list[nextIndex];
+                                              if (!nextItem) return "";
+                                              return (
+                                                nextItem?.["Main Image"] ||
+                                                nextItem?.["Main image"] ||
+                                                "Bài đầu tiên"
+                                              );
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                  }
+                                  imageCondition={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          try {
+                                            return !(() => {
+                                              const pageId =
+                                                $ctx.params.id ||
+                                                $ctx.params.Slug;
+                                              const list =
+                                                $queries.allList?.data || [];
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item.id == pageId ||
+                                                    item.Id == pageId ||
+                                                    item.slug == pageId ||
+                                                    item.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return false;
+                                              const nextIndex =
+                                                currentIndex === list.length - 1
+                                                  ? 0
+                                                  : currentIndex + 1;
+                                              const nextItem = list[nextIndex];
+                                              const video =
+                                                nextItem?.["Video"] ||
+                                                nextItem?.["video"];
+                                              return !!video;
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return true;
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                      : (() => {
+                                          try {
+                                            return !(() => {
+                                              const pageId =
+                                                $ctx.params?.id ||
+                                                $ctx.params?.Slug ||
+                                                $ctx.params?.slug;
+                                              const list =
+                                                $queries.allList?.data ||
+                                                (Array.isArray($ctx.cachedData)
+                                                  ? $ctx.cachedData
+                                                  : []);
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item?.id == pageId ||
+                                                    item?.Id == pageId ||
+                                                    item?.slug == pageId ||
+                                                    item?.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return false;
+                                              const nextIndex =
+                                                currentIndex === list.length - 1
+                                                  ? 0
+                                                  : currentIndex + 1;
+                                              const nextItem = list[nextIndex];
+                                              if (!nextItem) return false;
+                                              const video =
+                                                nextItem?.["Video"] ||
+                                                nextItem?.["video"];
+                                              return !!video;
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return true;
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                  }
+                                  link={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          const list =
+                                            $queries.allList?.data || [];
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item.id == pageId ||
+                                              item.Id == pageId ||
+                                              item.slug == pageId ||
+                                              item.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "/";
+                                          const nextIndex =
+                                            currentIndex === list.length - 1
+                                              ? 0
+                                              : currentIndex + 1;
+                                          const nextItem = list[nextIndex];
+                                          if (!nextItem) return "/";
+                                          const newSlug =
+                                            nextItem.slug ||
+                                            nextItem.Slug ||
+                                            nextItem.id;
+                                          return `/works/${newSlug}`;
+                                        })()
+                                      : (() => {
+                                          const pageId =
+                                            $ctx.params?.id ||
+                                            $ctx.params?.Slug ||
+                                            $ctx.params?.slug;
+                                          const list =
+                                            $queries.allList?.data ||
+                                            (Array.isArray($ctx.cachedData)
+                                              ? $ctx.cachedData
+                                              : []);
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "/";
+                                          const nextIndex =
+                                            currentIndex === list.length - 1
+                                              ? 0
+                                              : currentIndex + 1;
+                                          const nextItem = list[nextIndex];
+                                          if (!nextItem) return "/";
+                                          const newSlug =
+                                            nextItem?.Slug ||
+                                            nextItem?.slug ||
+                                            nextItem?.Id ||
+                                            nextItem?.id;
+                                          return `/works/${newSlug}`;
+                                        })()
+                                  }
+                                  tag1={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params?.id ||
+                                          $ctx.params?.Slug ||
+                                          $ctx.params?.slug;
+                                        const list =
+                                          $queries.allList?.data ||
+                                          (Array.isArray($ctx.cachedData)
+                                            ? $ctx.cachedData
+                                            : []);
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const nextIndex =
+                                          currentIndex === list.length - 1
+                                            ? 0
+                                            : currentIndex + 1;
+                                        const nextItem = list[nextIndex];
+                                        if (!nextItem) return false;
+                                        const tagsData =
+                                          nextItem?.["Services"] ||
+                                          nextItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "UI";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  tag22={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params?.id ||
+                                          $ctx.params?.Slug ||
+                                          $ctx.params?.slug;
+                                        const list =
+                                          $queries.allList?.data ||
+                                          (Array.isArray($ctx.cachedData)
+                                            ? $ctx.cachedData
+                                            : []);
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const nextIndex =
+                                          currentIndex === list.length - 1
+                                            ? 0
+                                            : currentIndex + 1;
+                                        const nextItem = list[nextIndex];
+                                        if (!nextItem) return false;
+                                        const tagsData =
+                                          nextItem?.["Services"] ||
+                                          nextItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "UX";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  tag32={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params?.id ||
+                                          $ctx.params?.Slug ||
+                                          $ctx.params?.slug;
+                                        const list =
+                                          $queries.allList?.data ||
+                                          (Array.isArray($ctx.cachedData)
+                                            ? $ctx.cachedData
+                                            : []);
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const nextIndex =
+                                          currentIndex === list.length - 1
+                                            ? 0
+                                            : currentIndex + 1;
+                                        const nextItem = list[nextIndex];
+                                        if (!nextItem) return false;
+                                        const tagsData =
+                                          nextItem?.["Services"] ||
+                                          nextItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "FRAMER";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  tag42={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params?.id ||
+                                          $ctx.params?.Slug ||
+                                          $ctx.params?.slug;
+                                        const list =
+                                          $queries.allList?.data ||
+                                          (Array.isArray($ctx.cachedData)
+                                            ? $ctx.cachedData
+                                            : []);
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const nextIndex =
+                                          currentIndex === list.length - 1
+                                            ? 0
+                                            : currentIndex + 1;
+                                        const nextItem = list[nextIndex];
+                                        if (!nextItem) return false;
+                                        const tagsData =
+                                          nextItem?.["Services"] ||
+                                          nextItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "E-COMMERCE";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  tag52={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params?.id ||
+                                          $ctx.params?.Slug ||
+                                          $ctx.params?.slug;
+                                        const list =
+                                          $queries.allList?.data ||
+                                          (Array.isArray($ctx.cachedData)
+                                            ? $ctx.cachedData
+                                            : []);
+                                        const currentIndex = list.findIndex(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        if (currentIndex === -1) return false;
+                                        const nextIndex =
+                                          currentIndex === list.length - 1
+                                            ? 0
+                                            : currentIndex + 1;
+                                        const nextItem = list[nextIndex];
+                                        if (!nextItem) return false;
+                                        const tagsData =
+                                          nextItem?.["Services"] ||
+                                          nextItem?.["services"];
+                                        if (!tagsData) return false;
+                                        const targetValue = "BRAND IDENTITY";
+                                        if (Array.isArray(tagsData)) {
+                                          return tagsData.includes(targetValue);
+                                        } else {
+                                          return String(tagsData).includes(
+                                            targetValue
+                                          );
+                                        }
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return true;
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  title={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          const list =
+                                            $queries.allList?.data || [];
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item.id == pageId ||
+                                              item.Id == pageId ||
+                                              item.slug == pageId ||
+                                              item.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "";
+                                          const nextIndex =
+                                            currentIndex === list.length - 1
+                                              ? 0
+                                              : currentIndex + 1;
+                                          const nextItem = list[nextIndex];
+                                          return (
+                                            nextItem?.["Title"] ||
+                                            nextItem?.["title"] ||
+                                            "Bài đầu tiên"
+                                          );
+                                        })()
+                                      : (() => {
+                                          const pageId =
+                                            $ctx.params?.id ||
+                                            $ctx.params?.Slug ||
+                                            $ctx.params?.slug;
+                                          const list =
+                                            $queries.allList?.data ||
+                                            (Array.isArray($ctx.cachedData)
+                                              ? $ctx.cachedData
+                                              : []);
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "";
+                                          const nextIndex =
+                                            currentIndex === list.length - 1
+                                              ? 0
+                                              : currentIndex + 1;
+                                          const nextItem = list[nextIndex];
+                                          if (!nextItem) return "";
+                                          return (
+                                            nextItem?.["Title"] ||
+                                            nextItem?.["title"] ||
+                                            "Bài đầu tiên"
+                                          );
+                                        })()
+                                  }
+                                  video={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          const pageId =
+                                            $ctx.params.id || $ctx.params.Slug;
+                                          const list =
+                                            $queries.allList?.data || [];
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item.id == pageId ||
+                                              item.Id == pageId ||
+                                              item.slug == pageId ||
+                                              item.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "";
+                                          const nextIndex =
+                                            currentIndex === list.length - 1
+                                              ? 0
+                                              : currentIndex + 1;
+                                          const nextItem = list[nextIndex];
+                                          return (
+                                            nextItem?.["Video"] ||
+                                            nextItem?.["video"] ||
+                                            "Bài đầu tiên"
+                                          );
+                                        })()
+                                      : (() => {
+                                          const pageId =
+                                            $ctx.params?.id ||
+                                            $ctx.params?.Slug ||
+                                            $ctx.params?.slug;
+                                          const list =
+                                            $queries.allList?.data ||
+                                            (Array.isArray($ctx.cachedData)
+                                              ? $ctx.cachedData
+                                              : []);
+                                          const currentIndex = list.findIndex(
+                                            item =>
+                                              item?.id == pageId ||
+                                              item?.Id == pageId ||
+                                              item?.slug == pageId ||
+                                              item?.Slug == pageId
+                                          );
+                                          if (currentIndex === -1) return "";
+                                          const nextIndex =
+                                            currentIndex === list.length - 1
+                                              ? 0
+                                              : currentIndex + 1;
+                                          const nextItem = list[nextIndex];
+                                          if (!nextItem) return "";
+                                          return (
+                                            nextItem?.["Video"] ||
+                                            nextItem?.["video"] ||
+                                            "Bài đầu tiên"
+                                          );
+                                        })()
+                                  }
+                                  videoCondition={
+                                    hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "mobile"
+                                    )
+                                      ? (() => {
+                                          try {
+                                            return (() => {
+                                              const pageId =
+                                                $ctx.params.id ||
+                                                $ctx.params.Slug;
+                                              const list =
+                                                $queries.allList?.data || [];
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item.id == pageId ||
+                                                    item.Id == pageId ||
+                                                    item.slug == pageId ||
+                                                    item.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return false;
+                                              const prevIndex =
+                                                currentIndex === 0
+                                                  ? list.length - 1
+                                                  : currentIndex - 1;
+                                              const prevItem = list[prevIndex];
+                                              const video =
+                                                prevItem?.["Video"] ||
+                                                prevItem?.["video"];
+                                              return !!video;
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return false;
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                      : (() => {
+                                          try {
+                                            return (() => {
+                                              const pageId =
+                                                $ctx.params?.id ||
+                                                $ctx.params?.Slug ||
+                                                $ctx.params?.slug;
+                                              const list =
+                                                $queries.allList?.data ||
+                                                (Array.isArray($ctx.cachedData)
+                                                  ? $ctx.cachedData
+                                                  : []);
+                                              const currentIndex =
+                                                list.findIndex(
+                                                  item =>
+                                                    item?.id == pageId ||
+                                                    item?.Id == pageId ||
+                                                    item?.slug == pageId ||
+                                                    item?.Slug == pageId
+                                                );
+                                              if (currentIndex === -1)
+                                                return false;
+                                              const nextIndex =
+                                                currentIndex === list.length - 1
+                                                  ? 0
+                                                  : currentIndex + 1;
+                                              const nextItem = list[nextIndex];
+                                              if (!nextItem) return false;
+                                              const video =
+                                                nextItem?.["Video"] ||
+                                                nextItem?.["video"];
+                                              return !!video;
+                                            })();
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return true;
+                                            }
+                                            throw e;
+                                          }
+                                        })()
+                                  }
+                                />
+                              </RevealOnScroll>
+                            </React.Fragment>
                           )}
-                          component={Link}
-                          href={(() => {
-                            const pageId = $ctx.params.id || $ctx.params.Slug;
-                            const list = $queries.allList?.data || [];
-                            const currentIndex = list.findIndex(
-                              item =>
-                                item.id == pageId ||
-                                item.Id == pageId ||
-                                item.slug == pageId ||
-                                item.Slug == pageId
-                            );
-                            if (currentIndex === -1) return "/";
-                            const prevIndex =
-                              currentIndex === 0
-                                ? list.length - 1
-                                : currentIndex - 1;
-                            const prevItem = list[prevIndex];
-                            if (!prevItem) return "/";
-                            const newSlug =
-                              prevItem.slug || prevItem.Slug || prevItem.id;
-                            return `/works/${newSlug}`;
-                          })()}
-                          legacyBehavior={false}
-                          platform={"nextjs"}
-                        >
-                          <TemplateCard
-                            data-plasmic-name={"prevous"}
-                            data-plasmic-override={overrides.prevous}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.prevous
-                            )}
-                            image2={
-                              hasVariant(globalVariants, "screen", "mobile")
-                                ? (() => {
-                                    try {
-                                      return (() => {
-                                        const pageId =
-                                          $ctx.params.id || $ctx.params.Slug;
-                                        const list =
-                                          $queries.allList?.data || [];
-                                        const currentIndex = list.findIndex(
-                                          item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
-                                        );
-                                        if (currentIndex === -1) return "";
-                                        const prevIndex =
-                                          currentIndex === 0
-                                            ? list.length - 1
-                                            : currentIndex - 1;
-                                        const prevItem = list[prevIndex];
-                                        return (
-                                          prevItem?.["Main Image"] ||
-                                          prevItem?.["Main Image"] ||
-                                          "Bài mới nhất"
-                                        );
-                                      })();
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
-                                      }
-                                      throw e;
-                                    }
-                                  })()
-                                : (() => {
-                                    try {
-                                      return (() => {
-                                        const pageId =
-                                          $ctx.params.id || $ctx.params.Slug;
-                                        const list =
-                                          $queries.allList?.data || [];
-                                        const currentIndex = list.findIndex(
-                                          item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
-                                        );
-                                        if (currentIndex === -1) return "";
-                                        const prevIndex =
-                                          currentIndex === 0
-                                            ? list.length - 1
-                                            : currentIndex - 1;
-                                        const prevItem = list[prevIndex];
-                                        return (
-                                          prevItem?.["Main Image"] ||
-                                          prevItem?.["Main Image"] ||
-                                          "Bài mới nhất"
-                                        );
-                                      })();
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
-                                      }
-                                      throw e;
-                                    }
-                                  })()
-                            }
-                            imageCondition={
-                              hasVariant(globalVariants, "screen", "mobile")
-                                ? (() => {
-                                    try {
-                                      return !(() => {
-                                        const pageId =
-                                          $ctx.params.id || $ctx.params.Slug;
-                                        const list =
-                                          $queries.allList?.data || [];
-                                        const currentIndex = list.findIndex(
-                                          item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
-                                        );
-                                        if (currentIndex === -1) return false;
-                                        const prevIndex =
-                                          currentIndex === 0
-                                            ? list.length - 1
-                                            : currentIndex - 1;
-                                        const prevItem = list[prevIndex];
-                                        const video =
-                                          prevItem?.["Video"] ||
-                                          prevItem?.["video"];
-                                        return !!video;
-                                      })();
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })()
-                                : (() => {
-                                    try {
-                                      return !(() => {
-                                        const pageId =
-                                          $ctx.params.id || $ctx.params.Slug;
-                                        const list =
-                                          $queries.allList?.data || [];
-                                        const currentIndex = list.findIndex(
-                                          item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
-                                        );
-                                        if (currentIndex === -1) return false;
-                                        const prevIndex =
-                                          currentIndex === 0
-                                            ? list.length - 1
-                                            : currentIndex - 1;
-                                        const prevItem = list[prevIndex];
-                                        const video =
-                                          prevItem?.["Video"] ||
-                                          prevItem?.["video"];
-                                        return !!video;
-                                      })();
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return true;
-                                      }
-                                      throw e;
-                                    }
-                                  })()
-                            }
-                            link={
-                              hasVariant(globalVariants, "screen", "mobile")
-                                ? (() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    const list = $queries.allList?.data || [];
-                                    const currentIndex = list.findIndex(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    if (currentIndex === -1) return "/";
-                                    const prevIndex =
-                                      currentIndex === 0
-                                        ? list.length - 1
-                                        : currentIndex - 1;
-                                    const prevItem = list[prevIndex];
-                                    if (!prevItem) return "/";
-                                    const newSlug =
-                                      prevItem.slug ||
-                                      prevItem.Slug ||
-                                      prevItem.id;
-                                    return `/works/${newSlug}`;
-                                  })()
-                                : (() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    const list = $queries.allList?.data || [];
-                                    const currentIndex = list.findIndex(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    if (currentIndex === -1) return "/";
-                                    const prevIndex =
-                                      currentIndex === 0
-                                        ? list.length - 1
-                                        : currentIndex - 1;
-                                    const prevItem = list[prevIndex];
-                                    if (!prevItem) return "/";
-                                    const newSlug =
-                                      prevItem.slug ||
-                                      prevItem.Slug ||
-                                      prevItem.id;
-                                    return `/works/${newSlug}`;
-                                  })()
-                            }
-                            tag1={(() => {
-                              try {
-                                return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return false;
-                                  const prevIndex =
-                                    currentIndex === 0
-                                      ? list.length - 1
-                                      : currentIndex - 1;
-                                  const prevItem = list[prevIndex];
-                                  if (!prevItem) return false;
-                                  const tagsData =
-                                    prevItem["Services"] ||
-                                    prevItem["services"];
-                                  if (!tagsData) return false;
-                                  const targetValue = "UI";
-                                  if (Array.isArray(tagsData)) {
-                                    return tagsData.includes(targetValue);
-                                  } else {
-                                    return tagsData
-                                      .toString()
-                                      .includes(targetValue);
-                                  }
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
-                              }
-                            })()}
-                            tag22={(() => {
-                              try {
-                                return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return false;
-                                  const prevIndex =
-                                    currentIndex === 0
-                                      ? list.length - 1
-                                      : currentIndex - 1;
-                                  const prevItem = list[prevIndex];
-                                  if (!prevItem) return false;
-                                  const tagsData =
-                                    prevItem["Services"] ||
-                                    prevItem["services"];
-                                  if (!tagsData) return false;
-                                  const targetValue = "UX";
-                                  if (Array.isArray(tagsData)) {
-                                    return tagsData.includes(targetValue);
-                                  } else {
-                                    return tagsData
-                                      .toString()
-                                      .includes(targetValue);
-                                  }
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
-                              }
-                            })()}
-                            tag32={(() => {
-                              try {
-                                return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return false;
-                                  const prevIndex =
-                                    currentIndex === 0
-                                      ? list.length - 1
-                                      : currentIndex - 1;
-                                  const prevItem = list[prevIndex];
-                                  if (!prevItem) return false;
-                                  const tagsData =
-                                    prevItem["Services"] ||
-                                    prevItem["services"];
-                                  if (!tagsData) return false;
-                                  const targetValue = "FRAMER";
-                                  if (Array.isArray(tagsData)) {
-                                    return tagsData.includes(targetValue);
-                                  } else {
-                                    return tagsData
-                                      .toString()
-                                      .includes(targetValue);
-                                  }
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
-                              }
-                            })()}
-                            tag42={(() => {
-                              try {
-                                return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return false;
-                                  const prevIndex =
-                                    currentIndex === 0
-                                      ? list.length - 1
-                                      : currentIndex - 1;
-                                  const prevItem = list[prevIndex];
-                                  if (!prevItem) return false;
-                                  const tagsData =
-                                    prevItem["Services"] ||
-                                    prevItem["services"];
-                                  if (!tagsData) return false;
-                                  const targetValue = "E-COMMERCE";
-                                  if (Array.isArray(tagsData)) {
-                                    return tagsData.includes(targetValue);
-                                  } else {
-                                    return tagsData
-                                      .toString()
-                                      .includes(targetValue);
-                                  }
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
-                              }
-                            })()}
-                            tag52={(() => {
-                              try {
-                                return (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return false;
-                                  const prevIndex =
-                                    currentIndex === 0
-                                      ? list.length - 1
-                                      : currentIndex - 1;
-                                  const prevItem = list[prevIndex];
-                                  if (!prevItem) return false;
-                                  const tagsData =
-                                    prevItem["Services"] ||
-                                    prevItem["services"];
-                                  if (!tagsData) return false;
-                                  const targetValue = "BRAND IDENTITY";
-                                  if (Array.isArray(tagsData)) {
-                                    return tagsData.includes(targetValue);
-                                  } else {
-                                    return tagsData
-                                      .toString()
-                                      .includes(targetValue);
-                                  }
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return true;
-                                }
-                                throw e;
-                              }
-                            })()}
-                            title={
-                              hasVariant(globalVariants, "screen", "mobile")
-                                ? (() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    const list = $queries.allList?.data || [];
-                                    const currentIndex = list.findIndex(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    if (currentIndex === -1) return "";
-                                    const prevIndex =
-                                      currentIndex === 0
-                                        ? list.length - 1
-                                        : currentIndex - 1;
-                                    const prevItem = list[prevIndex];
-                                    return (
-                                      prevItem?.["Title"] ||
-                                      prevItem?.["title"] ||
-                                      "Bài mới nhất"
-                                    );
-                                  })()
-                                : (() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    const list = $queries.allList?.data || [];
-                                    const currentIndex = list.findIndex(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    if (currentIndex === -1) return "";
-                                    const prevIndex =
-                                      currentIndex === 0
-                                        ? list.length - 1
-                                        : currentIndex - 1;
-                                    const prevItem = list[prevIndex];
-                                    return (
-                                      prevItem?.["Title"] ||
-                                      prevItem?.["title"] ||
-                                      "Bài mới nhất"
-                                    );
-                                  })()
-                            }
-                            video={
-                              hasVariant(globalVariants, "screen", "mobile")
-                                ? (() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    const list = $queries.allList?.data || [];
-                                    const currentIndex = list.findIndex(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    if (currentIndex === -1) return "";
-                                    const prevIndex =
-                                      currentIndex === 0
-                                        ? list.length - 1
-                                        : currentIndex - 1;
-                                    const prevItem = list[prevIndex];
-                                    return (
-                                      prevItem?.["Video"] ||
-                                      prevItem?.["Video"] ||
-                                      "Bài mới nhất"
-                                    );
-                                  })()
-                                : (() => {
-                                    const pageId =
-                                      $ctx.params.id || $ctx.params.Slug;
-                                    const list = $queries.allList?.data || [];
-                                    const currentIndex = list.findIndex(
-                                      item =>
-                                        item.id == pageId ||
-                                        item.Id == pageId ||
-                                        item.slug == pageId ||
-                                        item.Slug == pageId
-                                    );
-                                    if (currentIndex === -1) return "";
-                                    const prevIndex =
-                                      currentIndex === 0
-                                        ? list.length - 1
-                                        : currentIndex - 1;
-                                    const prevItem = list[prevIndex];
-                                    return (
-                                      prevItem?.["Video"] ||
-                                      prevItem?.["Video"] ||
-                                      "Bài mới nhất"
-                                    );
-                                  })()
-                            }
-                            videoCondition={
-                              hasVariant(globalVariants, "screen", "mobile")
-                                ? (() => {
-                                    try {
-                                      return (() => {
-                                        const pageId =
-                                          $ctx.params.id || $ctx.params.Slug;
-                                        const list =
-                                          $queries.allList?.data || [];
-                                        const currentIndex = list.findIndex(
-                                          item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
-                                        );
-                                        if (currentIndex === -1) return false;
-                                        const prevIndex =
-                                          currentIndex === 0
-                                            ? list.length - 1
-                                            : currentIndex - 1;
-                                        const prevItem = list[prevIndex];
-                                        const video =
-                                          prevItem?.["Video"] ||
-                                          prevItem?.["video"];
-                                        return !!video;
-                                      })();
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return false;
-                                      }
-                                      throw e;
-                                    }
-                                  })()
-                                : (() => {
-                                    try {
-                                      return (() => {
-                                        const pageId =
-                                          $ctx.params.id || $ctx.params.Slug;
-                                        const list =
-                                          $queries.allList?.data || [];
-                                        const currentIndex = list.findIndex(
-                                          item =>
-                                            item.id == pageId ||
-                                            item.Id == pageId ||
-                                            item.slug == pageId ||
-                                            item.Slug == pageId
-                                        );
-                                        if (currentIndex === -1) return false;
-                                        const prevIndex =
-                                          currentIndex === 0
-                                            ? list.length - 1
-                                            : currentIndex - 1;
-                                        const prevItem = list[prevIndex];
-                                        const video =
-                                          prevItem?.["Video"] ||
-                                          prevItem?.["video"];
-                                        return !!video;
-                                      })();
-                                    } catch (e) {
-                                      if (
-                                        e instanceof TypeError ||
-                                        e?.plasmicType ===
-                                          "PlasmicUndefinedDataError"
-                                      ) {
-                                        return false;
-                                      }
-                                      throw e;
-                                    }
-                                  })()
-                            }
-                          />
-                        </PlasmicLink__>
-                      </RevealOnScroll>
-                      <RevealOnScroll
-                        blurAmount={5}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.revealOnScroll__f0BoV
-                        )}
-                        delay={0}
-                        duration={0.8}
-                        yOffset={50}
-                      >
-                        <TemplateCard
-                          data-plasmic-name={"nExt"}
-                          data-plasmic-override={overrides.nExt}
-                          className={classNames("__wab_instance", sty.nExt)}
-                          image2={
-                            hasVariant(globalVariants, "screen", "mobile")
-                              ? (() => {
-                                  try {
-                                    return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      const list = $queries.allList?.data || [];
-                                      const currentIndex = list.findIndex(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      if (currentIndex === -1) return "";
-                                      const nextIndex =
-                                        currentIndex === list.length - 1
-                                          ? 0
-                                          : currentIndex + 1;
-                                      const nextItem = list[nextIndex];
-                                      return (
-                                        nextItem?.["Main Image"] ||
-                                        nextItem?.["Main Image"] ||
-                                        "Bài đầu tiên"
-                                      );
-                                    })();
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                              : (() => {
-                                  try {
-                                    return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      const list = $queries.allList?.data || [];
-                                      const currentIndex = list.findIndex(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      if (currentIndex === -1) return "";
-                                      const nextIndex =
-                                        currentIndex === list.length - 1
-                                          ? 0
-                                          : currentIndex + 1;
-                                      const nextItem = list[nextIndex];
-                                      return (
-                                        nextItem?.["Main Image"] ||
-                                        nextItem?.["Main Image"] ||
-                                        "Bài đầu tiên"
-                                      );
-                                    })();
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return "https://framerusercontent.com/images/kPjJi3SaQayZ8Z3vprpR1gKZ47U.webp";
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                          }
-                          imageCondition={
-                            hasVariant(globalVariants, "screen", "mobile")
-                              ? (() => {
-                                  try {
-                                    return !(() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      const list = $queries.allList?.data || [];
-                                      const currentIndex = list.findIndex(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      if (currentIndex === -1) return false;
-                                      const nextIndex =
-                                        currentIndex === list.length - 1
-                                          ? 0
-                                          : currentIndex + 1;
-                                      const nextItem = list[nextIndex];
-                                      const video =
-                                        nextItem?.["Video"] ||
-                                        nextItem?.["video"];
-                                      return !!video;
-                                    })();
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                              : (() => {
-                                  try {
-                                    return !(() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      const list = $queries.allList?.data || [];
-                                      const currentIndex = list.findIndex(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      if (currentIndex === -1) return false;
-                                      const nextIndex =
-                                        currentIndex === list.length - 1
-                                          ? 0
-                                          : currentIndex + 1;
-                                      const nextItem = list[nextIndex];
-                                      const video =
-                                        nextItem?.["Video"] ||
-                                        nextItem?.["video"];
-                                      return !!video;
-                                    })();
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                          }
-                          link={
-                            hasVariant(globalVariants, "screen", "mobile")
-                              ? (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return "/";
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  if (!nextItem) return "/";
-                                  const newSlug =
-                                    nextItem.slug ||
-                                    nextItem.Slug ||
-                                    nextItem.id;
-                                  return `/works/${newSlug}`;
-                                })()
-                              : (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return "/";
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  if (!nextItem) return "/";
-                                  const newSlug =
-                                    nextItem.slug ||
-                                    nextItem.Slug ||
-                                    nextItem.id;
-                                  return `/works/${newSlug}`;
-                                })()
-                          }
-                          tag1={(() => {
-                            try {
-                              return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return false;
-                                const nextIndex =
-                                  currentIndex === list.length - 1
-                                    ? 0
-                                    : currentIndex + 1;
-                                const nextItem = list[nextIndex];
-                                if (!nextItem) return false;
-                                const tagsData =
-                                  nextItem["Services"] || nextItem["services"];
-                                if (!tagsData) return false;
-                                const targetValue = "UI";
-                                if (Array.isArray(tagsData)) {
-                                  return tagsData.includes(targetValue);
-                                } else {
-                                  return tagsData
-                                    .toString()
-                                    .includes(targetValue);
-                                }
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })()}
-                          tag22={(() => {
-                            try {
-                              return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return false;
-                                const nextIndex =
-                                  currentIndex === list.length - 1
-                                    ? 0
-                                    : currentIndex + 1;
-                                const nextItem = list[nextIndex];
-                                if (!nextItem) return false;
-                                const tagsData =
-                                  nextItem["Services"] || nextItem["services"];
-                                if (!tagsData) return false;
-                                const targetValue = "UX";
-                                if (Array.isArray(tagsData)) {
-                                  return tagsData.includes(targetValue);
-                                } else {
-                                  return tagsData
-                                    .toString()
-                                    .includes(targetValue);
-                                }
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })()}
-                          tag32={(() => {
-                            try {
-                              return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return false;
-                                const nextIndex =
-                                  currentIndex === list.length - 1
-                                    ? 0
-                                    : currentIndex + 1;
-                                const nextItem = list[nextIndex];
-                                if (!nextItem) return false;
-                                const tagsData =
-                                  nextItem["Services"] || nextItem["services"];
-                                if (!tagsData) return false;
-                                const targetValue = "FRAMER";
-                                if (Array.isArray(tagsData)) {
-                                  return tagsData.includes(targetValue);
-                                } else {
-                                  return tagsData
-                                    .toString()
-                                    .includes(targetValue);
-                                }
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })()}
-                          tag42={(() => {
-                            try {
-                              return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return false;
-                                const nextIndex =
-                                  currentIndex === list.length - 1
-                                    ? 0
-                                    : currentIndex + 1;
-                                const nextItem = list[nextIndex];
-                                if (!nextItem) return false;
-                                const tagsData =
-                                  nextItem["Services"] || nextItem["services"];
-                                if (!tagsData) return false;
-                                const targetValue = "E-COMMERCE";
-                                if (Array.isArray(tagsData)) {
-                                  return tagsData.includes(targetValue);
-                                } else {
-                                  return tagsData
-                                    .toString()
-                                    .includes(targetValue);
-                                }
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })()}
-                          tag52={(() => {
-                            try {
-                              return (() => {
-                                const pageId =
-                                  $ctx.params.id || $ctx.params.Slug;
-                                const list = $queries.allList?.data || [];
-                                const currentIndex = list.findIndex(
-                                  item =>
-                                    item.id == pageId ||
-                                    item.Id == pageId ||
-                                    item.slug == pageId ||
-                                    item.Slug == pageId
-                                );
-                                if (currentIndex === -1) return false;
-                                const nextIndex =
-                                  currentIndex === list.length - 1
-                                    ? 0
-                                    : currentIndex + 1;
-                                const nextItem = list[nextIndex];
-                                if (!nextItem) return false;
-                                const tagsData =
-                                  nextItem["Services"] || nextItem["services"];
-                                if (!tagsData) return false;
-                                const targetValue = "BRAND IDENTITY";
-                                if (Array.isArray(tagsData)) {
-                                  return tagsData.includes(targetValue);
-                                } else {
-                                  return tagsData
-                                    .toString()
-                                    .includes(targetValue);
-                                }
-                              })();
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return true;
-                              }
-                              throw e;
-                            }
-                          })()}
-                          title={
-                            hasVariant(globalVariants, "screen", "mobile")
-                              ? (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return "";
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  return (
-                                    nextItem?.["Title"] ||
-                                    nextItem?.["title"] ||
-                                    "Bài đầu tiên"
-                                  );
-                                })()
-                              : (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return "";
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  return (
-                                    nextItem?.["Title"] ||
-                                    nextItem?.["title"] ||
-                                    "Bài đầu tiên"
-                                  );
-                                })()
-                          }
-                          video={
-                            hasVariant(globalVariants, "screen", "mobile")
-                              ? (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return "";
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  return (
-                                    nextItem?.["Video"] ||
-                                    nextItem?.["video"] ||
-                                    "Bài đầu tiên"
-                                  );
-                                })()
-                              : (() => {
-                                  const pageId =
-                                    $ctx.params.id || $ctx.params.Slug;
-                                  const list = $queries.allList?.data || [];
-                                  const currentIndex = list.findIndex(
-                                    item =>
-                                      item.id == pageId ||
-                                      item.Id == pageId ||
-                                      item.slug == pageId ||
-                                      item.Slug == pageId
-                                  );
-                                  if (currentIndex === -1) return "";
-                                  const nextIndex =
-                                    currentIndex === list.length - 1
-                                      ? 0
-                                      : currentIndex + 1;
-                                  const nextItem = list[nextIndex];
-                                  return (
-                                    nextItem?.["Video"] ||
-                                    nextItem?.["video"] ||
-                                    "Bài đầu tiên"
-                                  );
-                                })()
-                          }
-                          videoCondition={
-                            hasVariant(globalVariants, "screen", "mobile")
-                              ? (() => {
-                                  try {
-                                    return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      const list = $queries.allList?.data || [];
-                                      const currentIndex = list.findIndex(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      if (currentIndex === -1) return false;
-                                      const prevIndex =
-                                        currentIndex === 0
-                                          ? list.length - 1
-                                          : currentIndex - 1;
-                                      const prevItem = list[prevIndex];
-                                      const video =
-                                        prevItem?.["Video"] ||
-                                        prevItem?.["video"];
-                                      return !!video;
-                                    })();
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return false;
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                              : (() => {
-                                  try {
-                                    return (() => {
-                                      const pageId =
-                                        $ctx.params.id || $ctx.params.Slug;
-                                      const list = $queries.allList?.data || [];
-                                      const currentIndex = list.findIndex(
-                                        item =>
-                                          item.id == pageId ||
-                                          item.Id == pageId ||
-                                          item.slug == pageId ||
-                                          item.Slug == pageId
-                                      );
-                                      if (currentIndex === -1) return false;
-                                      const nextIndex =
-                                        currentIndex === list.length - 1
-                                          ? 0
-                                          : currentIndex + 1;
-                                      const nextItem = list[nextIndex];
-                                      const video =
-                                        nextItem?.["Video"] ||
-                                        nextItem?.["video"];
-                                      return !!video;
-                                    })();
-                                  } catch (e) {
-                                    if (
-                                      e instanceof TypeError ||
-                                      e?.plasmicType ===
-                                        "PlasmicUndefinedDataError"
-                                    ) {
-                                      return true;
-                                    }
-                                    throw e;
-                                  }
-                                })()
-                          }
-                        />
-                      </RevealOnScroll>
+                        </DataCtxReader__>
+                      </CachedAirtable>
                     </div>
                   </div>
                   <RevealOnScroll
@@ -12038,7 +12843,6 @@ const PlasmicDescendants = {
     "globalLoading",
     "scrollToTop",
     "customCursor",
-    "googleSheetsMultiTool",
     "smoothScroll",
     "scrollContext",
     "newMenu2",
@@ -12054,6 +12858,7 @@ const PlasmicDescendants = {
     "text9",
     "text10",
     "text11",
+    "link",
     "text5",
     "container13",
     "scrollParallax",
@@ -12150,7 +12955,6 @@ const PlasmicDescendants = {
     "h13",
     "section16",
     "h124",
-    "container25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay30",
     "container26",
     "h21H13",
@@ -12186,7 +12990,6 @@ const PlasmicDescendants = {
     "h14",
     "section17",
     "h125",
-    "container27",
     "payJustNowIsSouthAfricasLeadingBuyNowPay43",
     "container28",
     "h21H1110",
@@ -12235,7 +13038,6 @@ const PlasmicDescendants = {
     "h15",
     "section18",
     "h126",
-    "container29",
     "payJustNowIsSouthAfricasLeadingBuyNowPay66",
     "container30",
     "h21H1111",
@@ -12295,8 +13097,6 @@ const PlasmicDescendants = {
     "image11",
     "image12",
     "image13",
-    "section09",
-    "theWebsiteBecameAnImportantSpaceToShowcase",
     "section10",
     "title3",
     "prevous",
@@ -12306,272 +13106,6 @@ const PlasmicDescendants = {
   globalLoading: ["globalLoading"],
   scrollToTop: ["scrollToTop"],
   customCursor: ["customCursor"],
-  googleSheetsMultiTool: [
-    "googleSheetsMultiTool",
-    "smoothScroll",
-    "scrollContext",
-    "newMenu2",
-    "section1",
-    "container",
-    "container3",
-    "container4",
-    "container5",
-    "container6",
-    "container35",
-    "text7",
-    "text6",
-    "text9",
-    "text10",
-    "text11",
-    "text5",
-    "container13",
-    "scrollParallax",
-    "img2",
-    "img",
-    "htmlVideo",
-    "section4",
-    "container19",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay6",
-    "original",
-    "section2",
-    "container2",
-    "container15",
-    "container16",
-    "heading3",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay",
-    "container36",
-    "heading14",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay1",
-    "container37",
-    "heading15",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay2",
-    "section7",
-    "image1",
-    "video1",
-    "h11",
-    "section6",
-    "container23",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay9",
-    "container21",
-    "h22H11",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay8",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay10",
-    "h31H21H11",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay11",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay12",
-    "h31H21H112",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay13",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay14",
-    "h22H112",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay15",
-    "imageH21H12112",
-    "image27",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay16",
-    "h31H21H113",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay17",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay18",
-    "h32H21H114",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay19",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay20",
-    "h33H21H115",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay21",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay22",
-    "imageH21H12113",
-    "image28",
-    "h34H21H116",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay23",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay24",
-    "h35H21H117",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay25",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay26",
-    "h12",
-    "section14",
-    "h122",
-    "container24",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay27",
-    "container22",
-    "h21H12",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay28",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay29",
-    "imageH21H121",
-    "image16",
-    "imageH21H1212",
-    "image17",
-    "imageH21H1213",
-    "image18",
-    "h22H12",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay58",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay59",
-    "h23H12",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay60",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay61",
-    "h24H12",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay62",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay63",
-    "h25H122",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay64",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay65",
-    "imageH21H12114",
-    "image29",
-    "section13",
-    "image15",
-    "video12",
-    "h13",
-    "section16",
-    "h124",
-    "container25",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay30",
-    "container26",
-    "h21H13",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay31",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay32",
-    "imageH21H1214",
-    "image19",
-    "h22H13",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay33",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay34",
-    "imageH21H1215",
-    "image20",
-    "h23H13",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay35",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay36",
-    "imageH21H1216",
-    "image21",
-    "h24H13",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay37",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay38",
-    "imageH24H132",
-    "image30",
-    "imageH26H13",
-    "image22",
-    "h22H118",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay39",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay40",
-    "imageH21H1218",
-    "image23",
-    "h22H119",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay41",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay42",
-    "h14",
-    "section17",
-    "h125",
-    "container27",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay43",
-    "container28",
-    "h21H1110",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay44",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay45",
-    "imageH21H1219",
-    "image24",
-    "h22H14",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay46",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay47",
-    "h23H142",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay48",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay49",
-    "h24H14",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay50",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay51",
-    "h25H14",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay52",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay53",
-    "h26H14",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay54",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay55",
-    "h27H142",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay56",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay57",
-    "imageH21H12110",
-    "image25",
-    "imageH21H12111",
-    "image26",
-    "imageH25H143",
-    "image31",
-    "imageH25H144",
-    "image32",
-    "imageH25H145",
-    "image33",
-    "imageH25H146",
-    "image34",
-    "imageH25H147",
-    "image35",
-    "imageH25H148",
-    "image36",
-    "imageH25H149",
-    "image37",
-    "imageH25H1410",
-    "image38",
-    "h15",
-    "section18",
-    "h126",
-    "container29",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay66",
-    "container30",
-    "h21H1111",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay67",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay68",
-    "imageH21H12115",
-    "image39",
-    "h22H142",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay69",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay70",
-    "h23H143",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay71",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay72",
-    "h24H142",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay73",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay74",
-    "h25H142",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay75",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay76",
-    "h26H142",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay77",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay78",
-    "h27H143",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay79",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay80",
-    "section15",
-    "container8",
-    "container20",
-    "container39",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay5",
-    "section11",
-    "image3",
-    "video3",
-    "image4",
-    "video4",
-    "original2",
-    "section5",
-    "container9",
-    "container18",
-    "container40",
-    "payJustNowIsSouthAfricasLeadingBuyNowPay7",
-    "section12",
-    "image5",
-    "video5",
-    "image6",
-    "video6",
-    "section8",
-    "image7",
-    "video7",
-    "image8",
-    "video8",
-    "image9",
-    "video9",
-    "image10",
-    "video10",
-    "section9",
-    "image11",
-    "image12",
-    "image13",
-    "section09",
-    "theWebsiteBecameAnImportantSpaceToShowcase",
-    "section10",
-    "title3",
-    "prevous",
-    "nExt",
-    "section"
-  ],
   smoothScroll: [
     "smoothScroll",
     "scrollContext",
@@ -12588,6 +13122,7 @@ const PlasmicDescendants = {
     "text9",
     "text10",
     "text11",
+    "link",
     "text5",
     "container13",
     "scrollParallax",
@@ -12684,7 +13219,6 @@ const PlasmicDescendants = {
     "h13",
     "section16",
     "h124",
-    "container25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay30",
     "container26",
     "h21H13",
@@ -12720,7 +13254,6 @@ const PlasmicDescendants = {
     "h14",
     "section17",
     "h125",
-    "container27",
     "payJustNowIsSouthAfricasLeadingBuyNowPay43",
     "container28",
     "h21H1110",
@@ -12769,7 +13302,6 @@ const PlasmicDescendants = {
     "h15",
     "section18",
     "h126",
-    "container29",
     "payJustNowIsSouthAfricasLeadingBuyNowPay66",
     "container30",
     "h21H1111",
@@ -12829,8 +13361,6 @@ const PlasmicDescendants = {
     "image11",
     "image12",
     "image13",
-    "section09",
-    "theWebsiteBecameAnImportantSpaceToShowcase",
     "section10",
     "title3",
     "prevous",
@@ -12852,6 +13382,7 @@ const PlasmicDescendants = {
     "text9",
     "text10",
     "text11",
+    "link",
     "text5",
     "container13"
   ],
@@ -12867,6 +13398,7 @@ const PlasmicDescendants = {
     "text9",
     "text10",
     "text11",
+    "link",
     "text5",
     "container13"
   ],
@@ -12899,6 +13431,7 @@ const PlasmicDescendants = {
   text9: ["text9"],
   text10: ["text10"],
   text11: ["text11"],
+  link: ["link", "text5", "container13"],
   text5: ["text5"],
   container13: ["container13"],
   scrollParallax: ["scrollParallax", "img2", "img", "htmlVideo"],
@@ -13401,7 +13934,6 @@ const PlasmicDescendants = {
     "h13",
     "section16",
     "h124",
-    "container25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay30",
     "container26",
     "h21H13",
@@ -13438,7 +13970,6 @@ const PlasmicDescendants = {
   section16: [
     "section16",
     "h124",
-    "container25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay30",
     "container26",
     "h21H13",
@@ -13472,8 +14003,7 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay41",
     "payJustNowIsSouthAfricasLeadingBuyNowPay42"
   ],
-  h124: ["h124", "container25", "payJustNowIsSouthAfricasLeadingBuyNowPay30"],
-  container25: ["container25", "payJustNowIsSouthAfricasLeadingBuyNowPay30"],
+  h124: ["h124", "payJustNowIsSouthAfricasLeadingBuyNowPay30"],
   payJustNowIsSouthAfricasLeadingBuyNowPay30: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay30"
   ],
@@ -13592,7 +14122,6 @@ const PlasmicDescendants = {
     "h14",
     "section17",
     "h125",
-    "container27",
     "payJustNowIsSouthAfricasLeadingBuyNowPay43",
     "container28",
     "h21H1110",
@@ -13642,7 +14171,6 @@ const PlasmicDescendants = {
   section17: [
     "section17",
     "h125",
-    "container27",
     "payJustNowIsSouthAfricasLeadingBuyNowPay43",
     "container28",
     "h21H1110",
@@ -13689,8 +14217,7 @@ const PlasmicDescendants = {
     "imageH25H1410",
     "image38"
   ],
-  h125: ["h125", "container27", "payJustNowIsSouthAfricasLeadingBuyNowPay43"],
-  container27: ["container27", "payJustNowIsSouthAfricasLeadingBuyNowPay43"],
+  h125: ["h125", "payJustNowIsSouthAfricasLeadingBuyNowPay43"],
   payJustNowIsSouthAfricasLeadingBuyNowPay43: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay43"
   ],
@@ -13843,7 +14370,6 @@ const PlasmicDescendants = {
     "h15",
     "section18",
     "h126",
-    "container29",
     "payJustNowIsSouthAfricasLeadingBuyNowPay66",
     "container30",
     "h21H1111",
@@ -13873,7 +14399,6 @@ const PlasmicDescendants = {
   section18: [
     "section18",
     "h126",
-    "container29",
     "payJustNowIsSouthAfricasLeadingBuyNowPay66",
     "container30",
     "h21H1111",
@@ -13900,8 +14425,7 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay79",
     "payJustNowIsSouthAfricasLeadingBuyNowPay80"
   ],
-  h126: ["h126", "container29", "payJustNowIsSouthAfricasLeadingBuyNowPay66"],
-  container29: ["container29", "payJustNowIsSouthAfricasLeadingBuyNowPay66"],
+  h126: ["h126", "payJustNowIsSouthAfricasLeadingBuyNowPay66"],
   payJustNowIsSouthAfricasLeadingBuyNowPay66: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay66"
   ],
@@ -14095,10 +14619,6 @@ const PlasmicDescendants = {
   image11: ["image11"],
   image12: ["image12"],
   image13: ["image13"],
-  section09: ["section09", "theWebsiteBecameAnImportantSpaceToShowcase"],
-  theWebsiteBecameAnImportantSpaceToShowcase: [
-    "theWebsiteBecameAnImportantSpaceToShowcase"
-  ],
   section10: ["section10", "title3", "prevous", "nExt"],
   title3: ["title3"],
   prevous: ["prevous"],
@@ -14113,7 +14633,6 @@ type NodeDefaultElementType = {
   globalLoading: typeof GlobalLoading;
   scrollToTop: typeof ScrollToTop;
   customCursor: typeof CustomCursor;
-  googleSheetsMultiTool: typeof CachedAirtable;
   smoothScroll: typeof SmoothScroll;
   scrollContext: typeof ScrollContext;
   newMenu2: typeof NewMenu;
@@ -14129,6 +14648,7 @@ type NodeDefaultElementType = {
   text9: "div";
   text10: "div";
   text11: "div";
+  link: "a";
   text5: "div";
   container13: "div";
   scrollParallax: typeof ParallaxWrapper;
@@ -14225,7 +14745,6 @@ type NodeDefaultElementType = {
   h13: typeof RevealOnScroll;
   section16: "div";
   h124: "div";
-  container25: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay30: "div";
   container26: "div";
   h21H13: "div";
@@ -14261,7 +14780,6 @@ type NodeDefaultElementType = {
   h14: typeof RevealOnScroll;
   section17: "div";
   h125: "div";
-  container27: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay43: "div";
   container28: "div";
   h21H1110: "div";
@@ -14310,7 +14828,6 @@ type NodeDefaultElementType = {
   h15: typeof RevealOnScroll;
   section18: "div";
   h126: "div";
-  container29: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay66: "div";
   container30: "div";
   h21H1111: "div";
@@ -14370,8 +14887,6 @@ type NodeDefaultElementType = {
   image11: typeof GridDistortion;
   image12: typeof GridDistortion;
   image13: typeof GridDistortion;
-  section09: "div";
-  theWebsiteBecameAnImportantSpaceToShowcase: "div";
   section10: "div";
   title3: "div";
   prevous: typeof TemplateCard;
@@ -14469,7 +14984,6 @@ export const PlasmicNewPage = Object.assign(
     globalLoading: makeNodeComponent("globalLoading"),
     scrollToTop: makeNodeComponent("scrollToTop"),
     customCursor: makeNodeComponent("customCursor"),
-    googleSheetsMultiTool: makeNodeComponent("googleSheetsMultiTool"),
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollContext: makeNodeComponent("scrollContext"),
     newMenu2: makeNodeComponent("newMenu2"),
@@ -14485,6 +14999,7 @@ export const PlasmicNewPage = Object.assign(
     text9: makeNodeComponent("text9"),
     text10: makeNodeComponent("text10"),
     text11: makeNodeComponent("text11"),
+    link: makeNodeComponent("link"),
     text5: makeNodeComponent("text5"),
     container13: makeNodeComponent("container13"),
     scrollParallax: makeNodeComponent("scrollParallax"),
@@ -14649,7 +15164,6 @@ export const PlasmicNewPage = Object.assign(
     h13: makeNodeComponent("h13"),
     section16: makeNodeComponent("section16"),
     h124: makeNodeComponent("h124"),
-    container25: makeNodeComponent("container25"),
     payJustNowIsSouthAfricasLeadingBuyNowPay30: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay30"
     ),
@@ -14711,7 +15225,6 @@ export const PlasmicNewPage = Object.assign(
     h14: makeNodeComponent("h14"),
     section17: makeNodeComponent("section17"),
     h125: makeNodeComponent("h125"),
-    container27: makeNodeComponent("container27"),
     payJustNowIsSouthAfricasLeadingBuyNowPay43: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay43"
     ),
@@ -14790,7 +15303,6 @@ export const PlasmicNewPage = Object.assign(
     h15: makeNodeComponent("h15"),
     section18: makeNodeComponent("section18"),
     h126: makeNodeComponent("h126"),
-    container29: makeNodeComponent("container29"),
     payJustNowIsSouthAfricasLeadingBuyNowPay66: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay66"
     ),
@@ -14884,10 +15396,6 @@ export const PlasmicNewPage = Object.assign(
     image11: makeNodeComponent("image11"),
     image12: makeNodeComponent("image12"),
     image13: makeNodeComponent("image13"),
-    section09: makeNodeComponent("section09"),
-    theWebsiteBecameAnImportantSpaceToShowcase: makeNodeComponent(
-      "theWebsiteBecameAnImportantSpaceToShowcase"
-    ),
     section10: makeNodeComponent("section10"),
     title3: makeNodeComponent("title3"),
     prevous: makeNodeComponent("prevous"),

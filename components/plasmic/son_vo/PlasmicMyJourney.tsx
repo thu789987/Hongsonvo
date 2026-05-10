@@ -61,11 +61,6 @@ import {
 import * as plasmicAuth from "@plasmicapp/react-web/lib/auth";
 
 import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
-import {
-  executePlasmicDataOp,
-  usePlasmicDataOp,
-  usePlasmicInvalidate
-} from "@plasmicapp/react-web/lib/data-sources";
 
 import ScrollToTop from "../../ScrollToTop"; // plasmic-import: amMlHTsYYfNZ/codeComponent
 import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
@@ -87,7 +82,6 @@ import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI
 import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
-import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/styleTokensProvider
 
@@ -284,28 +278,6 @@ function PlasmicMyJourney__RenderFunc(props: {
   const globalVariants = _useGlobalVariants();
 
   const currentUser = useCurrentUser?.() || {};
-
-  let [$queries, setDollarQueries] = React.useState<
-    Record<string, ReturnType<typeof usePlasmicDataOp>>
-  >({});
-
-  const new$Queries: Record<string, ReturnType<typeof usePlasmicDataOp>> = {
-    works: usePlasmicDataOp(() => {
-      return {
-        sourceId: "n45tEsvLE6YKJCZTUdqEgQ",
-        opId: "906a42fb-444b-46bb-a4ff-edd2e0f16ab1",
-        userArgs: {},
-        cacheKey: `plasmic.$.906a42fb-444b-46bb-a4ff-edd2e0f16ab1.$.`,
-        invalidatedKeys: null,
-        roleId: null
-      };
-    })
-  };
-  if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
-    setDollarQueries(new$Queries);
-
-    $queries = new$Queries;
-  }
 
   const pageMetadata = generateDynamicMetadata(
     wrapQueriesWithLoadingProxy({}),
@@ -2389,7 +2361,10 @@ function PlasmicMyJourney__RenderFunc(props: {
                               "__wab_instance",
                               sty.googleSheetsMultiTool__e0Ota
                             )}
-                            sheetName={"Sheet1"}
+                            sheetId={
+                              "1L3TDUwHRYbCHPb-Z18CfpS1SBdgO6IyMC-aVsyKXndg"
+                            }
+                            sheetName={"Assets-Grid view"}
                           >
                             <DataCtxReader__>
                               {$ctx => (
@@ -2447,9 +2422,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                                         src={(() => {
                                           try {
                                             return (
-                                              currentItem?.fields?.[
-                                                "Main Image"
-                                              ] || ""
+                                              currentItem?.["Main Image"] || ""
                                             );
                                           } catch (e) {
                                             if (
