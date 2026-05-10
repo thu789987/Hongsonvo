@@ -539,7 +539,21 @@ function PlasmicNewMenu__RenderFunc(props: {
           value: args.headerTitle,
           className: classNames(sty.slotTargetHeaderTitle)
         })}
-        <div className={classNames(projectcss.all, sty.freeBox__aBbEh)}>
+        <PlasmicLink__
+          className={classNames(
+            projectcss.all,
+            projectcss.a,
+            projectcss.a__bLa1s,
+            sty.link__aBbEh
+          )}
+          component={Link}
+          href={
+            "https://drive.google.com/file/d/13j1S7cgOtDA6DdY4r2YLezK-Med9w2Dy/view?usp=sharing"
+          }
+          legacyBehavior={false}
+          platform={"nextjs"}
+          target={"_blank"}
+        >
           <div
             data-plasmic-name={"text"}
             data-plasmic-override={overrides.text}
@@ -558,7 +572,7 @@ function PlasmicNewMenu__RenderFunc(props: {
           >
             {"My resume"}
           </div>
-        </div>
+        </PlasmicLink__>
       </div>
     </div>
   ) as React.ReactElement | null;
