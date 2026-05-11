@@ -1728,7 +1728,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 "__wab_instance",
                                 sty.image1
                               )}
-                              enableEffect={true}
+                              enableEffect={false}
                               grid={40}
                               imageSrc={(() => {
                                 try {
@@ -4670,7 +4670,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 "__wab_instance",
                                 sty.image15
                               )}
-                              enableEffect={true}
+                              enableEffect={false}
                               grid={50}
                               imageSrc={(() => {
                                 try {
@@ -9617,7 +9617,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                 "__wab_instance",
                                 sty.image3
                               )}
-                              enableEffect={true}
+                              enableEffect={false}
                               grid={40}
                               imageSrc={(() => {
                                 try {
@@ -10275,7 +10275,7 @@ function PlasmicNewPage__RenderFunc(props: {
                           ) : null}
                           {(() => {
                             try {
-                              return !(() => {
+                              return (() => {
                                 const pageId =
                                   $ctx.params.id || $ctx.params.Slug;
                                 if (!pageId || !$ctx.cachedData) return false;
