@@ -140,7 +140,7 @@ export default function GlobalLoading({
         }
       `}</style>
 
-      <div style={{ width: "90%", maxWidth: "1200px", position: "relative" }}>
+      <div style={{ width: "90%", maxWidth: "1440px", position: "relative" }}>
         {/* HEADER */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "12px", position: "relative" }}>
           <div className="hide-on-mobile" style={{ fontSize: "1.2rem" }}>
