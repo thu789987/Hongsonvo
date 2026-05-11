@@ -1002,7 +1002,7 @@
   max-width: 100%;
   position: fixed;
   left: 0px;
-  top: 40px;
+  top: 0px;
   z-index: 5;
 }
 .fotterMain__bRaMl:global(.__wab_instance) {
