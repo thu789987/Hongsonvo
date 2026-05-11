@@ -889,76 +889,7 @@
   padding-right: 12px;
   min-width: 0;
 }
-.freeBox__gvyPv {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  top: auto;
-  left: auto;
-  right: auto;
-  grid-template-rows: auto auto;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-row-gap: 16px;
-  grid-column-gap: 16px;
-  grid-auto-rows: auto;
-  grid-auto-columns: 1fr;
-  min-width: 0;
-  display: none;
-  padding: 8px;
-}
-.templateCard:global(.__wab_instance) {
-  width: 100%;
-  grid-row-end: span 1;
-  grid-column-end: span 2;
-  min-width: 0;
-}
-.templateCard2:global(.__wab_instance) {
-  width: 100%;
-  opacity: 0;
-  min-width: 0;
-}
-.templateCard3:global(.__wab_instance) {
-  position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
-  width: 100%;
-  min-width: 0;
-}
-.templateCard4:global(.__wab_instance) {
-  position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
-  width: 100%;
-  opacity: 0;
-  min-width: 0;
-}
-.templateCard5:global(.__wab_instance) {
-  position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
-  width: 100%;
-  grid-column-end: span 2;
-  min-width: 0;
-}
-.templateCard6:global(.__wab_instance) {
-  width: 100%;
-  grid-column-end: span 2;
-  min-width: 0;
-}
-.templateCard7:global(.__wab_instance) {
-  width: 100%;
-  opacity: 0;
-  min-width: 0;
-}
-.templateCard8:global(.__wab_instance) {
-  width: 100%;
-  min-width: 0;
-}
-.googleSheetsMultiTool___7C0Gu:global(.__wab_instance) {
+.googleSheetsMultiTool__ysLzb:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   object-fit: cover;
@@ -971,18 +902,28 @@
   width: 100%;
   min-width: 0;
 }
-.revealOnScroll__wHfwU:global(.__wab_instance) {
+@media (max-width: 1024px) {
+  .patternGrid:global(.__wab_instance) {
+    animation: none;
+  }
+}
+.revealOnScroll__r0AyH:global(.__wab_instance) {
   animation: none;
   object-fit: cover;
   z-index: 10;
   width: 100%;
   min-width: 0;
 }
-.templateCard9:global(.__wab_instance) {
+.templateCard10:global(.__wab_instance) {
   animation: none;
   max-width: 100%;
   width: 100%;
   min-width: 0;
+}
+@media (max-width: 1024px) {
+  .templateCard10:global(.__wab_instance) {
+    animation: none;
+  }
 }
 .revealOnScroll__mArFx:global(.__wab_instance) {
   max-width: 100%;
