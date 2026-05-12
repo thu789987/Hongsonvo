@@ -1213,20 +1213,6 @@
           "path": "/new-page"
         },
         {
-          "id": "Vvf9GHp0XqJi",
-          "name": "MyServices",
-          "type": "managed",
-          "projectId": "bLa1shfC4noziDsvmxjKJF",
-          "renderModuleFilePath": "plasmic/son_vo/PlasmicMyServices.tsx",
-          "importSpec": {
-            "modulePath": "../pages/my-services.tsx"
-          },
-          "cssFilePath": "plasmic/son_vo/PlasmicMyServices.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/my-journey-2"
-        },
-        {
           "id": "JOkR_GpRIk06",
           "name": "NewMenu2",
           "type": "managed",
@@ -1277,6 +1263,20 @@
           "cssFilePath": "plasmic/son_vo/PlasmicTest2.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "Vvf9GHp0XqJi",
+          "name": "Contact",
+          "type": "managed",
+          "projectId": "bLa1shfC4noziDsvmxjKJF",
+          "renderModuleFilePath": "plasmic/son_vo/PlasmicContact.tsx",
+          "importSpec": {
+            "modulePath": "../pages/contact.tsx"
+          },
+          "cssFilePath": "plasmic/son_vo/PlasmicContact.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/contact"
         }
       ],
       "icons": [
@@ -2476,6 +2476,12 @@
           "name": "CachedAirtable",
           "displayName": "CachedAirtable",
           "componentImportPath": "./components/CachedAirtable"
+        },
+        {
+          "id": "0P7uTqXeQ2ln",
+          "name": "CircularText",
+          "displayName": "CircularText",
+          "componentImportPath": "./components/CircularText"
         }
       ],
       "customFunctions": []
