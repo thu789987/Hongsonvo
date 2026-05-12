@@ -2482,6 +2482,12 @@
           "name": "CircularText",
           "displayName": "CircularText",
           "componentImportPath": "./components/CircularText"
+        },
+        {
+          "id": "_kW8Zj0JvUPe",
+          "name": "TiltHoverCard",
+          "displayName": "TiltHoverCard",
+          "componentImportPath": "./components/TiltHoverCard"
         }
       ],
       "customFunctions": []
