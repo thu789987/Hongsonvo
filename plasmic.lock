@@ -1581,6 +1581,16 @@
           "checksum": "215ee2217c1c44663c27f053b2593f93"
         },
         {
+          "type": "renderModule",
+          "assetId": "Vvf9GHp0XqJi",
+          "checksum": "3154ac4ccbd1faf93a468747e3b446b3"
+        },
+        {
+          "type": "cssRules",
+          "assetId": "Vvf9GHp0XqJi",
+          "checksum": "3154ac4ccbd1faf93a468747e3b446b3"
+        },
+        {
           "assetId": "bLa1shfC4noziDsvmxjKJF",
           "type": "projectCss",
           "checksum": "fa675ea9a3e8f46bbc6409a2fb4f6886"
