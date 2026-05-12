@@ -73,10 +73,6 @@ import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6Al
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
-import { RevealWidthOnScroll } from "../../RevealWidthOnScroll"; // plasmic-import: OrcqYiNWCo3G/codeComponent
-import { AnimatedLineOnScroll } from "../../AnimatedLineOnScroll"; // plasmic-import: Al7stYh33MDE/codeComponent
-import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
-import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/styleTokensProvider
 
@@ -141,6 +137,7 @@ export type PlasmicContact__OverridesType = {
   scrollToTop?: Flex__<typeof ScrollToTop>;
   globalLoading?: Flex__<typeof GlobalLoading>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
+  revealOnScroll?: Flex__<typeof RevealOnScroll>;
   sectionCards2?: Flex__<"div">;
   left?: Flex__<"div">;
   container4?: Flex__<"div">;
@@ -148,7 +145,6 @@ export type PlasmicContact__OverridesType = {
   container5?: Flex__<"div">;
   left3?: Flex__<"div">;
   container6?: Flex__<"div">;
-  headerHeroSection2?: Flex__<"div">;
   scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
   tickerHeader?: Flex__<typeof TickerHeader>;
@@ -178,32 +174,6 @@ export type PlasmicContact__OverridesType = {
   svg?: Flex__<"div">;
   ratingText?: Flex__<"div">;
   container2?: Flex__<"div">;
-  sectionCards6?: Flex__<"div">;
-  heading4?: Flex__<"div">;
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3?: Flex__<"div">;
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4?: Flex__<"div">;
-  eXpertise2?: Flex__<"div">;
-  an2?: Flex__<"div">;
-  skills2?: Flex__<"div">;
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3?: Flex__<"div">;
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4?: Flex__<"div">;
-  container31?: Flex__<"div">;
-  subContainer2?: Flex__<"div">;
-  left4?: Flex__<"div">;
-  container7?: Flex__<"div">;
-  _20?: Flex__<"div">;
-  _13?: Flex__<"div">;
-  _21?: Flex__<"div">;
-  _14?: Flex__<"div">;
-  _22?: Flex__<"div">;
-  _15?: Flex__<"div">;
-  _23?: Flex__<"div">;
-  _16?: Flex__<"div">;
-  _24?: Flex__<"div">;
-  _17?: Flex__<"div">;
-  _25?: Flex__<"div">;
-  _18?: Flex__<"div">;
-  cardWhatAboutUs5?: Flex__<typeof CardWhatAboutUs>;
 };
 
 export interface DefaultContactProps {}
@@ -328,11 +298,10 @@ function PlasmicContact__RenderFunc(props: {
               />
 
               <RevealOnScroll
+                data-plasmic-name={"revealOnScroll"}
+                data-plasmic-override={overrides.revealOnScroll}
                 blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll___5XcVf
-                )}
+                className={classNames("__wab_instance", sty.revealOnScroll)}
                 delay={0}
                 duration={1.6}
                 yOffset={80}
@@ -545,88 +514,6 @@ function PlasmicContact__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
-              <div
-                data-plasmic-name={"headerHeroSection2"}
-                data-plasmic-override={overrides.headerHeroSection2}
-                className={classNames(projectcss.all, sty.headerHeroSection2)}
-              >
-                <div className={classNames(projectcss.all, sty.freeBox__bSbuq)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__hvQeF)}
-                  >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
-                        sty.h1__squZa,
-                        "animate-text"
-                      )}
-                    >
-                      {"IN"}
-                    </h1>
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      sty.freeBox__tCvEx,
-                      "animate-text"
-                    )}
-                  >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
-                        sty.h1__zQ8Zh,
-                        ``
-                      )}
-                    >
-                      {"H"}
-                    </h1>
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
-                        sty.h1__sp0O
-                      )}
-                    >
-                      {"S"}
-                    </h1>
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
-                        sty.h1__rXq1O
-                      )}
-                    >
-                      {"V"}
-                    </h1>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__dhM5H)}
-                  >
-                    <h1
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
-                        sty.h1__gCxk9,
-                        "animate-text"
-                      )}
-                    >
-                      {"FO"}
-                    </h1>
-                  </div>
-                </div>
-              </div>
               <div className={classNames(projectcss.all, sty.freeBox__qpE4K)}>
                 <LineBg
                   className={classNames("__wab_instance", sty.lineBg__eeRn8)}
@@ -1026,840 +913,6 @@ function PlasmicContact__RenderFunc(props: {
                   </div>
                 </div>
               </div>
-              <RevealWidthOnScroll
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealWidthOnScroll__dtz4E
-                )}
-                delay={0}
-                duration={1.5}
-              >
-                <section
-                  className={classNames(projectcss.all, sty.section__a0Bkp)}
-                />
-              </RevealWidthOnScroll>
-              <AnimatedLineOnScroll
-                className={classNames(
-                  "__wab_instance",
-                  sty.animatedLineOnScroll___0Rmnz
-                )}
-                color={"#000000"}
-                delay={0}
-                duration={0.8}
-              />
-
-              <RevealWidthOnScroll
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealWidthOnScroll__x5ZNw
-                )}
-                delay={0}
-                duration={1.5}
-              >
-                <section
-                  className={classNames(projectcss.all, sty.section__kLa6R)}
-                />
-              </RevealWidthOnScroll>
-              <RevealOnScroll
-                blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll__maevC
-                )}
-                delay={0}
-                duration={0.8}
-                yOffset={50}
-              >
-                <div
-                  data-plasmic-name={"sectionCards6"}
-                  data-plasmic-override={overrides.sectionCards6}
-                  className={classNames(projectcss.all, sty.sectionCards6)}
-                >
-                  <div
-                    data-plasmic-name={"heading4"}
-                    data-plasmic-override={overrides.heading4}
-                    className={classNames(projectcss.all, sty.heading4)}
-                  >
-                    <div
-                      data-plasmic-name={
-                        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3"
-                      }
-                      data-plasmic-override={
-                        overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3
-                      }
-                      className={classNames(
-                        projectcss.all,
-                        sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3
-                      )}
-                    >
-                      <div
-                        data-plasmic-name={
-                          "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
-                        }
-                        data-plasmic-override={
-                          overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4
-                        }
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4
-                        )}
-                      >
-                        {"[EDUCATION]"}
-                      </div>
-                    </div>
-                    <div
-                      data-plasmic-name={"eXpertise2"}
-                      data-plasmic-override={overrides.eXpertise2}
-                      className={classNames(projectcss.all, sty.eXpertise2)}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__eZMt
-                        )}
-                      >
-                        {"my journey"}
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__yhApk)}
-                    >
-                      <div
-                        data-plasmic-name={"an2"}
-                        data-plasmic-override={overrides.an2}
-                        className={classNames(projectcss.all, sty.an2)}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__tg5Wc
-                          )}
-                        >
-                          {"until"}
-                        </div>
-                      </div>
-                      <div
-                        data-plasmic-name={"skills2"}
-                        data-plasmic-override={overrides.skills2}
-                        className={classNames(projectcss.all, sty.skills2)}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__yrIwd
-                          )}
-                        >
-                          {"TODAY"}
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__ohT6F)}
-                    >
-                      <div
-                        data-plasmic-name={
-                          "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3"
-                        }
-                        data-plasmic-override={
-                          overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3
-                        }
-                        className={classNames(
-                          projectcss.all,
-                          sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3
-                        )}
-                      >
-                        <div
-                          data-plasmic-name={
-                            "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
-                          }
-                          data-plasmic-override={
-                            overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4
-                          )}
-                        >
-                          {"Try to learn everyday"}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    data-plasmic-name={"container31"}
-                    data-plasmic-override={overrides.container31}
-                    className={classNames(projectcss.all, sty.container31)}
-                  >
-                    <div
-                      data-plasmic-name={"subContainer2"}
-                      data-plasmic-override={overrides.subContainer2}
-                      className={classNames(projectcss.all, sty.subContainer2)}
-                    >
-                      <div
-                        data-plasmic-name={"left4"}
-                        data-plasmic-override={overrides.left4}
-                        className={classNames(projectcss.all, sty.left4)}
-                      >
-                        <div
-                          data-plasmic-name={"container7"}
-                          data-plasmic-override={overrides.container7}
-                          className={classNames(projectcss.all, sty.container7)}
-                        >
-                          <RevealOnScroll
-                            blurAmount={5}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealOnScroll___6DdS
-                            )}
-                            delay={0}
-                            duration={1.3}
-                            yOffset={100}
-                          >
-                            <div
-                              data-plasmic-name={"_20"}
-                              data-plasmic-override={overrides._20}
-                              className={classNames(projectcss.all, sty._20)}
-                            >
-                              <div
-                                data-plasmic-name={"_13"}
-                                data-plasmic-override={overrides._13}
-                                className={classNames(projectcss.all, sty._13)}
-                              >
-                                <PlasmicImg__
-                                  alt={""}
-                                  className={classNames(sty.img__zl1Cd)}
-                                  displayHeight={"50px"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"50px"}
-                                  loading={"lazy"}
-                                  src={{
-                                    src: "/plasmic/son_vo/images/b0JTHcNdveEj3EGs6T0JbufJGdQAvif.avif",
-                                    fullWidth: 220,
-                                    fullHeight: 220,
-                                    aspectRatio: undefined
-                                  }}
-                                />
-
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.freeBox__fKndO
-                                  )}
-                                >
-                                  <HackerText
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.hackerText__zAnHp
-                                    )}
-                                    defaultColor={"#FFFFFFCC"}
-                                    hoverColor={
-                                      true
-                                        ? "var(--antd-colorWarning)"
-                                        : undefined
-                                    }
-                                    text={"Master of Printing technology"}
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text___2CNkQ
-                                )}
-                              >
-                                {
-                                  "Ho Chi Minh City University of Technology and Education\r\n\r\n2016 \u2014 2020"
-                                }
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__kOco7
-                                )}
-                              >
-                                {
-                                  "Acquired fundamental graphic design skills. Gained basic knowledge of design in general.\r"
-                                }
-                              </div>
-                            </div>
-                          </RevealOnScroll>
-                          <RevealWidthOnScroll
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealWidthOnScroll__tbrTn
-                            )}
-                            delay={0}
-                            duration={1.5}
-                          >
-                            <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section___7BuHy
-                              )}
-                            />
-                          </RevealWidthOnScroll>
-                          <RevealOnScroll
-                            blurAmount={5}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealOnScroll__tmea8
-                            )}
-                            delay={0}
-                            duration={1.3}
-                            yOffset={100}
-                          >
-                            <div
-                              data-plasmic-name={"_21"}
-                              data-plasmic-override={overrides._21}
-                              className={classNames(projectcss.all, sty._21)}
-                            >
-                              <div
-                                data-plasmic-name={"_14"}
-                                data-plasmic-override={overrides._14}
-                                className={classNames(projectcss.all, sty._14)}
-                              >
-                                <PlasmicImg__
-                                  alt={""}
-                                  className={classNames(sty.img__jpU16)}
-                                  displayHeight={"50px"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"50px"}
-                                  loading={"lazy"}
-                                  src={{
-                                    src: "/plasmic/son_vo/images/keyframeAvif.avif",
-                                    fullWidth: 220,
-                                    fullHeight: 220,
-                                    aspectRatio: undefined
-                                  }}
-                                />
-
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.freeBox__gsOCn
-                                  )}
-                                >
-                                  <HackerText
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.hackerText__j5Azs
-                                    )}
-                                    defaultColor={"#FFFFFFCC"}
-                                    hoverColor={
-                                      true
-                                        ? "var(--antd-colorWarning)"
-                                        : undefined
-                                    }
-                                    text={"UI/UX App Foundation "}
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__lBSdQ
-                                )}
-                              >
-                                {"Keyframes\n2020 - 2021"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__lPzK3
-                                )}
-                              >
-                                {
-                                  "I specialize in end-to-end UX/UI Product Design, from concept to final Web or Mobile App. Proficient in Figma, I create developer-friendly UI designs and interactive prototypes.\r"
-                                }
-                              </div>
-                            </div>
-                          </RevealOnScroll>
-                          <RevealWidthOnScroll
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealWidthOnScroll__nApw0
-                            )}
-                            delay={0}
-                            duration={1.5}
-                          >
-                            <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section__mhuiq
-                              )}
-                            />
-                          </RevealWidthOnScroll>
-                          <RevealOnScroll
-                            blurAmount={5}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealOnScroll__fA9Js
-                            )}
-                            delay={0}
-                            duration={1.3}
-                            yOffset={100}
-                          >
-                            <div
-                              data-plasmic-name={"_22"}
-                              data-plasmic-override={overrides._22}
-                              className={classNames(projectcss.all, sty._22)}
-                            >
-                              <div
-                                data-plasmic-name={"_15"}
-                                data-plasmic-override={overrides._15}
-                                className={classNames(projectcss.all, sty._15)}
-                              >
-                                <PlasmicImg__
-                                  alt={""}
-                                  className={classNames(sty.img__ij4Da)}
-                                  displayHeight={"50px"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"50px"}
-                                  loading={"lazy"}
-                                  src={{
-                                    src: "/plasmic/son_vo/images/interationDesignAvif.avif",
-                                    fullWidth: 220,
-                                    fullHeight: 221,
-                                    aspectRatio: undefined
-                                  }}
-                                />
-
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.freeBox__czdIk
-                                  )}
-                                >
-                                  <HackerText
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.hackerText__a0Ch7
-                                    )}
-                                    defaultColor={"#FFFFFFCC"}
-                                    hoverColor={
-                                      true
-                                        ? "var(--antd-colorWarning)"
-                                        : undefined
-                                    }
-                                    text={"Interaction Design"}
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__ndoPk
-                                )}
-                              >
-                                {"[ 2023 \u2014 2025\r ]"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__m0CN
-                                )}
-                              >
-                                {
-                                  "[ User Experience: The Beginner's Guide\r\n[ Design Thinking: The Ultimate Guide\r\n[ Journey Mapping\r\n[ Data-Driven Design: Quantitative Research for UX\r\n[ Design for the 21st Century with Don Norman\r\n[ Design for Thought and Emotion\r\n[ Agile Methods for UX Design\r\n[ Mobile UI Design \r\n[ Mobile UX Strategy: How to Build Successful Products"
-                                }
-                              </div>
-                            </div>
-                          </RevealOnScroll>
-                          <RevealWidthOnScroll
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealWidthOnScroll___9Gx1Z
-                            )}
-                            delay={0}
-                            duration={1.5}
-                          >
-                            <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section___2G48L
-                              )}
-                            />
-                          </RevealWidthOnScroll>
-                          <RevealOnScroll
-                            blurAmount={5}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealOnScroll__sXgir
-                            )}
-                            delay={0}
-                            duration={1.3}
-                            yOffset={100}
-                          >
-                            <div
-                              data-plasmic-name={"_23"}
-                              data-plasmic-override={overrides._23}
-                              className={classNames(projectcss.all, sty._23)}
-                            >
-                              <div
-                                data-plasmic-name={"_16"}
-                                data-plasmic-override={overrides._16}
-                                className={classNames(projectcss.all, sty._16)}
-                              >
-                                <PlasmicImg__
-                                  alt={""}
-                                  className={classNames(sty.img__fpyJb)}
-                                  displayHeight={"50px"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"50px"}
-                                  loading={"lazy"}
-                                  src={{
-                                    src: "/plasmic/son_vo/images/vsBPhK6Mh8DdlifpJuu7VDEw6I8Avif.avif",
-                                    fullWidth: 220,
-                                    fullHeight: 228,
-                                    aspectRatio: undefined
-                                  }}
-                                />
-
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.freeBox__xjoWx
-                                  )}
-                                >
-                                  <HackerText
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.hackerText__lXwgp
-                                    )}
-                                    defaultColor={"#FFFFFFCC"}
-                                    hoverColor={
-                                      true
-                                        ? "var(--antd-colorWarning)"
-                                        : undefined
-                                    }
-                                    text={"TOEIC"}
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__qwGw9
-                                )}
-                              >
-                                {"[ 630/990 - 2020 ]"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__ebPyr
-                                )}
-                              >
-                                {
-                                  "[ Acquired fundamental graphic design skills. Gained basic knowledge of design in general.\r"
-                                }
-                              </div>
-                            </div>
-                          </RevealOnScroll>
-                          <RevealWidthOnScroll
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealWidthOnScroll__cUs
-                            )}
-                            delay={0}
-                            duration={1.5}
-                          >
-                            <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section__zJp1T
-                              )}
-                            />
-                          </RevealWidthOnScroll>
-                          <RevealOnScroll
-                            blurAmount={5}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealOnScroll__kOog
-                            )}
-                            delay={0}
-                            duration={1.3}
-                            yOffset={100}
-                          >
-                            <div
-                              data-plasmic-name={"_24"}
-                              data-plasmic-override={overrides._24}
-                              className={classNames(projectcss.all, sty._24)}
-                            >
-                              <div
-                                data-plasmic-name={"_17"}
-                                data-plasmic-override={overrides._17}
-                                className={classNames(projectcss.all, sty._17)}
-                              >
-                                <PlasmicImg__
-                                  alt={""}
-                                  className={classNames(sty.img__webWe)}
-                                  displayHeight={"50px"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"50px"}
-                                  loading={"lazy"}
-                                  src={{
-                                    src: "/plasmic/son_vo/images/udemyAvif.avif",
-                                    fullWidth: 220,
-                                    fullHeight: 220,
-                                    aspectRatio: undefined
-                                  }}
-                                />
-
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.freeBox__xcPd9
-                                  )}
-                                >
-                                  <HackerText
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.hackerText__kv3T0
-                                    )}
-                                    defaultColor={"#FFFFFFCC"}
-                                    hoverColor={
-                                      true
-                                        ? "var(--antd-colorWarning)"
-                                        : undefined
-                                    }
-                                    text={"UDEMY"}
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__znQjk
-                                )}
-                              >
-                                {"[ 2023 - 2024 ]"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__pcCsc
-                                )}
-                              >
-                                {
-                                  "[ User Experience Design Fundamentals\r\n[ Design Thinking: The Ultimate Guide\r\n[ Journey Mapping\r\n[ Data-Driven Design: Quantitative Research for UX"
-                                }
-                              </div>
-                            </div>
-                          </RevealOnScroll>
-                          <RevealWidthOnScroll
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealWidthOnScroll___6H58
-                            )}
-                            delay={0}
-                            duration={1.5}
-                          >
-                            <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section__fuV7
-                              )}
-                            />
-                          </RevealWidthOnScroll>
-                          <RevealOnScroll
-                            blurAmount={5}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealOnScroll__ujKo2
-                            )}
-                            delay={0}
-                            duration={1.3}
-                            yOffset={100}
-                          >
-                            <div
-                              data-plasmic-name={"_25"}
-                              data-plasmic-override={overrides._25}
-                              className={classNames(projectcss.all, sty._25)}
-                            >
-                              <div
-                                data-plasmic-name={"_18"}
-                                data-plasmic-override={overrides._18}
-                                className={classNames(projectcss.all, sty._18)}
-                              >
-                                <PlasmicImg__
-                                  alt={""}
-                                  className={classNames(sty.img__paT11)}
-                                  displayHeight={"50px"}
-                                  displayMaxHeight={"none"}
-                                  displayMaxWidth={"100%"}
-                                  displayMinHeight={"0"}
-                                  displayMinWidth={"0"}
-                                  displayWidth={"50px"}
-                                  loading={"lazy"}
-                                  src={{
-                                    src: "/plasmic/son_vo/images/courseraAvif.avif",
-                                    fullWidth: 220,
-                                    fullHeight: 220,
-                                    aspectRatio: undefined
-                                  }}
-                                />
-
-                                <div
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.freeBox__l2SRz
-                                  )}
-                                >
-                                  <HackerText
-                                    className={classNames(
-                                      "__wab_instance",
-                                      sty.hackerText__xcu4O
-                                    )}
-                                    defaultColor={"#FFFFFFCC"}
-                                    hoverColor={
-                                      true
-                                        ? "var(--antd-colorWarning)"
-                                        : undefined
-                                    }
-                                    text={"COURSERA"}
-                                  />
-                                </div>
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__cNWu
-                                )}
-                              >
-                                {"[ 2022 - 2023 ]"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text___1No2Z
-                                )}
-                              >
-                                {"[ Google UX Design Professional"}
-                              </div>
-                            </div>
-                          </RevealOnScroll>
-                          <RevealWidthOnScroll
-                            className={classNames(
-                              "__wab_instance",
-                              sty.revealWidthOnScroll__hKpxq
-                            )}
-                            delay={0}
-                            duration={1.5}
-                          >
-                            <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section__kyzR
-                              )}
-                            />
-                          </RevealWidthOnScroll>
-                        </div>
-                      </div>
-                    </div>
-                    <CardWhatAboutUs
-                      data-plasmic-name={"cardWhatAboutUs5"}
-                      data-plasmic-override={overrides.cardWhatAboutUs5}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.cardWhatAboutUs5
-                      )}
-                    />
-                  </div>
-                </div>
-              </RevealOnScroll>
-              <AnimatedLineOnScroll
-                className={classNames(
-                  "__wab_instance",
-                  sty.animatedLineOnScroll__tqezn
-                )}
-                color={"#000000"}
-                delay={0}
-                duration={0.8}
-              />
-
-              <RevealOnScroll
-                blurAmount={5}
-                className={classNames(
-                  "__wab_instance",
-                  sty.revealOnScroll__qq482
-                )}
-                delay={0}
-                duration={1.6}
-                yOffset={100}
-              >
-                <Section
-                  className={classNames("__wab_instance", sty.section__mb2Qe)}
-                  size={
-                    hasVariant(globalVariants, "screen", "mobile")
-                      ? "fullContentWidth"
-                      : "fullContentWidth"
-                  }
-                >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__xnMBe)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__c8Wyn)}
-                    >
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
-                          sty.h1__jjVl
-                        )}
-                      >
-                        {"WITH ME\n\r"}
-                      </h1>
-                      <h1
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
-                          sty.h1__e6Dhl
-                        )}
-                      >
-                        {"Write the next story\r\n\r"}
-                      </h1>
-                    </div>
-                  </div>
-                </Section>
-              </RevealOnScroll>
             </div>
             <div className={classNames(projectcss.all, sty.freeBox__ig0C5)}>
               <LineBg
@@ -1879,6 +932,7 @@ const PlasmicDescendants = {
     "scrollToTop",
     "globalLoading",
     "smoothScroll",
+    "revealOnScroll",
     "sectionCards2",
     "left",
     "container4",
@@ -1886,7 +940,6 @@ const PlasmicDescendants = {
     "container5",
     "left3",
     "container6",
-    "headerHeroSection2",
     "scrollDetector",
     "newMenu",
     "tickerHeader",
@@ -1915,38 +968,13 @@ const PlasmicDescendants = {
     "starsContainer",
     "svg",
     "ratingText",
-    "container2",
-    "sectionCards6",
-    "heading4",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4",
-    "eXpertise2",
-    "an2",
-    "skills2",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4",
-    "container31",
-    "subContainer2",
-    "left4",
-    "container7",
-    "_20",
-    "_13",
-    "_21",
-    "_14",
-    "_22",
-    "_15",
-    "_23",
-    "_16",
-    "_24",
-    "_17",
-    "_25",
-    "_18",
-    "cardWhatAboutUs5"
+    "container2"
   ],
   scrollToTop: ["scrollToTop"],
   globalLoading: ["globalLoading"],
   smoothScroll: [
     "smoothScroll",
+    "revealOnScroll",
     "sectionCards2",
     "left",
     "container4",
@@ -1954,7 +982,6 @@ const PlasmicDescendants = {
     "container5",
     "left3",
     "container6",
-    "headerHeroSection2",
     "scrollDetector",
     "newMenu",
     "tickerHeader",
@@ -1983,33 +1010,17 @@ const PlasmicDescendants = {
     "starsContainer",
     "svg",
     "ratingText",
-    "container2",
-    "sectionCards6",
-    "heading4",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4",
-    "eXpertise2",
-    "an2",
-    "skills2",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4",
-    "container31",
-    "subContainer2",
-    "left4",
-    "container7",
-    "_20",
-    "_13",
-    "_21",
-    "_14",
-    "_22",
-    "_15",
-    "_23",
-    "_16",
-    "_24",
-    "_17",
-    "_25",
-    "_18",
-    "cardWhatAboutUs5"
+    "container2"
+  ],
+  revealOnScroll: [
+    "revealOnScroll",
+    "sectionCards2",
+    "left",
+    "container4",
+    "left2",
+    "container5",
+    "left3",
+    "container6"
   ],
   sectionCards2: [
     "sectionCards2",
@@ -2026,7 +1037,6 @@ const PlasmicDescendants = {
   container5: ["container5"],
   left3: ["left3", "container6"],
   container6: ["container6"],
-  headerHeroSection2: ["headerHeroSection2"],
   scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
   tickerHeader: ["tickerHeader"],
@@ -2148,146 +1158,7 @@ const PlasmicDescendants = {
   starsContainer: ["starsContainer", "svg"],
   svg: ["svg"],
   ratingText: ["ratingText", "container2"],
-  container2: ["container2"],
-  sectionCards6: [
-    "sectionCards6",
-    "heading4",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4",
-    "eXpertise2",
-    "an2",
-    "skills2",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4",
-    "container31",
-    "subContainer2",
-    "left4",
-    "container7",
-    "_20",
-    "_13",
-    "_21",
-    "_14",
-    "_22",
-    "_15",
-    "_23",
-    "_16",
-    "_24",
-    "_17",
-    "_25",
-    "_18",
-    "cardWhatAboutUs5"
-  ],
-  heading4: [
-    "heading4",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4",
-    "eXpertise2",
-    "an2",
-    "skills2",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
-  ],
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3:
-    [
-      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
-      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
-    ],
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4:
-    [
-      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
-    ],
-  eXpertise2: ["eXpertise2"],
-  an2: ["an2"],
-  skills2: ["skills2"],
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3:
-    [
-      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
-      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
-    ],
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4:
-    [
-      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
-    ],
-  container31: [
-    "container31",
-    "subContainer2",
-    "left4",
-    "container7",
-    "_20",
-    "_13",
-    "_21",
-    "_14",
-    "_22",
-    "_15",
-    "_23",
-    "_16",
-    "_24",
-    "_17",
-    "_25",
-    "_18",
-    "cardWhatAboutUs5"
-  ],
-  subContainer2: [
-    "subContainer2",
-    "left4",
-    "container7",
-    "_20",
-    "_13",
-    "_21",
-    "_14",
-    "_22",
-    "_15",
-    "_23",
-    "_16",
-    "_24",
-    "_17",
-    "_25",
-    "_18"
-  ],
-  left4: [
-    "left4",
-    "container7",
-    "_20",
-    "_13",
-    "_21",
-    "_14",
-    "_22",
-    "_15",
-    "_23",
-    "_16",
-    "_24",
-    "_17",
-    "_25",
-    "_18"
-  ],
-  container7: [
-    "container7",
-    "_20",
-    "_13",
-    "_21",
-    "_14",
-    "_22",
-    "_15",
-    "_23",
-    "_16",
-    "_24",
-    "_17",
-    "_25",
-    "_18"
-  ],
-  _20: ["_20", "_13"],
-  _13: ["_13"],
-  _21: ["_21", "_14"],
-  _14: ["_14"],
-  _22: ["_22", "_15"],
-  _15: ["_15"],
-  _23: ["_23", "_16"],
-  _16: ["_16"],
-  _24: ["_24", "_17"],
-  _17: ["_17"],
-  _25: ["_25", "_18"],
-  _18: ["_18"],
-  cardWhatAboutUs5: ["cardWhatAboutUs5"]
+  container2: ["container2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -2297,6 +1168,7 @@ type NodeDefaultElementType = {
   scrollToTop: typeof ScrollToTop;
   globalLoading: typeof GlobalLoading;
   smoothScroll: typeof SmoothScroll;
+  revealOnScroll: typeof RevealOnScroll;
   sectionCards2: "div";
   left: "div";
   container4: "div";
@@ -2304,7 +1176,6 @@ type NodeDefaultElementType = {
   container5: "div";
   left3: "div";
   container6: "div";
-  headerHeroSection2: "div";
   scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
   tickerHeader: typeof TickerHeader;
@@ -2334,32 +1205,6 @@ type NodeDefaultElementType = {
   svg: "div";
   ratingText: "div";
   container2: "div";
-  sectionCards6: "div";
-  heading4: "div";
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3: "div";
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4: "div";
-  eXpertise2: "div";
-  an2: "div";
-  skills2: "div";
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3: "div";
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4: "div";
-  container31: "div";
-  subContainer2: "div";
-  left4: "div";
-  container7: "div";
-  _20: "div";
-  _13: "div";
-  _21: "div";
-  _14: "div";
-  _22: "div";
-  _15: "div";
-  _23: "div";
-  _16: "div";
-  _24: "div";
-  _17: "div";
-  _25: "div";
-  _18: "div";
-  cardWhatAboutUs5: typeof CardWhatAboutUs;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2452,6 +1297,7 @@ export const PlasmicContact = Object.assign(
     scrollToTop: makeNodeComponent("scrollToTop"),
     globalLoading: makeNodeComponent("globalLoading"),
     smoothScroll: makeNodeComponent("smoothScroll"),
+    revealOnScroll: makeNodeComponent("revealOnScroll"),
     sectionCards2: makeNodeComponent("sectionCards2"),
     left: makeNodeComponent("left"),
     container4: makeNodeComponent("container4"),
@@ -2459,7 +1305,6 @@ export const PlasmicContact = Object.assign(
     container5: makeNodeComponent("container5"),
     left3: makeNodeComponent("left3"),
     container6: makeNodeComponent("container6"),
-    headerHeroSection2: makeNodeComponent("headerHeroSection2"),
     scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
     tickerHeader: makeNodeComponent("tickerHeader"),
@@ -2499,44 +1344,6 @@ export const PlasmicContact = Object.assign(
     svg: makeNodeComponent("svg"),
     ratingText: makeNodeComponent("ratingText"),
     container2: makeNodeComponent("container2"),
-    sectionCards6: makeNodeComponent("sectionCards6"),
-    heading4: makeNodeComponent("heading4"),
-    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3:
-      makeNodeComponent(
-        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3"
-      ),
-    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4:
-      makeNodeComponent(
-        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
-      ),
-    eXpertise2: makeNodeComponent("eXpertise2"),
-    an2: makeNodeComponent("an2"),
-    skills2: makeNodeComponent("skills2"),
-    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3:
-      makeNodeComponent(
-        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3"
-      ),
-    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4:
-      makeNodeComponent(
-        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
-      ),
-    container31: makeNodeComponent("container31"),
-    subContainer2: makeNodeComponent("subContainer2"),
-    left4: makeNodeComponent("left4"),
-    container7: makeNodeComponent("container7"),
-    _20: makeNodeComponent("_20"),
-    _13: makeNodeComponent("_13"),
-    _21: makeNodeComponent("_21"),
-    _14: makeNodeComponent("_14"),
-    _22: makeNodeComponent("_22"),
-    _15: makeNodeComponent("_15"),
-    _23: makeNodeComponent("_23"),
-    _16: makeNodeComponent("_16"),
-    _24: makeNodeComponent("_24"),
-    _17: makeNodeComponent("_17"),
-    _25: makeNodeComponent("_25"),
-    _18: makeNodeComponent("_18"),
-    cardWhatAboutUs5: makeNodeComponent("cardWhatAboutUs5"),
 
     // Metadata about props expected for PlasmicContact
     internalVariantProps: PlasmicContact__VariantProps,
