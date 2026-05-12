@@ -73,6 +73,7 @@ import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { RevealWidthOnScroll } from "../../RevealWidthOnScroll"; // plasmic-import: OrcqYiNWCo3G/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
+import { AnimatedLineOnScroll } from "../../AnimatedLineOnScroll"; // plasmic-import: Al7stYh33MDE/codeComponent
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
 import { CachedAirtable } from "../../CachedAirtable"; // plasmic-import: R8IeYWvKto_c/codeComponent
 import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
@@ -1423,6 +1424,16 @@ function PlasmicMyJourney__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLineOnScroll__f4L0
+                )}
+                color={"#000000"}
+                delay={0}
+                duration={0.8}
+              />
+
               <RevealWidthOnScroll
                 className={classNames(
                   "__wab_instance",
@@ -2178,6 +2189,16 @@ function PlasmicMyJourney__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLineOnScroll__eacql
+                )}
+                color={"#000000"}
+                delay={0}
+                duration={0.8}
+              />
+
               <RevealOnScroll
                 blurAmount={5}
                 className={classNames(

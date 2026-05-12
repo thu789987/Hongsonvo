@@ -71,6 +71,7 @@ import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
 import { ScrollPlayVideo } from "../../ScrollPlayVideo"; // plasmic-import: nqEdA202CaaA/codeComponent
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
+import { AnimatedLineOnScroll } from "../../AnimatedLineOnScroll"; // plasmic-import: Al7stYh33MDE/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
 import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
 import { CachedAirtable } from "../../CachedAirtable"; // plasmic-import: R8IeYWvKto_c/codeComponent
@@ -305,9 +306,13 @@ function PlasmicHomepage__RenderFunc(props: {
           >
             <div className={classNames(projectcss.all, sty.freeBox__iqKDa)}>
               <div className={classNames(projectcss.all, sty.freeBox__iTmf)}>
-                <LineBg
-                  className={classNames("__wab_instance", sty.lineBg__zFsLc)}
-                />
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___2Fdty)}
+                >
+                  <LineBg
+                    className={classNames("__wab_instance", sty.lineBg__zFsLc)}
+                  />
+                </div>
               </div>
               <ScrollContext
                 data-plasmic-name={"scrollContext"}
@@ -666,6 +671,16 @@ function PlasmicHomepage__RenderFunc(props: {
                   </RevealOnScroll>
                 </div>
               </div>
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLineOnScroll__n07Vb
+                )}
+                color={"#000000"}
+                delay={0}
+                duration={0.8}
+              />
+
               <div
                 data-plasmic-name={"sectionCards2"}
                 data-plasmic-override={overrides.sectionCards2}
@@ -1213,6 +1228,16 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
                 </RevealOnScroll>
               </div>
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLineOnScroll__xtCza
+                )}
+                color={"#000000"}
+                delay={0}
+                duration={0.8}
+              />
+
               <RevealOnScroll
                 blurAmount={5}
                 className={classNames(
@@ -1781,6 +1806,16 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLineOnScroll__tkm1P
+                )}
+                color={"#000000"}
+                delay={0}
+                duration={0.8}
+              />
+
               <div
                 data-plasmic-name={"sectionCards3"}
                 data-plasmic-override={overrides.sectionCards3}

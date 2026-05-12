@@ -67,6 +67,8 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
+import ScrollToTop from "../../ScrollToTop"; // plasmic-import: amMlHTsYYfNZ/codeComponent
+import GlobalLoading from "../../GlobalLoading"; // plasmic-import: Nh0NyKxfMgZY/codeComponent
 import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcWFs/codeComponent
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
@@ -74,14 +76,16 @@ import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
 import TickerHeader from "../../TickerHeader"; // plasmic-import: sVhN06_u5KJ1/component
 import Button from "../../Button"; // plasmic-import: VLjK03XBepNB/component
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
-import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
-import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import { RevealWidthOnScroll } from "../../RevealWidthOnScroll"; // plasmic-import: OrcqYiNWCo3G/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
+import { AnimatedLineOnScroll } from "../../AnimatedLineOnScroll"; // plasmic-import: Al7stYh33MDE/codeComponent
 import CardWhatAboutUs from "../../CardWhatAboutUs"; // plasmic-import: fX5hEjjykD_1/component
-import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
+import { CachedAirtable } from "../../CachedAirtable"; // plasmic-import: R8IeYWvKto_c/codeComponent
+import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
 import { HoverLogoCard } from "../../HoverLogoCard"; // plasmic-import: 8gew1WdMY0jF/codeComponent
 import CardExperience from "../../CardExperience"; // plasmic-import: dkKX5oUPUtTr/component
+import { PatternGrid } from "../../PatternGrid"; // plasmic-import: vXuOXgE7vClI/codeComponent
+import TemplateCard from "../../TemplateCard"; // plasmic-import: u1Kyfwr4MSZG/component
 import Section from "../../Section"; // plasmic-import: rBKpW-lDXfWK/component
 import FotterMain from "../../FotterMain"; // plasmic-import: pJp_GqmWQ71r/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
@@ -146,6 +150,7 @@ export const PlasmicMyServices__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicMyServices__OverridesType = {
   root?: Flex__<"div">;
+  scrollToTop?: Flex__<typeof ScrollToTop>;
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollDetector?: Flex__<typeof ScrollDetector>;
   newMenu?: Flex__<typeof NewMenu>;
@@ -178,8 +183,6 @@ export type PlasmicMyServices__OverridesType = {
   container2?: Flex__<"div">;
   headerHeroSection2?: Flex__<"div">;
   headerHeroSection3?: Flex__<"div">;
-  infiniteScroll?: Flex__<typeof InfiniteScroll>;
-  templateCard?: Flex__<typeof TemplateCard>;
   sectionCards2?: Flex__<"div">;
   left?: Flex__<"div">;
   title2?: Flex__<"div">;
@@ -220,20 +223,22 @@ export type PlasmicMyServices__OverridesType = {
   _25?: Flex__<"div">;
   _18?: Flex__<"div">;
   cardWhatAboutUs5?: Flex__<typeof CardWhatAboutUs>;
-  sectionCards7?: Flex__<"div">;
-  heading5?: Flex__<"div">;
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5?: Flex__<"div">;
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6?: Flex__<"div">;
-  eXpertise3?: Flex__<"div">;
-  an3?: Flex__<"div">;
-  skills3?: Flex__<"div">;
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5?: Flex__<"div">;
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6?: Flex__<"div">;
-  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3?: Flex__<"div">;
-  container32?: Flex__<"div">;
-  subContainer3?: Flex__<"div">;
-  gridDistortion?: Flex__<typeof GridDistortion>;
-  cardWhatAboutUs6?: Flex__<typeof CardWhatAboutUs>;
+  sectionCards8?: Flex__<"div">;
+  heading6?: Flex__<"div">;
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7?: Flex__<"div">;
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8?: Flex__<"div">;
+  eXpertise4?: Flex__<"div">;
+  an4?: Flex__<"div">;
+  skills4?: Flex__<"div">;
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7?: Flex__<"div">;
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8?: Flex__<"div">;
+  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2?: Flex__<"div">;
+  container33?: Flex__<"div">;
+  subContainer4?: Flex__<"div">;
+  infiniteScroll?: Flex__<typeof InfiniteScroll>;
+  cardWhatAboutUs7?: Flex__<typeof CardWhatAboutUs>;
+  patternGrid?: Flex__<typeof PatternGrid>;
+  templateCard9?: Flex__<typeof TemplateCard>;
 };
 
 export interface DefaultMyServicesProps {}
@@ -344,6 +349,18 @@ function PlasmicMyServices__RenderFunc(props: {
             sty.root
           )}
         >
+          <ScrollToTop
+            data-plasmic-name={"scrollToTop"}
+            data-plasmic-override={overrides.scrollToTop}
+            className={classNames("__wab_instance", sty.scrollToTop)}
+          />
+
+          <GlobalLoading
+            className={classNames("__wab_instance", sty.globalLoading__iuaim)}
+            durationMs={3000}
+            textSize={"160px"}
+          />
+
           <SmoothScroll
             data-plasmic-name={"smoothScroll"}
             data-plasmic-override={overrides.smoothScroll}
@@ -351,10 +368,10 @@ function PlasmicMyServices__RenderFunc(props: {
             duration={1.2}
             wheelMultiplier={1}
           >
-            <div className={classNames(projectcss.all, sty.freeBox__xwK)}>
-              <div className={classNames(projectcss.all, sty.freeBox__dj7Bo)}>
+            <div className={classNames(projectcss.all, sty.freeBox__nqF1I)}>
+              <div className={classNames(projectcss.all, sty.freeBox__qpE4K)}>
                 <LineBg
-                  className={classNames("__wab_instance", sty.lineBg__ceBiY)}
+                  className={classNames("__wab_instance", sty.lineBg__eeRn8)}
                 />
               </div>
               <ScrollDetector
@@ -368,7 +385,7 @@ function PlasmicMyServices__RenderFunc(props: {
                     <NewMenu
                       data-plasmic-name={"newMenu"}
                       data-plasmic-override={overrides.newMenu}
-                      activePage={"contact"}
+                      activePage={"myJourney"}
                       className={classNames("__wab_instance", sty.newMenu)}
                       headerTitle={"[ 2026 ]"}
                       scrolledState={(() => {
@@ -399,12 +416,12 @@ function PlasmicMyServices__RenderFunc(props: {
                 data-plasmic-override={overrides.headerHeroSection}
                 className={classNames(projectcss.all, sty.headerHeroSection)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__jYJf)}>
+                <div className={classNames(projectcss.all, sty.freeBox__wRiMe)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__xanen)}
+                    className={classNames(projectcss.all, sty.freeBox__vg1QI)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__sRmo)}
+                      className={classNames(projectcss.all, sty.freeBox__kVg44)}
                     >
                       <h1
                         className={classNames(
@@ -412,7 +429,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           projectcss.h1,
                           projectcss.h1__bLa1s,
                           projectcss.__wab_text,
-                          sty.h1__m0J8S
+                          sty.h1___3RrW
                         )}
                       >
                         {"You don't need\r"}
@@ -424,7 +441,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         projectcss.h1,
                         projectcss.h1__bLa1s,
                         projectcss.__wab_text,
-                        sty.h1__wEnLr
+                        sty.h1__jj9H7
                       )}
                     >
                       {"You need a powerful\r"}
@@ -435,19 +452,19 @@ function PlasmicMyServices__RenderFunc(props: {
                         projectcss.h1,
                         projectcss.h1__bLa1s,
                         projectcss.__wab_text,
-                        sty.h1__ydl6D
+                        sty.h1___5HQjd
                       )}
                     >
                       {"\rwebsite template."}
                     </h1>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__g0Z40)}
+                      className={classNames(projectcss.all, sty.freeBox___34Np)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__hU3F
+                          sty.text__iZsAj
                         )}
                       >
                         {
@@ -620,7 +637,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                     className={classNames(
                                       projectcss.all,
                                       projectcss.__wab_text,
-                                      sty.text__eOzDm
+                                      sty.text__lXsnv
                                     )}
                                   >
                                     {"4.9 / 5"}
@@ -645,7 +662,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 >
                                   <PlasmicImg__
                                     alt={""}
-                                    className={classNames(sty.img__ie9Yy)}
+                                    className={classNames(sty.img__xk1Qc)}
                                     displayHeight={"10px"}
                                     displayMaxHeight={"none"}
                                     displayMaxWidth={"100%"}
@@ -683,7 +700,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                   className={classNames(
                                     projectcss.all,
                                     projectcss.__wab_text,
-                                    sty.text___0PeaL
+                                    sty.text__m9N7D
                                   )}
                                 >
                                   {"Loved by 5 833+ creators"}
@@ -695,18 +712,18 @@ function PlasmicMyServices__RenderFunc(props: {
                       </div>
                     </div>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__foWk1)}
+                      className={classNames(projectcss.all, sty.freeBox__w19Jl)}
                     >
                       <Button
                         className={classNames(
                           "__wab_instance",
-                          sty.button__pmEsa
+                          sty.button__ek9Yj
                         )}
                         end={
                           <ChevronRightIcon
                             className={classNames(
                               projectcss.all,
-                              sty.svg__oD2Pp
+                              sty.svg__owRs1
                             )}
                             role={"img"}
                           />
@@ -717,7 +734,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text___5XPr
+                              sty.text__fjLvM
                             )}
                           >
                             {"Check Our Templates"}
@@ -730,14 +747,14 @@ function PlasmicMyServices__RenderFunc(props: {
                       <Button
                         className={classNames(
                           "__wab_instance",
-                          sty.button__lomtT
+                          sty.button__laGn3
                         )}
                         label={
                           <div
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__rwGg
+                              sty.text__jPid8
                             )}
                           >
                             {"Check Our Case Study"}
@@ -756,9 +773,9 @@ function PlasmicMyServices__RenderFunc(props: {
                 data-plasmic-override={overrides.headerHeroSection2}
                 className={classNames(projectcss.all, sty.headerHeroSection2)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__f2SKo)}>
+                <div className={classNames(projectcss.all, sty.freeBox__bSbuq)}>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__fAqXc)}
+                    className={classNames(projectcss.all, sty.freeBox__hvQeF)}
                   >
                     <h1
                       className={classNames(
@@ -766,14 +783,19 @@ function PlasmicMyServices__RenderFunc(props: {
                         projectcss.h1,
                         projectcss.h1__bLa1s,
                         projectcss.__wab_text,
-                        sty.h1__wfe
+                        sty.h1__squZa,
+                        "animate-text"
                       )}
                     >
-                      {"SER"}
+                      {"IN"}
                     </h1>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox___5JtI3)}
+                    className={classNames(
+                      projectcss.all,
+                      sty.freeBox__tCvEx,
+                      "animate-text"
+                    )}
                   >
                     <h1
                       className={classNames(
@@ -781,7 +803,8 @@ function PlasmicMyServices__RenderFunc(props: {
                         projectcss.h1,
                         projectcss.h1__bLa1s,
                         projectcss.__wab_text,
-                        sty.h1__r3B3D
+                        sty.h1__zQ8Zh,
+                        ``
                       )}
                     >
                       {"H"}
@@ -792,7 +815,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         projectcss.h1,
                         projectcss.h1__bLa1s,
                         projectcss.__wab_text,
-                        sty.h1___9TpTa
+                        sty.h1__sp0O
                       )}
                     >
                       {"S"}
@@ -803,14 +826,14 @@ function PlasmicMyServices__RenderFunc(props: {
                         projectcss.h1,
                         projectcss.h1__bLa1s,
                         projectcss.__wab_text,
-                        sty.h1__dfbZx
+                        sty.h1__rXq1O
                       )}
                     >
                       {"V"}
                     </h1>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__pjJgg)}
+                    className={classNames(projectcss.all, sty.freeBox__dhM5H)}
                   >
                     <h1
                       className={classNames(
@@ -818,10 +841,11 @@ function PlasmicMyServices__RenderFunc(props: {
                         projectcss.h1,
                         projectcss.h1__bLa1s,
                         projectcss.__wab_text,
-                        sty.h1__ja90G
+                        sty.h1__gCxk9,
+                        "animate-text"
                       )}
                     >
-                      {"VICES"}
+                      {"FO"}
                     </h1>
                   </div>
                 </div>
@@ -835,17 +859,17 @@ function PlasmicMyServices__RenderFunc(props: {
                   blurAmount={5}
                   className={classNames(
                     "__wab_instance",
-                    sty.revealOnScroll__wjRif
+                    sty.revealOnScroll__mWvrq
                   )}
                   delay={0}
                   duration={0.8}
                   yOffset={50}
                 >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__icDd6)}
+                    className={classNames(projectcss.all, sty.freeBox___8GxJf)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__fmmY8)}
+                      className={classNames(projectcss.all, sty.freeBox__okGee)}
                     >
                       <h1
                         className={classNames(
@@ -853,102 +877,73 @@ function PlasmicMyServices__RenderFunc(props: {
                           projectcss.h1,
                           projectcss.h1__bLa1s,
                           projectcss.__wab_text,
-                          sty.h1__ugmRb
+                          sty.h1__jzuMx
                         )}
                       >
-                        {"Building brands, boosting businesses\r"}
+                        {"A SENIOR"}
                       </h1>
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__g2Zr
+                          sty.text__cfprk
                         )}
                       >
                         {"A SENIOR UI/UX"}
                       </div>
                     </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___1LFwM
+                      )}
+                    >
+                      <h1
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h1,
+                          projectcss.h1__bLa1s,
+                          projectcss.__wab_text,
+                          sty.h1__cf7U6
+                        )}
+                      >
+                        {"UI/UX DESIGNER"}
+                      </h1>
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__kElkQ)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"50px"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/son_vo/images/untitled1CopySvg3.svg",
+                          fullWidth: 114.28,
+                          fullHeight: 128.11,
+                          aspectRatio: 0.892046
+                        }}
+                      />
+                    </div>
                   </div>
                 </RevealOnScroll>
-                <InfiniteScroll
-                  data-plasmic-name={"infiniteScroll"}
-                  data-plasmic-override={overrides.infiniteScroll}
-                  className={classNames("__wab_instance", sty.infiniteScroll)}
-                  direction={"left"}
-                  gap={20}
-                  pauseOnHover={true}
-                  repeatCount={4}
-                  showFade={true}
-                  speed={200}
-                >
-                  {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-                    (() => {
-                      try {
-                        return $queries.works.data;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return [];
-                        }
-                        throw e;
-                      }
-                    })()
-                  ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                    const currentItem = __plasmic_item_0;
-                    const currentIndex = __plasmic_idx_0;
-                    return (
-                      <RevealOnScroll
-                        blurAmount={5}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.revealOnScroll__rJ3S
-                        )}
-                        delay={(() => {
-                          try {
-                            return 0.5 * $ctx.plasmicIndex;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return 0;
-                            }
-                            throw e;
-                          }
-                        })()}
-                        duration={1.6}
-                        key={currentIndex}
-                        yOffset={50}
-                      >
-                        <TemplateCard
-                          data-plasmic-name={"templateCard"}
-                          data-plasmic-override={overrides.templateCard}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.templateCard
-                          )}
-                        />
-                      </RevealOnScroll>
-                    );
-                  })}
-                </InfiniteScroll>
                 <RevealOnScroll
                   blurAmount={5}
                   className={classNames(
                     "__wab_instance",
-                    sty.revealOnScroll__lmtBk
+                    sty.revealOnScroll__zCHa
                   )}
                   delay={0}
                   duration={1.6}
                   yOffset={80}
                 >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__xWnXr)}
+                    className={classNames(projectcss.all, sty.freeBox__gh2LM)}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__txbxo)}
+                      className={classNames(projectcss.all, sty.freeBox__kTbk2)}
                     >
                       <h1
                         className={classNames(
@@ -956,11 +951,40 @@ function PlasmicMyServices__RenderFunc(props: {
                           projectcss.h1,
                           projectcss.h1__bLa1s,
                           projectcss.__wab_text,
-                          sty.h1__bSm9
+                          sty.h1___56HyZ
                         )}
                       >
-                        {" and redefining possibilities."}
+                        {"6 YEARS EXPERIENCE"}
                       </h1>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__jx9Sl
+                        )}
+                      >
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.h1__bLa1s,
+                            projectcss.__wab_text,
+                            sty.h1__bIgl
+                          )}
+                        >
+                          {"live in "}
+                        </h1>
+                        <h1
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h1,
+                            projectcss.h1__bLa1s,
+                            projectcss.__wab_text,
+                            sty.h1__qOivZ
+                          )}
+                        >
+                          {"HO CHI MINH CITY"}
+                        </h1>
+                      </div>
                     </div>
                   </div>
                 </RevealOnScroll>
@@ -968,20 +992,20 @@ function PlasmicMyServices__RenderFunc(props: {
               <RevealWidthOnScroll
                 className={classNames(
                   "__wab_instance",
-                  sty.revealWidthOnScroll__lsWgJ
+                  sty.revealWidthOnScroll__dtz4E
                 )}
                 delay={0}
                 duration={1.5}
               >
                 <section
-                  className={classNames(projectcss.all, sty.section__uloVf)}
+                  className={classNames(projectcss.all, sty.section__a0Bkp)}
                 />
               </RevealWidthOnScroll>
               <RevealOnScroll
                 blurAmount={5}
                 className={classNames(
                   "__wab_instance",
-                  sty.revealOnScroll__rUeC3
+                  sty.revealOnScroll___5XcVf
                 )}
                 delay={0}
                 duration={1.6}
@@ -1006,7 +1030,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__cqbCs
+                          sty.text__x7Mlk
                         )}
                       >
                         {"ABOUT ME"}
@@ -1021,7 +1045,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__udogg
+                          sty.text__p9XpT
                         )}
                       >
                         {
@@ -1044,7 +1068,7 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__fGj86
+                          sty.text__agiuF
                         )}
                       >
                         {"MY SKILL"}
@@ -1062,7 +1086,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__vadIu)}
+                          className={classNames(sty.img__s5Tfv)}
                           displayHeight={"50px"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1081,13 +1105,13 @@ function PlasmicMyServices__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__z4Gj7
+                            sty.freeBox___0EvjC
                           )}
                         >
                           <HackerText
                             className={classNames(
                               "__wab_instance",
-                              sty.hackerText__db3PB
+                              sty.hackerText__u9Wsv
                             )}
                             defaultColor={"#FFFFFFCC"}
                             hoverColor={
@@ -1100,7 +1124,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__zkLBr
+                              sty.text__kpNop
                             )}
                           >
                             {"Website Builder"}
@@ -1114,7 +1138,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__xuVZc)}
+                          className={classNames(sty.img___7DrNg)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1133,13 +1157,13 @@ function PlasmicMyServices__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox___6IeNi
+                            sty.freeBox__jH9Sg
                           )}
                         >
                           <HackerText
                             className={classNames(
                               "__wab_instance",
-                              sty.hackerText__wyvsX
+                              sty.hackerText__b3CqJ
                             )}
                             defaultColor={"#FFFFFFCC"}
                             hoverColor={
@@ -1152,7 +1176,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__m3XX
+                              sty.text__xNczo
                             )}
                           >
                             {"Website Builder"}
@@ -1166,7 +1190,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__hUsiL)}
+                          className={classNames(sty.img__q7MxA)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1185,13 +1209,13 @@ function PlasmicMyServices__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__dfLEl
+                            sty.freeBox__iw7Qa
                           )}
                         >
                           <HackerText
                             className={classNames(
                               "__wab_instance",
-                              sty.hackerText__urCkJ
+                              sty.hackerText__qSk6O
                             )}
                             defaultColor={"#FFFFFFCC"}
                             hoverColor={
@@ -1204,7 +1228,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__bz9Sg
+                              sty.text___1WyC
                             )}
                           >
                             {"Design Tool"}
@@ -1218,7 +1242,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img___026Us)}
+                          className={classNames(sty.img__mMpTi)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1237,13 +1261,13 @@ function PlasmicMyServices__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__iHdp
+                            sty.freeBox__vrRQe
                           )}
                         >
                           <HackerText
                             className={classNames(
                               "__wab_instance",
-                              sty.hackerText__w035U
+                              sty.hackerText___2SjhN
                             )}
                             defaultColor={"#FFFFFFCC"}
                             hoverColor={
@@ -1256,7 +1280,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__zoFfq
+                              sty.text__ltLqY
                             )}
                           >
                             {"Analyst Tools"}
@@ -1270,7 +1294,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__nmTng)}
+                          className={classNames(sty.img___4U33)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1289,13 +1313,13 @@ function PlasmicMyServices__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__vgr1C
+                            sty.freeBox__tz6QR
                           )}
                         >
                           <HackerText
                             className={classNames(
                               "__wab_instance",
-                              sty.hackerText___8K3U1
+                              sty.hackerText___3HKgh
                             )}
                             defaultColor={"#FFFFFFCC"}
                             hoverColor={
@@ -1308,7 +1332,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__v7OF1
+                              sty.text__q5FJg
                             )}
                           >
                             {"Fonts Design Tool"}
@@ -1322,7 +1346,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img___4AGdD)}
+                          className={classNames(sty.img__bTxZh)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1341,13 +1365,13 @@ function PlasmicMyServices__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__kH64E
+                            sty.freeBox__akxzc
                           )}
                         >
                           <HackerText
                             className={classNames(
                               "__wab_instance",
-                              sty.hackerText__vl9MQ
+                              sty.hackerText___04B8M
                             )}
                             defaultColor={"#FFFFFFCC"}
                             hoverColor={
@@ -1360,7 +1384,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__ucLgg
+                              sty.text__w9Qfg
                             )}
                           >
                             {
@@ -1376,7 +1400,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       >
                         <PlasmicImg__
                           alt={""}
-                          className={classNames(sty.img__vfx7N)}
+                          className={classNames(sty.img__hNbqf)}
                           displayHeight={"auto"}
                           displayMaxHeight={"none"}
                           displayMaxWidth={"100%"}
@@ -1395,13 +1419,13 @@ function PlasmicMyServices__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__fZuLq
+                            sty.freeBox__bq4J7
                           )}
                         >
                           <HackerText
                             className={classNames(
                               "__wab_instance",
-                              sty.hackerText__fRjNv
+                              sty.hackerText__abQme
                             )}
                             defaultColor={"#FFFFFFCC"}
                             hoverColor={
@@ -1414,7 +1438,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__kMpHe
+                              sty.text__a7Wy0
                             )}
                           >
                             {"3D Design Tool"}
@@ -1425,23 +1449,33 @@ function PlasmicMyServices__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLineOnScroll___0Rmnz
+                )}
+                color={"#000000"}
+                delay={0}
+                duration={0.8}
+              />
+
               <RevealWidthOnScroll
                 className={classNames(
                   "__wab_instance",
-                  sty.revealWidthOnScroll__wu2NO
+                  sty.revealWidthOnScroll__x5ZNw
                 )}
                 delay={0}
                 duration={1.5}
               >
                 <section
-                  className={classNames(projectcss.all, sty.section__vwtgb)}
+                  className={classNames(projectcss.all, sty.section__kLa6R)}
                 />
               </RevealWidthOnScroll>
               <RevealOnScroll
                 blurAmount={5}
                 className={classNames(
                   "__wab_instance",
-                  sty.revealOnScroll__p6BiC
+                  sty.revealOnScroll__maevC
                 )}
                 delay={0}
                 duration={0.8}
@@ -1494,14 +1528,14 @@ function PlasmicMyServices__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__bwAuf
+                          sty.text__eZMt
                         )}
                       >
                         {"my journey"}
                       </div>
                     </div>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__kWOui)}
+                      className={classNames(projectcss.all, sty.freeBox__yhApk)}
                     >
                       <div
                         data-plasmic-name={"an2"}
@@ -1512,7 +1546,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__a64Z9
+                            sty.text__tg5Wc
                           )}
                         >
                           {"until"}
@@ -1527,7 +1561,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__op3Bn
+                            sty.text__yrIwd
                           )}
                         >
                           {"TODAY"}
@@ -1535,7 +1569,7 @@ function PlasmicMyServices__RenderFunc(props: {
                       </div>
                     </div>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__pHaI3)}
+                      className={classNames(projectcss.all, sty.freeBox__ohT6F)}
                     >
                       <div
                         data-plasmic-name={
@@ -1591,7 +1625,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             blurAmount={5}
                             className={classNames(
                               "__wab_instance",
-                              sty.revealOnScroll__pMnO
+                              sty.revealOnScroll___6DdS
                             )}
                             delay={0}
                             duration={1.3}
@@ -1609,7 +1643,7 @@ function PlasmicMyServices__RenderFunc(props: {
                               >
                                 <PlasmicImg__
                                   alt={""}
-                                  className={classNames(sty.img__bIqj)}
+                                  className={classNames(sty.img__zl1Cd)}
                                   displayHeight={"50px"}
                                   displayMaxHeight={"none"}
                                   displayMaxWidth={"100%"}
@@ -1628,13 +1662,13 @@ function PlasmicMyServices__RenderFunc(props: {
                                 <div
                                   className={classNames(
                                     projectcss.all,
-                                    sty.freeBox__orDkp
+                                    sty.freeBox__fKndO
                                   )}
                                 >
                                   <HackerText
                                     className={classNames(
                                       "__wab_instance",
-                                      sty.hackerText___4YLz2
+                                      sty.hackerText__zAnHp
                                     )}
                                     defaultColor={"#FFFFFFCC"}
                                     hoverColor={
@@ -1650,7 +1684,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__lhp7J
+                                  sty.text___2CNkQ
                                 )}
                               >
                                 {
@@ -1661,7 +1695,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__fQlVj
+                                  sty.text__kOco7
                                 )}
                               >
                                 {
@@ -1673,7 +1707,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           <RevealWidthOnScroll
                             className={classNames(
                               "__wab_instance",
-                              sty.revealWidthOnScroll__yB7Wm
+                              sty.revealWidthOnScroll__tbrTn
                             )}
                             delay={0}
                             duration={1.5}
@@ -1681,7 +1715,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             <section
                               className={classNames(
                                 projectcss.all,
-                                sty.section__twqkn
+                                sty.section___7BuHy
                               )}
                             />
                           </RevealWidthOnScroll>
@@ -1689,7 +1723,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             blurAmount={5}
                             className={classNames(
                               "__wab_instance",
-                              sty.revealOnScroll__i0Hpr
+                              sty.revealOnScroll__tmea8
                             )}
                             delay={0}
                             duration={1.3}
@@ -1707,7 +1741,7 @@ function PlasmicMyServices__RenderFunc(props: {
                               >
                                 <PlasmicImg__
                                   alt={""}
-                                  className={classNames(sty.img__wd8NY)}
+                                  className={classNames(sty.img__jpU16)}
                                   displayHeight={"50px"}
                                   displayMaxHeight={"none"}
                                   displayMaxWidth={"100%"}
@@ -1726,13 +1760,13 @@ function PlasmicMyServices__RenderFunc(props: {
                                 <div
                                   className={classNames(
                                     projectcss.all,
-                                    sty.freeBox___37REg
+                                    sty.freeBox__gsOCn
                                   )}
                                 >
                                   <HackerText
                                     className={classNames(
                                       "__wab_instance",
-                                      sty.hackerText__igtKp
+                                      sty.hackerText__j5Azs
                                     )}
                                     defaultColor={"#FFFFFFCC"}
                                     hoverColor={
@@ -1748,7 +1782,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__fp9Jj
+                                  sty.text__lBSdQ
                                 )}
                               >
                                 {"Keyframes\n2020 - 2021"}
@@ -1757,7 +1791,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__z6PDt
+                                  sty.text__lPzK3
                                 )}
                               >
                                 {
@@ -1769,7 +1803,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           <RevealWidthOnScroll
                             className={classNames(
                               "__wab_instance",
-                              sty.revealWidthOnScroll__nRwfs
+                              sty.revealWidthOnScroll__nApw0
                             )}
                             delay={0}
                             duration={1.5}
@@ -1777,7 +1811,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             <section
                               className={classNames(
                                 projectcss.all,
-                                sty.section__jhFrV
+                                sty.section__mhuiq
                               )}
                             />
                           </RevealWidthOnScroll>
@@ -1785,7 +1819,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             blurAmount={5}
                             className={classNames(
                               "__wab_instance",
-                              sty.revealOnScroll__xZxVw
+                              sty.revealOnScroll__fA9Js
                             )}
                             delay={0}
                             duration={1.3}
@@ -1803,7 +1837,7 @@ function PlasmicMyServices__RenderFunc(props: {
                               >
                                 <PlasmicImg__
                                   alt={""}
-                                  className={classNames(sty.img__gc9Zx)}
+                                  className={classNames(sty.img__ij4Da)}
                                   displayHeight={"50px"}
                                   displayMaxHeight={"none"}
                                   displayMaxWidth={"100%"}
@@ -1822,13 +1856,13 @@ function PlasmicMyServices__RenderFunc(props: {
                                 <div
                                   className={classNames(
                                     projectcss.all,
-                                    sty.freeBox___68LuL
+                                    sty.freeBox__czdIk
                                   )}
                                 >
                                   <HackerText
                                     className={classNames(
                                       "__wab_instance",
-                                      sty.hackerText__aATaD
+                                      sty.hackerText__a0Ch7
                                     )}
                                     defaultColor={"#FFFFFFCC"}
                                     hoverColor={
@@ -1844,7 +1878,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text___5Wm
+                                  sty.text__ndoPk
                                 )}
                               >
                                 {"[ 2023 \u2014 2025\r ]"}
@@ -1853,7 +1887,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text___7UEdf
+                                  sty.text__m0CN
                                 )}
                               >
                                 {
@@ -1865,7 +1899,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           <RevealWidthOnScroll
                             className={classNames(
                               "__wab_instance",
-                              sty.revealWidthOnScroll__f76Cg
+                              sty.revealWidthOnScroll___9Gx1Z
                             )}
                             delay={0}
                             duration={1.5}
@@ -1873,7 +1907,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             <section
                               className={classNames(
                                 projectcss.all,
-                                sty.section__lieMj
+                                sty.section___2G48L
                               )}
                             />
                           </RevealWidthOnScroll>
@@ -1881,7 +1915,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             blurAmount={5}
                             className={classNames(
                               "__wab_instance",
-                              sty.revealOnScroll__komlX
+                              sty.revealOnScroll__sXgir
                             )}
                             delay={0}
                             duration={1.3}
@@ -1899,7 +1933,7 @@ function PlasmicMyServices__RenderFunc(props: {
                               >
                                 <PlasmicImg__
                                   alt={""}
-                                  className={classNames(sty.img__wp68)}
+                                  className={classNames(sty.img__fpyJb)}
                                   displayHeight={"50px"}
                                   displayMaxHeight={"none"}
                                   displayMaxWidth={"100%"}
@@ -1918,13 +1952,13 @@ function PlasmicMyServices__RenderFunc(props: {
                                 <div
                                   className={classNames(
                                     projectcss.all,
-                                    sty.freeBox__nRmYf
+                                    sty.freeBox__xjoWx
                                   )}
                                 >
                                   <HackerText
                                     className={classNames(
                                       "__wab_instance",
-                                      sty.hackerText__wCznw
+                                      sty.hackerText__lXwgp
                                     )}
                                     defaultColor={"#FFFFFFCC"}
                                     hoverColor={
@@ -1940,7 +1974,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__izBuN
+                                  sty.text__qwGw9
                                 )}
                               >
                                 {"[ 630/990 - 2020 ]"}
@@ -1949,7 +1983,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__w5Crn
+                                  sty.text__ebPyr
                                 )}
                               >
                                 {
@@ -1961,7 +1995,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           <RevealWidthOnScroll
                             className={classNames(
                               "__wab_instance",
-                              sty.revealWidthOnScroll__xieVv
+                              sty.revealWidthOnScroll__cUs
                             )}
                             delay={0}
                             duration={1.5}
@@ -1969,7 +2003,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             <section
                               className={classNames(
                                 projectcss.all,
-                                sty.section__tv6My
+                                sty.section__zJp1T
                               )}
                             />
                           </RevealWidthOnScroll>
@@ -1977,7 +2011,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             blurAmount={5}
                             className={classNames(
                               "__wab_instance",
-                              sty.revealOnScroll__gnJbs
+                              sty.revealOnScroll__kOog
                             )}
                             delay={0}
                             duration={1.3}
@@ -1995,7 +2029,7 @@ function PlasmicMyServices__RenderFunc(props: {
                               >
                                 <PlasmicImg__
                                   alt={""}
-                                  className={classNames(sty.img__znWtz)}
+                                  className={classNames(sty.img__webWe)}
                                   displayHeight={"50px"}
                                   displayMaxHeight={"none"}
                                   displayMaxWidth={"100%"}
@@ -2014,13 +2048,13 @@ function PlasmicMyServices__RenderFunc(props: {
                                 <div
                                   className={classNames(
                                     projectcss.all,
-                                    sty.freeBox__bAymE
+                                    sty.freeBox__xcPd9
                                   )}
                                 >
                                   <HackerText
                                     className={classNames(
                                       "__wab_instance",
-                                      sty.hackerText__aYoFm
+                                      sty.hackerText__kv3T0
                                     )}
                                     defaultColor={"#FFFFFFCC"}
                                     hoverColor={
@@ -2036,7 +2070,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__z9U3
+                                  sty.text__znQjk
                                 )}
                               >
                                 {"[ 2023 - 2024 ]"}
@@ -2045,7 +2079,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__wqYt
+                                  sty.text__pcCsc
                                 )}
                               >
                                 {
@@ -2057,7 +2091,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           <RevealWidthOnScroll
                             className={classNames(
                               "__wab_instance",
-                              sty.revealWidthOnScroll__sZ09I
+                              sty.revealWidthOnScroll___6H58
                             )}
                             delay={0}
                             duration={1.5}
@@ -2065,7 +2099,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             <section
                               className={classNames(
                                 projectcss.all,
-                                sty.section___6F5GF
+                                sty.section__fuV7
                               )}
                             />
                           </RevealWidthOnScroll>
@@ -2073,7 +2107,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             blurAmount={5}
                             className={classNames(
                               "__wab_instance",
-                              sty.revealOnScroll__hKLne
+                              sty.revealOnScroll__ujKo2
                             )}
                             delay={0}
                             duration={1.3}
@@ -2091,7 +2125,7 @@ function PlasmicMyServices__RenderFunc(props: {
                               >
                                 <PlasmicImg__
                                   alt={""}
-                                  className={classNames(sty.img___4JSdn)}
+                                  className={classNames(sty.img__paT11)}
                                   displayHeight={"50px"}
                                   displayMaxHeight={"none"}
                                   displayMaxWidth={"100%"}
@@ -2110,13 +2144,13 @@ function PlasmicMyServices__RenderFunc(props: {
                                 <div
                                   className={classNames(
                                     projectcss.all,
-                                    sty.freeBox__sKxqf
+                                    sty.freeBox__l2SRz
                                   )}
                                 >
                                   <HackerText
                                     className={classNames(
                                       "__wab_instance",
-                                      sty.hackerText__hmS48
+                                      sty.hackerText__xcu4O
                                     )}
                                     defaultColor={"#FFFFFFCC"}
                                     hoverColor={
@@ -2132,7 +2166,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text___6P3EW
+                                  sty.text__cNWu
                                 )}
                               >
                                 {"[ 2022 - 2023 ]"}
@@ -2141,7 +2175,7 @@ function PlasmicMyServices__RenderFunc(props: {
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text___79Zbo
+                                  sty.text___1No2Z
                                 )}
                               >
                                 {"[ Google UX Design Professional"}
@@ -2151,7 +2185,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           <RevealWidthOnScroll
                             className={classNames(
                               "__wab_instance",
-                              sty.revealWidthOnScroll___5WlOm
+                              sty.revealWidthOnScroll__hKpxq
                             )}
                             delay={0}
                             duration={1.5}
@@ -2159,7 +2193,7 @@ function PlasmicMyServices__RenderFunc(props: {
                             <section
                               className={classNames(
                                 projectcss.all,
-                                sty.section__jnLSl
+                                sty.section__kyzR
                               )}
                             />
                           </RevealWidthOnScroll>
@@ -2177,97 +2211,107 @@ function PlasmicMyServices__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
+              <AnimatedLineOnScroll
+                className={classNames(
+                  "__wab_instance",
+                  sty.animatedLineOnScroll__tqezn
+                )}
+                color={"#000000"}
+                delay={0}
+                duration={0.8}
+              />
+
               <RevealOnScroll
                 blurAmount={5}
                 className={classNames(
                   "__wab_instance",
-                  sty.revealOnScroll__u7CK1
+                  sty.revealOnScroll__wKUvg
                 )}
                 delay={0}
                 duration={1.6}
-                yOffset={80}
+                yOffset={100}
               >
                 <div
-                  data-plasmic-name={"sectionCards7"}
-                  data-plasmic-override={overrides.sectionCards7}
-                  className={classNames(projectcss.all, sty.sectionCards7)}
+                  data-plasmic-name={"sectionCards8"}
+                  data-plasmic-override={overrides.sectionCards8}
+                  className={classNames(projectcss.all, sty.sectionCards8)}
                 >
                   <div
-                    data-plasmic-name={"heading5"}
-                    data-plasmic-override={overrides.heading5}
-                    className={classNames(projectcss.all, sty.heading5)}
+                    data-plasmic-name={"heading6"}
+                    data-plasmic-override={overrides.heading6}
+                    className={classNames(projectcss.all, sty.heading6)}
                   >
                     <div
                       data-plasmic-name={
-                        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5"
+                        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7"
                       }
                       data-plasmic-override={
-                        overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5
+                        overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7
                       }
                       className={classNames(
                         projectcss.all,
-                        sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5
+                        sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7
                       )}
                     >
                       <div
                         data-plasmic-name={
-                          "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6"
+                          "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
                         }
                         data-plasmic-override={
-                          overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6
+                          overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8
                         }
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6
+                          sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8
                         )}
                       >
                         {"[MY OFFERINGS]"}
                       </div>
                     </div>
                     <div
-                      data-plasmic-name={"eXpertise3"}
-                      data-plasmic-override={overrides.eXpertise3}
-                      className={classNames(projectcss.all, sty.eXpertise3)}
+                      data-plasmic-name={"eXpertise4"}
+                      data-plasmic-override={overrides.eXpertise4}
+                      className={classNames(projectcss.all, sty.eXpertise4)}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__adrmU
+                          sty.text__wqVQo
                         )}
                       >
                         {"EXpertise"}
                       </div>
                     </div>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__ltCsj)}
+                      className={classNames(projectcss.all, sty.freeBox__bnXdf)}
                     >
                       <div
-                        data-plasmic-name={"an3"}
-                        data-plasmic-override={overrides.an3}
-                        className={classNames(projectcss.all, sty.an3)}
+                        data-plasmic-name={"an4"}
+                        data-plasmic-override={overrides.an4}
+                        className={classNames(projectcss.all, sty.an4)}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__awDrG
+                            sty.text__wG6Rk
                           )}
                         >
                           {"and"}
                         </div>
                       </div>
                       <div
-                        data-plasmic-name={"skills3"}
-                        data-plasmic-override={overrides.skills3}
-                        className={classNames(projectcss.all, sty.skills3)}
+                        data-plasmic-name={"skills4"}
+                        data-plasmic-override={overrides.skills4}
+                        className={classNames(projectcss.all, sty.skills4)}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__elNM
+                            sty.text__tPrzc
                           )}
                         >
                           {"Skills"}
@@ -2275,404 +2319,645 @@ function PlasmicMyServices__RenderFunc(props: {
                       </div>
                     </div>
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__h2Ii1)}
+                      className={classNames(projectcss.all, sty.freeBox__kaCyP)}
                     >
                       <div
                         data-plasmic-name={
-                          "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5"
+                          "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7"
                         }
                         data-plasmic-override={
-                          overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5
+                          overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7
                         }
                         className={classNames(
                           projectcss.all,
-                          sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5
+                          sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7
                         )}
                       >
                         <div
                           data-plasmic-name={
-                            "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6"
+                            "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
                           }
                           data-plasmic-override={
-                            overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6
+                            overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8
                           }
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6
+                            sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8
                           )}
                         >
-                          {
-                            "Bridging emotion and clarity, my design practice \ngenerally evolves around storytelling, research \nand enterprise design thinking. "
-                          }
+                          {hasVariant(globalVariants, "screen", "mobile")
+                            ? "Bridging emotion and clarity, my design practice generally evolves around storytelling, research and enterprise design thinking."
+                            : "Bridging emotion and clarity, my design practice \ngenerally evolves around storytelling, research \nand enterprise design thinking. "}
                         </div>
                       </div>
                       <div
                         data-plasmic-name={
-                          "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3"
+                          "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
                         }
                         data-plasmic-override={
-                          overrides.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3
+                          overrides.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2
                         }
                         className={classNames(
                           projectcss.all,
-                          sty.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3
+                          sty.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__twYg
+                            sty.text___2NhZf
                           )}
                         >
-                          {
-                            "The aim is always the same for all projects, which \nis to create one of a kind, human-centred \nexperiences that leave a positive impact."
-                          }
+                          {hasVariant(globalVariants, "screen", "mobile")
+                            ? "The aim is always the same for all projects, which is to create one of a kind, human-centred experiences that leave a positive impact."
+                            : "The aim is always the same for all projects, which \nis to create one of a kind, human-centred \nexperiences that leave a positive impact."}
                         </div>
                       </div>
                     </div>
                   </div>
                   <div
-                    data-plasmic-name={"container32"}
-                    data-plasmic-override={overrides.container32}
-                    className={classNames(projectcss.all, sty.container32)}
+                    data-plasmic-name={"container33"}
+                    data-plasmic-override={overrides.container33}
+                    className={classNames(projectcss.all, sty.container33)}
                   >
                     <div
-                      data-plasmic-name={"subContainer3"}
-                      data-plasmic-override={overrides.subContainer3}
-                      className={classNames(projectcss.all, sty.subContainer3)}
+                      data-plasmic-name={"subContainer4"}
+                      data-plasmic-override={overrides.subContainer4}
+                      className={classNames(projectcss.all, sty.subContainer4)}
                     >
-                      <GridDistortion
-                        data-plasmic-name={"gridDistortion"}
-                        data-plasmic-override={overrides.gridDistortion}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__pWq0X
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__bMMuK
+                          )}
+                        >
+                          <CachedAirtable
+                            className={classNames(
+                              "__wab_instance",
+                              sty.googleSheetsMultiTool___2Ccy8
+                            )}
+                            sheetId={
+                              "1L3TDUwHRYbCHPb-Z18CfpS1SBdgO6IyMC-aVsyKXndg"
+                            }
+                            sheetName={"Assets-Grid view"}
+                          >
+                            <DataCtxReader__>
+                              {$ctx => (
+                                <InfiniteScroll
+                                  data-plasmic-name={"infiniteScroll"}
+                                  data-plasmic-override={
+                                    overrides.infiniteScroll
+                                  }
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.infiniteScroll
+                                  )}
+                                  direction={"left"}
+                                  gap={40}
+                                  pauseOnHover={true}
+                                  repeatCount={4}
+                                  showFade={false}
+                                  speed={100}
+                                >
+                                  {(_par =>
+                                    !_par
+                                      ? []
+                                      : Array.isArray(_par)
+                                        ? _par
+                                        : [_par])(
+                                    (() => {
+                                      try {
+                                        return $ctx.cachedData;
+                                      } catch (e) {
+                                        if (
+                                          e instanceof TypeError ||
+                                          e?.plasmicType ===
+                                            "PlasmicUndefinedDataError"
+                                        ) {
+                                          return [];
+                                        }
+                                        throw e;
+                                      }
+                                    })()
+                                  ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                                    const currentItem = __plasmic_item_0;
+                                    const currentIndex = __plasmic_idx_0;
+                                    return (
+                                      <PlasmicImg__
+                                        alt={""}
+                                        className={classNames(sty.img__cgSf4)}
+                                        displayHeight={"auto"}
+                                        displayMaxHeight={"none"}
+                                        displayMaxWidth={"100%"}
+                                        displayMinHeight={"0"}
+                                        displayMinWidth={"0"}
+                                        displayWidth={"auto"}
+                                        key={currentIndex}
+                                        loading={"lazy"}
+                                        src={(() => {
+                                          try {
+                                            return (
+                                              currentItem?.["Main Image"] || ""
+                                            );
+                                          } catch (e) {
+                                            if (
+                                              e instanceof TypeError ||
+                                              e?.plasmicType ===
+                                                "PlasmicUndefinedDataError"
+                                            ) {
+                                              return {
+                                                src: "/plasmic/son_vo/images/_2Png.png",
+                                                fullWidth: 6048,
+                                                fullHeight: 4024,
+                                                aspectRatio: undefined
+                                              };
+                                            }
+                                            throw e;
+                                          }
+                                        })()}
+                                      />
+                                    );
+                                  })}
+                                </InfiniteScroll>
+                              )}
+                            </DataCtxReader__>
+                          </CachedAirtable>
+                        </div>
+                        <PlasmicImg__
+                          alt={""}
+                          className={classNames(sty.img__nzXpn)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"none"}
+                          displayMaxWidth={"100%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"auto"}
+                          loading={"lazy"}
+                          src={{
+                            src: "/plasmic/son_vo/images/_2Png.png",
+                            fullWidth: 6048,
+                            fullHeight: 4024,
+                            aspectRatio: undefined
+                          }}
+                        />
+                      </div>
+                      <HoverLogoCard
                         className={classNames(
                           "__wab_instance",
-                          sty.gridDistortion
+                          sty.hoverLogoCard__eeuTb
                         )}
-                        enableEffect={true}
-                        grid={20}
-                        imageSrc={
-                          "/plasmic/son_vo/images/yrStH7Lcoh9O5WxFsPetODyteSmPngJpg.jpg"
+                        logoSrc={
+                          "/plasmic/son_vo/images/q3Nl1VOj9SdNlGqUyhPfv86EwPng.png"
                         }
-                        mouse={0.1}
-                        relaxation={0.9}
-                        strength={0.25}
-                      />
-
-                      <PlasmicLink__
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.a__bLa1s,
-                          sty.link___01MFq
-                        )}
-                        component={Link}
-                        href={"https://bbcincorp.com/hk"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
                       >
-                        <HoverLogoCard
+                        <CardExperience
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverLogoCard__f0BHn
+                            sty.cardExperience__v2Lc
                           )}
-                          logoSrc={
-                            "/plasmic/son_vo/images/q3Nl1VOj9SdNlGqUyhPfv86EwPng.png"
+                          company={"BBCIncorp"}
+                          content={
+                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
                           }
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience__kvHoe
-                            )}
-                            company={"BBCIncorp"}
-                            content={
-                              "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
-                            }
-                            number={"[ Oct 2022 - Present ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
+                          logo={{
+                            src: "/plasmic/son_vo/images/frame12Png.png",
+                            fullWidth: 160,
+                            fullHeight: 160,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Oct 2022 - Present ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
                               }
-                            })()}
-                            title={"Senior UI/UX"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
+                              throw e;
+                            }
+                          })()}
+                          title={"Senior UI/UX"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.a__bLa1s,
-                          sty.link__tJPo
+                          "__wab_instance",
+                          sty.hoverLogoCard__kp6ZH
                         )}
-                        component={Link}
-                        href={"https://gleadsglobal.com/"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
+                        logoSrc={"/plasmic/son_vo/images/gleadsPng.avif"}
                       >
-                        <HoverLogoCard
+                        <CardExperience
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverLogoCard__kSVu5
+                            sty.cardExperience__cVuad
                           )}
-                          logoSrc={"/plasmic/son_vo/images/gleadsPng.avif"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience__iTvsf
-                            )}
-                            company={"GLEADS COMPANY"}
-                            content={
-                              "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
-                            }
-                            number={"[ Oct 2022 - Present ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
+                          company={"GLEADS COMPANY"}
+                          content={
+                            "Planned and conducted user interviews, surveys, and competitive analysis to identify issues and test solutions with SkyJoy app. Redesigned the product to address the business goals of recapturing the users' needs. Collaborated directly with the product team, including PM, PO, and BA to produce prototypes, as well as front-end and back-end developers to implement the designs."
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/gleadsPng.avif",
+                            fullWidth: 825,
+                            fullHeight: 377,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Oct 2022 - Present ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
                               }
-                            })()}
-                            title={"Senior UI/UX"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
+                              throw e;
+                            }
+                          })()}
+                          title={"Senior UI/UX"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.a__bLa1s,
-                          sty.link__qaP7B
+                          "__wab_instance",
+                          sty.hoverLogoCard__lAq6S
                         )}
-                        component={Link}
-                        href={"https://www.averydennison.com/en/home.html"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
+                        logoSrc={"/plasmic/son_vo/images/adAvif.avif"}
                       >
-                        <HoverLogoCard
+                        <CardExperience
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverLogoCard__smMhq
+                            sty.cardExperience__slRhs
                           )}
-                          logoSrc={"/plasmic/son_vo/images/adAvif.avif"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience__rJLrd
-                            )}
-                            company={"Avery Dennison"}
-                            content={
-                              "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
-                            }
-                            number={"[ Oct 2016 - Feb 2020 ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
+                          company={"Avery Dennison"}
+                          content={
+                            "Internship and starting position in creative team as Junior Designer. Focused on creating wireframes, styleguides, presentations and prototypes for web and mobile applications."
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/adAvif.avif",
+                            fullWidth: 1000,
+                            fullHeight: 700,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Oct 2020 - Feb 2022 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
                               }
-                            })()}
-                            time={"[ Oct 2016 - Feb 2020 ]"}
-                            title={"Graphic Design"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
+                              throw e;
+                            }
+                          })()}
+                          time={"[ Oct 2016 - Feb 2020 ]"}
+                          title={"Graphic Design"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.a__bLa1s,
-                          sty.link___6EbV5
+                          "__wab_instance",
+                          sty.hoverLogoCard__an8H8
                         )}
-                        component={Link}
-                        href={
-                          "https://www.facebook.com/p/CO-KHI-MnK-100067757482737/"
-                        }
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
+                        logoSrc={"/plasmic/son_vo/images/mnkPng.png"}
                       >
-                        <HoverLogoCard
+                        <CardExperience
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverLogoCard__h1Hye
+                            sty.cardExperience__pezMc
                           )}
-                          logoSrc={"/plasmic/son_vo/images/mnkPng.png"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience__nRyeZ
-                            )}
-                            company={"MNK Company"}
-                            content={
-                              "Conducted user research, facilitated workshops with stakeholders, and brainstormed ideas with BOD. Developed wireframes, prototypes of Package, and visual designs for proposed solutions"
-                            }
-                            number={"[ Oct 2016 - Feb 2020 ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
+                          company={"MNK Company"}
+                          content={
+                            "Conducted user research, facilitated workshops with stakeholders, and brainstormed ideas with BOD. Developed wireframes, prototypes of Package, and visual designs for proposed solutions"
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/mnkPng.png",
+                            fullWidth: 160,
+                            fullHeight: 160,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Oct 2016 - Feb 2020 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
                               }
-                            })()}
-                            title={"Graphic Design"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
+                              throw e;
+                            }
+                          })()}
+                          title={"Graphic Design"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.a__bLa1s,
-                          sty.link__tlQc6
+                          "__wab_instance",
+                          sty.hoverLogoCard__ep0N7
                         )}
-                        component={Link}
-                        href={"https://eptcenter.vn/"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
+                        logoSrc={"/plasmic/son_vo/images/eptcAvif.avif"}
                       >
-                        <HoverLogoCard
+                        <CardExperience
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverLogoCard__dvAb
+                            sty.cardExperience__xzOme
                           )}
-                          logoSrc={"/plasmic/son_vo/images/eptcAvif.avif"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience___6Hwnh
-                            )}
-                            company={"EPTC Printing"}
-                            content={
-                              "During my internship at EPTC Printing Company, I worked on designing and preparing plates for billboard and digital printing. My responsibilities included creating and adjusting designs for large-format prints, ensuring high-quality outputs, and collaborating with the production team to optimize printing processes. This experience strengthened my skills in digital printing, design software, and large-scale print production."
-                            }
-                            number={"[ Aug 2019 - Oct 2019 ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
+                          company={"EPTC Printing"}
+                          content={
+                            "During my internship at EPTC Printing Company, I worked on designing and preparing plates for billboard and digital printing. My responsibilities included creating and adjusting designs for large-format prints, ensuring high-quality outputs, and collaborating with the production team to optimize printing processes. This experience strengthened my skills in digital printing, design software, and large-scale print production."
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/eptcAvif.avif",
+                            fullWidth: 225,
+                            fullHeight: 225,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Aug 2019 - Oct 2019 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
                               }
-                            })()}
-                            time={"[ Present ][ Aug 2019 - Oct 2019 ]"}
-                            title={"Digital Printer Internship"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
-                      <PlasmicLink__
+                              throw e;
+                            }
+                          })()}
+                          time={"[ Present ][ Aug 2019 - Oct 2019 ]"}
+                          title={"Digital Printer Internship"}
+                        />
+                      </HoverLogoCard>
+                      <HoverLogoCard
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.a__bLa1s,
-                          sty.link___2NuNu
+                          "__wab_instance",
+                          sty.hoverLogoCard__inhGi
                         )}
-                        component={Link}
-                        href={"http://inkhuyenhocphianam.vn/"}
-                        legacyBehavior={false}
-                        platform={"nextjs"}
-                        target={"_blank"}
+                        logoSrc={"/plasmic/son_vo/images/phiaNamPng.png"}
                       >
-                        <HoverLogoCard
+                        <CardExperience
                           className={classNames(
                             "__wab_instance",
-                            sty.hoverLogoCard__g1ZfA
+                            sty.cardExperience__bz8T3
                           )}
-                          logoSrc={"/plasmic/son_vo/images/phiaNamPng.png"}
-                        >
-                          <CardExperience
-                            className={classNames(
-                              "__wab_instance",
-                              sty.cardExperience__tepTr
-                            )}
-                            company={"Khuyen hoc phia nam"}
-                            content={
-                              "During my internship at Khuyen Hoc Phia nam, I assisted in designing and developing innovative plate concepts using software like Adobe Illustrator, Indesign, Sigma. I conducted market research, contributed to prototype development, and collaborated with the team to refine designs for aesthetics and functionality. This experience enhanced my technical skills, creativity, and teamwork."
-                            }
-                            number={"[ Jan 2019 - Feb 2019 ]"}
-                            project1={(() => {
-                              try {
-                                return undefined;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return [];
-                                }
-                                throw e;
+                          company={"Khuyen hoc phia nam"}
+                          content={
+                            "During my internship at Khuyen Hoc Phia nam, I assisted in designing and developing innovative plate concepts using software like Adobe Illustrator, Indesign, Sigma. I conducted market research, contributed to prototype development, and collaborated with the team to refine designs for aesthetics and functionality. This experience enhanced my technical skills, creativity, and teamwork."
+                          }
+                          logo={{
+                            src: "/plasmic/son_vo/images/phiaNamPng.png",
+                            fullWidth: 160,
+                            fullHeight: 160,
+                            aspectRatio: undefined
+                          }}
+                          number={"[ Jan 2019 - Feb 2019 ]"}
+                          project1={(() => {
+                            try {
+                              return undefined;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return [];
                               }
-                            })()}
-                            time={"[ Jan 2019 - Feb 2019 ]"}
-                            title={"Plate Designer INTERSHIP"}
-                          />
-                        </HoverLogoCard>
-                      </PlasmicLink__>
+                              throw e;
+                            }
+                          })()}
+                          time={"[ Jan 2019 - Feb 2019 ]"}
+                          title={"Plate Designer INTERSHIP"}
+                        />
+                      </HoverLogoCard>
                     </div>
                     <CardWhatAboutUs
-                      data-plasmic-name={"cardWhatAboutUs6"}
-                      data-plasmic-override={overrides.cardWhatAboutUs6}
+                      data-plasmic-name={"cardWhatAboutUs7"}
+                      data-plasmic-override={overrides.cardWhatAboutUs7}
                       className={classNames(
                         "__wab_instance",
-                        sty.cardWhatAboutUs6
+                        sty.cardWhatAboutUs7
                       )}
                     />
                   </div>
                 </div>
               </RevealOnScroll>
+              <CachedAirtable
+                className={classNames(
+                  "__wab_instance",
+                  sty.googleSheetsMultiTool__qC5Jl
+                )}
+                sheetName={"Sheet1"}
+              >
+                <DataCtxReader__>
+                  {$ctx => (
+                    <PatternGrid
+                      data-plasmic-name={"patternGrid"}
+                      data-plasmic-override={overrides.patternGrid}
+                      className={classNames("__wab_instance", sty.patternGrid)}
+                      columnGap={24}
+                      rowGap={40}
+                    >
+                      {(_par =>
+                        !_par ? [] : Array.isArray(_par) ? _par : [_par])(
+                        (() => {
+                          try {
+                            return $ctx.cachedData;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })()
+                      ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                        const currentItem = __plasmic_item_0;
+                        const currentIndex = __plasmic_idx_0;
+                        return (
+                          <RevealOnScroll
+                            blurAmount={5}
+                            className={classNames(
+                              "__wab_instance",
+                              sty.revealOnScroll__vf3DS
+                            )}
+                            delay={(() => {
+                              try {
+                                return 0.5 * $ctx.plasmicIndex;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return 0;
+                                }
+                                throw e;
+                              }
+                            })()}
+                            duration={1.6}
+                            key={currentIndex}
+                            yOffset={50}
+                          >
+                            <TemplateCard
+                              data-plasmic-name={"templateCard9"}
+                              data-plasmic-override={overrides.templateCard9}
+                              className={classNames(
+                                "__wab_instance",
+                                sty.templateCard9
+                              )}
+                              image2={currentItem?.fields?.["Main Image"] || ""}
+                              imageCondition={(() => {
+                                try {
+                                  return !currentItem?.fields?.["Video"];
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return false;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              link={`/works/${currentItem?.fields?.["Slug"] || ""}`}
+                              project1={undefined}
+                              tag1={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("UI");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              tag22={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("UX");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              tag32={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("FRAMER");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              tag42={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("E-COMMERCE");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              tag52={(() => {
+                                try {
+                                  return currentItem?.fields?.[
+                                    "Services"
+                                  ]?.includes("BRAND IDENTITY");
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                              title={currentItem?.fields?.["Title"] || ""}
+                              video={currentItem?.fields?.["Video"] || ""}
+                              videoCondition={(() => {
+                                try {
+                                  return !!currentItem?.fields?.["Video"];
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return true;
+                                  }
+                                  throw e;
+                                }
+                              })()}
+                            />
+                          </RevealOnScroll>
+                        );
+                      })}
+                    </PatternGrid>
+                  )}
+                </DataCtxReader__>
+              </CachedAirtable>
               <RevealOnScroll
                 blurAmount={5}
                 className={classNames(
                   "__wab_instance",
-                  sty.revealOnScroll__r5Qn9
+                  sty.revealOnScroll__qq482
                 )}
                 delay={0}
                 duration={1.6}
                 yOffset={100}
               >
                 <Section
-                  className={classNames("__wab_instance", sty.section__uh6Pa)}
+                  className={classNames("__wab_instance", sty.section__mb2Qe)}
                   size={
                     hasVariant(globalVariants, "screen", "mobile")
                       ? "fullContentWidth"
@@ -2680,13 +2965,10 @@ function PlasmicMyServices__RenderFunc(props: {
                   }
                 >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__t8Ivs)}
+                    className={classNames(projectcss.all, sty.freeBox__xnMBe)}
                   >
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___1PdHp
-                      )}
+                      className={classNames(projectcss.all, sty.freeBox__c8Wyn)}
                     >
                       <h1
                         className={classNames(
@@ -2694,7 +2976,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           projectcss.h1,
                           projectcss.h1__bLa1s,
                           projectcss.__wab_text,
-                          sty.h1__hfO0
+                          sty.h1__jjVl
                         )}
                       >
                         {"WITH ME\n\r"}
@@ -2705,7 +2987,7 @@ function PlasmicMyServices__RenderFunc(props: {
                           projectcss.h1,
                           projectcss.h1__bLa1s,
                           projectcss.__wab_text,
-                          sty.h1___0OjCv
+                          sty.h1__e6Dhl
                         )}
                       >
                         {"Write the next story\r\n\r"}
@@ -2716,19 +2998,24 @@ function PlasmicMyServices__RenderFunc(props: {
               </RevealOnScroll>
             </div>
             <FotterMain
-              className={classNames("__wab_instance", sty.fotterMain__kLH)}
+              className={classNames("__wab_instance", sty.fotterMain__ygJsH)}
             />
 
             <FotterMain
-              className={classNames("__wab_instance", sty.fotterMain__dUbUd)}
+              className={classNames("__wab_instance", sty.fotterMain___21HtN)}
             />
 
-            <div className={classNames(projectcss.all, sty.freeBox__eefi8)}>
+            <div className={classNames(projectcss.all, sty.freeBox__ig0C5)}>
               <LineBg
-                className={classNames("__wab_instance", sty.lineBg___50IBb)}
+                className={classNames("__wab_instance", sty.lineBg__t1GbI)}
               />
             </div>
           </SmoothScroll>
+          <GlobalLoading
+            className={classNames("__wab_instance", sty.globalLoading__mL1De)}
+            durationMs={3000}
+            textSize={"160px"}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -2738,6 +3025,7 @@ function PlasmicMyServices__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "scrollToTop",
     "smoothScroll",
     "scrollDetector",
     "newMenu",
@@ -2770,8 +3058,6 @@ const PlasmicDescendants = {
     "container2",
     "headerHeroSection2",
     "headerHeroSection3",
-    "infiniteScroll",
-    "templateCard",
     "sectionCards2",
     "left",
     "title2",
@@ -2812,21 +3098,24 @@ const PlasmicDescendants = {
     "_25",
     "_18",
     "cardWhatAboutUs5",
-    "sectionCards7",
-    "heading5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6",
-    "eXpertise3",
-    "an3",
-    "skills3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6",
-    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3",
-    "container32",
-    "subContainer3",
-    "gridDistortion",
-    "cardWhatAboutUs6"
+    "sectionCards8",
+    "heading6",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8",
+    "eXpertise4",
+    "an4",
+    "skills4",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
+    "container33",
+    "subContainer4",
+    "infiniteScroll",
+    "cardWhatAboutUs7",
+    "patternGrid",
+    "templateCard9"
   ],
+  scrollToTop: ["scrollToTop"],
   smoothScroll: [
     "smoothScroll",
     "scrollDetector",
@@ -2860,8 +3149,6 @@ const PlasmicDescendants = {
     "container2",
     "headerHeroSection2",
     "headerHeroSection3",
-    "infiniteScroll",
-    "templateCard",
     "sectionCards2",
     "left",
     "title2",
@@ -2902,20 +3189,22 @@ const PlasmicDescendants = {
     "_25",
     "_18",
     "cardWhatAboutUs5",
-    "sectionCards7",
-    "heading5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6",
-    "eXpertise3",
-    "an3",
-    "skills3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6",
-    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3",
-    "container32",
-    "subContainer3",
-    "gridDistortion",
-    "cardWhatAboutUs6"
+    "sectionCards8",
+    "heading6",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8",
+    "eXpertise4",
+    "an4",
+    "skills4",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
+    "container33",
+    "subContainer4",
+    "infiniteScroll",
+    "cardWhatAboutUs7",
+    "patternGrid",
+    "templateCard9"
   ],
   scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
@@ -3040,9 +3329,7 @@ const PlasmicDescendants = {
   ratingText: ["ratingText", "container2"],
   container2: ["container2"],
   headerHeroSection2: ["headerHeroSection2"],
-  headerHeroSection3: ["headerHeroSection3", "infiniteScroll", "templateCard"],
-  infiniteScroll: ["infiniteScroll", "templateCard"],
-  templateCard: ["templateCard"],
+  headerHeroSection3: ["headerHeroSection3"],
   sectionCards2: [
     "sectionCards2",
     "left",
@@ -3222,73 +3509,76 @@ const PlasmicDescendants = {
   _25: ["_25", "_18"],
   _18: ["_18"],
   cardWhatAboutUs5: ["cardWhatAboutUs5"],
-  sectionCards7: [
-    "sectionCards7",
-    "heading5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6",
-    "eXpertise3",
-    "an3",
-    "skills3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6",
-    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3",
-    "container32",
-    "subContainer3",
-    "gridDistortion",
-    "cardWhatAboutUs6"
+  sectionCards8: [
+    "sectionCards8",
+    "heading6",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8",
+    "eXpertise4",
+    "an4",
+    "skills4",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
+    "container33",
+    "subContainer4",
+    "infiniteScroll",
+    "cardWhatAboutUs7"
   ],
-  heading5: [
-    "heading5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6",
-    "eXpertise3",
-    "an3",
-    "skills3",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6",
-    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3"
+  heading6: [
+    "heading6",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+    "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8",
+    "eXpertise4",
+    "an4",
+    "skills4",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+    "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8",
+    "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
   ],
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5:
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7:
     [
-      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5",
-      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6"
+      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
+      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
     ],
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6:
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8:
     [
-      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6"
+      "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
     ],
-  eXpertise3: ["eXpertise3"],
-  an3: ["an3"],
-  skills3: ["skills3"],
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5:
+  eXpertise4: ["eXpertise4"],
+  an4: ["an4"],
+  skills4: ["skills4"],
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7:
     [
-      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5",
-      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6"
+      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
+      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
     ],
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6:
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8:
     [
-      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6"
+      "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
     ],
-  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3:
+  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2:
     [
-      "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3"
+      "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
     ],
-  container32: [
-    "container32",
-    "subContainer3",
-    "gridDistortion",
-    "cardWhatAboutUs6"
+  container33: [
+    "container33",
+    "subContainer4",
+    "infiniteScroll",
+    "cardWhatAboutUs7"
   ],
-  subContainer3: ["subContainer3", "gridDistortion"],
-  gridDistortion: ["gridDistortion"],
-  cardWhatAboutUs6: ["cardWhatAboutUs6"]
+  subContainer4: ["subContainer4", "infiniteScroll"],
+  infiniteScroll: ["infiniteScroll"],
+  cardWhatAboutUs7: ["cardWhatAboutUs7"],
+  patternGrid: ["patternGrid", "templateCard9"],
+  templateCard9: ["templateCard9"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  scrollToTop: typeof ScrollToTop;
   smoothScroll: typeof SmoothScroll;
   scrollDetector: typeof ScrollDetector;
   newMenu: typeof NewMenu;
@@ -3321,8 +3611,6 @@ type NodeDefaultElementType = {
   container2: "div";
   headerHeroSection2: "div";
   headerHeroSection3: "div";
-  infiniteScroll: typeof InfiniteScroll;
-  templateCard: typeof TemplateCard;
   sectionCards2: "div";
   left: "div";
   title2: "div";
@@ -3363,20 +3651,22 @@ type NodeDefaultElementType = {
   _25: "div";
   _18: "div";
   cardWhatAboutUs5: typeof CardWhatAboutUs;
-  sectionCards7: "div";
-  heading5: "div";
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5: "div";
-  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6: "div";
-  eXpertise3: "div";
-  an3: "div";
-  skills3: "div";
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5: "div";
-  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6: "div";
-  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3: "div";
-  container32: "div";
-  subContainer3: "div";
-  gridDistortion: typeof GridDistortion;
-  cardWhatAboutUs6: typeof CardWhatAboutUs;
+  sectionCards8: "div";
+  heading6: "div";
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7: "div";
+  weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8: "div";
+  eXpertise4: "div";
+  an4: "div";
+  skills4: "div";
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7: "div";
+  bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8: "div";
+  theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2: "div";
+  container33: "div";
+  subContainer4: "div";
+  infiniteScroll: typeof InfiniteScroll;
+  cardWhatAboutUs7: typeof CardWhatAboutUs;
+  patternGrid: typeof PatternGrid;
+  templateCard9: typeof TemplateCard;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3466,6 +3756,7 @@ export const PlasmicMyServices = Object.assign(
   withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
+    scrollToTop: makeNodeComponent("scrollToTop"),
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollDetector: makeNodeComponent("scrollDetector"),
     newMenu: makeNodeComponent("newMenu"),
@@ -3508,8 +3799,6 @@ export const PlasmicMyServices = Object.assign(
     container2: makeNodeComponent("container2"),
     headerHeroSection2: makeNodeComponent("headerHeroSection2"),
     headerHeroSection3: makeNodeComponent("headerHeroSection3"),
-    infiniteScroll: makeNodeComponent("infiniteScroll"),
-    templateCard: makeNodeComponent("templateCard"),
     sectionCards2: makeNodeComponent("sectionCards2"),
     left: makeNodeComponent("left"),
     title2: makeNodeComponent("title2"),
@@ -3562,35 +3851,37 @@ export const PlasmicMyServices = Object.assign(
     _25: makeNodeComponent("_25"),
     _18: makeNodeComponent("_18"),
     cardWhatAboutUs5: makeNodeComponent("cardWhatAboutUs5"),
-    sectionCards7: makeNodeComponent("sectionCards7"),
-    heading5: makeNodeComponent("heading5"),
-    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5:
+    sectionCards8: makeNodeComponent("sectionCards8"),
+    heading6: makeNodeComponent("heading6"),
+    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7:
       makeNodeComponent(
-        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings5"
+        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7"
       ),
-    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6:
+    weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8:
       makeNodeComponent(
-        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings6"
+        "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
       ),
-    eXpertise3: makeNodeComponent("eXpertise3"),
-    an3: makeNodeComponent("an3"),
-    skills3: makeNodeComponent("skills3"),
-    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5:
+    eXpertise4: makeNodeComponent("eXpertise4"),
+    an4: makeNodeComponent("an4"),
+    skills4: makeNodeComponent("skills4"),
+    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7:
       makeNodeComponent(
-        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking5"
+        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7"
       ),
-    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6:
+    bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8:
       makeNodeComponent(
-        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking6"
+        "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
       ),
-    theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3:
+    theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2:
       makeNodeComponent(
-        "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact3"
+        "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
       ),
-    container32: makeNodeComponent("container32"),
-    subContainer3: makeNodeComponent("subContainer3"),
-    gridDistortion: makeNodeComponent("gridDistortion"),
-    cardWhatAboutUs6: makeNodeComponent("cardWhatAboutUs6"),
+    container33: makeNodeComponent("container33"),
+    subContainer4: makeNodeComponent("subContainer4"),
+    infiniteScroll: makeNodeComponent("infiniteScroll"),
+    cardWhatAboutUs7: makeNodeComponent("cardWhatAboutUs7"),
+    patternGrid: makeNodeComponent("patternGrid"),
+    templateCard9: makeNodeComponent("templateCard9"),
 
     // Metadata about props expected for PlasmicMyServices
     internalVariantProps: PlasmicMyServices__VariantProps,

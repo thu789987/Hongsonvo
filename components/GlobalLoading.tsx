@@ -82,7 +82,7 @@ export default function GlobalLoading({
         setPrevImageIndex(prev); // Lưu ảnh vừa hiện thành ảnh cũ
         return (prev + 1) % images.length;
       });
-    }, 600); // Tốc độ đổi ảnh (200ms để thấy rõ hiệu ứng fade)
+    }, 1000); // Tốc độ đổi ảnh (200ms để thấy rõ hiệu ứng fade)
     return () => clearInterval(imgTimer);
   }, [isReady, images.length]);
 

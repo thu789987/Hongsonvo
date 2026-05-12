@@ -50,6 +50,7 @@ import { AnimatedLineOnScroll } from "./components/AnimatedLineOnScroll"; // Nh�
 import { registerComponent } from '@plasmicapp/react-web/lib/host';
 import { HoverVariantWrapper } from './components/HoverVariantWrapper';
 import { CachedAirtable } from "./components/CachedAirtable"; // Đảm bảo đường dẫn đúng
+import { CircularText } from "./components/CircularText"; // Đổi lại đường dẫn cho đúng
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -595,3 +596,43 @@ PLASMIC.registerComponent(CachedAirtable, {
   },
   importPath: "./components/CachedAirtable"
 });
+
+export function registerCircularText() {
+  registerComponent(CircularText, {
+    name: "CircularText",
+    displayName: "Circular Text",
+    importPath: "./components/CircularText", // Chỉnh lại theo cấu trúc thư mục của bạn
+    props: {
+      text: {
+        type: "string",
+        defaultValue: "CONTACT US • ",
+        displayName: "Text Content"
+      },
+      size: {
+        type: "number",
+        defaultValue: 300,
+        displayName: "Size (px)"
+      },
+      duration: {
+        type: "number",
+        defaultValue: 20,
+        displayName: "Speed (Seconds)"
+      },
+      fontSize: {
+        type: "number",
+        defaultValue: 24,
+        displayName: "Font Size"
+      },
+      letterSpacing: {
+        type: "number",
+        defaultValue: 3,
+        displayName: "Letter Spacing"
+      },
+      color: {
+        type: "color",
+        defaultValue: "#000000",
+        displayName: "Text Color"
+      }
+    }
+  });
+}

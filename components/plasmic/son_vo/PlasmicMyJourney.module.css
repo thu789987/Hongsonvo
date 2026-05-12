@@ -1447,6 +1447,10 @@
   position: relative;
   text-align: left;
 }
+.animatedLineOnScroll__f4L0:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
 .revealWidthOnScroll__nF0J4:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
@@ -2418,6 +2422,10 @@
   height: auto;
   min-width: 0;
   display: none;
+}
+.animatedLineOnScroll__eacql:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
 }
 .revealOnScroll__rOr6V:global(.__wab_instance) {
   animation: none;

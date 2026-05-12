@@ -615,6 +615,10 @@
     height: 700px;
     padding-left: 16px;
     padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    column-gap: 0px;
     flex-shrink: 0;
   }
 }
@@ -674,6 +678,7 @@
 @media (max-width: 930px) {
   .freeBox__y7Ofn {
     animation: none;
+    display: none;
   }
 }
 .h1__kAy9W {
@@ -1001,9 +1006,11 @@
 .fotterMain___0Yg5A:global(.__wab_instance) {
   max-width: 100%;
   position: fixed;
-  left: 0px;
-  top: 40px;
+  left: 0;
+  top: 300px;
   z-index: 5;
+  right: 0;
+  bottom: auto;
 }
 .fotterMain__bRaMl:global(.__wab_instance) {
   max-width: 100%;
