@@ -51,6 +51,7 @@ import { registerComponent } from '@plasmicapp/react-web/lib/host';
 import { HoverVariantWrapper } from './components/HoverVariantWrapper';
 import { CachedAirtable } from "./components/CachedAirtable"; // Đảm bảo đường dẫn đúng
 import { CircularText } from "./components/CircularText"; // Đổi lại đường dẫn cho đúng
+import { TiltHoverCard } from "./components/TiltHoverCard"; // Chỉnh lại đường dẫn cho đúng
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -634,3 +635,47 @@ PLASMIC.registerComponent(CircularText, {
       }
     }
 }); // <--- CHÚ Ý THÊM DẤU NGẶC TRÒN Ở ĐÂY
+
+PLASMIC.registerComponent(TiltHoverCard, {
+  name: "TiltHoverCard",
+  displayName: "Tilt Hover Card",
+  importPath: "./components/TiltHoverCard",
+  props: {
+    children: {
+      type: "slot",
+      defaultValue: [
+        {
+          type: "vbox",
+          styles: {
+            width: "100%",
+            height: "100%",
+            padding: "20px",
+            backgroundColor: "#ffffff",
+            borderRadius: "12px",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0px 10px 30px rgba(0,0,0,0.1)",
+          },
+          children: [
+            {
+              type: "text",
+              value: "HOVER ME",
+              styles: { fontSize: "24px", fontWeight: "bold" },
+            },
+          ],
+        },
+      ],
+    },
+    rotationRange: {
+      type: "number",
+      defaultValue: 32.5,
+      displayName: "Góc nghiêng tối đa",
+    },
+    popOutZ: {
+      type: "number",
+      defaultValue: 50,
+      displayName: "Độ nổi 3D (Z-Index)",
+      description: "Đẩy content bên trong lồi lên bao nhiêu pixel",
+    },
+  },
+});
