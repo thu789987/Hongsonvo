@@ -4704,9 +4704,7 @@ function PlasmicNewPage__RenderFunc(props: {
                               return (() => {
                                 const currentItem = $ctx.cachedData;
                                 if (!currentItem) return false;
-                                const content =
-                                  currentItem["Video 2"] ||
-                                  currentItem["video"];
+                                const content = currentItem["Video 2"];
                                 return !!(
                                   content && String(content).trim() !== ""
                                 );
