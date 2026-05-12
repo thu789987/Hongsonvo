@@ -463,6 +463,7 @@ function PlasmicNewMenu__RenderFunc(props: {
               }
             )}
             component={Link}
+            href={`/contact`}
             legacyBehavior={false}
             platform={"nextjs"}
           >
