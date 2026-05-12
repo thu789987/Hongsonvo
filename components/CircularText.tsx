@@ -11,7 +11,7 @@ export interface CircularTextProps {
 }
 
 export const CircularText: React.FC<CircularTextProps> = ({
-  className, // Không gán mặc định chuỗi rỗng nữa
+  className,
   text = "WANT TO JOIN THE CREW? • ",
   size = 300,
   duration = 20,
@@ -23,10 +23,7 @@ export const CircularText: React.FC<CircularTextProps> = ({
   const repeatedText = text.repeat(4); 
 
   return (
-    /* THẺ NGOÀI CÙNG: Dành riêng cho Plasmic điều khiển (Ẩn/Hiện, Margin, Position...) */
     <div className={className}>
-      
-      /* THẺ BÊN TRONG: Cấu trúc hiển thị vòng tròn của chúng ta */
       <div
         style={{
           width: size,
