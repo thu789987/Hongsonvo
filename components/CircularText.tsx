@@ -1,8 +1,7 @@
 import React, { useId } from 'react';
 
-// Khai báo kiểu dữ liệu cho các props có thể chỉnh sửa trên Plasmic
 export interface CircularTextProps {
-  className?: string; // Bắt buộc phải có cho Plasmic
+  className?: string;
   text?: string;
   size?: number;
   duration?: number;
@@ -20,23 +19,19 @@ export const CircularText: React.FC<CircularTextProps> = ({
   letterSpacing = 2,
   color = "currentColor"
 }) => {
-  // Tạo ID duy nhất cho thẻ path để tránh xung đột nếu có nhiều cục xoay trên cùng 1 trang
   const pathId = useId(); 
-  
-  // Tự động lặp text để đảm bảo nó chạy kín vòng tròn (bạn có thể tuỳ chỉnh số lần lặp)
   const repeatedText = text.repeat(4); 
 
   return (
     <div
       className={className}
       style={{
+        // Chỉ giữ lại kích thước và flex để căn giữa SVG, loại bỏ position
         width: size,
         height: size,
-        position: 'relative',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        overflow: 'hidden'
       }}
     >
       <svg
@@ -45,7 +40,8 @@ export const CircularText: React.FC<CircularTextProps> = ({
           width: '100%',
           height: '100%',
           animation: `plasmic-spin ${duration}s linear infinite`,
-          transformOrigin: 'center'
+          transformOrigin: 'center',
+          overflow: 'visible' // Tránh bị cắt chữ khi xoay
         }}
       >
         <defs>
@@ -58,7 +54,6 @@ export const CircularText: React.FC<CircularTextProps> = ({
           fill={color}
           fontSize={fontSize}
           letterSpacing={`${letterSpacing}px`}
-          // Font family sẽ được thừa kế từ setting của Plasmic thông qua className
         >
           <textPath href={`#${pathId}`} startOffset="0%">
             {repeatedText}
@@ -66,7 +61,6 @@ export const CircularText: React.FC<CircularTextProps> = ({
         </text>
       </svg>
 
-      {/* Inline style cho keyframes để đảm bảo animation luôn chạy mà không cần file CSS ngoài */}
       <style>{`
         @keyframes plasmic-spin {
           0% { transform: rotate(0deg); }
