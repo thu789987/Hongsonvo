@@ -597,8 +597,7 @@ PLASMIC.registerComponent(CachedAirtable, {
   importPath: "./components/CachedAirtable"
 });
 
-export function registerCircularText() {
-  registerComponent(CircularText, {
+PLASMIC.registerComponent(CircularText, {
     name: "CircularText",
     displayName: "Circular Text",
     importPath: "./components/CircularText", // Chỉnh lại theo cấu trúc thư mục của bạn
@@ -634,5 +633,4 @@ export function registerCircularText() {
         displayName: "Text Color"
       }
     }
-  });
-}
+}); // <--- CHÚ Ý THÊM DẤU NGẶC TRÒN Ở ĐÂY
