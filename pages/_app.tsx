@@ -7,9 +7,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     // Cái này sẽ tự động bọc mọi trang (index, about, contact...) trên web của bạn
     <CursorProvider>
-      {/* 2. Đặt thẻ meta vào bên trong Head */}
+      {/* 2. Đặt thẻ meta và link vào bên trong Head */}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        
+        {/* THÊM THẺ PRELOAD VÀO ĐÂY */}
+        <link rel="preload" as="video" href="https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4" type="video/mp4" />
       </Head>
 
       <CustomCursor />
