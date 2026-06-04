@@ -64,7 +64,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicLineBg.module.css"; // plasmic-import: Gitq1R2yOG92/css
 
 createPlasmicElementProxy;
@@ -142,10 +141,10 @@ function PlasmicLineBg__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.bg
       )}
@@ -153,39 +152,39 @@ function PlasmicLineBg__RenderFunc(props: {
       <div
         data-plasmic-name={"lIne"}
         data-plasmic-override={overrides.lIne}
-        className={classNames(projectcss.all, sty.lIne)}
+        className={classNames("all", sty.lIne)}
       />
 
-      <div className={classNames(projectcss.all, sty.freeBox__vLt03)}>
+      <div className={classNames("all", sty.freeBox__vLt03)}>
         <div
           data-plasmic-name={"lIne2"}
           data-plasmic-override={overrides.lIne2}
-          className={classNames(projectcss.all, sty.lIne2)}
+          className={classNames("all", sty.lIne2)}
         />
 
         <div
           data-plasmic-name={"lIne3"}
           data-plasmic-override={overrides.lIne3}
-          className={classNames(projectcss.all, sty.lIne3)}
+          className={classNames("all", sty.lIne3)}
         />
       </div>
-      <div className={classNames(projectcss.all, sty.freeBox__uHzuX)}>
+      <div className={classNames("all", sty.freeBox__uHzuX)}>
         <div
           data-plasmic-name={"lIne5"}
           data-plasmic-override={overrides.lIne5}
-          className={classNames(projectcss.all, sty.lIne5)}
+          className={classNames("all", sty.lIne5)}
         />
 
         <div
           data-plasmic-name={"lIne6"}
           data-plasmic-override={overrides.lIne6}
-          className={classNames(projectcss.all, sty.lIne6)}
+          className={classNames("all", sty.lIne6)}
         />
       </div>
       <div
         data-plasmic-name={"lIne4"}
         data-plasmic-override={overrides.lIne4}
-        className={classNames(projectcss.all, sty.lIne4)}
+        className={classNames("all", sty.lIne4)}
       />
     </div>
   ) as React.ReactElement | null;

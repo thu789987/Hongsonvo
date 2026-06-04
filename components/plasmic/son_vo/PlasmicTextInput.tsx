@@ -66,7 +66,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicTextInput.module.css"; // plasmic-import: w3jKWDnt2zv1/css
 
 import SearchSvg2Icon from "./icons/PlasmicIcon__SearchSvg2"; // plasmic-import: USkRqeMiZNc-/icon
@@ -198,8 +197,6 @@ function PlasmicTextInput__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -238,6 +235,9 @@ function PlasmicTextInput__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+
+  const currentUser = useCurrentUser?.() || {};
+
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -263,10 +263,10 @@ function PlasmicTextInput__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root,
         {
@@ -285,7 +285,7 @@ function PlasmicTextInput__RenderFunc(props: {
       <div
         data-plasmic-name={"startIconContainer"}
         data-plasmic-override={overrides.startIconContainer}
-        className={classNames(projectcss.all, sty.startIconContainer, {
+        className={classNames("all", sty.startIconContainer, {
           [sty.startIconContainer___focusVisibleWithin]:
             triggers.focusVisibleWithin_root,
           [sty.startIconContainercolor_dark]: hasVariant(
@@ -308,7 +308,7 @@ function PlasmicTextInput__RenderFunc(props: {
         {renderPlasmicSlot({
           defaultContents: (
             <SearchSvg2Icon
-              className={classNames(projectcss.all, sty.svg__hOek4)}
+              className={classNames("all", sty.svg__hOek4)}
               role={"img"}
             />
           ),
@@ -333,26 +333,16 @@ function PlasmicTextInput__RenderFunc(props: {
         data-plasmic-override={overrides.input}
         aria-label={args["aria-label"]}
         aria-labelledby={args["aria-labelledby"]}
-        className={classNames(
-          projectcss.all,
-          projectcss.input,
-          projectcss.input__bLa1s,
-          sty.input,
-          {
-            [sty.input___focusVisibleWithin]: triggers.focusVisibleWithin_root,
-            [sty.inputcolor_dark]: hasVariant($state, "color", "dark"),
-            [sty.inputisDisabled]: hasVariant(
-              $state,
-              "isDisabled",
-              "isDisabled"
-            ),
-            [sty.inputshowStartIcon]: hasVariant(
-              $state,
-              "showStartIcon",
-              "showStartIcon"
-            )
-          }
-        )}
+        className={classNames("all", "input", "input__bLa1s", sty.input, {
+          [sty.input___focusVisibleWithin]: triggers.focusVisibleWithin_root,
+          [sty.inputcolor_dark]: hasVariant($state, "color", "dark"),
+          [sty.inputisDisabled]: hasVariant($state, "isDisabled", "isDisabled"),
+          [sty.inputshowStartIcon]: hasVariant(
+            $state,
+            "showStartIcon",
+            "showStartIcon"
+          )
+        })}
         disabled={
           hasVariant($state, "isDisabled", "isDisabled") ? true : undefined
         }
@@ -367,7 +357,7 @@ function PlasmicTextInput__RenderFunc(props: {
       <div
         data-plasmic-name={"endIconContainer"}
         data-plasmic-override={overrides.endIconContainer}
-        className={classNames(projectcss.all, sty.endIconContainer, {
+        className={classNames("all", sty.endIconContainer, {
           [sty.endIconContainercolor_dark]: hasVariant($state, "color", "dark"),
           [sty.endIconContainershowEndIcon]: hasVariant(
             $state,
@@ -379,7 +369,7 @@ function PlasmicTextInput__RenderFunc(props: {
         {renderPlasmicSlot({
           defaultContents: (
             <CheckSvgIcon
-              className={classNames(projectcss.all, sty.svg___3ZQWk)}
+              className={classNames("all", sty.svg___3ZQWk)}
               role={"img"}
             />
           ),

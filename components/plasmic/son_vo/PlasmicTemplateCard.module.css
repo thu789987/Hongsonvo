@@ -104,9 +104,14 @@
   position: relative;
   align-self: stretch;
   flex-direction: column;
+  overflow: hidden;
 }
 .link {
   display: flex;
+}
+.zoomHoverCard:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
 }
 .freeBox__vui4C {
   display: flex;

@@ -88,7 +88,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicMyJourney.module.css"; // plasmic-import: uoJMXHK3hbae/css
 
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: I6R9tdLXkQer/icon
@@ -306,17 +305,17 @@ function PlasmicMyJourney__RenderFunc(props: {
         }
       `}</style>
 
-      <div className={projectcss.plasmic_page_wrapper}>
+      <div className={"plasmic_page_wrapper"}>
         <div
           data-plasmic-name={"root"}
           data-plasmic-override={overrides.root}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
-            projectcss.all,
-            projectcss.root_reset,
-            projectcss.plasmic_default_styles,
-            projectcss.plasmic_mixins,
+            "all",
+            "root_reset_bLa1shfC4noziDsvmxjKJF",
+            "plasmic_default_styles",
+            "plasmic_mixins",
             styleTokensClassNames,
             sty.root
           )}
@@ -340,8 +339,8 @@ function PlasmicMyJourney__RenderFunc(props: {
             duration={1.2}
             wheelMultiplier={1}
           >
-            <div className={classNames(projectcss.all, sty.freeBox__yi7DX)}>
-              <div className={classNames(projectcss.all, sty.freeBox__zwRr2)}>
+            <div className={classNames("all", sty.freeBox__yi7DX)}>
+              <div className={classNames("all", sty.freeBox__zwRr2)}>
                 <LineBg
                   className={classNames("__wab_instance", sty.lineBg___8PqAl)}
                 />
@@ -386,21 +385,17 @@ function PlasmicMyJourney__RenderFunc(props: {
               <div
                 data-plasmic-name={"headerHeroSection"}
                 data-plasmic-override={overrides.headerHeroSection}
-                className={classNames(projectcss.all, sty.headerHeroSection)}
+                className={classNames("all", sty.headerHeroSection)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__xr6F)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__sYqO)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__dcHbu)}
-                    >
+                <div className={classNames("all", sty.freeBox__xr6F)}>
+                  <div className={classNames("all", sty.freeBox__sYqO)}>
+                    <div className={classNames("all", sty.freeBox__dcHbu)}>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1__s1JRr
                         )}
                       >
@@ -409,10 +404,10 @@ function PlasmicMyJourney__RenderFunc(props: {
                     </div>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__f9Cbc
                       )}
                     >
@@ -420,22 +415,20 @@ function PlasmicMyJourney__RenderFunc(props: {
                     </h1>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1___5TDkx
                       )}
                     >
                       {"\rwebsite template."}
                     </h1>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__oqbid)}
-                    >
+                    <div className={classNames("all", sty.freeBox__oqbid)}>
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__purqD
                         )}
                       >
@@ -446,22 +439,22 @@ function PlasmicMyJourney__RenderFunc(props: {
                       <div
                         data-plasmic-name={"loved"}
                         data-plasmic-override={overrides.loved}
-                        className={classNames(projectcss.all, sty.loved)}
+                        className={classNames("all", sty.loved)}
                       >
                         <div
                           data-plasmic-name={"variant1"}
                           data-plasmic-override={overrides.variant1}
-                          className={classNames(projectcss.all, sty.variant1)}
+                          className={classNames("all", sty.variant1)}
                         >
                           <div
                             data-plasmic-name={"_1"}
                             data-plasmic-override={overrides._1}
-                            className={classNames(projectcss.all, sty._1)}
+                            className={classNames("all", sty._1)}
                           >
                             <div
                               data-plasmic-name={"img"}
                               data-plasmic-override={overrides.img}
-                              className={classNames(projectcss.all, sty.img)}
+                              className={classNames("all", sty.img)}
                             >
                               <div
                                 data-plasmic-name={
@@ -471,7 +464,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                                   overrides.e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg
                                 )}
                               />
@@ -480,12 +473,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_2"}
                             data-plasmic-override={overrides._2}
-                            className={classNames(projectcss.all, sty._2)}
+                            className={classNames("all", sty._2)}
                           >
                             <div
                               data-plasmic-name={"img2"}
                               data-plasmic-override={overrides.img2}
-                              className={classNames(projectcss.all, sty.img2)}
+                              className={classNames("all", sty.img2)}
                             >
                               <div
                                 data-plasmic-name={
@@ -495,7 +488,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                                   overrides.tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg
                                 )}
                               />
@@ -504,12 +497,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_3"}
                             data-plasmic-override={overrides._3}
-                            className={classNames(projectcss.all, sty._3)}
+                            className={classNames("all", sty._3)}
                           >
                             <div
                               data-plasmic-name={"img3"}
                               data-plasmic-override={overrides.img3}
-                              className={classNames(projectcss.all, sty.img3)}
+                              className={classNames("all", sty.img3)}
                             >
                               <div
                                 data-plasmic-name={
@@ -519,7 +512,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                                   overrides.hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg
                                 )}
                               />
@@ -528,12 +521,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_4"}
                             data-plasmic-override={overrides._4}
-                            className={classNames(projectcss.all, sty._4)}
+                            className={classNames("all", sty._4)}
                           >
                             <div
                               data-plasmic-name={"img4"}
                               data-plasmic-override={overrides.img4}
-                              className={classNames(projectcss.all, sty.img4)}
+                              className={classNames("all", sty.img4)}
                             >
                               <div
                                 data-plasmic-name={
@@ -543,7 +536,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                                   overrides._069SD4E4Rbd50L3X97XsgTvpcJpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty._069Sd4E4Rbd50L3X97XsgTvpcJpg
                                 )}
                               />
@@ -552,12 +545,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_5"}
                             data-plasmic-override={overrides._5}
-                            className={classNames(projectcss.all, sty._5)}
+                            className={classNames("all", sty._5)}
                           >
                             <div
                               data-plasmic-name={"img5"}
                               data-plasmic-override={overrides.img5}
-                              className={classNames(projectcss.all, sty.img5)}
+                              className={classNames("all", sty.img5)}
                             >
                               <div
                                 data-plasmic-name={
@@ -567,7 +560,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                                   overrides.vk7E0Slt7OvlQa7QVqyREh2TxqcJpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.vk7E0Slt7OvlQa7QVqyREh2TxqcJpg
                                 )}
                               />
@@ -576,39 +569,27 @@ function PlasmicMyJourney__RenderFunc(props: {
                           <div
                             data-plasmic-name={"ratingDetails"}
                             data-plasmic-override={overrides.ratingDetails}
-                            className={classNames(
-                              projectcss.all,
-                              sty.ratingDetails
-                            )}
+                            className={classNames("all", sty.ratingDetails)}
                           >
                             <div
                               data-plasmic-name={"ratingInfo"}
                               data-plasmic-override={overrides.ratingInfo}
-                              className={classNames(
-                                projectcss.all,
-                                sty.ratingInfo
-                              )}
+                              className={classNames("all", sty.ratingInfo)}
                             >
                               <div
                                 data-plasmic-name={"ratingScore"}
                                 data-plasmic-override={overrides.ratingScore}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.ratingScore
-                                )}
+                                className={classNames("all", sty.ratingScore)}
                               >
                                 <div
                                   data-plasmic-name={"container"}
                                   data-plasmic-override={overrides.container}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.container
-                                  )}
+                                  className={classNames("all", sty.container)}
                                 >
                                   <div
                                     className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
+                                      "all",
+                                      "__wab_text",
                                       sty.text__ePrwO
                                     )}
                                   >
@@ -620,17 +601,14 @@ function PlasmicMyJourney__RenderFunc(props: {
                                 data-plasmic-name={"starsContainer"}
                                 data-plasmic-override={overrides.starsContainer}
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.starsContainer
                                 )}
                               >
                                 <div
                                   data-plasmic-name={"svg"}
                                   data-plasmic-override={overrides.svg}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg
-                                  )}
+                                  className={classNames("all", sty.svg)}
                                 >
                                   <PlasmicImg__
                                     alt={""}
@@ -655,23 +633,17 @@ function PlasmicMyJourney__RenderFunc(props: {
                             <div
                               data-plasmic-name={"ratingText"}
                               data-plasmic-override={overrides.ratingText}
-                              className={classNames(
-                                projectcss.all,
-                                sty.ratingText
-                              )}
+                              className={classNames("all", sty.ratingText)}
                             >
                               <div
                                 data-plasmic-name={"container2"}
                                 data-plasmic-override={overrides.container2}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.container2
-                                )}
+                                className={classNames("all", sty.container2)}
                               >
                                 <div
                                   className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
+                                    "all",
+                                    "__wab_text",
                                     sty.text__rGuyM
                                   )}
                                 >
@@ -683,12 +655,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___9OYLi
-                      )}
-                    >
+                    <div className={classNames("all", sty.freeBox___9OYLi)}>
                       <Button
                         className={classNames(
                           "__wab_instance",
@@ -696,10 +663,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         )}
                         end={
                           <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg___56Oxr
-                            )}
+                            className={classNames("all", sty.svg___56Oxr)}
                             role={"img"}
                           />
                         }
@@ -707,8 +671,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                         label={
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text___1Cf1N
                             )}
                           >
@@ -727,8 +691,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                         label={
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__lBgQh
                             )}
                           >
@@ -746,18 +710,16 @@ function PlasmicMyJourney__RenderFunc(props: {
               <div
                 data-plasmic-name={"headerHeroSection2"}
                 data-plasmic-override={overrides.headerHeroSection2}
-                className={classNames(projectcss.all, sty.headerHeroSection2)}
+                className={classNames("all", sty.headerHeroSection2)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__rGpka)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__dRpS8)}
-                  >
+                <div className={classNames("all", sty.freeBox__rGpka)}>
+                  <div className={classNames("all", sty.freeBox__dRpS8)}>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__c8Grs,
                         "animate-text"
                       )}
@@ -767,17 +729,17 @@ function PlasmicMyJourney__RenderFunc(props: {
                   </div>
                   <div
                     className={classNames(
-                      projectcss.all,
+                      "all",
                       sty.freeBox__an56F,
                       "animate-text"
                     )}
                   >
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__fmTt,
                         ``
                       )}
@@ -786,10 +748,10 @@ function PlasmicMyJourney__RenderFunc(props: {
                     </h1>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__i2V2N
                       )}
                     >
@@ -797,25 +759,23 @@ function PlasmicMyJourney__RenderFunc(props: {
                     </h1>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__vmNkV
                       )}
                     >
                       {"V"}
                     </h1>
                   </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__jpTc)}
-                  >
+                  <div className={classNames("all", sty.freeBox__jpTc)}>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1___4La3P,
                         "animate-text"
                       )}
@@ -828,7 +788,7 @@ function PlasmicMyJourney__RenderFunc(props: {
               <div
                 data-plasmic-name={"headerHeroSection3"}
                 data-plasmic-override={overrides.headerHeroSection3}
-                className={classNames(projectcss.all, sty.headerHeroSection3)}
+                className={classNames("all", sty.headerHeroSection3)}
               >
                 <RevealOnScroll
                   blurAmount={5}
@@ -840,18 +800,14 @@ function PlasmicMyJourney__RenderFunc(props: {
                   duration={0.8}
                   yOffset={50}
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__t4Lfe)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__qxEqc)}
-                    >
+                  <div className={classNames("all", sty.freeBox__t4Lfe)}>
+                    <div className={classNames("all", sty.freeBox__qxEqc)}>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1__w6FXm
                         )}
                       >
@@ -859,23 +815,21 @@ function PlasmicMyJourney__RenderFunc(props: {
                       </h1>
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__dYs1P
                         )}
                       >
                         {"A SENIOR UI/UX"}
                       </div>
                     </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__w4DPg)}
-                    >
+                    <div className={classNames("all", sty.freeBox__w4DPg)}>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1__vpZd
                         )}
                       >
@@ -911,38 +865,26 @@ function PlasmicMyJourney__RenderFunc(props: {
                   duration={1.6}
                   yOffset={80}
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__mw2Ob)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___06Sie
-                      )}
-                    >
+                  <div className={classNames("all", sty.freeBox__mw2Ob)}>
+                    <div className={classNames("all", sty.freeBox___06Sie)}>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1__b2Gqs
                         )}
                       >
                         {"6 YEARS EXPERIENCE"}
                       </h1>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__h9Ehp
-                        )}
-                      >
+                      <div className={classNames("all", sty.freeBox__h9Ehp)}>
                         <h1
                           className={classNames(
-                            projectcss.all,
-                            projectcss.h1,
-                            projectcss.h1__bLa1s,
-                            projectcss.__wab_text,
+                            "all",
+                            "h1",
+                            "h1__bLa1s",
+                            "__wab_text",
                             sty.h1__yxiHg
                           )}
                         >
@@ -950,10 +892,10 @@ function PlasmicMyJourney__RenderFunc(props: {
                         </h1>
                         <h1
                           className={classNames(
-                            projectcss.all,
-                            projectcss.h1,
-                            projectcss.h1__bLa1s,
-                            projectcss.__wab_text,
+                            "all",
+                            "h1",
+                            "h1__bLa1s",
+                            "__wab_text",
                             sty.h1__mbLz5
                           )}
                         >
@@ -972,9 +914,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                 delay={0}
                 duration={1.5}
               >
-                <section
-                  className={classNames(projectcss.all, sty.section__bDpVj)}
-                />
+                <section className={classNames("all", sty.section__bDpVj)} />
               </RevealWidthOnScroll>
               <RevealOnScroll
                 blurAmount={5}
@@ -989,22 +929,22 @@ function PlasmicMyJourney__RenderFunc(props: {
                 <div
                   data-plasmic-name={"sectionCards2"}
                   data-plasmic-override={overrides.sectionCards2}
-                  className={classNames(projectcss.all, sty.sectionCards2)}
+                  className={classNames("all", sty.sectionCards2)}
                 >
                   <div
                     data-plasmic-name={"left"}
                     data-plasmic-override={overrides.left}
-                    className={classNames(projectcss.all, sty.left)}
+                    className={classNames("all", sty.left)}
                   >
                     <div
                       data-plasmic-name={"title2"}
                       data-plasmic-override={overrides.title2}
-                      className={classNames(projectcss.all, sty.title2)}
+                      className={classNames("all", sty.title2)}
                     >
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__prr1P
                         )}
                       >
@@ -1014,12 +954,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                     <div
                       data-plasmic-name={"container4"}
                       data-plasmic-override={overrides.container4}
-                      className={classNames(projectcss.all, sty.container4)}
+                      className={classNames("all", sty.container4)}
                     >
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text___5DKiW
                         )}
                       >
@@ -1032,17 +972,17 @@ function PlasmicMyJourney__RenderFunc(props: {
                   <div
                     data-plasmic-name={"left2"}
                     data-plasmic-override={overrides.left2}
-                    className={classNames(projectcss.all, sty.left2)}
+                    className={classNames("all", sty.left2)}
                   >
                     <div
                       data-plasmic-name={"title4"}
                       data-plasmic-override={overrides.title4}
-                      className={classNames(projectcss.all, sty.title4)}
+                      className={classNames("all", sty.title4)}
                     >
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__knv5S
                         )}
                       >
@@ -1052,12 +992,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                     <div
                       data-plasmic-name={"container5"}
                       data-plasmic-override={overrides.container5}
-                      className={classNames(projectcss.all, sty.container5)}
+                      className={classNames("all", sty.container5)}
                     >
                       <div
                         data-plasmic-name={"_6"}
                         data-plasmic-override={overrides._6}
-                        className={classNames(projectcss.all, sty._6)}
+                        className={classNames("all", sty._6)}
                       >
                         <PlasmicImg__
                           alt={""}
@@ -1077,12 +1017,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           }}
                         />
 
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__wn8Cg
-                          )}
-                        >
+                        <div className={classNames("all", sty.freeBox__wn8Cg)}>
                           <HackerText
                             className={classNames(
                               "__wab_instance",
@@ -1097,8 +1032,8 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text___627L
                             )}
                           >
@@ -1109,7 +1044,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       <div
                         data-plasmic-name={"_7"}
                         data-plasmic-override={overrides._7}
-                        className={classNames(projectcss.all, sty._7)}
+                        className={classNames("all", sty._7)}
                       >
                         <PlasmicImg__
                           alt={""}
@@ -1129,12 +1064,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           }}
                         />
 
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___2C4KI
-                          )}
-                        >
+                        <div className={classNames("all", sty.freeBox___2C4KI)}>
                           <HackerText
                             className={classNames(
                               "__wab_instance",
@@ -1149,8 +1079,8 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__cErIa
                             )}
                           >
@@ -1161,7 +1091,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       <div
                         data-plasmic-name={"_8"}
                         data-plasmic-override={overrides._8}
-                        className={classNames(projectcss.all, sty._8)}
+                        className={classNames("all", sty._8)}
                       >
                         <PlasmicImg__
                           alt={""}
@@ -1181,12 +1111,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           }}
                         />
 
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__k7Ruq
-                          )}
-                        >
+                        <div className={classNames("all", sty.freeBox__k7Ruq)}>
                           <HackerText
                             className={classNames(
                               "__wab_instance",
@@ -1201,8 +1126,8 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__nbgM
                             )}
                           >
@@ -1213,7 +1138,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       <div
                         data-plasmic-name={"_9"}
                         data-plasmic-override={overrides._9}
-                        className={classNames(projectcss.all, sty._9)}
+                        className={classNames("all", sty._9)}
                       >
                         <PlasmicImg__
                           alt={""}
@@ -1233,12 +1158,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           }}
                         />
 
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__k9IDp
-                          )}
-                        >
+                        <div className={classNames("all", sty.freeBox__k9IDp)}>
                           <HackerText
                             className={classNames(
                               "__wab_instance",
@@ -1253,8 +1173,8 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text___8K3Gd
                             )}
                           >
@@ -1265,7 +1185,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       <div
                         data-plasmic-name={"_10"}
                         data-plasmic-override={overrides._10}
-                        className={classNames(projectcss.all, sty._10)}
+                        className={classNames("all", sty._10)}
                       >
                         <PlasmicImg__
                           alt={""}
@@ -1285,12 +1205,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           }}
                         />
 
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox___6HfbI
-                          )}
-                        >
+                        <div className={classNames("all", sty.freeBox___6HfbI)}>
                           <HackerText
                             className={classNames(
                               "__wab_instance",
@@ -1305,8 +1220,8 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__uFj10
                             )}
                           >
@@ -1317,7 +1232,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       <div
                         data-plasmic-name={"_11"}
                         data-plasmic-override={overrides._11}
-                        className={classNames(projectcss.all, sty._11)}
+                        className={classNames("all", sty._11)}
                       >
                         <PlasmicImg__
                           alt={""}
@@ -1337,12 +1252,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           }}
                         />
 
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__rBjB2
-                          )}
-                        >
+                        <div className={classNames("all", sty.freeBox__rBjB2)}>
                           <HackerText
                             className={classNames(
                               "__wab_instance",
@@ -1357,8 +1267,8 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__bh1Mo
                             )}
                           >
@@ -1371,7 +1281,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       <div
                         data-plasmic-name={"_12"}
                         data-plasmic-override={overrides._12}
-                        className={classNames(projectcss.all, sty._12)}
+                        className={classNames("all", sty._12)}
                       >
                         <PlasmicImg__
                           alt={""}
@@ -1391,12 +1301,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           }}
                         />
 
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__r4Zo
-                          )}
-                        >
+                        <div className={classNames("all", sty.freeBox__r4Zo)}>
                           <HackerText
                             className={classNames(
                               "__wab_instance",
@@ -1411,8 +1316,8 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__o8Zpn
                             )}
                           >
@@ -1442,9 +1347,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                 delay={0}
                 duration={1.5}
               >
-                <section
-                  className={classNames(projectcss.all, sty.section__do80R)}
-                />
+                <section className={classNames("all", sty.section__do80R)} />
               </RevealWidthOnScroll>
               <RevealOnScroll
                 blurAmount={5}
@@ -1459,12 +1362,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                 <div
                   data-plasmic-name={"sectionCards6"}
                   data-plasmic-override={overrides.sectionCards6}
-                  className={classNames(projectcss.all, sty.sectionCards6)}
+                  className={classNames("all", sty.sectionCards6)}
                 >
                   <div
                     data-plasmic-name={"heading4"}
                     data-plasmic-override={overrides.heading4}
-                    className={classNames(projectcss.all, sty.heading4)}
+                    className={classNames("all", sty.heading4)}
                   >
                     <div
                       data-plasmic-name={
@@ -1474,7 +1377,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3
                       }
                       className={classNames(
-                        projectcss.all,
+                        "all",
                         sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3
                       )}
                     >
@@ -1486,8 +1389,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                           overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4
                         }
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4
                         )}
                       >
@@ -1497,30 +1400,28 @@ function PlasmicMyJourney__RenderFunc(props: {
                     <div
                       data-plasmic-name={"eXpertise2"}
                       data-plasmic-override={overrides.eXpertise2}
-                      className={classNames(projectcss.all, sty.eXpertise2)}
+                      className={classNames("all", sty.eXpertise2)}
                     >
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__ln78
                         )}
                       >
                         {"my journey"}
                       </div>
                     </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__aMulk)}
-                    >
+                    <div className={classNames("all", sty.freeBox__aMulk)}>
                       <div
                         data-plasmic-name={"an2"}
                         data-plasmic-override={overrides.an2}
-                        className={classNames(projectcss.all, sty.an2)}
+                        className={classNames("all", sty.an2)}
                       >
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__sFuE
                           )}
                         >
@@ -1530,12 +1431,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                       <div
                         data-plasmic-name={"skills2"}
                         data-plasmic-override={overrides.skills2}
-                        className={classNames(projectcss.all, sty.skills2)}
+                        className={classNames("all", sty.skills2)}
                       >
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__e60G
                           )}
                         >
@@ -1543,12 +1444,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___6OnB6
-                      )}
-                    >
+                    <div className={classNames("all", sty.freeBox___6OnB6)}>
                       <div
                         data-plasmic-name={
                           "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3"
@@ -1557,7 +1453,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3
                         }
                         className={classNames(
-                          projectcss.all,
+                          "all",
                           sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3
                         )}
                       >
@@ -1569,8 +1465,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                             overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4
                           }
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4
                           )}
                         >
@@ -1582,22 +1478,22 @@ function PlasmicMyJourney__RenderFunc(props: {
                   <div
                     data-plasmic-name={"container31"}
                     data-plasmic-override={overrides.container31}
-                    className={classNames(projectcss.all, sty.container31)}
+                    className={classNames("all", sty.container31)}
                   >
                     <div
                       data-plasmic-name={"subContainer2"}
                       data-plasmic-override={overrides.subContainer2}
-                      className={classNames(projectcss.all, sty.subContainer2)}
+                      className={classNames("all", sty.subContainer2)}
                     >
                       <div
                         data-plasmic-name={"left4"}
                         data-plasmic-override={overrides.left4}
-                        className={classNames(projectcss.all, sty.left4)}
+                        className={classNames("all", sty.left4)}
                       >
                         <div
                           data-plasmic-name={"container7"}
                           data-plasmic-override={overrides.container7}
-                          className={classNames(projectcss.all, sty.container7)}
+                          className={classNames("all", sty.container7)}
                         >
                           <RevealOnScroll
                             blurAmount={5}
@@ -1612,12 +1508,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                             <div
                               data-plasmic-name={"_20"}
                               data-plasmic-override={overrides._20}
-                              className={classNames(projectcss.all, sty._20)}
+                              className={classNames("all", sty._20)}
                             >
                               <div
                                 data-plasmic-name={"_13"}
                                 data-plasmic-override={overrides._13}
-                                className={classNames(projectcss.all, sty._13)}
+                                className={classNames("all", sty._13)}
                               >
                                 <PlasmicImg__
                                   alt={""}
@@ -1639,7 +1535,7 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                                 <div
                                   className={classNames(
-                                    projectcss.all,
+                                    "all",
                                     sty.freeBox__qDwoc
                                   )}
                                 >
@@ -1660,8 +1556,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__h2Dv
                                 )}
                               >
@@ -1671,8 +1567,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__vswr4
                                 )}
                               >
@@ -1691,10 +1587,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                             duration={1.5}
                           >
                             <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section__r7MAb
-                              )}
+                              className={classNames("all", sty.section__r7MAb)}
                             />
                           </RevealWidthOnScroll>
                           <RevealOnScroll
@@ -1710,12 +1603,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                             <div
                               data-plasmic-name={"_21"}
                               data-plasmic-override={overrides._21}
-                              className={classNames(projectcss.all, sty._21)}
+                              className={classNames("all", sty._21)}
                             >
                               <div
                                 data-plasmic-name={"_14"}
                                 data-plasmic-override={overrides._14}
-                                className={classNames(projectcss.all, sty._14)}
+                                className={classNames("all", sty._14)}
                               >
                                 <PlasmicImg__
                                   alt={""}
@@ -1737,7 +1630,7 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                                 <div
                                   className={classNames(
-                                    projectcss.all,
+                                    "all",
                                     sty.freeBox__zHjpv
                                   )}
                                 >
@@ -1758,8 +1651,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__rz9C1
                                 )}
                               >
@@ -1767,8 +1660,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text___4Hnwc
                                 )}
                               >
@@ -1787,10 +1680,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                             duration={1.5}
                           >
                             <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section__hRt2Y
-                              )}
+                              className={classNames("all", sty.section__hRt2Y)}
                             />
                           </RevealWidthOnScroll>
                           <RevealOnScroll
@@ -1806,12 +1696,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                             <div
                               data-plasmic-name={"_22"}
                               data-plasmic-override={overrides._22}
-                              className={classNames(projectcss.all, sty._22)}
+                              className={classNames("all", sty._22)}
                             >
                               <div
                                 data-plasmic-name={"_15"}
                                 data-plasmic-override={overrides._15}
-                                className={classNames(projectcss.all, sty._15)}
+                                className={classNames("all", sty._15)}
                               >
                                 <PlasmicImg__
                                   alt={""}
@@ -1833,7 +1723,7 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                                 <div
                                   className={classNames(
-                                    projectcss.all,
+                                    "all",
                                     sty.freeBox__aqWx0
                                   )}
                                 >
@@ -1854,8 +1744,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__kwIkJ
                                 )}
                               >
@@ -1863,8 +1753,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__y2I9V
                                 )}
                               >
@@ -1883,10 +1773,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                             duration={1.5}
                           >
                             <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section__f8PB
-                              )}
+                              className={classNames("all", sty.section__f8PB)}
                             />
                           </RevealWidthOnScroll>
                           <RevealOnScroll
@@ -1902,12 +1789,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                             <div
                               data-plasmic-name={"_23"}
                               data-plasmic-override={overrides._23}
-                              className={classNames(projectcss.all, sty._23)}
+                              className={classNames("all", sty._23)}
                             >
                               <div
                                 data-plasmic-name={"_16"}
                                 data-plasmic-override={overrides._16}
-                                className={classNames(projectcss.all, sty._16)}
+                                className={classNames("all", sty._16)}
                               >
                                 <PlasmicImg__
                                   alt={""}
@@ -1929,7 +1816,7 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                                 <div
                                   className={classNames(
-                                    projectcss.all,
+                                    "all",
                                     sty.freeBox__w72HF
                                   )}
                                 >
@@ -1950,8 +1837,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text___4Ulqw
                                 )}
                               >
@@ -1959,8 +1846,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__yorhd
                                 )}
                               >
@@ -1979,10 +1866,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                             duration={1.5}
                           >
                             <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section___4JpEc
-                              )}
+                              className={classNames("all", sty.section___4JpEc)}
                             />
                           </RevealWidthOnScroll>
                           <RevealOnScroll
@@ -1998,12 +1882,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                             <div
                               data-plasmic-name={"_24"}
                               data-plasmic-override={overrides._24}
-                              className={classNames(projectcss.all, sty._24)}
+                              className={classNames("all", sty._24)}
                             >
                               <div
                                 data-plasmic-name={"_17"}
                                 data-plasmic-override={overrides._17}
-                                className={classNames(projectcss.all, sty._17)}
+                                className={classNames("all", sty._17)}
                               >
                                 <PlasmicImg__
                                   alt={""}
@@ -2025,7 +1909,7 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                                 <div
                                   className={classNames(
-                                    projectcss.all,
+                                    "all",
                                     sty.freeBox__tyWnw
                                   )}
                                 >
@@ -2046,8 +1930,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__lmNyP
                                 )}
                               >
@@ -2055,8 +1939,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__sxdYx
                                 )}
                               >
@@ -2075,10 +1959,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                             duration={1.5}
                           >
                             <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section__hk7Pw
-                              )}
+                              className={classNames("all", sty.section__hk7Pw)}
                             />
                           </RevealWidthOnScroll>
                           <RevealOnScroll
@@ -2094,12 +1975,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                             <div
                               data-plasmic-name={"_25"}
                               data-plasmic-override={overrides._25}
-                              className={classNames(projectcss.all, sty._25)}
+                              className={classNames("all", sty._25)}
                             >
                               <div
                                 data-plasmic-name={"_18"}
                                 data-plasmic-override={overrides._18}
-                                className={classNames(projectcss.all, sty._18)}
+                                className={classNames("all", sty._18)}
                               >
                                 <PlasmicImg__
                                   alt={""}
@@ -2121,7 +2002,7 @@ function PlasmicMyJourney__RenderFunc(props: {
 
                                 <div
                                   className={classNames(
-                                    projectcss.all,
+                                    "all",
                                     sty.freeBox___1QtmG
                                   )}
                                 >
@@ -2142,8 +2023,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__qq6Ul
                                 )}
                               >
@@ -2151,8 +2032,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                               </div>
                               <div
                                 className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
+                                  "all",
+                                  "__wab_text",
                                   sty.text__hG5Lf
                                 )}
                               >
@@ -2169,10 +2050,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                             duration={1.5}
                           >
                             <section
-                              className={classNames(
-                                projectcss.all,
-                                sty.section__mRmkI
-                              )}
+                              className={classNames("all", sty.section__mRmkI)}
                             />
                           </RevealWidthOnScroll>
                         </div>
@@ -2212,12 +2090,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                 <div
                   data-plasmic-name={"sectionCards8"}
                   data-plasmic-override={overrides.sectionCards8}
-                  className={classNames(projectcss.all, sty.sectionCards8)}
+                  className={classNames("all", sty.sectionCards8)}
                 >
                   <div
                     data-plasmic-name={"heading6"}
                     data-plasmic-override={overrides.heading6}
-                    className={classNames(projectcss.all, sty.heading6)}
+                    className={classNames("all", sty.heading6)}
                   >
                     <div
                       data-plasmic-name={
@@ -2227,7 +2105,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7
                       }
                       className={classNames(
-                        projectcss.all,
+                        "all",
                         sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7
                       )}
                     >
@@ -2239,8 +2117,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                           overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8
                         }
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8
                         )}
                       >
@@ -2250,30 +2128,28 @@ function PlasmicMyJourney__RenderFunc(props: {
                     <div
                       data-plasmic-name={"eXpertise4"}
                       data-plasmic-override={overrides.eXpertise4}
-                      className={classNames(projectcss.all, sty.eXpertise4)}
+                      className={classNames("all", sty.eXpertise4)}
                     >
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__as67T
                         )}
                       >
                         {"EXpertise"}
                       </div>
                     </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__szcDe)}
-                    >
+                    <div className={classNames("all", sty.freeBox__szcDe)}>
                       <div
                         data-plasmic-name={"an4"}
                         data-plasmic-override={overrides.an4}
-                        className={classNames(projectcss.all, sty.an4)}
+                        className={classNames("all", sty.an4)}
                       >
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__hXzSg
                           )}
                         >
@@ -2283,12 +2159,12 @@ function PlasmicMyJourney__RenderFunc(props: {
                       <div
                         data-plasmic-name={"skills4"}
                         data-plasmic-override={overrides.skills4}
-                        className={classNames(projectcss.all, sty.skills4)}
+                        className={classNames("all", sty.skills4)}
                       >
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__fOny
                           )}
                         >
@@ -2296,9 +2172,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__ewQx)}
-                    >
+                    <div className={classNames("all", sty.freeBox__ewQx)}>
                       <div
                         data-plasmic-name={
                           "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7"
@@ -2307,7 +2181,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                           overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7
                         }
                         className={classNames(
-                          projectcss.all,
+                          "all",
                           sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7
                         )}
                       >
@@ -2319,8 +2193,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                             overrides.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8
                           }
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8
                           )}
                         >
@@ -2337,14 +2211,14 @@ function PlasmicMyJourney__RenderFunc(props: {
                           overrides.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2
                         }
                         className={classNames(
-                          projectcss.all,
+                          "all",
                           sty.theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2
                         )}
                       >
                         <div
                           className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
+                            "all",
+                            "__wab_text",
                             sty.text__zhvVm
                           )}
                         >
@@ -2358,25 +2232,15 @@ function PlasmicMyJourney__RenderFunc(props: {
                   <div
                     data-plasmic-name={"container33"}
                     data-plasmic-override={overrides.container33}
-                    className={classNames(projectcss.all, sty.container33)}
+                    className={classNames("all", sty.container33)}
                   >
                     <div
                       data-plasmic-name={"subContainer4"}
                       data-plasmic-override={overrides.subContainer4}
-                      className={classNames(projectcss.all, sty.subContainer4)}
+                      className={classNames("all", sty.subContainer4)}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__avlwZ
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__gBXf
-                          )}
-                        >
+                      <div className={classNames("all", sty.freeBox__avlwZ)}>
+                        <div className={classNames("all", sty.freeBox__gBXf)}>
                           <CachedAirtable
                             className={classNames(
                               "__wab_instance",
@@ -2942,18 +2806,14 @@ function PlasmicMyJourney__RenderFunc(props: {
                       : "fullContentWidth"
                   }
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___3TBIn)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__jDyTt)}
-                    >
+                  <div className={classNames("all", sty.freeBox___3TBIn)}>
+                    <div className={classNames("all", sty.freeBox__jDyTt)}>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1___2AVgX
                         )}
                       >
@@ -2961,10 +2821,10 @@ function PlasmicMyJourney__RenderFunc(props: {
                       </h1>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1__k1OJ
                         )}
                       >
@@ -2983,7 +2843,7 @@ function PlasmicMyJourney__RenderFunc(props: {
               className={classNames("__wab_instance", sty.fotterMain___1BBe1)}
             />
 
-            <div className={classNames(projectcss.all, sty.freeBox__ktdYl)}>
+            <div className={classNames("all", sty.freeBox__ktdYl)}>
               <LineBg
                 className={classNames("__wab_instance", sty.lineBg__bzV1N)}
               />

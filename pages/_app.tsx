@@ -1,18 +1,26 @@
-import type { AppProps } from 'next/app';
-import Head from 'next/head'; // 1. Bắt buộc phải import Head từ next/head
-import { CursorProvider } from '../components/CursorContext'; 
-import { CustomCursor } from '../components/CustomCursor';
-
+import "../components/plasmic/son_vo/plasmic.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
+import type { AppProps } from "next/app";
+import Head from "next/head"; // 1. Bắt buộc phải import Head từ next/head
+import { CursorProvider } from "../components/CursorContext";
+import { CustomCursor } from "../components/CustomCursor";
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     // Cái này sẽ tự động bọc mọi trang (index, about, contact...) trên web của bạn
     <CursorProvider>
       {/* 2. Đặt thẻ meta và link vào bên trong Head */}
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+
         {/* THÊM THẺ PRELOAD VÀO ĐÂY */}
-        <link rel="preload" as="video" href="https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4" type="video/mp4" />
+        <link
+          rel="preload"
+          as="video"
+          href="https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
+          type="video/mp4"
+        />
       </Head>
 
       <CustomCursor />

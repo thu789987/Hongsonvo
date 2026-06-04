@@ -65,7 +65,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicNewMenu2.module.css"; // plasmic-import: JOkR_GpRIk06/css
 
 createPlasmicElementProxy;
@@ -135,8 +134,6 @@ function PlasmicNewMenu2__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -168,6 +165,9 @@ function PlasmicNewMenu2__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+
+  const currentUser = useCurrentUser?.() || {};
+
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -185,10 +185,10 @@ function PlasmicNewMenu2__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.menu,
         hasVariant($state, "scrolledState", "scrolledState") ? `` : ``,
@@ -201,7 +201,7 @@ function PlasmicNewMenu2__RenderFunc(props: {
         }
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__qknUp)}>
+      <div className={classNames("all", sty.freeBox__qknUp)}>
         <PlasmicImg__
           data-plasmic-name={"img"}
           data-plasmic-override={overrides.img}
@@ -222,8 +222,8 @@ function PlasmicNewMenu2__RenderFunc(props: {
           }}
         />
       </div>
-      <div className={classNames(projectcss.all, sty.freeBox___44Q1)}>
-        <div className={classNames(projectcss.all, sty.freeBox__lopyv)}>
+      <div className={classNames("all", sty.freeBox___44Q1)}>
+        <div className={classNames("all", sty.freeBox__lopyv)}>
           <HackerText
             className={classNames("__wab_instance", sty.hackerText__ybLzV)}
             defaultColor={"#ffffff"}
@@ -253,7 +253,7 @@ function PlasmicNewMenu2__RenderFunc(props: {
           />
         </div>
       </div>
-      <div className={classNames(projectcss.all, sty.freeBox__x6CJv)}>
+      <div className={classNames("all", sty.freeBox__x6CJv)}>
         {renderPlasmicSlot({
           defaultContents: "[ 2026 ]",
           value: args.headerTitle,

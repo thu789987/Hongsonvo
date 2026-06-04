@@ -66,7 +66,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicNavbar.module.css"; // plasmic-import: pYJFbf4txB9X/css
 
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: I6R9tdLXkQer/icon
@@ -147,15 +146,15 @@ function PlasmicNavbar__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root
       )}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__fLRtR)}>
+      <div className={classNames("all", sty.freeBox__fLRtR)}>
         <Logo
           data-plasmic-name={"logo"}
           data-plasmic-override={overrides.logo}
@@ -165,13 +164,13 @@ function PlasmicNavbar__RenderFunc(props: {
           }
         />
 
-        <div className={classNames(projectcss.all, sty.freeBox___8BxW5)}>
+        <div className={classNames("all", sty.freeBox___8BxW5)}>
           <PlasmicLink__
             className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.a__bLa1s,
-              projectcss.__wab_text,
+              "all",
+              "a",
+              "a__bLa1s",
+              "__wab_text",
               sty.link__nbQj0
             )}
             component={Link}
@@ -183,10 +182,10 @@ function PlasmicNavbar__RenderFunc(props: {
           </PlasmicLink__>
           <PlasmicLink__
             className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.a__bLa1s,
-              projectcss.__wab_text,
+              "all",
+              "a",
+              "a__bLa1s",
+              "__wab_text",
               sty.link__evOku
             )}
             component={Link}
@@ -198,10 +197,10 @@ function PlasmicNavbar__RenderFunc(props: {
           </PlasmicLink__>
           <PlasmicLink__
             className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.a__bLa1s,
-              projectcss.__wab_text,
+              "all",
+              "a",
+              "a__bLa1s",
+              "__wab_text",
               sty.link__yw9Mo
             )}
             component={Link}
@@ -212,13 +211,13 @@ function PlasmicNavbar__RenderFunc(props: {
             {"FAQs"}
           </PlasmicLink__>
         </div>
-        <div className={classNames(projectcss.all, sty.freeBox___8OjUk)}>
+        <div className={classNames("all", sty.freeBox___8OjUk)}>
           <PlasmicLink__
             className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.a__bLa1s,
-              projectcss.__wab_text,
+              "all",
+              "a",
+              "a__bLa1s",
+              "__wab_text",
               sty.link__reY9J
             )}
             component={Link}
@@ -236,11 +235,7 @@ function PlasmicNavbar__RenderFunc(props: {
               <div
                 data-plasmic-name={"text"}
                 data-plasmic-override={overrides.text}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text
-                )}
+                className={classNames("all", "__wab_text", sty.text)}
               >
                 {"Watch Demo"}
               </div>
@@ -250,7 +245,7 @@ function PlasmicNavbar__RenderFunc(props: {
               <CircleIcon
                 data-plasmic-name={"svg"}
                 data-plasmic-override={overrides.svg}
-                className={classNames(projectcss.all, sty.svg)}
+                className={classNames("all", sty.svg)}
                 role={"img"}
               />
             }

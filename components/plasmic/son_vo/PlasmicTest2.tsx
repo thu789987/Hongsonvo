@@ -67,7 +67,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicTest2.module.css"; // plasmic-import: SsxhGEazCsmL/css
 
 createPlasmicElementProxy;
@@ -202,8 +201,6 @@ function PlasmicTest2__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -247,6 +244,9 @@ function PlasmicTest2__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+
+  const currentUser = useCurrentUser?.() || {};
+
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -264,10 +264,10 @@ function PlasmicTest2__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.linkDesktopColored,
         {
@@ -282,62 +282,58 @@ function PlasmicTest2__RenderFunc(props: {
       <div
         data-plasmic-name={"image"}
         data-plasmic-override={overrides.image}
-        className={classNames(projectcss.all, sty.image)}
+        className={classNames("all", sty.image)}
       >
         <div
           data-plasmic-name={"border"}
           data-plasmic-override={overrides.border}
-          className={classNames(projectcss.all, sty.border)}
+          className={classNames("all", sty.border)}
         />
 
         <div
           data-plasmic-name={"screws"}
           data-plasmic-override={overrides.screws}
-          className={classNames(projectcss.all, sty.screws, {
+          className={classNames("all", sty.screws, {
             [sty.screwsproject1]: hasVariant($state, "project1", "project1")
           })}
         >
           <div
             data-plasmic-name={"_1"}
             data-plasmic-override={overrides._1}
-            className={classNames(projectcss.all, sty._1)}
+            className={classNames("all", sty._1)}
           />
 
           <div
             data-plasmic-name={"_2"}
             data-plasmic-override={overrides._2}
-            className={classNames(projectcss.all, sty._2)}
+            className={classNames("all", sty._2)}
           />
 
           <div
             data-plasmic-name={"_3"}
             data-plasmic-override={overrides._3}
-            className={classNames(projectcss.all, sty._3)}
+            className={classNames("all", sty._3)}
           />
 
           <div
             data-plasmic-name={"_4"}
             data-plasmic-override={overrides._4}
-            className={classNames(projectcss.all, sty._4)}
+            className={classNames("all", sty._4)}
           />
         </div>
         <div
           data-plasmic-name={"overlay2"}
           data-plasmic-override={overrides.overlay2}
-          className={classNames(projectcss.all, sty.overlay2, {
+          className={classNames("all", sty.overlay2, {
             [sty.overlay2project1]: hasVariant($state, "project1", "project1")
           })}
         >
           <PlasmicLink__
             data-plasmic-name={"link"}
             data-plasmic-override={overrides.link}
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.a__bLa1s,
-              sty.link,
-              { [sty.linkproject1]: hasVariant($state, "project1", "project1") }
-            )}
+            className={classNames("all", "a", "a__bLa1s", sty.link, {
+              [sty.linkproject1]: hasVariant($state, "project1", "project1")
+            })}
             component={Link}
             href={args.link}
             legacyBehavior={false}
@@ -394,12 +390,7 @@ function PlasmicTest2__RenderFunc(props: {
               trigger={
                 <DataCtxReader__>
                   {$ctx => (
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___2AAjN
-                      )}
-                    >
+                    <div className={classNames("all", sty.freeBox___2AAjN)}>
                       {(() => {
                         try {
                           return $props.videoCondition;
@@ -527,7 +518,7 @@ function PlasmicTest2__RenderFunc(props: {
           </PlasmicLink__>
         </div>
         <div
-          className={classNames(projectcss.all, sty.freeBox___6JVl6, {
+          className={classNames("all", sty.freeBox___6JVl6, {
             [sty.freeBoxproject1___6JVl6QzAbD]: hasVariant(
               $state,
               "project1",
@@ -539,19 +530,19 @@ function PlasmicTest2__RenderFunc(props: {
       <div
         data-plasmic-name={"bottom"}
         data-plasmic-override={overrides.bottom}
-        className={classNames(projectcss.all, sty.bottom, {
+        className={classNames("all", sty.bottom, {
           [sty.bottomproject1]: hasVariant($state, "project1", "project1")
         })}
       >
         <div
           data-plasmic-name={"top2"}
           data-plasmic-override={overrides.top2}
-          className={classNames(projectcss.all, sty.top2)}
+          className={classNames("all", sty.top2)}
         >
           <div
             data-plasmic-name={"templateName"}
             data-plasmic-override={overrides.templateName}
-            className={classNames(projectcss.all, sty.templateName, {
+            className={classNames("all", sty.templateName, {
               [sty.templateNameproject1]: hasVariant(
                 $state,
                 "project1",
@@ -560,18 +551,13 @@ function PlasmicTest2__RenderFunc(props: {
             })}
           >
             <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___7Blqc,
-                {
-                  [sty.textproject1___7BlqcQzAbD]: hasVariant(
-                    $state,
-                    "project1",
-                    "project1"
-                  )
-                }
-              )}
+              className={classNames("all", "__wab_text", sty.text___7Blqc, {
+                [sty.textproject1___7BlqcQzAbD]: hasVariant(
+                  $state,
+                  "project1",
+                  "project1"
+                )
+              })}
             >
               <React.Fragment>
                 {(() => {
@@ -594,7 +580,7 @@ function PlasmicTest2__RenderFunc(props: {
         <div
           data-plasmic-name={"container10"}
           data-plasmic-override={overrides.container10}
-          className={classNames(projectcss.all, sty.container10, {
+          className={classNames("all", sty.container10, {
             [sty.container10project1]: hasVariant(
               $state,
               "project1",
@@ -602,7 +588,7 @@ function PlasmicTest2__RenderFunc(props: {
             )
           })}
         >
-          <div className={classNames(projectcss.all, sty.freeBox__a0UDa)}>
+          <div className={classNames("all", sty.freeBox__a0UDa)}>
             {(() => {
               try {
                 return $props.tag1;
@@ -619,14 +605,10 @@ function PlasmicTest2__RenderFunc(props: {
               <div
                 data-plasmic-name={"tag12"}
                 data-plasmic-override={overrides.tag12}
-                className={classNames(projectcss.all, sty.tag12)}
+                className={classNames("all", sty.tag12)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__j6Qeu
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__j6Qeu)}
                 >
                   {"UI"}
                 </div>
@@ -648,14 +630,10 @@ function PlasmicTest2__RenderFunc(props: {
               <div
                 data-plasmic-name={"tag2"}
                 data-plasmic-override={overrides.tag2}
-                className={classNames(projectcss.all, sty.tag2)}
+                className={classNames("all", sty.tag2)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__atmGt
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__atmGt)}
                 >
                   {"UX"}
                 </div>
@@ -677,14 +655,10 @@ function PlasmicTest2__RenderFunc(props: {
               <div
                 data-plasmic-name={"tag3"}
                 data-plasmic-override={overrides.tag3}
-                className={classNames(projectcss.all, sty.tag3)}
+                className={classNames("all", sty.tag3)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__fncgH
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__fncgH)}
                 >
                   {"Framer"}
                 </div>
@@ -706,14 +680,10 @@ function PlasmicTest2__RenderFunc(props: {
               <div
                 data-plasmic-name={"tag4"}
                 data-plasmic-override={overrides.tag4}
-                className={classNames(projectcss.all, sty.tag4)}
+                className={classNames("all", sty.tag4)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__mF8G7
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__mF8G7)}
                 >
                   {"E-COMMERCE"}
                 </div>
@@ -735,14 +705,10 @@ function PlasmicTest2__RenderFunc(props: {
               <div
                 data-plasmic-name={"tag5"}
                 data-plasmic-override={overrides.tag5}
-                className={classNames(projectcss.all, sty.tag5)}
+                className={classNames("all", sty.tag5)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__lR61X
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__lR61X)}
                 >
                   {"BRAND IDENTITY"}
                 </div>

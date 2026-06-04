@@ -64,7 +64,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicTickerHeader.module.css"; // plasmic-import: sVhN06_u5KJ1/css
 
 createPlasmicElementProxy;
@@ -162,10 +161,10 @@ function PlasmicTickerHeader__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.tickerHeader
       )}
@@ -173,40 +172,28 @@ function PlasmicTickerHeader__RenderFunc(props: {
       <div
         data-plasmic-name={"container"}
         data-plasmic-override={overrides.container}
-        className={classNames(projectcss.all, sty.container)}
+        className={classNames("all", sty.container)}
       >
         <div
           data-plasmic-name={"container2"}
           data-plasmic-override={overrides.container2}
-          className={classNames(projectcss.all, sty.container2)}
+          className={classNames("all", sty.container2)}
         >
           <div
             data-plasmic-name={"text"}
             data-plasmic-override={overrides.text}
-            className={classNames(projectcss.all, sty.text)}
+            className={classNames("all", sty.text)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__tReW
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__tReW)}>
               {"BUILT WITH LOVE FOR THE WEBFLOW COMMUNITY"}
             </div>
           </div>
           <div
             data-plasmic-name={"text2"}
             data-plasmic-override={overrides.text2}
-            className={classNames(projectcss.all, sty.text2)}
+            className={classNames("all", sty.text2)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__sNeF
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__sNeF)}>
               {"|"}
             </div>
           </div>
@@ -214,35 +201,23 @@ function PlasmicTickerHeader__RenderFunc(props: {
         <div
           data-plasmic-name={"container3"}
           data-plasmic-override={overrides.container3}
-          className={classNames(projectcss.all, sty.container3)}
+          className={classNames("all", sty.container3)}
         >
           <div
             data-plasmic-name={"text3"}
             data-plasmic-override={overrides.text3}
-            className={classNames(projectcss.all, sty.text3)}
+            className={classNames("all", sty.text3)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__stnDy
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__stnDy)}>
               {"BUILT WITH LOVE FOR THE WEBFLOW COMMUNITY"}
             </div>
           </div>
           <div
             data-plasmic-name={"text4"}
             data-plasmic-override={overrides.text4}
-            className={classNames(projectcss.all, sty.text4)}
+            className={classNames("all", sty.text4)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__hIoF
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__hIoF)}>
               {"|"}
             </div>
           </div>
@@ -250,35 +225,23 @@ function PlasmicTickerHeader__RenderFunc(props: {
         <div
           data-plasmic-name={"container4"}
           data-plasmic-override={overrides.container4}
-          className={classNames(projectcss.all, sty.container4)}
+          className={classNames("all", sty.container4)}
         >
           <div
             data-plasmic-name={"text5"}
             data-plasmic-override={overrides.text5}
-            className={classNames(projectcss.all, sty.text5)}
+            className={classNames("all", sty.text5)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__nHnAq
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__nHnAq)}>
               {"BUILT WITH LOVE FOR THE WEBFLOW COMMUNITY"}
             </div>
           </div>
           <div
             data-plasmic-name={"text6"}
             data-plasmic-override={overrides.text6}
-            className={classNames(projectcss.all, sty.text6)}
+            className={classNames("all", sty.text6)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__rYjf6
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__rYjf6)}>
               {"|"}
             </div>
           </div>
@@ -286,35 +249,23 @@ function PlasmicTickerHeader__RenderFunc(props: {
         <div
           data-plasmic-name={"container5"}
           data-plasmic-override={overrides.container5}
-          className={classNames(projectcss.all, sty.container5)}
+          className={classNames("all", sty.container5)}
         >
           <div
             data-plasmic-name={"text7"}
             data-plasmic-override={overrides.text7}
-            className={classNames(projectcss.all, sty.text7)}
+            className={classNames("all", sty.text7)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__r1Eed
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__r1Eed)}>
               {"BUILT WITH LOVE FOR THE WEBFLOW COMMUNITY"}
             </div>
           </div>
           <div
             data-plasmic-name={"text8"}
             data-plasmic-override={overrides.text8}
-            className={classNames(projectcss.all, sty.text8)}
+            className={classNames("all", sty.text8)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__tfqPz
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__tfqPz)}>
               {"|"}
             </div>
           </div>
@@ -323,40 +274,28 @@ function PlasmicTickerHeader__RenderFunc(props: {
       <div
         data-plasmic-name={"container6"}
         data-plasmic-override={overrides.container6}
-        className={classNames(projectcss.all, sty.container6)}
+        className={classNames("all", sty.container6)}
       >
         <div
           data-plasmic-name={"container7"}
           data-plasmic-override={overrides.container7}
-          className={classNames(projectcss.all, sty.container7)}
+          className={classNames("all", sty.container7)}
         >
           <div
             data-plasmic-name={"text9"}
             data-plasmic-override={overrides.text9}
-            className={classNames(projectcss.all, sty.text9)}
+            className={classNames("all", sty.text9)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__ibBw2
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__ibBw2)}>
               {"BUILT WITH LOVE FOR THE WEBFLOW COMMUNITY"}
             </div>
           </div>
           <div
             data-plasmic-name={"text10"}
             data-plasmic-override={overrides.text10}
-            className={classNames(projectcss.all, sty.text10)}
+            className={classNames("all", sty.text10)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__eDh8A
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__eDh8A)}>
               {"|"}
             </div>
           </div>
@@ -364,35 +303,23 @@ function PlasmicTickerHeader__RenderFunc(props: {
         <div
           data-plasmic-name={"container8"}
           data-plasmic-override={overrides.container8}
-          className={classNames(projectcss.all, sty.container8)}
+          className={classNames("all", sty.container8)}
         >
           <div
             data-plasmic-name={"text11"}
             data-plasmic-override={overrides.text11}
-            className={classNames(projectcss.all, sty.text11)}
+            className={classNames("all", sty.text11)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___4OrOi
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text___4OrOi)}>
               {"BUILT WITH LOVE FOR THE WEBFLOW COMMUNITY"}
             </div>
           </div>
           <div
             data-plasmic-name={"text12"}
             data-plasmic-override={overrides.text12}
-            className={classNames(projectcss.all, sty.text12)}
+            className={classNames("all", sty.text12)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__dFyqn
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__dFyqn)}>
               {"|"}
             </div>
           </div>
@@ -400,35 +327,23 @@ function PlasmicTickerHeader__RenderFunc(props: {
         <div
           data-plasmic-name={"container9"}
           data-plasmic-override={overrides.container9}
-          className={classNames(projectcss.all, sty.container9)}
+          className={classNames("all", sty.container9)}
         >
           <div
             data-plasmic-name={"text13"}
             data-plasmic-override={overrides.text13}
-            className={classNames(projectcss.all, sty.text13)}
+            className={classNames("all", sty.text13)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__k2Bkw
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__k2Bkw)}>
               {"BUILT WITH LOVE FOR THE WEBFLOW COMMUNITY"}
             </div>
           </div>
           <div
             data-plasmic-name={"text14"}
             data-plasmic-override={overrides.text14}
-            className={classNames(projectcss.all, sty.text14)}
+            className={classNames("all", sty.text14)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__gH
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__gH)}>
               {"|"}
             </div>
           </div>
@@ -436,35 +351,23 @@ function PlasmicTickerHeader__RenderFunc(props: {
         <div
           data-plasmic-name={"container10"}
           data-plasmic-override={overrides.container10}
-          className={classNames(projectcss.all, sty.container10)}
+          className={classNames("all", sty.container10)}
         >
           <div
             data-plasmic-name={"text15"}
             data-plasmic-override={overrides.text15}
-            className={classNames(projectcss.all, sty.text15)}
+            className={classNames("all", sty.text15)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__nVoZx
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__nVoZx)}>
               {"BUILT WITH LOVE FOR THE WEBFLOW COMMUNITY"}
             </div>
           </div>
           <div
             data-plasmic-name={"text16"}
             data-plasmic-override={overrides.text16}
-            className={classNames(projectcss.all, sty.text16)}
+            className={classNames("all", sty.text16)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__nT06P
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text__nT06P)}>
               {"|"}
             </div>
           </div>

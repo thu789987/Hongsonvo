@@ -14,7 +14,8 @@
   position: relative;
 }
 .container {
-  animation: menuLoopdKEfsMWkzOc4 10s linear 0s infinite normal forwards running;
+  animation: var(--anim-dKEfsMWkzOc4) 10s linear 0s infinite normal forwards
+    running;
   width: auto;
   height: 24px;
   display: flex;
@@ -233,7 +234,8 @@
   left: 0px;
 }
 .container6 {
-  animation: menuLoopdKEfsMWkzOc4 10s linear 0s infinite normal forwards running;
+  animation: var(--anim-dKEfsMWkzOc4) 10s linear 0s infinite normal forwards
+    running;
   width: auto;
   height: 24px;
   display: flex;

@@ -65,7 +65,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicCardWhatAboutUs.module.css"; // plasmic-import: fX5hEjjykD_1/css
 
 createPlasmicElementProxy;
@@ -141,8 +140,6 @@ function PlasmicCardWhatAboutUs__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -160,6 +157,9 @@ function PlasmicCardWhatAboutUs__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+
+  const currentUser = useCurrentUser?.() || {};
+
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -177,10 +177,10 @@ function PlasmicCardWhatAboutUs__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.wrapped,
         {
@@ -192,17 +192,17 @@ function PlasmicCardWhatAboutUs__RenderFunc(props: {
       <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
+        className={classNames("all", sty.freeBox)}
       >
         <div
           data-plasmic-name={"container5"}
           data-plasmic-override={overrides.container5}
-          className={classNames(projectcss.all, sty.container5)}
+          className={classNames("all", sty.container5)}
         >
           <div
             data-plasmic-name={"imageWithFallback"}
             data-plasmic-override={overrides.imageWithFallback}
-            className={classNames(projectcss.all, sty.imageWithFallback, {
+            className={classNames("all", sty.imageWithFallback, {
               [sty.imageWithFallback_2__21]: hasVariant($state, "_2", "_21"),
               [sty.imageWithFallback_2__3]: hasVariant($state, "_2", "_3")
             })}
@@ -211,27 +211,18 @@ function PlasmicCardWhatAboutUs__RenderFunc(props: {
         <div
           data-plasmic-name={"container31"}
           data-plasmic-override={overrides.container31}
-          className={classNames(projectcss.all, sty.container31)}
+          className={classNames("all", sty.container31)}
         >
           <div
             data-plasmic-name={"container4"}
             data-plasmic-override={overrides.container4}
-            className={classNames(projectcss.all, sty.container4)}
+            className={classNames("all", sty.container4)}
           >
             <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___0WT5Z,
-                {
-                  [sty.text_2__21___0WT5ZIWhUo]: hasVariant(
-                    $state,
-                    "_2",
-                    "_21"
-                  ),
-                  [sty.text_2__3___0WT5ZvikA]: hasVariant($state, "_2", "_3")
-                }
-              )}
+              className={classNames("all", "__wab_text", sty.text___0WT5Z, {
+                [sty.text_2__21___0WT5ZIWhUo]: hasVariant($state, "_2", "_21"),
+                [sty.text_2__3___0WT5ZvikA]: hasVariant($state, "_2", "_3")
+              })}
             >
               {hasVariant($state, "_2", "_3")
                 ? "Brand strategy and identity design\r"
@@ -242,24 +233,15 @@ function PlasmicCardWhatAboutUs__RenderFunc(props: {
             <div
               data-plasmic-name={"text"}
               data-plasmic-override={overrides.text}
-              className={classNames(projectcss.all, sty.text, {
+              className={classNames("all", sty.text, {
                 [sty.text_2__21]: hasVariant($state, "_2", "_21")
               })}
             >
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__tg3OG,
-                  {
-                    [sty.text_2__21__tg3OGiWhUo]: hasVariant(
-                      $state,
-                      "_2",
-                      "_21"
-                    ),
-                    [sty.text_2__3__tg3OGvikA]: hasVariant($state, "_2", "_3")
-                  }
-                )}
+                className={classNames("all", "__wab_text", sty.text__tg3OG, {
+                  [sty.text_2__21__tg3OGiWhUo]: hasVariant($state, "_2", "_21"),
+                  [sty.text_2__3__tg3OGvikA]: hasVariant($state, "_2", "_3")
+                })}
               >
                 {hasVariant($state, "_2", "_3")
                   ? "03"
@@ -272,7 +254,7 @@ function PlasmicCardWhatAboutUs__RenderFunc(props: {
           <div
             data-plasmic-name={"paragraph"}
             data-plasmic-override={overrides.paragraph}
-            className={classNames(projectcss.all, sty.paragraph)}
+            className={classNames("all", sty.paragraph)}
           >
             <div
               data-plasmic-name={"greatProductsDontJustHappenTheyreShapedB"}
@@ -280,8 +262,8 @@ function PlasmicCardWhatAboutUs__RenderFunc(props: {
                 overrides.greatProductsDontJustHappenTheyreShapedB
               }
               className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
+                "all",
+                "__wab_text",
                 sty.greatProductsDontJustHappenTheyreShapedB,
                 {
                   [sty.greatProductsDontJustHappenTheyreShapedB_2__21]:

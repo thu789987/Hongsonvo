@@ -64,7 +64,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicFotterMain2.module.css"; // plasmic-import: n_BrlO7zQbu5/css
 
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: 2WxnB5zdkiqv/icon
@@ -159,10 +158,10 @@ function PlasmicFotterMain2__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.footer3
       )}
@@ -170,34 +169,30 @@ function PlasmicFotterMain2__RenderFunc(props: {
       <div
         data-plasmic-name={"container41"}
         data-plasmic-override={overrides.container41}
-        className={classNames(projectcss.all, sty.container41)}
+        className={classNames("all", sty.container41)}
       >
         <div
           data-plasmic-name={"container42"}
           data-plasmic-override={overrides.container42}
-          className={classNames(projectcss.all, sty.container42)}
+          className={classNames("all", sty.container42)}
         >
           <div
             data-plasmic-name={"frame1618873418"}
             data-plasmic-override={overrides.frame1618873418}
-            className={classNames(projectcss.all, sty.frame1618873418)}
+            className={classNames("all", sty.frame1618873418)}
           >
             <div
               data-plasmic-name={"navigation5"}
               data-plasmic-override={overrides.navigation5}
-              className={classNames(projectcss.all, sty.navigation5)}
+              className={classNames("all", sty.navigation5)}
             >
               <div
                 data-plasmic-name={"link22"}
                 data-plasmic-override={overrides.link22}
-                className={classNames(projectcss.all, sty.link22)}
+                className={classNames("all", sty.link22)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text___5RoUw
-                  )}
+                  className={classNames("all", "__wab_text", sty.text___5RoUw)}
                 >
                   {"Site Index"}
                 </div>
@@ -205,19 +200,15 @@ function PlasmicFotterMain2__RenderFunc(props: {
               <div
                 data-plasmic-name={"frame1618873419"}
                 data-plasmic-override={overrides.frame1618873419}
-                className={classNames(projectcss.all, sty.frame1618873419)}
+                className={classNames("all", sty.frame1618873419)}
               >
                 <div
                   data-plasmic-name={"link23"}
                   data-plasmic-override={overrides.link23}
-                  className={classNames(projectcss.all, sty.link23)}
+                  className={classNames("all", sty.link23)}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__mvfcw
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__mvfcw)}
                   >
                     {"Home"}
                   </div>
@@ -225,14 +216,10 @@ function PlasmicFotterMain2__RenderFunc(props: {
                 <div
                   data-plasmic-name={"link24"}
                   data-plasmic-override={overrides.link24}
-                  className={classNames(projectcss.all, sty.link24)}
+                  className={classNames("all", sty.link24)}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__rBdD
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__rBdD)}
                   >
                     {"Works"}
                   </div>
@@ -240,14 +227,10 @@ function PlasmicFotterMain2__RenderFunc(props: {
                 <div
                   data-plasmic-name={"link25"}
                   data-plasmic-override={overrides.link25}
-                  className={classNames(projectcss.all, sty.link25)}
+                  className={classNames("all", sty.link25)}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__etfZq
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__etfZq)}
                   >
                     {"Services"}
                   </div>
@@ -255,14 +238,10 @@ function PlasmicFotterMain2__RenderFunc(props: {
                 <div
                   data-plasmic-name={"link26"}
                   data-plasmic-override={overrides.link26}
-                  className={classNames(projectcss.all, sty.link26)}
+                  className={classNames("all", sty.link26)}
                 >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__c4Z2W
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__c4Z2W)}
                   >
                     {"Contact"}
                   </div>
@@ -272,19 +251,15 @@ function PlasmicFotterMain2__RenderFunc(props: {
             <div
               data-plasmic-name={"navigation6"}
               data-plasmic-override={overrides.navigation6}
-              className={classNames(projectcss.all, sty.navigation6)}
+              className={classNames("all", sty.navigation6)}
             >
               <div
                 data-plasmic-name={"link27"}
                 data-plasmic-override={overrides.link27}
-                className={classNames(projectcss.all, sty.link27)}
+                className={classNames("all", sty.link27)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__hqbVv
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__hqbVv)}
                 >
                   {"Social"}
                 </div>
@@ -292,24 +267,20 @@ function PlasmicFotterMain2__RenderFunc(props: {
               <div
                 data-plasmic-name={"frame1618873420"}
                 data-plasmic-override={overrides.frame1618873420}
-                className={classNames(projectcss.all, sty.frame1618873420)}
+                className={classNames("all", sty.frame1618873420)}
               >
                 <div
                   data-plasmic-name={"link28"}
                   data-plasmic-override={overrides.link28}
-                  className={classNames(projectcss.all, sty.link28)}
+                  className={classNames("all", sty.link28)}
                 >
                   <Icon2Icon
-                    className={classNames(projectcss.all, sty.svg___4LAcw)}
+                    className={classNames("all", sty.svg___4LAcw)}
                     role={"img"}
                   />
 
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__t38Nj
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__t38Nj)}
                   >
                     {"Facebook"}
                   </div>
@@ -317,19 +288,15 @@ function PlasmicFotterMain2__RenderFunc(props: {
                 <div
                   data-plasmic-name={"link29"}
                   data-plasmic-override={overrides.link29}
-                  className={classNames(projectcss.all, sty.link29)}
+                  className={classNames("all", sty.link29)}
                 >
                   <Icon2Icon
-                    className={classNames(projectcss.all, sty.svg__bfkx5)}
+                    className={classNames("all", sty.svg__bfkx5)}
                     role={"img"}
                   />
 
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__dTAge
-                    )}
+                    className={classNames("all", "__wab_text", sty.text__dTAge)}
                   >
                     {"LinkedIn"}
                   </div>
@@ -337,17 +304,17 @@ function PlasmicFotterMain2__RenderFunc(props: {
                 <div
                   data-plasmic-name={"link30"}
                   data-plasmic-override={overrides.link30}
-                  className={classNames(projectcss.all, sty.link30)}
+                  className={classNames("all", sty.link30)}
                 >
                   <Icon2Icon
-                    className={classNames(projectcss.all, sty.svg__umiK9)}
+                    className={classNames("all", sty.svg__umiK9)}
                     role={"img"}
                   />
 
                   <div
                     className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
+                      "all",
+                      "__wab_text",
                       sty.text___47FsH
                     )}
                   >
@@ -359,28 +326,20 @@ function PlasmicFotterMain2__RenderFunc(props: {
             <div
               data-plasmic-name={"container43"}
               data-plasmic-override={overrides.container43}
-              className={classNames(projectcss.all, sty.container43)}
+              className={classNames("all", sty.container43)}
             >
               <div
                 data-plasmic-name={"frame1618873421"}
                 data-plasmic-override={overrides.frame1618873421}
-                className={classNames(projectcss.all, sty.frame1618873421)}
+                className={classNames("all", sty.frame1618873421)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text___96Ut7
-                  )}
+                  className={classNames("all", "__wab_text", sty.text___96Ut7)}
                 >
                   {"Tell us about your project.\nLet's collaborate."}
                 </div>
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__wqUxN
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__wqUxN)}
                 >
                   {"05:11:04 (GMT+2)"}
                 </div>
@@ -388,32 +347,20 @@ function PlasmicFotterMain2__RenderFunc(props: {
               <div
                 data-plasmic-name={"frame1618873422"}
                 data-plasmic-override={overrides.frame1618873422}
-                className={classNames(projectcss.all, sty.frame1618873422)}
+                className={classNames("all", sty.frame1618873422)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__ygF06
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__ygF06)}
                 >
                   {"+27 (0) 78 054 8476"}
                 </div>
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__ozy3E
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__ozy3E)}
                 >
                   {"Thu789987@gmail.com"}
                 </div>
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__y68TI
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__y68TI)}
                 >
                   {"Write Us"}
                 </div>
@@ -421,7 +368,7 @@ function PlasmicFotterMain2__RenderFunc(props: {
               <div
                 data-plasmic-name={"link31"}
                 data-plasmic-override={overrides.link31}
-                className={classNames(projectcss.all, sty.link31)}
+                className={classNames("all", sty.link31)}
               >
                 <PlasmicImg__
                   alt={""}
@@ -519,15 +466,9 @@ function PlasmicFotterMain2__RenderFunc(props: {
         <div
           data-plasmic-name={"heading17"}
           data-plasmic-override={overrides.heading17}
-          className={classNames(projectcss.all, sty.heading17)}
+          className={classNames("all", sty.heading17)}
         >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__iRh7A
-            )}
-          >
+          <div className={classNames("all", "__wab_text", sty.text__iRh7A)}>
             {"GLEADS"}
           </div>
         </div>

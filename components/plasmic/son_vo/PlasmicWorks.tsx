@@ -81,7 +81,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicWorks.module.css"; // plasmic-import: tTCkSMouIA8B/css
 
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: I6R9tdLXkQer/icon
@@ -249,17 +248,17 @@ function PlasmicWorks__RenderFunc(props: {
         }
       `}</style>
 
-      <div className={projectcss.plasmic_page_wrapper}>
+      <div className={"plasmic_page_wrapper"}>
         <div
           data-plasmic-name={"root"}
           data-plasmic-override={overrides.root}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
-            projectcss.all,
-            projectcss.root_reset,
-            projectcss.plasmic_default_styles,
-            projectcss.plasmic_mixins,
+            "all",
+            "root_reset_bLa1shfC4noziDsvmxjKJF",
+            "plasmic_default_styles",
+            "plasmic_mixins",
             styleTokensClassNames,
             sty.root
           )}
@@ -285,8 +284,8 @@ function PlasmicWorks__RenderFunc(props: {
             duration={1.2}
             wheelMultiplier={1}
           >
-            <div className={classNames(projectcss.all, sty.freeBox__jmxHv)}>
-              <div className={classNames(projectcss.all, sty.freeBox__lEpwG)}>
+            <div className={classNames("all", sty.freeBox__jmxHv)}>
+              <div className={classNames("all", sty.freeBox__lEpwG)}>
                 <LineBg
                   className={classNames("__wab_instance", sty.lineBg__wJgIr)}
                 />
@@ -304,8 +303,8 @@ function PlasmicWorks__RenderFunc(props: {
                   headerTitle={
                     <div
                       className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
+                        "all",
+                        "__wab_text",
                         sty.text__ndGkf
                       )}
                     >
@@ -336,24 +335,17 @@ function PlasmicWorks__RenderFunc(props: {
               <div
                 data-plasmic-name={"headerHeroSection"}
                 data-plasmic-override={overrides.headerHeroSection}
-                className={classNames(projectcss.all, sty.headerHeroSection)}
+                className={classNames("all", sty.headerHeroSection)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__wo9Dy)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__fUTzO)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox___7DKz0
-                      )}
-                    >
+                <div className={classNames("all", sty.freeBox__wo9Dy)}>
+                  <div className={classNames("all", sty.freeBox__fUTzO)}>
+                    <div className={classNames("all", sty.freeBox___7DKz0)}>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1__czfVh
                         )}
                       >
@@ -362,10 +354,10 @@ function PlasmicWorks__RenderFunc(props: {
                     </div>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__tuaGm
                       )}
                     >
@@ -373,22 +365,20 @@ function PlasmicWorks__RenderFunc(props: {
                     </h1>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__bjaYl
                       )}
                     >
                       {"\rwebsite template."}
                     </h1>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__xTnIx)}
-                    >
+                    <div className={classNames("all", sty.freeBox__xTnIx)}>
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__gcHxx
                         )}
                       >
@@ -399,22 +389,22 @@ function PlasmicWorks__RenderFunc(props: {
                       <div
                         data-plasmic-name={"loved"}
                         data-plasmic-override={overrides.loved}
-                        className={classNames(projectcss.all, sty.loved)}
+                        className={classNames("all", sty.loved)}
                       >
                         <div
                           data-plasmic-name={"variant1"}
                           data-plasmic-override={overrides.variant1}
-                          className={classNames(projectcss.all, sty.variant1)}
+                          className={classNames("all", sty.variant1)}
                         >
                           <div
                             data-plasmic-name={"_1"}
                             data-plasmic-override={overrides._1}
-                            className={classNames(projectcss.all, sty._1)}
+                            className={classNames("all", sty._1)}
                           >
                             <div
                               data-plasmic-name={"img"}
                               data-plasmic-override={overrides.img}
-                              className={classNames(projectcss.all, sty.img)}
+                              className={classNames("all", sty.img)}
                             >
                               <div
                                 data-plasmic-name={
@@ -424,7 +414,7 @@ function PlasmicWorks__RenderFunc(props: {
                                   overrides.e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg
                                 )}
                               />
@@ -433,12 +423,12 @@ function PlasmicWorks__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_2"}
                             data-plasmic-override={overrides._2}
-                            className={classNames(projectcss.all, sty._2)}
+                            className={classNames("all", sty._2)}
                           >
                             <div
                               data-plasmic-name={"img2"}
                               data-plasmic-override={overrides.img2}
-                              className={classNames(projectcss.all, sty.img2)}
+                              className={classNames("all", sty.img2)}
                             >
                               <div
                                 data-plasmic-name={
@@ -448,7 +438,7 @@ function PlasmicWorks__RenderFunc(props: {
                                   overrides.tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg
                                 )}
                               />
@@ -457,12 +447,12 @@ function PlasmicWorks__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_3"}
                             data-plasmic-override={overrides._3}
-                            className={classNames(projectcss.all, sty._3)}
+                            className={classNames("all", sty._3)}
                           >
                             <div
                               data-plasmic-name={"img3"}
                               data-plasmic-override={overrides.img3}
-                              className={classNames(projectcss.all, sty.img3)}
+                              className={classNames("all", sty.img3)}
                             >
                               <div
                                 data-plasmic-name={
@@ -472,7 +462,7 @@ function PlasmicWorks__RenderFunc(props: {
                                   overrides.hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg
                                 )}
                               />
@@ -481,12 +471,12 @@ function PlasmicWorks__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_4"}
                             data-plasmic-override={overrides._4}
-                            className={classNames(projectcss.all, sty._4)}
+                            className={classNames("all", sty._4)}
                           >
                             <div
                               data-plasmic-name={"img4"}
                               data-plasmic-override={overrides.img4}
-                              className={classNames(projectcss.all, sty.img4)}
+                              className={classNames("all", sty.img4)}
                             >
                               <div
                                 data-plasmic-name={
@@ -496,7 +486,7 @@ function PlasmicWorks__RenderFunc(props: {
                                   overrides._069SD4E4Rbd50L3X97XsgTvpcJpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty._069Sd4E4Rbd50L3X97XsgTvpcJpg
                                 )}
                               />
@@ -505,12 +495,12 @@ function PlasmicWorks__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_5"}
                             data-plasmic-override={overrides._5}
-                            className={classNames(projectcss.all, sty._5)}
+                            className={classNames("all", sty._5)}
                           >
                             <div
                               data-plasmic-name={"img5"}
                               data-plasmic-override={overrides.img5}
-                              className={classNames(projectcss.all, sty.img5)}
+                              className={classNames("all", sty.img5)}
                             >
                               <div
                                 data-plasmic-name={
@@ -520,7 +510,7 @@ function PlasmicWorks__RenderFunc(props: {
                                   overrides.vk7E0Slt7OvlQa7QVqyREh2TxqcJpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.vk7E0Slt7OvlQa7QVqyREh2TxqcJpg
                                 )}
                               />
@@ -529,39 +519,27 @@ function PlasmicWorks__RenderFunc(props: {
                           <div
                             data-plasmic-name={"ratingDetails"}
                             data-plasmic-override={overrides.ratingDetails}
-                            className={classNames(
-                              projectcss.all,
-                              sty.ratingDetails
-                            )}
+                            className={classNames("all", sty.ratingDetails)}
                           >
                             <div
                               data-plasmic-name={"ratingInfo"}
                               data-plasmic-override={overrides.ratingInfo}
-                              className={classNames(
-                                projectcss.all,
-                                sty.ratingInfo
-                              )}
+                              className={classNames("all", sty.ratingInfo)}
                             >
                               <div
                                 data-plasmic-name={"ratingScore"}
                                 data-plasmic-override={overrides.ratingScore}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.ratingScore
-                                )}
+                                className={classNames("all", sty.ratingScore)}
                               >
                                 <div
                                   data-plasmic-name={"container"}
                                   data-plasmic-override={overrides.container}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.container
-                                  )}
+                                  className={classNames("all", sty.container)}
                                 >
                                   <div
                                     className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
+                                      "all",
+                                      "__wab_text",
                                       sty.text__hgk2Q
                                     )}
                                   >
@@ -573,17 +551,14 @@ function PlasmicWorks__RenderFunc(props: {
                                 data-plasmic-name={"starsContainer"}
                                 data-plasmic-override={overrides.starsContainer}
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.starsContainer
                                 )}
                               >
                                 <div
                                   data-plasmic-name={"svg"}
                                   data-plasmic-override={overrides.svg}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg
-                                  )}
+                                  className={classNames("all", sty.svg)}
                                 >
                                   <PlasmicImg__
                                     alt={""}
@@ -608,23 +583,17 @@ function PlasmicWorks__RenderFunc(props: {
                             <div
                               data-plasmic-name={"ratingText"}
                               data-plasmic-override={overrides.ratingText}
-                              className={classNames(
-                                projectcss.all,
-                                sty.ratingText
-                              )}
+                              className={classNames("all", sty.ratingText)}
                             >
                               <div
                                 data-plasmic-name={"container2"}
                                 data-plasmic-override={overrides.container2}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.container2
-                                )}
+                                className={classNames("all", sty.container2)}
                               >
                                 <div
                                   className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
+                                    "all",
+                                    "__wab_text",
                                     sty.text__ek6Jt
                                   )}
                                 >
@@ -636,9 +605,7 @@ function PlasmicWorks__RenderFunc(props: {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox___22SM)}
-                    >
+                    <div className={classNames("all", sty.freeBox___22SM)}>
                       <Button
                         className={classNames(
                           "__wab_instance",
@@ -646,10 +613,7 @@ function PlasmicWorks__RenderFunc(props: {
                         )}
                         end={
                           <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__n8W6B
-                            )}
+                            className={classNames("all", sty.svg__n8W6B)}
                             role={"img"}
                           />
                         }
@@ -657,8 +621,8 @@ function PlasmicWorks__RenderFunc(props: {
                         label={
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__e2Nva
                             )}
                           >
@@ -677,8 +641,8 @@ function PlasmicWorks__RenderFunc(props: {
                         label={
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__suOup
                             )}
                           >
@@ -696,22 +660,22 @@ function PlasmicWorks__RenderFunc(props: {
               <div
                 data-plasmic-name={"headerHeroSection4"}
                 data-plasmic-override={overrides.headerHeroSection4}
-                className={classNames(projectcss.all, sty.headerHeroSection4)}
+                className={classNames("all", sty.headerHeroSection4)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__exuy7)}>
+                <div className={classNames("all", sty.freeBox__exuy7)}>
                   <div
                     className={classNames(
-                      projectcss.all,
+                      "all",
                       sty.freeBox__bhbVe,
                       "animate-text"
                     )}
                   >
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__asJid
                       )}
                     >
@@ -720,17 +684,17 @@ function PlasmicWorks__RenderFunc(props: {
                   </div>
                   <div
                     className={classNames(
-                      projectcss.all,
+                      "all",
                       sty.freeBox__y7Ofn,
                       "animate-text"
                     )}
                   >
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__kAy9W
                       )}
                     >
@@ -738,10 +702,10 @@ function PlasmicWorks__RenderFunc(props: {
                     </h1>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__nIj0
                       )}
                     >
@@ -749,10 +713,10 @@ function PlasmicWorks__RenderFunc(props: {
                     </h1>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__q8W0U
                       )}
                     >
@@ -761,17 +725,17 @@ function PlasmicWorks__RenderFunc(props: {
                   </div>
                   <div
                     className={classNames(
-                      projectcss.all,
+                      "all",
                       sty.freeBox__bxJq4,
                       "animate-text"
                     )}
                   >
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__maMnc
                       )}
                     >
@@ -783,14 +747,14 @@ function PlasmicWorks__RenderFunc(props: {
               <div
                 data-plasmic-name={"headerHeroSection3"}
                 data-plasmic-override={overrides.headerHeroSection3}
-                className={classNames(projectcss.all, sty.headerHeroSection3)}
+                className={classNames("all", sty.headerHeroSection3)}
               >
                 <h1
                   className={classNames(
-                    projectcss.all,
-                    projectcss.h1,
-                    projectcss.h1__bLa1s,
-                    projectcss.__wab_text,
+                    "all",
+                    "h1",
+                    "h1__bLa1s",
+                    "__wab_text",
                     sty.h1__xfsmG
                   )}
                 >
@@ -808,10 +772,10 @@ function PlasmicWorks__RenderFunc(props: {
                     {$ctx => (
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1___4905H
                         )}
                       >
@@ -836,10 +800,10 @@ function PlasmicWorks__RenderFunc(props: {
                 </CachedAirtable>
                 <h1
                   className={classNames(
-                    projectcss.all,
-                    projectcss.h1,
-                    projectcss.h1__bLa1s,
-                    projectcss.__wab_text,
+                    "all",
+                    "h1",
+                    "h1__bLa1s",
+                    "__wab_text",
                     sty.h1__mNq9S
                   )}
                 >
@@ -847,10 +811,10 @@ function PlasmicWorks__RenderFunc(props: {
                 </h1>
                 <h1
                   className={classNames(
-                    projectcss.all,
-                    projectcss.h1,
-                    projectcss.h1__bLa1s,
-                    projectcss.__wab_text,
+                    "all",
+                    "h1",
+                    "h1__bLa1s",
+                    "__wab_text",
                     sty.h1__gfPmt
                   )}
                 >
@@ -860,12 +824,12 @@ function PlasmicWorks__RenderFunc(props: {
               <div
                 data-plasmic-name={"sectionCards3"}
                 data-plasmic-override={overrides.sectionCards3}
-                className={classNames(projectcss.all, sty.sectionCards3)}
+                className={classNames("all", sty.sectionCards3)}
               >
                 <div
                   data-plasmic-name={"container49"}
                   data-plasmic-override={overrides.container49}
-                  className={classNames(projectcss.all, sty.container49)}
+                  className={classNames("all", sty.container49)}
                 >
                   <CachedAirtable
                     className={classNames(
@@ -1082,18 +1046,14 @@ function PlasmicWorks__RenderFunc(props: {
                       : "fullContentWidth"
                   }
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__kg8V9)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__jqhOk)}
-                    >
+                  <div className={classNames("all", sty.freeBox__kg8V9)}>
+                    <div className={classNames("all", sty.freeBox__jqhOk)}>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1___4LdUv
                         )}
                       >
@@ -1101,10 +1061,10 @@ function PlasmicWorks__RenderFunc(props: {
                       </h1>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1__xs414
                         )}
                       >
@@ -1123,7 +1083,7 @@ function PlasmicWorks__RenderFunc(props: {
               className={classNames("__wab_instance", sty.fotterMain__bRaMl)}
             />
 
-            <div className={classNames(projectcss.all, sty.freeBox__jpMh8)}>
+            <div className={classNames("all", sty.freeBox__jpMh8)}>
               <LineBg
                 className={classNames("__wab_instance", sty.lineBg__dnZqG)}
               />

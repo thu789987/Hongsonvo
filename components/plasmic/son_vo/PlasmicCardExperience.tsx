@@ -65,7 +65,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicCardExperience.module.css"; // plasmic-import: dkKX5oUPUtTr/css
 
 createPlasmicElementProxy;
@@ -197,10 +196,6 @@ function PlasmicCardExperience__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const globalVariants = _useGlobalVariants();
-
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -282,6 +277,11 @@ function PlasmicCardExperience__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+
+  const globalVariants = _useGlobalVariants();
+
+  const currentUser = useCurrentUser?.() || {};
+
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -299,10 +299,10 @@ function PlasmicCardExperience__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root,
         {
@@ -362,7 +362,7 @@ function PlasmicCardExperience__RenderFunc(props: {
           <DataCtxReader__>
             {$ctx => (
               <div
-                className={classNames(projectcss.all, sty.freeBox__k3D1M, {
+                className={classNames("all", sty.freeBox__k3D1M, {
                   [sty.freeBoxproject1__k3D1MuWrEk]: hasVariant(
                     $state,
                     "project1",
@@ -371,7 +371,7 @@ function PlasmicCardExperience__RenderFunc(props: {
                 })}
               >
                 <div
-                  className={classNames(projectcss.all, sty.freeBox__foXrk, {
+                  className={classNames("all", sty.freeBox__foXrk, {
                     [sty.freeBoxproject1__foXrKuWrEk]: hasVariant(
                       $state,
                       "project1",
@@ -380,7 +380,7 @@ function PlasmicCardExperience__RenderFunc(props: {
                   })}
                 >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__m1Fy, {
+                    className={classNames("all", sty.freeBox__m1Fy, {
                       [sty.freeBoxproject1__m1FyUWrEk]: hasVariant(
                         $state,
                         "project1",
@@ -389,7 +389,7 @@ function PlasmicCardExperience__RenderFunc(props: {
                     })}
                   >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__ml4R, {
+                      className={classNames("all", sty.freeBox__ml4R, {
                         [sty.freeBoxproject1__ml4RuWrEk]: hasVariant(
                           $state,
                           "project1",
@@ -399,24 +399,20 @@ function PlasmicCardExperience__RenderFunc(props: {
                     />
 
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox__hmvsf,
-                        {
-                          [sty.freeBoxproject1__hmvsfuWrEk]: hasVariant(
-                            $state,
-                            "project1",
-                            "project1"
-                          )
-                        }
-                      )}
+                      className={classNames("all", sty.freeBox__hmvsf, {
+                        [sty.freeBoxproject1__hmvsfuWrEk]: hasVariant(
+                          $state,
+                          "project1",
+                          "project1"
+                        )
+                      })}
                     >
                       <div
                         data-plasmic-name={"titleArtDirection2"}
                         data-plasmic-override={overrides.titleArtDirection2}
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.titleArtDirection2,
                           {
                             [sty.titleArtDirection2project1]: hasVariant(
@@ -445,17 +441,13 @@ function PlasmicCardExperience__RenderFunc(props: {
                       </div>
                     </div>
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        sty.freeBox__jfKvs,
-                        {
-                          [sty.freeBoxproject1__jfKvSuWrEk]: hasVariant(
-                            $state,
-                            "project1",
-                            "project1"
-                          )
-                        }
-                      )}
+                      className={classNames("all", sty.freeBox__jfKvs, {
+                        [sty.freeBoxproject1__jfKvSuWrEk]: hasVariant(
+                          $state,
+                          "project1",
+                          "project1"
+                        )
+                      })}
                     >
                       <PlasmicImg__
                         data-plasmic-name={"img"}
@@ -482,8 +474,8 @@ function PlasmicCardExperience__RenderFunc(props: {
                         data-plasmic-name={"titleArtDirection3"}
                         data-plasmic-override={overrides.titleArtDirection3}
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.titleArtDirection3,
                           {
                             [sty.titleArtDirection3project1]: hasVariant(
@@ -514,8 +506,8 @@ function PlasmicCardExperience__RenderFunc(props: {
                         data-plasmic-name={"number012"}
                         data-plasmic-override={overrides.number012}
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.number012,
                           {
                             [sty.number012project1]: hasVariant(
@@ -546,7 +538,7 @@ function PlasmicCardExperience__RenderFunc(props: {
                   </div>
                 </div>
                 <div
-                  className={classNames(projectcss.all, sty.freeBox__r0Vw, {
+                  className={classNames("all", sty.freeBox__r0Vw, {
                     [sty.freeBoxproject1__r0VwUWrEk]: hasVariant(
                       $state,
                       "project1",
@@ -555,7 +547,7 @@ function PlasmicCardExperience__RenderFunc(props: {
                   })}
                 >
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__cjKsj, {
+                    className={classNames("all", sty.freeBox__cjKsj, {
                       [sty.freeBoxproject1__cjKsJuWrEk]: hasVariant(
                         $state,
                         "project1",
@@ -571,7 +563,7 @@ function PlasmicCardExperience__RenderFunc(props: {
                         overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure
                       }
                       className={classNames(
-                        projectcss.all,
+                        "all",
                         sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure,
                         {
                           [sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndureproject1]:
@@ -587,8 +579,8 @@ function PlasmicCardExperience__RenderFunc(props: {
                           overrides.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2
                         }
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2,
                           {
                             [sty.weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailTranslatingEmotionIntoVisualStoriesThatConnectInspireAndEndure2project1]:

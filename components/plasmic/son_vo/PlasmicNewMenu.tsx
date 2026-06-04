@@ -65,7 +65,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicNewMenu.module.css"; // plasmic-import: H0Q4YGXvnXjh/css
 
 createPlasmicElementProxy;
@@ -139,10 +138,6 @@ function PlasmicNewMenu__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const globalVariants = _useGlobalVariants();
-
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -161,6 +156,11 @@ function PlasmicNewMenu__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+
+  const globalVariants = _useGlobalVariants();
+
+  const currentUser = useCurrentUser?.() || {};
+
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -178,10 +178,10 @@ function PlasmicNewMenu__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.menu,
         hasVariant($state, "scrolledState", "scrolledState")
@@ -198,7 +198,7 @@ function PlasmicNewMenu__RenderFunc(props: {
       )}
     >
       <div
-        className={classNames(projectcss.all, sty.freeBox__eCo7W, {
+        className={classNames("all", sty.freeBox__eCo7W, {
           [sty.freeBoxactivePage_myJourney__eCo7WtmLyG]: hasVariant(
             $state,
             "activePage",
@@ -208,10 +208,10 @@ function PlasmicNewMenu__RenderFunc(props: {
       >
         <PlasmicLink__
           className={classNames(
-            projectcss.all,
-            projectcss.a,
-            projectcss.a__bLa1s,
-            projectcss.__wab_text,
+            "all",
+            "a",
+            "a__bLa1s",
+            "__wab_text",
             sty.link__xdhB6
           )}
           component={Link}
@@ -223,7 +223,7 @@ function PlasmicNewMenu__RenderFunc(props: {
         </PlasmicLink__>
       </div>
       <div
-        className={classNames(projectcss.all, sty.freeBox___6LhCd, {
+        className={classNames("all", sty.freeBox___6LhCd, {
           [sty.freeBoxactivePage_contact___6LhCdBgSi8]: hasVariant(
             $state,
             "activePage",
@@ -237,7 +237,7 @@ function PlasmicNewMenu__RenderFunc(props: {
         })}
       >
         <div
-          className={classNames(projectcss.all, sty.freeBox__ieTg, {
+          className={classNames("all", sty.freeBox__ieTg, {
             [sty.freeBoxactivePage_contact__ieTgBgSi8]: hasVariant(
               $state,
               "activePage",
@@ -251,36 +251,30 @@ function PlasmicNewMenu__RenderFunc(props: {
           })}
         >
           <PlasmicLink__
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.a__bLa1s,
-              sty.link__fVudO,
-              {
-                [sty.linkactivePage_homepage__fVudOXsBe6]: hasVariant(
-                  $state,
-                  "activePage",
-                  "homepage"
-                ),
-                [sty.linkactivePage_myJourney__fVudOtmLyG]: hasVariant(
-                  $state,
-                  "activePage",
-                  "myJourney"
-                ),
-                [sty.linkactivePage_works__fVudOoqHx2]: hasVariant(
-                  $state,
-                  "activePage",
-                  "works"
-                )
-              }
-            )}
+            className={classNames("all", "a", "a__bLa1s", sty.link__fVudO, {
+              [sty.linkactivePage_homepage__fVudOXsBe6]: hasVariant(
+                $state,
+                "activePage",
+                "homepage"
+              ),
+              [sty.linkactivePage_myJourney__fVudOtmLyG]: hasVariant(
+                $state,
+                "activePage",
+                "myJourney"
+              ),
+              [sty.linkactivePage_works__fVudOoqHx2]: hasVariant(
+                $state,
+                "activePage",
+                "works"
+              )
+            })}
             component={Link}
             href={`/`}
             legacyBehavior={false}
             platform={"nextjs"}
           >
             <div
-              className={classNames(projectcss.all, sty.freeBox__thJcf, {
+              className={classNames("all", sty.freeBox__thJcf, {
                 [sty.freeBoxactivePage_contact__thJcfBgSi8]: hasVariant(
                   $state,
                   "activePage",
@@ -323,31 +317,25 @@ function PlasmicNewMenu__RenderFunc(props: {
             />
           </PlasmicLink__>
           <PlasmicLink__
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.a__bLa1s,
-              sty.link__eRnQ,
-              {
-                [sty.linkactivePage_myJourney__eRnQTmLyG]: hasVariant(
-                  $state,
-                  "activePage",
-                  "myJourney"
-                ),
-                [sty.linkactivePage_works__eRnQOqHx2]: hasVariant(
-                  $state,
-                  "activePage",
-                  "works"
-                )
-              }
-            )}
+            className={classNames("all", "a", "a__bLa1s", sty.link__eRnQ, {
+              [sty.linkactivePage_myJourney__eRnQTmLyG]: hasVariant(
+                $state,
+                "activePage",
+                "myJourney"
+              ),
+              [sty.linkactivePage_works__eRnQOqHx2]: hasVariant(
+                $state,
+                "activePage",
+                "works"
+              )
+            })}
             component={Link}
             href={`/my-journey`}
             legacyBehavior={false}
             platform={"nextjs"}
           >
             <div
-              className={classNames(projectcss.all, sty.freeBox__dHmTe, {
+              className={classNames("all", sty.freeBox__dHmTe, {
                 [sty.freeBoxactivePage_myJourney__dHmTeTmLyG]: hasVariant(
                   $state,
                   "activePage",
@@ -375,29 +363,23 @@ function PlasmicNewMenu__RenderFunc(props: {
             />
           </PlasmicLink__>
           <PlasmicLink__
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.a__bLa1s,
-              sty.link__fvRmQ,
-              {
-                [sty.linkactivePage_contact__fvRmQBgSi8]: hasVariant(
-                  $state,
-                  "activePage",
-                  "contact"
-                ),
-                [sty.linkactivePage_myJourney__fvRmQtmLyG]: hasVariant(
-                  $state,
-                  "activePage",
-                  "myJourney"
-                ),
-                [sty.linkactivePage_works__fvRmQoqHx2]: hasVariant(
-                  $state,
-                  "activePage",
-                  "works"
-                )
-              }
-            )}
+            className={classNames("all", "a", "a__bLa1s", sty.link__fvRmQ, {
+              [sty.linkactivePage_contact__fvRmQBgSi8]: hasVariant(
+                $state,
+                "activePage",
+                "contact"
+              ),
+              [sty.linkactivePage_myJourney__fvRmQtmLyG]: hasVariant(
+                $state,
+                "activePage",
+                "myJourney"
+              ),
+              [sty.linkactivePage_works__fvRmQoqHx2]: hasVariant(
+                $state,
+                "activePage",
+                "works"
+              )
+            })}
             component={Link}
             href={`/works`}
             legacyBehavior={false}
@@ -411,7 +393,7 @@ function PlasmicNewMenu__RenderFunc(props: {
                   : false
             ) ? (
               <div
-                className={classNames(projectcss.all, sty.freeBox__dfhMw, {
+                className={classNames("all", sty.freeBox__dfhMw, {
                   [sty.freeBoxactivePage_contact__dfhMwBgSi8]: hasVariant(
                     $state,
                     "activePage",
@@ -444,24 +426,18 @@ function PlasmicNewMenu__RenderFunc(props: {
             />
           </PlasmicLink__>
           <PlasmicLink__
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.a__bLa1s,
-              sty.link__aqvms,
-              {
-                [sty.linkactivePage_contact__aqvmsBgSi8]: hasVariant(
-                  $state,
-                  "activePage",
-                  "contact"
-                ),
-                [sty.linkactivePage_works__aqvmsOqHx2]: hasVariant(
-                  $state,
-                  "activePage",
-                  "works"
-                )
-              }
-            )}
+            className={classNames("all", "a", "a__bLa1s", sty.link__aqvms, {
+              [sty.linkactivePage_contact__aqvmsBgSi8]: hasVariant(
+                $state,
+                "activePage",
+                "contact"
+              ),
+              [sty.linkactivePage_works__aqvmsOqHx2]: hasVariant(
+                $state,
+                "activePage",
+                "works"
+              )
+            })}
             component={Link}
             href={`/contact`}
             legacyBehavior={false}
@@ -477,7 +453,7 @@ function PlasmicNewMenu__RenderFunc(props: {
                     : false
             ) ? (
               <div
-                className={classNames(projectcss.all, sty.freeBox__xplVk, {
+                className={classNames("all", sty.freeBox__xplVk, {
                   [sty.freeBoxactivePage_contact__xplVkBgSi8]: hasVariant(
                     $state,
                     "activePage",
@@ -512,7 +488,7 @@ function PlasmicNewMenu__RenderFunc(props: {
         </div>
       </div>
       <div
-        className={classNames(projectcss.all, sty.freeBox___2ndUm, {
+        className={classNames("all", sty.freeBox___2ndUm, {
           [sty.freeBoxactivePage_myJourney___2ndUmTmLyG]: hasVariant(
             $state,
             "activePage",
@@ -527,13 +503,7 @@ function PlasmicNewMenu__RenderFunc(props: {
       >
         {renderPlasmicSlot({
           defaultContents: (
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___36Be
-              )}
-            >
+            <div className={classNames("all", "__wab_text", sty.text___36Be)}>
               {"[ 2026 ]"}
             </div>
           ),
@@ -541,12 +511,7 @@ function PlasmicNewMenu__RenderFunc(props: {
           className: classNames(sty.slotTargetHeaderTitle)
         })}
         <PlasmicLink__
-          className={classNames(
-            projectcss.all,
-            projectcss.a,
-            projectcss.a__bLa1s,
-            sty.link__aBbEh
-          )}
+          className={classNames("all", "a", "a__bLa1s", sty.link__aBbEh)}
           component={Link}
           href={
             "https://drive.google.com/file/d/13j1S7cgOtDA6DdY4r2YLezK-Med9w2Dy/view?usp=sharing"
@@ -558,18 +523,13 @@ function PlasmicNewMenu__RenderFunc(props: {
           <div
             data-plasmic-name={"text"}
             data-plasmic-override={overrides.text}
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text,
-              {
-                [sty.textscrolledState]: hasVariant(
-                  $state,
-                  "scrolledState",
-                  "scrolledState"
-                )
-              }
-            )}
+            className={classNames("all", "__wab_text", sty.text, {
+              [sty.textscrolledState]: hasVariant(
+                $state,
+                "scrolledState",
+                "scrolledState"
+              )
+            })}
           >
             {"My resume"}
           </div>

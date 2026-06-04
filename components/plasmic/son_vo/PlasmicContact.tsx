@@ -78,7 +78,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicContact.module.css"; // plasmic-import: Vvf9GHp0XqJi/css
 
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: I6R9tdLXkQer/icon
@@ -247,17 +246,17 @@ function PlasmicContact__RenderFunc(props: {
         }
       `}</style>
 
-      <div className={projectcss.plasmic_page_wrapper}>
+      <div className={"plasmic_page_wrapper"}>
         <div
           data-plasmic-name={"root"}
           data-plasmic-override={overrides.root}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
-            projectcss.all,
-            projectcss.root_reset,
-            projectcss.plasmic_default_styles,
-            projectcss.plasmic_mixins,
+            "all",
+            "root_reset_bLa1shfC4noziDsvmxjKJF",
+            "plasmic_default_styles",
+            "plasmic_mixins",
             styleTokensClassNames,
             sty.root
           )}
@@ -283,7 +282,7 @@ function PlasmicContact__RenderFunc(props: {
             duration={1.2}
             wheelMultiplier={1}
           >
-            <div className={classNames(projectcss.all, sty.freeBox__nqF1I)}>
+            <div className={classNames("all", sty.freeBox__nqF1I)}>
               <CircularText
                 className={classNames(
                   "__wab_instance",
@@ -309,22 +308,22 @@ function PlasmicContact__RenderFunc(props: {
                 <div
                   data-plasmic-name={"sectionCards2"}
                   data-plasmic-override={overrides.sectionCards2}
-                  className={classNames(projectcss.all, sty.sectionCards2)}
+                  className={classNames("all", sty.sectionCards2)}
                 >
                   <div
                     data-plasmic-name={"left"}
                     data-plasmic-override={overrides.left}
-                    className={classNames(projectcss.all, sty.left)}
+                    className={classNames("all", sty.left)}
                   >
                     <div
                       data-plasmic-name={"container4"}
                       data-plasmic-override={overrides.container4}
-                      className={classNames(projectcss.all, sty.container4)}
+                      className={classNames("all", sty.container4)}
                     >
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__p9XpT
                         )}
                       >
@@ -332,10 +331,10 @@ function PlasmicContact__RenderFunc(props: {
                       </div>
                       <PlasmicLink__
                         className={classNames(
-                          projectcss.all,
-                          projectcss.a,
-                          projectcss.a__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "a",
+                          "a__bLa1s",
+                          "__wab_text",
                           sty.link__rJDkl
                         )}
                         component={Link}
@@ -350,12 +349,12 @@ function PlasmicContact__RenderFunc(props: {
                   <div
                     data-plasmic-name={"left2"}
                     data-plasmic-override={overrides.left2}
-                    className={classNames(projectcss.all, sty.left2)}
+                    className={classNames("all", sty.left2)}
                   >
                     <div
                       data-plasmic-name={"container5"}
                       data-plasmic-override={overrides.container5}
-                      className={classNames(projectcss.all, sty.container5)}
+                      className={classNames("all", sty.container5)}
                     >
                       <HackerText
                         className={classNames(
@@ -381,17 +380,12 @@ function PlasmicContact__RenderFunc(props: {
                         text={"HO CHI MINH CITY"}
                       />
 
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__lcmx7
-                        )}
-                      >
+                      <div className={classNames("all", sty.freeBox__lcmx7)}>
                         <PlasmicLink__
                           className={classNames(
-                            projectcss.all,
-                            projectcss.a,
-                            projectcss.a__bLa1s,
+                            "all",
+                            "a",
+                            "a__bLa1s",
                             sty.link__ihDtU
                           )}
                           component={Link}
@@ -414,9 +408,9 @@ function PlasmicContact__RenderFunc(props: {
                         </PlasmicLink__>
                         <PlasmicLink__
                           className={classNames(
-                            projectcss.all,
-                            projectcss.a,
-                            projectcss.a__bLa1s,
+                            "all",
+                            "a",
+                            "a__bLa1s",
                             sty.link___6BJmE
                           )}
                           component={Link}
@@ -439,9 +433,9 @@ function PlasmicContact__RenderFunc(props: {
                         </PlasmicLink__>
                         <PlasmicLink__
                           className={classNames(
-                            projectcss.all,
-                            projectcss.a,
-                            projectcss.a__bLa1s,
+                            "all",
+                            "a",
+                            "a__bLa1s",
                             sty.link__hsq4Q
                           )}
                           component={Link}
@@ -468,19 +462,14 @@ function PlasmicContact__RenderFunc(props: {
                   <div
                     data-plasmic-name={"left3"}
                     data-plasmic-override={overrides.left3}
-                    className={classNames(projectcss.all, sty.left3)}
+                    className={classNames("all", sty.left3)}
                   >
                     <div
                       data-plasmic-name={"container6"}
                       data-plasmic-override={overrides.container6}
-                      className={classNames(projectcss.all, sty.container6)}
+                      className={classNames("all", sty.container6)}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__rtMWe
-                        )}
-                      >
+                      <div className={classNames("all", sty.freeBox__rtMWe)}>
                         <CircularText
                           className={classNames(
                             "__wab_instance",
@@ -514,7 +503,7 @@ function PlasmicContact__RenderFunc(props: {
                   </div>
                 </div>
               </RevealOnScroll>
-              <div className={classNames(projectcss.all, sty.freeBox__qpE4K)}>
+              <div className={classNames("all", sty.freeBox__qpE4K)}>
                 <LineBg
                   className={classNames("__wab_instance", sty.lineBg__eeRn8)}
                 />
@@ -559,21 +548,17 @@ function PlasmicContact__RenderFunc(props: {
               <div
                 data-plasmic-name={"headerHeroSection"}
                 data-plasmic-override={overrides.headerHeroSection}
-                className={classNames(projectcss.all, sty.headerHeroSection)}
+                className={classNames("all", sty.headerHeroSection)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__wRiMe)}>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__vg1QI)}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__kVg44)}
-                    >
+                <div className={classNames("all", sty.freeBox__wRiMe)}>
+                  <div className={classNames("all", sty.freeBox__vg1QI)}>
+                    <div className={classNames("all", sty.freeBox__kVg44)}>
                       <h1
                         className={classNames(
-                          projectcss.all,
-                          projectcss.h1,
-                          projectcss.h1__bLa1s,
-                          projectcss.__wab_text,
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
                           sty.h1___3RrW
                         )}
                       >
@@ -582,10 +567,10 @@ function PlasmicContact__RenderFunc(props: {
                     </div>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1__jj9H7
                       )}
                     >
@@ -593,22 +578,20 @@ function PlasmicContact__RenderFunc(props: {
                     </h1>
                     <h1
                       className={classNames(
-                        projectcss.all,
-                        projectcss.h1,
-                        projectcss.h1__bLa1s,
-                        projectcss.__wab_text,
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
                         sty.h1___5HQjd
                       )}
                     >
                       {"\rwebsite template."}
                     </h1>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox___34Np)}
-                    >
+                    <div className={classNames("all", sty.freeBox___34Np)}>
                       <div
                         className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
+                          "all",
+                          "__wab_text",
                           sty.text__iZsAj
                         )}
                       >
@@ -619,22 +602,22 @@ function PlasmicContact__RenderFunc(props: {
                       <div
                         data-plasmic-name={"loved"}
                         data-plasmic-override={overrides.loved}
-                        className={classNames(projectcss.all, sty.loved)}
+                        className={classNames("all", sty.loved)}
                       >
                         <div
                           data-plasmic-name={"variant1"}
                           data-plasmic-override={overrides.variant1}
-                          className={classNames(projectcss.all, sty.variant1)}
+                          className={classNames("all", sty.variant1)}
                         >
                           <div
                             data-plasmic-name={"_1"}
                             data-plasmic-override={overrides._1}
-                            className={classNames(projectcss.all, sty._1)}
+                            className={classNames("all", sty._1)}
                           >
                             <div
                               data-plasmic-name={"img"}
                               data-plasmic-override={overrides.img}
-                              className={classNames(projectcss.all, sty.img)}
+                              className={classNames("all", sty.img)}
                             >
                               <div
                                 data-plasmic-name={
@@ -644,7 +627,7 @@ function PlasmicContact__RenderFunc(props: {
                                   overrides.e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg
                                 )}
                               />
@@ -653,12 +636,12 @@ function PlasmicContact__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_2"}
                             data-plasmic-override={overrides._2}
-                            className={classNames(projectcss.all, sty._2)}
+                            className={classNames("all", sty._2)}
                           >
                             <div
                               data-plasmic-name={"img2"}
                               data-plasmic-override={overrides.img2}
-                              className={classNames(projectcss.all, sty.img2)}
+                              className={classNames("all", sty.img2)}
                             >
                               <div
                                 data-plasmic-name={
@@ -668,7 +651,7 @@ function PlasmicContact__RenderFunc(props: {
                                   overrides.tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.tq5Y4EoZfzzak1F6Iy2LfoUgyl8Jpg
                                 )}
                               />
@@ -677,12 +660,12 @@ function PlasmicContact__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_3"}
                             data-plasmic-override={overrides._3}
-                            className={classNames(projectcss.all, sty._3)}
+                            className={classNames("all", sty._3)}
                           >
                             <div
                               data-plasmic-name={"img3"}
                               data-plasmic-override={overrides.img3}
-                              className={classNames(projectcss.all, sty.img3)}
+                              className={classNames("all", sty.img3)}
                             >
                               <div
                                 data-plasmic-name={
@@ -692,7 +675,7 @@ function PlasmicContact__RenderFunc(props: {
                                   overrides.hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.hYcxfv8XWpTIxIwnhNj33Hl2Lq4Jpg
                                 )}
                               />
@@ -701,12 +684,12 @@ function PlasmicContact__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_4"}
                             data-plasmic-override={overrides._4}
-                            className={classNames(projectcss.all, sty._4)}
+                            className={classNames("all", sty._4)}
                           >
                             <div
                               data-plasmic-name={"img4"}
                               data-plasmic-override={overrides.img4}
-                              className={classNames(projectcss.all, sty.img4)}
+                              className={classNames("all", sty.img4)}
                             >
                               <div
                                 data-plasmic-name={
@@ -716,7 +699,7 @@ function PlasmicContact__RenderFunc(props: {
                                   overrides._069SD4E4Rbd50L3X97XsgTvpcJpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty._069Sd4E4Rbd50L3X97XsgTvpcJpg
                                 )}
                               />
@@ -725,12 +708,12 @@ function PlasmicContact__RenderFunc(props: {
                           <div
                             data-plasmic-name={"_5"}
                             data-plasmic-override={overrides._5}
-                            className={classNames(projectcss.all, sty._5)}
+                            className={classNames("all", sty._5)}
                           >
                             <div
                               data-plasmic-name={"img5"}
                               data-plasmic-override={overrides.img5}
-                              className={classNames(projectcss.all, sty.img5)}
+                              className={classNames("all", sty.img5)}
                             >
                               <div
                                 data-plasmic-name={
@@ -740,7 +723,7 @@ function PlasmicContact__RenderFunc(props: {
                                   overrides.vk7E0Slt7OvlQa7QVqyREh2TxqcJpg
                                 }
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.vk7E0Slt7OvlQa7QVqyREh2TxqcJpg
                                 )}
                               />
@@ -749,39 +732,27 @@ function PlasmicContact__RenderFunc(props: {
                           <div
                             data-plasmic-name={"ratingDetails"}
                             data-plasmic-override={overrides.ratingDetails}
-                            className={classNames(
-                              projectcss.all,
-                              sty.ratingDetails
-                            )}
+                            className={classNames("all", sty.ratingDetails)}
                           >
                             <div
                               data-plasmic-name={"ratingInfo"}
                               data-plasmic-override={overrides.ratingInfo}
-                              className={classNames(
-                                projectcss.all,
-                                sty.ratingInfo
-                              )}
+                              className={classNames("all", sty.ratingInfo)}
                             >
                               <div
                                 data-plasmic-name={"ratingScore"}
                                 data-plasmic-override={overrides.ratingScore}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.ratingScore
-                                )}
+                                className={classNames("all", sty.ratingScore)}
                               >
                                 <div
                                   data-plasmic-name={"container"}
                                   data-plasmic-override={overrides.container}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.container
-                                  )}
+                                  className={classNames("all", sty.container)}
                                 >
                                   <div
                                     className={classNames(
-                                      projectcss.all,
-                                      projectcss.__wab_text,
+                                      "all",
+                                      "__wab_text",
                                       sty.text__lXsnv
                                     )}
                                   >
@@ -793,17 +764,14 @@ function PlasmicContact__RenderFunc(props: {
                                 data-plasmic-name={"starsContainer"}
                                 data-plasmic-override={overrides.starsContainer}
                                 className={classNames(
-                                  projectcss.all,
+                                  "all",
                                   sty.starsContainer
                                 )}
                               >
                                 <div
                                   data-plasmic-name={"svg"}
                                   data-plasmic-override={overrides.svg}
-                                  className={classNames(
-                                    projectcss.all,
-                                    sty.svg
-                                  )}
+                                  className={classNames("all", sty.svg)}
                                 >
                                   <PlasmicImg__
                                     alt={""}
@@ -828,23 +796,17 @@ function PlasmicContact__RenderFunc(props: {
                             <div
                               data-plasmic-name={"ratingText"}
                               data-plasmic-override={overrides.ratingText}
-                              className={classNames(
-                                projectcss.all,
-                                sty.ratingText
-                              )}
+                              className={classNames("all", sty.ratingText)}
                             >
                               <div
                                 data-plasmic-name={"container2"}
                                 data-plasmic-override={overrides.container2}
-                                className={classNames(
-                                  projectcss.all,
-                                  sty.container2
-                                )}
+                                className={classNames("all", sty.container2)}
                               >
                                 <div
                                   className={classNames(
-                                    projectcss.all,
-                                    projectcss.__wab_text,
+                                    "all",
+                                    "__wab_text",
                                     sty.text__m9N7D
                                   )}
                                 >
@@ -856,9 +818,7 @@ function PlasmicContact__RenderFunc(props: {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__w19Jl)}
-                    >
+                    <div className={classNames("all", sty.freeBox__w19Jl)}>
                       <Button
                         className={classNames(
                           "__wab_instance",
@@ -866,10 +826,7 @@ function PlasmicContact__RenderFunc(props: {
                         )}
                         end={
                           <ChevronRightIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__owRs1
-                            )}
+                            className={classNames("all", sty.svg__owRs1)}
                             role={"img"}
                           />
                         }
@@ -877,8 +834,8 @@ function PlasmicContact__RenderFunc(props: {
                         label={
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__fjLvM
                             )}
                           >
@@ -897,8 +854,8 @@ function PlasmicContact__RenderFunc(props: {
                         label={
                           <div
                             className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
+                              "all",
+                              "__wab_text",
                               sty.text__jPid8
                             )}
                           >
@@ -914,7 +871,7 @@ function PlasmicContact__RenderFunc(props: {
                 </div>
               </div>
             </div>
-            <div className={classNames(projectcss.all, sty.freeBox__ig0C5)}>
+            <div className={classNames("all", sty.freeBox__ig0C5)}>
               <LineBg
                 className={classNames("__wab_instance", sty.lineBg__t1GbI)}
               />

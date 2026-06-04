@@ -65,7 +65,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicMegaMenu.module.css"; // plasmic-import: oLdNG6yB_GWb/css
 
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: MpGNbkOGJDen/icon
@@ -154,8 +153,6 @@ function PlasmicMegaMenu__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = useCurrentUser?.() || {};
-
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
@@ -186,6 +183,9 @@ function PlasmicMegaMenu__RenderFunc(props: {
     ],
     [$props, $ctx, $refs]
   );
+
+  const currentUser = useCurrentUser?.() || {};
+
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
@@ -203,10 +203,10 @@ function PlasmicMegaMenu__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.menu,
         { [sty.menushowIcon]: hasVariant($state, "showIcon", "showIcon") }
@@ -279,24 +279,24 @@ function PlasmicMegaMenu__RenderFunc(props: {
       <div
         data-plasmic-name={"container"}
         data-plasmic-override={overrides.container}
-        className={classNames(projectcss.all, sty.container)}
+        className={classNames("all", sty.container)}
       >
         <div
           data-plasmic-name={"link"}
           data-plasmic-override={overrides.link}
-          className={classNames(projectcss.all, sty.link, {
+          className={classNames("all", sty.link, {
             [sty.linkshowIcon]: hasVariant($state, "showIcon", "showIcon")
           })}
         >
           <div
             data-plasmic-name={"container2"}
             data-plasmic-override={overrides.container2}
-            className={classNames(projectcss.all, sty.container2)}
+            className={classNames("all", sty.container2)}
           >
             <div
               data-plasmic-name={"background"}
               data-plasmic-override={overrides.background}
-              className={classNames(projectcss.all, sty.background)}
+              className={classNames("all", sty.background)}
             >
               <PlasmicImg__
                 data-plasmic-name={"img"}
@@ -319,7 +319,7 @@ function PlasmicMegaMenu__RenderFunc(props: {
               />
 
               <IconIcon
-                className={classNames(projectcss.all, sty.svg___8T6Po, {
+                className={classNames("all", sty.svg___8T6Po, {
                   [sty.svgshowIcon___8T6Po1MvH]: hasVariant(
                     $state,
                     "showIcon",
@@ -334,26 +334,26 @@ function PlasmicMegaMenu__RenderFunc(props: {
         <div
           data-plasmic-name={"nav"}
           data-plasmic-override={overrides.nav}
-          className={classNames(projectcss.all, sty.nav, {
+          className={classNames("all", sty.nav, {
             [sty.navshowIcon]: hasVariant($state, "showIcon", "showIcon")
           })}
         >
           <div
             data-plasmic-name={"link2"}
             data-plasmic-override={overrides.link2}
-            className={classNames(projectcss.all, sty.link2, {
+            className={classNames("all", sty.link2, {
               [sty.link2showIcon]: hasVariant($state, "showIcon", "showIcon")
             })}
           >
             <Component1Icon
-              className={classNames(projectcss.all, sty.svg___44Nz8)}
+              className={classNames("all", sty.svg___44Nz8)}
               role={"img"}
             />
 
             <div
               data-plasmic-name={"container5"}
               data-plasmic-override={overrides.container5}
-              className={classNames(projectcss.all, sty.container5, {
+              className={classNames("all", sty.container5, {
                 [sty.container5showIcon]: hasVariant(
                   $state,
                   "showIcon",
@@ -362,18 +362,13 @@ function PlasmicMegaMenu__RenderFunc(props: {
               })}
             >
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__f8VqL,
-                  {
-                    [sty.textshowIcon__f8VqL1MvH]: hasVariant(
-                      $state,
-                      "showIcon",
-                      "showIcon"
-                    )
-                  }
-                )}
+                className={classNames("all", "__wab_text", sty.text__f8VqL, {
+                  [sty.textshowIcon__f8VqL1MvH]: hasVariant(
+                    $state,
+                    "showIcon",
+                    "showIcon"
+                  )
+                })}
               >
                 {"Home"}
               </div>
@@ -382,12 +377,12 @@ function PlasmicMegaMenu__RenderFunc(props: {
           <div
             data-plasmic-name={"link3"}
             data-plasmic-override={overrides.link3}
-            className={classNames(projectcss.all, sty.link3, {
+            className={classNames("all", sty.link3, {
               [sty.link3showIcon]: hasVariant($state, "showIcon", "showIcon")
             })}
           >
             <Component2Icon
-              className={classNames(projectcss.all, sty.svg__bUrFv, {
+              className={classNames("all", sty.svg__bUrFv, {
                 [sty.svgshowIcon__bUrFv1MvH]: hasVariant(
                   $state,
                   "showIcon",
@@ -400,7 +395,7 @@ function PlasmicMegaMenu__RenderFunc(props: {
             <div
               data-plasmic-name={"container6"}
               data-plasmic-override={overrides.container6}
-              className={classNames(projectcss.all, sty.container6, {
+              className={classNames("all", sty.container6, {
                 [sty.container6showIcon]: hasVariant(
                   $state,
                   "showIcon",
@@ -409,18 +404,13 @@ function PlasmicMegaMenu__RenderFunc(props: {
               })}
             >
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__klqWl,
-                  {
-                    [sty.textshowIcon__klqWl1MvH]: hasVariant(
-                      $state,
-                      "showIcon",
-                      "showIcon"
-                    )
-                  }
-                )}
+                className={classNames("all", "__wab_text", sty.text__klqWl, {
+                  [sty.textshowIcon__klqWl1MvH]: hasVariant(
+                    $state,
+                    "showIcon",
+                    "showIcon"
+                  )
+                })}
               >
                 {"Templates"}
               </div>
@@ -429,19 +419,19 @@ function PlasmicMegaMenu__RenderFunc(props: {
           <div
             data-plasmic-name={"link4"}
             data-plasmic-override={overrides.link4}
-            className={classNames(projectcss.all, sty.link4, {
+            className={classNames("all", sty.link4, {
               [sty.link4showIcon]: hasVariant($state, "showIcon", "showIcon")
             })}
           >
             <Component3Icon
-              className={classNames(projectcss.all, sty.svg__rPbun)}
+              className={classNames("all", sty.svg__rPbun)}
               role={"img"}
             />
 
             <div
               data-plasmic-name={"container7"}
               data-plasmic-override={overrides.container7}
-              className={classNames(projectcss.all, sty.container7, {
+              className={classNames("all", sty.container7, {
                 [sty.container7showIcon]: hasVariant(
                   $state,
                   "showIcon",
@@ -450,18 +440,13 @@ function PlasmicMegaMenu__RenderFunc(props: {
               })}
             >
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___0TPz9,
-                  {
-                    [sty.textshowIcon___0TPz91MvH]: hasVariant(
-                      $state,
-                      "showIcon",
-                      "showIcon"
-                    )
-                  }
-                )}
+                className={classNames("all", "__wab_text", sty.text___0TPz9, {
+                  [sty.textshowIcon___0TPz91MvH]: hasVariant(
+                    $state,
+                    "showIcon",
+                    "showIcon"
+                  )
+                })}
               >
                 {"Blog"}
               </div>
@@ -471,24 +456,24 @@ function PlasmicMegaMenu__RenderFunc(props: {
         <div
           data-plasmic-name={"horizontalBorder"}
           data-plasmic-override={overrides.horizontalBorder}
-          className={classNames(projectcss.all, sty.horizontalBorder)}
+          className={classNames("all", sty.horizontalBorder)}
         >
           <div
             data-plasmic-name={"link5"}
             data-plasmic-override={overrides.link5}
-            className={classNames(projectcss.all, sty.link5, {
+            className={classNames("all", sty.link5, {
               [sty.link5showIcon]: hasVariant($state, "showIcon", "showIcon")
             })}
           >
             <Component4Icon
-              className={classNames(projectcss.all, sty.svg__iB26M)}
+              className={classNames("all", sty.svg__iB26M)}
               role={"img"}
             />
 
             <div
               data-plasmic-name={"container8"}
               data-plasmic-override={overrides.container8}
-              className={classNames(projectcss.all, sty.container8, {
+              className={classNames("all", sty.container8, {
                 [sty.container8showIcon]: hasVariant(
                   $state,
                   "showIcon",
@@ -497,11 +482,7 @@ function PlasmicMegaMenu__RenderFunc(props: {
               })}
             >
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___1Zjt9
-                )}
+                className={classNames("all", "__wab_text", sty.text___1Zjt9)}
               >
                 {"Contact"}
               </div>

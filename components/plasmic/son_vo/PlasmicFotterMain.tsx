@@ -64,7 +64,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicFotterMain.module.css"; // plasmic-import: pJp_GqmWQ71r/css
 
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: 2WxnB5zdkiqv/icon
@@ -156,10 +155,10 @@ function PlasmicFotterMain__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.footer3
       )}
@@ -167,30 +166,24 @@ function PlasmicFotterMain__RenderFunc(props: {
       <div
         data-plasmic-name={"container41"}
         data-plasmic-override={overrides.container41}
-        className={classNames(projectcss.all, sty.container41)}
+        className={classNames("all", sty.container41)}
       >
         <div
           data-plasmic-name={"frame1618873418"}
           data-plasmic-override={overrides.frame1618873418}
-          className={classNames(projectcss.all, sty.frame1618873418)}
+          className={classNames("all", sty.frame1618873418)}
         >
           <div
             data-plasmic-name={"navigation6"}
             data-plasmic-override={overrides.navigation6}
-            className={classNames(projectcss.all, sty.navigation6)}
+            className={classNames("all", sty.navigation6)}
           >
             <div
               data-plasmic-name={"link27"}
               data-plasmic-override={overrides.link27}
-              className={classNames(projectcss.all, sty.link27)}
+              className={classNames("all", sty.link27)}
             >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__p0IDw
-                )}
-              >
+              <div className={classNames("all", "__wab_text", sty.text__p0IDw)}>
                 {hasVariant(globalVariants, "screen", "tablet") ? (
                   <React.Fragment>
                     <span
@@ -239,24 +232,24 @@ function PlasmicFotterMain__RenderFunc(props: {
             <div
               data-plasmic-name={"frame1618873420"}
               data-plasmic-override={overrides.frame1618873420}
-              className={classNames(projectcss.all, sty.frame1618873420)}
+              className={classNames("all", sty.frame1618873420)}
             >
               <div
                 data-plasmic-name={"link28"}
                 data-plasmic-override={overrides.link28}
-                className={classNames(projectcss.all, sty.link28)}
+                className={classNames("all", sty.link28)}
               >
                 <Icon2Icon
-                  className={classNames(projectcss.all, sty.svg__sfB2O)}
+                  className={classNames("all", sty.svg__sfB2O)}
                   role={"img"}
                 />
 
                 <PlasmicLink__
                   className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.a__bLa1s,
-                    projectcss.__wab_text,
+                    "all",
+                    "a",
+                    "a__bLa1s",
+                    "__wab_text",
                     sty.link__wEneb
                   )}
                   component={Link}
@@ -271,20 +264,20 @@ function PlasmicFotterMain__RenderFunc(props: {
               <div
                 data-plasmic-name={"link29"}
                 data-plasmic-override={overrides.link29}
-                className={classNames(projectcss.all, sty.link29)}
+                className={classNames("all", sty.link29)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__al4Jh)}>
+                <div className={classNames("all", sty.freeBox__al4Jh)}>
                   <LinkedinSvg2Icon
-                    className={classNames(projectcss.all, sty.svg__mjXz)}
+                    className={classNames("all", sty.svg__mjXz)}
                     role={"img"}
                   />
                 </div>
                 <PlasmicLink__
                   className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.a__bLa1s,
-                    projectcss.__wab_text,
+                    "all",
+                    "a",
+                    "a__bLa1s",
+                    "__wab_text",
                     sty.link__xYUhD
                   )}
                   component={Link}
@@ -301,20 +294,20 @@ function PlasmicFotterMain__RenderFunc(props: {
               <div
                 data-plasmic-name={"link30"}
                 data-plasmic-override={overrides.link30}
-                className={classNames(projectcss.all, sty.link30)}
+                className={classNames("all", sty.link30)}
               >
-                <div className={classNames(projectcss.all, sty.freeBox__n3Oul)}>
+                <div className={classNames("all", sty.freeBox__n3Oul)}>
                   <BehanceSvgIcon
-                    className={classNames(projectcss.all, sty.svg__oJr32)}
+                    className={classNames("all", sty.svg__oJr32)}
                     role={"img"}
                   />
                 </div>
                 <PlasmicLink__
                   className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.a__bLa1s,
-                    projectcss.__wab_text,
+                    "all",
+                    "a",
+                    "a__bLa1s",
+                    "__wab_text",
                     sty.link__eC7U4
                   )}
                   component={Link}
@@ -330,37 +323,25 @@ function PlasmicFotterMain__RenderFunc(props: {
             <div
               data-plasmic-name={"container43"}
               data-plasmic-override={overrides.container43}
-              className={classNames(projectcss.all, sty.container43)}
+              className={classNames("all", sty.container43)}
             >
               <div
                 data-plasmic-name={"frame1618873422"}
                 data-plasmic-override={overrides.frame1618873422}
-                className={classNames(projectcss.all, sty.frame1618873422)}
+                className={classNames("all", sty.frame1618873422)}
               >
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__pqy7Y
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__pqy7Y)}
                 >
                   {"(+84) 35 765 2075"}
                 </div>
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__lYxxo
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__lYxxo)}
                 >
                   {"hongson789987@gmail.com"}
                 </div>
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__wqQZp
-                  )}
+                  className={classNames("all", "__wab_text", sty.text__wqQZp)}
                 >
                   {"Contact with me"}
                 </div>
@@ -371,20 +352,20 @@ function PlasmicFotterMain__RenderFunc(props: {
         <div
           data-plasmic-name={"heading17"}
           data-plasmic-override={overrides.heading17}
-          className={classNames(projectcss.all, sty.heading17)}
+          className={classNames("all", sty.heading17)}
         >
           <HSvgIcon
-            className={classNames(projectcss.all, sty.svg__zOngi)}
+            className={classNames("all", sty.svg__zOngi)}
             role={"img"}
           />
 
           <SSvgIcon
-            className={classNames(projectcss.all, sty.svg__lzbwl)}
+            className={classNames("all", sty.svg__lzbwl)}
             role={"img"}
           />
 
           <VSvgIcon
-            className={classNames(projectcss.all, sty.svg___1ZzsS)}
+            className={classNames("all", sty.svg___1ZzsS)}
             role={"img"}
           />
         </div>

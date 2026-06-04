@@ -64,7 +64,6 @@ import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-impor
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
-import projectcss from "./plasmic.module.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import sty from "./PlasmicTeams.module.css"; // plasmic-import: SXapTQg1lTYX/css
 
 createPlasmicElementProxy;
@@ -138,10 +137,10 @@ function PlasmicTeams__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       className={classNames(
-        projectcss.all,
-        projectcss.root_reset,
-        projectcss.plasmic_default_styles,
-        projectcss.plasmic_mixins,
+        "all",
+        "root_reset_bLa1shfC4noziDsvmxjKJF",
+        "plasmic_default_styles",
+        "plasmic_mixins",
         styleTokensClassNames,
         sty.root
       )}
@@ -149,7 +148,7 @@ function PlasmicTeams__RenderFunc(props: {
       <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
+        className={classNames("all", sty.freeBox)}
       >
         <PlasmicImg__
           data-plasmic-name={"img"}
@@ -171,31 +170,13 @@ function PlasmicTeams__RenderFunc(props: {
           }}
         />
 
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__kfIif
-          )}
-        >
+        <div className={classNames("all", "__wab_text", sty.text__kfIif)}>
           {"Jocylne Kujo"}
         </div>
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__qa2Ih
-          )}
-        >
+        <div className={classNames("all", "__wab_text", sty.text__qa2Ih)}>
           {"Founder Flappin"}
         </div>
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text__yBuNn
-          )}
-        >
+        <div className={classNames("all", "__wab_text", sty.text__yBuNn)}>
           {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
           }
