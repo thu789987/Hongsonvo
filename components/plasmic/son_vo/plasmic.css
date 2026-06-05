@@ -11,7 +11,12 @@
 @import "../cms/plasmic.css"; /* plasmic-import: hPz6Q3nQJn9Q8DTBgANGwo/projectcss */
 @import "../plasmic_cms/plasmic.css"; /* plasmic-import: hjKYmYi6HMwK6TRyk7ew5R/projectcss */
 @import "../plasmic_graphcms/plasmic.css"; /* plasmic-import: 22U3ZXm4dE59qEW488gxzU/projectcss */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700&family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Pinyon+Script%3Aital%2Cwght%400%2C400&family=Outfit%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700&family=Roboto+Mono%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700&family=Koulen%3Aital%2Cwght%400%2C400&family=Tinos%3Aital%2Cwght%400%2C400%3B0%2C700%3B1%2C400%3B1%2C700&family=Arimo%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700&family=Roboto%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+/* Ép các thẻ đang bị Plasmic bỏ quên thuộc tính font phải hiện đúng Koulen */
+[style*="Koulen"], .plasmic_font_Koulen {
+  font-family: 'Koulen', sans-serif !important;
+}
 
 .plasmic_tokens_bLa1shfC4noziDsvmxjKJF {
   --token-xEtc41naQwdo: 1140px;
