@@ -155,7 +155,6 @@ function PlasmicCardWhatAboutUs__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props._2
       }
     ],
-
     [$props, $ctx, $refs]
   );
 
@@ -299,7 +298,6 @@ const PlasmicDescendants = {
     "paragraph",
     "greatProductsDontJustHappenTheyreShapedB"
   ],
-
   freeBox: [
     "freeBox",
     "container5",
@@ -310,7 +308,6 @@ const PlasmicDescendants = {
     "paragraph",
     "greatProductsDontJustHappenTheyreShapedB"
   ],
-
   container5: ["container5", "imageWithFallback"],
   imageWithFallback: ["imageWithFallback"],
   container31: [
@@ -320,7 +317,6 @@ const PlasmicDescendants = {
     "paragraph",
     "greatProductsDontJustHappenTheyreShapedB"
   ],
-
   container4: ["container4", "text"],
   text: ["text"],
   paragraph: ["paragraph", "greatProductsDontJustHappenTheyreShapedB"],
@@ -348,7 +344,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicCardWhatAboutUs__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

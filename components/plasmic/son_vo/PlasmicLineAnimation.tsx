@@ -142,7 +142,6 @@ function PlasmicLineAnimation__RenderFunc(props: {
           $props.scrolledState
       }
     ],
-
     [$props, $ctx, $refs]
   );
 
@@ -212,7 +211,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicLineAnimation__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

@@ -151,7 +151,6 @@ function PlasmicLogo__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.largeLogo
       }
     ],
-
     [$props, $ctx, $refs]
   );
 
@@ -246,7 +245,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicLogo__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

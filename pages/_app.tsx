@@ -1,9 +1,8 @@
-import "../components/plasmic/son_vo/plasmic.css"; 
+import "../components/plasmic/son_vo/plasmic.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
 import type { AppProps } from "next/app";
-import Head from "next/head"; 
+import Head from "next/head";
 import { CursorProvider } from "../components/CursorContext";
 import { CustomCursor } from "../components/CustomCursor";
-
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>

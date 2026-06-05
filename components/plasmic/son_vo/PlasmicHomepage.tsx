@@ -2125,7 +2125,6 @@ const PlasmicDescendants = {
     "templateCard9",
     "section"
   ],
-
   scrollToTop: ["scrollToTop"],
   globalLoading: ["globalLoading"],
   smoothScroll: [
@@ -2180,7 +2179,6 @@ const PlasmicDescendants = {
     "templateCard9",
     "section"
   ],
-
   scrollContext: ["scrollContext", "newMenu"],
   newMenu: ["newMenu"],
   scrollDetector: ["scrollDetector"],
@@ -2203,7 +2201,6 @@ const PlasmicDescendants = {
     "_11",
     "_12"
   ],
-
   left: ["left", "title2", "container4"],
   title2: ["title2"],
   container4: ["container4"],
@@ -2219,7 +2216,6 @@ const PlasmicDescendants = {
     "_11",
     "_12"
   ],
-
   title4: ["title4"],
   container5: ["container5", "_6", "_7", "_8", "_9", "_10", "_11", "_12"],
   _6: ["_6"],
@@ -2246,7 +2242,6 @@ const PlasmicDescendants = {
     "infiniteScroll",
     "cardWhatAboutUs5"
   ],
-
   heading4: [
     "heading4",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
@@ -2258,18 +2253,15 @@ const PlasmicDescendants = {
     "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4",
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
   ],
-
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3:
     [
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
     ],
-
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4:
     [
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
     ],
-
   eXpertise2: ["eXpertise2"],
   an2: ["an2"],
   skills2: ["skills2"],
@@ -2278,17 +2270,14 @@ const PlasmicDescendants = {
       "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
       "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
     ],
-
   bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4:
     [
       "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
     ],
-
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2:
     [
       "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
     ],
-
   container31: [
     "container31",
     "subContainer2",
@@ -2296,7 +2285,6 @@ const PlasmicDescendants = {
     "infiniteScroll",
     "cardWhatAboutUs5"
   ],
-
   subContainer2: ["subContainer2", "gridDistortion", "infiniteScroll"],
   gridDistortion: ["gridDistortion"],
   infiniteScroll: ["infiniteScroll"],
@@ -2316,7 +2304,6 @@ const PlasmicDescendants = {
     "patternGrid",
     "templateCard9"
   ],
-
   top5: ["top5", "title3"],
   title3: ["title3"],
   templateCard: ["templateCard"],
@@ -2395,7 +2382,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicHomepage__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

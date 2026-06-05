@@ -147,7 +147,6 @@ function PlasmicFooterSection__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => ""
       }
     ],
-
     [$props, $ctx, $refs]
   );
 
@@ -411,7 +410,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicFooterSection__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

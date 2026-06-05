@@ -407,7 +407,6 @@ const PlasmicDescendants = {
     "text15",
     "text16"
   ],
-
   container: [
     "container",
     "container2",
@@ -423,7 +422,6 @@ const PlasmicDescendants = {
     "text7",
     "text8"
   ],
-
   container2: ["container2", "text", "text2"],
   text: ["text"],
   text2: ["text2"],
@@ -451,7 +449,6 @@ const PlasmicDescendants = {
     "text15",
     "text16"
   ],
-
   container7: ["container7", "text9", "text10"],
   text9: ["text9"],
   text10: ["text10"],
@@ -503,7 +500,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicTickerHeader__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

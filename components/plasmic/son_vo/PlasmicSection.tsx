@@ -112,7 +112,6 @@ export interface DefaultSectionProps {
     | "faq"
     | "widthContent1140Px"
   >;
-
   className?: string;
 }
 
@@ -170,7 +169,6 @@ function PlasmicSection__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.size
       }
     ],
-
     [$props, $ctx, $refs]
   );
 
@@ -284,7 +282,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicSection__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

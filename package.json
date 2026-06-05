@@ -14,7 +14,7 @@
     "@plasmicapp/cli": "^0.1.364",
     "@plasmicapp/host": "^2.0.2",
     "@plasmicapp/loader-nextjs": "^2.0.3",
-    "@plasmicapp/react-web": "^1.0.4",
+    "@plasmicapp/react-web": "^1.0.10",
     "@plasmicpkgs/antd5": "^0.0.328",
     "@plasmicpkgs/cms": "^0.0.21",
     "@plasmicpkgs/contentful": "^0.0.11",
