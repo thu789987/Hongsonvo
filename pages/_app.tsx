@@ -1,24 +1,28 @@
 import "../components/plasmic/son_vo/plasmic.css"; 
-import { Koulen } from "next/font/google"; // 👈 Nhập font
+import { Koulen } from "next/font/google"; 
 import type { AppProps } from "next/app";
 import Head from "next/head"; 
 import { CursorProvider } from "../components/CursorContext";
 import { CustomCursor } from "../components/CustomCursor";
 
-// 👈 Khởi tạo font Koulen
+// 🎯 Khởi tạo font dưới dạng một Biến CSS ngầm
 const fontKoulen = Koulen({
   weight: "400",
   subsets: ["khmer", "latin"],
   display: "swap",
+  variable: "--my-custom-koulen", // 👈 Đặt tên biến CSS ở đây
 });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      {/* 👇 BÙA CHÚ ÉP FONT: Đè bẹp biến lỗi của Plasmic */}
+    // 💡 BẮT BUỘC: Gắn fontKoulen.variable vào thẻ div bọc ngoài cùng 
+    // để Next.js NHẬN DIỆN và KHÔNG XÓA file font lúc build.
+    <div className={fontKoulen.variable}>
+      
+      {/* 🔮 BẮN TỈA CHÍNH XÁC: Lấy biến font vừa tạo đè thẳng vào mã lỗi của Plasmic */}
       <style jsx global>{`
         :root, .plasmic_default_styles {
-          --mixin-9Kwp1_irI7wZ_font-family: ${fontKoulen.style.fontFamily} !important;
+          --mixin-9Kwp1_irI7wZ_font-family: var(--my-custom-koulen), sans-serif !important;
         }
       `}</style>
 
@@ -39,6 +43,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <CustomCursor />
         <Component {...pageProps} />
       </CursorProvider>
-    </>
+    </div>
   );
 }
