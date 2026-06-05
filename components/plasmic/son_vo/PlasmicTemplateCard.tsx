@@ -59,6 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { ZoomHoverCard } from "../../ZoomHoverCard"; // plasmic-import: Cg_W7FgjDQIs/codeComponent
 import { Video } from "@plasmicpkgs/plasmic-basic-components";
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectModule
@@ -120,11 +121,14 @@ export type PlasmicTemplateCard__OverridesType = {
   _4?: Flex__<"div">;
   overlay2?: Flex__<"div">;
   link?: Flex__<"a"> & Partial<LinkProps>;
+  zoomHoverCard?: Flex__<typeof ZoomHoverCard>;
   htmlVideo?: Flex__<typeof Video>;
+  img?: Flex__<typeof PlasmicImg__>;
   bottom?: Flex__<"div">;
   top2?: Flex__<"div">;
   templateName?: Flex__<"div">;
   container10?: Flex__<"div">;
+  freeBox?: Flex__<"div">;
   tag12?: Flex__<"div">;
   tag2?: Flex__<"div">;
   tag3?: Flex__<"div">;
@@ -208,7 +212,6 @@ function PlasmicTemplateCard__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.project1
       }
     ],
-
     [$props, $ctx, $refs]
   );
 
@@ -306,7 +309,11 @@ function PlasmicTemplateCard__RenderFunc(props: {
             legacyBehavior={false}
             platform={"nextjs"}
           >
-            <div className={classNames("all", sty.freeBox__vui4C)}>
+            <ZoomHoverCard
+              data-plasmic-name={"zoomHoverCard"}
+              data-plasmic-override={overrides.zoomHoverCard}
+              className={classNames("__wab_instance", sty.zoomHoverCard)}
+            >
               {(() => {
                 try {
                   return $props.videoCondition;
@@ -354,9 +361,11 @@ function PlasmicTemplateCard__RenderFunc(props: {
                 }
               })() ? (
                 <PlasmicImg__
+                  data-plasmic-name={"img"}
+                  data-plasmic-override={overrides.img}
                   alt={""}
-                  className={classNames(sty.img__czgbX, {
-                    [sty.imgproject1__czgbXz20FZ]: hasVariant(
+                  className={classNames(sty.img, {
+                    [sty.imgproject1]: hasVariant(
                       $state,
                       "project1",
                       "project1"
@@ -384,65 +393,7 @@ function PlasmicTemplateCard__RenderFunc(props: {
                   })()}
                 />
               ) : null}
-              <div
-                className={classNames("all", sty.freeBox__qDo, {
-                  [sty.freeBoxproject1__qDOz20FZ]: hasVariant(
-                    $state,
-                    "project1",
-                    "project1"
-                  )
-                })}
-              >
-                <div
-                  className={classNames("all", sty.freeBox__hrNtM, {
-                    [sty.freeBoxproject1__hrNtMz20FZ]: hasVariant(
-                      $state,
-                      "project1",
-                      "project1"
-                    )
-                  })}
-                >
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__yMKni, {
-                      [sty.imgproject1__yMKniz20FZ]: hasVariant(
-                        $state,
-                        "project1",
-                        "project1"
-                      )
-                    })}
-                    displayHeight={
-                      hasVariant($state, "project1", "project1")
-                        ? "auto"
-                        : "auto"
-                    }
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={
-                      hasVariant($state, "project1", "project1")
-                        ? "100%"
-                        : "100%"
-                    }
-                    loading={"lazy"}
-                    src={(() => {
-                      try {
-                        return $props.image2;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
-                        }
-                        throw e;
-                      }
-                    })()}
-                  />
-                </div>
-              </div>
-            </div>
+            </ZoomHoverCard>
           </PlasmicLink__>
         </div>
       </div>
@@ -507,7 +458,11 @@ function PlasmicTemplateCard__RenderFunc(props: {
             )
           })}
         >
-          <div className={classNames("all", sty.freeBox__xuawq)}>
+          <div
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames("all", sty.freeBox)}
+          >
             {(() => {
               try {
                 return $props.tag1;
@@ -652,18 +607,20 @@ const PlasmicDescendants = {
     "_4",
     "overlay2",
     "link",
+    "zoomHoverCard",
     "htmlVideo",
+    "img",
     "bottom",
     "top2",
     "templateName",
     "container10",
+    "freeBox",
     "tag12",
     "tag2",
     "tag3",
     "tag4",
     "tag5"
   ],
-
   image: [
     "image",
     "border",
@@ -674,33 +631,45 @@ const PlasmicDescendants = {
     "_4",
     "overlay2",
     "link",
-    "htmlVideo"
+    "zoomHoverCard",
+    "htmlVideo",
+    "img"
   ],
-
   border: ["border"],
   screws: ["screws", "_1", "_2", "_3", "_4"],
   _1: ["_1"],
   _2: ["_2"],
   _3: ["_3"],
   _4: ["_4"],
-  overlay2: ["overlay2", "link", "htmlVideo"],
-  link: ["link", "htmlVideo"],
+  overlay2: ["overlay2", "link", "zoomHoverCard", "htmlVideo", "img"],
+  link: ["link", "zoomHoverCard", "htmlVideo", "img"],
+  zoomHoverCard: ["zoomHoverCard", "htmlVideo", "img"],
   htmlVideo: ["htmlVideo"],
+  img: ["img"],
   bottom: [
     "bottom",
     "top2",
     "templateName",
     "container10",
+    "freeBox",
     "tag12",
     "tag2",
     "tag3",
     "tag4",
     "tag5"
   ],
-
   top2: ["top2", "templateName"],
   templateName: ["templateName"],
-  container10: ["container10", "tag12", "tag2", "tag3", "tag4", "tag5"],
+  container10: [
+    "container10",
+    "freeBox",
+    "tag12",
+    "tag2",
+    "tag3",
+    "tag4",
+    "tag5"
+  ],
+  freeBox: ["freeBox", "tag12", "tag2", "tag3", "tag4", "tag5"],
   tag12: ["tag12"],
   tag2: ["tag2"],
   tag3: ["tag3"],
@@ -721,11 +690,14 @@ type NodeDefaultElementType = {
   _4: "div";
   overlay2: "div";
   link: "a";
+  zoomHoverCard: typeof ZoomHoverCard;
   htmlVideo: typeof Video;
+  img: typeof PlasmicImg__;
   bottom: "div";
   top2: "div";
   templateName: "div";
   container10: "div";
+  freeBox: "div";
   tag12: "div";
   tag2: "div";
   tag3: "div";
@@ -738,7 +710,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicTemplateCard__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
@@ -805,11 +776,14 @@ export const PlasmicTemplateCard = Object.assign(
     _4: makeNodeComponent("_4"),
     overlay2: makeNodeComponent("overlay2"),
     link: makeNodeComponent("link"),
+    zoomHoverCard: makeNodeComponent("zoomHoverCard"),
     htmlVideo: makeNodeComponent("htmlVideo"),
+    img: makeNodeComponent("img"),
     bottom: makeNodeComponent("bottom"),
     top2: makeNodeComponent("top2"),
     templateName: makeNodeComponent("templateName"),
     container10: makeNodeComponent("container10"),
+    freeBox: makeNodeComponent("freeBox"),
     tag12: makeNodeComponent("tag12"),
     tag2: makeNodeComponent("tag2"),
     tag3: makeNodeComponent("tag3"),

@@ -2622,10 +2622,10 @@
           "componentImportPath": "./components/CircularText"
         },
         {
-          "id": "XIx71xkzdhMI",
-          "name": "TiltHoverCard",
-          "displayName": "TiltHoverCard",
-          "componentImportPath": "./components/TiltHoverCard"
+          "id": "Cg_W7FgjDQIs",
+          "name": "ZoomHoverCard",
+          "displayName": "ZoomHoverCard",
+          "componentImportPath": "./components/ZoomHoverCard"
         }
       ],
       "customFunctions": []
