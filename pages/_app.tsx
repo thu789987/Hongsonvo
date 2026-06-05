@@ -5,49 +5,61 @@ import Head from "next/head";
 import { CursorProvider } from "../components/CursorContext";
 import { CustomCursor } from "../components/CustomCursor";
 
+// 🌐 1. IMPORT CÁC FONT CHUẨN NEXT.JS (Tự động tải về máy chủ khi Build)
+import { Koulen, Pinyon_Script } from 'next/font/google';
+
+const koulen = Koulen({
+  weight: '400', 
+  subsets: ['latin'],
+  variable: '--font-koulen', // Tạo biến CSS để tái sử dụng
+});
+
+const pinyonScript = Pinyon_Script({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-pinyon', // Tạo biến CSS cho font viết tay
+});
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      {/* ⚠️ LÁ BÙA THƯỢNG TẦNG: Ép toàn bộ các thẻ từ gốc rễ không được dùng Times New Roman */}
+      {/* 🎯 2. ÉP BIẾN FONT CỦA NEXT.JS ĐÈ LÊN CÁC CLASS CỦA PLASMIC */}
       <style jsx global>{`
-        /* Lệnh 1: Ép tất cả các class mặc định của Plasmic phải nhận Koulen */
         :root, 
         .plasmic_default_styles, 
         .plasmic_default_styles *,
         [class*="PlasmicHomepage"] {
-          --mixin-9Kwp1_irI7wZ_font-family: 'Koulen', sans-serif !important;
-          font-family: 'Koulen', sans-serif !important;
+          /* Ép các lớp mặc định của Plasmic sử dụng Font Koulen vừa tải */
+          --mixin-9Kwp1_irI7wZ_font-family: var(--font-koulen), sans-serif !important;
+          font-family: var(--font-koulen), sans-serif !important;
         }
 
-        /* Lệnh 2: Bắn tỉa riêng đoạn chữ viết tay, ép chết font Pinyon Script, đè bẹp Times New Roman */
+        /* Bắn tỉa riêng đoạn chữ viết tay uốn lượn "bridgingEmotion..." */
         [class*="bridgingEmotionAndClarity"] {
-          font-family: 'Pinyon Script', cursive !important;
+          font-family: var(--font-pinyon), cursive !important;
         }
       `}</style>
 
-      <CursorProvider>
-        <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-          />
-          
-          {/* Cưỡng chế trình duyệt đi lấy font từ Google về máy */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&display=swap" rel="stylesheet" />
+      {/* 3. BỌC TOÀN BỘ ỨNG DỤNG TRONG LỚP CLASS FONT VÀ CON TRỎ CHUỘT */}
+      <main className={`${koulen.variable} ${pinyonScript.variable}`}>
+        <CursorProvider>
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+            />
+            <link
+              rel="preload"
+              as="video"
+              href="https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
+              type="video/mp4"
+            />
+          </Head>
 
-          <link
-            rel="preload"
-            as="video"
-            href="https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
-            type="video/mp4"
-          />
-        </Head>
-
-        <CustomCursor />
-        <Component {...pageProps} />
-      </CursorProvider>
+          <CustomCursor />
+          <Component {...pageProps} />
+        </CursorProvider>
+      </main>
     </>
   );
 }
