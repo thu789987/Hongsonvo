@@ -24,7 +24,6 @@ export const ZoomHoverCard: React.FC<ZoomHoverCardProps> = ({
       transition={{ duration: 0.3, ease: "easeOut" }}
       style={{
         width: "100%",
-        height: "100%",
         borderRadius: "inherit",
         position: "relative", // BẮT BUỘC: Để lớp màn đen lấy đây làm gốc tọa độ
         overflow: "hidden",   // BẮT BUỘC: Tránh lớp màn đen bị tràn ra ngoài viền bo góc
