@@ -619,6 +619,7 @@
 .animatedLineOnScroll__n07Vb:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  z-index: 2;
 }
 .sectionCards2 {
   width: 100%;
@@ -1146,6 +1147,7 @@
 .animatedLineOnScroll__xtCza:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  z-index: 2;
 }
 .revealOnScroll__k04Nv:global(.__wab_instance) {
   max-width: 100%;
@@ -1655,6 +1657,7 @@
 .animatedLineOnScroll__tkm1P:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  z-index: 2;
 }
 .sectionCards3 {
   width: 100%;
