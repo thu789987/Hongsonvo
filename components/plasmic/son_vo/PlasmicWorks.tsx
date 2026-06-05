@@ -1138,6 +1138,7 @@ const PlasmicDescendants = {
     "templateCard10",
     "section"
   ],
+
   scrollToTop: ["scrollToTop"],
   globalLoading: ["globalLoading"],
   smoothScroll: [
@@ -1179,6 +1180,7 @@ const PlasmicDescendants = {
     "templateCard10",
     "section"
   ],
+
   scrollContext: ["scrollContext", "newMenu2"],
   newMenu2: ["newMenu2"],
   tickerHeader: ["tickerHeader"],
@@ -1210,6 +1212,7 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
+
   loved: [
     "loved",
     "variant1",
@@ -1237,6 +1240,7 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
+
   variant1: [
     "variant1",
     "_1",
@@ -1263,6 +1267,7 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
+
   _1: ["_1", "img", "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
   img: ["img", "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
   e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg: ["e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
@@ -1288,6 +1293,7 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
+
   ratingInfo: [
     "ratingInfo",
     "ratingScore",
@@ -1295,6 +1301,7 @@ const PlasmicDescendants = {
     "starsContainer",
     "svg"
   ],
+
   ratingScore: ["ratingScore", "container"],
   container: ["container"],
   starsContainer: ["starsContainer", "svg"],
@@ -1309,6 +1316,7 @@ const PlasmicDescendants = {
     "patternGrid",
     "templateCard10"
   ],
+
   container49: ["container49", "patternGrid", "templateCard10"],
   patternGrid: ["patternGrid", "templateCard10"],
   templateCard10: ["templateCard10"],
@@ -1365,6 +1373,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicWorks__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

@@ -279,6 +279,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicNavbar__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

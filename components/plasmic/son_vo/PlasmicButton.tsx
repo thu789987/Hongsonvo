@@ -85,6 +85,7 @@ export type PlasmicButton__VariantsArgs = {
   color?: SingleChoiceArg<
     "neutral" | "muted" | "success" | "warning" | "errorDestructive"
   >;
+
   type?: SingleChoiceArg<"soft" | "bordered">;
   size?: SingleChoiceArg<"extraSmall" | "small" | "large" | "extraLarge">;
   iconStart?: SingleBooleanChoiceArg<"iconStart">;
@@ -150,6 +151,7 @@ export interface DefaultButtonProps {
   color?: SingleChoiceArg<
     "neutral" | "muted" | "success" | "warning" | "errorDestructive"
   >;
+
   type?: SingleChoiceArg<"soft" | "bordered">;
   size?: SingleChoiceArg<"extraSmall" | "small" | "large" | "extraLarge">;
   iconStart?: SingleBooleanChoiceArg<"iconStart">;
@@ -246,6 +248,7 @@ function PlasmicButton__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $q, $ctx }) => $props.flatSide
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -713,6 +716,7 @@ function PlasmicButton__RenderFunc(props: {
               {"Text"}
             </div>
           ),
+
           value: args.label,
           className: classNames(sty.slotTargetLabel, {
             [sty.slotTargetLabelcolor_errorDestructive]: hasVariant(
@@ -962,6 +966,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicButton__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

@@ -242,6 +242,7 @@ function PlasmicTest2__RenderFunc(props: {
           })()
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -745,6 +746,7 @@ const PlasmicDescendants = {
     "tag4",
     "tag5"
   ],
+
   image: [
     "image",
     "border",
@@ -758,6 +760,7 @@ const PlasmicDescendants = {
     "hoverController",
     "htmlVideo"
   ],
+
   border: ["border"],
   screws: ["screws", "_1", "_2", "_3", "_4"],
   _1: ["_1"],
@@ -779,6 +782,7 @@ const PlasmicDescendants = {
     "tag4",
     "tag5"
   ],
+
   top2: ["top2", "templateName"],
   templateName: ["templateName"],
   container10: ["container10", "tag12", "tag2", "tag3", "tag4", "tag5"],
@@ -820,6 +824,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicTest2__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

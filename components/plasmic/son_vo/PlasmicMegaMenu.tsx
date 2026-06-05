@@ -181,6 +181,7 @@ function PlasmicMegaMenu__RenderFunc(props: {
           })() ?? $props.showIcon
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -513,6 +514,7 @@ const PlasmicDescendants = {
     "link5",
     "container8"
   ],
+
   container: [
     "container",
     "link",
@@ -530,6 +532,7 @@ const PlasmicDescendants = {
     "link5",
     "container8"
   ],
+
   link: ["link", "container2", "background", "img"],
   container2: ["container2", "background", "img"],
   background: ["background", "img"],
@@ -543,6 +546,7 @@ const PlasmicDescendants = {
     "link4",
     "container7"
   ],
+
   link2: ["link2", "container5"],
   container5: ["container5"],
   link3: ["link3", "container6"],
@@ -580,6 +584,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicMegaMenu__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

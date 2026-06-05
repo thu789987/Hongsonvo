@@ -2649,6 +2649,9 @@
   },
   "wrapPagesWithGlobalContexts": true,
   "preserveJsImportExtensions": false,
+  "fontOpts": {
+    "scheme": "none"
+  },
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
