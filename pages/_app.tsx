@@ -1,10 +1,11 @@
-import "../components/plasmic/son_vo/plasmic.css"; 
-import { Koulen } from "next/font/google";
+import "../components/plasmic/son_vo/plasmic.css"; // plasmic-import: bLa1shfC4noziDsvmxjKJF/projectcss
+import { Koulen } from "next/font/google"; // 👈 Vũ khí mới của Next.js
 import type { AppProps } from "next/app";
 import Head from "next/head"; 
 import { CursorProvider } from "../components/CursorContext";
 import { CustomCursor } from "../components/CustomCursor";
 
+// 👇 KHỞI TẠO FONT (Phải nằm ngay dưới cụm import và trên hàm MyApp)
 const fontKoulen = Koulen({
   weight: "400",
   subsets: ["khmer", "latin"],
@@ -13,20 +14,24 @@ const fontKoulen = Koulen({
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      {/* Ghi đè chính xác biến CSS bị lỗi của Plasmic */}
+    // 👇 Bọc toàn bộ web bằng Font Koulen nội bộ
+    <main className={fontKoulen.className}>
+      
+      {/* Lớp bùa chú ép tất cả các thẻ phải dùng Koulen */}
       <style jsx global>{`
-        :root, .plasmic_default_styles {
-          --mixin-9Kwp1_irI7wZ_font-family: ${fontKoulen.style.fontFamily} !important;
+        * {
+          font-family: ${fontKoulen.style.fontFamily} !important;
         }
       `}</style>
 
+      {/* Code cũ của bạn giữ nguyên từ đây */}
       <CursorProvider>
         <Head>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
           />
+
           <link
             rel="preload"
             as="video"
@@ -38,6 +43,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <CustomCursor />
         <Component {...pageProps} />
       </CursorProvider>
-    </>
+    </main>
   );
 }
