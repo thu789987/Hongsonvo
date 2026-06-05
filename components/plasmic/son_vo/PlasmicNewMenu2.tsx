@@ -163,6 +163,7 @@ function PlasmicNewMenu2__RenderFunc(props: {
           $props.scrolledState
       }
     ],
+
     [$props, $ctx, $refs]
   );
 
@@ -281,6 +282,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicNewMenu2__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

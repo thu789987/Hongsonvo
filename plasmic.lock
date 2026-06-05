@@ -1676,11 +1676,6 @@
           "assetId": "bLa1shfC4noziDsvmxjKJF",
           "type": "projectCss",
           "checksum": "5db0fd0e682ef01fc213c3aea00f19b7"
-        },
-        {
-          "assetId": "bLa1shfC4noziDsvmxjKJF",
-          "checksum": "6b073819d4d01a0edbaa9ae2a6184c82",
-          "type": "dataTokens"
         }
       ],
       "codegenVersion": "0.0.3"

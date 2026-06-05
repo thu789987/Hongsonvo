@@ -502,6 +502,7 @@ const PlasmicDescendants = {
     "link31",
     "heading17"
   ],
+
   container41: [
     "container41",
     "container42",
@@ -525,6 +526,7 @@ const PlasmicDescendants = {
     "link31",
     "heading17"
   ],
+
   container42: [
     "container42",
     "frame1618873418",
@@ -546,6 +548,7 @@ const PlasmicDescendants = {
     "frame1618873422",
     "link31"
   ],
+
   frame1618873418: [
     "frame1618873418",
     "navigation5",
@@ -566,6 +569,7 @@ const PlasmicDescendants = {
     "frame1618873422",
     "link31"
   ],
+
   navigation5: [
     "navigation5",
     "link22",
@@ -575,6 +579,7 @@ const PlasmicDescendants = {
     "link25",
     "link26"
   ],
+
   link22: ["link22"],
   frame1618873419: ["frame1618873419", "link23", "link24", "link25", "link26"],
   link23: ["link23"],
@@ -589,6 +594,7 @@ const PlasmicDescendants = {
     "link29",
     "link30"
   ],
+
   link27: ["link27"],
   frame1618873420: ["frame1618873420", "link28", "link29", "link30"],
   link28: ["link28"],
@@ -633,6 +639,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicFotterMain2__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
