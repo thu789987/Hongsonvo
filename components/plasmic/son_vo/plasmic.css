@@ -1,3 +1,16 @@
+/* 1. Tải font trực tiếp từ Google Fonts trước khi các thư viện khác load */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&display=swap');
+
+/* 2. Ép toàn cục: Bất kể thư viện nào đòi dùng font gì, trang chủ vẫn nhận diện đúng */
+:root, .plasmic_default_styles {
+  --mixin-9Kwp1_irI7wZ_font-family: 'Koulen', sans-serif !important;
+}
+
+/* Sửa riêng cho đoạn chữ viết tay uốn lượn */
+[class*="bridgingEmotionAndClarity"] {
+  font-family: 'Pinyon Script', cursive !important;
+}
+
 @import "../plasmic_nav/plasmic.css"; /* plasmic-import: 7nJ7UcFmq9UzB6eXfC5z4a/projectcss */
 @import "../react_aria/plasmic.css"; /* plasmic-import: gmeH6XgPaBtkt51HunAo4g/projectcss */
 @import "../plasmic_kit_animations/plasmic.css"; /* plasmic-import: axVArpcqgHCPMKB2yUGsW3/projectcss */
@@ -11,7 +24,6 @@
 @import "../cms/plasmic.css"; /* plasmic-import: hPz6Q3nQJn9Q8DTBgANGwo/projectcss */
 @import "../plasmic_cms/plasmic.css"; /* plasmic-import: hjKYmYi6HMwK6TRyk7ew5R/projectcss */
 @import "../plasmic_graphcms/plasmic.css"; /* plasmic-import: 22U3ZXm4dE59qEW488gxzU/projectcss */
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&family=Montserrat:wght@400;700&display=swap');
 
 .plasmic_tokens_bLa1shfC4noziDsvmxjKJF {
   --token-xEtc41naQwdo: 1140px;
