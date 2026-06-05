@@ -1,3 +1,6 @@
+/* 🌐 1. TẢI FONT TRỰC TIẾP TỪ GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -16,12 +19,24 @@ body {
   overflow-x: hidden;
 }
 
+/* 🛠️ 2. SỬA LỖI FONT TOÀN CỤC */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Trả lại quyền quyết định font cho Plasmic, không ép Arial nữa */
+  font-family: inherit; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* 🎯 3. BẮN TỈA ÉP FONT CHO ĐOẠN CHỮ VIẾT TAY */
+[class*="bridgingEmotionAndClarity"] {
+  font-family: 'Pinyon Script', cursive !important;
+}
+
+/* 🎯 4. ÉP FONT KOULEN CHO CÁC BIẾN LỖI CỦA PLASMIC */
+:root, .plasmic_default_styles {
+  --mixin-9Kwp1_irI7wZ_font-family: 'Koulen', sans-serif !important;
 }
 
 * {
