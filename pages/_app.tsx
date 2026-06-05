@@ -20,10 +20,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             type="video/mp4"
           />
           
-          {/* 1. Thêm 3 dòng này để tải Google Font Koulen trực tiếp từ HTML */}
+          {/* Giữ nguyên 2 dòng preconnect */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet" />
+          
+          {/* Cập nhật dòng này: Gộp cả Koulen, Pinyon Script và Roboto Mono vào cùng 1 link */}
+          <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&family=Roboto+Mono&display=swap" rel="stylesheet" />
 
         </Head>
 
