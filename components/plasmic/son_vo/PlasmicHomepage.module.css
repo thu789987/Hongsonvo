@@ -82,6 +82,7 @@
   z-index: 10;
   position: fixed;
   right: 0;
+  mix-blend-mode: difference;
 }
 .newMenu:global(.__wab_instance) {
   animation: none;
