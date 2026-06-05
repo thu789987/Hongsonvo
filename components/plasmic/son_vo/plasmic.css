@@ -13,8 +13,9 @@
 @import "../plasmic_graphcms/plasmic.css"; /* plasmic-import: 22U3ZXm4dE59qEW488gxzU/projectcss */
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-  font-family: 'Montserrat', sans-serif; /* Font nền của toàn bộ trang web */
+@font-face {
+  font-family: 'Roboto Mono';
+  src: local('Pinyon Script'), url('https://fonts.gstatic.com/s/pinyonscript/v21/6xKtd0tXq872nvS96tX6_NpyPcgV_A.woff2') format('woff2');
 }
 
 .plasmic_tokens_bLa1shfC4noziDsvmxjKJF {
