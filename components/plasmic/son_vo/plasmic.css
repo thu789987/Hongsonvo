@@ -11,11 +11,10 @@
 @import "../cms/plasmic.css"; /* plasmic-import: hPz6Q3nQJn9Q8DTBgANGwo/projectcss */
 @import "../plasmic_cms/plasmic.css"; /* plasmic-import: hjKYmYi6HMwK6TRyk7ew5R/projectcss */
 @import "../plasmic_graphcms/plasmic.css"; /* plasmic-import: 22U3ZXm4dE59qEW488gxzU/projectcss */
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Pinyon+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root, * {
-  --mixin-9Kwp1_irI7wZ_font-family: 'Koulen', sans-serif !important;
-  font-family: var(--mixin-9Kwp1_irI7wZ_font-family);
+body {
+  font-family: 'Montserrat', sans-serif; /* Font nền của toàn bộ trang web */
 }
 
 .plasmic_tokens_bLa1shfC4noziDsvmxjKJF {
