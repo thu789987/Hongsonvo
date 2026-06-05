@@ -1,28 +1,16 @@
 import "../components/plasmic/son_vo/plasmic.css"; 
-import { Koulen } from "next/font/google"; 
 import type { AppProps } from "next/app";
 import Head from "next/head"; 
 import { CursorProvider } from "../components/CursorContext";
 import { CustomCursor } from "../components/CustomCursor";
 
-// 🎯 Khởi tạo font dưới dạng một Biến CSS ngầm
-const fontKoulen = Koulen({
-  weight: "400",
-  subsets: ["khmer", "latin"],
-  display: "swap",
-  variable: "--my-custom-koulen", // 👈 Đặt tên biến CSS ở đây
-});
-
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    // 💡 BẮT BUỘC: Gắn fontKoulen.variable vào thẻ div bọc ngoài cùng 
-    // để Next.js NHẬN DIỆN và KHÔNG XÓA file font lúc build.
-    <div className={fontKoulen.variable}>
-      
-      {/* 🔮 BẮN TỈA CHÍNH XÁC: Lấy biến font vừa tạo đè thẳng vào mã lỗi của Plasmic */}
+    <>
+      {/* 🎯 BẮN TỈA DIỆN RỘNG: Ép TẤT CẢ mọi phần tử nếu chứa biến lỗi này phải đổi thành Koulen */}
       <style jsx global>{`
-        :root, .plasmic_default_styles {
-          --mixin-9Kwp1_irI7wZ_font-family: var(--my-custom-koulen), sans-serif !important;
+        * {
+          --mixin-9Kwp1_irI7wZ_font-family: 'Koulen', sans-serif !important;
         }
       `}</style>
 
@@ -32,6 +20,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
           />
+          
+          {/* 🌐 TẢI FONT TRUYỀN THỐNG: Nhúng trực tiếp link Google Fonts vào HTML */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet" />
+
           <link
             rel="preload"
             as="video"
@@ -43,6 +37,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <CustomCursor />
         <Component {...pageProps} />
       </CursorProvider>
-    </div>
+    </>
   );
 }
