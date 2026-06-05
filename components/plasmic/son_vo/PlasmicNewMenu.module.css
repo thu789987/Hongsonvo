@@ -6,12 +6,13 @@
   max-width: 100%;
   justify-content: center;
   align-items: flex-start;
-  mix-blend-mode: normal;
+  mix-blend-mode: difference;
   position: relative;
   transition-property: all;
   transition-duration: 300ms;
   background: none;
   backdrop-filter: none;
+  isolation: auto;
   min-width: 0;
   -webkit-backdrop-filter: none;
   -webkit-transition-property: all;

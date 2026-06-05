@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: none;
+  background: #000000;
   min-width: 0;
   min-height: 0;
 }
@@ -90,17 +90,6 @@
 }
 .text__xOeBx {
   letter-spacing: 0px;
-}
-.scrollDetector:global(.__wab_instance) {
-  animation: none;
-  max-width: 100%;
-  object-fit: cover;
-  left: 0;
-  top: 0;
-  z-index: 5;
-  position: fixed;
-  right: 0;
-  mix-blend-mode: difference;
 }
 .headerHeroSection2 {
   display: flex;

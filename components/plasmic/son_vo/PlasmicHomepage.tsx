@@ -68,7 +68,6 @@ import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcW
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import ScrollContext from "../../ScrollContext"; // plasmic-import: 4JSGC86CDgyw/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
-import { ScrollDetector } from "../../ScrollDetector"; // plasmic-import: Q1k6AlFajD5X/codeComponent
 import { ScrollPlayVideo } from "../../ScrollPlayVideo"; // plasmic-import: nqEdA202CaaA/codeComponent
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { AnimatedLineOnScroll } from "../../AnimatedLineOnScroll"; // plasmic-import: Al7stYh33MDE/codeComponent
@@ -145,7 +144,6 @@ export type PlasmicHomepage__OverridesType = {
   smoothScroll?: Flex__<typeof SmoothScroll>;
   scrollContext?: Flex__<typeof ScrollContext>;
   newMenu?: Flex__<typeof NewMenu>;
-  scrollDetector?: Flex__<typeof ScrollDetector>;
   headerHeroSection2?: Flex__<"div">;
   scrollPlayVideo?: Flex__<typeof ScrollPlayVideo>;
   headerHeroSection3?: Flex__<"div">;
@@ -347,14 +345,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   })()}
                 />
               </ScrollContext>
-              <ScrollDetector
-                data-plasmic-name={"scrollDetector"}
-                data-plasmic-override={overrides.scrollDetector}
-                children={null}
-                className={classNames("__wab_instance", sty.scrollDetector)}
-                threshold={50}
-              />
-
               <div
                 data-plasmic-name={"headerHeroSection2"}
                 data-plasmic-override={overrides.headerHeroSection2}
@@ -2077,7 +2067,6 @@ const PlasmicDescendants = {
     "smoothScroll",
     "scrollContext",
     "newMenu",
-    "scrollDetector",
     "headerHeroSection2",
     "scrollPlayVideo",
     "headerHeroSection3",
@@ -2131,7 +2120,6 @@ const PlasmicDescendants = {
     "smoothScroll",
     "scrollContext",
     "newMenu",
-    "scrollDetector",
     "headerHeroSection2",
     "scrollPlayVideo",
     "headerHeroSection3",
@@ -2181,7 +2169,6 @@ const PlasmicDescendants = {
   ],
   scrollContext: ["scrollContext", "newMenu"],
   newMenu: ["newMenu"],
-  scrollDetector: ["scrollDetector"],
   headerHeroSection2: ["headerHeroSection2", "scrollPlayVideo"],
   scrollPlayVideo: ["scrollPlayVideo"],
   headerHeroSection3: ["headerHeroSection3"],
@@ -2328,7 +2315,6 @@ type NodeDefaultElementType = {
   smoothScroll: typeof SmoothScroll;
   scrollContext: typeof ScrollContext;
   newMenu: typeof NewMenu;
-  scrollDetector: typeof ScrollDetector;
   headerHeroSection2: "div";
   scrollPlayVideo: typeof ScrollPlayVideo;
   headerHeroSection3: "div";
@@ -2469,7 +2455,6 @@ export const PlasmicHomepage = Object.assign(
     smoothScroll: makeNodeComponent("smoothScroll"),
     scrollContext: makeNodeComponent("scrollContext"),
     newMenu: makeNodeComponent("newMenu"),
-    scrollDetector: makeNodeComponent("scrollDetector"),
     headerHeroSection2: makeNodeComponent("headerHeroSection2"),
     scrollPlayVideo: makeNodeComponent("scrollPlayVideo"),
     headerHeroSection3: makeNodeComponent("headerHeroSection3"),
