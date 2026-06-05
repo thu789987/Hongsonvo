@@ -51,7 +51,7 @@ import { registerComponent } from '@plasmicapp/react-web/lib/host';
 import { HoverVariantWrapper } from './components/HoverVariantWrapper';
 import { CachedAirtable } from "./components/CachedAirtable"; // Đảm bảo đường dẫn đúng
 import { CircularText } from "./components/CircularText"; // Đổi lại đường dẫn cho đúng
-import { TiltHoverCard } from "./components/TiltHoverCard"; // Chỉnh lại đường dẫn cho đúng
+import { ZoomHoverCard } from "./components/ZoomHoverCard";
 
 PLASMIC.registerComponent(Markdown, {
   name: "Markdown",
@@ -636,46 +636,25 @@ PLASMIC.registerComponent(CircularText, {
     }
 }); // <--- CHÚ Ý THÊM DẤU NGẶC TRÒN Ở ĐÂY
 
-PLASMIC.registerComponent(TiltHoverCard, {
-  name: "TiltHoverCard",
-  displayName: "Tilt Hover Card",
-  importPath: "./components/TiltHoverCard",
+PLASMIC.registerComponent(ZoomHoverCard as any, {
+  name: "ZoomHoverCard",
+  displayName: "Zoom Hover Card", // Tên hiển thị đẹp mắt trên Studio
   props: {
+    // Khai báo cho Plasmic biết đây là một cái "hộp rỗng" để kéo thả nội dung vào
     children: {
       type: "slot",
-      defaultValue: [
-        {
-          type: "vbox",
-          styles: {
-            width: "100%",
-            height: "100%",
-            padding: "20px",
-            backgroundColor: "#ffffff",
-            borderRadius: "12px",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0px 10px 30px rgba(0,0,0,0.1)",
-          },
-          children: [
-            {
-              type: "text",
-              value: "HOVER ME",
-              styles: { fontSize: "24px", fontWeight: "bold" },
-            },
-          ],
+      defaultValue: {
+        type: "vbox", // Mặc định hiển thị một khối dọc để dễ kéo thả
+        styles: {
+          padding: "20px",
+          textAlign: "center",
         },
-      ],
-    },
-    rotationRange: {
-      type: "number",
-      defaultValue: 32.5,
-      displayName: "Góc nghiêng tối đa",
-    },
-    popOutZ: {
-      type: "number",
-      defaultValue: 50,
-      displayName: "Độ nổi 3D (Z-Index)",
-      description: "Đẩy content bên trong lồi lên bao nhiêu pixel",
+        children: {
+          type: "text",
+          value: "Kéo thả Project Card của bạn vào đây!",
+        },
+      },
     },
   },
+  importPath: "./components/ZoomHoverCard",
 });
