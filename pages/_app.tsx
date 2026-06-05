@@ -4,19 +4,9 @@ import Head from "next/head";
 import { CursorProvider } from "../components/CursorContext";
 import { CustomCursor } from "../components/CustomCursor";
 
-// 1. Import font Koulen từ next/font/google
-import { Koulen } from 'next/font/google';
-
-// 2. Cấu hình font
-const koulen = Koulen({
-  weight: '400', 
-  subsets: ['latin'],
-});
-
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    // 3. Bọc toàn bộ ứng dụng bằng thẻ <main> chứa className của font
-    <main className={koulen.className}>
+    <>
       <CursorProvider>
         <Head>
           <meta
@@ -34,6 +24,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <CustomCursor />
         <Component {...pageProps} />
       </CursorProvider>
-    </main>
+    </>
   );
 }
