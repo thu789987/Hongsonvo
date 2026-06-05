@@ -6,7 +6,7 @@
   max-width: 100%;
   justify-content: center;
   align-items: flex-start;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   position: relative;
   transition-property: all;
   transition-duration: 300ms;
