@@ -646,7 +646,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   "__wab_instance",
                   sty.animatedLineOnScroll__n07Vb
                 )}
-                color={"#000000"}
+                color={"#FFFFFF"}
                 delay={0}
                 duration={0.8}
               />
@@ -1168,7 +1168,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   "__wab_instance",
                   sty.animatedLineOnScroll__xtCza
                 )}
-                color={"#000000"}
+                color={"#FFFFFF"}
                 delay={0}
                 duration={0.8}
               />
@@ -1726,7 +1726,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   "__wab_instance",
                   sty.animatedLineOnScroll__tkm1P
                 )}
-                color={"#000000"}
+                color={"#FFFFFF"}
                 delay={0}
                 duration={0.8}
               />

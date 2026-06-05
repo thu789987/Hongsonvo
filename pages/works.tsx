@@ -7,18 +7,8 @@ import GlobalContextsProvider from "../components/plasmic/son_vo/PlasmicGlobalCo
 import { PlasmicWorks } from "../components/plasmic/son_vo/PlasmicWorks";
 import { useRouter } from "next/router";
 import { PlasmicQueryDataProvider } from "@plasmicapp/react-web/lib/query";
-import type { GetStaticProps } from "next";
-import { extractPlasmicQueryData } from "@plasmicapp/react-web/lib/prepass";
 
-export const getStaticProps: GetStaticProps = async context => {
-  const queryCache = await extractPlasmicQueryData(<PlasmicWorks />);
-  return {
-    props: { queryCache },
-    revalidate: 3600,
-  };
-};
-
-function Works({ queryCache }: { queryCache?: any }) {
+function Works() {
   // Use PlasmicWorks to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
@@ -38,7 +28,7 @@ function Works({ queryCache }: { queryCache?: any }) {
 
   return (
     <GlobalContextsProvider>
-      <PlasmicQueryDataProvider prefetchedCache={queryCache}>
+      <PlasmicQueryDataProvider>
         <PageParamsProvider__
           route={useRouter()?.pathname}
           params={useRouter()?.query}

@@ -7,21 +7,27 @@ import GlobalContextsProvider from "../../components/plasmic/son_vo/PlasmicGloba
 import { PlasmicNewPage } from "../../components/plasmic/son_vo/PlasmicNewPage";
 import { useRouter } from "next/router";
 import { PlasmicQueryDataProvider } from "@plasmicapp/react-web/lib/query";
-import type { GetStaticProps } from "next";
+import type { GetStaticPaths, GetStaticProps } from "next";
 import { extractPlasmicQueryData } from "@plasmicapp/react-web/lib/prepass";
 
-export const getStaticPaths = async () => {
+export const getStaticProps: GetStaticProps = async context => {
+  const queryCache = await extractPlasmicQueryData(
+    <PageParamsProvider__ route={"/works/[Slug]"} params={context.params}>
+      <PlasmicNewPage />
+    </PageParamsProvider__>
+  );
   return {
-    paths: [], // Không tạo sẵn trang nào lúc build để tránh lỗi
-    fallback: 'blocking' // Tự động tạo trang mượt mà khi có người truy cập lần đầu
+    props: { queryCache }
   };
 };
 
-export const getStaticProps: GetStaticProps = async context => {
-  const queryCache = await extractPlasmicQueryData(<PlasmicNewPage />);
+export const getStaticPaths: GetStaticPaths = async () => {
+  console.warn(
+    "getStaticPaths was called with an empty paths array. Update this with the set of pages you want to generate statically."
+  );
   return {
-    props: { queryCache },
-        revalidate: 3600,
+    paths: [],
+    fallback: "blocking"
   };
 };
 
