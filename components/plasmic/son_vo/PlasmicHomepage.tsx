@@ -68,7 +68,7 @@ import { SmoothScroll } from "../../SmoothScroll"; // plasmic-import: Jfg-9WPWcW
 import LineBg from "../../LineBg"; // plasmic-import: Gitq1R2yOG92/component
 import ScrollContext from "../../ScrollContext"; // plasmic-import: 4JSGC86CDgyw/codeComponent
 import NewMenu from "../../NewMenu"; // plasmic-import: H0Q4YGXvnXjh/component
-import { ScrollPlayVideo } from "../../ScrollPlayVideo"; // plasmic-import: nqEdA202CaaA/codeComponent
+import { ScrollPlayVideo } from "@/components/ScrollPlayVideo"; // plasmic-import: nqEdA202CaaA/codeComponent
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { AnimatedLineOnScroll } from "../../AnimatedLineOnScroll"; // plasmic-import: Al7stYh33MDE/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
@@ -357,9 +357,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.scrollPlayVideo
                     )}
                     transitionSpeed={8}
-                    videoSrc={
-                      "https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
-                    }
+                    videoSrc={"public/video/video_scrolly_toiuu.mp4"}
                   />
                 </div>
                 <div className={classNames("all", sty.freeBox___0PzuY)}>
