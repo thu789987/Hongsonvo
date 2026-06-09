@@ -2565,7 +2565,7 @@
           "id": "nqEdA202CaaA",
           "name": "ScrollPlayVideo",
           "displayName": "ScrollPlayVideo",
-          "componentImportPath": "./components/ScrollPlayVideo"
+          "componentImportPath": "@/components/ScrollPlayVideo"
         },
         {
           "id": "4JSGC86CDgyw",
