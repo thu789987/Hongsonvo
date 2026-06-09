@@ -72,7 +72,6 @@ import { ScrollPlayVideo } from "../../ScrollPlayVideo"; // plasmic-import: nqEd
 import { RevealOnScroll } from "../../RevealOnScroll"; // plasmic-import: CAuNcrF6_Gj8/codeComponent
 import { AnimatedLineOnScroll } from "../../AnimatedLineOnScroll"; // plasmic-import: Al7stYh33MDE/codeComponent
 import { HackerText } from "../../HackerText"; // plasmic-import: 3GgRTQcWQU8e/codeComponent
-import { GridDistortion } from "../../GridDistortion"; // plasmic-import: kq5DTYHqGSSP/codeComponent
 import { CachedAirtable } from "../../CachedAirtable"; // plasmic-import: R8IeYWvKto_c/codeComponent
 import { InfiniteScroll } from "../../InfiniteScroll"; // plasmic-import: eG3ecyFTzV8U/codeComponent
 import { HoverLogoCard } from "../../HoverLogoCard"; // plasmic-import: 8gew1WdMY0jF/codeComponent
@@ -173,7 +172,6 @@ export type PlasmicHomepage__OverridesType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2?: Flex__<"div">;
   container31?: Flex__<"div">;
   subContainer2?: Flex__<"div">;
-  gridDistortion?: Flex__<typeof GridDistortion>;
   infiniteScroll?: Flex__<typeof InfiniteScroll>;
   cardWhatAboutUs5?: Flex__<typeof CardWhatAboutUs>;
   sectionCards3?: Flex__<"div">;
@@ -1325,21 +1323,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       data-plasmic-override={overrides.subContainer2}
                       className={classNames("all", sty.subContainer2)}
                     >
-                      <GridDistortion
-                        data-plasmic-name={"gridDistortion"}
-                        data-plasmic-override={overrides.gridDistortion}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.gridDistortion
-                        )}
-                        enableEffect={true}
-                        grid={20}
-                        imageSrc={"/plasmic/son_vo/images/_1Jpg.jpg"}
-                        mouse={0.1}
-                        relaxation={0.9}
-                        strength={0.25}
-                      />
-
                       <div className={classNames("all", sty.freeBox__nvBlI)}>
                         <div className={classNames("all", sty.freeBox__kSo7E)}>
                           <div
@@ -2096,7 +2079,6 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container31",
     "subContainer2",
-    "gridDistortion",
     "infiniteScroll",
     "cardWhatAboutUs5",
     "sectionCards3",
@@ -2149,7 +2131,6 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container31",
     "subContainer2",
-    "gridDistortion",
     "infiniteScroll",
     "cardWhatAboutUs5",
     "sectionCards3",
@@ -2225,7 +2206,6 @@ const PlasmicDescendants = {
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2",
     "container31",
     "subContainer2",
-    "gridDistortion",
     "infiniteScroll",
     "cardWhatAboutUs5"
   ],
@@ -2268,12 +2248,10 @@ const PlasmicDescendants = {
   container31: [
     "container31",
     "subContainer2",
-    "gridDistortion",
     "infiniteScroll",
     "cardWhatAboutUs5"
   ],
-  subContainer2: ["subContainer2", "gridDistortion", "infiniteScroll"],
-  gridDistortion: ["gridDistortion"],
+  subContainer2: ["subContainer2", "infiniteScroll"],
   infiniteScroll: ["infiniteScroll"],
   cardWhatAboutUs5: ["cardWhatAboutUs5"],
   sectionCards3: [
@@ -2344,7 +2322,6 @@ type NodeDefaultElementType = {
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2: "div";
   container31: "div";
   subContainer2: "div";
-  gridDistortion: typeof GridDistortion;
   infiniteScroll: typeof InfiniteScroll;
   cardWhatAboutUs5: typeof CardWhatAboutUs;
   sectionCards3: "div";
@@ -2499,7 +2476,6 @@ export const PlasmicHomepage = Object.assign(
       ),
     container31: makeNodeComponent("container31"),
     subContainer2: makeNodeComponent("subContainer2"),
-    gridDistortion: makeNodeComponent("gridDistortion"),
     infiniteScroll: makeNodeComponent("infiniteScroll"),
     cardWhatAboutUs5: makeNodeComponent("cardWhatAboutUs5"),
     sectionCards3: makeNodeComponent("sectionCards3"),

@@ -2626,12 +2626,6 @@
           "name": "ZoomHoverCard",
           "displayName": "ZoomHoverCard",
           "componentImportPath": "./components/ZoomHoverCard"
-        },
-        {
-          "id": "XrSuzuZNVH0q",
-          "name": "AceternityBackgroundBoxes",
-          "displayName": "Aceternity Background Boxes",
-          "componentImportPath": "@/components/BackgroundBoxesWrapper"
         }
       ],
       "customFunctions": []
