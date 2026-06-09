@@ -43,7 +43,7 @@ export const ScrollPlayVideo = ({
 
     const scrollyVideoInstance = new ScrollyVideoClass({
 scrollyVideoContainer: containerRef.current,
-      src: videoSrc || "public/video/video_timelaspe.mp4", // Đã đổi sang file local
+      src: videoSrc || "video/video_timelaspe.mp4", // Đã đổi sang file local
       transitionSpeed: transitionSpeed,
       cover: true,
       sticky: true,
