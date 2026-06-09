@@ -444,7 +444,7 @@ PLASMIC.registerComponent(ScrollPlayVideo, {
     videoSrc: {
       type: "string",
       displayName: "Link Video (.mp4)", // Thêm dòng này để hiển thị tiếng Việt trên giao diện cho đẹp
-      defaultValue: "/video/video_scrolly_toiuu.mp4", // 💡 Đổi sang đường dẫn file local sau khi bạn đã convert bằng FFmpeg
+      defaultValue: "/public/video/video_timelaspe.mp4", // 💡 Đổi sang đường dẫn file local sau khi bạn đã convert bằng FFmpeg
       description: "Đường link file .mp4 của bạn",
     },
     transitionSpeed: {
