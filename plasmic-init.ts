@@ -439,19 +439,24 @@ showFade: {
 
 PLASMIC.registerComponent(ScrollPlayVideo, {
   name: "ScrollPlayVideo",
+  importName: "ScrollPlayVideo", // 🎯 THÊM DÒNG NÀY: Để đảm bảo Plasmic sinh tên biến JS chuẩn, không bị lỗi cú pháp
   props: {
     videoSrc: {
       type: "string",
-      defaultValue: "https://scrollyvideo.js.org/goldengate.mp4",
+      displayName: "Link Video (.mp4)", // Thêm dòng này để hiển thị tiếng Việt trên giao diện cho đẹp
+      defaultValue: "/video/video_scrolly_toiuu.mp4", // 💡 Đổi sang đường dẫn file local sau khi bạn đã convert bằng FFmpeg
       description: "Đường link file .mp4 của bạn",
     },
     transitionSpeed: {
       type: "number",
+      displayName: "Tốc độ phản hồi",
       defaultValue: 8,
       description: "Tốc độ phản hồi (Số nhỏ = Tua đầm, mượt, trễ nhiều / Số lớn = Tua gắt theo sát chuột)",
     }
   },
-  importPath: "./components/ScrollPlayVideo",
+  // 🎯 SỬA ĐƯỜNG DẪN: Nếu dự án của bạn dùng Alias @/ thì nên đổi thành "@/components/ScrollPlayVideo"
+  // Còn nếu dùng đường dẫn tương đối thì để "./components/ScrollPlayVideo" cũng được, miễn là khớp với vị trí file thực tế.
+  importPath: "@/components/ScrollPlayVideo", 
 });
 
 PLASMIC.registerComponent(ScrollContext, {
