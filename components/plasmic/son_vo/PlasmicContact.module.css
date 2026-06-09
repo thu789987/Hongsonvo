@@ -29,8 +29,9 @@
 }
 @media (max-width: 1024px) {
   .smoothScroll:global(.__wab_instance) {
-    height: auto;
-    overflow: visible;
+    height: 100%;
+    overflow: hidden;
+    min-height: 0;
   }
 }
 .freeBox__nqF1I {
@@ -80,7 +81,8 @@
 }
 @media (max-width: 1024px) {
   .revealOnScroll:global(.__wab_instance) {
-    height: auto;
+    height: 100%;
+    min-height: 0;
   }
 }
 .sectionCards2 {

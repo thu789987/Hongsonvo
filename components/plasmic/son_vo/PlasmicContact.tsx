@@ -292,7 +292,7 @@ function PlasmicContact__RenderFunc(props: {
                 duration={34}
                 fontSize={24}
                 letterSpacing={3}
-                size={1500}
+                size={1600}
                 text={"CONTACT US • "}
               />
 
@@ -365,7 +365,7 @@ function PlasmicContact__RenderFunc(props: {
                         hoverColor={
                           true ? "var(--antd-colorWarning)" : undefined
                         }
-                        text={"hongson789987@\ngmail.com\n(+84) 035 7652075"}
+                        text={"hongson789987@ gmail.com\n(+84) 035 7652075"}
                       />
 
                       <HackerText
@@ -927,7 +927,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   scrollToTop: ["scrollToTop"],
   globalLoading: ["globalLoading"],
   smoothScroll: [
@@ -970,7 +969,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   revealOnScroll: [
     "revealOnScroll",
     "sectionCards2",
@@ -981,7 +979,6 @@ const PlasmicDescendants = {
     "left3",
     "container6"
   ],
-
   sectionCards2: [
     "sectionCards2",
     "left",
@@ -991,7 +988,6 @@ const PlasmicDescendants = {
     "left3",
     "container6"
   ],
-
   left: ["left", "container4"],
   container4: ["container4"],
   left2: ["left2", "container5"],
@@ -1029,7 +1025,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   loved: [
     "loved",
     "variant1",
@@ -1057,7 +1052,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   variant1: [
     "variant1",
     "_1",
@@ -1084,7 +1078,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   _1: ["_1", "img", "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
   img: ["img", "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
   e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg: ["e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
@@ -1110,7 +1103,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   ratingInfo: [
     "ratingInfo",
     "ratingScore",
@@ -1118,7 +1110,6 @@ const PlasmicDescendants = {
     "starsContainer",
     "svg"
   ],
-
   ratingScore: ["ratingScore", "container"],
   container: ["container"],
   starsContainer: ["starsContainer", "svg"],
@@ -1178,7 +1169,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicContact__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
