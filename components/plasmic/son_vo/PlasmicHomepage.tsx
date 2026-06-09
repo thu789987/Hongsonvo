@@ -357,7 +357,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.scrollPlayVideo
                     )}
                     transitionSpeed={8}
-                    videoSrc={"public/video/video_scrolly_toiuu.mp4"}
+                    videoSrc={"public/video/video_timelaspe.mp4"}
                   />
                 </div>
                 <div className={classNames("all", sty.freeBox___0PzuY)}>
