@@ -12,14 +12,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-          />
-          <link
-            rel="preload"
-            as="video"
-            href="https://cdn.jsdelivr.net/gh/thu789987/Hongsonvo/public/video/video_time%20laspe.mp4"
-            type="video/mp4"
-          />
-          
+          />   
           {/* Giữ nguyên 2 dòng preconnect */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

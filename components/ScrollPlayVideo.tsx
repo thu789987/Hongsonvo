@@ -42,11 +42,12 @@ export const ScrollPlayVideo = ({
     if (!ScrollyVideoClass) return;
 
     const scrollyVideoInstance = new ScrollyVideoClass({
-      scrollyVideoContainer: containerRef.current,
-      src: videoSrc || "https://scrollyvideo.js.org/goldengate.mp4",
+scrollyVideoContainer: containerRef.current,
+      src: videoSrc || "public/video/video_timelaspe.mp4", // Đã đổi sang file local
       transitionSpeed: transitionSpeed,
       cover: true,
-      sticky: true
+      sticky: true,
+      useWebCodecs: true // 🎯 Kích hoạt bộ giải mã phần cứng thế hệ mới
     });
 
     // 🎯 VŨ KHÍ BÍ MẬT: Tạo "điệp viên" kiểm tra mỗi 100 mili-giây
