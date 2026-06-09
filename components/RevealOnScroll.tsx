@@ -34,7 +34,7 @@ export function RevealOnScroll({
     <div 
       ref={ref} 
       className={className} 
-      style={{ position: "relative", overflow: "visible", zIndex: 10 }}
+      style={{ position: "relative", overflow: "visible" }}
     >
       <motion.div
         variants={{
