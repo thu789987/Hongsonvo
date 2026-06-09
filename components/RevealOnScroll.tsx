@@ -31,19 +31,25 @@ export function RevealOnScroll({
   }, [isInView, mainControls]);
 
   return (
-    <div ref={ref} className={className} style={{ position: "relative", overflow: "visible" }}>
+    <div 
+      ref={ref} 
+      className={className} 
+      style={{ 
+        position: "relative", 
+        overflow: "visible",
+        zIndex: 10 // 👈 FIX 1: Nâng toàn bộ cái hộp này lên lớp số 10 để không bị PatternGrid đè
+      }}
+    >
       <motion.div
         variants={{
           hidden: { 
             opacity: 0, 
             y: yOffset,
-            // 👇 Thêm hiệu ứng Blur ban đầu
             filter: `blur(${blurAmount}px)` 
           },
           visible: { 
             opacity: 1, 
             y: 0,
-            // 👇 Khi hiện ra thì hết mờ
             filter: "blur(0px)" 
           }
         }}
@@ -54,7 +60,11 @@ export function RevealOnScroll({
           delay: delay,
           ease: [0.25, 0.25, 0, 1] 
         }}
-        style={{ width: "100%" }} 
+        style={{ 
+          width: "100%",
+          // 👇 FIX 2: Bắt buộc! Đang ẩn thì tàng hình với chuột, hiện ra thì ăn chuột 100%
+          pointerEvents: isInView ? "auto" : "none" 
+        }} 
       >
         {children}
       </motion.div>
