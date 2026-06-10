@@ -41,15 +41,13 @@ export const ScrollPlayVideo = ({
     const ScrollyVideoClass = (window as any).ScrollyVideo;
     if (!ScrollyVideoClass) return;
 
-const scrollyVideoInstance = new ScrollyVideoClass({
-      scrollyVideoContainer: containerRef.current,
-      // 1. 🎯 THÊM DẤU GẠCH CHÉO (/) ở đằng trước fallback url để đường dẫn luôn trỏ về gốc web
-      src: videoSrc || "/video/video_timelaspe.mp4", 
+    const scrollyVideoInstance = new ScrollyVideoClass({
+scrollyVideoContainer: containerRef.current,
+      src: videoSrc || "video/video_timelaspe.mp4", // Đã đổi sang file local
       transitionSpeed: transitionSpeed,
       cover: true,
       sticky: true,
-      // 2. 🎯 TẮT TẠM THỜI WEBCODECS: Để trình duyệt tự dùng thuật toán an toàn trên màn hình lớn
-      useWebCodecs: false 
+      useWebCodecs: true // 🎯 Kích hoạt bộ giải mã phần cứng thế hệ mới
     });
 
     // 🎯 VŨ KHÍ BÍ MẬT: Tạo "điệp viên" kiểm tra mỗi 100 mili-giây
