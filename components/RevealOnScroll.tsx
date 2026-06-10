@@ -41,29 +41,33 @@ export function RevealOnScroll({
           hidden: { 
             opacity: 0, 
             y: yOffset,
-            filter: `blur(${blurAmount}px)`,
-            // 🎯 Đưa pointerEvents vào thẳng đây: Đang ẩn thì KHÔNG bắt chuột
-            pointerEvents: "none" 
+            filter: `blur(${blurAmount}px)`
+            // ❌ Đã xóa pointerEvents ở đây
           },
           visible: { 
             opacity: 1, 
             y: 0,
-            filter: "blur(0px)",
-            // 🎯 Mở khóa ngay lập tức khi Frame animation xuất hiện
-            pointerEvents: "auto" 
+            filter: "blur(0px)"
+            // ❌ Đã xóa pointerEvents ở đây
           }
         }}
         initial="hidden"
         animate={mainControls}
-        // 🎯 HIỆU ỨNG PHẢN HỒI CLICK (Chìa khóa chống spam click)
-        // Khi người dùng bấm vào thẻ, nó sẽ lún xuống một chút báo hiệu "Đã nhận lệnh!"
+        // 🎯 Hiệu ứng lún xuống khi click vẫn giữ nguyên
         whileTap={{ scale: 0.97 }} 
         transition={{ 
           duration: duration, 
           delay: delay,
           ease: [0.25, 0.25, 0, 1] 
         }}
-        style={{ width: "100%" }} 
+        style={{ 
+          width: "100%", 
+          height: "100%",
+          // 🎯 VŨ KHÍ 1: Mở khóa click ngay lập tức khi component lọt vào màn hình
+          pointerEvents: isInView ? "auto" : "none",
+          // 🎯 VŨ KHÍ 2: Vô hiệu hóa tính năng "click đúp để zoom" của Safari, giúp click ăn ngay lập tức
+          touchAction: "manipulation" 
+        }} 
       >
         {children}
       </motion.div>
