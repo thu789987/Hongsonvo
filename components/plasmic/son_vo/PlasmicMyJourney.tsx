@@ -727,13 +727,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                       {"IN"}
                     </h1>
                   </div>
-                  <div
-                    className={classNames(
-                      "all",
-                      sty.freeBox__an56F,
-                      "animate-text"
-                    )}
-                  >
+                  <div className={classNames("all", sty.freeBox__an56F)}>
                     <h1
                       className={classNames(
                         "all",
@@ -741,7 +735,7 @@ function PlasmicMyJourney__RenderFunc(props: {
                         "h1__bLa1s",
                         "__wab_text",
                         sty.h1__fmTt,
-                        ``
+                        "animate-text"
                       )}
                     >
                       {"H"}
@@ -752,7 +746,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                         "h1",
                         "h1__bLa1s",
                         "__wab_text",
-                        sty.h1__i2V2N
+                        sty.h1__i2V2N,
+                        "animate-text"
                       )}
                     >
                       {"S"}
@@ -763,7 +758,8 @@ function PlasmicMyJourney__RenderFunc(props: {
                         "h1",
                         "h1__bLa1s",
                         "__wab_text",
-                        sty.h1__vmNkV
+                        sty.h1__vmNkV,
+                        "animate-text"
                       )}
                     >
                       {"V"}
@@ -2953,7 +2949,6 @@ const PlasmicDescendants = {
     "patternGrid",
     "templateCard9"
   ],
-
   scrollToTop: ["scrollToTop"],
   smoothScroll: [
     "smoothScroll",
@@ -3045,7 +3040,6 @@ const PlasmicDescendants = {
     "patternGrid",
     "templateCard9"
   ],
-
   scrollDetector: ["scrollDetector", "newMenu"],
   newMenu: ["newMenu"],
   tickerHeader: ["tickerHeader"],
@@ -3077,7 +3071,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   loved: [
     "loved",
     "variant1",
@@ -3105,7 +3098,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   variant1: [
     "variant1",
     "_1",
@@ -3132,7 +3124,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   _1: ["_1", "img", "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
   img: ["img", "e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
   e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg: ["e9Q1LJl0QxOyx3A5ZmM8Jeght0YJpg"],
@@ -3158,7 +3149,6 @@ const PlasmicDescendants = {
     "ratingText",
     "container2"
   ],
-
   ratingInfo: [
     "ratingInfo",
     "ratingScore",
@@ -3166,7 +3156,6 @@ const PlasmicDescendants = {
     "starsContainer",
     "svg"
   ],
-
   ratingScore: ["ratingScore", "container"],
   container: ["container"],
   starsContainer: ["starsContainer", "svg"],
@@ -3191,7 +3180,6 @@ const PlasmicDescendants = {
     "_11",
     "_12"
   ],
-
   left: ["left", "title2", "container4"],
   title2: ["title2"],
   container4: ["container4"],
@@ -3207,7 +3195,6 @@ const PlasmicDescendants = {
     "_11",
     "_12"
   ],
-
   title4: ["title4"],
   container5: ["container5", "_6", "_7", "_8", "_9", "_10", "_11", "_12"],
   _6: ["_6"],
@@ -3245,7 +3232,6 @@ const PlasmicDescendants = {
     "_18",
     "cardWhatAboutUs5"
   ],
-
   heading4: [
     "heading4",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
@@ -3256,18 +3242,15 @@ const PlasmicDescendants = {
     "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
     "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
   ],
-
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3:
     [
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings3",
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
     ],
-
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4:
     [
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings4"
     ],
-
   eXpertise2: ["eXpertise2"],
   an2: ["an2"],
   skills2: ["skills2"],
@@ -3276,12 +3259,10 @@ const PlasmicDescendants = {
       "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking3",
       "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
     ],
-
   bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4:
     [
       "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking4"
     ],
-
   container31: [
     "container31",
     "subContainer2",
@@ -3301,7 +3282,6 @@ const PlasmicDescendants = {
     "_18",
     "cardWhatAboutUs5"
   ],
-
   subContainer2: [
     "subContainer2",
     "left4",
@@ -3319,7 +3299,6 @@ const PlasmicDescendants = {
     "_25",
     "_18"
   ],
-
   left4: [
     "left4",
     "container7",
@@ -3336,7 +3315,6 @@ const PlasmicDescendants = {
     "_25",
     "_18"
   ],
-
   container7: [
     "container7",
     "_20",
@@ -3352,7 +3330,6 @@ const PlasmicDescendants = {
     "_25",
     "_18"
   ],
-
   _20: ["_20", "_13"],
   _13: ["_13"],
   _21: ["_21", "_14"],
@@ -3382,7 +3359,6 @@ const PlasmicDescendants = {
     "infiniteScroll",
     "cardWhatAboutUs7"
   ],
-
   heading6: [
     "heading6",
     "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
@@ -3394,18 +3370,15 @@ const PlasmicDescendants = {
     "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8",
     "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
   ],
-
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7:
     [
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings7",
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
     ],
-
   weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8:
     [
       "weTakePrideInProvidingOurClientsWithAnUnforgettableExperienceFromStartToFinishFromBrainstormingSessionsToCastingCallsFromScoutingLocationsToPostProductionWeHandleEveryAspectOfTheFilmmakingProcessWithCareAndAttentionToDetailMyOfferings8"
     ],
-
   eXpertise4: ["eXpertise4"],
   an4: ["an4"],
   skills4: ["skills4"],
@@ -3414,24 +3387,20 @@ const PlasmicDescendants = {
       "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking7",
       "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
     ],
-
   bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8:
     [
       "bridgingEmotionAndClarityMyDesignPracticeGenerallyEvolvesAroundStorytellingResearchAndEnterpriseDesignThinking8"
     ],
-
   theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2:
     [
       "theAimIsAlwaysTheSameForAllProjectsWhichIsToCreateOneOfAKindHumanCentredExperiencesThatLeaveAPositiveImpact2"
     ],
-
   container33: [
     "container33",
     "subContainer4",
     "infiniteScroll",
     "cardWhatAboutUs7"
   ],
-
   subContainer4: ["subContainer4", "infiniteScroll"],
   infiniteScroll: ["infiniteScroll"],
   cardWhatAboutUs7: ["cardWhatAboutUs7"],
@@ -3539,7 +3508,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicMyJourney__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
