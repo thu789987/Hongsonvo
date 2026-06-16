@@ -608,10 +608,16 @@
 @media (max-width: 930px) {
   .freeBox__rGpka {
     height: 700px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-right: 24px;
+    padding-left: 24px;
+    column-gap: 0px;
     flex-shrink: 0;
   }
 }
-.freeBox__dRpS8 {
+.freeBox__mYxsv {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -624,12 +630,17 @@
   min-width: 0;
 }
 @media (max-width: 1024px) {
-  .freeBox__dRpS8 {
+  .freeBox__mYxsv {
     align-items: flex-start;
     justify-content: flex-end;
   }
 }
-.h1__c8Grs {
+@media (max-width: 930px) {
+  .freeBox__mYxsv {
+    display: none;
+  }
+}
+.h1__wcyDc {
   text-align: right;
   color: #cdcdcd;
   line-height: 80%;
@@ -637,12 +648,12 @@
   letter-spacing: 0%;
 }
 @media (max-width: 1024px) {
-  .h1__c8Grs {
+  .h1__wcyDc {
     font-size: 210px;
   }
 }
 @media (max-width: 930px) {
-  .h1__c8Grs {
+  .h1__wcyDc {
     max-width: 800px;
   }
 }
@@ -727,6 +738,11 @@
     justify-content: flex-end;
   }
 }
+@media (max-width: 930px) {
+  .freeBox__jpTc {
+    display: none;
+  }
+}
 .h1___4La3P {
   text-align: right;
   color: #cdcdcd;
@@ -742,6 +758,49 @@
 @media (max-width: 930px) {
   .h1___4La3P {
     max-width: 800px;
+  }
+}
+.freeBox__dRpS8 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  row-gap: 40px;
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .freeBox__dRpS8 {
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 930px) {
+  .freeBox__dRpS8 {
+    align-items: center;
+    justify-content: center;
+  }
+}
+.h1__c8Grs {
+  text-align: right;
+  color: #cdcdcd;
+  line-height: 80%;
+  font-size: 300px;
+  letter-spacing: 0%;
+}
+@media (max-width: 1024px) {
+  .h1__c8Grs {
+    font-size: 210px;
+  }
+}
+@media (max-width: 930px) {
+  .h1__c8Grs {
+    width: 100%;
+    text-align: center;
+    min-width: 0;
   }
 }
 .headerHeroSection3 {
@@ -988,6 +1047,12 @@
   justify-content: space-between;
   row-gap: 24px;
   width: 61%;
+}
+@media (max-width: 930px) {
+  .left {
+    width: 100%;
+    min-width: 0;
+  }
 }
 .title2 {
   width: auto;

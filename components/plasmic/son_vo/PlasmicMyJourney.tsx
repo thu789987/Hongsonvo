@@ -713,20 +713,26 @@ function PlasmicMyJourney__RenderFunc(props: {
                 className={classNames("all", sty.headerHeroSection2)}
               >
                 <div className={classNames("all", sty.freeBox__rGpka)}>
-                  <div className={classNames("all", sty.freeBox__dRpS8)}>
-                    <h1
-                      className={classNames(
-                        "all",
-                        "h1",
-                        "h1__bLa1s",
-                        "__wab_text",
-                        sty.h1__c8Grs,
-                        "animate-text"
-                      )}
-                    >
-                      {"IN"}
-                    </h1>
-                  </div>
+                  {(
+                    hasVariant(globalVariants, "screen", "mobile")
+                      ? true
+                      : false
+                  ) ? (
+                    <div className={classNames("all", sty.freeBox__mYxsv)}>
+                      <h1
+                        className={classNames(
+                          "all",
+                          "h1",
+                          "h1__bLa1s",
+                          "__wab_text",
+                          sty.h1__wcyDc,
+                          "animate-text"
+                        )}
+                      >
+                        {"IN"}
+                      </h1>
+                    </div>
+                  ) : null}
                   <div className={classNames("all", sty.freeBox__an56F)}>
                     <h1
                       className={classNames(
@@ -777,6 +783,22 @@ function PlasmicMyJourney__RenderFunc(props: {
                       )}
                     >
                       {"FO"}
+                    </h1>
+                  </div>
+                  <div className={classNames("all", sty.freeBox__dRpS8)}>
+                    <h1
+                      className={classNames(
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
+                        sty.h1__c8Grs,
+                        "animate-text"
+                      )}
+                    >
+                      {hasVariant(globalVariants, "screen", "mobile")
+                        ? "INFO"
+                        : "IN"}
                     </h1>
                   </div>
                 </div>
