@@ -771,20 +771,6 @@ function PlasmicMyJourney__RenderFunc(props: {
                       {"V"}
                     </h1>
                   </div>
-                  <div className={classNames("all", sty.freeBox__jpTc)}>
-                    <h1
-                      className={classNames(
-                        "all",
-                        "h1",
-                        "h1__bLa1s",
-                        "__wab_text",
-                        sty.h1___4La3P,
-                        "animate-text"
-                      )}
-                    >
-                      {"FO"}
-                    </h1>
-                  </div>
                   <div className={classNames("all", sty.freeBox__dRpS8)}>
                     <h1
                       className={classNames(
@@ -799,6 +785,20 @@ function PlasmicMyJourney__RenderFunc(props: {
                       {hasVariant(globalVariants, "screen", "mobile")
                         ? "INFO"
                         : "IN"}
+                    </h1>
+                  </div>
+                  <div className={classNames("all", sty.freeBox__jpTc)}>
+                    <h1
+                      className={classNames(
+                        "all",
+                        "h1",
+                        "h1__bLa1s",
+                        "__wab_text",
+                        sty.h1___4La3P,
+                        "animate-text"
+                      )}
+                    >
+                      {"FO"}
                     </h1>
                   </div>
                 </div>
