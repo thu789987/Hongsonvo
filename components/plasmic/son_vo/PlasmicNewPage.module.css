@@ -2143,6 +2143,44 @@
     top: auto;
   }
 }
+.imageH21H1217:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image40:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
+.imageH21H12116:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: 4;
+  height: auto;
+  min-width: 0;
+}
+.image41:global(.__wab_instance) {
+  animation: none;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  min-width: 0;
+  border-radius: 10px;
+}
 .h23H12 {
   animation: none;
   height: auto;

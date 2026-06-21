@@ -233,6 +233,10 @@ export type PlasmicNewPage__OverridesType = {
   h22H12?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay58?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay59?: Flex__<"div">;
+  imageH21H1217?: Flex__<typeof RevealOnScroll>;
+  image40?: Flex__<typeof GridDistortion>;
+  imageH21H12116?: Flex__<typeof RevealOnScroll>;
+  image41?: Flex__<typeof GridDistortion>;
   h23H12?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay60?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay61?: Flex__<"div">;
@@ -4033,6 +4037,194 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.slug == pageId ||
                                       item.Slug == pageId
                                   );
+                                  const content =
+                                    currentItem?.["Image H2_2_H1_1"];
+                                  return !!(
+                                    content && content.toString().trim() !== ""
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })() ? (
+                              <RevealOnScroll
+                                data-plasmic-name={"imageH21H1217"}
+                                data-plasmic-override={overrides.imageH21H1217}
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.imageH21H1217
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <GridDistortion
+                                  data-plasmic-name={"image40"}
+                                  data-plasmic-override={overrides.image40}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.image40
+                                  )}
+                                  enableEffect={true}
+                                  grid={50}
+                                  imageSrc={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        if (!pageId)
+                                          return "Đang đợi tham số...";
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
+                                        const currentItem = list.find(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        return (
+                                          currentItem?.["Image H2_2_H1_1"] ||
+                                          "Không tìm thấy bài"
+                                        );
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "https://picsum.photos/1920/1080";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  mouse={0.1}
+                                  relaxation={0.9}
+                                  strength={0.5}
+                                />
+                              </RevealOnScroll>
+                            ) : null}
+                            {(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  const content =
+                                    currentItem?.["Image H2_2_H1_1_2"];
+                                  return !!(
+                                    content && content.toString().trim() !== ""
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })() ? (
+                              <RevealOnScroll
+                                data-plasmic-name={"imageH21H12116"}
+                                data-plasmic-override={overrides.imageH21H12116}
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.imageH21H12116
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <GridDistortion
+                                  data-plasmic-name={"image41"}
+                                  data-plasmic-override={overrides.image41}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.image41
+                                  )}
+                                  enableEffect={true}
+                                  grid={50}
+                                  imageSrc={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        if (!pageId)
+                                          return "Đang đợi tham số...";
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
+                                        const currentItem = list.find(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        return (
+                                          currentItem?.["Image H2_2_H1_1_2"] ||
+                                          "Không tìm thấy bài"
+                                        );
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "https://picsum.photos/1920/1080";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  mouse={0.1}
+                                  relaxation={0.9}
+                                  strength={0.5}
+                                />
+                              </RevealOnScroll>
+                            ) : null}
+                            {(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
                                   const content = currentItem?.["H2_3_H1_2"];
                                   return !!(
                                     content && content.toString().trim() !== ""
@@ -4493,11 +4685,9 @@ function PlasmicNewPage__RenderFunc(props: {
                           const hasImage = !!(
                             image2 && image2.toString().trim() !== ""
                           );
-
                           const hasVideo = !!(
                             video2 && video2.toString().trim() !== ""
                           );
-
                           return hasImage || hasVideo;
                         })();
                       } catch (e) {
@@ -9344,19 +9534,15 @@ function PlasmicNewPage__RenderFunc(props: {
                           const hasImg3 = !!(
                             img3 && img3.toString().trim() !== ""
                           );
-
                           const hasImg4 = !!(
                             img4 && img4.toString().trim() !== ""
                           );
-
                           const hasVid3 = !!(
                             vid3 && vid3.toString().trim() !== ""
                           );
-
                           const hasVid4 = !!(
                             vid4 && vid4.toString().trim() !== ""
                           );
-
                           return hasImg3 || hasImg4 || hasVid3 || hasVid4;
                         })();
                       } catch (e) {
@@ -9810,19 +9996,15 @@ function PlasmicNewPage__RenderFunc(props: {
                           const hasImg3 = !!(
                             img3 && img3.toString().trim() !== ""
                           );
-
                           const hasImg4 = !!(
                             img4 && img4.toString().trim() !== ""
                           );
-
                           const hasVid3 = !!(
                             vid3 && vid3.toString().trim() !== ""
                           );
-
                           const hasVid4 = !!(
                             vid4 && vid4.toString().trim() !== ""
                           );
-
                           return hasImg3 || hasImg4 || hasVid3 || hasVid4;
                         })();
                       } catch (e) {
@@ -12721,6 +12903,10 @@ const PlasmicDescendants = {
     "h22H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay58",
     "payJustNowIsSouthAfricasLeadingBuyNowPay59",
+    "imageH21H1217",
+    "image40",
+    "imageH21H12116",
+    "image41",
     "h23H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay60",
     "payJustNowIsSouthAfricasLeadingBuyNowPay61",
@@ -12886,7 +13072,6 @@ const PlasmicDescendants = {
     "nExt",
     "section"
   ],
-
   globalLoading: ["globalLoading"],
   scrollToTop: ["scrollToTop"],
   customCursor: ["customCursor"],
@@ -12986,6 +13171,10 @@ const PlasmicDescendants = {
     "h22H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay58",
     "payJustNowIsSouthAfricasLeadingBuyNowPay59",
+    "imageH21H1217",
+    "image40",
+    "imageH21H12116",
+    "image41",
     "h23H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay60",
     "payJustNowIsSouthAfricasLeadingBuyNowPay61",
@@ -13151,7 +13340,6 @@ const PlasmicDescendants = {
     "nExt",
     "section"
   ],
-
   scrollContext: ["scrollContext", "newMenu2"],
   newMenu2: ["newMenu2"],
   section1: [
@@ -13171,7 +13359,6 @@ const PlasmicDescendants = {
     "text5",
     "container13"
   ],
-
   container: [
     "container",
     "container3",
@@ -13188,7 +13375,6 @@ const PlasmicDescendants = {
     "text5",
     "container13"
   ],
-
   container3: [
     "container3",
     "container4",
@@ -13201,7 +13387,6 @@ const PlasmicDescendants = {
     "text10",
     "text11"
   ],
-
   container4: ["container4"],
   container5: ["container5"],
   container6: [
@@ -13213,7 +13398,6 @@ const PlasmicDescendants = {
     "text10",
     "text11"
   ],
-
   container35: ["container35", "text7", "text6", "text9", "text10", "text11"],
   text7: ["text7"],
   text6: ["text6"],
@@ -13232,12 +13416,10 @@ const PlasmicDescendants = {
     "container19",
     "payJustNowIsSouthAfricasLeadingBuyNowPay6"
   ],
-
   container19: ["container19", "payJustNowIsSouthAfricasLeadingBuyNowPay6"],
   payJustNowIsSouthAfricasLeadingBuyNowPay6: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay6"
   ],
-
   original: [
     "original",
     "section2",
@@ -13253,7 +13435,6 @@ const PlasmicDescendants = {
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2"
   ],
-
   section2: [
     "section2",
     "container2",
@@ -13268,7 +13449,6 @@ const PlasmicDescendants = {
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2"
   ],
-
   container2: [
     "container2",
     "container15",
@@ -13282,7 +13462,6 @@ const PlasmicDescendants = {
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2"
   ],
-
   container15: [
     "container15",
     "container16",
@@ -13295,40 +13474,33 @@ const PlasmicDescendants = {
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2"
   ],
-
   container16: [
     "container16",
     "heading3",
     "payJustNowIsSouthAfricasLeadingBuyNowPay"
   ],
-
   heading3: ["heading3"],
   payJustNowIsSouthAfricasLeadingBuyNowPay: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay"
   ],
-
   container36: [
     "container36",
     "heading14",
     "payJustNowIsSouthAfricasLeadingBuyNowPay1"
   ],
-
   heading14: ["heading14"],
   payJustNowIsSouthAfricasLeadingBuyNowPay1: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay1"
   ],
-
   container37: [
     "container37",
     "heading15",
     "payJustNowIsSouthAfricasLeadingBuyNowPay2"
   ],
-
   heading15: ["heading15"],
   payJustNowIsSouthAfricasLeadingBuyNowPay2: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay2"
   ],
-
   section7: ["section7", "image1", "video1"],
   image1: ["image1"],
   video1: ["video1"],
@@ -13370,7 +13542,6 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay26"
   ],
-
   section6: [
     "section6",
     "container23",
@@ -13408,12 +13579,10 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay26"
   ],
-
   container23: ["container23", "payJustNowIsSouthAfricasLeadingBuyNowPay9"],
   payJustNowIsSouthAfricasLeadingBuyNowPay9: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay9"
   ],
-
   container21: [
     "container21",
     "h22H11",
@@ -13448,7 +13617,6 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay26"
   ],
-
   h22H11: [
     "h22H11",
     "payJustNowIsSouthAfricasLeadingBuyNowPay8",
@@ -13460,43 +13628,34 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay13",
     "payJustNowIsSouthAfricasLeadingBuyNowPay14"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay8: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay8"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay10: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay10"
   ],
-
   h31H21H11: [
     "h31H21H11",
     "payJustNowIsSouthAfricasLeadingBuyNowPay11",
     "payJustNowIsSouthAfricasLeadingBuyNowPay12"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay11: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay11"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay12: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay12"
   ],
-
   h31H21H112: [
     "h31H21H112",
     "payJustNowIsSouthAfricasLeadingBuyNowPay13",
     "payJustNowIsSouthAfricasLeadingBuyNowPay14"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay13: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay13"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay14: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay14"
   ],
-
   h22H112: [
     "h22H112",
     "payJustNowIsSouthAfricasLeadingBuyNowPay15",
@@ -13521,59 +13680,47 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay26"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay15: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay15"
   ],
-
   imageH21H12112: ["imageH21H12112", "image27"],
   image27: ["image27"],
   payJustNowIsSouthAfricasLeadingBuyNowPay16: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay16"
   ],
-
   h31H21H113: [
     "h31H21H113",
     "payJustNowIsSouthAfricasLeadingBuyNowPay17",
     "payJustNowIsSouthAfricasLeadingBuyNowPay18"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay17: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay17"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay18: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay18"
   ],
-
   h32H21H114: [
     "h32H21H114",
     "payJustNowIsSouthAfricasLeadingBuyNowPay19",
     "payJustNowIsSouthAfricasLeadingBuyNowPay20"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay19: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay19"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay20: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay20"
   ],
-
   h33H21H115: [
     "h33H21H115",
     "payJustNowIsSouthAfricasLeadingBuyNowPay21",
     "payJustNowIsSouthAfricasLeadingBuyNowPay22"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay21: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay21"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay22: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay22"
   ],
-
   imageH21H12113: ["imageH21H12113", "image28"],
   image28: ["image28"],
   h34H21H116: [
@@ -13581,29 +13728,23 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay23",
     "payJustNowIsSouthAfricasLeadingBuyNowPay24"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay23: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay23"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay24: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay24"
   ],
-
   h35H21H117: [
     "h35H21H117",
     "payJustNowIsSouthAfricasLeadingBuyNowPay25",
     "payJustNowIsSouthAfricasLeadingBuyNowPay26"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay25: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay25"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay26: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay26"
   ],
-
   h12: [
     "h12",
     "section14",
@@ -13623,6 +13764,10 @@ const PlasmicDescendants = {
     "h22H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay58",
     "payJustNowIsSouthAfricasLeadingBuyNowPay59",
+    "imageH21H1217",
+    "image40",
+    "imageH21H12116",
+    "image41",
     "h23H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay60",
     "payJustNowIsSouthAfricasLeadingBuyNowPay61",
@@ -13635,7 +13780,6 @@ const PlasmicDescendants = {
     "imageH21H12114",
     "image29"
   ],
-
   section14: [
     "section14",
     "h122",
@@ -13654,6 +13798,10 @@ const PlasmicDescendants = {
     "h22H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay58",
     "payJustNowIsSouthAfricasLeadingBuyNowPay59",
+    "imageH21H1217",
+    "image40",
+    "imageH21H12116",
+    "image41",
     "h23H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay60",
     "payJustNowIsSouthAfricasLeadingBuyNowPay61",
@@ -13666,13 +13814,11 @@ const PlasmicDescendants = {
     "imageH21H12114",
     "image29"
   ],
-
   h122: ["h122", "container24", "payJustNowIsSouthAfricasLeadingBuyNowPay27"],
   container24: ["container24", "payJustNowIsSouthAfricasLeadingBuyNowPay27"],
   payJustNowIsSouthAfricasLeadingBuyNowPay27: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay27"
   ],
-
   container22: [
     "container22",
     "h21H12",
@@ -13687,6 +13833,10 @@ const PlasmicDescendants = {
     "h22H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay58",
     "payJustNowIsSouthAfricasLeadingBuyNowPay59",
+    "imageH21H1217",
+    "image40",
+    "imageH21H12116",
+    "image41",
     "h23H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay60",
     "payJustNowIsSouthAfricasLeadingBuyNowPay61",
@@ -13699,21 +13849,17 @@ const PlasmicDescendants = {
     "imageH21H12114",
     "image29"
   ],
-
   h21H12: [
     "h21H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay28",
     "payJustNowIsSouthAfricasLeadingBuyNowPay29"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay28: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay28"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay29: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay29"
   ],
-
   imageH21H121: ["imageH21H121", "image16"],
   image16: ["image16"],
   imageH21H1212: ["imageH21H1212", "image17"],
@@ -13725,57 +13871,49 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay58",
     "payJustNowIsSouthAfricasLeadingBuyNowPay59"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay58: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay58"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay59: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay59"
   ],
-
+  imageH21H1217: ["imageH21H1217", "image40"],
+  image40: ["image40"],
+  imageH21H12116: ["imageH21H12116", "image41"],
+  image41: ["image41"],
   h23H12: [
     "h23H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay60",
     "payJustNowIsSouthAfricasLeadingBuyNowPay61"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay60: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay60"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay61: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay61"
   ],
-
   h24H12: [
     "h24H12",
     "payJustNowIsSouthAfricasLeadingBuyNowPay62",
     "payJustNowIsSouthAfricasLeadingBuyNowPay63"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay62: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay62"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay63: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay63"
   ],
-
   h25H122: [
     "h25H122",
     "payJustNowIsSouthAfricasLeadingBuyNowPay64",
     "payJustNowIsSouthAfricasLeadingBuyNowPay65"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay64: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay64"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay65: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay65"
   ],
-
   imageH21H12114: ["imageH21H12114", "image29"],
   image29: ["image29"],
   section13: ["section13", "image15", "video12"],
@@ -13818,7 +13956,6 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay41",
     "payJustNowIsSouthAfricasLeadingBuyNowPay42"
   ],
-
   section16: [
     "section16",
     "h124",
@@ -13855,12 +13992,10 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay41",
     "payJustNowIsSouthAfricasLeadingBuyNowPay42"
   ],
-
   h124: ["h124", "payJustNowIsSouthAfricasLeadingBuyNowPay30"],
   payJustNowIsSouthAfricasLeadingBuyNowPay30: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay30"
   ],
-
   container26: [
     "container26",
     "h21H13",
@@ -13894,21 +14029,17 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay41",
     "payJustNowIsSouthAfricasLeadingBuyNowPay42"
   ],
-
   h21H13: [
     "h21H13",
     "payJustNowIsSouthAfricasLeadingBuyNowPay31",
     "payJustNowIsSouthAfricasLeadingBuyNowPay32"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay31: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay31"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay32: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay32"
   ],
-
   imageH21H1214: ["imageH21H1214", "image19"],
   image19: ["image19"],
   h22H13: [
@@ -13916,15 +14047,12 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay33",
     "payJustNowIsSouthAfricasLeadingBuyNowPay34"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay33: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay33"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay34: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay34"
   ],
-
   imageH21H1215: ["imageH21H1215", "image20"],
   image20: ["image20"],
   h23H13: [
@@ -13932,15 +14060,12 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay35",
     "payJustNowIsSouthAfricasLeadingBuyNowPay36"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay35: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay35"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay36: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay36"
   ],
-
   imageH21H1216: ["imageH21H1216", "image21"],
   image21: ["image21"],
   h24H13: [
@@ -13948,15 +14073,12 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay37",
     "payJustNowIsSouthAfricasLeadingBuyNowPay38"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay37: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay37"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay38: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay38"
   ],
-
   imageH24H132: ["imageH24H132", "image30"],
   image30: ["image30"],
   imageH26H13: ["imageH26H13", "image22"],
@@ -13966,15 +14088,12 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay39",
     "payJustNowIsSouthAfricasLeadingBuyNowPay40"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay39: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay39"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay40: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay40"
   ],
-
   imageH21H1218: ["imageH21H1218", "image23"],
   image23: ["image23"],
   h22H119: [
@@ -13982,15 +14101,12 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay41",
     "payJustNowIsSouthAfricasLeadingBuyNowPay42"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay41: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay41"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay42: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay42"
   ],
-
   h14: [
     "h14",
     "section17",
@@ -14041,7 +14157,6 @@ const PlasmicDescendants = {
     "imageH25H1410",
     "image38"
   ],
-
   section17: [
     "section17",
     "h125",
@@ -14091,12 +14206,10 @@ const PlasmicDescendants = {
     "imageH25H1410",
     "image38"
   ],
-
   h125: ["h125", "payJustNowIsSouthAfricasLeadingBuyNowPay43"],
   payJustNowIsSouthAfricasLeadingBuyNowPay43: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay43"
   ],
-
   container28: [
     "container28",
     "h21H1110",
@@ -14143,21 +14256,17 @@ const PlasmicDescendants = {
     "imageH25H1410",
     "image38"
   ],
-
   h21H1110: [
     "h21H1110",
     "payJustNowIsSouthAfricasLeadingBuyNowPay44",
     "payJustNowIsSouthAfricasLeadingBuyNowPay45"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay44: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay44"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay45: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay45"
   ],
-
   imageH21H1219: ["imageH21H1219", "image24"],
   image24: ["image24"],
   h22H14: [
@@ -14165,85 +14274,67 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay46",
     "payJustNowIsSouthAfricasLeadingBuyNowPay47"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay46: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay46"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay47: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay47"
   ],
-
   h23H142: [
     "h23H142",
     "payJustNowIsSouthAfricasLeadingBuyNowPay48",
     "payJustNowIsSouthAfricasLeadingBuyNowPay49"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay48: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay48"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay49: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay49"
   ],
-
   h24H14: [
     "h24H14",
     "payJustNowIsSouthAfricasLeadingBuyNowPay50",
     "payJustNowIsSouthAfricasLeadingBuyNowPay51"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay50: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay50"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay51: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay51"
   ],
-
   h25H14: [
     "h25H14",
     "payJustNowIsSouthAfricasLeadingBuyNowPay52",
     "payJustNowIsSouthAfricasLeadingBuyNowPay53"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay52: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay52"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay53: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay53"
   ],
-
   h26H14: [
     "h26H14",
     "payJustNowIsSouthAfricasLeadingBuyNowPay54",
     "payJustNowIsSouthAfricasLeadingBuyNowPay55"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay54: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay54"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay55: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay55"
   ],
-
   h27H142: [
     "h27H142",
     "payJustNowIsSouthAfricasLeadingBuyNowPay56",
     "payJustNowIsSouthAfricasLeadingBuyNowPay57"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay56: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay56"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay57: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay57"
   ],
-
   imageH21H12110: ["imageH21H12110", "image25"],
   image25: ["image25"],
   imageH21H12111: ["imageH21H12111", "image26"],
@@ -14294,7 +14385,6 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay79",
     "payJustNowIsSouthAfricasLeadingBuyNowPay80"
   ],
-
   section18: [
     "section18",
     "h126",
@@ -14324,12 +14414,10 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay79",
     "payJustNowIsSouthAfricasLeadingBuyNowPay80"
   ],
-
   h126: ["h126", "payJustNowIsSouthAfricasLeadingBuyNowPay66"],
   payJustNowIsSouthAfricasLeadingBuyNowPay66: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay66"
   ],
-
   container30: [
     "container30",
     "h21H1111",
@@ -14356,21 +14444,17 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay79",
     "payJustNowIsSouthAfricasLeadingBuyNowPay80"
   ],
-
   h21H1111: [
     "h21H1111",
     "payJustNowIsSouthAfricasLeadingBuyNowPay67",
     "payJustNowIsSouthAfricasLeadingBuyNowPay68"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay67: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay67"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay68: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay68"
   ],
-
   imageH21H12115: ["imageH21H12115", "image39"],
   image39: ["image39"],
   h22H142: [
@@ -14378,85 +14462,67 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay69",
     "payJustNowIsSouthAfricasLeadingBuyNowPay70"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay69: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay69"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay70: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay70"
   ],
-
   h23H143: [
     "h23H143",
     "payJustNowIsSouthAfricasLeadingBuyNowPay71",
     "payJustNowIsSouthAfricasLeadingBuyNowPay72"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay71: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay71"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay72: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay72"
   ],
-
   h24H142: [
     "h24H142",
     "payJustNowIsSouthAfricasLeadingBuyNowPay73",
     "payJustNowIsSouthAfricasLeadingBuyNowPay74"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay73: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay73"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay74: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay74"
   ],
-
   h25H142: [
     "h25H142",
     "payJustNowIsSouthAfricasLeadingBuyNowPay75",
     "payJustNowIsSouthAfricasLeadingBuyNowPay76"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay75: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay75"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay76: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay76"
   ],
-
   h26H142: [
     "h26H142",
     "payJustNowIsSouthAfricasLeadingBuyNowPay77",
     "payJustNowIsSouthAfricasLeadingBuyNowPay78"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay77: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay77"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay78: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay78"
   ],
-
   h27H143: [
     "h27H143",
     "payJustNowIsSouthAfricasLeadingBuyNowPay79",
     "payJustNowIsSouthAfricasLeadingBuyNowPay80"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay79: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay79"
   ],
-
   payJustNowIsSouthAfricasLeadingBuyNowPay80: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay80"
   ],
-
   section15: [
     "section15",
     "container8",
@@ -14464,25 +14530,21 @@ const PlasmicDescendants = {
     "container39",
     "payJustNowIsSouthAfricasLeadingBuyNowPay5"
   ],
-
   container8: [
     "container8",
     "container20",
     "container39",
     "payJustNowIsSouthAfricasLeadingBuyNowPay5"
   ],
-
   container20: [
     "container20",
     "container39",
     "payJustNowIsSouthAfricasLeadingBuyNowPay5"
   ],
-
   container39: ["container39", "payJustNowIsSouthAfricasLeadingBuyNowPay5"],
   payJustNowIsSouthAfricasLeadingBuyNowPay5: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay5"
   ],
-
   section11: ["section11", "image3", "video3", "image4", "video4"],
   image3: ["image3"],
   video3: ["video3"],
@@ -14496,7 +14558,6 @@ const PlasmicDescendants = {
     "container40",
     "payJustNowIsSouthAfricasLeadingBuyNowPay7"
   ],
-
   section5: [
     "section5",
     "container9",
@@ -14504,25 +14565,21 @@ const PlasmicDescendants = {
     "container40",
     "payJustNowIsSouthAfricasLeadingBuyNowPay7"
   ],
-
   container9: [
     "container9",
     "container18",
     "container40",
     "payJustNowIsSouthAfricasLeadingBuyNowPay7"
   ],
-
   container18: [
     "container18",
     "container40",
     "payJustNowIsSouthAfricasLeadingBuyNowPay7"
   ],
-
   container40: ["container40", "payJustNowIsSouthAfricasLeadingBuyNowPay7"],
   payJustNowIsSouthAfricasLeadingBuyNowPay7: [
     "payJustNowIsSouthAfricasLeadingBuyNowPay7"
   ],
-
   section12: ["section12", "image5", "video5", "image6", "video6"],
   image5: ["image5"],
   video5: ["video5"],
@@ -14539,7 +14596,6 @@ const PlasmicDescendants = {
     "image10",
     "video10"
   ],
-
   image7: ["image7"],
   video7: ["video7"],
   image8: ["image8"],
@@ -14661,6 +14717,10 @@ type NodeDefaultElementType = {
   h22H12: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay58: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay59: "div";
+  imageH21H1217: typeof RevealOnScroll;
+  image40: typeof GridDistortion;
+  imageH21H12116: typeof RevealOnScroll;
+  image41: typeof GridDistortion;
   h23H12: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay60: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay61: "div";
@@ -14832,7 +14892,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicNewPage__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
@@ -15069,6 +15128,10 @@ export const PlasmicNewPage = Object.assign(
     payJustNowIsSouthAfricasLeadingBuyNowPay59: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay59"
     ),
+    imageH21H1217: makeNodeComponent("imageH21H1217"),
+    image40: makeNodeComponent("image40"),
+    imageH21H12116: makeNodeComponent("imageH21H12116"),
+    image41: makeNodeComponent("image41"),
     h23H12: makeNodeComponent("h23H12"),
     payJustNowIsSouthAfricasLeadingBuyNowPay60: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay60"
