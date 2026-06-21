@@ -266,6 +266,18 @@ export type PlasmicNewPage__OverridesType = {
   payJustNowIsSouthAfricasLeadingBuyNowPay34?: Flex__<"div">;
   imageH21H1215?: Flex__<typeof RevealOnScroll>;
   image20?: Flex__<typeof GridDistortion>;
+  imageH21H12117?: Flex__<typeof RevealOnScroll>;
+  image42?: Flex__<typeof GridDistortion>;
+  imageH21H12118?: Flex__<typeof RevealOnScroll>;
+  image43?: Flex__<typeof GridDistortion>;
+  imageH21H12119?: Flex__<typeof RevealOnScroll>;
+  image44?: Flex__<typeof GridDistortion>;
+  imageH21H12120?: Flex__<typeof RevealOnScroll>;
+  image45?: Flex__<typeof GridDistortion>;
+  imageH21H12121?: Flex__<typeof RevealOnScroll>;
+  image46?: Flex__<typeof GridDistortion>;
+  imageH21H12122?: Flex__<typeof RevealOnScroll>;
+  image47?: Flex__<typeof GridDistortion>;
   h23H13?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay35?: Flex__<"div">;
   payJustNowIsSouthAfricasLeadingBuyNowPay36?: Flex__<"div">;
@@ -4038,7 +4050,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                       item.Slug == pageId
                                   );
                                   const content =
-                                    currentItem?.["Image H2_2_H1_1"];
+                                    currentItem?.["Image H2_2_H1_2"];
                                   return !!(
                                     content && content.toString().trim() !== ""
                                   );
@@ -4094,7 +4106,7 @@ function PlasmicNewPage__RenderFunc(props: {
                                             item?.Slug == pageId
                                         );
                                         return (
-                                          currentItem?.["Image H2_2_H1_1"] ||
+                                          currentItem?.["Image H2_2_H1_2"] ||
                                           "Không tìm thấy bài"
                                         );
                                       })();
@@ -5397,6 +5409,570 @@ function PlasmicNewPage__RenderFunc(props: {
                                         );
                                         return (
                                           currentItem?.["Image H2_2_H1_3_1"] ||
+                                          "Không tìm thấy bài"
+                                        );
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "https://picsum.photos/1920/1080";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  mouse={0.1}
+                                  relaxation={0.9}
+                                  strength={0.5}
+                                />
+                              </RevealOnScroll>
+                            ) : null}
+                            {(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  const content =
+                                    currentItem?.["Image H2_2_H1_3_2"];
+                                  return !!(
+                                    content && content.toString().trim() !== ""
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })() ? (
+                              <RevealOnScroll
+                                data-plasmic-name={"imageH21H12117"}
+                                data-plasmic-override={overrides.imageH21H12117}
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.imageH21H12117
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <GridDistortion
+                                  data-plasmic-name={"image42"}
+                                  data-plasmic-override={overrides.image42}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.image42
+                                  )}
+                                  enableEffect={true}
+                                  grid={50}
+                                  imageSrc={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        if (!pageId)
+                                          return "Đang đợi tham số...";
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
+                                        const currentItem = list.find(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        return (
+                                          currentItem?.["Image H2_2_H1_3_2"] ||
+                                          "Không tìm thấy bài"
+                                        );
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "https://picsum.photos/1920/1080";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  mouse={0.1}
+                                  relaxation={0.9}
+                                  strength={0.5}
+                                />
+                              </RevealOnScroll>
+                            ) : null}
+                            {(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  const content =
+                                    currentItem?.["Image H2_2_H1_3_3"];
+                                  return !!(
+                                    content && content.toString().trim() !== ""
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })() ? (
+                              <RevealOnScroll
+                                data-plasmic-name={"imageH21H12118"}
+                                data-plasmic-override={overrides.imageH21H12118}
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.imageH21H12118
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <GridDistortion
+                                  data-plasmic-name={"image43"}
+                                  data-plasmic-override={overrides.image43}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.image43
+                                  )}
+                                  enableEffect={true}
+                                  grid={50}
+                                  imageSrc={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        if (!pageId)
+                                          return "Đang đợi tham số...";
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
+                                        const currentItem = list.find(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        return (
+                                          currentItem?.["Image H2_2_H1_3_3"] ||
+                                          "Không tìm thấy bài"
+                                        );
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "https://picsum.photos/1920/1080";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  mouse={0.1}
+                                  relaxation={0.9}
+                                  strength={0.5}
+                                />
+                              </RevealOnScroll>
+                            ) : null}
+                            {(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  const content =
+                                    currentItem?.["Image H2_2_H1_3_4"];
+                                  return !!(
+                                    content && content.toString().trim() !== ""
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })() ? (
+                              <RevealOnScroll
+                                data-plasmic-name={"imageH21H12119"}
+                                data-plasmic-override={overrides.imageH21H12119}
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.imageH21H12119
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <GridDistortion
+                                  data-plasmic-name={"image44"}
+                                  data-plasmic-override={overrides.image44}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.image44
+                                  )}
+                                  enableEffect={true}
+                                  grid={50}
+                                  imageSrc={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        if (!pageId)
+                                          return "Đang đợi tham số...";
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
+                                        const currentItem = list.find(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        return (
+                                          currentItem?.["Image H2_2_H1_3_4"] ||
+                                          "Không tìm thấy bài"
+                                        );
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "https://picsum.photos/1920/1080";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  mouse={0.1}
+                                  relaxation={0.9}
+                                  strength={0.5}
+                                />
+                              </RevealOnScroll>
+                            ) : null}
+                            {(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  const content =
+                                    currentItem?.["Image H2_2_H1_3_5"];
+                                  return !!(
+                                    content && content.toString().trim() !== ""
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })() ? (
+                              <RevealOnScroll
+                                data-plasmic-name={"imageH21H12120"}
+                                data-plasmic-override={overrides.imageH21H12120}
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.imageH21H12120
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <GridDistortion
+                                  data-plasmic-name={"image45"}
+                                  data-plasmic-override={overrides.image45}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.image45
+                                  )}
+                                  enableEffect={true}
+                                  grid={50}
+                                  imageSrc={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        if (!pageId)
+                                          return "Đang đợi tham số...";
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
+                                        const currentItem = list.find(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        return (
+                                          currentItem?.["Image H2_2_H1_3_5"] ||
+                                          "Không tìm thấy bài"
+                                        );
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "https://picsum.photos/1920/1080";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  mouse={0.1}
+                                  relaxation={0.9}
+                                  strength={0.5}
+                                />
+                              </RevealOnScroll>
+                            ) : null}
+                            {(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  const content =
+                                    currentItem?.["Image H2_2_H1_3_6"];
+                                  return !!(
+                                    content && content.toString().trim() !== ""
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })() ? (
+                              <RevealOnScroll
+                                data-plasmic-name={"imageH21H12121"}
+                                data-plasmic-override={overrides.imageH21H12121}
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.imageH21H12121
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <GridDistortion
+                                  data-plasmic-name={"image46"}
+                                  data-plasmic-override={overrides.image46}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.image46
+                                  )}
+                                  enableEffect={true}
+                                  grid={50}
+                                  imageSrc={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        if (!pageId)
+                                          return "Đang đợi tham số...";
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
+                                        const currentItem = list.find(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        return (
+                                          currentItem?.["Image H2_2_H1_3_6"] ||
+                                          "Không tìm thấy bài"
+                                        );
+                                      })();
+                                    } catch (e) {
+                                      if (
+                                        e instanceof TypeError ||
+                                        e?.plasmicType ===
+                                          "PlasmicUndefinedDataError"
+                                      ) {
+                                        return "https://picsum.photos/1920/1080";
+                                      }
+                                      throw e;
+                                    }
+                                  })()}
+                                  mouse={0.1}
+                                  relaxation={0.9}
+                                  strength={0.5}
+                                />
+                              </RevealOnScroll>
+                            ) : null}
+                            {(() => {
+                              try {
+                                return (() => {
+                                  const pageId =
+                                    $ctx.params.id || $ctx.params.Slug;
+                                  if (!pageId || !$ctx.cachedData) return false;
+                                  const list = Array.isArray($ctx.cachedData)
+                                    ? $ctx.cachedData
+                                    : [$ctx.cachedData];
+                                  const currentItem = list.find(
+                                    item =>
+                                      item.id == pageId ||
+                                      item.Id == pageId ||
+                                      item.slug == pageId ||
+                                      item.Slug == pageId
+                                  );
+                                  const content =
+                                    currentItem?.["Image H2_2_H1_3_7"];
+                                  return !!(
+                                    content && content.toString().trim() !== ""
+                                  );
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return true;
+                                }
+                                throw e;
+                              }
+                            })() ? (
+                              <RevealOnScroll
+                                data-plasmic-name={"imageH21H12122"}
+                                data-plasmic-override={overrides.imageH21H12122}
+                                blurAmount={5}
+                                className={classNames(
+                                  "__wab_instance",
+                                  sty.imageH21H12122
+                                )}
+                                delay={0}
+                                duration={0.8}
+                                yOffset={50}
+                              >
+                                <GridDistortion
+                                  data-plasmic-name={"image47"}
+                                  data-plasmic-override={overrides.image47}
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.image47
+                                  )}
+                                  enableEffect={true}
+                                  grid={50}
+                                  imageSrc={(() => {
+                                    try {
+                                      return (() => {
+                                        const pageId =
+                                          $ctx.params.id || $ctx.params.Slug;
+                                        if (!pageId)
+                                          return "Đang đợi tham số...";
+                                        const list = Array.isArray(
+                                          $ctx.cachedData
+                                        )
+                                          ? $ctx.cachedData
+                                          : [$ctx.cachedData];
+                                        const currentItem = list.find(
+                                          item =>
+                                            item?.id == pageId ||
+                                            item?.Id == pageId ||
+                                            item?.slug == pageId ||
+                                            item?.Slug == pageId
+                                        );
+                                        return (
+                                          currentItem?.["Image H2_2_H1_3_7"] ||
                                           "Không tìm thấy bài"
                                         );
                                       })();
@@ -12936,6 +13512,18 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay34",
     "imageH21H1215",
     "image20",
+    "imageH21H12117",
+    "image42",
+    "imageH21H12118",
+    "image43",
+    "imageH21H12119",
+    "image44",
+    "imageH21H12120",
+    "image45",
+    "imageH21H12121",
+    "image46",
+    "imageH21H12122",
+    "image47",
     "h23H13",
     "payJustNowIsSouthAfricasLeadingBuyNowPay35",
     "payJustNowIsSouthAfricasLeadingBuyNowPay36",
@@ -13204,6 +13792,18 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay34",
     "imageH21H1215",
     "image20",
+    "imageH21H12117",
+    "image42",
+    "imageH21H12118",
+    "image43",
+    "imageH21H12119",
+    "image44",
+    "imageH21H12120",
+    "image45",
+    "imageH21H12121",
+    "image46",
+    "imageH21H12122",
+    "image47",
     "h23H13",
     "payJustNowIsSouthAfricasLeadingBuyNowPay35",
     "payJustNowIsSouthAfricasLeadingBuyNowPay36",
@@ -13935,6 +14535,18 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay34",
     "imageH21H1215",
     "image20",
+    "imageH21H12117",
+    "image42",
+    "imageH21H12118",
+    "image43",
+    "imageH21H12119",
+    "image44",
+    "imageH21H12120",
+    "image45",
+    "imageH21H12121",
+    "image46",
+    "imageH21H12122",
+    "image47",
     "h23H13",
     "payJustNowIsSouthAfricasLeadingBuyNowPay35",
     "payJustNowIsSouthAfricasLeadingBuyNowPay36",
@@ -13971,6 +14583,18 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay34",
     "imageH21H1215",
     "image20",
+    "imageH21H12117",
+    "image42",
+    "imageH21H12118",
+    "image43",
+    "imageH21H12119",
+    "image44",
+    "imageH21H12120",
+    "image45",
+    "imageH21H12121",
+    "image46",
+    "imageH21H12122",
+    "image47",
     "h23H13",
     "payJustNowIsSouthAfricasLeadingBuyNowPay35",
     "payJustNowIsSouthAfricasLeadingBuyNowPay36",
@@ -14008,6 +14632,18 @@ const PlasmicDescendants = {
     "payJustNowIsSouthAfricasLeadingBuyNowPay34",
     "imageH21H1215",
     "image20",
+    "imageH21H12117",
+    "image42",
+    "imageH21H12118",
+    "image43",
+    "imageH21H12119",
+    "image44",
+    "imageH21H12120",
+    "image45",
+    "imageH21H12121",
+    "image46",
+    "imageH21H12122",
+    "image47",
     "h23H13",
     "payJustNowIsSouthAfricasLeadingBuyNowPay35",
     "payJustNowIsSouthAfricasLeadingBuyNowPay36",
@@ -14055,6 +14691,18 @@ const PlasmicDescendants = {
   ],
   imageH21H1215: ["imageH21H1215", "image20"],
   image20: ["image20"],
+  imageH21H12117: ["imageH21H12117", "image42"],
+  image42: ["image42"],
+  imageH21H12118: ["imageH21H12118", "image43"],
+  image43: ["image43"],
+  imageH21H12119: ["imageH21H12119", "image44"],
+  image44: ["image44"],
+  imageH21H12120: ["imageH21H12120", "image45"],
+  image45: ["image45"],
+  imageH21H12121: ["imageH21H12121", "image46"],
+  image46: ["image46"],
+  imageH21H12122: ["imageH21H12122", "image47"],
+  image47: ["image47"],
   h23H13: [
     "h23H13",
     "payJustNowIsSouthAfricasLeadingBuyNowPay35",
@@ -14750,6 +15398,18 @@ type NodeDefaultElementType = {
   payJustNowIsSouthAfricasLeadingBuyNowPay34: "div";
   imageH21H1215: typeof RevealOnScroll;
   image20: typeof GridDistortion;
+  imageH21H12117: typeof RevealOnScroll;
+  image42: typeof GridDistortion;
+  imageH21H12118: typeof RevealOnScroll;
+  image43: typeof GridDistortion;
+  imageH21H12119: typeof RevealOnScroll;
+  image44: typeof GridDistortion;
+  imageH21H12120: typeof RevealOnScroll;
+  image45: typeof GridDistortion;
+  imageH21H12121: typeof RevealOnScroll;
+  image46: typeof GridDistortion;
+  imageH21H12122: typeof RevealOnScroll;
+  image47: typeof GridDistortion;
   h23H13: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay35: "div";
   payJustNowIsSouthAfricasLeadingBuyNowPay36: "div";
@@ -15183,6 +15843,18 @@ export const PlasmicNewPage = Object.assign(
     ),
     imageH21H1215: makeNodeComponent("imageH21H1215"),
     image20: makeNodeComponent("image20"),
+    imageH21H12117: makeNodeComponent("imageH21H12117"),
+    image42: makeNodeComponent("image42"),
+    imageH21H12118: makeNodeComponent("imageH21H12118"),
+    image43: makeNodeComponent("image43"),
+    imageH21H12119: makeNodeComponent("imageH21H12119"),
+    image44: makeNodeComponent("image44"),
+    imageH21H12120: makeNodeComponent("imageH21H12120"),
+    image45: makeNodeComponent("image45"),
+    imageH21H12121: makeNodeComponent("imageH21H12121"),
+    image46: makeNodeComponent("image46"),
+    imageH21H12122: makeNodeComponent("imageH21H12122"),
+    image47: makeNodeComponent("image47"),
     h23H13: makeNodeComponent("h23H13"),
     payJustNowIsSouthAfricasLeadingBuyNowPay35: makeNodeComponent(
       "payJustNowIsSouthAfricasLeadingBuyNowPay35"
